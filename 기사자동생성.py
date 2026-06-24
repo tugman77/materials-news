@@ -108,12 +108,22 @@ def generate_articles_with_claude(raw_news_list):
 
     raw = response.content[0].text.strip()
 
-    # 마크다운 코드블록 제거 (```json ... ``` 형태 대응)
-    if raw.startswith("```"):
-        raw = raw.split("```")[1]
-        if raw.startswith("json"):
-            raw = raw[4:]
-        raw = raw.strip()
+    # 마크다운 코드블록 제거
+    if "```" in raw:
+        parts = raw.split("```")
+        for part in parts:
+            part = part.strip()
+            if part.startswith("json"):
+                part = part[4:].strip()
+            if part.startswith("["):
+                raw = part
+                break
+
+    # JSON 배열 범위만 추출 (앞뒤 텍스트 제거)
+    start = raw.find("[")
+    end = raw.rfind("]")
+    if start != -1 and end != -1:
+        raw = raw[start:end+1]
 
     articles = json.loads(raw)
     return articles
