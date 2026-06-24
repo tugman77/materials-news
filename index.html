@@ -301,7 +301,7 @@
     articles.forEach((a, i) => {
       const cv = getCat(a); const idx = allArticles.indexOf(a);
       const rightCol = a.image_url
-        ? `<img class="article-thumb" src="${a.image_url}" alt="${a.title}" onerror="this.outerHTML='<div class=num>${String(i+1).padStart(2,\'0\')}</div>'">`
+        ? `<img class="article-thumb" src="${a.image_url}" alt="" onerror="this.style.display='none'">`
         : `<div class="num">${String(i+1).padStart(2,'0')}</div>`;
       html += `<div class="article-item" onclick="location.href='article.html?id=${idx}'">
         <div><span class="tag ${cv.cls}">${a.category}</span><h4>${a.title}</h4>
