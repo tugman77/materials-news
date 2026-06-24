@@ -82,6 +82,14 @@
     border-bottom: 2px solid var(--text);
     margin-bottom: 28px;
   }
+
+  .art-hero-img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 28px;
+  }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
@@ -360,10 +368,25 @@
     document.getElementById('art-title').textContent = article.title;
     document.getElementById('art-date').textContent = `${today} ${article.timestamp || ''}`;
 
-    // 본문: 문장을 단락으로 분리
-    const sentences = article.summary.split(/(?<=[.!?])\s+/).filter(s => s.trim());
-    document.getElementById('art-body').innerHTML =
-      sentences.map(s => `<p>${s}</p>`).join('');
+    // 기사 이미지
+    const bodyEl = document.getElementById('art-body');
+    if (article.image_url) {
+      const imgEl = document.createElement('img');
+      imgEl.src = article.image_url;
+      imgEl.alt = article.title;
+      imgEl.className = 'art-hero-img';
+      imgEl.onerror = function() { this.style.display = 'none'; };
+      bodyEl.parentNode.insertBefore(imgEl, bodyEl);
+    }
+
+    // 본문: body(충실한 기사) 우선, 없으면 summary 문장 분리
+    if (article.body) {
+      const paragraphs = article.body.split(/\n+/).filter(p => p.trim());
+      bodyEl.innerHTML = paragraphs.map(p => `<p>${p.trim()}</p>`).join('');
+    } else {
+      const sentences = article.summary.split(/(?<=[.!?])\s+/).filter(s => s.trim());
+      bodyEl.innerHTML = sentences.map(s => `<p>${s}</p>`).join('');
+    }
 
     // 키워드 태그
     document.getElementById('art-tags').innerHTML =

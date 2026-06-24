@@ -8,12 +8,14 @@ import anthropic
 import feedparser
 import json
 import os
+import requests
 from datetime import datetime, timezone, timedelta
 from urllib.parse import quote
 
 # ── 설정 ──────────────────────────────────────────
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "여기에_API키_입력")
 OUTPUT_FILE = "articles.json"  # 뉴스 사이트에서 읽는 파일
+IMAGES_DIR = "images"          # 기사 이미지 저장 폴더
 
 # 수집할 RSS 피드 (소재·산업·경제 분야)
 RSS_FEEDS = [
@@ -71,10 +73,12 @@ def generate_articles_with_claude(raw_news_list):
 - 카테고리: "반도체소재" / "희귀금속" / "산업재" / "글로벌" 중 하나
 - tag_type: "tag-semi" / "tag-rare" / "tag-industry" / "tag-global" 중 하나 (카테고리에 맞게)
 - 제목: 15~25자, 핵심 팩트 중심
-- 본문: 3~4문장, 전문 용어는 쉽게 풀어서
+- summary: 2~3문장 핵심 요약 (150자 이내)
+- body: 5개 단락으로 구성된 전문 기사 본문 (총 500~700자). 각 단락은 100~140자 내외. 단락 구분은 줄바꿈(\\n). 구체적 수치·기업명·배경·전망·업계 반응 포함. 전문 용어는 쉽게 풀어서
+- image_keyword: 기사 내용과 관련된 영문 이미지 검색 키워드 2~3단어 (예: "semiconductor wafer", "rare earth mining", "supply chain factory")
 - timestamp: 현재 시각 기준 오전/오후 HH:MM 형식
 
-반드시 아래 JSON 배열 형식만 반환하세요 (```json 마크다운 없이, 순수 JSON만):
+반드시 아래 JSON 형식만 반환하세요 (```json 마크다운 없이, 순수 JSON만):
 
 [
   {{
@@ -82,7 +86,9 @@ def generate_articles_with_claude(raw_news_list):
     "category": "카테고리명",
     "tag_type": "태그클래스",
     "title": "기사 제목",
-    "summary": "기사 본문 3~4문장",
+    "summary": "2~3문장 핵심 요약",
+    "body": "단락1 내용...\\n\\n단락2 내용...\\n\\n단락3 내용...\\n\\n단락4 내용...\\n\\n단락5 내용...",
+    "image_keyword": "semiconductor wafer",
     "is_featured": true,
     "timestamp": "오전 09:00"
   }},
@@ -91,7 +97,9 @@ def generate_articles_with_claude(raw_news_list):
     "category": "카테고리명",
     "tag_type": "태그클래스",
     "title": "기사 제목",
-    "summary": "기사 본문 3~4문장",
+    "summary": "2~3문장 핵심 요약",
+    "body": "단락1 내용...\\n\\n단락2 내용...\\n\\n단락3 내용...\\n\\n단락4 내용...\\n\\n단락5 내용...",
+    "image_keyword": "rare earth metal",
     "is_featured": false,
     "timestamp": "오전 08:30"
   }}
@@ -103,7 +111,7 @@ def generate_articles_with_claude(raw_news_list):
     # tool_use로 JSON 구조 보장
     response = client.messages.create(
         model="claude-sonnet-4-6",
-        max_tokens=4000,
+        max_tokens=6000,
         tools=[{
             "name": "save_articles",
             "description": "생성된 기사 5개를 저장합니다",
@@ -115,15 +123,17 @@ def generate_articles_with_claude(raw_news_list):
                         "items": {
                             "type": "object",
                             "properties": {
-                                "id":          {"type": "integer"},
-                                "category":    {"type": "string", "enum": ["반도체소재","희귀금속","산업재","글로벌"]},
-                                "tag_type":    {"type": "string"},
-                                "title":       {"type": "string"},
-                                "summary":     {"type": "string"},
-                                "is_featured": {"type": "boolean"},
-                                "timestamp":   {"type": "string"}
+                                "id":            {"type": "integer"},
+                                "category":      {"type": "string", "enum": ["반도체소재","희귀금속","산업재","글로벌"]},
+                                "tag_type":      {"type": "string"},
+                                "title":         {"type": "string"},
+                                "summary":       {"type": "string"},
+                                "body":          {"type": "string"},
+                                "image_keyword": {"type": "string"},
+                                "is_featured":   {"type": "boolean"},
+                                "timestamp":     {"type": "string"}
                             },
-                            "required": ["id","category","tag_type","title","summary","is_featured","timestamp"]
+                            "required": ["id","category","tag_type","title","summary","body","image_keyword","is_featured","timestamp"]
                         },
                         "minItems": 5,
                         "maxItems": 5
@@ -246,6 +256,32 @@ def get_market_prices():
             {"name": "코발트 ($/ton)", "price": "26800",  "change": "-0.5%", "direction": "down"},
         ]
 
+# ── 기사 이미지 다운로드 및 로컬 저장 ─────────────
+def download_article_images(articles):
+    """각 기사의 image_keyword로 이미지를 다운로드해 images/ 폴더에 저장"""
+    os.makedirs(IMAGES_DIR, exist_ok=True)
+    for i, article in enumerate(articles):
+        keyword = article.get("image_keyword", "semiconductor materials technology")
+        # 영문 키워드를 쉼표 구분 형식으로 변환
+        keywords_fmt = ",".join(keyword.replace(",", " ").split()[:3])
+        img_url = f"https://loremflickr.com/800/450/{keywords_fmt}"
+        img_path = f"{IMAGES_DIR}/article_{i}.jpg"
+        try:
+            resp = requests.get(img_url, timeout=20, allow_redirects=True)
+            if resp.status_code == 200 and len(resp.content) > 1000:
+                with open(img_path, "wb") as f:
+                    f.write(resp.content)
+                article["image_url"] = img_path
+                print(f"   → 이미지 저장: {img_path} [{keyword}]")
+            else:
+                article["image_url"] = None
+                print(f"   → 이미지 실패 [{keyword}]: status {resp.status_code}")
+        except Exception as e:
+            article["image_url"] = None
+            print(f"   → 이미지 오류 [{keyword}]: {e}")
+    return articles
+
+
 # ── 최종 데이터 파일 저장 ──────────────────────────
 def save_data(articles, market_prices):
     """index.html이 읽을 수 있는 JSON 파일로 저장"""
@@ -274,11 +310,15 @@ def main():
     articles = generate_articles_with_claude(raw_news)
     print(f"   → 기사 {len(articles)}건 생성됨")
 
-    # 3. 시세 데이터 (뉴스 기반 Claude 추출)
+    # 3. 기사 이미지 다운로드 (로컬 저장)
+    print("🖼️  기사 이미지 다운로드 중...")
+    articles = download_article_images(articles)
+
+    # 5. 시세 데이터 (뉴스 기반 Claude 추출)
     print("💹 소재 시세 수집 중...")
     market = get_market_prices()
 
-    # 4. 저장
+    # 6. 저장
     save_data(articles, market)
     print("🎉 완료!")
 

@@ -34,6 +34,6 @@ jobs:
         run: |
           git config user.name "소재경제신문 봇"
           git config user.email "bot@materials-press.co.kr"
-          git add articles.json
+          git add articles.json images/
           git commit -m "자동 기사 업데이트 $(date +'%Y-%m-%d %H:%M')" || echo "변경사항 없음"
           git push
