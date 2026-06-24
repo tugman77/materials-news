@@ -136,7 +136,12 @@ def generate_articles_with_claude(raw_news_list):
         messages=[{"role": "user", "content": prompt}]
     )
 
-    articles = response.content[0].input["articles"]
+    # tool_use 블록에서 결과 추출
+    tool_block = next(b for b in response.content if b.type == "tool_use")
+    articles = tool_block.input["articles"]
+    # 혹시 문자열로 반환된 경우 파싱
+    if isinstance(articles, str):
+        articles = json.loads(articles)
     return articles
 
 # ── 시세 데이터 (뉴스 기반 Claude 추출) ───────────
@@ -224,7 +229,10 @@ def get_market_prices():
             tool_choice={"type": "tool", "name": "save_prices"},
             messages=[{"role": "user", "content": prompt}]
         )
-        prices = response.content[0].input["prices"]
+        tool_block = next(b for b in response.content if b.type == "tool_use")
+        prices = tool_block.input["prices"]
+        if isinstance(prices, str):
+            prices = json.loads(prices)
         print(f"   → 시세 {len(prices)}개 항목 추출됨")
         return prices
     except Exception as e:
