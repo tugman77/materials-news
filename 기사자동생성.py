@@ -100,32 +100,43 @@ def generate_articles_with_claude(raw_news_list):
 첫 번째 기사만 is_featured: true, 나머지는 false로 설정하세요.
 """
 
+    # tool_use로 JSON 구조 보장
     response = client.messages.create(
         model="claude-sonnet-4-6",
         max_tokens=4000,
+        tools=[{
+            "name": "save_articles",
+            "description": "생성된 기사 5개를 저장합니다",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "articles": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "id":          {"type": "integer"},
+                                "category":    {"type": "string", "enum": ["반도체소재","희귀금속","산업재","글로벌"]},
+                                "tag_type":    {"type": "string"},
+                                "title":       {"type": "string"},
+                                "summary":     {"type": "string"},
+                                "is_featured": {"type": "boolean"},
+                                "timestamp":   {"type": "string"}
+                            },
+                            "required": ["id","category","tag_type","title","summary","is_featured","timestamp"]
+                        },
+                        "minItems": 5,
+                        "maxItems": 5
+                    }
+                },
+                "required": ["articles"]
+            }
+        }],
+        tool_choice={"type": "tool", "name": "save_articles"},
         messages=[{"role": "user", "content": prompt}]
     )
 
-    raw = response.content[0].text.strip()
-
-    # 마크다운 코드블록 제거
-    if "```" in raw:
-        parts = raw.split("```")
-        for part in parts:
-            part = part.strip()
-            if part.startswith("json"):
-                part = part[4:].strip()
-            if part.startswith("["):
-                raw = part
-                break
-
-    # JSON 배열 범위만 추출 (앞뒤 텍스트 제거)
-    start = raw.find("[")
-    end = raw.rfind("]")
-    if start != -1 and end != -1:
-        raw = raw[start:end+1]
-
-    articles = json.loads(raw)
+    articles = response.content[0].input["articles"]
     return articles
 
 # ── 시세 데이터 (뉴스 기반 Claude 추출) ───────────
@@ -187,15 +198,33 @@ def get_market_prices():
         response = client.messages.create(
             model="claude-sonnet-4-6",
             max_tokens=800,
+            tools=[{
+                "name": "save_prices",
+                "description": "소재 시세 데이터를 저장합니다",
+                "input_schema": {
+                    "type": "object",
+                    "properties": {
+                        "prices": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "name":      {"type": "string"},
+                                    "price":     {"type": "string"},
+                                    "change":    {"type": "string"},
+                                    "direction": {"type": "string", "enum": ["up","down"]}
+                                },
+                                "required": ["name","price","change","direction"]
+                            }
+                        }
+                    },
+                    "required": ["prices"]
+                }
+            }],
+            tool_choice={"type": "tool", "name": "save_prices"},
             messages=[{"role": "user", "content": prompt}]
         )
-        raw = response.content[0].text.strip()
-        if raw.startswith("```"):
-            raw = raw.split("```")[1]
-            if raw.startswith("json"):
-                raw = raw[4:]
-            raw = raw.strip()
-        prices = json.loads(raw)
+        prices = response.content[0].input["prices"]
         print(f"   → 시세 {len(prices)}개 항목 추출됨")
         return prices
     except Exception as e:
