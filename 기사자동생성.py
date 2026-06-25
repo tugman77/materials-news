@@ -74,7 +74,7 @@ def generate_articles_with_claude(raw_news_list):
 - tag_type: "tag-semi" / "tag-rare" / "tag-industry" / "tag-global" 중 하나 (카테고리에 맞게)
 - 제목: 15~25자, 핵심 팩트 중심
 - summary: 2~3문장 핵심 요약 (150자 이내)
-- body: 5개 단락으로 구성된 전문 기사 본문 (총 500~700자). 각 단락은 100~140자 내외. 단락 구분은 줄바꿈(\\n). 구체적 수치·기업명·배경·전망·업계 반응 포함. 전문 용어는 쉽게 풀어서
+- body: 10~13개 단락으로 구성된 전문 기사 본문 (총 2500~3500자). 각 단락은 200~300자 내외. 단락 구분은 빈 줄(\\n\\n). 반드시 포함할 내용: ①사건 배경 및 원인 분석 ②구체적 수치·통계(수출액·생산량·가격 변동 포함) ③주요 관련 기업명과 최신 동향 ④전문가·업계 관계자 직접 인용 ⑤국내 산업별 파급 효과 ⑥글로벌·해외 동향 ⑦관련 정책·규제 현황 ⑧향후 시장 전망 및 투자 시사점. 전문 용어는 쉽게 풀어서 작성
 - image_keyword: 기사 내용과 관련된 영문 이미지 검색 키워드 2~3단어 (예: "semiconductor wafer", "rare earth mining", "supply chain factory")
 - timestamp: 현재 시각 기준 오전/오후 HH:MM 형식
 
@@ -87,7 +87,7 @@ def generate_articles_with_claude(raw_news_list):
     "tag_type": "태그클래스",
     "title": "기사 제목",
     "summary": "2~3문장 핵심 요약",
-    "body": "단락1 내용...\\n\\n단락2 내용...\\n\\n단락3 내용...\\n\\n단락4 내용...\\n\\n단락5 내용...",
+    "body": "단락1 사건배경 및 원인분석(200~300자)...\\n\\n단락2 구체적 수치·통계...\\n\\n단락3 주요 기업동향...\\n\\n단락4 전문가·관계자 직접인용...\\n\\n단락5 국내 파급효과...\\n\\n단락6 글로벌·해외 동향...\\n\\n단락7 관련 정책·규제...\\n\\n단락8 국내 기업 대응 현황...\\n\\n단락9 공급망 분석...\\n\\n단락10 향후 시장 전망 및 투자 시사점...",
     "image_keyword": "semiconductor wafer",
     "is_featured": true,
     "timestamp": "오전 09:00"
@@ -98,7 +98,7 @@ def generate_articles_with_claude(raw_news_list):
     "tag_type": "태그클래스",
     "title": "기사 제목",
     "summary": "2~3문장 핵심 요약",
-    "body": "단락1 내용...\\n\\n단락2 내용...\\n\\n단락3 내용...\\n\\n단락4 내용...\\n\\n단락5 내용...",
+    "body": "단락1 사건배경 및 원인분석(200~300자)...\\n\\n단락2 구체적 수치·통계...\\n\\n단락3 주요 기업동향...\\n\\n단락4 전문가·관계자 직접인용...\\n\\n단락5 국내 파급효과...\\n\\n단락6 글로벌·해외 동향...\\n\\n단락7 관련 정책·규제...\\n\\n단락8 국내 기업 대응 현황...\\n\\n단락9 공급망 분석...\\n\\n단락10 향후 시장 전망 및 투자 시사점...",
     "image_keyword": "rare earth metal",
     "is_featured": false,
     "timestamp": "오전 08:30"
@@ -111,7 +111,7 @@ def generate_articles_with_claude(raw_news_list):
     # tool_use로 JSON 구조 보장
     response = client.messages.create(
         model="claude-sonnet-4-6",
-        max_tokens=6000,
+        max_tokens=16000,
         tools=[{
             "name": "save_articles",
             "description": "생성된 기사 5개를 저장합니다",
@@ -284,17 +284,41 @@ def download_article_images(articles):
 
 # ── 최종 데이터 파일 저장 ──────────────────────────
 def save_data(articles, market_prices):
-    """index.html이 읽을 수 있는 JSON 파일로 저장"""
+    """index.html이 읽을 수 있는 JSON 파일로 저장 + 날짜별 아카이브 저장"""
     now = datetime.now(KST)
+    date_key = now.strftime("%Y-%m-%d")
     data = {
         "generated_at": now.strftime("%Y년 %m월 %d일 %H:%M"),
         "date_str": now.strftime("%Y년 %m월 %d일"),
         "articles": articles,
         "market": market_prices,
     }
+
+    # 1. 최신 기사 저장 (articles.json — 사이트 메인)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     print(f"✅ {OUTPUT_FILE} 저장 완료 — 기사 {len(articles)}건")
+
+    # 2. 날짜별 아카이브 저장
+    os.makedirs("archive", exist_ok=True)
+    archive_file = f"archive/{date_key}.json"
+    with open(archive_file, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f"📁 아카이브 저장: {archive_file}")
+
+    # 3. 아카이브 인덱스 업데이트 (최대 90일 보존)
+    index_file = "archive/index.json"
+    try:
+        with open(index_file, "r", encoding="utf-8") as f:
+            archive_index = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        archive_index = {"dates": []}
+
+    dates = list(dict.fromkeys([date_key] + archive_index.get("dates", [])))
+    archive_index = {"dates": sorted(dates, reverse=True)[:90]}
+    with open(index_file, "w", encoding="utf-8") as f:
+        json.dump(archive_index, f, ensure_ascii=False, indent=2)
+    print(f"📋 아카이브 인덱스 업데이트: {len(archive_index['dates'])}일치")
 
 # ── 메인 실행 ──────────────────────────────────────
 def main():

@@ -327,13 +327,17 @@
   };
   function getCat(a) { return CATS[a.category] || { cls:'tag-semi', bg:'#e8f0fb', color:'#0057a8' }; }
 
-  // URL에서 기사 인덱스 추출
-  const articleId = parseInt(new URLSearchParams(location.search).get('id') ?? '0');
+  // URL에서 기사 인덱스 및 날짜 추출
+  const _params = new URLSearchParams(location.search);
+  const articleId = parseInt(_params.get('id') ?? '0');
+  const articleDate = _params.get('date');
+  const datePrefix = articleDate ? 'date=' + articleDate + '&' : '';
 
   async function load() {
     try {
-      const res = await fetch('articles.json');
-      if (!res.ok) throw new Error('articles.json 없음');
+      const jsonFile = articleDate ? 'archive/' + articleDate + '.json' : 'articles.json';
+      const res = await fetch(jsonFile);
+      if (!res.ok) throw new Error('데이터 없음');
       const data = await res.json();
 
       const article = data.articles[articleId];
@@ -406,7 +410,7 @@
       ? others.map(a => {
           const idx = allArticles.indexOf(a);
           const ac = getCat(a);
-          return `<div class="rel-item" onclick="location.href='article.html?id=${idx}'">
+          return `<div class="rel-item" onclick="location.href='article.html?${datePrefix}id=${idx}'">
             <span class="rel-tag ${ac.cls}">${a.category}</span>
             <div class="rel-title">${a.title}</div>
           </div>`;

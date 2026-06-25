@@ -210,6 +210,11 @@
       <div id="rank-list"><div style="color:#aaa; font-size:13px;">불러오는 중...</div></div>
     </div>
 
+    <div class="sidebar-box">
+      <div class="sidebar-title">날짜별 아카이브</div>
+      <div id="archive-list"><div style="color:#aaa;font-size:13px;">불러오는 중...</div></div>
+    </div>
+
     <div class="sidebar-box" style="background:#f0f4fb;border-color:#b5d4f4;">
       <div class="sidebar-title" style="color:#0057a8;border-bottom-color:#0057a8;">뉴스레터 구독</div>
       <p style="font-size:13px;color:#444;line-height:1.6;margin-bottom:12px;">매일 아침 7시, 핵심 소재·산업재 뉴스를 이메일로 받아보세요.</p>
@@ -270,6 +275,11 @@
   function getCat(a) { return CATS[a.category] || { cls:'tag-semi', symbol:'??', bg:'#e8f0fb', color:'#0057a8' }; }
   function fmtDate(dt) { return `${dt.getFullYear()}.${String(dt.getMonth()+1).padStart(2,'0')}.${String(dt.getDate()).padStart(2,'0')}`; }
 
+  let currentDate = null;
+  function articleLink(idx) {
+    return currentDate ? `article.html?date=${currentDate}&id=${idx}` : `article.html?id=${idx}`;
+  }
+
   function renderTopNews(articles) {
     const featured = articles.find(a => a.is_featured) || articles[0];
     const sides = articles.filter(a => a !== featured).slice(0, 2);
@@ -278,7 +288,7 @@
     const featImg = featured.image_url
       ? `<img src="${featured.image_url}" alt="${featured.title}" onerror="this.style.display='none'">`
       : '';
-    let html = `<div class="top-main" onclick="location.href='article.html?id=${fi}'">
+    let html = `<div class="top-main" onclick="location.href='${articleLink(fi)}'">
       <div class="thumb">${c.symbol}${featImg}<div class="thumb-label"><span class="tag">${featured.category}</span><h2>${featured.title}</h2></div></div>
       <div class="card-body"><p>${featured.summary}</p><div class="meta">소재산업부 · ${fmtDate(new Date())} ${featured.timestamp||''}</div></div>
     </div>`;
@@ -287,7 +297,7 @@
       const sideImg = a.image_url
         ? `<img class="side-img" src="${a.image_url}" alt="${a.title}" onerror="this.style.display='none'">`
         : '';
-      html += `<div class="side-card" onclick="location.href='article.html?id=${idx}'">
+      html += `<div class="side-card" onclick="location.href='${articleLink(idx)}'">
         ${sideImg}<span class="tag ${cv.cls}">${a.category}</span><h3>${a.title}</h3>
         <p>${a.summary}</p><div class="meta">${fmtDate(new Date())} ${a.timestamp||''}</div>
       </div>`;
@@ -303,7 +313,7 @@
       const rightCol = a.image_url
         ? `<img class="article-thumb" src="${a.image_url}" alt="" onerror="this.style.display='none'">`
         : `<div class="num">${String(i+1).padStart(2,'0')}</div>`;
-      html += `<div class="article-item" onclick="location.href='article.html?id=${idx}'">
+      html += `<div class="article-item" onclick="location.href='${articleLink(idx)}'">
         <div><span class="tag ${cv.cls}">${a.category}</span><h4>${a.title}</h4>
         <div class="summary">${a.summary}</div><div class="meta">${fmtDate(new Date())} ${a.timestamp||''}</div></div>
         ${rightCol}
@@ -338,7 +348,7 @@
     const el = document.getElementById('rank-list');
     if (!el) return;
     el.innerHTML = articles.slice(0,7).map((a,i) =>
-      `<div class="rank-item" onclick="location.href='article.html?id=${i}'">
+      `<div class="rank-item" onclick="location.href='${articleLink(i)}'">
         <span class="rank-num">${i+1}</span><span class="rank-title">${a.title}</span>
       </div>`
     ).join('');
@@ -366,6 +376,61 @@
       if (data.market) renderMarket(data.market);
       if (data.generated_at) { const el = document.getElementById('update-time'); if(el) el.textContent = `업데이트: ${data.generated_at}`; }
     } catch (e) { console.log('articles.json 로드 실패:', e.message); }
+    loadArchiveIndex();
+  }
+
+  // ── 아카이브 ─────────────────────────────────────
+  async function loadArchiveIndex() {
+    try {
+      const res = await fetch('archive/index.json');
+      if (!res.ok) { renderArchiveList([]); return; }
+      const data = await res.json();
+      renderArchiveList(data.dates || []);
+    } catch(e) { renderArchiveList([]); }
+  }
+
+  function renderArchiveList(dates) {
+    const el = document.getElementById('archive-list');
+    if (!el) return;
+    if (!dates.length) { el.innerHTML = '<div style="color:#aaa;font-size:13px;">아카이브 없음</div>'; return; }
+    const todayStyle = !currentDate ? 'font-weight:700;color:var(--accent2);' : 'color:var(--text-muted);';
+    let html = '<div onclick="goToday()" style="padding:6px 0;border-bottom:1px solid var(--border);font-size:13px;cursor:pointer;' + todayStyle + '">오늘 기사</div>';
+    html += dates.slice(0, 14).map(d => {
+      const [y, m, day] = d.split('-');
+      const label = parseInt(m) + '월 ' + parseInt(day) + '일';
+      const isActive = d === currentDate;
+      const style = isActive ? 'font-weight:700;color:var(--accent2);' : 'color:var(--text-muted);';
+      return '<div onclick="loadArchive(\'' + d + '\')" style="padding:6px 0;border-bottom:1px solid var(--border);font-size:13px;cursor:pointer;' + style + '">' + label + '</div>';
+    }).join('');
+    el.innerHTML = html;
+  }
+
+  async function goToday() {
+    currentDate = null;
+    const sTitle = document.querySelector('.section-title');
+    if (sTitle) sTitle.textContent = '오늘의 주요 뉴스';
+    await loadArticles();
+  }
+
+  async function loadArchive(dateKey) {
+    currentDate = dateKey;
+    try {
+      const res = await fetch('archive/' + dateKey + '.json');
+      if (!res.ok) { alert('해당 날짜 기사를 불러올 수 없습니다.'); return; }
+      const data = await res.json();
+      if (!data.articles || !data.articles.length) return;
+      document.getElementById('breaking-text').textContent = data.articles.map(a => a.title).join('  |  ');
+      renderTopNews(data.articles);
+      renderArticleSections(data.articles);
+      renderRanking(data.articles);
+      renderKeywords(data.articles);
+      if (data.market) renderMarket(data.market);
+      if (data.generated_at) { const el = document.getElementById('update-time'); if(el) el.textContent = '업데이트: ' + data.generated_at; }
+      const sTitle = document.querySelector('.section-title');
+      if (sTitle) sTitle.textContent = data.date_str + ' 주요 뉴스';
+      loadArchiveIndex();
+      window.scrollTo(0, 0);
+    } catch(e) { console.log('아카이브 로드 실패:', e); }
   }
 
   loadArticles();
