@@ -241,27 +241,36 @@ def get_market_prices():
 
 # ── 기사 이미지 다운로드 및 로컬 저장 ─────────────
 def download_article_images(articles):
-    """각 기사의 image_keyword로 이미지를 다운로드해 images/ 폴더에 저장"""
+    """각 기사의 image_keyword로 이미지를 다운로드해 images/ 폴더에 저장
+    1차: loremflickr (주제별 이미지) / 실패 시 2차: picsum (seed 기반 일관 이미지)
+    """
+    import hashlib
     os.makedirs(IMAGES_DIR, exist_ok=True)
     for i, article in enumerate(articles):
         keyword = article.get("image_keyword", "semiconductor materials technology")
-        # 영문 키워드를 쉼표 구분 형식으로 변환
         keywords_fmt = ",".join(keyword.replace(",", " ").split()[:3])
-        img_url = f"https://loremflickr.com/800/450/{keywords_fmt}"
+        seed = hashlib.md5(keyword.encode()).hexdigest()[:8]
+        candidates = [
+            f"https://loremflickr.com/800/450/{keywords_fmt}",
+            f"https://picsum.photos/seed/{seed}/800/450",
+        ]
         img_path = f"{IMAGES_DIR}/article_{i}.jpg"
-        try:
-            resp = requests.get(img_url, timeout=20, allow_redirects=True)
-            if resp.status_code == 200 and len(resp.content) > 1000:
-                with open(img_path, "wb") as f:
-                    f.write(resp.content)
-                article["image_url"] = img_path
-                print(f"   → 이미지 저장: {img_path} [{keyword}]")
-            else:
-                article["image_url"] = None
-                print(f"   → 이미지 실패 [{keyword}]: status {resp.status_code}")
-        except Exception as e:
+        saved = False
+        for img_url in candidates:
+            try:
+                resp = requests.get(img_url, timeout=20, allow_redirects=True)
+                if resp.status_code == 200 and len(resp.content) > 1000:
+                    with open(img_path, "wb") as f:
+                        f.write(resp.content)
+                    article["image_url"] = img_path
+                    print(f"   → 이미지 저장: {img_path} [{keyword}] ({img_url.split('/')[2]})")
+                    saved = True
+                    break
+            except Exception as e:
+                print(f"   → 이미지 오류 [{img_url.split('/')[2]}]: {e}")
+        if not saved:
             article["image_url"] = None
-            print(f"   → 이미지 오류 [{keyword}]: {e}")
+            print(f"   → 이미지 모두 실패 [{keyword}]")
     return articles
 
 
