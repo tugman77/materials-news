@@ -26,17 +26,7 @@
       "image_keyword": "semiconductor materials chemical",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "글로벌 반도체 소재 시장 2025년 기준 약 750억 달러(약 100조 원) 추산 — 출처 불명확",
-          "OCI의 OCI스페셜티 지분 100% 인수 — 구체적 거래 완료 시점 및 출처 미확인"
-        ],
-        "notes": "전반적으로 사실에 부합하나 시장 규모 수치 출처 보완 필요",
-        "verified_at": "2026-06-26 06:25"
-      }
+      "image_url": "images/article_0.jpg"
     },
     {
       "id": 2,
@@ -61,17 +51,7 @@
       "image_keyword": "ABF semiconductor substrate film",
       "is_featured": false,
       "timestamp": "오전 09:20",
-      "image_url": "images/article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "행동주의 펀드의 ABF 가격 30% 인상 요구 — 구체적 펀드명 및 출처 미기재",
-          "아지노모토의 ABF 시장 '사실상 독점' 표현 — 정확한 점유율 수치 미제시"
-        ],
-        "notes": "ABF·아지노모토 사실관계는 유효하나 행동주의 펀드 관련 출처 보강 필요",
-        "verified_at": "2026-06-26 06:25"
-      }
+      "image_url": "images/article_1.jpg"
     },
     {
       "id": 3,
@@ -97,18 +77,7 @@
       "image_keyword": "tantalum rare metal mining",
       "is_featured": false,
       "timestamp": "오전 09:25",
-      "image_url": "images/article_2.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "미국이 북·중·러산 탄탈럼 수입을 '공식 금지' — 구체적 법령·행정명령 번호 미기재",
-          "전 세계 탄탈럼 생산량 약 60% 이상이 DRC 집중 — 통상 DRC+르완다 합산 기준으로 수치 상이 가능",
-          "북한이 탄탈럼 수출로 핵·미사일 자금 조달 — 정보 당국 출처 불명확"
-        ],
-        "notes": "개연성 있는 정책 기사이나 금지 조치 법적 근거·출처 명시 필수",
-        "verified_at": "2026-06-26 06:25"
-      }
+      "image_url": "images/article_2.jpg"
     },
     {
       "id": 4,
@@ -133,18 +102,7 @@
       "image_keyword": "data center construction industrial",
       "is_featured": false,
       "timestamp": "오전 09:30",
-      "image_url": "images/article_3.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "2026년 1분기 건설공사 계약액 23.4% 증가 — 국토교통부 공식 통계 발표 여부 미확인",
-          "증가율 23.4%가 최근 5년 동기 기준 최고 수준 — 비교 기준 데이터 출처 미기재",
-          "'금액 기준 수십조 원' 표현 — 지나치게 모호하여 구체적 수치 검증 불가"
-        ],
-        "notes": "국토교통부 원문 통계 링크 등 출처 명기 필요, 수치 모호성 수정 권고",
-        "verified_at": "2026-06-26 06:25"
-      }
+      "image_url": "images/article_3.jpg"
     },
     {
       "id": 5,
@@ -166,21 +124,10 @@
         "기업 밸류업 프로그램 등 정부의 자본시장 선진화 노력이 외국인 투자 심리 개선으로 이어지기 위해서는 실질적인 기업 지배구조 개선과 주주 환원 확대가 동반돼야 한다는 지적이 많다. 단순한 제도 정비만으로는 외국인 자금의 지속적인 유입을 유도하기 어렵다는 것이다.",
         "시장 전망과 관련해, 단기적으로는 외국인 매도세가 진정될 수 있는 트리거로 미국 금리 정책 변화, 반도체 업황 회복 신호, 지정학적 긴장 완화 등이 꼽힌다. 업계에서는 하반기 이후 외국인 수급이 점진적으로 회복될 가능성을 열어두면서도, 단기 변동성에 대한 경계를 늦추지 않아야 한다고 조언하고 있다."
       ],
-      "image_keyword": "Seoul stock exchange trading floor",
+      "image_keyword": "Korea stock market foreign investor",
       "is_featured": false,
       "timestamp": "오전 09:35",
-      "image_url": "images/article_4.jpg",
-      "review": {
-        "trust_score": 2,
-        "status": "fail",
-        "suspicious_claims": [
-          "외국인 단월 순매도 47조 원 '역대 최대' — 통상 월간 최대치와 크게 괴리, 출처·날짜 미기재",
-          "외국인 지분율 '사상 최고 수준으로 올랐다가 급격히 낮아졌다' — 구체적 수치·시점 없이 단정",
-          "'셀코리아 본격화' 전문가 발언 — 인용 출처·발언자 전혀 없어 창작 가능성"
-        ],
-        "notes": "핵심 수치 47조 원의 출처·근거 전무, 사실 확인 전 게재 보류 권고",
-        "verified_at": "2026-06-26 06:25"
-      }
+      "image_url": "images/article_4.jpg"
     }
   ],
   "editorial_briefing": "미·중 공급망 갈등이 희귀금속 수입 금지로 격화되는 가운데, 국내 석화업계는 반도체·AI 소재로 고부가 전환을 가속하고 있다. 반도체·데이터센터 투자 호조로 건설 계약은 급증했으나, 외국인 역대 최대 순매도로 자본 유출 경보가 울리고 있다.",
@@ -210,6 +157,5 @@
       "label": "석화 고부가 전환",
       "status": "AI·반도체 소재 전환"
     }
-  ],
-  "last_reviewed_at": "2026-06-26 06:25"
+  ]
 }
