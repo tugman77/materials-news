@@ -383,9 +383,11 @@
       bodyEl.parentNode.insertBefore(imgEl, bodyEl);
     }
 
-    // 본문: body(충실한 기사) 우선, 없으면 summary 문장 분리
+    // 본문: body 배열 또는 문자열 모두 지원
     if (article.body) {
-      const paragraphs = article.body.split(/\n+/).filter(p => p.trim());
+      const paragraphs = Array.isArray(article.body)
+        ? article.body.filter(p => p.trim())
+        : article.body.split(/\n+/).filter(p => p.trim());
       bodyEl.innerHTML = paragraphs.map(p => `<p>${p.trim()}</p>`).join('');
     } else {
       const sentences = article.summary.split(/(?<=[.!?])\s+/).filter(s => s.trim());
