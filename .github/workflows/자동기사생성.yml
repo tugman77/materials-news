@@ -23,7 +23,7 @@ jobs:
           python-version: '3.11'
 
       - name: 라이브러리 설치
-        run: pip install anthropic feedparser requests
+        run: pip install anthropic feedparser requests json-repair
 
       - name: 기사 자동 생성
         env:

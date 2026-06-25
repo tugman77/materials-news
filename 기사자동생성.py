@@ -126,11 +126,11 @@ save_articles 도구를 사용해 기사 5개를 저장하세요.
     # tool_use 블록에서 결과 추출
     tool_block = next(b for b in response.content if b.type == "tool_use")
     articles = tool_block.input["articles"]
-    # 혹시 문자열로 반환된 경우 파싱
+    # 혹시 문자열로 반환된 경우 파싱 (double-serialization 방어)
     if isinstance(articles, str):
-        import re
-        cleaned = re.sub(r'(?<!\\)\n', '\\n', articles)
-        articles = json.loads(cleaned)
+        print(f"⚠️  articles가 str 타입 (len={len(articles)}), json_repair 시도...")
+        from json_repair import repair_json
+        articles = json.loads(repair_json(articles))
     # body가 문자열이면 줄바꿈으로 분리해 배열로 변환
     for a in articles:
         if isinstance(a.get("body"), str):
