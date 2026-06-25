@@ -192,17 +192,14 @@
   <!-- 사이드바 -->
   <aside class="sidebar">
 
+    <div class="sidebar-box" style="background:#f8f4ef;border-color:#d4c5b0;">
+      <div class="sidebar-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+      <div id="editorial-briefing" style="font-size:13px;color:#444;line-height:1.75;">불러오는 중...</div>
+    </div>
+
     <div class="sidebar-box">
-      <div class="sidebar-title">핵심 소재 시세</div>
-      <div id="market-list">
-        <div class="market-item"><span class="market-name">탄탈륨 ($/kg)</span><span class="market-val up">152.4 <span class="change">▲2.3%</span></span></div>
-        <div class="market-item"><span class="market-name">비스무트 ($/kg)</span><span class="market-val up">6.85 <span class="change">▲1.1%</span></span></div>
-        <div class="market-item"><span class="market-name">텔루륨 ($/kg)</span><span class="market-val down">63.2 <span class="change">▼0.8%</span></span></div>
-        <div class="market-item"><span class="market-name">갈륨 ($/kg)</span><span class="market-val up">2269 <span class="change">▲4.2%</span></span></div>
-        <div class="market-item"><span class="market-name">게르마늄 ($/kg)</span><span class="market-val up">1,240 <span class="change">▲1.7%</span></span></div>
-        <div class="market-item"><span class="market-name">코발트 ($/ton)</span><span class="market-val down">26,800 <span class="change">▼0.5%</span></span></div>
-        <div style="font-size:11px;color:#aaa;margin-top:10px;text-align:right;">기준: 2026.06.24 오전 9:00</div>
-      </div>
+      <div class="sidebar-title">글로벌 이슈 레이더</div>
+      <div id="issue-radar"><div style="color:#aaa;font-size:13px;">불러오는 중...</div></div>
     </div>
 
     <div class="sidebar-box">
@@ -331,17 +328,25 @@
     document.getElementById('article-sections').innerHTML = html;
   }
 
-  function renderMarket(market) {
-    const el = document.getElementById('market-list');
-    if (!el || !market || !market.length) return;
-    const now = new Date();
-    const h = now.getHours();
-    const timeStr = `${fmtDate(now)} ${h<12?'오전':'오후'} ${h%12||12}:${String(now.getMinutes()).padStart(2,'0')}`;
-    el.innerHTML = market.map(m => {
-      const isUp = m.direction === 'up';
-      const chg = m.change.replace(/^[+-]/,'');
-      return `<div class="market-item"><span class="market-name">${m.name}</span><span class="market-val ${isUp?'up':'down'}">${m.price} <span class="change">${isUp?'▲':'▼'}${chg}</span></span></div>`;
-    }).join('') + `<div style="font-size:11px;color:#aaa;margin-top:10px;text-align:right;">기준: ${timeStr}</div>`;
+  function renderEditorial(briefing) {
+    const el = document.getElementById('editorial-briefing');
+    if (!el || !briefing) return;
+    el.textContent = briefing;
+  }
+
+  function renderIssues(issues) {
+    const el = document.getElementById('issue-radar');
+    if (!el || !issues || !issues.length) return;
+    el.innerHTML = issues.map(issue =>
+      `<div style="display:flex;align-items:baseline;gap:8px;padding:7px 0;border-bottom:1px solid var(--border);">
+        <span style="font-size:14px;flex-shrink:0;">${issue.icon}</span>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:13px;color:var(--text);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${issue.label}</div>
+          <div style="font-size:11px;color:var(--text-light);margin-top:1px;">${issue.status}</div>
+        </div>
+      </div>`
+    ).join('').replace(/border-bottom[^;]+;(?=<\/div><\/div>$)/,'') ;
+    el.innerHTML = el.innerHTML.replace(/border-bottom:1px solid var\(--border\);(?=[^<]*<\/div>\s*<\/div>\s*$)/,'');
   }
 
   function renderRanking(articles) {
@@ -373,7 +378,8 @@
       renderArticleSections(data.articles);
       renderRanking(data.articles);
       renderKeywords(data.articles);
-      if (data.market) renderMarket(data.market);
+      if (data.editorial_briefing) renderEditorial(data.editorial_briefing);
+      if (data.global_issues) renderIssues(data.global_issues);
       if (data.generated_at) { const el = document.getElementById('update-time'); if(el) el.textContent = `업데이트: ${data.generated_at}`; }
     } catch (e) { console.log('articles.json 로드 실패:', e.message); }
     loadArchiveIndex();
@@ -424,7 +430,8 @@
       renderArticleSections(data.articles);
       renderRanking(data.articles);
       renderKeywords(data.articles);
-      if (data.market) renderMarket(data.market);
+      if (data.editorial_briefing) renderEditorial(data.editorial_briefing);
+      if (data.global_issues) renderIssues(data.global_issues);
       if (data.generated_at) { const el = document.getElementById('update-time'); if(el) el.textContent = '업데이트: ' + data.generated_at; }
       const sTitle = document.querySelector('.section-title');
       if (sTitle) sTitle.textContent = data.date_str + ' 주요 뉴스';

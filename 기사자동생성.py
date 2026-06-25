@@ -137,107 +137,74 @@ save_articles 도구를 사용해 기사 5개를 저장하세요.
             a["body"] = [p.strip() for p in a["body"].split("\n") if p.strip()]
     return articles
 
-# ── 시세 데이터 (뉴스 기반 Claude 추출) ───────────
-def get_market_prices():
-    """Google News RSS에서 시세 뉴스 수집 후 Claude가 가격 추출"""
-
-    # 소재별 검색 쿼리 (영문 검색이 가격 정보 더 정확)
-    QUERIES = [
-        ("탄탈륨 ($/kg)",  "tantalum price per kg 2026"),
-        ("비스무트 ($/kg)", "bismuth metal price per kg 2026"),
-        ("텔루륨 ($/kg)",  "tellurium price per kg 2026"),
-        ("갈륨 ($/kg)",    "gallium price per kg 2026"),
-        ("게르마늄 ($/kg)", "germanium price per kg 2026"),
-        ("코발트 ($/ton)", "cobalt price per ton LME 2026"),
-    ]
-
-    snippets = []
-    for label, query in QUERIES:
-        url = f"https://news.google.com/rss/search?q={quote(query)}&hl=en&gl=US&ceid=US:en"
-        try:
-            feed = feedparser.parse(url)
-            for entry in feed.entries[:3]:
-                title = entry.get("title", "")
-                summary = entry.get("summary", entry.get("description", ""))[:200]
-                snippets.append(f"[{label}] {title} — {summary}")
-        except Exception as e:
-            print(f"  시세 RSS 오류 [{label}]: {e}")
-
-    # 뉴스 수집 결과를 Claude에 전달해 가격 추출
+# ── 편집국 브리핑 + 글로벌 이슈 레이더 생성 ────────
+def generate_editorial(articles):
+    """오늘 기사를 바탕으로 편집국 브리핑(2~3문장)과 글로벌 이슈 레이더(4~5개) 생성"""
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
-    news_text = "\n".join(snippets[:24]) if snippets else "뉴스 없음"
+    titles_text = "\n".join(
+        f"- {a['title']}: {(a.get('summary') or '')[:80]}" for a in articles
+    )
 
-    prompt = f"""다음 뉴스 스니펫과 당신이 알고 있는 최신 시장 정보를 종합해서,
-아래 6개 소재의 현재 시세(2026년 6월 기준)를 JSON으로 반환하세요.
+    prompt = f"""오늘 소재경제신문 주요 기사:
+{titles_text}
 
-[참고 뉴스]
-{news_text}
-
-[반환 규칙]
-- price: 숫자 문자열 (쉼표 없이, 소수점 가능)
-- change: "+X.X%" 또는 "-X.X%" 형식 (전일 또는 최근 대비 변동)
-- direction: "up" 또는 "down"
-- 뉴스에서 확인된 가격 우선, 없으면 알려진 최신 시장가 사용
-
-반드시 아래 JSON 배열 형식만 반환하세요 (```json 마크다운 없이):
-
-[
-  {{"name": "탄탈륨 ($/kg)",  "price": "???", "change": "+?%", "direction": "up"}},
-  {{"name": "비스무트 ($/kg)", "price": "???", "change": "+?%", "direction": "up"}},
-  {{"name": "텔루륨 ($/kg)",  "price": "???", "change": "-?%", "direction": "down"}},
-  {{"name": "갈륨 ($/kg)",    "price": "???", "change": "+?%", "direction": "up"}},
-  {{"name": "게르마늄 ($/kg)", "price": "???", "change": "+?%", "direction": "up"}},
-  {{"name": "코발트 ($/ton)", "price": "???", "change": "-?%", "direction": "down"}}
-]
+위 기사를 바탕으로 save_editorial 도구를 사용해:
+1. briefing: 오늘 산업·공급망 전체 흐름을 2~3문장으로 요약 (150자 이내, 편집장 코멘트 느낌)
+2. issues: 현재 진행 중인 글로벌 주요 이슈 4~5개
+   - icon: 🔴(위험/긴급) 🟡(주의/모니터링) 🟢(긍정/개선)
+   - label: 이슈명 (15자 이내)
+   - status: 상태 한 줄 (12자 이내)
 """
 
     try:
         response = client.messages.create(
             model="claude-sonnet-4-6",
             max_tokens=800,
-            tools=[{
-                "name": "save_prices",
-                "description": "소재 시세 데이터를 저장합니다",
-                "input_schema": {
+            tools=[{{
+                "name": "save_editorial",
+                "description": "편집국 브리핑과 글로벌 이슈 레이더를 저장합니다",
+                "input_schema": {{
                     "type": "object",
-                    "properties": {
-                        "prices": {
+                    "properties": {{
+                        "briefing": {{"type": "string"}},
+                        "issues": {{
                             "type": "array",
-                            "items": {
+                            "items": {{
                                 "type": "object",
-                                "properties": {
-                                    "name":      {"type": "string"},
-                                    "price":     {"type": "string"},
-                                    "change":    {"type": "string"},
-                                    "direction": {"type": "string", "enum": ["up","down"]}
-                                },
-                                "required": ["name","price","change","direction"]
-                            }
-                        }
-                    },
-                    "required": ["prices"]
-                }
-            }],
-            tool_choice={"type": "tool", "name": "save_prices"},
-            messages=[{"role": "user", "content": prompt}]
+                                "properties": {{
+                                    "icon":   {{"type": "string", "enum": ["🔴","🟡","🟢"]}},
+                                    "label":  {{"type": "string"}},
+                                    "status": {{"type": "string"}}
+                                }},
+                                "required": ["icon","label","status"]
+                            }},
+                            "minItems": 4,
+                            "maxItems": 5
+                        }}
+                    }},
+                    "required": ["briefing","issues"]
+                }}
+            }}],
+            tool_choice={{"type": "tool", "name": "save_editorial"}},
+            messages=[{{"role": "user", "content": prompt}}]
         )
         tool_block = next(b for b in response.content if b.type == "tool_use")
-        prices = tool_block.input["prices"]
-        if isinstance(prices, str):
-            prices = json.loads(prices)
-        print(f"   → 시세 {len(prices)}개 항목 추출됨")
-        return prices
+        briefing = tool_block.input["briefing"]
+        issues   = tool_block.input["issues"]
+        print(f"   → 브리핑 생성 완료, 이슈 {len(issues)}개")
+        return briefing, issues
     except Exception as e:
-        print(f"  시세 추출 오류: {e} → 기본값 사용")
-        return [
-            {"name": "탄탈륨 ($/kg)",  "price": "152.4",  "change": "+2.3%", "direction": "up"},
-            {"name": "비스무트 ($/kg)", "price": "6.85",   "change": "+1.1%", "direction": "up"},
-            {"name": "텔루륨 ($/kg)",  "price": "63.2",   "change": "-0.8%", "direction": "down"},
-            {"name": "갈륨 ($/kg)",    "price": "2269",   "change": "+4.2%", "direction": "up"},
-            {"name": "게르마늄 ($/kg)", "price": "1240",   "change": "+1.7%", "direction": "up"},
-            {"name": "코발트 ($/ton)", "price": "26800",  "change": "-0.5%", "direction": "down"},
-        ]
+        print(f"  편집국 생성 오류: {e} → 기본값 사용")
+        return (
+            "오늘 소재경제신문은 반도체·희귀금속·산업재 분야 주요 동향을 집중 보도합니다.",
+            [
+                {{"icon": "🔴", "label": "미·중 공급망 갈등", "status": "진행 중"}},
+                {{"icon": "🟡", "label": "희귀금속 가격 불안", "status": "모니터링"}},
+                {{"icon": "🟡", "label": "반도체 소재 국산화", "status": "진행 중"}},
+                {{"icon": "🟢", "label": "국내 AI 반도체 투자", "status": "확대"}},
+            ]
+        )
 
 # ── 기사 이미지 다운로드 및 로컬 저장 ─────────────
 def download_article_images(articles):
@@ -275,7 +242,7 @@ def download_article_images(articles):
 
 
 # ── 최종 데이터 파일 저장 ──────────────────────────
-def save_data(articles, market_prices):
+def save_data(articles, briefing, issues):
     """index.html이 읽을 수 있는 JSON 파일로 저장 + 날짜별 아카이브 저장"""
     now = datetime.now(KST)
     date_key = now.strftime("%Y-%m-%d")
@@ -283,7 +250,8 @@ def save_data(articles, market_prices):
         "generated_at": now.strftime("%Y년 %m월 %d일 %H:%M"),
         "date_str": now.strftime("%Y년 %m월 %d일"),
         "articles": articles,
-        "market": market_prices,
+        "editorial_briefing": briefing,
+        "global_issues": issues,
     }
 
     # 1. 최신 기사 저장 (articles.json — 사이트 메인)
@@ -330,12 +298,12 @@ def main():
     print("🖼️  기사 이미지 다운로드 중...")
     articles = download_article_images(articles)
 
-    # 5. 시세 데이터 (뉴스 기반 Claude 추출)
-    print("💹 소재 시세 수집 중...")
-    market = get_market_prices()
+    # 4. 편집국 브리핑 + 글로벌 이슈 레이더 생성
+    print("📰 편집국 브리핑 + 이슈 레이더 생성 중...")
+    briefing, issues = generate_editorial(articles)
 
-    # 6. 저장
-    save_data(articles, market)
+    # 5. 저장
+    save_data(articles, briefing, issues)
     print("🎉 완료!")
 
 if __name__ == "__main__":
