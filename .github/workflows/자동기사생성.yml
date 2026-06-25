@@ -30,6 +30,13 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python 기사자동생성.py
 
+      - name: 기사 검수 (사실성 + 이미지)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python 기사검수.py
+
       - name: 변경사항 GitHub에 저장
         run: |
           git config user.name "소재경제신문 봇"
