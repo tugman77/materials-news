@@ -84,8 +84,8 @@ save_articles 도구를 사용해 기사 5개를 저장하세요.
 - body 배열 예시: ["첫째 단락 본문...", "둘째 단락 본문...", ...]
 """
 
-    # tool_use로 JSON 구조 보장
-    response = client.messages.create(
+    # tool_use로 JSON 구조 보장 (스트리밍: 32000 토큰 비스트리밍 금지 우회)
+    with client.messages.stream(
         model="claude-sonnet-4-6",
         max_tokens=32000,
         tools=[{
@@ -120,7 +120,8 @@ save_articles 도구를 사용해 기사 5개를 저장하세요.
         }],
         tool_choice={"type": "tool", "name": "save_articles"},
         messages=[{"role": "user", "content": prompt}]
-    )
+    ) as stream:
+        response = stream.get_final_message()
 
     # tool_use 블록에서 결과 추출
     tool_block = next(b for b in response.content if b.type == "tool_use")
