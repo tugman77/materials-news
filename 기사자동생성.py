@@ -161,33 +161,33 @@ def generate_editorial(articles):
         response = client.messages.create(
             model="claude-sonnet-4-6",
             max_tokens=800,
-            tools=[{{
+            tools=[{
                 "name": "save_editorial",
                 "description": "편집국 브리핑과 글로벌 이슈 레이더를 저장합니다",
-                "input_schema": {{
+                "input_schema": {
                     "type": "object",
-                    "properties": {{
-                        "briefing": {{"type": "string"}},
-                        "issues": {{
+                    "properties": {
+                        "briefing": {"type": "string"},
+                        "issues": {
                             "type": "array",
-                            "items": {{
+                            "items": {
                                 "type": "object",
-                                "properties": {{
-                                    "icon":   {{"type": "string", "enum": ["🔴","🟡","🟢"]}},
-                                    "label":  {{"type": "string"}},
-                                    "status": {{"type": "string"}}
-                                }},
+                                "properties": {
+                                    "icon":   {"type": "string", "enum": ["🔴","🟡","🟢"]},
+                                    "label":  {"type": "string"},
+                                    "status": {"type": "string"}
+                                },
                                 "required": ["icon","label","status"]
-                            }},
+                            },
                             "minItems": 4,
                             "maxItems": 5
-                        }}
-                    }},
+                        }
+                    },
                     "required": ["briefing","issues"]
-                }}
-            }}],
-            tool_choice={{"type": "tool", "name": "save_editorial"}},
-            messages=[{{"role": "user", "content": prompt}}]
+                }
+            }],
+            tool_choice={"type": "tool", "name": "save_editorial"},
+            messages=[{"role": "user", "content": prompt}]
         )
         tool_block = next(b for b in response.content if b.type == "tool_use")
         briefing = tool_block.input["briefing"]
@@ -199,10 +199,10 @@ def generate_editorial(articles):
         return (
             "오늘 소재경제신문은 반도체·희귀금속·산업재 분야 주요 동향을 집중 보도합니다.",
             [
-                {{"icon": "🔴", "label": "미·중 공급망 갈등", "status": "진행 중"}},
-                {{"icon": "🟡", "label": "희귀금속 가격 불안", "status": "모니터링"}},
-                {{"icon": "🟡", "label": "반도체 소재 국산화", "status": "진행 중"}},
-                {{"icon": "🟢", "label": "국내 AI 반도체 투자", "status": "확대"}},
+                {"icon": "🔴", "label": "미·중 공급망 갈등", "status": "진행 중"},
+                {"icon": "🟡", "label": "희귀금속 가격 불안", "status": "모니터링"},
+                {"icon": "🟡", "label": "반도체 소재 국산화", "status": "진행 중"},
+                {"icon": "🟢", "label": "국내 AI 반도체 투자", "status": "확대"},
             ]
         )
 
