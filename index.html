@@ -233,11 +233,11 @@
   </div>
   <nav>
     <div class="nav-inner">
-      <a href="javascript:void(0)" class="active" data-cat="" onclick="navFilter('')">전체</a>
-      <a href="javascript:void(0)" data-cat="반도체소재" onclick="navFilter('반도체소재')">반도체·소재</a>
-      <a href="javascript:void(0)" data-cat="희귀금속" onclick="navFilter('희귀금속')">희귀금속·광물</a>
-      <a href="javascript:void(0)" data-cat="산업재" onclick="navFilter('산업재')">산업재·화학</a>
-      <a href="javascript:void(0)" data-cat="글로벌" onclick="navFilter('글로벌')">글로벌공급망</a>
+      <a href="index.html" class="active">전체</a>
+      <a href="category.html?cat=반도체소재">반도체·소재</a>
+      <a href="category.html?cat=희귀금속">희귀금속·광물</a>
+      <a href="category.html?cat=산업재">산업재·화학</a>
+      <a href="category.html?cat=글로벌">글로벌공급망</a>
       <div class="nav-search">
         <input type="text" id="search-input" placeholder="기사 검색..." onkeydown="if(event.key==='Enter')doSearch()">
         <button onclick="doSearch()">🔍</button>
@@ -259,7 +259,7 @@
   <div class="cat-section" id="cat-반도체소재" style="display:none">
     <div class="cat-header">
       <span class="cat-name">반도체 · 소재</span>
-      <span class="cat-more" onclick="filterCat('반도체소재')">더보기 →</span>
+      <a class="cat-more" href="category.html?cat=반도체소재">더보기 →</a>
     </div>
     <div class="cat-grid" id="grid-반도체소재"></div>
   </div>
@@ -267,7 +267,7 @@
   <div class="cat-section" id="cat-희귀금속" style="display:none">
     <div class="cat-header">
       <span class="cat-name">희귀금속 · 광물</span>
-      <span class="cat-more" onclick="filterCat('희귀금속')">더보기 →</span>
+      <a class="cat-more" href="category.html?cat=희귀금속">더보기 →</a>
     </div>
     <div class="cat-grid" id="grid-희귀금속"></div>
   </div>
@@ -275,7 +275,7 @@
   <div class="cat-section" id="cat-산업재" style="display:none">
     <div class="cat-header">
       <span class="cat-name">산업재 · 화학</span>
-      <span class="cat-more" onclick="filterCat('산업재')">더보기 →</span>
+      <a class="cat-more" href="category.html?cat=산업재">더보기 →</a>
     </div>
     <div class="cat-grid" id="grid-산업재"></div>
   </div>
@@ -283,7 +283,7 @@
   <div class="cat-section" id="cat-글로벌" style="display:none">
     <div class="cat-header">
       <span class="cat-name">글로벌 공급망</span>
-      <span class="cat-more" onclick="filterCat('글로벌')">더보기 →</span>
+      <a class="cat-more" href="category.html?cat=글로벌">더보기 →</a>
     </div>
     <div class="cat-grid" id="grid-글로벌"></div>
   </div>

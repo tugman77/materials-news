@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>소재경제신문</title>
+<meta name="description" content="반도체, 첨단소재, 희귀금속, 산업재 분야 전문 뉴스 미디어">
+<style>
+  :root {
+    --primary: #1a2b4a; --accent: #c8102e; --accent2: #0057a8;
+    --bg: #f2f2ee; --card-bg: #fff; --border: #d8d8d2;
+    --text: #111; --text-muted: #4a4a4a; --text-light: #888;
+    --tag-semi: #e8f0fb; --tag-semi-text: #0057a8;
+    --tag-rare: #fdf0f0; --tag-rare-text: #c8102e;
+    --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
+    --tag-global: #fdf6e3; --tag-global-text: #a05000;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Noto Sans KR','Malgun Gothic',sans-serif; background:var(--bg); color:var(--text); font-size:15px; line-height:1.6; }
+  a { text-decoration:none; color:inherit; }
+  img { display:block; }
+
+  /* 속보 */
+  .breaking-bar { background:var(--accent); color:#fff; font-size:13px; padding:5px 0; overflow:hidden; }
+  .breaking-bar .inner { max-width:1200px; margin:0 auto; padding:0 16px; display:flex; align-items:center; gap:12px; }
+  .breaking-label { background:#fff; color:var(--accent); font-weight:700; font-size:11px; padding:2px 8px; border-radius:2px; white-space:nowrap; letter-spacing:1px; flex-shrink:0; }
+  .breaking-text { white-space:nowrap; animation:scroll-left 35s linear infinite; }
+  @keyframes scroll-left { 0%{transform:translateX(60vw)} 100%{transform:translateX(-100%)} }
+
+  /* 헤더 */
+  header { background:var(--primary); color:#fff; border-bottom:3px solid var(--accent); }
+  .header-top { max-width:1200px; margin:0 auto; padding:16px 16px 12px; display:flex; align-items:flex-end; justify-content:space-between; }
+  .logo-kr { font-size:26px; font-weight:700; letter-spacing:-0.5px; cursor:pointer; }
+  .logo-en { font-size:11px; color:rgba(255,255,255,0.5); letter-spacing:2px; margin-top:3px; }
+  .header-meta { text-align:right; font-size:12px; color:rgba(255,255,255,0.5); line-height:1.7; }
+  .header-meta .hdate { font-size:13px; color:rgba(255,255,255,0.75); }
+
+  /* 네비 */
+  nav { background:var(--primary); border-top:1px solid rgba(255,255,255,0.1); }
+  .nav-inner { max-width:1200px; margin:0 auto; padding:0 16px; display:flex; align-items:center; }
+  .nav-inner a { color:rgba(255,255,255,0.72); font-size:13.5px; padding:10px 14px; display:block; border-bottom:2px solid transparent; transition:color .15s,border-color .15s; white-space:nowrap; }
+  .nav-inner a:hover, .nav-inner a.active { color:#fff; border-bottom-color:var(--accent); }
+  .nav-search { margin-left:auto; display:flex; align-items:center; }
+  .nav-search input { border:none; background:rgba(255,255,255,0.1); color:#fff; padding:5px 10px; font-size:12px; outline:none; width:140px; }
+  .nav-search input::placeholder { color:rgba(255,255,255,0.45); }
+  .nav-search button { background:var(--accent); border:none; color:#fff; padding:5px 10px; cursor:pointer; font-size:13px; }
+
+  /* 브레드크럼 */
+  .breadcrumb { background:#eeeee9; border-bottom:1px solid var(--border); }
+  .bc-inner { max-width:1200px; margin:0 auto; padding:8px 16px; font-size:12px; color:var(--text-light); display:flex; align-items:center; gap:6px; }
+  .bc-inner a { color:var(--text-light); }
+  .bc-inner a:hover { color:var(--accent2); }
+  .bc-sep { color:#bbb; }
+  .bc-current { color:var(--text-muted); font-weight:600; }
+
+  /* 카테고리 배너 */
+  .cat-banner { background:var(--card-bg); border-bottom:3px solid var(--primary); }
+  .cat-banner-inner { max-width:1200px; margin:0 auto; padding:22px 16px 18px; display:flex; align-items:center; gap:14px; }
+  .cat-banner-bar { width:5px; height:40px; background:var(--accent); border-radius:2px; flex-shrink:0; }
+  .cat-banner-text { flex:1; }
+  .cat-banner-name { font-size:24px; font-weight:700; color:var(--primary); letter-spacing:-0.5px; line-height:1.3; }
+  .cat-banner-desc { font-size:13px; color:var(--text-muted); margin-top:4px; }
+  .cat-banner-count { font-size:12px; color:var(--text-light); white-space:nowrap; }
+
+  /* 기사 그리드 */
+  .content-wrap { max-width:1200px; margin:0 auto; padding:24px 16px 48px; }
+  .article-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  .art-card { background:var(--card-bg); border:1px solid var(--border); cursor:pointer; transition:box-shadow .15s; }
+  .art-card:hover { box-shadow:0 4px 16px rgba(0,0,0,.10); }
+  .art-card:hover .art-card-title { color:var(--accent2); }
+  .art-card-thumb { width:100%; aspect-ratio:16/9; object-fit:cover; }
+  .art-card-thumb-ph { width:100%; aspect-ratio:16/9; background:linear-gradient(135deg,#e8f0fb,#c5d9f5); display:flex; align-items:center; justify-content:center; color:#aaa; font-size:11px; }
+  .art-card-body { padding:14px 16px 16px; }
+  .art-card-tag { font-size:10px; font-weight:700; padding:2px 7px; border-radius:2px; display:inline-block; margin-bottom:7px; }
+  .art-card-title { font-size:15px; font-weight:700; line-height:1.5; color:var(--text); margin-bottom:8px; word-break:keep-all; transition:color .15s; }
+  .art-card-summary { font-size:12.5px; color:var(--text-muted); line-height:1.65; word-break:keep-all; margin-bottom:10px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+  .art-card-meta { font-size:11.5px; color:var(--text-light); }
+
+  /* 더 불러오기 */
+  .load-more-wrap { text-align:center; padding:28px 0 0; }
+  .load-more-btn { background:var(--card-bg); border:1px solid var(--border); color:var(--text-muted); padding:10px 32px; font-size:13.5px; cursor:pointer; transition:background .15s; }
+  .load-more-btn:hover:not(:disabled) { background:var(--primary); color:#fff; border-color:var(--primary); }
+  .load-more-btn:disabled { opacity:.6; cursor:default; }
+  .load-end { font-size:13px; color:var(--text-light); }
+  .empty-msg { text-align:center; padding:60px 0; color:var(--text-muted); font-size:14px; grid-column:1/-1; }
+
+  /* 태그 */
+  .tag-semi { background:var(--tag-semi); color:var(--tag-semi-text); }
+  .tag-rare { background:var(--tag-rare); color:var(--tag-rare-text); }
+  .tag-industry { background:var(--tag-industry); color:var(--tag-industry-text); }
+  .tag-global { background:var(--tag-global); color:var(--tag-global-text); }
+
+  /* 푸터 */
+  footer { background:var(--primary); color:rgba(255,255,255,0.5); font-size:12px; padding:24px 16px; border-top:3px solid var(--accent); }
+  .footer-inner { max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
+  .footer-logo { font-size:16px; font-weight:700; color:#fff; }
+
+  /* 반응형 */
+  @media (max-width:900px) { .article-grid { grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:640px) {
+    .article-grid { grid-template-columns:1fr; }
+    .cat-banner-name { font-size:20px; }
+    .nav-search { display:none; }
+    .header-meta { display:none; }
+    .nav-inner { overflow-x:auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="breaking-bar">
+  <div class="inner">
+    <span class="breaking-label">속보</span>
+    <span class="breaking-text" id="breaking-text">소재경제신문 — 반도체·소재·산업재 전문 미디어</span>
+  </div>
+</div>
+
+<header>
+  <div class="header-top">
+    <div onclick="location.href='index.html'" style="cursor:pointer">
+      <div class="logo-kr">소재경제신문</div>
+      <div class="logo-en">MATERIALS ECONOMY PRESS</div>
+    </div>
+    <div class="header-meta">
+      <div class="hdate" id="today-date"></div>
+      <div>반도체 · 첨단소재 · 희귀금속 · 산업재</div>
+    </div>
+  </div>
+  <nav>
+    <div class="nav-inner" id="main-nav">
+      <a href="index.html">전체</a>
+      <a href="category.html?cat=반도체소재" data-cat="반도체소재">반도체·소재</a>
+      <a href="category.html?cat=희귀금속" data-cat="희귀금속">희귀금속·광물</a>
+      <a href="category.html?cat=산업재" data-cat="산업재">산업재·화학</a>
+      <a href="category.html?cat=글로벌" data-cat="글로벌">글로벌공급망</a>
+      <div class="nav-search">
+        <input type="text" id="search-input" placeholder="기사 검색..." onkeydown="if(event.key==='Enter')doSearch()">
+        <button onclick="doSearch()">🔍</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="breadcrumb">
+  <div class="bc-inner">
+    <a href="index.html">홈</a>
+    <span class="bc-sep">›</span>
+    <span class="bc-current" id="bc-cat-name"></span>
+  </div>
+</div>
+
+<div class="cat-banner">
+  <div class="cat-banner-inner">
+    <div class="cat-banner-bar"></div>
+    <div class="cat-banner-text">
+      <div class="cat-banner-name" id="banner-name"></div>
+      <div class="cat-banner-desc" id="banner-desc"></div>
+    </div>
+    <div class="cat-banner-count" id="banner-count"></div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="article-grid" id="article-grid">
+    <div class="empty-msg">기사를 불러오는 중...</div>
+  </div>
+  <div class="load-more-wrap">
+    <button class="load-more-btn" id="load-more-btn" style="display:none" onclick="loadMore()">기사 더 불러오기 ▼</button>
+    <div class="load-end" id="load-end" style="display:none">모든 기사를 불러왔습니다.</div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">소재경제신문</div>
+    <div>© 2026 Materials Economy Press. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+const _d = new Date();
+const _dw = ['일','월','화','수','목','금','토'];
+document.getElementById('today-date').textContent =
+  `${_d.getFullYear()}년 ${_d.getMonth()+1}월 ${_d.getDate()}일 ${_dw[_d.getDay()]}요일`;
+
+function getTodayISO() {
+  return `${_d.getFullYear()}-${String(_d.getMonth()+1).padStart(2,'0')}-${String(_d.getDate()).padStart(2,'0')}`;
+}
+const todayISO = getTodayISO();
+function fmtDate(s) {
+  if (!s) return '';
+  const [y,m,d] = s.split('-');
+  return `${y}.${m}.${d}`;
+}
+function artLink(date, idx) {
+  return date === todayISO ? `article.html?id=${idx}` : `article.html?date=${date}&id=${idx}`;
+}
+
+const CATS = {
+  '반도체소재': { cls:'tag-semi',     label:'반도체 · 소재',   desc:'반도체 소재, 첨단 화학, 디스플레이 소재 전문 뉴스' },
+  '희귀금속':   { cls:'tag-rare',     label:'희귀금속 · 광물', desc:'희토류, 탄탈럼, 리튬 등 전략 광물 전문 뉴스' },
+  '산업재':     { cls:'tag-industry', label:'산업재 · 화학',   desc:'석유화학, 철강, 정밀화학 산업재 전문 뉴스' },
+  '글로벌':     { cls:'tag-global',   label:'글로벌 공급망',   desc:'공급망 재편, 무역 규제, 글로벌 소재 동향 뉴스' },
+};
+
+// URL 파라미터
+const currentCat = new URLSearchParams(location.search).get('cat') || '반도체소재';
+const catInfo = CATS[currentCat] || CATS['반도체소재'];
+
+// 페이지 메타
+document.title = `${catInfo.label} — 소재경제신문`;
+document.getElementById('bc-cat-name').textContent = catInfo.label;
+document.getElementById('banner-name').textContent = catInfo.label;
+document.getElementById('banner-desc').textContent = catInfo.desc;
+
+// 네비 active
+document.querySelectorAll('#main-nav a[data-cat]').forEach(a => {
+  a.classList.toggle('active', a.dataset.cat === currentCat);
+});
+
+// 데이터
+let allArticles = [];
+let archiveDates = [];
+let archiveIdx = 0;
+let visibleCount = 9;
+const PAGE = 9;
+
+function filtered() {
+  return allArticles.filter(r => r.article.category === currentCat);
+}
+
+function renderCard({article: a, date, idx}) {
+  const cv = catInfo;
+  const thumb = a.image_url
+    ? `<img class="art-card-thumb" src="${a.image_url}" alt="" onerror="this.style.display='none'">`
+    : `<div class="art-card-thumb-ph">이미지 준비 중</div>`;
+  return `<div class="art-card" onclick="location.href='${artLink(date, idx)}'">
+    ${thumb}
+    <div class="art-card-body">
+      <span class="art-card-tag ${cv.cls}">${a.category}</span>
+      <div class="art-card-title">${a.title}</div>
+      <div class="art-card-summary">${a.summary || ''}</div>
+      <div class="art-card-meta">${fmtDate(date)} ${a.timestamp || ''}</div>
+    </div>
+  </div>`;
+}
+
+function render() {
+  const list = filtered();
+  const el = document.getElementById('article-grid');
+  if (!list.length) {
+    el.innerHTML = '<div class="empty-msg">해당 카테고리의 기사가 없습니다.</div>';
+    document.getElementById('load-more-btn').style.display = 'none';
+    document.getElementById('load-end').style.display = '';
+    return;
+  }
+  el.innerHTML = list.slice(0, visibleCount).map(renderCard).join('');
+  document.getElementById('banner-count').textContent = `총 ${list.length}건`;
+
+  const hasMore = visibleCount < list.length || archiveIdx < archiveDates.length;
+  document.getElementById('load-more-btn').style.display = hasMore ? '' : 'none';
+  document.getElementById('load-end').style.display = hasMore ? 'none' : '';
+}
+
+async function loadMore() {
+  const btn = document.getElementById('load-more-btn');
+  btn.disabled = true;
+  btn.textContent = '불러오는 중...';
+
+  if (visibleCount < filtered().length) {
+    visibleCount += PAGE;
+  } else if (archiveIdx < archiveDates.length) {
+    const date = archiveDates[archiveIdx++];
+    try {
+      const res = await fetch(`archive/${date}.json`);
+      if (res.ok) {
+        const data = await res.json();
+        (data.articles || []).forEach((a, idx) => allArticles.push({article:a, date, idx}));
+      }
+    } catch(e) {}
+    visibleCount += PAGE;
+  }
+
+  render();
+  btn.disabled = false;
+  btn.textContent = '기사 더 불러오기 ▼';
+}
+
+function doSearch() {
+  const q = (document.getElementById('search-input')?.value || '').trim();
+  location.href = q ? `index.html?q=${encodeURIComponent(q)}` : 'index.html';
+}
+
+async function init() {
+  // 오늘 기사
+  try {
+    const res = await fetch('articles.json');
+    if (res.ok) {
+      const data = await res.json();
+      const arts = data.articles || [];
+      document.getElementById('breaking-text').textContent = arts.map(a => a.title).join('  |  ');
+      arts.forEach((a, idx) => allArticles.push({article:a, date:todayISO, idx}));
+    }
+  } catch(e) {}
+
+  // 아카이브 인덱스
+  try {
+    const res = await fetch('archive/index.json');
+    if (res.ok) {
+      const data = await res.json();
+      archiveDates = (data.dates || []).filter(d => d !== todayISO);
+    }
+  } catch(e) {}
+
+  // 최근 2일치 미리 로드
+  const preload = Math.min(2, archiveDates.length);
+  for (let i = 0; i < preload; i++) {
+    const date = archiveDates[archiveIdx++];
+    try {
+      const res = await fetch(`archive/${date}.json`);
+      if (res.ok) {
+        const data = await res.json();
+        (data.articles || []).forEach((a, idx) => allArticles.push({article:a, date, idx}));
+      }
+    } catch(e) {}
+  }
+
+  render();
+}
+
+init();
+</script>
+</body>
+</html>
