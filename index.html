@@ -488,9 +488,10 @@ function renderCatSections() {
 
 // ── 최신 기사 렌더 ──
 function renderLatest(filter) {
-  const filtered = filter
-    ? allArticles.filter(r => r.article.category === filter)
-    : allArticles;
+  const filtered = allArticles.filter(r =>
+    !(r.date === todayISO && heroIndices.has(r.idx)) &&
+    (!filter || r.article.category === filter)
+  );
   const el = document.getElementById('latest-list');
   if (!el) return;
 
