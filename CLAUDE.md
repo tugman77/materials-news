@@ -72,6 +72,34 @@
 
 ---
 
+## 이미지 관리 규칙
+
+### 소스 우선순위
+| 순위 | 소스 | 환경변수 | 특징 |
+|------|------|---------|------|
+| 1 | Unsplash API | `UNSPLASH_ACCESS_KEY` | 키워드 매칭, 최고 품질 |
+| 2 | Pexels API | `PEXELS_API_KEY` | 키워드 매칭, 고품질 무료 |
+| 3 | Pixabay API | `PIXABAY_API_KEY` | 키워드 매칭, 대용량 DB |
+| 4 | Unsplash 큐레이션 풀 | 불필요 | 카테고리 연관, 항상 사용 가능 |
+| 5 | picsum | 불필요 | 최종 폴백, 내용 무관 |
+
+### 중복 방지 규칙 (3중 보호)
+1. **Cross-category 중복 금지** — `_UNSPLASH_POOL` 각 photo-ID는 단일 카테고리에만 등록. `_validate_pool()` 함수가 실행마다 자동 감지.
+2. **Run 내 재사용 금지** — `_used_photo_ids` set: 동일 실행에서 선택된 photo-ID는 재선택 안 함.
+3. **바이너리 중복 금지** — `_downloaded_hashes` set: 동일 MD5 파일은 저장 거부 후 다음 소스 시도.
+
+### 풀 관리 원칙
+- 카테고리당 최소 8개 이상 유지 (5기사/일 + 여유분)
+- 새 ID 추가 전 전체 풀 검색으로 중복 확인
+- `기사자동생성.py`와 `기사검수.py` 두 파일의 풀을 항상 동일하게 유지
+- 파일명: `images/YYYY-MM-DD_article_N.jpg` — 날짜 포함으로 날짜 간 덮어쓰기 방지
+
+### API 키 등록 위치
+- 로컬: `.env` 또는 `export` 명령
+- GitHub Actions: Settings → Secrets → `PEXELS_API_KEY`, `PIXABAY_API_KEY`
+
+---
+
 ## 로컬 실행
 
 ```bash

@@ -51,8 +51,8 @@
 
   .section-title { font-size: 13px; font-weight: 700; color: var(--accent); letter-spacing: 1px; border-bottom: 2px solid var(--accent); padding-bottom: 6px; margin-bottom: 16px; }
 
-  /* ── 톱 뉴스 ── */
-  .top-news { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+  /* ── 톱 뉴스 히어로 ── */
+  .top-news { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
 
   .top-main { grid-column: 1/3; background: var(--card-bg); border: 1px solid var(--border); overflow: hidden; cursor: pointer; }
   .top-main:hover { opacity: 0.93; }
@@ -79,19 +79,63 @@
   .side-card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; flex: 1; }
   .side-card .meta { font-size: 12px; color: var(--text-light); margin-top: 4px; }
 
+  /* ── 날짜 섹션 헤더 ── */
+  .date-section { margin-bottom: 28px; }
+  .date-section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 2px solid var(--accent);
+  }
+  .date-section-today {
+    background: var(--accent);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 2px;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+  }
+  .date-section-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.3px;
+  }
+  .date-section-count {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
   /* ── 리스트형 기사 ── */
-  .article-list { display: flex; flex-direction: column; }
-  .article-item { padding: 14px 0; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: start; cursor: pointer; }
+  .article-list { display: flex; flex-direction: column; background: var(--card-bg); border: 1px solid var(--border); border-top: none; }
+  .article-item { padding: 14px 16px; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: start; cursor: pointer; }
   .article-item:last-child { border-bottom: none; }
-  .article-item:hover { background: var(--bg); margin: 0 -16px; padding: 14px 16px; }
+  .article-item:hover { background: #fafaf8; }
   .article-item .tag { font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 2px; display: inline-block; margin-bottom: 5px; }
   .article-item h4 { font-size: 14.5px; font-weight: 600; line-height: 1.45; color: var(--text); margin-bottom: 4px; }
   .article-item .summary { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
   .article-item .meta { font-size: 12px; color: var(--text-light); margin-top: 6px; }
   .article-item .num { font-size: 28px; font-weight: 700; color: var(--border); line-height: 1; min-width: 32px; text-align: right; }
 
-  /* ── 카테고리 섹션 ── */
-  .category-section { background: var(--card-bg); border: 1px solid var(--border); padding: 16px; margin-bottom: 24px; }
+  /* ── 더 보기 버튼 ── */
+  .load-more-btn {
+    border: 1.5px solid var(--primary);
+    background: #fff;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 32px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background 0.15s, color 0.15s;
+  }
+  .load-more-btn:hover:not(:disabled) { background: var(--primary); color: #fff; }
+  .load-more-btn:disabled { opacity: 0.5; cursor: default; }
 
   /* ── 사이드바 ── */
   .sidebar { display: flex; flex-direction: column; gap: 20px; }
@@ -120,14 +164,6 @@
   }
   .sidebar-coupang { padding: 0; overflow: hidden; }
 
-  .market-item { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
-  .market-item:last-of-type { border-bottom: none; }
-  .market-name { color: var(--text-muted); }
-  .market-val { font-weight: 600; }
-  .up { color: #c8102e; }
-  .down { color: #0057a8; }
-  .change { font-size: 12px; margin-left: 4px; }
-
   .rank-item { display: flex; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); align-items: flex-start; cursor: pointer; }
   .rank-item:last-child { border-bottom: none; }
   .rank-item:hover .rank-title { color: var(--accent2); }
@@ -139,6 +175,19 @@
   .newsletter-form input:focus { border-color: var(--accent2); }
   .newsletter-form button { background: var(--accent); color: #fff; border: none; padding: 8px; font-size: 13px; font-weight: 600; cursor: pointer; }
   .newsletter-form button:hover { background: #a00020; }
+
+  /* ── 날짜 네비 ── */
+  .archive-nav-item {
+    padding: 7px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: color 0.15s;
+  }
+  .archive-nav-item:last-child { border-bottom: none; }
+  .archive-nav-item:hover { color: var(--accent2); }
+  .archive-nav-item.today { font-weight: 700; color: var(--accent2); }
 
   /* ── 푸터 ── */
   footer { background: var(--primary); color: rgba(255,255,255,0.5); font-size: 12px; padding: 24px 16px; margin-top: 32px; border-top: 3px solid var(--accent); }
@@ -200,14 +249,23 @@
 <div class="container">
   <main>
 
+    <!-- 오늘 톱 뉴스 히어로 -->
     <div class="section-title">오늘의 주요 뉴스</div>
     <div class="top-news" id="top-news">
       <div style="grid-column:1/3; padding:40px; text-align:center; color:#aaa; font-size:14px;">기사를 불러오는 중...</div>
     </div>
 
-    <div id="article-sections">
-      <div style="padding:24px; text-align:center; color:#aaa; font-size:14px;">기사를 불러오는 중...</div>
+    <!-- 날짜별 기사 누적 피드 -->
+    <div id="article-feed"></div>
+
+    <!-- 더 보기 / 완료 -->
+    <div style="text-align:center; padding:24px 0 8px;">
+      <button class="load-more-btn" id="load-more-btn" style="display:none;" onclick="loadMoreDates(2)">이전 기사 더 보기 ▼</button>
+      <div id="load-more-end" style="display:none; font-size:13px; color:var(--text-light); padding:8px;">모든 기사를 불러왔습니다.</div>
     </div>
+
+    <!-- 무한 스크롤 감지 -->
+    <div id="scroll-sentinel" style="height:1px;"></div>
 
   </main>
 
@@ -242,8 +300,8 @@
     </div>
 
     <div class="sidebar-box">
-      <div class="sidebar-title">날짜별 아카이브</div>
-      <div id="archive-list"><div style="color:#aaa;font-size:13px;">불러오는 중...</div></div>
+      <div class="sidebar-title">날짜별 기사 보기</div>
+      <div id="archive-nav"><div style="color:#aaa;font-size:13px;">불러오는 중...</div></div>
     </div>
 
     <div class="sidebar-box" style="background:#f0f4fb;border-color:#b5d4f4;">
@@ -262,10 +320,6 @@
         <span style="background:#fdf0f0;color:#c8102e;font-size:12px;padding:4px 10px;border-radius:2px;">#희귀금속</span>
         <span style="background:#f0f7ee;color:#2e7d32;font-size:12px;padding:4px 10px;border-radius:2px;">#HBM4</span>
         <span style="background:#fdf6e3;color:#a05000;font-size:12px;padding:4px 10px;border-radius:2px;">#공급망</span>
-        <span style="background:#e8f0fb;color:#0057a8;font-size:12px;padding:4px 10px;border-radius:2px;">#스퍼터링타깃</span>
-        <span style="background:#fdf0f0;color:#c8102e;font-size:12px;padding:4px 10px;border-radius:2px;">#갈륨규제</span>
-        <span style="background:#f0f7ee;color:#2e7d32;font-size:12px;padding:4px 10px;border-radius:2px;">#IRA</span>
-        <span style="background:#fdf6e3;color:#a05000;font-size:12px;padding:4px 10px;border-radius:2px;">#비스무트</span>
       </div>
     </div>
 
@@ -292,11 +346,13 @@
 </footer>
 
 <script>
-  const d = new Date();
+  // ── 헤더 날짜 ──
+  const dn = new Date();
   const days = ['일','월','화','수','목','금','토'];
   document.getElementById('today-date').textContent =
-    `${d.getFullYear()}년 ${d.getMonth()+1}월 ${d.getDate()}일 ${days[d.getDay()]}요일`;
+    `${dn.getFullYear()}년 ${dn.getMonth()+1}월 ${dn.getDate()}일 ${days[dn.getDay()]}요일`;
 
+  // ── 카테고리 맵 ──
   const CATS = {
     '반도체소재': { cls:'tag-semi',     symbol:'Si', bg:'#e8f0fb', color:'#0057a8' },
     '희귀금속':   { cls:'tag-rare',     symbol:'Ta', bg:'#fdf0f0', color:'#c8102e' },
@@ -304,13 +360,129 @@
     '글로벌':     { cls:'tag-global',   symbol:'Ga', bg:'#fdf6e3', color:'#a05000' },
   };
   function getCat(a) { return CATS[a.category] || { cls:'tag-semi', symbol:'??', bg:'#e8f0fb', color:'#0057a8' }; }
-  function fmtDate(dt) { return `${dt.getFullYear()}.${String(dt.getMonth()+1).padStart(2,'0')}.${String(dt.getDate()).padStart(2,'0')}`; }
 
-  let currentDate = null;
-  function articleLink(idx) {
-    return currentDate ? `article.html?date=${currentDate}&id=${idx}` : `article.html?id=${idx}`;
+  // ── 날짜 유틸 ──
+  function getTodayISO() {
+    const n = new Date();
+    return `${n.getFullYear()}-${String(n.getMonth()+1).padStart(2,'0')}-${String(n.getDate()).padStart(2,'0')}`;
+  }
+  function fmtISO(s) {
+    const [y,m,d] = s.split('-');
+    return `${y}.${m}.${d}`;
+  }
+  function getDayKor(s) {
+    const dw = ['일','월','화','수','목','금','토'];
+    return dw[new Date(s + 'T00:00:00').getDay()] + '요일';
+  }
+  function dateSectionLabel(s) {
+    const [y,m,d] = s.split('-');
+    return `${y}년 ${parseInt(m)}월 ${parseInt(d)}일 ${getDayKor(s)}`;
   }
 
+  const todayISO = getTodayISO();
+
+  // ── 상태 ──
+  let allArchiveDates = [];
+  let archiveLoadIndex = 0;
+  let isLoading = false;
+
+  // ── 기사 아이템 HTML 빌드 ──
+  function buildArticleItem(a, idx, dateStr) {
+    const cv = getCat(a);
+    const link = dateStr ? `article.html?date=${dateStr}&id=${idx}` : `article.html?id=${idx}`;
+    const rightCol = a.image_url
+      ? `<img class="article-thumb" src="${a.image_url}" alt="" onerror="this.style.display='none'">`
+      : `<div class="num">${String(idx+1).padStart(2,'0')}</div>`;
+    const dateLabel = fmtISO(dateStr || todayISO);
+    return `<div class="article-item" onclick="location.href='${link}'">
+      <div>
+        <span class="tag ${cv.cls}">${a.category}</span>
+        <h4>${a.title}</h4>
+        <div class="summary">${a.summary}</div>
+        <div class="meta">${dateLabel} ${a.timestamp || ''}</div>
+      </div>
+      ${rightCol}
+    </div>`;
+  }
+
+  // ── 날짜 섹션을 피드에 추가 ──
+  function appendDateSection(dateStr, articles, isToday) {
+    const feed = document.getElementById('article-feed');
+    const wrap = document.createElement('div');
+    wrap.className = 'date-section';
+    wrap.id = 'section-' + dateStr;
+
+    const todayBadge = isToday ? '<span class="date-section-today">오늘</span>' : '';
+    const label = dateSectionLabel(dateStr);
+
+    wrap.innerHTML = `
+      <div class="date-section-header">
+        ${todayBadge}
+        <span class="date-section-label">${label}</span>
+        <span class="date-section-count">${articles.length}건</span>
+      </div>
+      <div class="article-list">
+        ${articles.map((a, i) => buildArticleItem(a, i, isToday ? null : dateStr)).join('')}
+      </div>
+    `;
+
+    feed.appendChild(wrap);
+  }
+
+  // ── 아카이브 날짜 순차 로드 ──
+  async function loadMoreDates(count) {
+    if (isLoading || archiveLoadIndex >= allArchiveDates.length) return;
+    isLoading = true;
+    updateLoadMoreUI();
+
+    for (let i = 0; i < count && archiveLoadIndex < allArchiveDates.length; i++, archiveLoadIndex++) {
+      const date = allArchiveDates[archiveLoadIndex];
+      try {
+        const res = await fetch('archive/' + date + '.json');
+        if (!res.ok) continue;
+        const data = await res.json();
+        if (data.articles && data.articles.length) {
+          appendDateSection(date, data.articles, false);
+        }
+      } catch(e) { console.log('아카이브 로드 실패:', date, e); }
+    }
+
+    isLoading = false;
+    updateLoadMoreUI();
+  }
+
+  function updateLoadMoreUI() {
+    const btn = document.getElementById('load-more-btn');
+    const end = document.getElementById('load-more-end');
+    if (!btn || !end) return;
+    const hasMore = archiveLoadIndex < allArchiveDates.length;
+    if (isLoading) {
+      btn.disabled = true;
+      btn.textContent = '불러오는 중...';
+      btn.style.display = '';
+      end.style.display = 'none';
+    } else if (hasMore) {
+      btn.disabled = false;
+      btn.textContent = '이전 기사 더 보기 ▼';
+      btn.style.display = '';
+      end.style.display = 'none';
+    } else {
+      btn.style.display = 'none';
+      end.style.display = '';
+    }
+  }
+
+  // ── 무한 스크롤 ──
+  function setupScrollObserver() {
+    const sentinel = document.getElementById('scroll-sentinel');
+    if (!sentinel || !('IntersectionObserver' in window)) return;
+    const obs = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && !isLoading) loadMoreDates(1);
+    }, { rootMargin: '600px' });
+    obs.observe(sentinel);
+  }
+
+  // ── 오늘 톱 뉴스 히어로 ──
   function renderTopNews(articles) {
     const featured = articles.find(a => a.is_featured) || articles[0];
     const sides = articles.filter(a => a !== featured).slice(0, 2);
@@ -319,75 +491,48 @@
     const featImg = featured.image_url
       ? `<img src="${featured.image_url}" alt="${featured.title}" onerror="this.style.display='none'">`
       : '';
-    let html = `<div class="top-main" onclick="location.href='${articleLink(fi)}'">
+    let html = `<div class="top-main" onclick="location.href='article.html?id=${fi}'">
       <div class="thumb">${c.symbol}${featImg}<div class="thumb-label"><span class="tag">${featured.category}</span><h2>${featured.title}</h2></div></div>
-      <div class="card-body"><p>${featured.summary}</p><div class="meta">소재산업부 · ${fmtDate(new Date())} ${featured.timestamp||''}</div></div>
+      <div class="card-body"><p>${featured.summary}</p><div class="meta">소재산업부 · ${fmtISO(todayISO)} ${featured.timestamp||''}</div></div>
     </div>`;
     sides.forEach(a => {
       const cv = getCat(a); const idx = articles.indexOf(a);
       const sideImg = a.image_url
         ? `<img class="side-img" src="${a.image_url}" alt="${a.title}" onerror="this.style.display='none'">`
         : '';
-      html += `<div class="side-card" onclick="location.href='${articleLink(idx)}'">
+      html += `<div class="side-card" onclick="location.href='article.html?id=${idx}'">
         ${sideImg}<span class="tag ${cv.cls}">${a.category}</span><h3>${a.title}</h3>
-        <p>${a.summary}</p><div class="meta">${fmtDate(new Date())} ${a.timestamp||''}</div>
+        <p>${a.summary}</p><div class="meta">${fmtISO(todayISO)} ${a.timestamp||''}</div>
       </div>`;
     });
     document.getElementById('top-news').innerHTML = html;
   }
 
-  function buildSection(title, articles, allArticles) {
-    if (!articles.length) return '';
-    let html = `<div class="category-section"><div class="section-title">${title}</div><div class="article-list">`;
-    articles.forEach((a, i) => {
-      const cv = getCat(a); const idx = allArticles.indexOf(a);
-      const rightCol = a.image_url
-        ? `<img class="article-thumb" src="${a.image_url}" alt="" onerror="this.style.display='none'">`
-        : `<div class="num">${String(i+1).padStart(2,'0')}</div>`;
-      html += `<div class="article-item" onclick="location.href='${articleLink(idx)}'">
-        <div><span class="tag ${cv.cls}">${a.category}</span><h4>${a.title}</h4>
-        <div class="summary">${a.summary}</div><div class="meta">${fmtDate(new Date())} ${a.timestamp||''}</div></div>
-        ${rightCol}
-      </div>`;
-    });
-    return html + `</div></div>`;
-  }
-
-  function renderArticleSections(articles) {
-    const featured = articles.find(a => a.is_featured) || articles[0];
-    const rest = articles.filter(a => a !== featured).slice(2);
-    let html = buildSection('반도체 · 소재', rest.filter(a => ['반도체소재','희귀금속','산업재'].includes(a.category)), articles);
-    html += buildSection('글로벌 공급망', rest.filter(a => a.category === '글로벌'), articles);
-    html += buildSection('최신 기사', rest.filter(a => !['반도체소재','희귀금속','산업재','글로벌'].includes(a.category)), articles);
-    document.getElementById('article-sections').innerHTML = html;
-  }
-
-  function renderEditorial(briefing) {
+  // ── 사이드바 위젯 ──
+  function renderEditorial(text) {
     const el = document.getElementById('editorial-briefing');
-    if (!el || !briefing) return;
-    el.textContent = briefing;
+    if (el && text) el.textContent = text;
   }
 
   function renderIssues(issues) {
     const el = document.getElementById('issue-radar');
     if (!el || !issues || !issues.length) return;
-    el.innerHTML = issues.map(issue =>
-      `<div style="display:flex;align-items:baseline;gap:8px;padding:7px 0;border-bottom:1px solid var(--border);">
+    el.innerHTML = issues.map((issue, i) =>
+      `<div style="display:flex;align-items:baseline;gap:8px;padding:7px 0;${i < issues.length-1 ? 'border-bottom:1px solid var(--border);' : ''}">
         <span style="font-size:14px;flex-shrink:0;">${issue.icon}</span>
         <div style="flex:1;min-width:0;">
           <div style="font-size:13px;color:var(--text);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${issue.label}</div>
           <div style="font-size:11px;color:var(--text-light);margin-top:1px;">${issue.status}</div>
         </div>
       </div>`
-    ).join('').replace(/border-bottom[^;]+;(?=<\/div><\/div>$)/,'') ;
-    el.innerHTML = el.innerHTML.replace(/border-bottom:1px solid var\(--border\);(?=[^<]*<\/div>\s*<\/div>\s*$)/,'');
+    ).join('');
   }
 
   function renderRanking(articles) {
     const el = document.getElementById('rank-list');
     if (!el) return;
-    el.innerHTML = articles.slice(0,7).map((a,i) =>
-      `<div class="rank-item" onclick="location.href='${articleLink(i)}'">
+    el.innerHTML = articles.slice(0, 7).map((a, i) =>
+      `<div class="rank-item" onclick="location.href='article.html?id=${i}'">
         <span class="rank-num">${i+1}</span><span class="rank-title">${a.title}</span>
       </div>`
     ).join('');
@@ -397,84 +542,87 @@
     const el = document.getElementById('keyword-list');
     if (!el) return;
     const seen = new Set();
-    el.innerHTML = articles.filter(a => a.category && !seen.has(a.category) && seen.add(a.category))
-      .map(a => { const cv = getCat(a); return `<span style="background:${cv.bg};color:${cv.color};font-size:12px;padding:4px 10px;border-radius:2px;">#${a.category}</span>`; }).join('');
+    el.innerHTML = articles
+      .filter(a => a.category && !seen.has(a.category) && seen.add(a.category))
+      .map(a => { const cv = getCat(a); return `<span style="background:${cv.bg};color:${cv.color};font-size:12px;padding:4px 10px;border-radius:2px;">#${a.category}</span>`; })
+      .join('');
   }
 
-  async function loadArticles() {
+  // ── 사이드바 날짜 네비 ──
+  function renderArchiveNav(allDates) {
+    const el = document.getElementById('archive-nav');
+    if (!el) return;
+    el.innerHTML = allDates.slice(0, 14).map(date => {
+      const isToday = date === todayISO;
+      const [y, m, day] = date.split('-');
+      const label = isToday ? '오늘 기사' : `${parseInt(m)}월 ${parseInt(day)}일`;
+      return `<div class="archive-nav-item${isToday ? ' today' : ''}" onclick="scrollToDate('${date}')">${label}</div>`;
+    }).join('');
+  }
+
+  async function scrollToDate(dateStr) {
+    let section = document.getElementById('section-' + dateStr);
+    if (!section) {
+      const targetIdx = allArchiveDates.indexOf(dateStr);
+      if (targetIdx >= 0 && targetIdx >= archiveLoadIndex) {
+        await loadMoreDates(targetIdx - archiveLoadIndex + 1);
+        section = document.getElementById('section-' + dateStr);
+      }
+    }
+    if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // ── 메인 초기화 ──
+  async function init() {
+    // 1. 오늘 기사 로드
     try {
       const res = await fetch('articles.json');
-      if (!res.ok) return;
+      if (!res.ok) throw new Error('없음');
       const data = await res.json();
-      if (!data.articles || !data.articles.length) return;
+      if (!data.articles || !data.articles.length) throw new Error('비어있음');
+
       document.getElementById('breaking-text').textContent = data.articles.map(a => a.title).join('  |  ');
+      if (data.generated_at) {
+        const el = document.getElementById('update-time');
+        if (el) el.textContent = '업데이트: ' + data.generated_at;
+      }
       renderTopNews(data.articles);
-      renderArticleSections(data.articles);
       renderRanking(data.articles);
       renderKeywords(data.articles);
       if (data.editorial_briefing) renderEditorial(data.editorial_briefing);
       if (data.global_issues) renderIssues(data.global_issues);
-      if (data.generated_at) { const el = document.getElementById('update-time'); if(el) el.textContent = `업데이트: ${data.generated_at}`; }
-    } catch (e) { console.log('articles.json 로드 실패:', e.message); }
-    loadArchiveIndex();
-  }
+      appendDateSection(todayISO, data.articles, true);
 
-  // ── 아카이브 ─────────────────────────────────────
-  async function loadArchiveIndex() {
+    } catch(e) {
+      console.log('articles.json 로드 실패:', e.message);
+      document.getElementById('top-news').innerHTML =
+        '<div style="grid-column:1/3;padding:40px;text-align:center;color:#aaa;font-size:14px;">기사가 없습니다.</div>';
+    }
+
+    // 2. 아카이브 인덱스 로드 (오늘 제외)
     try {
       const res = await fetch('archive/index.json');
-      if (!res.ok) { renderArchiveList([]); return; }
-      const data = await res.json();
-      renderArchiveList(data.dates || []);
-    } catch(e) { renderArchiveList([]); }
+      if (res.ok) {
+        const idx = await res.json();
+        allArchiveDates = (idx.dates || []).filter(d => d !== todayISO);
+        archiveLoadIndex = 0;
+      }
+    } catch(e) {}
+
+    // 3. 최초 2개 아카이브 자동 로드
+    await loadMoreDates(2);
+
+    // 4. 사이드바 날짜 네비
+    renderArchiveNav([todayISO, ...allArchiveDates]);
+
+    // 5. 무한 스크롤
+    setupScrollObserver();
+
+    // 6. 더 보기 버튼 상태
+    updateLoadMoreUI();
   }
 
-  function renderArchiveList(dates) {
-    const el = document.getElementById('archive-list');
-    if (!el) return;
-    if (!dates.length) { el.innerHTML = '<div style="color:#aaa;font-size:13px;">아카이브 없음</div>'; return; }
-    const todayStyle = !currentDate ? 'font-weight:700;color:var(--accent2);' : 'color:var(--text-muted);';
-    let html = '<div onclick="goToday()" style="padding:6px 0;border-bottom:1px solid var(--border);font-size:13px;cursor:pointer;' + todayStyle + '">오늘 기사</div>';
-    html += dates.slice(0, 14).map(d => {
-      const [y, m, day] = d.split('-');
-      const label = parseInt(m) + '월 ' + parseInt(day) + '일';
-      const isActive = d === currentDate;
-      const style = isActive ? 'font-weight:700;color:var(--accent2);' : 'color:var(--text-muted);';
-      return '<div onclick="loadArchive(\'' + d + '\')" style="padding:6px 0;border-bottom:1px solid var(--border);font-size:13px;cursor:pointer;' + style + '">' + label + '</div>';
-    }).join('');
-    el.innerHTML = html;
-  }
-
-  async function goToday() {
-    currentDate = null;
-    const sTitle = document.querySelector('.section-title');
-    if (sTitle) sTitle.textContent = '오늘의 주요 뉴스';
-    await loadArticles();
-  }
-
-  async function loadArchive(dateKey) {
-    currentDate = dateKey;
-    try {
-      const res = await fetch('archive/' + dateKey + '.json');
-      if (!res.ok) { alert('해당 날짜 기사를 불러올 수 없습니다.'); return; }
-      const data = await res.json();
-      if (!data.articles || !data.articles.length) return;
-      document.getElementById('breaking-text').textContent = data.articles.map(a => a.title).join('  |  ');
-      renderTopNews(data.articles);
-      renderArticleSections(data.articles);
-      renderRanking(data.articles);
-      renderKeywords(data.articles);
-      if (data.editorial_briefing) renderEditorial(data.editorial_briefing);
-      if (data.global_issues) renderIssues(data.global_issues);
-      if (data.generated_at) { const el = document.getElementById('update-time'); if(el) el.textContent = '업데이트: ' + data.generated_at; }
-      const sTitle = document.querySelector('.section-title');
-      if (sTitle) sTitle.textContent = data.date_str + ' 주요 뉴스';
-      loadArchiveIndex();
-      window.scrollTo(0, 0);
-    } catch(e) { console.log('아카이브 로드 실패:', e); }
-  }
-
-  loadArticles();
+  init();
 </script>
 
 </body>
