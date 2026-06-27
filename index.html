@@ -233,13 +233,13 @@
   </div>
   <nav>
     <div class="nav-inner">
-      <a href="#" class="active" data-cat="">전체</a>
-      <a href="#" data-cat="반도체소재">반도체·소재</a>
-      <a href="#" data-cat="희귀금속">희귀금속·광물</a>
-      <a href="#" data-cat="산업재">산업재·화학</a>
-      <a href="#" data-cat="글로벌">글로벌공급망</a>
+      <a href="javascript:void(0)" class="active" data-cat="" onclick="navFilter('')">전체</a>
+      <a href="javascript:void(0)" data-cat="반도체소재" onclick="navFilter('반도체소재')">반도체·소재</a>
+      <a href="javascript:void(0)" data-cat="희귀금속" onclick="navFilter('희귀금속')">희귀금속·광물</a>
+      <a href="javascript:void(0)" data-cat="산업재" onclick="navFilter('산업재')">산업재·화학</a>
+      <a href="javascript:void(0)" data-cat="글로벌" onclick="navFilter('글로벌')">글로벌공급망</a>
       <div class="nav-search">
-        <input type="text" id="search-input" placeholder="기사 검색...">
+        <input type="text" id="search-input" placeholder="기사 검색..." onkeydown="if(event.key==='Enter')doSearch()">
         <button onclick="doSearch()">🔍</button>
       </div>
     </div>
@@ -504,6 +504,12 @@ function renderLatest(filter) {
   }).join('');
 }
 
+// ── 네비 클릭 (인라인 onclick에서 호출) ──
+function navFilter(cat) {
+  filterCat(cat);
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
 // ── 카테고리 필터 ──
 function filterCat(cat) {
   currentFilter = cat;
@@ -657,17 +663,6 @@ function doSearch() {
     </div>`;
   }).join('') || '<div style="padding:20px 0;color:#aaa;font-size:13px;">검색 결과가 없습니다.</div>';
 }
-document.getElementById('search-input')?.addEventListener('keydown', e => { if (e.key==='Enter') doSearch(); });
-
-// ── 네비 클릭 ──
-document.querySelectorAll('.nav-inner a[data-cat]').forEach(a => {
-  a.addEventListener('click', e => {
-    e.preventDefault();
-    filterCat(a.dataset.cat);
-    window.scrollTo({top:0,behavior:'smooth'});
-  });
-});
-
 // ── 초기화 ──
 async function init() {
   // 1. 오늘 기사
