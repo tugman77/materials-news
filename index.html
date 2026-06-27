@@ -648,14 +648,25 @@ function doSearch() {
   const q = (document.getElementById('search-input')?.value || '').trim();
   if (!q) { filterCat(currentFilter); return; }
   const el = document.getElementById('latest-list');
+  const titleEl = document.getElementById('latest-title');
   if (!el) return;
-  const re = new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'gi');
+
+  // g 플래그 없는 regex로 filter (g 플래그는 lastIndex 누적 버그 발생)
+  const reTest = new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'i');
+  // 하이라이트용은 g 플래그 별도 사용
+  const reHL  = new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'gi');
+
   const matched = allArticles.filter(({article:a}) =>
-    re.test(a.title) || re.test(a.summary||'')
+    reTest.test(a.title) || reTest.test(a.summary||'')
   );
-  re.lastIndex = 0;
+
+  if (titleEl) titleEl.textContent = matched.length
+    ? `검색 결과 ${matched.length}건 — "${q}"`
+    : `검색 결과 없음 — "${q}"`;
+
   el.innerHTML = matched.map(({article:a, date, idx}) => {
-    const hl = t => (t||'').replace(re, m => `<mark>${m}</mark>`);
+    const hl = t => (t||'').replace(reHL, m => `<mark>${m}</mark>`);
+    reHL.lastIndex = 0;
     const thumb = a.image_url
       ? `<img class="li-thumb" src="${a.image_url}" alt="" onerror="this.style.display='none'">`
       : `<div class="li-thumb-ph"></div>`;
@@ -669,6 +680,9 @@ function doSearch() {
       </div>
     </div>`;
   }).join('') || '<div style="padding:20px 0;color:#aaa;font-size:13px;">검색 결과가 없습니다.</div>';
+
+  // 검색 결과 섹션으로 스크롤
+  document.querySelector('.latest-section')?.scrollIntoView({behavior:'smooth', block:'start'});
 }
 // ── 초기화 ──
 async function init() {
