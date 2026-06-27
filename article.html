@@ -568,20 +568,40 @@
   }
 
   // ── 관련 뉴스 로직 ───────────────────────────────────
+  //
+  // 매칭 규칙:
+  //   1. 현재 기사 자신은 제외 (날짜+인덱스 또는 제목 일치 시)
+  //   2. 특정 소재명·기업명 같은 고유어 키워드만 추출 (일반 업계 용어는 불용어)
+  //   3. 점수 = 키워드 일치 수 + 같은 카테고리 보너스 1.0
+  //   4. 임계값 1.5 이상만 표시 (키워드 2개+ OR 키워드 1개+같은카테고리)
+  //   5. 동일 제목 중복 제거
+
+  // 확장 불용어: 업계 공통 단어라 오탐률이 높은 것들 포함
   const STOP_WORDS = new Set([
+    // 조사·접속사
     '것','수','가','에서','으로','를','을','이','의','에','와','과','도','는','은',
     '이다','있다','하다','되다','위해','대한','관련','통해','따라','통한','위한','대해',
-    '기반','현재','지난','이번','올해','지역','전국','기업','업계','시장','사업','분야',
-    '투자','개발','생산','수출','규모','성장','전망','동향','국내','해외','글로벌',
-    '경제','산업','기술','제품','공급','수요','가격','증가','감소','계획','발표','진행',
+    // 너무 일반적인 명사 — 소재경제신문 모든 기사에서 나오는 단어
+    '기업','업계','시장','사업','분야','기반','현재','지난','이번','올해','규모',
+    '성장','전망','동향','경제','산업','기술','제품','수요','가격','계획','발표',
+    '진행','국내','해외','글로벌','지역','전국','대규모','강화','지원','협력',
+    '확대','확인','추진','시작','최근','영향','우려','대응','전략','확정','발효',
+    '도입','적용','개선','변화','분석','보고','조사','발견','증가','감소',
+    // 산업 특화 공통어 — 기사마다 등장해 오탐 유발
+    '공급','수출','수입','생산','투자','개발','구매','판매','제조','구매','협약',
+    // 국가·지역명 (단독으로는 매칭 의미 없음)
+    '미국','한국','중국','일본','유럽','러시아','인도','독일','영국',
+    // 화폐·단위
+    '달러','억원','조원','위안','엔화',
   ]);
 
   function extractKeywords(text) {
-    return (text || '').replace(/[^\w\s가-힣]/g, ' ')
+    return (text || '')
+      .replace(/[^\w\s가-힣]/g, ' ')
       .split(/\s+/)
-      .map(w => w.replace(/[은는이가을를에의]$/, ''))   // 조사 제거 (간단)
+      .map(w => w.replace(/[은는이가을를에의도로서]$/, ''))  // 조사 제거
       .filter(w => w.length >= 2 && !STOP_WORDS.has(w))
-      .slice(0, 15);
+      .slice(0, 12);
   }
 
   function scoreArticle(candidate, keywords) {
@@ -611,10 +631,11 @@
       const idxData = await idxRes.json();
       const allDates = (idxData.dates || []).filter(d => d !== excludeDate).slice(0, 14);
 
-      // 오늘 기사도 후보에 포함 (현재 보는 기사가 아카이브 기사일 때)
+      // 오늘 기사를 후보에 포함 — 단, 현재 기사가 오늘 기사일 때는 제외
+      // (currentDate === todayISO 이면 articles.json에 현재 기사가 그대로 있음)
       const sources = [];
-      if (currentDate) {
-        // 현재 기사가 아카이브 기사 → 오늘(articles.json)도 후보
+      if (currentDate && currentDate !== todayISO) {
+        // 현재 기사가 과거 날짜 기사 → 오늘 articles.json도 후보
         sources.push(
           fetch('articles.json').then(r => r.ok ? r.json() : null)
             .then(data => data ? { date: todayISO, articles: data.articles || [] } : null)
@@ -630,23 +651,28 @@
 
       const results = await Promise.allSettled(sources);
 
-      // 키워드 점수 계산
+      // 점수 계산 — 임계값 1.5 (키워드 2개+ OR 키워드 1개+같은카테고리)
+      const THRESHOLD = 1.5;
+      const CAT_BONUS = 1.0;  // 같은 카테고리 보너스
       const candidates = [];
       for (const result of results) {
         if (result.status !== 'fulfilled' || !result.value) continue;
         const { date, articles } = result.value;
         for (let i = 0; i < articles.length; i++) {
           const a = articles[i];
+          // 현재 기사 자신 제외 (제목 일치 or 같은 날짜+인덱스)
+          if (a.title === currentArticle.title) continue;
+          if (date === excludeDate && i === articleId) continue;
           const score = scoreArticle(a, keywords);
-          const catBonus = a.category === currentArticle.category ? 0.5 : 0;
-          if (score + catBonus >= 1) {
+          const catBonus = a.category === currentArticle.category ? CAT_BONUS : 0;
+          if (score + catBonus >= THRESHOLD) {
             candidates.push({ article: a, date, idx: i, score: score + catBonus });
           }
         }
       }
 
-      // 제목 중복 제거 (같은 제목 기사가 여러 날짜에 있을 때 1개만 표시)
-      const seenTitles = new Set();
+      // 제목 중복 제거 후 점수 내림차순 정렬
+      const seenTitles = new Set([currentArticle.title]);  // 현재 기사 제목 미리 등록
       const deduped = candidates.filter(c => {
         if (seenTitles.has(c.article.title)) return false;
         seenTitles.add(c.article.title);
