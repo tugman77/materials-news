@@ -184,7 +184,7 @@
   .related-news-summary { font-size: 13px; color: var(--text-muted); line-height: 1.55; word-break: keep-all; }
   .related-news-thumb { width: 80px; height: 60px; object-fit: cover; flex-shrink: 0; display: block; }
 
-  /* ── 본문 중간 다이내믹 광고 ── */
+  /* ── 본문 중간 광고 (680×140 배너) ── */
   .coupang-mid-ad {
     margin: 28px 0 4px;
     overflow: hidden;
@@ -193,6 +193,17 @@
     display: block;
     width: 100%;
     height: 160px;
+  }
+  /* ── 본문 하단 광고 (728×90 리더보드) ── */
+  .coupang-leader-ad {
+    margin: 28px auto 4px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    max-width: 728px;
+    height: 110px;
   }
   .coupang-mid-notice {
     font-size: 10px;
@@ -322,8 +333,12 @@
 
       <div class="art-body" id="art-body"></div>
 
-      <!-- 쿠팡 광고 (본문 하단) -->
+      <!-- 쿠팡 광고 (본문 하단 — 캐러셀) -->
       <iframe class="coupang-mid-ad" src="coupang-ad.html" frameborder="0" scrolling="no" title="쿠팡 파트너스 광고"></iframe>
+      <div class="coupang-mid-notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로 수수료를 제공받습니다.</div>
+
+      <!-- 쿠팡 광고 (본문 하단 728×90 리더보드) -->
+      <iframe class="coupang-leader-ad" src="coupang-ad-leaderboard.html" frameborder="0" scrolling="no" title="쿠팡 파트너스 광고"></iframe>
       <div class="coupang-mid-notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로 수수료를 제공받습니다.</div>
 
       <!-- 관련 뉴스 (타 날짜 유사 주제) -->
@@ -374,7 +389,7 @@
       </div>
       <script src="https://ads-partners.coupang.com/g.js"></script>
       <script>
-        new PartnersCoupang.G({id: 970543, trackingCode: "AF9787280", subId: null, template: "carousel", width: "100%", height: "200"});
+        new PartnersCoupang.G({id: 970543, trackingCode: "AF9787280", template: "carousel", width: "300", height: "300", tsource: ""});
       </script>
       <div class="coupang-ad-notice" style="border-top:1px solid #ffd0d8;">이 링크는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</div>
     </div>
