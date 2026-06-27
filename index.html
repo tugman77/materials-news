@@ -395,6 +395,7 @@ let allArchiveDates = [];  // 오늘 제외 아카이브 날짜들
 let archiveIdx = 0;
 let isLoading = false;
 let currentFilter = '';
+const heroIndices = new Set(); // 히어로에 사용된 오늘 기사 idx → 카테고리 섹션에서 제외
 
 // ── 링크 생성 ──
 function artLink(date, idx) {
@@ -414,6 +415,10 @@ function renderHero(articles) {
   const featured = articles.find(a => a.is_featured) || articles[0];
   const sides = articles.filter(a => a !== featured).slice(0, 3);
   const fi = articles.indexOf(featured);
+
+  // 히어로에 사용된 인덱스 등록 (카테고리 섹션 중복 제외용)
+  heroIndices.add(fi);
+  sides.forEach(a => heroIndices.add(articles.indexOf(a)));
 
   const mainThumb = featured.image_url
     ? `<img class="hero-thumb" src="${featured.image_url}" alt="${featured.title}" onerror="this.src='';this.className='hero-thumb-placeholder';">`
@@ -454,7 +459,8 @@ function renderCatSections() {
   const cats = ['반도체소재', '희귀금속', '산업재', '글로벌'];
   cats.forEach(cat => {
     const items = allArticles
-      .filter(r => r.article.category === cat)
+      .filter(r => r.article.category === cat
+        && !(r.date === todayISO && heroIndices.has(r.idx)))
       .slice(0, 6);
     if (!items.length) return;
 
