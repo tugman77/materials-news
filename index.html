@@ -10,11 +10,11 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
-    --text-muted: #5a5a5a;
+    --border: #d8d8d2;
+    --text: #111;
+    --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
@@ -24,173 +24,158 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
   a { text-decoration: none; color: inherit; }
+  img { display: block; }
 
   /* ── 속보 바 ── */
-  .breaking-bar { background: var(--accent); color: #fff; font-size: 13px; padding: 6px 0; overflow: hidden; }
+  .breaking-bar { background: var(--accent); color: #fff; font-size: 13px; padding: 5px 0; overflow: hidden; }
   .breaking-bar .inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; gap: 12px; }
-  .breaking-label { background: #fff; color: var(--accent); font-weight: 700; font-size: 11px; padding: 2px 8px; border-radius: 2px; white-space: nowrap; letter-spacing: 1px; }
-  .breaking-text { white-space: nowrap; overflow: hidden; animation: scroll-left 30s linear infinite; }
-  @keyframes scroll-left { 0%{transform:translateX(100vw)} 100%{transform:translateX(-100%)} }
+  .breaking-label { background: #fff; color: var(--accent); font-weight: 700; font-size: 11px; padding: 2px 8px; border-radius: 2px; white-space: nowrap; letter-spacing: 1px; flex-shrink: 0; }
+  .breaking-text { white-space: nowrap; animation: scroll-left 35s linear infinite; }
+  @keyframes scroll-left { 0%{transform:translateX(60vw)} 100%{transform:translateX(-100%)} }
 
   /* ── 헤더 ── */
   header { background: var(--primary); color: #fff; border-bottom: 3px solid var(--accent); }
-  .header-top { max-width: 1200px; margin: 0 auto; padding: 18px 16px 14px; display: flex; align-items: flex-end; justify-content: space-between; }
-  .logo-kr { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; color: #fff; }
-  .logo-en { font-size: 12px; color: rgba(255,255,255,0.55); letter-spacing: 2px; margin-top: 2px; }
-  .header-meta { text-align: right; font-size: 12px; color: rgba(255,255,255,0.5); }
-  .header-meta .date { font-size: 13px; color: rgba(255,255,255,0.7); margin-bottom: 3px; }
+  .header-top { max-width: 1200px; margin: 0 auto; padding: 16px 16px 12px; display: flex; align-items: flex-end; justify-content: space-between; }
+  .logo-kr { font-size: 26px; font-weight: 700; letter-spacing: -0.5px; }
+  .logo-en { font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 2px; margin-top: 3px; }
+  .header-meta { text-align: right; font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.7; }
+  .header-meta .hdate { font-size: 13px; color: rgba(255,255,255,0.75); }
 
   /* ── 네비게이션 ── */
   nav { background: var(--primary); border-top: 1px solid rgba(255,255,255,0.1); }
-  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; display: flex; }
-  .nav-inner a { color: rgba(255,255,255,0.75); font-size: 13.5px; padding: 10px 16px; display: block; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
+  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; }
+  .nav-inner a {
+    color: rgba(255,255,255,0.72); font-size: 13.5px; padding: 10px 14px;
+    display: block; border-bottom: 2px solid transparent;
+    transition: color .15s, border-color .15s; white-space: nowrap;
+  }
   .nav-inner a:hover, .nav-inner a.active { color: #fff; border-bottom-color: var(--accent); }
-
-  /* ── 메인 콘텐츠 ── */
-  .container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; display: grid; grid-template-columns: 1fr 300px; gap: 24px; }
-
-  .section-title { font-size: 13px; font-weight: 700; color: var(--accent); letter-spacing: 1px; border-bottom: 2px solid var(--accent); padding-bottom: 6px; margin-bottom: 16px; }
-
-  /* ── 톱 뉴스 히어로 ── */
-  .top-news { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
-
-  .top-main { grid-column: 1/3; background: var(--card-bg); border: 1px solid var(--border); overflow: hidden; cursor: pointer; }
-  .top-main:hover { opacity: 0.93; }
-  .top-main .thumb { width: 100%; height: 240px; background: linear-gradient(135deg, #1a2b4a 0%, #0057a8 100%); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.15); font-size: 80px; font-weight: 700; letter-spacing: -4px; overflow: hidden; position: relative; }
-  .top-main .thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-  .top-main .thumb-label { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); color: #fff; padding: 40px 16px 16px; letter-spacing: 0; }
-  .side-img { width: calc(100% + 28px); height: 130px; object-fit: cover; display: block; margin: -14px -14px 10px; }
-  .article-thumb { width: 88px; height: 66px; object-fit: cover; flex-shrink: 0; display: block; }
-  .top-main .thumb-label .tag { font-size: 11px; background: var(--accent); color: #fff; padding: 2px 8px; margin-bottom: 8px; display: inline-block; font-weight: 700; letter-spacing: 0.5px; }
-  .top-main .thumb-label h2 { font-size: 20px; font-weight: 700; line-height: 1.35; color: #fff; }
-  .top-main .card-body { padding: 16px; }
-  .top-main .card-body p { font-size: 14px; color: var(--text-muted); line-height: 1.7; margin-bottom: 10px; }
-  .top-main .card-body .meta { font-size: 12px; color: var(--text-light); }
-
-  /* ── 사이드 카드 ── */
-  .side-card { background: var(--card-bg); border: 1px solid var(--border); padding: 14px; display: flex; flex-direction: column; gap: 6px; cursor: pointer; }
-  .side-card:hover { opacity: 0.9; }
-  .side-card .tag { font-size: 11px; font-weight: 700; letter-spacing: 0.5px; padding: 2px 7px; border-radius: 2px; display: inline-block; align-self: flex-start; }
-  .tag-semi { background: var(--tag-semi); color: var(--tag-semi-text); }
-  .tag-rare { background: var(--tag-rare); color: var(--tag-rare-text); }
-  .tag-industry { background: var(--tag-industry); color: var(--tag-industry-text); }
-  .tag-global { background: var(--tag-global); color: var(--tag-global-text); }
-  .side-card h3 { font-size: 15px; font-weight: 700; line-height: 1.4; color: var(--text); }
-  .side-card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; flex: 1; }
-  .side-card .meta { font-size: 12px; color: var(--text-light); margin-top: 4px; }
-
-  /* ── 날짜 섹션 헤더 ── */
-  .date-section { margin-bottom: 28px; }
-  .date-section-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 0;
-    border-bottom: 2px solid var(--accent);
+  .nav-search { margin-left: auto; display: flex; align-items: center; gap: 0; }
+  .nav-search input {
+    border: none; background: rgba(255,255,255,0.1); color: #fff;
+    padding: 5px 10px; font-size: 12px; outline: none; width: 140px;
   }
-  .date-section-today {
-    background: var(--accent);
-    color: #fff;
-    font-size: 11px;
-    font-weight: 700;
-    padding: 2px 8px;
-    border-radius: 2px;
-    letter-spacing: 1px;
-    flex-shrink: 0;
-  }
-  .date-section-label {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--accent);
-    letter-spacing: 0.3px;
-  }
-  .date-section-count {
-    font-size: 12px;
-    color: var(--text-light);
-    margin-left: auto;
-    flex-shrink: 0;
-  }
+  .nav-search input::placeholder { color: rgba(255,255,255,0.45); }
+  .nav-search button { background: var(--accent); border: none; color: #fff; padding: 5px 10px; cursor: pointer; font-size: 13px; }
 
-  /* ── 리스트형 기사 ── */
-  .article-list { display: flex; flex-direction: column; background: var(--card-bg); border: 1px solid var(--border); border-top: none; }
-  .article-item { padding: 14px 16px; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: start; cursor: pointer; }
-  .article-item:last-child { border-bottom: none; }
-  .article-item:hover { background: #fafaf8; }
-  .article-item .tag { font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 2px; display: inline-block; margin-bottom: 5px; }
-  .article-item h4 { font-size: 14.5px; font-weight: 600; line-height: 1.45; color: var(--text); margin-bottom: 4px; }
-  .article-item .summary { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
-  .article-item .meta { font-size: 12px; color: var(--text-light); margin-top: 6px; }
-  .article-item .num { font-size: 28px; font-weight: 700; color: var(--border); line-height: 1; min-width: 32px; text-align: right; }
+  /* ── 페이지 레이아웃 ── */
+  .page { max-width: 1200px; margin: 0 auto; padding: 20px 16px 48px; display: grid; grid-template-columns: 1fr 280px; gap: 24px; }
 
-  /* ── 더 보기 버튼 ── */
+  /* ── 히어로 ── */
+  .hero { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 0; border: 1px solid var(--border); background: var(--card-bg); margin-bottom: 28px; }
+  .hero-main { grid-row: 1/3; border-right: 1px solid var(--border); cursor: pointer; }
+  .hero-main:hover .hero-main-title { color: var(--accent2); }
+  .hero-thumb { width: 100%; height: 260px; object-fit: cover; }
+  .hero-thumb-placeholder { width: 100%; height: 260px; background: linear-gradient(135deg,#1a2b4a,#0057a8); display: flex; align-items: center; justify-content: center; font-size: 60px; font-weight: 700; color: rgba(255,255,255,0.12); letter-spacing: -3px; }
+  .hero-main-body { padding: 18px 20px 20px; }
+  .hero-main-tag { font-size: 10.5px; font-weight: 700; padding: 2px 8px; border-radius: 2px; display: inline-block; margin-bottom: 8px; }
+  .hero-main-title { font-size: 19px; font-weight: 700; line-height: 1.45; color: var(--text); margin-bottom: 10px; transition: color .15s; }
+  .hero-main-summary { font-size: 13.5px; color: var(--text-muted); line-height: 1.7; margin-bottom: 10px; }
+  .hero-main-meta { font-size: 12px; color: var(--text-light); }
+
+  .hero-side { border-bottom: 1px solid var(--border); padding: 14px 16px; cursor: pointer; display: flex; gap: 12px; align-items: flex-start; }
+  .hero-side:last-child { border-bottom: none; }
+  .hero-side:hover .hs-title { color: var(--accent2); }
+  .hero-side-thumb { width: 80px; height: 60px; object-fit: cover; flex-shrink: 0; }
+  .hs-tag { font-size: 10px; font-weight: 700; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 4px; }
+  .hs-title { font-size: 14px; font-weight: 600; line-height: 1.4; color: var(--text); transition: color .15s; }
+  .hs-meta { font-size: 11.5px; color: var(--text-light); margin-top: 4px; }
+
+  /* ── 카테고리 섹션 (동아·조선 스타일) ── */
+  .cat-section { margin-bottom: 28px; }
+  .cat-header {
+    display: flex; align-items: center; justify-content: space-between;
+    border-top: 3px solid var(--primary); padding: 9px 0 7px;
+    border-bottom: 1px solid var(--border); margin-bottom: 14px;
+  }
+  .cat-name { font-size: 15px; font-weight: 700; color: var(--primary); letter-spacing: -0.3px; }
+  .cat-more { font-size: 12px; color: var(--text-light); cursor: pointer; }
+  .cat-more:hover { color: var(--accent2); }
+
+  .cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .cat-card { cursor: pointer; }
+  .cat-card:hover .cat-card-title { color: var(--accent2); }
+  .cat-card-thumb { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #ddd; }
+  .cat-card-thumb-ph { width: 100%; aspect-ratio: 16/9; background: linear-gradient(135deg,#e8f0fb,#c5d9f5); display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 11px; }
+  .cat-card-body { padding: 9px 0 0; }
+  .cat-card-tag { font-size: 10px; font-weight: 700; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 5px; }
+  .cat-card-title { font-size: 14px; font-weight: 600; line-height: 1.45; color: var(--text); margin-bottom: 4px; word-break: keep-all; transition: color .15s; }
+  .cat-card-meta { font-size: 11.5px; color: var(--text-light); }
+
+  /* ── 최신 기사 피드 ── */
+  .latest-section { margin-bottom: 12px; }
+  .latest-header {
+    display: flex; align-items: center; justify-content: space-between;
+    border-top: 3px solid var(--accent); padding: 9px 0 7px;
+    border-bottom: 1px solid var(--border); margin-bottom: 14px;
+  }
+  .latest-title { font-size: 15px; font-weight: 700; color: var(--accent); }
+  .latest-filter { display: flex; gap: 6px; }
+  .filter-btn {
+    font-size: 11.5px; padding: 3px 10px; border: 1px solid var(--border);
+    background: #fff; cursor: pointer; color: var(--text-muted);
+    border-radius: 2px; transition: background .15s, color .15s;
+  }
+  .filter-btn:hover, .filter-btn.on { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+  .latest-list { display: flex; flex-direction: column; }
+  .latest-item {
+    display: grid; grid-template-columns: 96px 1fr; gap: 12px;
+    padding: 13px 0; border-bottom: 1px solid var(--border); cursor: pointer;
+  }
+  .latest-item:hover .li-title { color: var(--accent2); }
+  .li-thumb { width: 96px; height: 72px; object-fit: cover; }
+  .li-thumb-ph { width: 96px; height: 72px; background: #e8e8e4; flex-shrink: 0; }
+  .li-tag { font-size: 10px; font-weight: 700; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 4px; }
+  .li-title { font-size: 14.5px; font-weight: 600; line-height: 1.45; color: var(--text); margin-bottom: 4px; word-break: keep-all; transition: color .15s; }
+  .li-summary { font-size: 12.5px; color: var(--text-muted); line-height: 1.55; word-break: keep-all; }
+  .li-meta { font-size: 11.5px; color: var(--text-light); margin-top: 5px; }
+
+  .load-more-wrap { text-align: center; padding: 20px 0 4px; }
   .load-more-btn {
-    border: 1.5px solid var(--primary);
-    background: #fff;
-    color: var(--primary);
-    font-size: 13px;
-    font-weight: 600;
-    padding: 10px 32px;
-    cursor: pointer;
-    letter-spacing: 0.5px;
-    transition: background 0.15s, color 0.15s;
+    border: 1.5px solid #aaa; background: #fff; color: var(--text-muted);
+    font-size: 13px; padding: 9px 36px; cursor: pointer; letter-spacing: 0.3px;
+    transition: border-color .15s, color .15s;
   }
-  .load-more-btn:hover:not(:disabled) { background: var(--primary); color: #fff; }
-  .load-more-btn:disabled { opacity: 0.5; cursor: default; }
+  .load-more-btn:hover:not(:disabled) { border-color: var(--primary); color: var(--primary); }
+  .load-more-btn:disabled { opacity: 0.4; cursor: default; }
+
+  /* ── 카테고리 뱃지 공통 ── */
+  .tag-semi     { background: var(--tag-semi);     color: var(--tag-semi-text); }
+  .tag-rare     { background: var(--tag-rare);     color: var(--tag-rare-text); }
+  .tag-industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .tag-global   { background: var(--tag-global);   color: var(--tag-global-text); }
 
   /* ── 사이드바 ── */
   .sidebar { display: flex; flex-direction: column; gap: 20px; }
-  .sidebar-box { background: var(--card-bg); border: 1px solid var(--border); padding: 16px; }
-  .sidebar-title { font-size: 13px; font-weight: 700; color: var(--primary); border-bottom: 2px solid var(--primary); padding-bottom: 6px; margin-bottom: 14px; letter-spacing: 0.5px; }
-
-  /* ── 쿠팡 파트너스 배너 ── */
-  .coupang-ad-top {
-    padding: 12px 16px;
-    background: linear-gradient(135deg, #e4003a 0%, #ff4d6d 100%);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .coupang-ad-top span { color: #fff; font-weight: 600; font-size: 13px; }
-  .coupang-ad-notice {
-    padding: 6px 12px;
-    background: #fff5f7;
-    border: 1px solid #ffd0d8;
-    border-top: none;
-    font-size: 11px;
-    color: #999;
-    line-height: 1.5;
-  }
-  .sidebar-coupang { padding: 0; overflow: hidden; }
+  .sb-box { background: var(--card-bg); border: 1px solid var(--border); padding: 14px; }
+  .sb-title { font-size: 13px; font-weight: 700; color: var(--primary); border-bottom: 2px solid var(--primary); padding-bottom: 6px; margin-bottom: 12px; letter-spacing: 0.3px; }
 
   .rank-item { display: flex; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); align-items: flex-start; cursor: pointer; }
   .rank-item:last-child { border-bottom: none; }
   .rank-item:hover .rank-title { color: var(--accent2); }
-  .rank-num { font-size: 13px; font-weight: 700; color: var(--accent); min-width: 18px; }
+  .rank-num { font-size: 14px; font-weight: 700; color: var(--accent); min-width: 18px; flex-shrink: 0; }
   .rank-title { font-size: 13px; color: var(--text); line-height: 1.4; }
 
-  .newsletter-form { display: flex; flex-direction: column; gap: 8px; }
-  .newsletter-form input { border: 1px solid var(--border); padding: 8px 10px; font-size: 13px; width: 100%; outline: none; background: var(--bg); }
-  .newsletter-form input:focus { border-color: var(--accent2); }
-  .newsletter-form button { background: var(--accent); color: #fff; border: none; padding: 8px; font-size: 13px; font-weight: 600; cursor: pointer; }
-  .newsletter-form button:hover { background: #a00020; }
+  .issue-item { display: flex; align-items: flex-start; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--border); }
+  .issue-item:last-child { border-bottom: none; }
+  .issue-icon { font-size: 14px; flex-shrink: 0; }
+  .issue-label { font-size: 12.5px; font-weight: 600; color: var(--text); }
+  .issue-status { font-size: 11.5px; color: var(--text-muted); line-height: 1.4; }
 
-  /* ── 날짜 네비 ── */
-  .archive-nav-item {
-    padding: 7px 0;
-    border-bottom: 1px solid var(--border);
-    font-size: 13px;
-    cursor: pointer;
-    color: var(--text-muted);
-    transition: color 0.15s;
-  }
-  .archive-nav-item:last-child { border-bottom: none; }
-  .archive-nav-item:hover { color: var(--accent2); }
-  .archive-nav-item.today { font-weight: 700; color: var(--accent2); }
+  .archive-item { padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13px; cursor: pointer; color: var(--text-muted); display: flex; align-items: center; justify-content: space-between; }
+  .archive-item:last-child { border-bottom: none; }
+  .archive-item:hover { color: var(--accent2); }
+  .archive-item.today { font-weight: 700; color: var(--accent2); }
+  .archive-count { font-size: 11px; color: var(--text-light); }
+
+  .sb-coupang { padding: 0; overflow: hidden; }
+  .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
+  .sb-coupang-top span { color: #fff; font-weight: 600; font-size: 13px; }
+  .sb-coupang-notice { padding: 5px 12px; background: #fff5f7; border-top: 1px solid #ffd0d8; font-size: 10.5px; color: #999; }
 
   /* ── 푸터 ── */
-  footer { background: var(--primary); color: rgba(255,255,255,0.5); font-size: 12px; padding: 24px 16px; margin-top: 32px; border-top: 3px solid var(--accent); }
+  footer { background: var(--primary); color: rgba(255,255,255,0.5); font-size: 12px; padding: 24px 16px; border-top: 3px solid var(--accent); }
   .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
   .footer-logo { font-size: 16px; font-weight: 700; color: #fff; }
   .footer-info { line-height: 1.8; }
@@ -198,13 +183,25 @@
   .footer-links a { color: rgba(255,255,255,0.5); }
   .footer-links a:hover { color: #fff; }
 
-  @media (max-width: 768px) {
-    .container { grid-template-columns: 1fr; }
-    .top-news { grid-template-columns: 1fr; }
-    .top-main { grid-column: 1; }
-    .header-meta { display: none; }
+  /* ── 검색 하이라이트 ── */
+  mark { background: #fff3b0; color: inherit; }
+
+  /* ── 반응형 ── */
+  @media (max-width: 900px) {
+    .page { grid-template-columns: 1fr; }
+    .sidebar { display: none; }
+  }
+  @media (max-width: 640px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-main { grid-row: auto; border-right: none; border-bottom: 1px solid var(--border); }
+    .cat-grid { grid-template-columns: 1fr 1fr; }
     .nav-inner { overflow-x: auto; }
-    .nav-inner a { white-space: nowrap; padding: 10px 12px; }
+    .nav-inner a { padding: 10px 11px; }
+    .nav-search { display: none; }
+    .header-meta { display: none; }
+  }
+  @media (max-width: 420px) {
+    .cat-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -221,109 +218,125 @@
 <!-- 헤더 -->
 <header>
   <div class="header-top">
-    <div class="logo-block">
+    <div style="cursor:pointer" onclick="location.href='index.html'">
       <div class="logo-kr">소재경제신문</div>
       <div class="logo-en">MATERIALS ECONOMY PRESS</div>
     </div>
     <div class="header-meta">
-      <div class="date" id="today-date"></div>
+      <div class="hdate" id="today-date"></div>
       <div>반도체 · 첨단소재 · 희귀금속 · 산업재</div>
-      <div id="update-time" style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:2px;"></div>
+      <div id="update-time" style="font-size:11px;color:rgba(255,255,255,0.35);"></div>
     </div>
   </div>
   <nav>
     <div class="nav-inner">
-      <a href="#" class="active">전체</a>
-      <a href="#">반도체·디스플레이</a>
-      <a href="#">희귀금속·광물</a>
-      <a href="#">배터리·에너지소재</a>
-      <a href="#">산업재·화학</a>
-      <a href="#">글로벌공급망</a>
-      <a href="#">기업분석</a>
-      <a href="#">시장동향</a>
+      <a href="#" class="active" data-cat="">전체</a>
+      <a href="#" data-cat="반도체소재">반도체·소재</a>
+      <a href="#" data-cat="희귀금속">희귀금속·광물</a>
+      <a href="#" data-cat="산업재">산업재·화학</a>
+      <a href="#" data-cat="글로벌">글로벌공급망</a>
+      <div class="nav-search">
+        <input type="text" id="search-input" placeholder="기사 검색...">
+        <button onclick="doSearch()">🔍</button>
+      </div>
     </div>
   </nav>
 </header>
 
-<!-- 메인 -->
-<div class="container">
-  <main>
+<!-- 본문 -->
+<div class="page">
+<main>
 
-    <!-- 오늘 톱 뉴스 히어로 -->
-    <div class="section-title">오늘의 주요 뉴스</div>
-    <div class="top-news" id="top-news">
-      <div style="grid-column:1/3; padding:40px; text-align:center; color:#aaa; font-size:14px;">기사를 불러오는 중...</div>
+  <!-- 히어로 -->
+  <div class="hero" id="hero-section">
+    <div style="grid-column:1/3;padding:32px;text-align:center;color:#aaa;font-size:14px;">기사를 불러오는 중...</div>
+  </div>
+
+  <!-- 카테고리 섹션 4개 (동아·조선 스타일) -->
+  <div class="cat-section" id="cat-반도체소재" style="display:none">
+    <div class="cat-header">
+      <span class="cat-name">반도체 · 소재</span>
+      <span class="cat-more" onclick="filterCat('반도체소재')">더보기 →</span>
     </div>
+    <div class="cat-grid" id="grid-반도체소재"></div>
+  </div>
 
-    <!-- 날짜별 기사 누적 피드 -->
-    <div id="article-feed"></div>
-
-    <!-- 더 보기 / 완료 -->
-    <div style="text-align:center; padding:24px 0 8px;">
-      <button class="load-more-btn" id="load-more-btn" style="display:none;" onclick="loadMoreDates(2)">이전 기사 더 보기 ▼</button>
-      <div id="load-more-end" style="display:none; font-size:13px; color:var(--text-light); padding:8px;">모든 기사를 불러왔습니다.</div>
+  <div class="cat-section" id="cat-희귀금속" style="display:none">
+    <div class="cat-header">
+      <span class="cat-name">희귀금속 · 광물</span>
+      <span class="cat-more" onclick="filterCat('희귀금속')">더보기 →</span>
     </div>
+    <div class="cat-grid" id="grid-희귀금속"></div>
+  </div>
 
-    <!-- 무한 스크롤 감지 -->
-    <div id="scroll-sentinel" style="height:1px;"></div>
-
-  </main>
-
-  <!-- 사이드바 -->
-  <aside class="sidebar">
-
-    <div class="sidebar-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sidebar-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
-      <div id="editorial-briefing" style="font-size:13px;color:#444;line-height:1.75;">불러오는 중...</div>
+  <div class="cat-section" id="cat-산업재" style="display:none">
+    <div class="cat-header">
+      <span class="cat-name">산업재 · 화학</span>
+      <span class="cat-more" onclick="filterCat('산업재')">더보기 →</span>
     </div>
+    <div class="cat-grid" id="grid-산업재"></div>
+  </div>
 
-    <div class="sidebar-box">
-      <div class="sidebar-title">글로벌 이슈 레이더</div>
-      <div id="issue-radar"><div style="color:#aaa;font-size:13px;">불러오는 중...</div></div>
+  <div class="cat-section" id="cat-글로벌" style="display:none">
+    <div class="cat-header">
+      <span class="cat-name">글로벌 공급망</span>
+      <span class="cat-more" onclick="filterCat('글로벌')">더보기 →</span>
     </div>
+    <div class="cat-grid" id="grid-글로벌"></div>
+  </div>
 
-    <!-- 쿠팡 파트너스 광고 -->
-    <div class="sidebar-box sidebar-coupang">
-      <div class="coupang-ad-top">
-        <span>🛒 쿠팡 쇼핑</span>
-      </div>
-      <script src="https://ads-partners.coupang.com/g.js"></script>
-      <script>
-        new PartnersCoupang.G({id: 970543, trackingCode: "AF9787280", subId: null, template: "carousel", width: "100%", height: "200"});
-      </script>
-      <div class="coupang-ad-notice" style="border-top:1px solid #ffd0d8;">이 링크는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</div>
-    </div>
-
-    <div class="sidebar-box">
-      <div class="sidebar-title">많이 본 뉴스</div>
-      <div id="rank-list"><div style="color:#aaa; font-size:13px;">불러오는 중...</div></div>
-    </div>
-
-    <div class="sidebar-box">
-      <div class="sidebar-title">날짜별 기사 보기</div>
-      <div id="archive-nav"><div style="color:#aaa;font-size:13px;">불러오는 중...</div></div>
-    </div>
-
-    <div class="sidebar-box" style="background:#f0f4fb;border-color:#b5d4f4;">
-      <div class="sidebar-title" style="color:#0057a8;border-bottom-color:#0057a8;">뉴스레터 구독</div>
-      <p style="font-size:13px;color:#444;line-height:1.6;margin-bottom:12px;">매일 아침 7시, 핵심 소재·산업재 뉴스를 이메일로 받아보세요.</p>
-      <div class="newsletter-form">
-        <input type="email" placeholder="이메일 주소 입력">
-        <button>무료 구독하기</button>
+  <!-- 최신 기사 리스트 -->
+  <div class="latest-section">
+    <div class="latest-header">
+      <span class="latest-title" id="latest-title">최신 기사</span>
+      <div class="latest-filter" id="filter-btns">
+        <button class="filter-btn on" onclick="filterCat('')">전체</button>
+        <button class="filter-btn" onclick="filterCat('반도체소재')">반도체소재</button>
+        <button class="filter-btn" onclick="filterCat('희귀금속')">희귀금속</button>
+        <button class="filter-btn" onclick="filterCat('산업재')">산업재</button>
+        <button class="filter-btn" onclick="filterCat('글로벌')">글로벌</button>
       </div>
     </div>
-
-    <div class="sidebar-box">
-      <div class="sidebar-title">오늘의 키워드</div>
-      <div id="keyword-list" style="display:flex;flex-wrap:wrap;gap:7px;margin-top:4px;">
-        <span style="background:#e8f0fb;color:#0057a8;font-size:12px;padding:4px 10px;border-radius:2px;">#탄탈륨</span>
-        <span style="background:#fdf0f0;color:#c8102e;font-size:12px;padding:4px 10px;border-radius:2px;">#희귀금속</span>
-        <span style="background:#f0f7ee;color:#2e7d32;font-size:12px;padding:4px 10px;border-radius:2px;">#HBM4</span>
-        <span style="background:#fdf6e3;color:#a05000;font-size:12px;padding:4px 10px;border-radius:2px;">#공급망</span>
-      </div>
+    <div class="latest-list" id="latest-list"></div>
+    <div class="load-more-wrap">
+      <button class="load-more-btn" id="load-more-btn" style="display:none" onclick="loadMoreArchive()">기사 더 불러오기 ▼</button>
+      <div id="load-end" style="display:none;font-size:13px;color:var(--text-light);padding:8px;">모든 기사를 불러왔습니다.</div>
     </div>
+  </div>
 
-  </aside>
+</main>
+
+<!-- 사이드바 -->
+<aside class="sidebar">
+
+  <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
+    <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div id="editorial-briefing" style="font-size:13px;color:#444;line-height:1.75;">불러오는 중...</div>
+  </div>
+
+  <div class="sb-box">
+    <div class="sb-title">많이 본 뉴스</div>
+    <div id="rank-list"><div style="color:#aaa;font-size:13px;">불러오는 중...</div></div>
+  </div>
+
+  <div class="sb-coupang sb-box">
+    <div class="sb-coupang-top"><span>쿠팡 추천 상품</span></div>
+    <script src="https://ads-partners.coupang.com/g.js"></script>
+    <script>new PartnersCoupang.G({id:970543,trackingCode:"AF9787280",subId:null,template:"carousel",width:"100%",height:"200"});</script>
+    <div class="sb-coupang-notice">이 링크는 쿠팡 파트너스 활동의 일환으로 수수료를 제공받습니다.</div>
+  </div>
+
+  <div class="sb-box">
+    <div class="sb-title">글로벌 이슈 레이더</div>
+    <div id="issue-radar"><div style="color:#aaa;font-size:13px;">불러오는 중...</div></div>
+  </div>
+
+  <div class="sb-box">
+    <div class="sb-title">날짜별 기사</div>
+    <div id="archive-nav"><div style="color:#aaa;font-size:13px;">불러오는 중...</div></div>
+  </div>
+
+</aside>
 </div>
 
 <!-- 푸터 -->
@@ -346,283 +359,355 @@
 </footer>
 
 <script>
-  // ── 헤더 날짜 ──
-  const dn = new Date();
-  const days = ['일','월','화','수','목','금','토'];
-  document.getElementById('today-date').textContent =
-    `${dn.getFullYear()}년 ${dn.getMonth()+1}월 ${dn.getDate()}일 ${days[dn.getDay()]}요일`;
+// ── 날짜 헤더 ──
+const _d = new Date();
+const _dw = ['일','월','화','수','목','금','토'];
+document.getElementById('today-date').textContent =
+  `${_d.getFullYear()}년 ${_d.getMonth()+1}월 ${_d.getDate()}일 ${_dw[_d.getDay()]}요일`;
 
-  // ── 카테고리 맵 ──
-  const CATS = {
-    '반도체소재': { cls:'tag-semi',     symbol:'Si', bg:'#e8f0fb', color:'#0057a8' },
-    '희귀금속':   { cls:'tag-rare',     symbol:'Ta', bg:'#fdf0f0', color:'#c8102e' },
-    '산업재':     { cls:'tag-industry', symbol:'Fe', bg:'#f0f7ee', color:'#2e7d32' },
-    '글로벌':     { cls:'tag-global',   symbol:'Ga', bg:'#fdf6e3', color:'#a05000' },
-  };
-  function getCat(a) { return CATS[a.category] || { cls:'tag-semi', symbol:'??', bg:'#e8f0fb', color:'#0057a8' }; }
+// ── 카테고리 맵 ──
+const CATS = {
+  '반도체소재': { cls:'tag-semi',     bg:'#e8f0fb', color:'#0057a8' },
+  '희귀금속':   { cls:'tag-rare',     bg:'#fdf0f0', color:'#c8102e' },
+  '산업재':     { cls:'tag-industry', bg:'#f0f7ee', color:'#2e7d32' },
+  '글로벌':     { cls:'tag-global',   bg:'#fdf6e3', color:'#a05000' },
+};
+function getCat(a) { return CATS[a.category] || { cls:'tag-semi', bg:'#e8f0fb', color:'#0057a8' }; }
 
-  // ── 날짜 유틸 ──
-  function getTodayISO() {
-    const n = new Date();
-    return `${n.getFullYear()}-${String(n.getMonth()+1).padStart(2,'0')}-${String(n.getDate()).padStart(2,'0')}`;
-  }
-  function fmtISO(s) {
-    const [y,m,d] = s.split('-');
-    return `${y}.${m}.${d}`;
-  }
-  function getDayKor(s) {
-    const dw = ['일','월','화','수','목','금','토'];
-    return dw[new Date(s + 'T00:00:00').getDay()] + '요일';
-  }
-  function dateSectionLabel(s) {
-    const [y,m,d] = s.split('-');
-    return `${y}년 ${parseInt(m)}월 ${parseInt(d)}일 ${getDayKor(s)}`;
-  }
+// ── 날짜 유틸 ──
+function getTodayISO() {
+  const n = new Date();
+  return `${n.getFullYear()}-${String(n.getMonth()+1).padStart(2,'0')}-${String(n.getDate()).padStart(2,'0')}`;
+}
+function fmtDate(s) {
+  if (!s) return '';
+  const [y,m,d] = s.split('-');
+  return `${y}.${m}.${d}`;
+}
+const todayISO = getTodayISO();
 
-  const todayISO = getTodayISO();
+// ── 전역 데이터 ──
+let allArticles = [];      // {article, date, idx}
+let allArchiveDates = [];  // 오늘 제외 아카이브 날짜들
+let archiveIdx = 0;
+let isLoading = false;
+let currentFilter = '';
 
-  // ── 상태 ──
-  let allArchiveDates = [];
-  let archiveLoadIndex = 0;
-  let isLoading = false;
+// ── 링크 생성 ──
+function artLink(date, idx) {
+  return date === todayISO
+    ? `article.html?id=${idx}`
+    : `article.html?date=${date}&id=${idx}`;
+}
 
-  // ── 기사 아이템 HTML 빌드 ──
-  function buildArticleItem(a, idx, dateStr) {
-    const cv = getCat(a);
-    const link = dateStr ? `article.html?date=${dateStr}&id=${idx}` : `article.html?id=${idx}`;
-    const rightCol = a.image_url
-      ? `<img class="article-thumb" src="${a.image_url}" alt="" onerror="this.style.display='none'">`
-      : `<div class="num">${String(idx+1).padStart(2,'0')}</div>`;
-    const dateLabel = fmtISO(dateStr || todayISO);
-    return `<div class="article-item" onclick="location.href='${link}'">
-      <div>
-        <span class="tag ${cv.cls}">${a.category}</span>
-        <h4>${a.title}</h4>
-        <div class="summary">${a.summary}</div>
-        <div class="meta">${dateLabel} ${a.timestamp || ''}</div>
+// ── 태그 HTML ──
+function tagHtml(a, cls) {
+  const cv = getCat(a);
+  return `<span class="${cls} ${cv.cls}">${a.category}</span>`;
+}
+
+// ── 히어로 렌더 ──
+function renderHero(articles) {
+  const featured = articles.find(a => a.is_featured) || articles[0];
+  const sides = articles.filter(a => a !== featured).slice(0, 2);
+  const fi = articles.indexOf(featured);
+  const cv = getCat(featured);
+
+  const mainThumb = featured.image_url
+    ? `<img class="hero-thumb" src="${featured.image_url}" alt="${featured.title}" onerror="this.src='';this.className='hero-thumb-placeholder';">`
+    : `<div class="hero-thumb-placeholder">소재경제</div>`;
+
+  let html = `<div class="hero-main" onclick="location.href='${artLink(todayISO, fi)}'">
+    ${mainThumb}
+    <div class="hero-main-body">
+      ${tagHtml(featured,'hero-main-tag')}
+      <div class="hero-main-title">${featured.title}</div>
+      <div class="hero-main-summary">${(featured.summary||'').slice(0,100)}…</div>
+      <div class="hero-main-meta">소재산업부 · ${fmtDate(todayISO)} ${featured.timestamp||''}</div>
+    </div>
+  </div>`;
+
+  sides.forEach(a => {
+    const idx = articles.indexOf(a);
+    const sideThumb = a.image_url
+      ? `<img class="hero-side-thumb" src="${a.image_url}" alt="${a.title}" onerror="this.style.display='none'">`
+      : `<div class="hero-side-thumb" style="background:#e8e8e4;"></div>`;
+    html += `<div class="hero-side" onclick="location.href='${artLink(todayISO, idx)}'">
+      ${sideThumb}
+      <div style="flex:1;min-width:0;">
+        ${tagHtml(a,'hs-tag')}
+        <div class="hs-title">${a.title}</div>
+        <div class="hs-meta">${fmtDate(todayISO)} ${a.timestamp||''}</div>
       </div>
-      ${rightCol}
     </div>`;
-  }
+  });
 
-  // ── 날짜 섹션을 피드에 추가 ──
-  function appendDateSection(dateStr, articles, isToday) {
-    const feed = document.getElementById('article-feed');
-    const wrap = document.createElement('div');
-    wrap.className = 'date-section';
-    wrap.id = 'section-' + dateStr;
+  document.getElementById('hero-section').innerHTML = html;
+}
 
-    const todayBadge = isToday ? '<span class="date-section-today">오늘</span>' : '';
-    const label = dateSectionLabel(dateStr);
+// ── 카테고리 섹션 렌더 ──
+function renderCatSections() {
+  const cats = ['반도체소재', '희귀금속', '산업재', '글로벌'];
+  cats.forEach(cat => {
+    const items = allArticles
+      .filter(r => r.article.category === cat)
+      .slice(0, 3);
+    if (!items.length) return;
 
-    wrap.innerHTML = `
-      <div class="date-section-header">
-        ${todayBadge}
-        <span class="date-section-label">${label}</span>
-        <span class="date-section-count">${articles.length}건</span>
-      </div>
-      <div class="article-list">
-        ${articles.map((a, i) => buildArticleItem(a, i, isToday ? null : dateStr)).join('')}
-      </div>
-    `;
-
-    feed.appendChild(wrap);
-  }
-
-  // ── 아카이브 날짜 순차 로드 ──
-  async function loadMoreDates(count) {
-    if (isLoading || archiveLoadIndex >= allArchiveDates.length) return;
-    isLoading = true;
-    updateLoadMoreUI();
-
-    for (let i = 0; i < count && archiveLoadIndex < allArchiveDates.length; i++, archiveLoadIndex++) {
-      const date = allArchiveDates[archiveLoadIndex];
-      try {
-        const res = await fetch('archive/' + date + '.json');
-        if (!res.ok) continue;
-        const data = await res.json();
-        if (data.articles && data.articles.length) {
-          appendDateSection(date, data.articles, false);
-        }
-      } catch(e) { console.log('아카이브 로드 실패:', date, e); }
-    }
-
-    isLoading = false;
-    updateLoadMoreUI();
-  }
-
-  function updateLoadMoreUI() {
-    const btn = document.getElementById('load-more-btn');
-    const end = document.getElementById('load-more-end');
-    if (!btn || !end) return;
-    const hasMore = archiveLoadIndex < allArchiveDates.length;
-    if (isLoading) {
-      btn.disabled = true;
-      btn.textContent = '불러오는 중...';
-      btn.style.display = '';
-      end.style.display = 'none';
-    } else if (hasMore) {
-      btn.disabled = false;
-      btn.textContent = '이전 기사 더 보기 ▼';
-      btn.style.display = '';
-      end.style.display = 'none';
-    } else {
-      btn.style.display = 'none';
-      end.style.display = '';
-    }
-  }
-
-  // ── 무한 스크롤 ──
-  function setupScrollObserver() {
-    const sentinel = document.getElementById('scroll-sentinel');
-    if (!sentinel || !('IntersectionObserver' in window)) return;
-    const obs = new IntersectionObserver(entries => {
-      if (entries[0].isIntersecting && !isLoading) loadMoreDates(1);
-    }, { rootMargin: '600px' });
-    obs.observe(sentinel);
-  }
-
-  // ── 오늘 톱 뉴스 히어로 ──
-  function renderTopNews(articles) {
-    const featured = articles.find(a => a.is_featured) || articles[0];
-    const sides = articles.filter(a => a !== featured).slice(0, 2);
-    const fi = articles.indexOf(featured);
-    const c = getCat(featured);
-    const featImg = featured.image_url
-      ? `<img src="${featured.image_url}" alt="${featured.title}" onerror="this.style.display='none'">`
-      : '';
-    let html = `<div class="top-main" onclick="location.href='article.html?id=${fi}'">
-      <div class="thumb">${c.symbol}${featImg}<div class="thumb-label"><span class="tag">${featured.category}</span><h2>${featured.title}</h2></div></div>
-      <div class="card-body"><p>${featured.summary}</p><div class="meta">소재산업부 · ${fmtISO(todayISO)} ${featured.timestamp||''}</div></div>
-    </div>`;
-    sides.forEach(a => {
-      const cv = getCat(a); const idx = articles.indexOf(a);
-      const sideImg = a.image_url
-        ? `<img class="side-img" src="${a.image_url}" alt="${a.title}" onerror="this.style.display='none'">`
-        : '';
-      html += `<div class="side-card" onclick="location.href='article.html?id=${idx}'">
-        ${sideImg}<span class="tag ${cv.cls}">${a.category}</span><h3>${a.title}</h3>
-        <p>${a.summary}</p><div class="meta">${fmtISO(todayISO)} ${a.timestamp||''}</div>
-      </div>`;
-    });
-    document.getElementById('top-news').innerHTML = html;
-  }
-
-  // ── 사이드바 위젯 ──
-  function renderEditorial(text) {
-    const el = document.getElementById('editorial-briefing');
-    if (el && text) el.textContent = text;
-  }
-
-  function renderIssues(issues) {
-    const el = document.getElementById('issue-radar');
-    if (!el || !issues || !issues.length) return;
-    el.innerHTML = issues.map((issue, i) =>
-      `<div style="display:flex;align-items:baseline;gap:8px;padding:7px 0;${i < issues.length-1 ? 'border-bottom:1px solid var(--border);' : ''}">
-        <span style="font-size:14px;flex-shrink:0;">${issue.icon}</span>
-        <div style="flex:1;min-width:0;">
-          <div style="font-size:13px;color:var(--text);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${issue.label}</div>
-          <div style="font-size:11px;color:var(--text-light);margin-top:1px;">${issue.status}</div>
+    const grid = document.getElementById('grid-' + cat);
+    if (!grid) return;
+    grid.innerHTML = items.map(({article: a, date, idx}) => {
+      const thumb = a.image_url
+        ? `<img class="cat-card-thumb" src="${a.image_url}" alt="${a.title}" onerror="this.style.display='none'">`
+        : `<div class="cat-card-thumb-ph">이미지 준비 중</div>`;
+      return `<div class="cat-card" onclick="location.href='${artLink(date, idx)}'">
+        ${thumb}
+        <div class="cat-card-body">
+          ${tagHtml(a,'cat-card-tag')}
+          <div class="cat-card-title">${a.title}</div>
+          <div class="cat-card-meta">${fmtDate(date)} ${a.timestamp||''}</div>
         </div>
-      </div>`
-    ).join('');
-  }
-
-  function renderRanking(articles) {
-    const el = document.getElementById('rank-list');
-    if (!el) return;
-    el.innerHTML = articles.slice(0, 7).map((a, i) =>
-      `<div class="rank-item" onclick="location.href='article.html?id=${i}'">
-        <span class="rank-num">${i+1}</span><span class="rank-title">${a.title}</span>
-      </div>`
-    ).join('');
-  }
-
-  function renderKeywords(articles) {
-    const el = document.getElementById('keyword-list');
-    if (!el) return;
-    const seen = new Set();
-    el.innerHTML = articles
-      .filter(a => a.category && !seen.has(a.category) && seen.add(a.category))
-      .map(a => { const cv = getCat(a); return `<span style="background:${cv.bg};color:${cv.color};font-size:12px;padding:4px 10px;border-radius:2px;">#${a.category}</span>`; })
-      .join('');
-  }
-
-  // ── 사이드바 날짜 네비 ──
-  function renderArchiveNav(allDates) {
-    const el = document.getElementById('archive-nav');
-    if (!el) return;
-    el.innerHTML = allDates.slice(0, 14).map(date => {
-      const isToday = date === todayISO;
-      const [y, m, day] = date.split('-');
-      const label = isToday ? '오늘 기사' : `${parseInt(m)}월 ${parseInt(day)}일`;
-      return `<div class="archive-nav-item${isToday ? ' today' : ''}" onclick="scrollToDate('${date}')">${label}</div>`;
+      </div>`;
     }).join('');
-  }
 
-  async function scrollToDate(dateStr) {
-    let section = document.getElementById('section-' + dateStr);
-    if (!section) {
-      const targetIdx = allArchiveDates.indexOf(dateStr);
-      if (targetIdx >= 0 && targetIdx >= archiveLoadIndex) {
-        await loadMoreDates(targetIdx - archiveLoadIndex + 1);
-        section = document.getElementById('section-' + dateStr);
-      }
-    }
-    if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
+    document.getElementById('cat-' + cat).style.display = '';
+  });
+}
 
-  // ── 메인 초기화 ──
-  async function init() {
-    // 1. 오늘 기사 로드
+// ── 최신 기사 렌더 ──
+function renderLatest(filter) {
+  const filtered = filter
+    ? allArticles.filter(r => r.article.category === filter)
+    : allArticles;
+  const el = document.getElementById('latest-list');
+  if (!el) return;
+
+  el.innerHTML = filtered.map(({article: a, date, idx}) => {
+    const thumb = a.image_url
+      ? `<img class="li-thumb" src="${a.image_url}" alt="${a.title}" onerror="this.style.display='none'">`
+      : `<div class="li-thumb-ph"></div>`;
+    return `<div class="latest-item" onclick="location.href='${artLink(date, idx)}'">
+      ${thumb}
+      <div>
+        ${tagHtml(a,'li-tag')}
+        <div class="li-title">${a.title}</div>
+        <div class="li-summary">${(a.summary||'').slice(0,90)}…</div>
+        <div class="li-meta">${fmtDate(date)} ${a.timestamp||''}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ── 카테고리 필터 ──
+function filterCat(cat) {
+  currentFilter = cat;
+  // 네비 active
+  document.querySelectorAll('.nav-inner a[data-cat]').forEach(a => {
+    a.classList.toggle('active', a.dataset.cat === cat);
+  });
+  // 필터 버튼 active
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    const matches = (b.textContent === '전체' && cat === '')
+      || b.textContent === cat;
+    b.classList.toggle('on', matches);
+  });
+  // 제목 변경
+  const titles = {'':`최신 기사`,'반도체소재':'반도체·소재 기사','희귀금속':'희귀금속·광물 기사','산업재':'산업재·화학 기사','글로벌':'글로벌공급망 기사'};
+  const el = document.getElementById('latest-title');
+  if (el) el.textContent = titles[cat] || '최신 기사';
+  renderLatest(cat);
+}
+
+// ── 사이드바 렌더 ──
+function renderRanking(articles) {
+  const el = document.getElementById('rank-list');
+  if (!el) return;
+  el.innerHTML = articles.slice(0, 7).map((a, i) =>
+    `<div class="rank-item" onclick="location.href='article.html?id=${i}'">
+      <span class="rank-num">${i+1}</span>
+      <span class="rank-title">${a.title}</span>
+    </div>`
+  ).join('');
+}
+
+function renderEditorial(text) {
+  const el = document.getElementById('editorial-briefing');
+  if (el && text) el.textContent = text;
+}
+
+function renderIssues(issues) {
+  const el = document.getElementById('issue-radar');
+  if (!el || !issues || !issues.length) return;
+  el.innerHTML = issues.map(it =>
+    `<div class="issue-item">
+      <span class="issue-icon">${it.icon}</span>
+      <div>
+        <div class="issue-label">${it.label}</div>
+        <div class="issue-status">${it.status}</div>
+      </div>
+    </div>`
+  ).join('');
+}
+
+function renderArchiveNav(dates) {
+  const el = document.getElementById('archive-nav');
+  if (!el) return;
+  el.innerHTML = dates.slice(0, 14).map(date => {
+    const isToday = date === todayISO;
+    const [y, m, d] = date.split('-');
+    const label = isToday ? '오늘' : `${parseInt(m)}월 ${parseInt(d)}일`;
+    return `<div class="archive-item${isToday?' today':''}" onclick="jumpToArchive('${date}')">
+      <span>${label}</span>
+      <span class="archive-count">5건</span>
+    </div>`;
+  }).join('');
+}
+
+async function jumpToArchive(date) {
+  if (date === todayISO) { window.scrollTo({top:0,behavior:'smooth'}); return; }
+  // 해당 날짜가 아직 안 로드됐으면 전부 로드
+  const idx = allArchiveDates.indexOf(date);
+  if (idx >= archiveIdx) {
+    await loadUntilDate(date);
+  }
+  // 최신 기사 섹션으로 스크롤 (날짜 구분 없이 목록으로 이동)
+  document.querySelector('.latest-section')?.scrollIntoView({behavior:'smooth'});
+}
+
+// ── 더 불러오기 ──
+function updateLoadMoreBtn() {
+  const btn = document.getElementById('load-more-btn');
+  const end = document.getElementById('load-end');
+  if (!btn || !end) return;
+  const hasMore = archiveIdx < allArchiveDates.length;
+  if (isLoading) {
+    btn.disabled = true; btn.textContent = '불러오는 중...'; btn.style.display=''; end.style.display='none';
+  } else if (hasMore) {
+    btn.disabled = false; btn.textContent = '기사 더 불러오기 ▼'; btn.style.display=''; end.style.display='none';
+  } else {
+    btn.style.display='none'; end.style.display='';
+  }
+}
+
+async function loadMoreArchive() {
+  if (isLoading || archiveIdx >= allArchiveDates.length) return;
+  isLoading = true;
+  updateLoadMoreBtn();
+  const BATCH = 2;
+  for (let i = 0; i < BATCH && archiveIdx < allArchiveDates.length; i++, archiveIdx++) {
+    const date = allArchiveDates[archiveIdx];
     try {
-      const res = await fetch('articles.json');
-      if (!res.ok) throw new Error('없음');
+      const res = await fetch(`archive/${date}.json`);
+      if (!res.ok) continue;
       const data = await res.json();
-      if (!data.articles || !data.articles.length) throw new Error('비어있음');
-
-      document.getElementById('breaking-text').textContent = data.articles.map(a => a.title).join('  |  ');
-      if (data.generated_at) {
-        const el = document.getElementById('update-time');
-        if (el) el.textContent = '업데이트: ' + data.generated_at;
-      }
-      renderTopNews(data.articles);
-      renderRanking(data.articles);
-      renderKeywords(data.articles);
-      if (data.editorial_briefing) renderEditorial(data.editorial_briefing);
-      if (data.global_issues) renderIssues(data.global_issues);
-      appendDateSection(todayISO, data.articles, true);
-
-    } catch(e) {
-      console.log('articles.json 로드 실패:', e.message);
-      document.getElementById('top-news').innerHTML =
-        '<div style="grid-column:1/3;padding:40px;text-align:center;color:#aaa;font-size:14px;">기사가 없습니다.</div>';
-    }
-
-    // 2. 아카이브 인덱스 로드 (오늘 제외)
-    try {
-      const res = await fetch('archive/index.json');
-      if (res.ok) {
-        const idx = await res.json();
-        allArchiveDates = (idx.dates || []).filter(d => d !== todayISO);
-        archiveLoadIndex = 0;
-      }
+      (data.articles || []).forEach((a, idx) => allArticles.push({article:a, date, idx}));
     } catch(e) {}
+  }
+  isLoading = false;
+  renderLatest(currentFilter);
+  updateLoadMoreBtn();
+}
 
-    // 3. 최초 2개 아카이브 자동 로드
-    await loadMoreDates(2);
+async function loadUntilDate(targetDate) {
+  while (archiveIdx < allArchiveDates.length && allArchiveDates[archiveIdx-1] !== targetDate) {
+    await loadMoreArchive();
+  }
+}
 
-    // 4. 사이드바 날짜 네비
-    renderArchiveNav([todayISO, ...allArchiveDates]);
+// ── 무한 스크롤 ──
+function setupScroll() {
+  if (!('IntersectionObserver' in window)) return;
+  const obs = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting && !isLoading) loadMoreArchive();
+  }, { rootMargin: '500px' });
+  const sentinel = document.getElementById('load-more-btn');
+  if (sentinel) obs.observe(sentinel);
+}
 
-    // 5. 무한 스크롤
-    setupScrollObserver();
+// ── 검색 ──
+function doSearch() {
+  const q = (document.getElementById('search-input')?.value || '').trim();
+  if (!q) { filterCat(currentFilter); return; }
+  const el = document.getElementById('latest-list');
+  if (!el) return;
+  const re = new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'gi');
+  const matched = allArticles.filter(({article:a}) =>
+    re.test(a.title) || re.test(a.summary||'')
+  );
+  re.lastIndex = 0;
+  el.innerHTML = matched.map(({article:a, date, idx}) => {
+    const hl = t => (t||'').replace(re, m => `<mark>${m}</mark>`);
+    const thumb = a.image_url
+      ? `<img class="li-thumb" src="${a.image_url}" alt="" onerror="this.style.display='none'">`
+      : `<div class="li-thumb-ph"></div>`;
+    return `<div class="latest-item" onclick="location.href='${artLink(date,idx)}'">
+      ${thumb}
+      <div>
+        ${tagHtml(a,'li-tag')}
+        <div class="li-title">${hl(a.title)}</div>
+        <div class="li-summary">${hl((a.summary||'').slice(0,90))}…</div>
+        <div class="li-meta">${fmtDate(date)} ${a.timestamp||''}</div>
+      </div>
+    </div>`;
+  }).join('') || '<div style="padding:20px 0;color:#aaa;font-size:13px;">검색 결과가 없습니다.</div>';
+}
+document.getElementById('search-input')?.addEventListener('keydown', e => { if (e.key==='Enter') doSearch(); });
 
-    // 6. 더 보기 버튼 상태
-    updateLoadMoreUI();
+// ── 네비 클릭 ──
+document.querySelectorAll('.nav-inner a[data-cat]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    filterCat(a.dataset.cat);
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+});
+
+// ── 초기화 ──
+async function init() {
+  // 1. 오늘 기사
+  try {
+    const res = await fetch('articles.json');
+    if (!res.ok) throw new Error();
+    const data = await res.json();
+    const arts = data.articles || [];
+
+    document.getElementById('breaking-text').textContent = arts.map(a=>a.title).join('  |  ');
+    const upEl = document.getElementById('update-time');
+    if (upEl && data.generated_at) upEl.textContent = '업데이트: ' + data.generated_at;
+
+    renderHero(arts);
+    renderRanking(arts);
+    if (data.editorial_briefing) renderEditorial(data.editorial_briefing);
+    if (data.global_issues) renderIssues(data.global_issues);
+
+    arts.forEach((a, idx) => allArticles.push({article:a, date:todayISO, idx}));
+  } catch(e) {
+    document.getElementById('hero-section').innerHTML =
+      '<div style="grid-column:1/3;padding:40px;text-align:center;color:#aaa;">기사를 불러올 수 없습니다.</div>';
   }
 
-  init();
+  // 2. 아카이브 인덱스
+  try {
+    const res = await fetch('archive/index.json');
+    if (res.ok) {
+      const idx = await res.json();
+      allArchiveDates = (idx.dates || []).filter(d => d !== todayISO);
+    }
+  } catch(e) {}
+
+  renderArchiveNav([todayISO, ...allArchiveDates]);
+
+  // 3. 최근 2일치 아카이브 미리 로드
+  await loadMoreArchive();
+
+  // 4. 카테고리 섹션 + 최신 기사 렌더
+  renderCatSections();
+  renderLatest('');
+  updateLoadMoreBtn();
+  setupScroll();
+}
+
+init();
 </script>
 
 </body>
