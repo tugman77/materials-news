@@ -189,6 +189,16 @@ save_articles 도구를 사용해 기사 5개를 저장하세요.
     for a in articles:
         if isinstance(a.get("body"), str):
             a["body"] = [p.strip() for p in a["body"].split("\n") if p.strip()]
+
+    # 배치 내 제목 중복 경고 (기사검수.py가 잡기 전 조기 알림)
+    seen_titles: dict = {}
+    for a in articles:
+        title = a.get("title", "")
+        if title in seen_titles:
+            print(f"⚠️  [배치 내 제목 중복] id={seen_titles[title]} & id={a['id']}: '{title}'")
+        else:
+            seen_titles[title] = a["id"]
+
     return articles
 
 # ── 편집국 브리핑 + 글로벌 이슈 레이더 생성 ────────

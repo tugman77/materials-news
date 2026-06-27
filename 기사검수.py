@@ -227,6 +227,48 @@ def check_and_fix_missing_images(articles: list, date_prefix: str) -> int:
     return fixed
 
 
+# ── 제목 중복 감지 ──────────────────────────────────────────
+
+def detect_duplicate_titles(articles: list, days: int = 3) -> dict:
+    """당일 기사 내 제목 중복 + 최근 N일 아카이브와의 제목 중복 감지"""
+    issues: dict = {"within_today": [], "cross_days": []}
+
+    # 당일 기사 내 중복
+    seen: dict = {}
+    for a in articles:
+        title = a.get("title", "")
+        if title in seen:
+            issues["within_today"].append({
+                "title": title,
+                "ids": [seen[title], a["id"]],
+            })
+            print(f"   ⚠️ 당일 제목 중복: id={seen[title]} & id={a['id']} — '{title}'")
+        else:
+            seen[title] = a["id"]
+
+    # 최근 N일 아카이브와 비교
+    today_title_map = {a["title"]: a["id"] for a in articles}
+    now = datetime.now(KST)
+    for d in range(1, days + 1):
+        date_key = (now - timedelta(days=d)).strftime("%Y-%m-%d")
+        try:
+            with open(f"archive/{date_key}.json", "r", encoding="utf-8") as f:
+                arch_data = json.load(f)
+            for arch_a in arch_data.get("articles", []):
+                arch_title = arch_a.get("title", "")
+                if arch_title in today_title_map:
+                    issues["cross_days"].append({
+                        "title": arch_title,
+                        "today_id": today_title_map[arch_title],
+                        "past_date": date_key,
+                    })
+                    print(f"   ⚠️ 날짜 간 제목 중복: 오늘 id={today_title_map[arch_title]} = {date_key} — '{arch_title}'")
+        except (FileNotFoundError, json.JSONDecodeError):
+            pass
+
+    return issues
+
+
 # ── Claude 검수 ─────────────────────────────────────────────
 
 def review_articles_with_claude(articles: list) -> list:
@@ -334,11 +376,24 @@ review_articles 도구로 전체 검수 결과를 반환하세요."""
 # ── 텔레그램 보고 ────────────────────────────────────────────
 
 def send_review_report(articles: list, reviews: list, naver_map: dict,
-                       image_fixes: list, missing_fixed: int, date_str: str):
+                       image_fixes: list, missing_fixed: int, date_str: str,
+                       dup_issues: dict | None = None):
     STATUS_EMOJI = {"pass": "✅", "warning": "⚠️", "fail": "❌"}
     lines = [f"📋 <b>소재경제신문 검수 보고</b>\n{date_str}\n"]
 
+    # 제목 중복 경고 섹션
     has_issues = False
+    if dup_issues:
+        for dup in dup_issues.get("within_today", []):
+            lines.append(f"🚨 <b>당일 제목 중복</b>: id={dup['ids'][0]}, {dup['ids'][1]}")
+            lines.append(f"   \"{dup['title'][:30]}...\"")
+            has_issues = True
+        for dup in dup_issues.get("cross_days", []):
+            lines.append(f"⚠️ <b>날짜 간 제목 중복</b>: 오늘 id={dup['today_id']} ↔ {dup['past_date']}")
+            lines.append(f"   \"{dup['title'][:30]}...\"")
+            has_issues = True
+        if has_issues:
+            lines.append("")  # 빈 줄 구분
     for review in reviews:
         article = next((a for a in articles if a["id"] == review["article_id"]), {})
         emoji = STATUS_EMOJI.get(review["status"], "✅")
@@ -407,7 +462,16 @@ def main():
 
     print(f"   {len(articles)}건 기사 로드 (생성: {generated_at})")
 
-    # 2. 누락·중복 이미지 확인 + 다운로드
+    # 2. 제목 중복 감지 (당일 내 + 최근 3일)
+    print("제목 중복 감지 중...")
+    dup_issues = detect_duplicate_titles(articles, days=3)
+    total_dups = len(dup_issues["within_today"]) + len(dup_issues["cross_days"])
+    if total_dups:
+        print(f"   ⚠️ 제목 중복 {total_dups}건 감지")
+    else:
+        print("   제목 중복 없음")
+
+    # 3. 누락·중복 이미지 확인 + 다운로드
     print("이미지 파일 확인 중 (누락 + 중복 감지)...")
     missing_fixed = check_and_fix_missing_images(articles, date_prefix)
     if missing_fixed:
@@ -474,7 +538,7 @@ def main():
     print("검수 결과 articles.json 저장 완료")
 
     # 7. 텔레그램 보고
-    send_review_report(articles, reviews, naver_map, image_fixes, missing_fixed, date_str)
+    send_review_report(articles, reviews, naver_map, image_fixes, missing_fixed, date_str, dup_issues)
 
     print("검수 완료!")
 

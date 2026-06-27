@@ -645,8 +645,15 @@
         }
       }
 
-      candidates.sort((a, b) => b.score - a.score);
-      const top = candidates.slice(0, 4);
+      // 제목 중복 제거 (같은 제목 기사가 여러 날짜에 있을 때 1개만 표시)
+      const seenTitles = new Set();
+      const deduped = candidates.filter(c => {
+        if (seenTitles.has(c.article.title)) return false;
+        seenTitles.add(c.article.title);
+        return true;
+      });
+      deduped.sort((a, b) => b.score - a.score);
+      const top = deduped.slice(0, 4);
       if (!top.length) return;
 
       renderRelatedNews(top);
