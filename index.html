@@ -62,8 +62,8 @@
   .page { max-width: 1200px; margin: 0 auto; padding: 20px 16px 48px; display: grid; grid-template-columns: 1fr 280px; gap: 24px; }
 
   /* ── 히어로 ── */
-  .hero { display: grid; grid-template-columns: 3fr 2fr; grid-template-rows: repeat(3, auto); gap: 0; border: 1px solid var(--border); background: var(--card-bg); margin-bottom: 28px; }
-  .hero-main { grid-row: 1/4; border-right: 1px solid var(--border); cursor: pointer; }
+  .hero { display: grid; grid-template-columns: 3fr 2fr; grid-template-rows: repeat(4, auto); gap: 0; border: 1px solid var(--border); background: var(--card-bg); margin-bottom: 28px; }
+  .hero-main { grid-row: 1/5; border-right: 1px solid var(--border); cursor: pointer; }
   .hero-main:hover .hero-main-title { color: var(--accent2); }
   .hero-thumb { width: 100%; height: 240px; object-fit: cover; }
   .hero-thumb-placeholder { width: 100%; height: 240px; background: linear-gradient(135deg,#1a2b4a,#0057a8); display: flex; align-items: center; justify-content: center; font-size: 56px; font-weight: 700; color: rgba(255,255,255,0.12); letter-spacing: -3px; }
@@ -412,7 +412,7 @@ function tagHtml(a, cls) {
 // ── 히어로 렌더 ──
 function renderHero(articles) {
   const featured = articles.find(a => a.is_featured) || articles[0];
-  const sides = articles.filter(a => a !== featured).slice(0, 3);
+  const sides = articles.filter(a => a !== featured).slice(0, 4);
   const fi = articles.indexOf(featured);
 
   const mainThumb = featured.image_url
@@ -455,7 +455,7 @@ function renderCatSections() {
   cats.forEach(cat => {
     const items = allArticles
       .filter(r => r.article.category === cat)
-      .slice(0, 3);
+      .slice(0, 6);
     if (!items.length) return;
 
     const grid = document.getElementById('grid-' + cat);
