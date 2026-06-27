@@ -14,6 +14,7 @@ from urllib.parse import quote
 
 # ── 설정 ──────────────────────────────────────────
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "여기에_API키_입력")
+UNSPLASH_ACCESS_KEY = os.environ.get("UNSPLASH_ACCESS_KEY", "")
 OUTPUT_FILE = "articles.json"  # 뉴스 사이트에서 읽는 파일
 IMAGES_DIR = "images"          # 기사 이미지 저장 폴더
 
@@ -126,70 +127,35 @@ save_articles 도구를 사용해 기사 5개를 저장하세요.
     # tool_use 블록에서 결과 추출
     tool_block = next(b for b in response.content if b.type == "tool_use")
     articles = tool_block.input["articles"]
-    # 혹시 문자열로 반환된 경우 파싱
+    # 혹시 문자열로 반환된 경우 파싱 (double-serialization 방어)
     if isinstance(articles, str):
-        import re
-        cleaned = re.sub(r'(?<!\\)\n', '\\n', articles)
-        articles = json.loads(cleaned)
+        print(f"⚠️  articles가 str 타입 (len={len(articles)}), json_repair 시도...")
+        from json_repair import repair_json
+        articles = json.loads(repair_json(articles))
     # body가 문자열이면 줄바꿈으로 분리해 배열로 변환
     for a in articles:
         if isinstance(a.get("body"), str):
             a["body"] = [p.strip() for p in a["body"].split("\n") if p.strip()]
     return articles
 
-# ── 시세 데이터 (뉴스 기반 Claude 추출) ───────────
-def get_market_prices():
-    """Google News RSS에서 시세 뉴스 수집 후 Claude가 가격 추출"""
-
-    # 소재별 검색 쿼리 (영문 검색이 가격 정보 더 정확)
-    QUERIES = [
-        ("탄탈륨 ($/kg)",  "tantalum price per kg 2026"),
-        ("비스무트 ($/kg)", "bismuth metal price per kg 2026"),
-        ("텔루륨 ($/kg)",  "tellurium price per kg 2026"),
-        ("갈륨 ($/kg)",    "gallium price per kg 2026"),
-        ("게르마늄 ($/kg)", "germanium price per kg 2026"),
-        ("코발트 ($/ton)", "cobalt price per ton LME 2026"),
-    ]
-
-    snippets = []
-    for label, query in QUERIES:
-        url = f"https://news.google.com/rss/search?q={quote(query)}&hl=en&gl=US&ceid=US:en"
-        try:
-            feed = feedparser.parse(url)
-            for entry in feed.entries[:3]:
-                title = entry.get("title", "")
-                summary = entry.get("summary", entry.get("description", ""))[:200]
-                snippets.append(f"[{label}] {title} — {summary}")
-        except Exception as e:
-            print(f"  시세 RSS 오류 [{label}]: {e}")
-
-    # 뉴스 수집 결과를 Claude에 전달해 가격 추출
+# ── 편집국 브리핑 + 글로벌 이슈 레이더 생성 ────────
+def generate_editorial(articles):
+    """오늘 기사를 바탕으로 편집국 브리핑(2~3문장)과 글로벌 이슈 레이더(4~5개) 생성"""
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
-    news_text = "\n".join(snippets[:24]) if snippets else "뉴스 없음"
+    titles_text = "\n".join(
+        f"- {a['title']}: {(a.get('summary') or '')[:80]}" for a in articles
+    )
 
-    prompt = f"""다음 뉴스 스니펫과 당신이 알고 있는 최신 시장 정보를 종합해서,
-아래 6개 소재의 현재 시세(2026년 6월 기준)를 JSON으로 반환하세요.
+    prompt = f"""오늘 소재경제신문 주요 기사:
+{titles_text}
 
-[참고 뉴스]
-{news_text}
-
-[반환 규칙]
-- price: 숫자 문자열 (쉼표 없이, 소수점 가능)
-- change: "+X.X%" 또는 "-X.X%" 형식 (전일 또는 최근 대비 변동)
-- direction: "up" 또는 "down"
-- 뉴스에서 확인된 가격 우선, 없으면 알려진 최신 시장가 사용
-
-반드시 아래 JSON 배열 형식만 반환하세요 (```json 마크다운 없이):
-
-[
-  {{"name": "탄탈륨 ($/kg)",  "price": "???", "change": "+?%", "direction": "up"}},
-  {{"name": "비스무트 ($/kg)", "price": "???", "change": "+?%", "direction": "up"}},
-  {{"name": "텔루륨 ($/kg)",  "price": "???", "change": "-?%", "direction": "down"}},
-  {{"name": "갈륨 ($/kg)",    "price": "???", "change": "+?%", "direction": "up"}},
-  {{"name": "게르마늄 ($/kg)", "price": "???", "change": "+?%", "direction": "up"}},
-  {{"name": "코발트 ($/ton)", "price": "???", "change": "-?%", "direction": "down"}}
-]
+위 기사를 바탕으로 save_editorial 도구를 사용해:
+1. briefing: 오늘 산업·공급망 전체 흐름을 2~3문장으로 요약 (150자 이내, 편집장 코멘트 느낌)
+2. issues: 현재 진행 중인 글로벌 주요 이슈 4~5개
+   - icon: 🔴(위험/긴급) 🟡(주의/모니터링) 🟢(긍정/개선)
+   - label: 이슈명 (15자 이내)
+   - status: 상태 한 줄 (12자 이내)
 """
 
     try:
@@ -197,85 +163,164 @@ def get_market_prices():
             model="claude-sonnet-4-6",
             max_tokens=800,
             tools=[{
-                "name": "save_prices",
-                "description": "소재 시세 데이터를 저장합니다",
+                "name": "save_editorial",
+                "description": "편집국 브리핑과 글로벌 이슈 레이더를 저장합니다",
                 "input_schema": {
                     "type": "object",
                     "properties": {
-                        "prices": {
+                        "briefing": {"type": "string"},
+                        "issues": {
                             "type": "array",
                             "items": {
                                 "type": "object",
                                 "properties": {
-                                    "name":      {"type": "string"},
-                                    "price":     {"type": "string"},
-                                    "change":    {"type": "string"},
-                                    "direction": {"type": "string", "enum": ["up","down"]}
+                                    "icon":   {"type": "string", "enum": ["🔴","🟡","🟢"]},
+                                    "label":  {"type": "string"},
+                                    "status": {"type": "string"}
                                 },
-                                "required": ["name","price","change","direction"]
-                            }
+                                "required": ["icon","label","status"]
+                            },
+                            "minItems": 4,
+                            "maxItems": 5
                         }
                     },
-                    "required": ["prices"]
+                    "required": ["briefing","issues"]
                 }
             }],
-            tool_choice={"type": "tool", "name": "save_prices"},
+            tool_choice={"type": "tool", "name": "save_editorial"},
             messages=[{"role": "user", "content": prompt}]
         )
         tool_block = next(b for b in response.content if b.type == "tool_use")
-        prices = tool_block.input["prices"]
-        if isinstance(prices, str):
-            prices = json.loads(prices)
-        print(f"   → 시세 {len(prices)}개 항목 추출됨")
-        return prices
+        briefing = tool_block.input["briefing"]
+        issues   = tool_block.input["issues"]
+        print(f"   → 브리핑 생성 완료, 이슈 {len(issues)}개")
+        return briefing, issues
     except Exception as e:
-        print(f"  시세 추출 오류: {e} → 기본값 사용")
-        return [
-            {"name": "탄탈륨 ($/kg)",  "price": "152.4",  "change": "+2.3%", "direction": "up"},
-            {"name": "비스무트 ($/kg)", "price": "6.85",   "change": "+1.1%", "direction": "up"},
-            {"name": "텔루륨 ($/kg)",  "price": "63.2",   "change": "-0.8%", "direction": "down"},
-            {"name": "갈륨 ($/kg)",    "price": "2269",   "change": "+4.2%", "direction": "up"},
-            {"name": "게르마늄 ($/kg)", "price": "1240",   "change": "+1.7%", "direction": "up"},
-            {"name": "코발트 ($/ton)", "price": "26800",  "change": "-0.5%", "direction": "down"},
-        ]
+        print(f"  편집국 생성 오류: {e} → 기본값 사용")
+        return (
+            "오늘 소재경제신문은 반도체·희귀금속·산업재 분야 주요 동향을 집중 보도합니다.",
+            [
+                {"icon": "🔴", "label": "미·중 공급망 갈등", "status": "진행 중"},
+                {"icon": "🟡", "label": "희귀금속 가격 불안", "status": "모니터링"},
+                {"icon": "🟡", "label": "반도체 소재 국산화", "status": "진행 중"},
+                {"icon": "🟢", "label": "국내 AI 반도체 투자", "status": "확대"},
+            ]
+        )
+
+# ── 카테고리별 Unsplash 이미지 풀 (API 키 불필요, 내용 관련 이미지 보장) ──
+# Unsplash 이미지는 photo-ID 형식으로 직접 접근 가능 (CDN 무료)
+_UNSPLASH_POOL = {
+    "반도체소재": [
+        "photo-1518770660439-4636190af475",  # PCB 회로기판 클로즈업
+        "photo-1591799265444-d66432b91588",  # AMD Ryzen CPU 칩
+        "photo-1562408590-e32931084e23",     # PCB 회로기판 컬러
+        "photo-1597852074816-d933c7d2b988",  # HDD 내부 부품
+        "photo-1581092918056-0c4c3acd3789",  # 전자기기 회로 수리
+        "photo-1581092160607-ee22621dd758",  # 엔지니어 기계 작업
+    ],
+    "희귀금속": [
+        "photo-1504917595217-d4dc5ebe6122",  # 금속 용접 불꽃
+        "photo-1504328345606-18bbc8c9d7d1",  # 용접사 클로즈업
+        "photo-1567789884554-0b844b597180",  # 제조공장 로봇
+        "photo-1541888946425-d81bb19240f5",  # 건설 현장 엔지니어
+        "photo-1473341304170-971dccb5ac1e",  # 전력 송전 인프라
+        "photo-1581092160607-ee22621dd758",  # 산업 기계 작업
+    ],
+    "산업재": [
+        "photo-1567789884554-0b844b597180",  # 자동차 공장 로봇
+        "photo-1504917595217-d4dc5ebe6122",  # 금속 용접 불꽃
+        "photo-1504328345606-18bbc8c9d7d1",  # 용접사 불꽃
+        "photo-1473341304170-971dccb5ac1e",  # 전력 송전탑
+        "photo-1541888946425-d81bb19240f5",  # 건설현장 엔지니어
+        "photo-1581092160607-ee22621dd758",  # 엔지니어 기계 작업
+        "photo-1586528116311-ad8dd3c8310d",  # 물류 창고 내부
+    ],
+    "글로벌": [
+        "photo-1494412519320-aa613dfb7738",  # 컨테이너 항구 항공뷰
+        "photo-1578575437130-527eed3abbec",  # 컨테이너선 항구
+        "photo-1565793298595-6a879b1d9492",  # 물류 트럭 주차장
+        "photo-1586528116311-ad8dd3c8310d",  # 물류 창고 내부
+        "photo-1541888946425-d81bb19240f5",  # 글로벌 인프라 건설
+        "photo-1473341304170-971dccb5ac1e",  # 전력 인프라
+    ],
+}
+_UNSPLASH_BASE = "https://images.unsplash.com/{id}?w=800&h=450&fit=crop&auto=format"
+
+def _pick_unsplash_url(category: str, seed_str: str) -> str:
+    """카테고리와 시드 문자열로 Unsplash 풀에서 이미지 URL 선택"""
+    import hashlib
+    pool = _UNSPLASH_POOL.get(category) or _UNSPLASH_POOL["반도체소재"]
+    idx = int(hashlib.md5(seed_str.encode()).hexdigest(), 16) % len(pool)
+    return _UNSPLASH_BASE.format(id=pool[idx])
+
 
 # ── 기사 이미지 다운로드 및 로컬 저장 ─────────────
-def download_article_images(articles):
-    """각 기사의 image_keyword로 이미지를 다운로드해 images/ 폴더에 저장
-    1차: loremflickr (주제별 이미지) / 실패 시 2차: picsum (seed 기반 일관 이미지)
+def _download_single_image(keyword: str, img_path: str, category: str = "", seed_str: str = "") -> bool:
+    """이미지를 img_path에 저장. 성공 시 True 반환.
+    1차: Unsplash API (UNSPLASH_ACCESS_KEY 있을 때)
+    2차: 카테고리별 Unsplash 풀 (API 키 불필요, 내용 연관 이미지 보장)
+    3차: picsum (최종 폴백)
+    loremflickr는 전문 산업 키워드(탄탈럼·희귀금속 등)에서 무관한 이미지를 반환하므로 제외.
     """
     import hashlib
+    keyword_q = quote(keyword)
+    seed = hashlib.md5(keyword.encode()).hexdigest()[:8]
+
+    candidates = []
+    # 1차: Unsplash API (키 있을 때)
+    if UNSPLASH_ACCESS_KEY:
+        candidates.append(("unsplash_api",
+            f"https://api.unsplash.com/photos/random?query={keyword_q}&orientation=landscape"
+            f"&client_id={UNSPLASH_ACCESS_KEY}"))
+    # 2차: 카테고리별 Unsplash 풀 (키 없어도 됨)
+    pool_url = _pick_unsplash_url(category or "반도체소재", seed_str or keyword)
+    candidates.append(("unsplash_pool", pool_url))
+    # 3차: picsum 폴백
+    candidates.append(("picsum", f"https://picsum.photos/seed/{seed}/800/450"))
+
+    for source, img_url in candidates:
+        try:
+            resp = requests.get(img_url, timeout=20, allow_redirects=True)
+            if resp.status_code == 200:
+                if source == "unsplash_api":
+                    raw_url = resp.json().get("urls", {}).get("regular", "")
+                    if not raw_url:
+                        continue
+                    resp = requests.get(raw_url, timeout=30, allow_redirects=True)
+                    if resp.status_code != 200 or len(resp.content) < 1000:
+                        continue
+                elif len(resp.content) < 1000:
+                    continue
+                with open(img_path, "wb") as f:
+                    f.write(resp.content)
+                print(f"   → 이미지 저장: {img_path} [{category or keyword}] ({source})")
+                return True
+        except Exception as e:
+            print(f"   → 이미지 오류 [{source}]: {e}")
+    return False
+
+
+def download_article_images(articles):
+    """각 기사의 카테고리 기반 이미지 다운로드 → images/YYYY-MM-DD_article_N.jpg
+    날짜 포함 파일명으로 날짜별 이미지 중복을 방지한다.
+    """
     os.makedirs(IMAGES_DIR, exist_ok=True)
+    date_prefix = datetime.now(KST).strftime("%Y-%m-%d")
     for i, article in enumerate(articles):
         keyword = article.get("image_keyword", "semiconductor materials technology")
-        keywords_fmt = ",".join(keyword.replace(",", " ").split()[:3])
-        seed = hashlib.md5(keyword.encode()).hexdigest()[:8]
-        candidates = [
-            f"https://loremflickr.com/800/450/{keywords_fmt}",
-            f"https://picsum.photos/seed/{seed}/800/450",
-        ]
-        img_path = f"{IMAGES_DIR}/article_{i}.jpg"
-        saved = False
-        for img_url in candidates:
-            try:
-                resp = requests.get(img_url, timeout=20, allow_redirects=True)
-                if resp.status_code == 200 and len(resp.content) > 1000:
-                    with open(img_path, "wb") as f:
-                        f.write(resp.content)
-                    article["image_url"] = img_path
-                    print(f"   → 이미지 저장: {img_path} [{keyword}] ({img_url.split('/')[2]})")
-                    saved = True
-                    break
-            except Exception as e:
-                print(f"   → 이미지 오류 [{img_url.split('/')[2]}]: {e}")
-        if not saved:
+        category = article.get("category", "반도체소재")
+        seed_str = f"{date_prefix}_{i}_{article.get('title','')}"
+        img_path = f"{IMAGES_DIR}/{date_prefix}_article_{i}.jpg"
+        if _download_single_image(keyword, img_path, category, seed_str):
+            article["image_url"] = img_path
+        else:
             article["image_url"] = None
             print(f"   → 이미지 모두 실패 [{keyword}]")
     return articles
 
 
 # ── 최종 데이터 파일 저장 ──────────────────────────
-def save_data(articles, market_prices):
+def save_data(articles, briefing, issues):
     """index.html이 읽을 수 있는 JSON 파일로 저장 + 날짜별 아카이브 저장"""
     now = datetime.now(KST)
     date_key = now.strftime("%Y-%m-%d")
@@ -283,7 +328,8 @@ def save_data(articles, market_prices):
         "generated_at": now.strftime("%Y년 %m월 %d일 %H:%M"),
         "date_str": now.strftime("%Y년 %m월 %d일"),
         "articles": articles,
-        "market": market_prices,
+        "editorial_briefing": briefing,
+        "global_issues": issues,
     }
 
     # 1. 최신 기사 저장 (articles.json — 사이트 메인)
@@ -330,12 +376,12 @@ def main():
     print("🖼️  기사 이미지 다운로드 중...")
     articles = download_article_images(articles)
 
-    # 5. 시세 데이터 (뉴스 기반 Claude 추출)
-    print("💹 소재 시세 수집 중...")
-    market = get_market_prices()
+    # 4. 편집국 브리핑 + 글로벌 이슈 레이더 생성
+    print("📰 편집국 브리핑 + 이슈 레이더 생성 중...")
+    briefing, issues = generate_editorial(articles)
 
-    # 6. 저장
-    save_data(articles, market)
+    # 5. 저장
+    save_data(articles, briefing, issues)
     print("🎉 완료!")
 
 if __name__ == "__main__":

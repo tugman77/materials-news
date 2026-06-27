@@ -152,12 +152,11 @@
   .tag-global { background: var(--tag-global); color: var(--tag-global-text); }
   .rel-title { font-size: 13px; color: var(--text); line-height: 1.45; word-break: keep-all; }
 
-  .sb-market-item { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 12.5px; }
-  .sb-market-item:last-of-type { border-bottom: none; }
-  .sb-market-name { color: var(--text-muted); }
-  .sb-market-val { font-weight: 600; }
-  .up { color: #c8102e; }
-  .down { color: #0057a8; }
+  .issue-item { display: flex; align-items: flex-start; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 12.5px; }
+  .issue-item:last-of-type { border-bottom: none; }
+  .issue-icon { font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+  .issue-label { font-weight: 600; color: var(--text); margin-bottom: 2px; font-size: 12px; }
+  .issue-status { color: var(--text-muted); font-size: 11.5px; line-height: 1.4; }
 
   /* ── 푸터 ── */
   footer { background: var(--primary); color: rgba(255,255,255,0.5); font-size: 12px; padding: 24px 16px; margin-top: 32px; border-top: 3px solid var(--accent); }
@@ -167,6 +166,41 @@
   .footer-links { display: flex; gap: 16px; }
   .footer-links a { color: rgba(255,255,255,0.5); }
   .footer-links a:hover { color: #fff; }
+
+  /* ── 쿠팡 파트너스 배너 ── */
+  .coupang-ad { margin: 28px 0; }
+  .coupang-ad-top {
+    padding: 12px 18px;
+    background: linear-gradient(135deg, #e4003a 0%, #ff4d6d 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .coupang-ad-top span { color: #fff; font-weight: 600; font-size: 14px; }
+  .coupang-ad-btn {
+    display: inline-block;
+    padding: 6px 16px;
+    background: #fff;
+    color: #e4003a;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 4px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .coupang-ad-notice {
+    padding: 6px 12px;
+    background: #fff5f7;
+    border: 1px solid #ffd0d8;
+    border-top: none;
+    font-size: 11px;
+    color: #999;
+    line-height: 1.5;
+  }
+  .sb-coupang { padding: 0; overflow: hidden; }
+  .sb-coupang .coupang-ad-top { border-radius: 0; }
 
   @media (max-width: 768px) {
     .page-wrap { grid-template-columns: 1fr; }
@@ -252,6 +286,15 @@
 
       <div class="art-body" id="art-body"></div>
 
+      <!-- 쿠팡 파트너스 배너 (본문 하단) -->
+      <div class="coupang-ad">
+        <div class="coupang-ad-top">
+          <span>🛒 쿠팡에서 다양한 상품을 만나보세요</span>
+          <a href="https://link.coupang.com/a/eJzg1eIyu4" target="_blank" rel="noopener noreferrer sponsored" class="coupang-ad-btn">쿠팡 바로가기 →</a>
+        </div>
+        <div class="coupang-ad-notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</div>
+      </div>
+
       <hr class="art-divider">
 
       <div class="art-keyword-label">키워드</div>
@@ -278,9 +321,25 @@
       <div class="sb-title">다른 기사</div>
       <div id="related-list"><div style="color:#aaa; font-size:13px;">불러오는 중...</div></div>
     </div>
+    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
+      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+      <div id="editorial-briefing" style="font-size:13px;color:#444;line-height:1.75;">불러오는 중...</div>
+    </div>
     <div class="sb-box">
-      <div class="sb-title">핵심 소재 시세</div>
-      <div id="sidebar-market"><div style="color:#aaa; font-size:13px;">불러오는 중...</div></div>
+      <div class="sb-title">글로벌 이슈 레이더</div>
+      <div id="issue-radar"><div style="color:#aaa; font-size:13px;">불러오는 중...</div></div>
+    </div>
+
+    <!-- 사이드바 쿠팡 광고 -->
+    <div class="sb-box sb-coupang">
+      <div class="coupang-ad-top">
+        <span>🛒 쿠팡 쇼핑</span>
+      </div>
+      <script src="https://ads-partners.coupang.com/g.js"></script>
+      <script>
+        new PartnersCoupang.G({id: 970543, trackingCode: "AF9787280", subId: null, template: "carousel", width: "100%", height: "200"});
+      </script>
+      <div class="coupang-ad-notice" style="border-top:1px solid #ffd0d8;">이 링크는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</div>
     </div>
   </aside>
 
@@ -347,14 +406,36 @@
       document.getElementById('breaking-text').textContent =
         data.articles.map(a => a.title).join('  |  ');
 
-      render(article, data.articles, data.market || []);
+      render(article, data.articles, data.editorial_briefing || '', data.global_issues || []);
     } catch (e) {
       document.getElementById('loading-state').style.display = 'none';
       document.getElementById('error-state').style.display = 'block';
     }
   }
 
-  function render(article, allArticles, market) {
+  function renderEditorial(briefing) {
+    const el = document.getElementById('editorial-briefing');
+    el.textContent = briefing || '편집국 브리핑을 불러올 수 없습니다.';
+  }
+
+  function renderIssues(issues) {
+    const el = document.getElementById('issue-radar');
+    if (!issues || !issues.length) {
+      el.innerHTML = '<div style="color:#aaa;font-size:13px;">이슈 정보 없음</div>';
+      return;
+    }
+    el.innerHTML = issues.map(item =>
+      `<div class="issue-item">
+        <span class="issue-icon">${item.icon}</span>
+        <div>
+          <div class="issue-label">${item.label}</div>
+          <div class="issue-status">${item.status}</div>
+        </div>
+      </div>`
+    ).join('');
+  }
+
+  function render(article, allArticles, briefing, issues) {
     const cv = getCat(article);
     const today = fmtDate(new Date());
 
@@ -419,18 +500,9 @@
         }).join('')
       : '<div style="color:#aaa; font-size:13px;">관련 기사가 없습니다.</div>';
 
-    // 시세
-    document.getElementById('sidebar-market').innerHTML = market.length
-      ? market.map(m => {
-          const isUp = m.direction === 'up';
-          const chg = m.change.replace(/^[+-]/, '');
-          return `<div class="sb-market-item">
-            <span class="sb-market-name">${m.name}</span>
-            <span class="sb-market-val ${isUp ? 'up' : 'down'}">${m.price} <span>${isUp ? '▲' : '▼'}${chg}</span></span>
-          </div>`;
-        }).join('')
-        + `<div style="font-size:11px;color:#aaa;margin-top:8px;text-align:right;">기준: ${today}</div>`
-      : '<div style="color:#aaa; font-size:13px;">시세 정보 없음</div>';
+    // 편집국 브리핑 + 글로벌 이슈 레이더
+    renderEditorial(briefing);
+    renderIssues(issues);
   }
 
   load();
