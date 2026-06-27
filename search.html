@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>검색 — 소재경제신문</title>
+<meta name="description" content="소재경제신문 기사 검색">
+<style>
+  :root {
+    --primary: #1a2b4a; --accent: #c8102e; --accent2: #0057a8;
+    --bg: #f2f2ee; --card-bg: #fff; --border: #d8d8d2;
+    --text: #111; --text-muted: #4a4a4a; --text-light: #888;
+    --tag-semi: #e8f0fb; --tag-semi-text: #0057a8;
+    --tag-rare: #fdf0f0; --tag-rare-text: #c8102e;
+    --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
+    --tag-global: #fdf6e3; --tag-global-text: #a05000;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Noto Sans KR','Malgun Gothic',sans-serif; background:var(--bg); color:var(--text); font-size:15px; line-height:1.6; }
+  a { text-decoration:none; color:inherit; }
+  img { display:block; }
+
+  /* 속보 */
+  .breaking-bar { background:var(--accent); color:#fff; font-size:13px; padding:5px 0; overflow:hidden; }
+  .breaking-bar .inner { max-width:1200px; margin:0 auto; padding:0 16px; display:flex; align-items:center; gap:12px; }
+  .breaking-label { background:#fff; color:var(--accent); font-weight:700; font-size:11px; padding:2px 8px; border-radius:2px; white-space:nowrap; letter-spacing:1px; flex-shrink:0; }
+  .breaking-text { white-space:nowrap; animation:scroll-left 35s linear infinite; }
+  @keyframes scroll-left { 0%{transform:translateX(60vw)} 100%{transform:translateX(-100%)} }
+
+  /* 헤더 */
+  header { background:var(--primary); color:#fff; border-bottom:3px solid var(--accent); }
+  .header-top { max-width:1200px; margin:0 auto; padding:16px 16px 12px; display:flex; align-items:flex-end; justify-content:space-between; }
+  .logo-kr { font-size:26px; font-weight:700; letter-spacing:-0.5px; cursor:pointer; }
+  .logo-en { font-size:11px; color:rgba(255,255,255,0.5); letter-spacing:2px; margin-top:3px; }
+  .header-meta { text-align:right; font-size:12px; color:rgba(255,255,255,0.5); line-height:1.7; }
+  .header-meta .hdate { font-size:13px; color:rgba(255,255,255,0.75); }
+
+  /* 네비 */
+  nav { background:var(--primary); border-top:1px solid rgba(255,255,255,0.1); }
+  .nav-inner { max-width:1200px; margin:0 auto; padding:0 16px; display:flex; align-items:center; }
+  .nav-inner a { color:rgba(255,255,255,0.72); font-size:13.5px; padding:10px 14px; display:block; border-bottom:2px solid transparent; transition:color .15s,border-color .15s; white-space:nowrap; }
+  .nav-inner a:hover { color:#fff; border-bottom-color:var(--accent); }
+  .nav-search { margin-left:auto; display:flex; align-items:center; }
+  .nav-search input { border:none; background:rgba(255,255,255,0.1); color:#fff; padding:5px 10px; font-size:12px; outline:none; width:160px; }
+  .nav-search input::placeholder { color:rgba(255,255,255,0.45); }
+  .nav-search button { background:var(--accent); border:none; color:#fff; padding:5px 10px; cursor:pointer; font-size:13px; }
+
+  /* 브레드크럼 */
+  .breadcrumb { background:#eeeee9; border-bottom:1px solid var(--border); }
+  .bc-inner { max-width:1200px; margin:0 auto; padding:8px 16px; font-size:12px; color:var(--text-light); display:flex; align-items:center; gap:6px; }
+  .bc-inner a { color:var(--text-light); }
+  .bc-inner a:hover { color:var(--accent2); }
+  .bc-sep { color:#bbb; }
+  .bc-current { color:var(--text-muted); font-weight:600; }
+
+  /* 검색 배너 */
+  .search-banner { background:var(--card-bg); border-bottom:3px solid var(--primary); }
+  .search-banner-inner { max-width:1200px; margin:0 auto; padding:22px 16px 18px; }
+  .search-form { display:flex; gap:0; max-width:600px; }
+  .search-form input {
+    flex:1; border:2px solid var(--primary); padding:10px 16px;
+    font-size:15px; outline:none; color:var(--text);
+    font-family: inherit;
+  }
+  .search-form input:focus { border-color:var(--accent2); }
+  .search-form button {
+    background:var(--primary); color:#fff; border:none; padding:10px 20px;
+    font-size:15px; cursor:pointer; font-weight:700; transition:background .15s;
+  }
+  .search-form button:hover { background:var(--accent); }
+  .search-meta { margin-top:12px; font-size:13px; color:var(--text-muted); }
+  .search-meta strong { color:var(--primary); }
+
+  /* 결과 */
+  .content-wrap { max-width:1200px; margin:0 auto; padding:24px 16px 48px; }
+
+  /* 결과 없음 */
+  .no-result { text-align:center; padding:60px 0; }
+  .no-result-icon { font-size:48px; margin-bottom:16px; }
+  .no-result-msg { font-size:16px; color:var(--text-muted); margin-bottom:8px; }
+  .no-result-sub { font-size:13px; color:var(--text-light); }
+
+  /* 기사 목록 (리스트 형) */
+  .result-item {
+    background:var(--card-bg); border:1px solid var(--border);
+    display:grid; grid-template-columns:140px 1fr; gap:0;
+    margin-bottom:12px; cursor:pointer; transition:box-shadow .15s;
+  }
+  .result-item:hover { box-shadow:0 3px 12px rgba(0,0,0,.09); }
+  .result-item:hover .result-title { color:var(--accent2); }
+  .result-thumb { width:140px; height:100px; object-fit:cover; }
+  .result-thumb-ph { width:140px; height:100px; background:linear-gradient(135deg,#e8f0fb,#c5d9f5); display:flex; align-items:center; justify-content:center; color:#aaa; font-size:11px; }
+  .result-body { padding:14px 18px; display:flex; flex-direction:column; justify-content:space-between; }
+  .result-tag { font-size:10px; font-weight:700; padding:2px 7px; border-radius:2px; display:inline-block; margin-bottom:6px; }
+  .result-title { font-size:16px; font-weight:700; line-height:1.5; color:var(--text); margin-bottom:6px; word-break:keep-all; transition:color .15s; }
+  .result-summary { font-size:13px; color:var(--text-muted); line-height:1.65; word-break:keep-all; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+  .result-meta { font-size:12px; color:var(--text-light); margin-top:8px; }
+
+  /* 하이라이트 */
+  mark { background:#fff3b0; color:inherit; }
+
+  /* 더 불러오기 */
+  .load-more-wrap { text-align:center; padding:24px 0 0; }
+  .load-more-btn { background:var(--card-bg); border:1px solid var(--border); color:var(--text-muted); padding:10px 32px; font-size:13.5px; cursor:pointer; }
+  .load-more-btn:hover:not(:disabled) { background:var(--primary); color:#fff; border-color:var(--primary); }
+  .load-more-btn:disabled { opacity:.6; cursor:default; }
+
+  /* 태그 */
+  .tag-semi { background:var(--tag-semi); color:var(--tag-semi-text); }
+  .tag-rare { background:var(--tag-rare); color:var(--tag-rare-text); }
+  .tag-industry { background:var(--tag-industry); color:var(--tag-industry-text); }
+  .tag-global { background:var(--tag-global); color:var(--tag-global-text); }
+
+  /* 푸터 */
+  footer { background:var(--primary); color:rgba(255,255,255,0.5); font-size:12px; padding:24px 16px; border-top:3px solid var(--accent); }
+  .footer-inner { max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
+  .footer-logo { font-size:16px; font-weight:700; color:#fff; }
+
+  /* 반응형 */
+  @media (max-width:640px) {
+    .result-item { grid-template-columns:96px 1fr; }
+    .result-thumb { width:96px; height:72px; }
+    .result-thumb-ph { width:96px; height:72px; }
+    .result-title { font-size:14px; }
+    .nav-search { display:none; }
+    .header-meta { display:none; }
+    .nav-inner { overflow-x:auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="breaking-bar">
+  <div class="inner">
+    <span class="breaking-label">속보</span>
+    <span class="breaking-text" id="breaking-text">소재경제신문 — 반도체·소재·산업재 전문 미디어</span>
+  </div>
+</div>
+
+<header>
+  <div class="header-top">
+    <div onclick="location.href='index.html'" style="cursor:pointer">
+      <div class="logo-kr">소재경제신문</div>
+      <div class="logo-en">MATERIALS ECONOMY PRESS</div>
+    </div>
+    <div class="header-meta">
+      <div class="hdate" id="today-date"></div>
+      <div>반도체 · 첨단소재 · 희귀금속 · 산업재</div>
+    </div>
+  </div>
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html">전체</a>
+      <a href="category.html?cat=반도체소재">반도체·소재</a>
+      <a href="category.html?cat=희귀금속">희귀금속·광물</a>
+      <a href="category.html?cat=산업재">산업재·화학</a>
+      <a href="category.html?cat=글로벌">글로벌공급망</a>
+      <div class="nav-search">
+        <input type="text" id="nav-search-input" placeholder="기사 검색..."
+          onkeydown="if(event.key==='Enter')navSearch()">
+        <button onclick="navSearch()">🔍</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="breadcrumb">
+  <div class="bc-inner">
+    <a href="index.html">홈</a>
+    <span class="bc-sep">›</span>
+    <span class="bc-current">검색</span>
+  </div>
+</div>
+
+<!-- 검색 배너 -->
+<div class="search-banner">
+  <div class="search-banner-inner">
+    <form class="search-form" onsubmit="return submitSearch()">
+      <input type="text" id="main-search-input" placeholder="검색어를 입력하세요..." autocomplete="off">
+      <button type="submit">검색</button>
+    </form>
+    <div class="search-meta" id="search-meta"></div>
+  </div>
+</div>
+
+<!-- 검색 결과 -->
+<div class="content-wrap">
+  <div id="result-list"></div>
+  <div class="load-more-wrap">
+    <button class="load-more-btn" id="load-more-btn" style="display:none" onclick="loadMore()">더 많은 기사 보기 ▼</button>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">소재경제신문</div>
+    <div>© 2026 Materials Economy Press. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+// 날짜
+const _d = new Date();
+const _dw = ['일','월','화','수','목','금','토'];
+document.getElementById('today-date').textContent =
+  `${_d.getFullYear()}년 ${_d.getMonth()+1}월 ${_d.getDate()}일 ${_dw[_d.getDay()]}요일`;
+function getTodayISO() {
+  return `${_d.getFullYear()}-${String(_d.getMonth()+1).padStart(2,'0')}-${String(_d.getDate()).padStart(2,'0')}`;
+}
+const todayISO = getTodayISO();
+function fmtDate(s) {
+  if (!s) return '';
+  const [y,m,d] = s.split('-');
+  return `${y}.${m}.${d}`;
+}
+function artLink(date, idx) {
+  return date === todayISO ? `article.html?id=${idx}` : `article.html?date=${date}&id=${idx}`;
+}
+const CATS = {
+  '반도체소재': 'tag-semi', '희귀금속': 'tag-rare',
+  '산업재': 'tag-industry', '글로벌': 'tag-global',
+};
+
+// 데이터
+let allArticles = [];
+let archiveDates = [];
+let archiveIdx = 0;
+
+// 검색 상태
+let currentQ = '';
+let matchedArticles = [];
+let visibleCount = 15;
+const PAGE = 15;
+
+// URL에서 검색어 읽기
+const urlQ = new URLSearchParams(location.search).get('q') || '';
+
+function navSearch() {
+  const q = (document.getElementById('nav-search-input')?.value || '').trim();
+  if (q) location.href = `search.html?q=${encodeURIComponent(q)}`;
+}
+
+function submitSearch() {
+  const q = (document.getElementById('main-search-input')?.value || '').trim();
+  if (q) location.href = `search.html?q=${encodeURIComponent(q)}`;
+  return false;
+}
+
+function runSearch(q) {
+  currentQ = q;
+  if (!q) {
+    document.getElementById('search-meta').textContent = '';
+    document.getElementById('result-list').innerHTML = '';
+    document.getElementById('load-more-btn').style.display = 'none';
+    return;
+  }
+  // g 플래그 없이 filter, g 플래그는 highlight 전용
+  const reTest = new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'i');
+  matchedArticles = allArticles.filter(({article:a}) =>
+    reTest.test(a.title) || reTest.test(a.summary||'') || reTest.test(a.category||'')
+  );
+  visibleCount = PAGE;
+  renderResults();
+}
+
+function renderResults() {
+  const reHL = new RegExp(currentQ.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'gi');
+  const el = document.getElementById('result-list');
+  const meta = document.getElementById('search-meta');
+  const total = matchedArticles.length;
+
+  meta.innerHTML = total
+    ? `<strong>"${currentQ}"</strong> 검색 결과 — 총 <strong>${total}건</strong>`
+    : `<strong>"${currentQ}"</strong>에 대한 검색 결과가 없습니다.`;
+
+  if (!total) {
+    el.innerHTML = `<div class="no-result">
+      <div class="no-result-icon">🔍</div>
+      <div class="no-result-msg">"${currentQ}"와 일치하는 기사를 찾지 못했습니다.</div>
+      <div class="no-result-sub">다른 검색어를 시도해 보세요.</div>
+    </div>`;
+    document.getElementById('load-more-btn').style.display = 'none';
+    return;
+  }
+
+  const slice = matchedArticles.slice(0, visibleCount);
+  el.innerHTML = slice.map(({article:a, date, idx}) => {
+    reHL.lastIndex = 0;
+    const hl = t => (t||'').replace(reHL, m => { reHL.lastIndex = 0; return `<mark>${m}</mark>`; });
+    const tagCls = CATS[a.category] || 'tag-semi';
+    const thumb = a.image_url
+      ? `<img class="result-thumb" src="${a.image_url}" alt="" onerror="this.style.display='none'">`
+      : `<div class="result-thumb-ph">이미지 없음</div>`;
+    return `<div class="result-item" onclick="location.href='${artLink(date,idx)}'">
+      ${thumb}
+      <div class="result-body">
+        <div>
+          <span class="result-tag ${tagCls}">${a.category}</span>
+          <div class="result-title">${hl(a.title)}</div>
+          <div class="result-summary">${hl((a.summary||'').slice(0,120))}</div>
+        </div>
+        <div class="result-meta">${fmtDate(date)} ${a.timestamp||''}</div>
+      </div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('load-more-btn').style.display =
+    visibleCount < total ? '' : 'none';
+}
+
+async function loadMore() {
+  const btn = document.getElementById('load-more-btn');
+  btn.disabled = true;
+  btn.textContent = '불러오는 중...';
+
+  // 아직 안 로드된 아카이브가 있으면 추가 로드 후 재검색
+  if (archiveIdx < archiveDates.length) {
+    const date = archiveDates[archiveIdx++];
+    try {
+      const res = await fetch(`archive/${date}.json`);
+      if (res.ok) {
+        const data = await res.json();
+        (data.articles||[]).forEach((a,i) => allArticles.push({article:a,date,idx:i}));
+      }
+    } catch(e) {}
+    runSearch(currentQ);
+  } else {
+    visibleCount += PAGE;
+    renderResults();
+  }
+
+  btn.disabled = false;
+  btn.textContent = '더 많은 기사 보기 ▼';
+}
+
+async function init() {
+  // 오늘 기사
+  try {
+    const res = await fetch('articles.json');
+    if (res.ok) {
+      const data = await res.json();
+      const arts = data.articles || [];
+      document.getElementById('breaking-text').textContent = arts.map(a=>a.title).join('  |  ');
+      arts.forEach((a,i) => allArticles.push({article:a, date:todayISO, idx:i}));
+    }
+  } catch(e) {}
+
+  // 아카이브 인덱스
+  try {
+    const res = await fetch('archive/index.json');
+    if (res.ok) {
+      const data = await res.json();
+      archiveDates = (data.dates||[]).filter(d => d !== todayISO);
+    }
+  } catch(e) {}
+
+  // 최근 5일치 미리 로드 (검색 범위 확대)
+  const preload = Math.min(5, archiveDates.length);
+  for (let i = 0; i < preload; i++) {
+    const date = archiveDates[archiveIdx++];
+    try {
+      const res = await fetch(`archive/${date}.json`);
+      if (res.ok) {
+        const data = await res.json();
+        (data.articles||[]).forEach((a,j) => allArticles.push({article:a, date, idx:j}));
+      }
+    } catch(e) {}
+  }
+
+  // 검색어 설정 및 실행
+  if (urlQ) {
+    document.getElementById('main-search-input').value = urlQ;
+    document.getElementById('nav-search-input').value = urlQ;
+    runSearch(urlQ);
+  }
+}
+
+init();
+</script>
+</body>
+</html>

@@ -280,7 +280,7 @@
       <a href="category.html?cat=글로벌">글로벌공급망</a>
       <div class="nav-search">
         <input type="text" id="art-search-input" placeholder="기사 검색..." onkeydown="if(event.key==='Enter')artSearch()">
-        <button onclick="artSearch()">🔍</button>
+        <button onclick="artSearch()" aria-label="검색">🔍</button>
       </div>
     </div>
   </nav>
@@ -726,8 +726,7 @@
 
   function artSearch() {
     const q = (document.getElementById('art-search-input')?.value || '').trim();
-    if (q) location.href = 'index.html?q=' + encodeURIComponent(q);
-    else location.href = 'index.html';
+    if (q) location.href = `search.html?q=${encodeURIComponent(q)}`;
   }
 </script>
 

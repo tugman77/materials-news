@@ -288,7 +288,7 @@ async function loadMore() {
 
 function doSearch() {
   const q = (document.getElementById('search-input')?.value || '').trim();
-  location.href = q ? `index.html?q=${encodeURIComponent(q)}` : 'index.html';
+  if (q) location.href = `search.html?q=${encodeURIComponent(q)}`;
 }
 
 async function init() {
