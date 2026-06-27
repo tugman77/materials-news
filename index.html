@@ -703,7 +703,22 @@ async function init() {
 
   // 4. 카테고리 섹션 + 최신 기사 렌더
   renderCatSections();
-  renderLatest('');
+
+  // URL 파라미터/해시로 자동 필터·검색 처리 (article.html에서 넘어올 때)
+  const urlParams = new URLSearchParams(location.search);
+  const urlQ = urlParams.get('q');
+  const urlHash = location.hash.replace('#', '');
+  const validCats = ['반도체소재', '희귀금속', '산업재', '글로벌'];
+
+  if (urlQ) {
+    document.getElementById('search-input').value = urlQ;
+    doSearch();
+  } else if (urlHash && validCats.includes(urlHash)) {
+    filterCat(urlHash);
+  } else {
+    renderLatest('');
+  }
+
   updateLoadMoreBtn();
   setupScroll();
 }

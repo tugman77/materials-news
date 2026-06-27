@@ -42,9 +42,13 @@
 
   /* ── 네비게이션 ── */
   nav { background: var(--primary); border-top: 1px solid rgba(255,255,255,0.1); }
-  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; display: flex; }
-  .nav-inner a { color: rgba(255,255,255,0.75); font-size: 13.5px; padding: 10px 16px; display: block; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
-  .nav-inner a:hover { color: #fff; border-bottom-color: var(--accent); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; }
+  .nav-inner a { color: rgba(255,255,255,0.72); font-size: 13.5px; padding: 10px 14px; display: block; border-bottom: 2px solid transparent; transition: color .15s, border-color .15s; white-space: nowrap; }
+  .nav-inner a:hover, .nav-inner a.active { color: #fff; border-bottom-color: var(--accent); }
+  .nav-search { margin-left: auto; display: flex; align-items: center; gap: 0; }
+  .nav-search input { border: none; background: rgba(255,255,255,0.1); color: #fff; padding: 5px 10px; font-size: 12px; outline: none; width: 140px; }
+  .nav-search input::placeholder { color: rgba(255,255,255,0.45); }
+  .nav-search button { background: var(--accent); border: none; color: #fff; padding: 5px 10px; cursor: pointer; font-size: 13px; }
 
   /* ── 브레드크럼 ── */
   .breadcrumb { background: #eeeee9; border-bottom: 1px solid var(--border); }
@@ -239,7 +243,8 @@
     .art-body { font-size: 16px; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
-    .nav-inner a { white-space: nowrap; padding: 10px 12px; }
+    .nav-inner a { padding: 10px 12px; }
+    .nav-search { display: none; }
     .bc-current { max-width: 200px; }
   }
 </style>
@@ -269,13 +274,14 @@
   <nav>
     <div class="nav-inner">
       <a href="index.html">전체</a>
-      <a href="index.html">반도체·디스플레이</a>
-      <a href="index.html">희귀금속·광물</a>
-      <a href="index.html">배터리·에너지소재</a>
-      <a href="index.html">산업재·화학</a>
-      <a href="index.html">글로벌공급망</a>
-      <a href="index.html">기업분석</a>
-      <a href="index.html">시장동향</a>
+      <a href="index.html#반도체소재">반도체·소재</a>
+      <a href="index.html#희귀금속">희귀금속·광물</a>
+      <a href="index.html#산업재">산업재·화학</a>
+      <a href="index.html#글로벌">글로벌공급망</a>
+      <div class="nav-search">
+        <input type="text" id="art-search-input" placeholder="기사 검색..." onkeydown="if(event.key==='Enter')artSearch()">
+        <button onclick="artSearch()">🔍</button>
+      </div>
     </div>
   </nav>
 </header>
@@ -717,6 +723,12 @@
   }
 
   load();
+
+  function artSearch() {
+    const q = (document.getElementById('art-search-input')?.value || '').trim();
+    if (q) location.href = 'index.html?q=' + encodeURIComponent(q);
+    else location.href = 'index.html';
+  }
 </script>
 
 </body>
