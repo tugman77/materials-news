@@ -186,13 +186,13 @@
 
   /* ── 본문 중간 다이내믹 광고 ── */
   .coupang-mid-ad {
-    margin: 28px 0;
+    margin: 28px 0 4px;
     overflow: hidden;
-    min-height: 150px;
-    background: #fafafa;
     border: 1px solid var(--border);
     border-radius: 4px;
-    padding: 8px 0 4px;
+    display: block;
+    width: 100%;
+    height: 160px;
   }
   .coupang-mid-notice {
     font-size: 10px;
@@ -322,8 +322,8 @@
 
       <div class="art-body" id="art-body"></div>
 
-      <!-- 쿠팡 다이내믹 광고 (본문 하단) -->
-      <div class="coupang-mid-ad" id="coupang-bottom-ad"></div>
+      <!-- 쿠팡 광고 (본문 하단) -->
+      <iframe class="coupang-mid-ad" src="coupang-ad.html" frameborder="0" scrolling="no" title="쿠팡 파트너스 광고"></iframe>
       <div class="coupang-mid-notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로 수수료를 제공받습니다.</div>
 
       <!-- 관련 뉴스 (타 날짜 유사 주제) -->
@@ -511,7 +511,7 @@
       const second = paragraphs.slice(mid).map(p => `<p>${p.trim()}</p>`).join('');
       bodyEl.innerHTML =
         first +
-        `<div class="coupang-mid-ad" id="coupang-inline-ad"></div>
+        `<iframe class="coupang-mid-ad" src="coupang-ad.html" frameborder="0" scrolling="no" title="쿠팡 파트너스 광고"></iframe>
          <div class="coupang-mid-notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로 수수료를 제공받습니다.</div>` +
         second;
     } else {
@@ -519,26 +519,6 @@
       bodyEl.innerHTML = sentences.map(s => `<p>${s}</p>`).join('');
     }
 
-    // 다이내믹 광고 초기화 (중간 + 하단)
-    function initCoupangAd(containerId) {
-      const el = document.getElementById(containerId);
-      if (!el) return;
-      const s = document.createElement('script');
-      s.text = `new PartnersCoupang.G({id:970543,trackingCode:"AF9787280",subId:null,template:"carousel",width:"100%",height:"140"});`;
-      el.appendChild(s);
-    }
-    function loadCoupangAds() {
-      if (window.PartnersCoupang) {
-        initCoupangAd('coupang-inline-ad');
-        initCoupangAd('coupang-bottom-ad');
-      } else {
-        const g = document.createElement('script');
-        g.src = 'https://ads-partners.coupang.com/g.js';
-        g.onload = () => { initCoupangAd('coupang-inline-ad'); initCoupangAd('coupang-bottom-ad'); };
-        document.head.appendChild(g);
-      }
-    }
-    setTimeout(loadCoupangAds, 200);
 
     // 키워드 태그
     document.getElementById('art-tags').innerHTML =
