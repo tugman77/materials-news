@@ -62,24 +62,26 @@
   .page { max-width: 1200px; margin: 0 auto; padding: 20px 16px 48px; display: grid; grid-template-columns: 1fr 280px; gap: 24px; }
 
   /* ── 히어로 ── */
-  .hero { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 0; border: 1px solid var(--border); background: var(--card-bg); margin-bottom: 28px; }
-  .hero-main { grid-row: 1/3; border-right: 1px solid var(--border); cursor: pointer; }
+  .hero { display: grid; grid-template-columns: 3fr 2fr; grid-template-rows: repeat(3, auto); gap: 0; border: 1px solid var(--border); background: var(--card-bg); margin-bottom: 28px; }
+  .hero-main { grid-row: 1/4; border-right: 1px solid var(--border); cursor: pointer; }
   .hero-main:hover .hero-main-title { color: var(--accent2); }
-  .hero-thumb { width: 100%; height: 260px; object-fit: cover; }
-  .hero-thumb-placeholder { width: 100%; height: 260px; background: linear-gradient(135deg,#1a2b4a,#0057a8); display: flex; align-items: center; justify-content: center; font-size: 60px; font-weight: 700; color: rgba(255,255,255,0.12); letter-spacing: -3px; }
-  .hero-main-body { padding: 18px 20px 20px; }
+  .hero-thumb { width: 100%; height: 240px; object-fit: cover; }
+  .hero-thumb-placeholder { width: 100%; height: 240px; background: linear-gradient(135deg,#1a2b4a,#0057a8); display: flex; align-items: center; justify-content: center; font-size: 56px; font-weight: 700; color: rgba(255,255,255,0.12); letter-spacing: -3px; }
+  .hero-main-body { padding: 16px 20px 20px; }
   .hero-main-tag { font-size: 10.5px; font-weight: 700; padding: 2px 8px; border-radius: 2px; display: inline-block; margin-bottom: 8px; }
   .hero-main-title { font-size: 19px; font-weight: 700; line-height: 1.45; color: var(--text); margin-bottom: 10px; transition: color .15s; }
   .hero-main-summary { font-size: 13.5px; color: var(--text-muted); line-height: 1.7; margin-bottom: 10px; }
   .hero-main-meta { font-size: 12px; color: var(--text-light); }
 
-  .hero-side { border-bottom: 1px solid var(--border); padding: 14px 16px; cursor: pointer; display: flex; gap: 12px; align-items: flex-start; }
+  .hero-side { border-bottom: 1px solid var(--border); padding: 13px 14px; cursor: pointer; display: flex; gap: 12px; align-items: flex-start; flex: 1; }
   .hero-side:last-child { border-bottom: none; }
   .hero-side:hover .hs-title { color: var(--accent2); }
-  .hero-side-thumb { width: 80px; height: 60px; object-fit: cover; flex-shrink: 0; }
+  .hero-side-thumb { width: 88px; height: 66px; object-fit: cover; flex-shrink: 0; }
+  .hero-side-thumb-ph { width: 88px; height: 66px; background: #e0e0db; flex-shrink: 0; }
   .hs-tag { font-size: 10px; font-weight: 700; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 4px; }
-  .hs-title { font-size: 14px; font-weight: 600; line-height: 1.4; color: var(--text); transition: color .15s; }
-  .hs-meta { font-size: 11.5px; color: var(--text-light); margin-top: 4px; }
+  .hs-title { font-size: 13.5px; font-weight: 600; line-height: 1.4; color: var(--text); transition: color .15s; margin-bottom: 4px; }
+  .hs-summary { font-size: 12px; color: var(--text-muted); line-height: 1.55; word-break: keep-all; }
+  .hs-meta { font-size: 11px; color: var(--text-light); margin-top: 5px; }
 
   /* ── 카테고리 섹션 (동아·조선 스타일) ── */
   .cat-section { margin-bottom: 28px; }
@@ -99,7 +101,8 @@
   .cat-card-thumb-ph { width: 100%; aspect-ratio: 16/9; background: linear-gradient(135deg,#e8f0fb,#c5d9f5); display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 11px; }
   .cat-card-body { padding: 9px 0 0; }
   .cat-card-tag { font-size: 10px; font-weight: 700; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 5px; }
-  .cat-card-title { font-size: 14px; font-weight: 600; line-height: 1.45; color: var(--text); margin-bottom: 4px; word-break: keep-all; transition: color .15s; }
+  .cat-card-title { font-size: 14px; font-weight: 600; line-height: 1.45; color: var(--text); margin-bottom: 5px; word-break: keep-all; transition: color .15s; }
+  .cat-card-summary { font-size: 12px; color: var(--text-muted); line-height: 1.55; word-break: keep-all; margin-bottom: 5px; }
   .cat-card-meta { font-size: 11.5px; color: var(--text-light); }
 
   /* ── 최신 기사 피드 ── */
@@ -409,9 +412,8 @@ function tagHtml(a, cls) {
 // ── 히어로 렌더 ──
 function renderHero(articles) {
   const featured = articles.find(a => a.is_featured) || articles[0];
-  const sides = articles.filter(a => a !== featured).slice(0, 2);
+  const sides = articles.filter(a => a !== featured).slice(0, 3);
   const fi = articles.indexOf(featured);
-  const cv = getCat(featured);
 
   const mainThumb = featured.image_url
     ? `<img class="hero-thumb" src="${featured.image_url}" alt="${featured.title}" onerror="this.src='';this.className='hero-thumb-placeholder';">`
@@ -422,7 +424,7 @@ function renderHero(articles) {
     <div class="hero-main-body">
       ${tagHtml(featured,'hero-main-tag')}
       <div class="hero-main-title">${featured.title}</div>
-      <div class="hero-main-summary">${(featured.summary||'').slice(0,100)}…</div>
+      <div class="hero-main-summary">${(featured.summary||'').slice(0,110)}…</div>
       <div class="hero-main-meta">소재산업부 · ${fmtDate(todayISO)} ${featured.timestamp||''}</div>
     </div>
   </div>`;
@@ -430,13 +432,15 @@ function renderHero(articles) {
   sides.forEach(a => {
     const idx = articles.indexOf(a);
     const sideThumb = a.image_url
-      ? `<img class="hero-side-thumb" src="${a.image_url}" alt="${a.title}" onerror="this.style.display='none'">`
-      : `<div class="hero-side-thumb" style="background:#e8e8e4;"></div>`;
+      ? `<img class="hero-side-thumb" src="${a.image_url}" alt="${a.title}" onerror="this.className='hero-side-thumb-ph'">`
+      : `<div class="hero-side-thumb-ph"></div>`;
+    const summary = (a.summary || '').slice(0, 60);
     html += `<div class="hero-side" onclick="location.href='${artLink(todayISO, idx)}'">
       ${sideThumb}
       <div style="flex:1;min-width:0;">
         ${tagHtml(a,'hs-tag')}
         <div class="hs-title">${a.title}</div>
+        <div class="hs-summary">${summary}…</div>
         <div class="hs-meta">${fmtDate(todayISO)} ${a.timestamp||''}</div>
       </div>
     </div>`;
@@ -460,11 +464,13 @@ function renderCatSections() {
       const thumb = a.image_url
         ? `<img class="cat-card-thumb" src="${a.image_url}" alt="${a.title}" onerror="this.style.display='none'">`
         : `<div class="cat-card-thumb-ph">이미지 준비 중</div>`;
+      const summary = (a.summary || '').slice(0, 55);
       return `<div class="cat-card" onclick="location.href='${artLink(date, idx)}'">
         ${thumb}
         <div class="cat-card-body">
           ${tagHtml(a,'cat-card-tag')}
           <div class="cat-card-title">${a.title}</div>
+          <div class="cat-card-summary">${summary}…</div>
           <div class="cat-card-meta">${fmtDate(date)} ${a.timestamp||''}</div>
         </div>
       </div>`;
