@@ -167,6 +167,19 @@
   .footer-links a { color: rgba(255,255,255,0.5); }
   .footer-links a:hover { color: #fff; }
 
+  /* ── 관련 뉴스 (본문 하단) ── */
+  .related-news-section { margin-top: 40px; padding-top: 22px; border-top: 2px solid var(--primary); }
+  .related-news-header { font-size: 12px; font-weight: 700; color: var(--primary); letter-spacing: 1px; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .related-news-header::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+  .related-news-item { padding: 14px 0; border-bottom: 1px solid var(--border); cursor: pointer; display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: start; }
+  .related-news-item:last-child { border-bottom: none; }
+  .related-news-item:hover .related-news-title { color: var(--accent2); }
+  .related-news-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+  .related-news-date { font-size: 12px; color: var(--text-light); }
+  .related-news-title { font-size: 15px; font-weight: 600; line-height: 1.45; color: var(--text); margin-bottom: 5px; word-break: keep-all; transition: color 0.15s; }
+  .related-news-summary { font-size: 13px; color: var(--text-muted); line-height: 1.55; word-break: keep-all; }
+  .related-news-thumb { width: 80px; height: 60px; object-fit: cover; flex-shrink: 0; display: block; }
+
   /* ── 본문 중간 다이내믹 광고 ── */
   .coupang-mid-ad {
     margin: 28px 0;
@@ -306,6 +319,12 @@
       <!-- 쿠팡 다이내믹 광고 (본문 하단) -->
       <div class="coupang-mid-ad" id="coupang-bottom-ad"></div>
       <div class="coupang-mid-notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로 수수료를 제공받습니다.</div>
+
+      <!-- 관련 뉴스 (타 날짜 유사 주제) -->
+      <div id="related-news-section" class="related-news-section" style="display:none;">
+        <div class="related-news-header">관련 뉴스</div>
+        <div id="related-news-list"></div>
+      </div>
 
       <hr class="art-divider">
 
@@ -543,6 +562,125 @@
     // 편집국 브리핑 + 글로벌 이슈 레이더
     renderEditorial(briefing);
     renderIssues(issues);
+
+    // 관련 뉴스 (타 날짜 유사 주제) — 비동기 로드
+    loadRelatedNews(article, articleDate);
+  }
+
+  // ── 관련 뉴스 로직 ───────────────────────────────────
+  const STOP_WORDS = new Set([
+    '것','수','가','에서','으로','를','을','이','의','에','와','과','도','는','은',
+    '이다','있다','하다','되다','위해','대한','관련','통해','따라','통한','위한','대해',
+    '기반','현재','지난','이번','올해','지역','전국','기업','업계','시장','사업','분야',
+    '투자','개발','생산','수출','규모','성장','전망','동향','국내','해외','글로벌',
+    '경제','산업','기술','제품','공급','수요','가격','증가','감소','계획','발표','진행',
+  ]);
+
+  function extractKeywords(text) {
+    return (text || '').replace(/[^\w\s가-힣]/g, ' ')
+      .split(/\s+/)
+      .map(w => w.replace(/[은는이가을를에의]$/, ''))   // 조사 제거 (간단)
+      .filter(w => w.length >= 2 && !STOP_WORDS.has(w))
+      .slice(0, 15);
+  }
+
+  function scoreArticle(candidate, keywords) {
+    const text = (candidate.title || '') + ' ' + (candidate.summary || '');
+    return keywords.filter(kw => text.includes(kw)).length;
+  }
+
+  function getTodayISO() {
+    const now = new Date();
+    const kst = new Date(now.getTime() + 9 * 3600 * 1000);
+    return kst.toISOString().slice(0, 10);
+  }
+
+  async function loadRelatedNews(currentArticle, currentDate) {
+    try {
+      const keywords = extractKeywords(
+        (currentArticle.title || '') + ' ' + (currentArticle.summary || '')
+      );
+      if (!keywords.length) return;
+
+      const todayISO = getTodayISO();
+      const excludeDate = currentDate || todayISO;
+
+      // 아카이브 인덱스 로드
+      const idxRes = await fetch('archive/index.json');
+      if (!idxRes.ok) return;
+      const idxData = await idxRes.json();
+      const allDates = (idxData.dates || []).filter(d => d !== excludeDate).slice(0, 14);
+
+      // 오늘 기사도 후보에 포함 (현재 보는 기사가 아카이브 기사일 때)
+      const sources = [];
+      if (currentDate) {
+        // 현재 기사가 아카이브 기사 → 오늘(articles.json)도 후보
+        sources.push(
+          fetch('articles.json').then(r => r.ok ? r.json() : null)
+            .then(data => data ? { date: todayISO, articles: data.articles || [] } : null)
+        );
+      }
+      // 아카이브 날짜들 병렬 로드
+      for (const date of allDates) {
+        sources.push(
+          fetch(`archive/${date}.json`).then(r => r.ok ? r.json() : null)
+            .then(data => data ? { date, articles: data.articles || [] } : null)
+        );
+      }
+
+      const results = await Promise.allSettled(sources);
+
+      // 키워드 점수 계산
+      const candidates = [];
+      for (const result of results) {
+        if (result.status !== 'fulfilled' || !result.value) continue;
+        const { date, articles } = result.value;
+        for (let i = 0; i < articles.length; i++) {
+          const a = articles[i];
+          const score = scoreArticle(a, keywords);
+          const catBonus = a.category === currentArticle.category ? 0.5 : 0;
+          if (score + catBonus >= 1) {
+            candidates.push({ article: a, date, idx: i, score: score + catBonus });
+          }
+        }
+      }
+
+      candidates.sort((a, b) => b.score - a.score);
+      const top = candidates.slice(0, 4);
+      if (!top.length) return;
+
+      renderRelatedNews(top);
+    } catch (e) {
+      // 관련 뉴스 로드 실패는 조용히 무시
+    }
+  }
+
+  function renderRelatedNews(items) {
+    const section = document.getElementById('related-news-section');
+    const list = document.getElementById('related-news-list');
+    if (!section || !list) return;
+
+    list.innerHTML = items.map(({ article, date, idx }) => {
+      const cv = getCat(article);
+      const link = `article.html?date=${date}&id=${idx}`;
+      const summary = (article.summary || '').slice(0, 90);
+      const hasThumb = !!article.image_url;
+      return `<div class="related-news-item" onclick="location.href='${link}'">
+        <div>
+          <div class="related-news-meta">
+            <span class="rel-tag ${cv.cls}">${article.category}</span>
+            <span class="related-news-date">${date}</span>
+          </div>
+          <div class="related-news-title">${article.title}</div>
+          <div class="related-news-summary">${summary}${summary.length >= 90 ? '…' : ''}</div>
+        </div>
+        ${hasThumb
+          ? `<img class="related-news-thumb" src="${article.image_url}" alt="" onerror="this.style.display='none'">`
+          : ''}
+      </div>`;
+    }).join('');
+
+    section.style.display = 'block';
   }
 
   load();
