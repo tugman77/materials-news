@@ -55,9 +55,36 @@ def collect_news_from_rss(max_per_feed=5):
             print(f"RSS 오류 [{name}]: {e}")
     return collected
 
+# ── 최근 N일치 아카이브에서 기사 주제 추출 ──────────
+def load_recent_topics(days: int = 3) -> list:
+    """최근 N일치 아카이브 파일에서 기사 제목·카테고리·핵심어 추출.
+    오늘 기사 생성 시 유사 주제 반복을 막는 데 사용한다.
+    """
+    topics = []
+    now = datetime.now(KST)
+    for d in range(1, days + 1):
+        date_key = (now - timedelta(days=d)).strftime("%Y-%m-%d")
+        path = f"archive/{date_key}.json"
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            for a in data.get("articles", []):
+                topics.append({
+                    "date": date_key,
+                    "category": a.get("category", ""),
+                    "title": a.get("title", ""),
+                    "summary": (a.get("summary") or "")[:80],
+                })
+        except (FileNotFoundError, json.JSONDecodeError):
+            pass
+    return topics
+
+
 # ── Claude API로 기사 생성 ─────────────────────────
-def generate_articles_with_claude(raw_news_list):
-    """수집된 뉴스를 바탕으로 Claude가 독창적 기사 작성"""
+def generate_articles_with_claude(raw_news_list, recent_topics=None):
+    """수집된 뉴스를 바탕으로 Claude가 독창적 기사 작성.
+    recent_topics: 최근 N일치 기사 목록 — 이 주제들과 겹치지 않게 작성 지시.
+    """
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
     # 원본 뉴스 목록을 텍스트로 변환
@@ -70,9 +97,31 @@ def generate_articles_with_claude(raw_news_list):
     else:
         news_section = "[원본 뉴스 없음]\nRSS 수집에 실패했습니다. 최근 반도체·소재·희귀금속·산업재 업계 동향을 바탕으로 실제 있을 법한 기사를 작성하세요."
 
+    # 최근 다룬 주제 → 중복 금지 섹션
+    if recent_topics:
+        days_set = sorted(set(t["date"] for t in recent_topics), reverse=True)
+        topic_lines = "\n".join(
+            f"  [{t['date']}] [{t['category']}] {t['title']}"
+            for t in recent_topics
+        )
+        avoid_section = f"""[최근 {len(days_set)}일간 이미 다룬 주제 — 반드시 피할 것]
+아래 기사들과 주제가 겹치면 안 됩니다.
+중복 판단 기준:
+  · 동일 기업명이 주인공인 기사 (예: OCI, 아지노모토, 아람코 등 재등장 금지)
+  · 동일 소재/물질명 중심 기사 (예: 탄탈럼, CO2, HBM 등)
+  · 동일 정책·규제 이슈 (예: 탄탈럼 수입금지, OPEC+ 감산 등)
+  · 동일 이슈 흐름 (예: 석화업계 반도체 피벗, 국제유가 변동 등)
+같은 소재를 다루더라도 "각도"가 완전히 다른 경우(예: 공급망 → 기술 개발)는 허용.
+
+{topic_lines}
+
+"""
+    else:
+        avoid_section = ""
+
     prompt = f"""반도체·소재·희귀금속·산업재 전문 뉴스 사이트용 기사 5개를 작성해주세요.
 
-{news_section}
+{avoid_section}{news_section}
 
 [작성 규칙]
 - 카테고리: "반도체소재" / "희귀금속" / "산업재" / "글로벌" 중 하나
@@ -496,9 +545,20 @@ def main():
     raw_news = collect_news_from_rss()
     print(f"   → {len(raw_news)}건 수집됨")
 
-    # 2. Claude로 기사 생성
+    # 2. 최근 기사 주제 로드 (중복 방지용, 최근 3일)
+    print("📋 최근 기사 주제 로드 중 (3일치)...")
+    recent_topics = load_recent_topics(days=3)
+    if recent_topics:
+        days_covered = sorted(set(t["date"] for t in recent_topics), reverse=True)
+        print(f"   → {len(recent_topics)}건 로드 ({', '.join(days_covered)})")
+        for t in recent_topics:
+            print(f"      [{t['date']}] {t['title']}")
+    else:
+        print("   → 아카이브 없음 (첫 실행)")
+
+    # 3. Claude로 기사 생성 (최근 주제 중복 금지)
     print("✍️  Claude API로 기사 작성 중...")
-    articles = generate_articles_with_claude(raw_news)
+    articles = generate_articles_with_claude(raw_news, recent_topics)
     print(f"   → 기사 {len(articles)}건 생성됨")
 
     # 3. 기사 이미지 다운로드 (로컬 저장)
