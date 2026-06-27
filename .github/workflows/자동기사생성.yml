@@ -23,20 +23,20 @@ jobs:
           python-version: '3.11'
 
       - name: 라이브러리 설치
-        run: pip install anthropic feedparser requests
+        run: pip install anthropic feedparser requests json-repair
 
       - name: 기사 자동 생성
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: python 기사자동생성.py
 
-      - name: 기사 검수 (이미지 중복·불일치 수정)
+      - name: 기사 검수 (사실성 + 이미지)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
         run: python 기사검수.py
 
       - name: 변경사항 GitHub에 저장
