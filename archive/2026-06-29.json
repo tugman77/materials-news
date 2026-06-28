@@ -28,18 +28,7 @@
       "image_keyword": "semiconductor factory regional cluster",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-06-29_article_0.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "국내 반도체 기업의 약 2.6%만이 서남권에 위치한다는 구체적 수치 출처 불명",
-          "삼성의 호남 반도체 공장 신설·증설 검토는 공식 발표 없는 미확인 정보",
-          "산업부의 서남권 소부장 인프라 '전국 최하' 평가 발언 출처 없음"
-        ],
-        "notes": "삼성 전략 내용이 공식 발표 없이 추정·전망 위주로 서술되어 사실 확인 필요",
-        "verified_at": "2026-06-29 07:00"
-      }
+      "image_url": "images/2026-06-29_article_0.jpg"
     },
     {
       "id": 2,
@@ -64,18 +53,7 @@
       "image_keyword": "tantalum mine collapse Congo",
       "is_featured": false,
       "timestamp": "오전 09:32",
-      "image_url": "images/2026-06-29_article_1.jpg",
-      "review": {
-        "trust_score": 2,
-        "status": "warning",
-        "suspicious_claims": [
-          "루바야 탄탈럼 광산 붕괴 사망 200명 이상 — 실제 발생 여부 확인 불가",
-          "루바야 광산이 전 세계 탄탈럼 생산량의 15%를 공급한다는 수치 출처 불명",
-          "전 세계 탄탈럼 연간 수요 '약 1,800톤' 수치의 신뢰 근거 없음"
-        ],
-        "notes": "광산 붕괴 사고 자체가 미확인 사건이며, 핵심 수치 전반에 출처가 제시되지 않음",
-        "verified_at": "2026-06-29 07:00"
-      }
+      "image_url": "images/2026-06-29_article_1.jpg"
     },
     {
       "id": 3,
@@ -100,21 +78,10 @@
         "투자자들은 STX 외에도 레이크머티리얼즈, 코스모화학 등 희소금속 관련 기업들에도 관심을 확대하고 있다. 글로벌 공급망 재편 흐름 속에서 국내 희소금속 자립도 향상이 중장기 테마로 부상할 가능성이 높다는 분석이다.",
         "향후 STX의 구체적인 사업계획서 제출과 정부 허가 절차가 완료되는 시점이 관건이 될 전망이다. 업계는 올 하반기 중 착공 일정이 공식 발표될 것으로 기대하고 있으며, 관련 설비 기업들도 수주 가능성을 타진하고 있다."
       ],
-      "image_keyword": "rare metal refinery processing plant",
+      "image_keyword": "rare metal production facility Korea",
       "is_featured": false,
       "timestamp": "오전 10:05",
-      "image_url": "images/2026-06-29_article_2.jpg",
-      "review": {
-        "trust_score": 2,
-        "status": "warning",
-        "suspicious_claims": [
-          "STX의 태백 희소금속 시설 유치 공식 발표 여부 확인 필요",
-          "주가 상한가(+29.97%) 기록 — 당일 실제 주가 데이터와 대조 필요",
-          "초기 투자 규모 '수천억 원' 추정은 출처 없는 시장 추정치"
-        ],
-        "notes": "STX는 주력이 조선·에너지 계열로 희소금속 사업 연관성 확인 필요, 수치 근거 미흡",
-        "verified_at": "2026-06-29 07:00"
-      }
+      "image_url": "images/2026-06-29_article_2.jpg"
     },
     {
       "id": 4,
@@ -139,17 +106,7 @@
       "image_keyword": "retirement pension labor policy",
       "is_featured": false,
       "timestamp": "오전 10:48",
-      "image_url": "images/2026-06-29_article_3.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "국민연금 의무가입 상한 '만 59세' — 현행법 기준 정확히 일치하는지 재확인 권장",
-          "정년 65세 연동 상향 방안은 현재 논의 단계로 확정 사항처럼 오해될 소지 있음"
-        ],
-        "notes": "정책 방향과 현행 제도 기술은 대체로 사실에 부합하나 일부 표현이 확정처럼 서술됨",
-        "verified_at": "2026-06-29 07:00"
-      }
+      "image_url": "images/2026-06-29_article_3.jpg"
     },
     {
       "id": 5,
@@ -174,19 +131,10 @@
         "이라고 평가한다. 소재·부품 분야 기업들도 바이오 산업과의 접점 확대 전략을 서두를 필요가 있다는 조언이 나온다.",
         "향후 릴리 게이트웨이 랩스 송도 허브의 공식 개소 일정과 입주 스타트업 모집 계획이 공개되면, 국내 바이오·소재 업계의 협력 수요는 더욱 구체화될 전망이다. 관련 업계는 릴리와의 공급망 연결을 위한 사전 접촉을 이미 시작한 것으로 전해진다."
       ],
-      "image_keyword": "Eli Lilly biotech startup lab Incheon",
+      "image_keyword": "biotech innovation hub Songdo",
       "is_featured": false,
       "timestamp": "오전 11:20",
-      "image_url": "images/2026-06-29_article_4.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "샌디에이고 게이트웨이 랩스 '6년간 400여 개 스타트업 지원' 수치 출처 확인 필요"
-        ],
-        "notes": "일라이 릴리 송도 허브 계획은 공신력 있는 사실이나, 지원 스타트업 수치 출처 보완 필요",
-        "verified_at": "2026-06-29 07:00"
-      }
+      "image_url": "images/2026-06-29_article_4.jpg"
     }
   ],
   "editorial_briefing": "콩고 탄탈럼 광산 붕괴로 글로벌 공급망에 비상등이 켜진 가운데, 국내는 삼성의 지역 거점 육성과 STX의 희소금속 시설 유치로 공급망 내재화에 속도를 내고 있다. 일라이 릴리 송도 허브 설립까지 겹치며 첨단·바이오 소재 산업의 지형 변화가 가시화되고 있다.",
@@ -216,6 +164,5 @@
       "label": "정년-연금 연동 의무화",
       "status": "기업 인력전략 재편 예고"
     }
-  ],
-  "last_reviewed_at": "2026-06-29 07:00"
+  ]
 }
