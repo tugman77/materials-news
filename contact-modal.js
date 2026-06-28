@@ -48,8 +48,8 @@
         <input id="cm-name" type="text" placeholder="홍길동" autocomplete="name">
       </div>
       <div class="cm-row">
-        <label>연락처 <span class="cm-opt">(이메일·전화 중 하나, 선택)</span></label>
-        <input id="cm-contact" type="text" placeholder="example@email.com">
+        <label>연락처 <span class="cm-opt">(이메일 또는 전화번호, 선택)</span></label>
+        <input id="cm-contact" type="text" placeholder="이메일 또는 전화번호 (답변 받으실 곳)">
       </div>
       <div class="cm-row">
         <label>문의 내용 <span style="color:#c8102e">*</span></label>
