@@ -162,6 +162,31 @@
   .issue-label { font-weight: 600; color: var(--text); margin-bottom: 2px; font-size: 12px; }
   .issue-status { color: var(--text-muted); font-size: 11.5px; line-height: 1.4; }
 
+  .rank-item { display: flex; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); align-items: flex-start; cursor: pointer; }
+  .rank-item:last-child { border-bottom: none; }
+  .rank-item:hover .rank-title { color: var(--accent2); }
+  .rank-num { font-size: 14px; font-weight: 700; color: var(--accent); min-width: 18px; flex-shrink: 0; }
+  .rank-title { font-size: 13px; color: var(--text); line-height: 1.4; }
+
+  .link-item { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--text-muted); text-decoration: none; transition: color .15s; }
+  .link-item:last-child { border-bottom: none; }
+  .link-item:hover { color: var(--accent2); }
+  .link-icon { font-size: 14px; flex-shrink: 0; }
+  .link-name { flex: 1; line-height: 1.4; }
+  .link-arrow { font-size: 10px; color: var(--border); }
+
+  .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag:hover { background: var(--primary); color: #fff; }
+  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
+  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
+  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+
+  .sb-coupang { padding: 0; overflow: hidden; }
+  .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
+  .sb-coupang-top span { color: #fff; font-weight: 600; font-size: 13px; }
+  .sb-coupang-notice { padding: 5px 12px; background: #fff5f7; border-top: 1px solid #ffd0d8; font-size: 10.5px; color: #999; }
+
   /* ── 푸터 ── */
   footer { background: var(--primary); color: rgba(255,255,255,0.5); font-size: 12px; padding: 24px 16px; margin-top: 32px; border-top: 3px solid var(--accent); }
   .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
@@ -365,30 +390,61 @@
 
   <!-- 사이드바 -->
   <aside class="art-sidebar">
-    <div class="sb-box">
-      <div class="sb-title">다른 기사</div>
-      <div id="related-list"><div style="color:#aaa; font-size:13px;">불러오는 중...</div></div>
-    </div>
+
     <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
       <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
       <div id="editorial-briefing" style="font-size:13px;color:#444;line-height:1.75;">불러오는 중...</div>
     </div>
+
     <div class="sb-box">
-      <div class="sb-title">글로벌 이슈 레이더</div>
-      <div id="issue-radar"><div style="color:#aaa; font-size:13px;">불러오는 중...</div></div>
+      <div class="sb-title">많이 본 뉴스</div>
+      <div id="rank-list"><div style="color:#aaa;font-size:13px;">불러오는 중...</div></div>
     </div>
 
-    <!-- 사이드바 쿠팡 광고 -->
-    <div class="sb-box sb-coupang">
-      <div class="coupang-ad-top">
-        <span>🛒 쿠팡 쇼핑</span>
-      </div>
+    <div class="sb-coupang sb-box">
+      <div class="sb-coupang-top"><span>쿠팡 추천 상품</span></div>
       <script src="https://ads-partners.coupang.com/g.js"></script>
-      <script>
-        new PartnersCoupang.G({id: 970543, trackingCode: "AF9787280", template: "carousel", width: "300", height: "300", tsource: ""});
-      </script>
-      <div class="coupang-ad-notice" style="border-top:1px solid #ffd0d8;">이 링크는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</div>
+      <script>new PartnersCoupang.G({id:970543,trackingCode:"AF9787280",subId:null,template:"carousel",width:"100%",height:"200"});</script>
+      <div class="sb-coupang-notice">이 링크는 쿠팡 파트너스 활동의 일환으로 수수료를 제공받습니다.</div>
     </div>
+
+    <div class="sb-box">
+      <div class="sb-title">글로벌 이슈 레이더</div>
+      <div id="issue-radar"><div style="color:#aaa;font-size:13px;">불러오는 중...</div></div>
+    </div>
+
+    <div class="sb-box">
+      <div class="sb-title">관련 기관</div>
+      <a class="link-item" href="https://www.motie.go.kr" target="_blank" rel="noopener noreferrer">
+        <span class="link-icon">🏛</span><span class="link-name">산업통상자원부</span><span class="link-arrow">↗</span>
+      </a>
+      <a class="link-item" href="https://www.ksia.or.kr" target="_blank" rel="noopener noreferrer">
+        <span class="link-icon">💡</span><span class="link-name">한국반도체산업협회</span><span class="link-arrow">↗</span>
+      </a>
+      <a class="link-item" href="https://www.kotra.or.kr" target="_blank" rel="noopener noreferrer">
+        <span class="link-icon">🌐</span><span class="link-name">KOTRA 공급망센터</span><span class="link-arrow">↗</span>
+      </a>
+      <a class="link-item" href="https://www.kita.net" target="_blank" rel="noopener noreferrer">
+        <span class="link-icon">📦</span><span class="link-name">한국무역협회 KITA</span><span class="link-arrow">↗</span>
+      </a>
+      <a class="link-item" href="https://www.kriss.re.kr" target="_blank" rel="noopener noreferrer">
+        <span class="link-icon">🔬</span><span class="link-name">한국표준과학연구원</span><span class="link-arrow">↗</span>
+      </a>
+      <a class="link-item" href="https://www.etnews.com" target="_blank" rel="noopener noreferrer">
+        <span class="link-icon">📰</span><span class="link-name">전자신문</span><span class="link-arrow">↗</span>
+      </a>
+    </div>
+
+    <div class="sb-box">
+      <div class="sb-title">이번 주 키워드</div>
+      <div id="keyword-cloud" class="keyword-cloud"><span style="color:#aaa;font-size:13px;">불러오는 중...</span></div>
+    </div>
+
+    <div class="sb-box">
+      <div class="sb-title">다른 기사</div>
+      <div id="related-list"><div style="color:#aaa;font-size:13px;">불러오는 중...</div></div>
+    </div>
+
   </aside>
 
 </div>
@@ -483,6 +539,96 @@
     ).join('');
   }
 
+  function renderRankList(articles, datePrefix) {
+    const el = document.getElementById('rank-list');
+    if (!el || !articles.length) return;
+    el.innerHTML = articles.slice(0, 5).map((a, i) =>
+      `<div class="rank-item" onclick="location.href='article.html?${datePrefix}id=${i}'">
+        <span class="rank-num">${i + 1}</span>
+        <span class="rank-title">${a.title}</span>
+      </div>`
+    ).join('');
+  }
+
+  async function renderKeywordsArticle() {
+    const el = document.getElementById('keyword-cloud');
+    if (!el) return;
+
+    const STOP = new Set([
+      '및','등','의','이','가','을','를','은','는','에','에서','으로','로','와','과',
+      '한','하는','하여','하며','위한','통해','대한','관련','대해','위해','따라',
+      '지난','올해','이번','최근','현재','해당','통한','위해서','대하여','따른',
+      '이후','향후','이전','이상','이하','또한','그리고','하지만','그러나','더욱',
+      '함께','가운데','오는','지속','않는','없는','있는','있어','된다','한다',
+      '중국','미국','한국','일본','독일','유럽','글로벌','국내','국제','세계','아시아',
+      '기업','산업','시장','분야','부문','정부','업계','수출','수입','생산','투자',
+      '발표','계획','추진','강화','확대','증가','감소','전망','예상','분석',
+      '공급','수요','가격','제품','기술','개발','연구','적용','활용','도입',
+      '인상','인하','개선','혁신','변화','전환','가속','강조','확인','대응',
+      '협력','지원','달성','실현','구축','확보','목표','방향','방안','대책',
+      '핵심','주요','중요','필요','가능','주력','집중','중점','본격','대규모',
+      '성장','하락','상승','급등','급락','최대','최소','최고','최저','역대',
+      '부각','주목','우려','기대','논란','이슈','화두','트렌드',
+      '소재','첨단','전략','전반','지역','프로젝트','착공','사업','공사',
+      '계열','그룹','센터','단지','시설','설비','라인','공장','플랜트',
+      '추세','동향','흐름','현황','상황','환경','여건','과제','문제',
+      '나온다','유치','재개','시작','완료','진행','운영','관리','설립','구성',
+      '진출','참여','협의','논의','준비','결정','선정','확인','검토','제시',
+      '억원','달러','조원','만톤','백만','천만','퍼센트',
+    ]);
+    const JOSA = ['에서','으로','로부터','라는','이라는','이라고','라고','으로서','으로써',
+                  '만큼','처럼','보다','부터','까지','에게','이고','이며','이나','이든',
+                  '도','만','를','을','가','는','은','의','와','과','서','로','에'];
+    JOSA.sort((a, b) => b.length - a.length);
+    function stripJosa(w) {
+      for (const j of JOSA) {
+        if (w.endsWith(j) && w.length > j.length + 1) return w.slice(0, w.length - j.length);
+      }
+      return w;
+    }
+    const CAT_WORDS = {
+      rare:     new Set(['리튬','코발트','니켈','희토류','탄탈럼','인듐','갈륨','게르마늄','망간','텅스텐','몰리브덴','바나듐','광물','광산','희소금속']),
+      industry: new Set(['배터리','화학','탄소섬유','고분자','석유화학','플라스틱','세라믹','반도체','웨이퍼','도레이','BASF','POSCO']),
+      global:   new Set(['공급망','수출규제','관세','무역','제재','협정','WTO','IPEF','칩스법','IRA','CPTPP','NATO']),
+    };
+
+    try {
+      const idxRes = await fetch('archive/index.json');
+      if (!idxRes.ok) return;
+      const idxData = await idxRes.json();
+      const dates = (idxData.dates || []).slice(0, 3);
+      const fetches = [
+        fetch('articles.json').then(r => r.ok ? r.json() : null),
+        ...dates.map(d => fetch(`archive/${d}.json`).then(r => r.ok ? r.json() : null)),
+      ];
+      const results = await Promise.all(fetches);
+      const articleList = results.flatMap(d => d ? (d.articles || []) : []);
+
+      const freq = {};
+      articleList.forEach(a => {
+        const text = (a.title || '') + ' ' + (a.summary || '');
+        text.replace(/[^가-힣a-zA-Z\s]/g, ' ').split(/\s+/).forEach(raw => {
+          const w = stripJosa(raw.trim());
+          if (w.length < 2 || /\d/.test(w) || STOP.has(w) || STOP.has(raw)) return;
+          if (!/[가-힣]/.test(w) && !/[A-Z]/.test(w)) return;
+          if (w.endsWith('하다') || w.endsWith('되다') || w.endsWith('있다') || w.endsWith('없다')) return;
+          freq[w] = (freq[w] || 0) + 1;
+        });
+      });
+      const sorted = Object.entries(freq).filter(([, c]) => c >= 2)
+        .sort((a, b) => b[1] - a[1]).slice(0, 14).map(([w]) => w);
+
+      if (!sorted.length) { el.innerHTML = '<span style="color:#aaa;font-size:13px;">집계 중...</span>'; return; }
+      el.innerHTML = sorted.map(w => {
+        let cls = '';
+        if (CAT_WORDS.rare.has(w)) cls = 'rare';
+        else if (CAT_WORDS.industry.has(w)) cls = 'industry';
+        else if (CAT_WORDS.global.has(w)) cls = 'global';
+        return `<span class="kw-tag ${cls}" onclick="location.href='search.html?q=${encodeURIComponent(w)}'">#${w}</span>`;
+      }).join('');
+    } catch { el.innerHTML = '<span style="color:#aaa;font-size:13px;">집계 중...</span>'; }
+  }
+
   function render(article, allArticles, briefing, issues) {
     const cv = getCat(article);
     const today = fmtDate(new Date());
@@ -559,6 +705,10 @@
     // 편집국 브리핑 + 글로벌 이슈 레이더
     renderEditorial(briefing);
     renderIssues(issues);
+
+    // 많이 본 뉴스 + 이번 주 키워드
+    renderRankList(allArticles, datePrefix);
+    renderKeywordsArticle();
 
     // 관련 뉴스 (타 날짜 유사 주제) — 비동기 로드
     loadRelatedNews(article, articleDate);
