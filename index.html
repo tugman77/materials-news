@@ -491,7 +491,7 @@ function renderCatSections() {
     const items = allArticles
       .filter(r => r.article.category === cat
         && !(r.date === todayISO && heroIndices.has(r.idx)))
-      .slice(0, 6);
+      .slice(0, 3);
     if (!items.length) return;
 
     const grid = document.getElementById('grid-' + cat);
@@ -525,7 +525,7 @@ function renderLatest(filter) {
   const el = document.getElementById('latest-list');
   if (!el) return;
 
-  el.innerHTML = filtered.map(({article: a, date, idx}) => {
+  el.innerHTML = filtered.slice(0, 10).map(({article: a, date, idx}) => {
     const thumb = a.image_url
       ? `<img class="li-thumb" src="${a.image_url}" alt="${a.title}" onerror="this.style.display='none'">`
       : `<div class="li-thumb-ph"></div>`;
