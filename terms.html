@@ -206,7 +206,7 @@
 
       <h2>제10조 (문의)</h2>
       <p>
-        본 약관에 관한 문의 사항은 <a href="mailto:ads@sojaetimes.co.kr">ads@sojaetimes.co.kr</a>로 연락해 주시기 바랍니다.
+        본 약관에 관한 문의 사항은 하단 <a href="#" onclick="openContactModal('기타');return false;" style="color:var(--accent2);text-decoration:underline;">문의하기</a>를 이용해 주시기 바랍니다.
       </p>
 
     </div>
@@ -219,7 +219,7 @@
       <div class="footer-logo">소재타임스</div>
       <div class="footer-info" style="margin-top:6px;">
         반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어<br>
-        발행인: 대표 | 편집국 | 광고문의: ads@sojaetimes.co.kr
+        발행인: 대표 | 편집국 | 광고문의: <a href="#" onclick="openContactModal('광고 문의');return false;" style="color:rgba(255,255,255,.6);text-decoration:underline;">문의하기</a>
       </div>
     </div>
     <div>
@@ -247,5 +247,6 @@ function goSearch() {
   if (q) location.href = 'search.html?q=' + encodeURIComponent(q);
 }
 </script>
+<script src="contact-modal.js"></script>
 </body>
 </html>

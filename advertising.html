@@ -216,18 +216,17 @@
     <div class="section">
       <div class="section-title">광고 문의</div>
       <div class="contact-box">
-        <div class="contact-title">광고 문의 채널</div>
+        <div class="contact-title">광고 문의</div>
         <div class="contact-row">
-          <span class="contact-label">이메일</span>
-          <span><a href="mailto:ads@sojaetimes.co.kr">ads@sojaetimes.co.kr</a></span>
+          <span class="contact-label">안내</span>
+          <span>광고 상품명, 집행 기간, 소재 크기, 예산 범위를 함께 남겨주시면 빠르게 답변드립니다.</span>
         </div>
         <div class="contact-row">
           <span class="contact-label">응답 기한</span>
-          <span>영업일 기준 1~2일 이내 답변</span>
+          <span>영업일 기준 1~2일 이내</span>
         </div>
-        <div class="contact-row">
-          <span class="contact-label">문의 내용</span>
-          <span>광고 상품명, 집행 기간, 소재 크기, 예산 범위를 함께 알려주시면 빠른 답변이 가능합니다.</span>
+        <div style="margin-top:16px;">
+          <button onclick="openContactModal('광고 문의')" style="background:#c8102e;color:#fff;border:none;padding:12px 28px;font-size:14px;font-weight:700;cursor:pointer;letter-spacing:.3px;">문의하기 →</button>
         </div>
       </div>
     </div>
@@ -241,7 +240,7 @@
       <div class="footer-logo">소재타임스</div>
       <div class="footer-info" style="margin-top:6px;">
         반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어<br>
-        발행인: 대표 | 편집국 | 광고문의: ads@sojaetimes.co.kr
+        발행인: 대표 | 편집국 | 광고문의: <a href="#" onclick="openContactModal('광고 문의');return false;" style="color:rgba(255,255,255,.6);text-decoration:underline;">문의하기</a>
       </div>
     </div>
     <div>
@@ -267,5 +266,6 @@ function goSearch() {
   if (q) location.href = 'search.html?q=' + encodeURIComponent(q);
 }
 </script>
+<script src="contact-modal.js"></script>
 </body>
 </html>

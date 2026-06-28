@@ -183,12 +183,12 @@
         <li>삭제 요청</li>
         <li>처리 정지 요청</li>
       </ul>
-      <p>권리 행사는 <a href="mailto:ads@sojaetimes.co.kr">ads@sojaetimes.co.kr</a>로 요청하시면 접수일로부터 10일 이내에 처리합니다.</p>
+      <p>권리 행사는 하단 <a href="#" onclick="openContactModal('기타');return false;" style="color:var(--accent2);text-decoration:underline;">문의하기</a>를 통해 요청하시면 접수일로부터 10일 이내에 처리합니다.</p>
 
       <h2>8. 개인정보 보호책임자</h2>
       <ul>
         <li><strong>운영자:</strong> 소재타임스 편집국</li>
-        <li><strong>연락처:</strong> <a href="mailto:ads@sojaetimes.co.kr">ads@sojaetimes.co.kr</a></li>
+        <li><strong>연락처:</strong> <a href="#" onclick="openContactModal('기타');return false;" style="color:var(--accent2);text-decoration:underline;">문의하기</a></li>
       </ul>
 
       <h2>9. 개인정보처리방침 변경</h2>
@@ -207,7 +207,7 @@
       <div class="footer-logo">소재타임스</div>
       <div class="footer-info" style="margin-top:6px;">
         반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어<br>
-        발행인: 대표 | 편집국 | 광고문의: ads@sojaetimes.co.kr
+        발행인: 대표 | 편집국 | 광고문의: <a href="#" onclick="openContactModal('광고 문의');return false;" style="color:rgba(255,255,255,.6);text-decoration:underline;">문의하기</a>
       </div>
     </div>
     <div>
@@ -235,5 +235,6 @@ function goSearch() {
   if (q) location.href = 'search.html?q=' + encodeURIComponent(q);
 }
 </script>
+<script src="contact-modal.js"></script>
 </body>
 </html>

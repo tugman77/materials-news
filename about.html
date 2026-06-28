@@ -222,7 +222,7 @@
           <tr><th>설립</th><td>2026년</td></tr>
           <tr><th>운영 방식</th><td>AI 기반 자동 기사 생성 · 매일 KST 06:00 발행</td></tr>
           <tr><th>주요 분야</th><td>반도체소재 / 희귀금속·광물 / 산업재·화학 / 글로벌공급망</td></tr>
-          <tr><th>광고문의</th><td>ads@sojaetimes.co.kr</td></tr>
+          <tr><th>광고문의</th><td><a href="#" onclick="openContactModal('광고 문의');return false;" style="color:var(--accent2);text-decoration:underline;">문의하기</a></td></tr>
         </tbody>
       </table>
     </div>
@@ -247,7 +247,7 @@
       <div class="footer-logo">소재타임스</div>
       <div class="footer-info" style="margin-top:6px;">
         반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어<br>
-        발행인: 대표 | 편집국 | 광고문의: ads@sojaetimes.co.kr
+        발행인: 대표 | 편집국 | 광고문의: <a href="#" onclick="openContactModal('광고 문의');return false;" style="color:rgba(255,255,255,.6);text-decoration:underline;">문의하기</a>
       </div>
     </div>
     <div>
@@ -273,5 +273,6 @@ function goSearch() {
   if (q) location.href = 'search.html?q=' + encodeURIComponent(q);
 }
 </script>
+<script src="contact-modal.js"></script>
 </body>
 </html>
