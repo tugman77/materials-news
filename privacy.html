@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>개인정보처리방침 — 소재타임스</title>
+<meta name="description" content="소재타임스 개인정보처리방침">
+<style>
+  :root {
+    --primary: #1a2b4a;
+    --accent: #c8102e;
+    --accent2: #0057a8;
+    --bg: #f2f2ee;
+    --card-bg: #ffffff;
+    --border: #d8d8d2;
+    --text: #111;
+    --text-muted: #4a4a4a;
+    --text-light: #888;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+
+  header { background: var(--primary); color: #fff; border-bottom: 3px solid var(--accent); }
+  .header-top { max-width: 1200px; margin: 0 auto; padding: 16px 16px 12px; display: flex; align-items: flex-end; justify-content: space-between; }
+  .logo-kr { font-size: 26px; font-weight: 700; letter-spacing: -0.5px; cursor: pointer; }
+  .logo-en { font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 2px; margin-top: 3px; }
+  .header-meta { text-align: right; font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.7; }
+  .header-meta .hdate { font-size: 13px; color: rgba(255,255,255,0.75); }
+
+  nav { background: var(--primary); border-top: 1px solid rgba(255,255,255,0.1); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; }
+  .nav-inner a { color: rgba(255,255,255,0.72); font-size: 13.5px; padding: 10px 14px; display: block; border-bottom: 2px solid transparent; transition: color .15s, border-color .15s; white-space: nowrap; }
+  .nav-inner a:hover { color: #fff; border-bottom-color: var(--accent); }
+  .nav-search { margin-left: auto; display: flex; align-items: center; }
+  .nav-search input { border: none; background: rgba(255,255,255,0.1); color: #fff; padding: 5px 10px; font-size: 12px; outline: none; width: 140px; }
+  .nav-search input::placeholder { color: rgba(255,255,255,0.45); }
+  .nav-search button { background: var(--accent); border: none; color: #fff; padding: 5px 10px; cursor: pointer; font-size: 13px; }
+
+  .breadcrumb { background: #eeeee9; border-bottom: 1px solid var(--border); }
+  .bc-inner { max-width: 1200px; margin: 0 auto; padding: 8px 16px; font-size: 12px; color: var(--text-light); display: flex; align-items: center; gap: 6px; }
+  .bc-inner a { color: var(--text-light); }
+  .bc-inner a:hover { color: var(--accent2); }
+  .bc-sep { color: #bbb; }
+
+  .page-wrap { max-width: 860px; margin: 0 auto; padding: 40px 16px 64px; }
+  .page-card { background: var(--card-bg); border: 1px solid var(--border); padding: 44px 52px; }
+
+  .page-title {
+    font-size: 26px; font-weight: 700; color: var(--primary);
+    border-bottom: 3px solid var(--accent); padding-bottom: 14px; margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+  .page-date { font-size: 12.5px; color: var(--text-light); margin-bottom: 32px; }
+
+  .prose h2 {
+    font-size: 15px; font-weight: 700; color: var(--primary);
+    border-left: 4px solid var(--accent); padding-left: 12px;
+    margin: 28px 0 12px;
+  }
+  .prose h2:first-child { margin-top: 0; }
+  .prose p { font-size: 14.5px; line-height: 1.9; color: var(--text-muted); margin-bottom: 10px; word-break: keep-all; }
+  .prose ul { margin: 8px 0 10px 20px; }
+  .prose li { font-size: 14.5px; line-height: 1.85; color: var(--text-muted); margin-bottom: 4px; word-break: keep-all; }
+  .prose a { color: var(--accent2); text-decoration: underline; }
+  .prose strong { color: var(--text); }
+
+  footer { background: var(--primary); color: rgba(255,255,255,0.5); font-size: 12px; padding: 24px 16px; border-top: 3px solid var(--accent); }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .footer-logo { font-size: 16px; font-weight: 700; color: #fff; }
+  .footer-info { line-height: 1.8; }
+  .footer-links { display: flex; gap: 16px; }
+  .footer-links a { color: rgba(255,255,255,0.5); }
+  .footer-links a:hover { color: #fff; }
+
+  @media (max-width: 640px) {
+    .page-card { padding: 28px 20px; }
+    .nav-search { display: none; }
+    .header-meta { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <div onclick="location.href='index.html'" style="cursor:pointer">
+      <div class="logo-kr">소재타임스</div>
+      <div class="logo-en">MATERIALS TIMES</div>
+    </div>
+    <div class="header-meta">
+      <div class="hdate" id="today-date"></div>
+      <div>반도체 · 첨단소재 · 희귀금속 · 산업재</div>
+    </div>
+  </div>
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html">전체</a>
+      <a href="category.html?cat=반도체소재">반도체·소재</a>
+      <a href="category.html?cat=희귀금속">희귀금속·광물</a>
+      <a href="category.html?cat=산업재">산업재·화학</a>
+      <a href="category.html?cat=글로벌">글로벌공급망</a>
+      <div class="nav-search">
+        <input type="text" id="search-input" placeholder="기사 검색..." onkeydown="if(event.key==='Enter')goSearch()">
+        <button onclick="goSearch()">🔍</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="breadcrumb">
+  <div class="bc-inner">
+    <a href="index.html">홈</a>
+    <span class="bc-sep">›</span>
+    <span>개인정보처리방침</span>
+  </div>
+</div>
+
+<div class="page-wrap">
+  <div class="page-card">
+    <h1 class="page-title">개인정보처리방침</h1>
+    <p class="page-date">시행일: 2026년 1월 1일 &nbsp;|&nbsp; 최종 수정: <span id="today-kr"></span></p>
+
+    <div class="prose">
+
+      <p>
+        <strong>소재타임스(Materials Times)</strong>(이하 "본 사이트")는 이용자의 개인정보를 중요시하며,
+        「개인정보 보호법」 등 관련 법령을 준수합니다. 본 방침은 본 사이트가 어떠한 개인정보를 수집하고,
+        어떻게 이용·보호하는지 안내합니다.
+      </p>
+
+      <h2>1. 수집하는 개인정보 항목</h2>
+      <p>본 사이트는 별도의 회원가입 없이 뉴스 열람 서비스를 제공하며, 최소한의 정보만 수집합니다.</p>
+      <ul>
+        <li><strong>방문 로그:</strong> 접속 IP, 브라우저 정보, 방문 페이지 URL (서버 운영 및 보안 목적)</li>
+        <li><strong>광고 문의 시:</strong> 이메일 주소, 문의 내용 (광고 집행 안내 및 응답 목적)</li>
+      </ul>
+      <p>민감정보(사상·신념, 건강정보, 금융정보 등)는 수집하지 않습니다.</p>
+
+      <h2>2. 개인정보의 수집 목적 및 이용</h2>
+      <ul>
+        <li>서비스 운영 및 불법 이용 행위 방지</li>
+        <li>광고 문의 응대 및 광고 집행 지원</li>
+        <li>서비스 개선 및 통계 분석 (비식별 처리 후 활용)</li>
+      </ul>
+
+      <h2>3. 개인정보의 보유 및 이용 기간</h2>
+      <p>수집된 개인정보는 수집 목적 달성 후 즉시 파기합니다. 단, 관련 법령에 의해 보존이 필요한 경우 해당 기간 동안 보관합니다.</p>
+      <ul>
+        <li>광고 문의 이메일: 문의 처리 완료 후 1년 보관, 이후 파기</li>
+        <li>서버 접속 로그: 3개월 (전기통신사업법)</li>
+      </ul>
+
+      <h2>4. 제3자 제공 및 위탁</h2>
+      <p>본 사이트는 이용자의 개인정보를 원칙적으로 외부에 제공하지 않습니다. 다만, 다음의 경우 예외로 합니다.</p>
+      <ul>
+        <li>이용자가 사전에 동의한 경우</li>
+        <li>법령의 규정에 의거하거나 수사 목적으로 관계기관이 요구하는 경우</li>
+      </ul>
+
+      <h2>5. 쿠팡 파트너스 및 쿠키</h2>
+      <p>
+        본 사이트는 수익 창출을 위해 <strong>쿠팡 파트너스</strong> 광고를 게재합니다.
+        쿠팡은 쿠키(Cookie)를 사용하여 이용자의 관심사에 맞는 상품을 표시할 수 있습니다.
+      </p>
+      <ul>
+        <li>쿠팡의 개인정보 처리는 <a href="https://www.coupang.com/np/landing/privacyPolicy.pang" target="_blank" rel="noopener noreferrer">쿠팡 개인정보처리방침</a>에 따릅니다.</li>
+        <li>브라우저 설정을 통해 쿠키 수집을 거부할 수 있으나, 일부 기능 이용에 제한이 생길 수 있습니다.</li>
+      </ul>
+
+      <h2>6. 구글 애널리틱스</h2>
+      <p>
+        본 사이트는 방문 통계 분석을 위해 구글 애널리틱스(Google Analytics)를 사용할 수 있습니다.
+        구글은 쿠키를 통해 비식별화된 방문 데이터를 수집하며, 이는 개인을 특정하지 않습니다.
+        구글의 데이터 처리는 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">구글 개인정보처리방침</a>에 따릅니다.
+      </p>
+
+      <h2>7. 이용자의 권리</h2>
+      <p>이용자는 언제든지 자신의 개인정보에 대해 아래 권리를 행사할 수 있습니다.</p>
+      <ul>
+        <li>개인정보 열람 요청</li>
+        <li>오류 정정 요청</li>
+        <li>삭제 요청</li>
+        <li>처리 정지 요청</li>
+      </ul>
+      <p>권리 행사는 <a href="mailto:ads@sojaetimes.co.kr">ads@sojaetimes.co.kr</a>로 요청하시면 접수일로부터 10일 이내에 처리합니다.</p>
+
+      <h2>8. 개인정보 보호책임자</h2>
+      <ul>
+        <li><strong>운영자:</strong> 소재타임스 편집국</li>
+        <li><strong>연락처:</strong> <a href="mailto:ads@sojaetimes.co.kr">ads@sojaetimes.co.kr</a></li>
+      </ul>
+
+      <h2>9. 개인정보처리방침 변경</h2>
+      <p>
+        본 방침은 법령·정책의 변경 또는 서비스 변화에 따라 수정될 수 있습니다.
+        변경 시 본 페이지에 공지하며, 중요한 변경 사항은 홈페이지 공지를 통해 안내합니다.
+      </p>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">소재타임스</div>
+      <div class="footer-info" style="margin-top:6px;">
+        반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어<br>
+        발행인: 대표 | 편집국 | 광고문의: ads@sojaetimes.co.kr
+      </div>
+    </div>
+    <div>
+      <div class="footer-links">
+        <a href="about.html">회사소개</a>
+        <a href="advertising.html">광고안내</a>
+        <a href="privacy.html">개인정보처리방침</a>
+        <a href="terms.html">이용약관</a>
+      </div>
+      <div style="margin-top:8px;text-align:right;">© 2026 소재타임스. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const _d = new Date();
+const _dw = ['일','월','화','수','목','금','토'];
+document.getElementById('today-date').textContent =
+  `${_d.getFullYear()}년 ${_d.getMonth()+1}월 ${_d.getDate()}일 ${_dw[_d.getDay()]}요일`;
+document.getElementById('today-kr').textContent =
+  `${_d.getFullYear()}년 ${_d.getMonth()+1}월 ${_d.getDate()}일`;
+
+function goSearch() {
+  const q = document.getElementById('search-input').value.trim();
+  if (q) location.href = 'search.html?q=' + encodeURIComponent(q);
+}
+</script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>소재경제신문</title>
+<title>소재타임스</title>
 <meta name="description" content="반도체, 첨단소재, 희귀금속, 산업재 분야 전문 뉴스 미디어">
 <style>
   :root {
@@ -94,6 +94,10 @@
   footer { background:var(--primary); color:rgba(255,255,255,0.5); font-size:12px; padding:24px 16px; border-top:3px solid var(--accent); }
   .footer-inner { max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
   .footer-logo { font-size:16px; font-weight:700; color:#fff; }
+  .footer-info { line-height:1.8; }
+  .footer-links { display:flex; gap:16px; }
+  .footer-links a { color:rgba(255,255,255,0.5); }
+  .footer-links a:hover { color:#fff; }
 
   /* 반응형 */
   @media (max-width:900px) { .article-grid { grid-template-columns:repeat(2,1fr); } }
@@ -111,15 +115,15 @@
 <div class="breaking-bar">
   <div class="inner">
     <span class="breaking-label">속보</span>
-    <span class="breaking-text" id="breaking-text">소재경제신문 — 반도체·소재·산업재 전문 미디어</span>
+    <span class="breaking-text" id="breaking-text">소재타임스 — 반도체·소재·산업재 전문 미디어</span>
   </div>
 </div>
 
 <header>
   <div class="header-top">
     <div onclick="location.href='index.html'" style="cursor:pointer">
-      <div class="logo-kr">소재경제신문</div>
-      <div class="logo-en">MATERIALS ECONOMY PRESS</div>
+      <div class="logo-kr">소재타임스</div>
+      <div class="logo-en">MATERIALS TIMES</div>
     </div>
     <div class="header-meta">
       <div class="hdate" id="today-date"></div>
@@ -172,8 +176,22 @@
 
 <footer>
   <div class="footer-inner">
-    <div class="footer-logo">소재경제신문</div>
-    <div>© 2026 Materials Economy Press. All rights reserved.</div>
+    <div>
+      <div class="footer-logo">소재타임스</div>
+      <div class="footer-info" style="margin-top:6px;">
+        반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어<br>
+        발행인: 대표 | 편집국 | 광고문의: ads@sojaetimes.co.kr
+      </div>
+    </div>
+    <div>
+      <div class="footer-links">
+        <a href="about.html">회사소개</a>
+        <a href="advertising.html">광고안내</a>
+        <a href="privacy.html">개인정보처리방침</a>
+        <a href="terms.html">이용약관</a>
+      </div>
+      <div style="margin-top:8px;text-align:right;">© 2026 소재타임스. All rights reserved.</div>
+    </div>
   </div>
 </footer>
 
@@ -208,7 +226,7 @@ const currentCat = new URLSearchParams(location.search).get('cat') || '반도체
 const catInfo = CATS[currentCat] || CATS['반도체소재'];
 
 // 페이지 메타
-document.title = `${catInfo.label} — 소재경제신문`;
+document.title = `${catInfo.label} — 소재타임스`;
 document.getElementById('bc-cat-name').textContent = catInfo.label;
 document.getElementById('banner-name').textContent = catInfo.label;
 document.getElementById('banner-desc').textContent = catInfo.desc;

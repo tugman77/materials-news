@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>회사소개 — 소재타임스</title>
+<meta name="description" content="소재타임스 회사 소개 — 반도체·소재·산업재 전문 뉴스 미디어">
+<style>
+  :root {
+    --primary: #1a2b4a;
+    --accent: #c8102e;
+    --accent2: #0057a8;
+    --bg: #f2f2ee;
+    --card-bg: #ffffff;
+    --border: #d8d8d2;
+    --text: #111;
+    --text-muted: #4a4a4a;
+    --text-light: #888;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+
+  /* 헤더 */
+  header { background: var(--primary); color: #fff; border-bottom: 3px solid var(--accent); }
+  .header-top { max-width: 1200px; margin: 0 auto; padding: 16px 16px 12px; display: flex; align-items: flex-end; justify-content: space-between; }
+  .logo-kr { font-size: 26px; font-weight: 700; letter-spacing: -0.5px; cursor: pointer; }
+  .logo-en { font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 2px; margin-top: 3px; }
+  .header-meta { text-align: right; font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.7; }
+  .header-meta .hdate { font-size: 13px; color: rgba(255,255,255,0.75); }
+
+  /* 네비게이션 */
+  nav { background: var(--primary); border-top: 1px solid rgba(255,255,255,0.1); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; }
+  .nav-inner a { color: rgba(255,255,255,0.72); font-size: 13.5px; padding: 10px 14px; display: block; border-bottom: 2px solid transparent; transition: color .15s, border-color .15s; white-space: nowrap; }
+  .nav-inner a:hover, .nav-inner a.active { color: #fff; border-bottom-color: var(--accent); }
+  .nav-search { margin-left: auto; display: flex; align-items: center; }
+  .nav-search input { border: none; background: rgba(255,255,255,0.1); color: #fff; padding: 5px 10px; font-size: 12px; outline: none; width: 140px; }
+  .nav-search input::placeholder { color: rgba(255,255,255,0.45); }
+  .nav-search button { background: var(--accent); border: none; color: #fff; padding: 5px 10px; cursor: pointer; font-size: 13px; }
+
+  /* 브레드크럼 */
+  .breadcrumb { background: #eeeee9; border-bottom: 1px solid var(--border); }
+  .bc-inner { max-width: 1200px; margin: 0 auto; padding: 8px 16px; font-size: 12px; color: var(--text-light); display: flex; align-items: center; gap: 6px; }
+  .bc-inner a { color: var(--text-light); }
+  .bc-inner a:hover { color: var(--accent2); }
+  .bc-sep { color: #bbb; }
+
+  /* 본문 */
+  .page-wrap { max-width: 860px; margin: 0 auto; padding: 40px 16px 64px; }
+  .page-card { background: var(--card-bg); border: 1px solid var(--border); padding: 44px 52px; }
+
+  .page-title {
+    font-size: 26px; font-weight: 700; color: var(--primary);
+    border-bottom: 3px solid var(--accent); padding-bottom: 14px; margin-bottom: 32px;
+    letter-spacing: -0.5px;
+  }
+
+  .section { margin-bottom: 36px; }
+  .section-title {
+    font-size: 16px; font-weight: 700; color: var(--primary);
+    border-left: 4px solid var(--accent); padding-left: 12px;
+    margin-bottom: 14px;
+  }
+  .section p { font-size: 14.5px; line-height: 1.9; color: var(--text-muted); margin-bottom: 12px; word-break: keep-all; }
+  .section p:last-child { margin-bottom: 0; }
+
+  .info-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 4px; }
+  .info-table th { background: #f0ede8; color: var(--primary); font-weight: 700; padding: 10px 14px; text-align: left; border: 1px solid var(--border); width: 130px; white-space: nowrap; }
+  .info-table td { padding: 10px 14px; border: 1px solid var(--border); color: var(--text-muted); line-height: 1.7; }
+
+  .mission-box {
+    background: linear-gradient(135deg, #1a2b4a 0%, #0a1628 100%);
+    color: #fff;
+    padding: 28px 32px;
+    margin: 32px 0;
+    border-radius: 2px;
+  }
+  .mission-box .mission-label { font-size: 11px; letter-spacing: 2px; color: var(--accent); font-weight: 700; margin-bottom: 10px; }
+  .mission-box .mission-text { font-size: 17px; font-weight: 700; line-height: 1.7; letter-spacing: -0.3px; }
+
+  .value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 4px; }
+  .value-item { background: #f8f6f2; border: 1px solid var(--border); padding: 20px 16px; text-align: center; }
+  .value-icon { font-size: 28px; margin-bottom: 10px; }
+  .value-name { font-size: 14px; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+  .value-desc { font-size: 12.5px; color: var(--text-light); line-height: 1.6; }
+
+  /* 푸터 */
+  footer { background: var(--primary); color: rgba(255,255,255,0.5); font-size: 12px; padding: 24px 16px; border-top: 3px solid var(--accent); }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .footer-logo { font-size: 16px; font-weight: 700; color: #fff; }
+  .footer-info { line-height: 1.8; }
+  .footer-links { display: flex; gap: 16px; }
+  .footer-links a { color: rgba(255,255,255,0.5); }
+  .footer-links a:hover { color: #fff; }
+
+  @media (max-width: 640px) {
+    .page-card { padding: 28px 20px; }
+    .value-grid { grid-template-columns: 1fr; }
+    .nav-search { display: none; }
+    .header-meta { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- 헤더 -->
+<header>
+  <div class="header-top">
+    <div onclick="location.href='index.html'" style="cursor:pointer">
+      <div class="logo-kr">소재타임스</div>
+      <div class="logo-en">MATERIALS TIMES</div>
+    </div>
+    <div class="header-meta">
+      <div class="hdate" id="today-date"></div>
+      <div>반도체 · 첨단소재 · 희귀금속 · 산업재</div>
+    </div>
+  </div>
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html">전체</a>
+      <a href="category.html?cat=반도체소재">반도체·소재</a>
+      <a href="category.html?cat=희귀금속">희귀금속·광물</a>
+      <a href="category.html?cat=산업재">산업재·화학</a>
+      <a href="category.html?cat=글로벌">글로벌공급망</a>
+      <div class="nav-search">
+        <input type="text" id="search-input" placeholder="기사 검색..." onkeydown="if(event.key==='Enter')goSearch()">
+        <button onclick="goSearch()">🔍</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- 브레드크럼 -->
+<div class="breadcrumb">
+  <div class="bc-inner">
+    <a href="index.html">홈</a>
+    <span class="bc-sep">›</span>
+    <span>회사소개</span>
+  </div>
+</div>
+
+<!-- 본문 -->
+<div class="page-wrap">
+  <div class="page-card">
+    <h1 class="page-title">회사소개</h1>
+
+    <!-- 미션 박스 -->
+    <div class="mission-box">
+      <div class="mission-label">MISSION</div>
+      <div class="mission-text">
+        반도체·첨단소재·희귀금속·산업재 분야의<br>
+        정확하고 심층적인 전문 정보를 제공합니다.
+      </div>
+    </div>
+
+    <!-- 소개 -->
+    <div class="section">
+      <div class="section-title">소재타임스 소개</div>
+      <p>
+        <strong>소재타임스(Materials Times)</strong>은 반도체·첨단소재·희귀금속·산업재 분야를 전문으로 다루는 디지털 뉴스 미디어입니다.
+        기술패권 경쟁이 심화되는 글로벌 환경 속에서 공급망·소재 산업의 흐름을 정확하게 분석하고 전달합니다.
+      </p>
+      <p>
+        매일 국내외 주요 뉴스를 AI 기술로 분석·정리하여 빠르게 제공하며, 반도체 소재·희귀금속·산업재·글로벌공급망 4개 섹션으로 분류된 전문 콘텐츠를 운영하고 있습니다.
+      </p>
+    </div>
+
+    <!-- 핵심 가치 -->
+    <div class="section">
+      <div class="section-title">핵심 가치</div>
+      <div class="value-grid">
+        <div class="value-item">
+          <div class="value-icon">🎯</div>
+          <div class="value-name">정확성</div>
+          <div class="value-desc">신뢰할 수 있는 출처 기반의 사실 중심 보도</div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">⚡</div>
+          <div class="value-name">신속성</div>
+          <div class="value-desc">매일 새벽 자동 생성·배포로 최신 정보 제공</div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">🔬</div>
+          <div class="value-name">전문성</div>
+          <div class="value-desc">소재·반도체 산업에 특화된 심층 분석</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 커버리지 -->
+    <div class="section">
+      <div class="section-title">보도 분야</div>
+      <table class="info-table">
+        <tbody>
+          <tr>
+            <th>반도체·소재</th>
+            <td>반도체 소재·장비, 웨이퍼, 화학기상증착(CVD), 포토레지스트, 에칭가스 등 반도체 공정 소재 전반</td>
+          </tr>
+          <tr>
+            <th>희귀금속·광물</th>
+            <td>리튬·코발트·니켈·희토류 등 핵심 광물 수급 동향, 자원 외교, 채굴 기술 및 재활용 이슈</td>
+          </tr>
+          <tr>
+            <th>산업재·화학</th>
+            <td>첨단 화학소재, 배터리 소재, 탄소섬유, 고분자 소재, 석유화학 산업 동향</td>
+          </tr>
+          <tr>
+            <th>글로벌공급망</th>
+            <td>미·중 기술패권 경쟁, 수출 규제, 공급망 재편, 국제 무역 이슈 및 주요국 산업 정책</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 기본 정보 -->
+    <div class="section">
+      <div class="section-title">기본 정보</div>
+      <table class="info-table">
+        <tbody>
+          <tr><th>매체명</th><td>소재타임스 (Materials Times)</td></tr>
+          <tr><th>설립</th><td>2026년</td></tr>
+          <tr><th>운영 방식</th><td>AI 기반 자동 기사 생성 · 매일 KST 06:00 발행</td></tr>
+          <tr><th>주요 분야</th><td>반도체소재 / 희귀금속·광물 / 산업재·화학 / 글로벌공급망</td></tr>
+          <tr><th>광고문의</th><td>ads@sojaetimes.co.kr</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 면책 고지 -->
+    <div class="section">
+      <div class="section-title">면책 고지</div>
+      <p>
+        소재타임스의 모든 콘텐츠는 정보 제공 목적으로만 제작되며, 투자 조언이나 법적 의견을 구성하지 않습니다.
+        콘텐츠의 정확성을 위해 노력하나, AI 기반 자동 생성 특성상 일부 오류가 있을 수 있습니다.
+        중요한 사항은 반드시 공신력 있는 기관 또는 전문가를 통해 확인하시기 바랍니다.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<!-- 푸터 -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">소재타임스</div>
+      <div class="footer-info" style="margin-top:6px;">
+        반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어<br>
+        발행인: 대표 | 편집국 | 광고문의: ads@sojaetimes.co.kr
+      </div>
+    </div>
+    <div>
+      <div class="footer-links">
+        <a href="about.html">회사소개</a>
+        <a href="advertising.html">광고안내</a>
+        <a href="privacy.html">개인정보처리방침</a>
+        <a href="terms.html">이용약관</a>
+      </div>
+      <div style="margin-top:8px;text-align:right;">© 2026 소재타임스. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const _d = new Date();
+const _dw = ['일','월','화','수','목','금','토'];
+document.getElementById('today-date').textContent =
+  `${_d.getFullYear()}년 ${_d.getMonth()+1}월 ${_d.getDate()}일 ${_dw[_d.getDay()]}요일`;
+
+function goSearch() {
+  const q = document.getElementById('search-input').value.trim();
+  if (q) location.href = 'search.html?q=' + encodeURIComponent(q);
+}
+</script>
+</body>
+</html>

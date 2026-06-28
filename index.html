@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>소재경제신문 - 반도체·소재·산업재 전문 뉴스</title>
+<title>소재타임스 - 반도체·소재·산업재 전문 뉴스</title>
 <meta name="description" content="반도체, 첨단소재, 희귀금속, 산업재 분야 전문 뉴스 미디어">
 <style>
   :root {
@@ -166,11 +166,19 @@
   .issue-label { font-size: 12.5px; font-weight: 600; color: var(--text); }
   .issue-status { font-size: 11.5px; color: var(--text-muted); line-height: 1.4; }
 
-  .archive-item { padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13px; cursor: pointer; color: var(--text-muted); display: flex; align-items: center; justify-content: space-between; }
-  .archive-item:last-child { border-bottom: none; }
-  .archive-item:hover { color: var(--accent2); }
-  .archive-item.today { font-weight: 700; color: var(--accent2); }
-  .archive-count { font-size: 11px; color: var(--text-light); }
+  .link-item { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--text-muted); cursor: pointer; text-decoration: none; transition: color .15s; }
+  .link-item:last-child { border-bottom: none; }
+  .link-item:hover { color: var(--accent2); }
+  .link-icon { font-size: 14px; flex-shrink: 0; }
+  .link-name { flex: 1; line-height: 1.4; }
+  .link-arrow { font-size: 10px; color: var(--border); }
+
+  .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag:hover { background: var(--primary); color: #fff; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -214,7 +222,7 @@
 <div class="breaking-bar">
   <div class="inner">
     <span class="breaking-label">속보</span>
-    <span class="breaking-text" id="breaking-text">소재경제신문 — 반도체·소재·산업재 전문 미디어</span>
+    <span class="breaking-text" id="breaking-text">소재타임스 — 반도체·소재·산업재 전문 미디어</span>
   </div>
 </div>
 
@@ -222,8 +230,8 @@
 <header>
   <div class="header-top">
     <div style="cursor:pointer" onclick="location.href='index.html'">
-      <div class="logo-kr">소재경제신문</div>
-      <div class="logo-en">MATERIALS ECONOMY PRESS</div>
+      <div class="logo-kr">소재타임스</div>
+      <div class="logo-en">MATERIALS TIMES</div>
     </div>
     <div class="header-meta">
       <div class="hdate" id="today-date"></div>
@@ -335,8 +343,30 @@
   </div>
 
   <div class="sb-box">
-    <div class="sb-title">날짜별 기사</div>
-    <div id="archive-nav"><div style="color:#aaa;font-size:13px;">불러오는 중...</div></div>
+    <div class="sb-title">관련 기관</div>
+    <a class="link-item" href="https://www.motie.go.kr" target="_blank" rel="noopener noreferrer">
+      <span class="link-icon">🏛</span><span class="link-name">산업통상자원부</span><span class="link-arrow">↗</span>
+    </a>
+    <a class="link-item" href="https://www.ksia.or.kr" target="_blank" rel="noopener noreferrer">
+      <span class="link-icon">💡</span><span class="link-name">한국반도체산업협회</span><span class="link-arrow">↗</span>
+    </a>
+    <a class="link-item" href="https://www.kotra.or.kr" target="_blank" rel="noopener noreferrer">
+      <span class="link-icon">🌐</span><span class="link-name">KOTRA 공급망센터</span><span class="link-arrow">↗</span>
+    </a>
+    <a class="link-item" href="https://www.kita.net" target="_blank" rel="noopener noreferrer">
+      <span class="link-icon">📦</span><span class="link-name">한국무역협회 KITA</span><span class="link-arrow">↗</span>
+    </a>
+    <a class="link-item" href="https://www.kriss.re.kr" target="_blank" rel="noopener noreferrer">
+      <span class="link-icon">🔬</span><span class="link-name">한국표준과학연구원</span><span class="link-arrow">↗</span>
+    </a>
+    <a class="link-item" href="https://www.etnews.com" target="_blank" rel="noopener noreferrer">
+      <span class="link-icon">📰</span><span class="link-name">전자신문</span><span class="link-arrow">↗</span>
+    </a>
+  </div>
+
+  <div class="sb-box">
+    <div class="sb-title">이번 주 키워드</div>
+    <div id="keyword-cloud" class="keyword-cloud"><span style="color:#aaa;font-size:13px;">불러오는 중...</span></div>
   </div>
 
 </aside>
@@ -346,17 +376,17 @@
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-logo">소재경제신문</div>
+      <div class="footer-logo">소재타임스</div>
       <div class="footer-info" style="margin-top:6px;">
         반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어<br>
-        발행인: 대표 | 편집국 | 광고문의: ads@materials-press.co.kr
+        발행인: 대표 | 편집국 | 광고문의: ads@sojaetimes.co.kr
       </div>
     </div>
     <div>
       <div class="footer-links">
-        <a href="#">회사소개</a><a href="#">광고안내</a><a href="#">개인정보처리방침</a><a href="#">이용약관</a>
+        <a href="about.html">회사소개</a><a href="advertising.html">광고안내</a><a href="privacy.html">개인정보처리방침</a><a href="terms.html">이용약관</a>
       </div>
-      <div style="margin-top:8px;text-align:right;">© 2026 소재경제신문. All rights reserved.</div>
+      <div style="margin-top:8px;text-align:right;">© 2026 소재타임스. All rights reserved.</div>
     </div>
   </div>
 </footer>
@@ -574,17 +604,52 @@ function renderIssues(issues) {
   ).join('');
 }
 
-function renderArchiveNav(dates) {
-  const el = document.getElementById('archive-nav');
-  if (!el) return;
-  el.innerHTML = dates.slice(0, 14).map(date => {
-    const isToday = date === todayISO;
-    const [y, m, d] = date.split('-');
-    const label = isToday ? '오늘' : `${parseInt(m)}월 ${parseInt(d)}일`;
-    return `<div class="archive-item${isToday?' today':''}" onclick="jumpToArchive('${date}')">
-      <span>${label}</span>
-      <span class="archive-count">5건</span>
-    </div>`;
+function renderKeywords() {
+  const el = document.getElementById('keyword-cloud');
+  if (!el || !allArticles.length) return;
+
+  const STOP = new Set([
+    '및','등','의','이','가','을','를','은','는','에','에서','으로','로','와','과',
+    '한','하는','하여','위한','통해','대한','관련','대해','위해','따라','가운데',
+    '지난','올해','이번','최근','현재','해당','통한','위해서','대하여','따른',
+    '중국','미국','한국','일본','독일','유럽','글로벌','국내','국제','세계',
+    '기업','산업','시장','분야','부문','정부','업계','수출','수입','생산','투자',
+    '발표','계획','추진','강화','확대','증가','감소','전망','예상','분석',
+    '억원','달러','억달러','조원','만톤','억달러','%','년','월','일','위',
+    '공급','수요','가격','제품','기술','개발','연구','적용','활용','도입',
+  ]);
+
+  const CAT_WORDS = {
+    rare: new Set(['리튬','코발트','니켈','희토류','탄탈럼','인듐','갈륨','게르마늄','망간','텅스텐','몰리브덴','바나듐','광물','광산']),
+    industry: new Set(['배터리','화학','탄소섬유','고분자','석유화학','플라스틱','섬유','세라믹','소재','소재','도레이','BASF']),
+    global: new Set(['공급망','수출규제','관세','무역','제재','협정','WTO','IPEF','칩스법','IRA','CPTPP']),
+  };
+
+  const freq = {};
+  allArticles.forEach(({article: a}) => {
+    const text = (a.title || '') + ' ' + (a.summary || '');
+    text.replace(/[^가-힣a-zA-Z0-9\s]/g, ' ')
+      .split(/\s+/)
+      .forEach(w => {
+        if (w.length < 2 || STOP.has(w)) return;
+        freq[w] = (freq[w] || 0) + 1;
+      });
+  });
+
+  const sorted = Object.entries(freq)
+    .filter(([w, c]) => c >= 2 && w.length >= 2)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 16)
+    .map(([w]) => w);
+
+  if (!sorted.length) { el.innerHTML = '<span style="color:#aaa;font-size:13px;">집계 중...</span>'; return; }
+
+  el.innerHTML = sorted.map(w => {
+    let cls = '';
+    if (CAT_WORDS.rare.has(w)) cls = 'rare';
+    else if (CAT_WORDS.industry.has(w)) cls = 'industry';
+    else if (CAT_WORDS.global.has(w)) cls = 'global';
+    return `<span class="kw-tag ${cls}" onclick="location.href='search.html?q=${encodeURIComponent(w)}'">#${w}</span>`;
   }).join('');
 }
 
@@ -723,13 +788,12 @@ async function init() {
     }
   } catch(e) {}
 
-  renderArchiveNav([todayISO, ...allArchiveDates]);
-
   // 3. 최근 2일치 아카이브 미리 로드
   await loadMoreArchive();
 
   // 4. 카테고리 섹션 + 최신 기사 렌더
   renderCatSections();
+  renderKeywords();
 
   // URL 파라미터/해시로 자동 필터·검색 처리 (article.html에서 넘어올 때)
   const urlParams = new URLSearchParams(location.search);

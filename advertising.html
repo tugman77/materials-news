@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>광고안내 — 소재타임스</title>
+<meta name="description" content="소재타임스 광고 안내 — 반도체·소재·산업재 전문 독자층 대상 광고 집행">
+<style>
+  :root {
+    --primary: #1a2b4a;
+    --accent: #c8102e;
+    --accent2: #0057a8;
+    --bg: #f2f2ee;
+    --card-bg: #ffffff;
+    --border: #d8d8d2;
+    --text: #111;
+    --text-muted: #4a4a4a;
+    --text-light: #888;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+
+  header { background: var(--primary); color: #fff; border-bottom: 3px solid var(--accent); }
+  .header-top { max-width: 1200px; margin: 0 auto; padding: 16px 16px 12px; display: flex; align-items: flex-end; justify-content: space-between; }
+  .logo-kr { font-size: 26px; font-weight: 700; letter-spacing: -0.5px; cursor: pointer; }
+  .logo-en { font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 2px; margin-top: 3px; }
+  .header-meta { text-align: right; font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.7; }
+  .header-meta .hdate { font-size: 13px; color: rgba(255,255,255,0.75); }
+
+  nav { background: var(--primary); border-top: 1px solid rgba(255,255,255,0.1); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; }
+  .nav-inner a { color: rgba(255,255,255,0.72); font-size: 13.5px; padding: 10px 14px; display: block; border-bottom: 2px solid transparent; transition: color .15s, border-color .15s; white-space: nowrap; }
+  .nav-inner a:hover { color: #fff; border-bottom-color: var(--accent); }
+  .nav-search { margin-left: auto; display: flex; align-items: center; }
+  .nav-search input { border: none; background: rgba(255,255,255,0.1); color: #fff; padding: 5px 10px; font-size: 12px; outline: none; width: 140px; }
+  .nav-search input::placeholder { color: rgba(255,255,255,0.45); }
+  .nav-search button { background: var(--accent); border: none; color: #fff; padding: 5px 10px; cursor: pointer; font-size: 13px; }
+
+  .breadcrumb { background: #eeeee9; border-bottom: 1px solid var(--border); }
+  .bc-inner { max-width: 1200px; margin: 0 auto; padding: 8px 16px; font-size: 12px; color: var(--text-light); display: flex; align-items: center; gap: 6px; }
+  .bc-inner a { color: var(--text-light); }
+  .bc-inner a:hover { color: var(--accent2); }
+  .bc-sep { color: #bbb; }
+
+  .page-wrap { max-width: 860px; margin: 0 auto; padding: 40px 16px 64px; }
+  .page-card { background: var(--card-bg); border: 1px solid var(--border); padding: 44px 52px; }
+
+  .page-title {
+    font-size: 26px; font-weight: 700; color: var(--primary);
+    border-bottom: 3px solid var(--accent); padding-bottom: 14px; margin-bottom: 32px;
+    letter-spacing: -0.5px;
+  }
+
+  .section { margin-bottom: 36px; }
+  .section-title {
+    font-size: 16px; font-weight: 700; color: var(--primary);
+    border-left: 4px solid var(--accent); padding-left: 12px; margin-bottom: 14px;
+  }
+  .section p { font-size: 14.5px; line-height: 1.9; color: var(--text-muted); margin-bottom: 12px; word-break: keep-all; }
+  .section p:last-child { margin-bottom: 0; }
+
+  .ad-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 4px; }
+  .ad-item { border: 1px solid var(--border); padding: 20px; background: #fafaf8; }
+  .ad-item-name { font-size: 15px; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+  .ad-item-size { font-size: 12px; color: var(--accent); font-weight: 600; margin-bottom: 8px; }
+  .ad-item-desc { font-size: 13px; color: var(--text-muted); line-height: 1.7; }
+
+  .reader-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 4px; }
+  .reader-item { background: #f0ede8; border: 1px solid var(--border); padding: 16px; text-align: center; }
+  .reader-pct { font-size: 26px; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
+  .reader-label { font-size: 12.5px; color: var(--text-muted); }
+
+  .contact-box {
+    background: var(--primary); color: #fff; padding: 28px 32px; margin-top: 4px;
+  }
+  .contact-box .contact-title { font-size: 15px; font-weight: 700; margin-bottom: 14px; }
+  .contact-box .contact-row { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 10px; font-size: 14px; color: rgba(255,255,255,0.8); }
+  .contact-box .contact-row:last-child { margin-bottom: 0; }
+  .contact-box .contact-label { color: rgba(255,255,255,0.5); font-size: 12px; white-space: nowrap; padding-top: 1px; }
+  .contact-box a { color: #fff; text-decoration: underline; }
+
+  .info-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 4px; }
+  .info-table th { background: #f0ede8; color: var(--primary); font-weight: 700; padding: 10px 14px; text-align: left; border: 1px solid var(--border); width: 160px; white-space: nowrap; }
+  .info-table td { padding: 10px 14px; border: 1px solid var(--border); color: var(--text-muted); line-height: 1.7; }
+
+  footer { background: var(--primary); color: rgba(255,255,255,0.5); font-size: 12px; padding: 24px 16px; border-top: 3px solid var(--accent); }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .footer-logo { font-size: 16px; font-weight: 700; color: #fff; }
+  .footer-info { line-height: 1.8; }
+  .footer-links { display: flex; gap: 16px; }
+  .footer-links a { color: rgba(255,255,255,0.5); }
+  .footer-links a:hover { color: #fff; }
+
+  @media (max-width: 640px) {
+    .page-card { padding: 28px 20px; }
+    .ad-grid { grid-template-columns: 1fr; }
+    .reader-grid { grid-template-columns: repeat(3, 1fr); }
+    .nav-search { display: none; }
+    .header-meta { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <div onclick="location.href='index.html'" style="cursor:pointer">
+      <div class="logo-kr">소재타임스</div>
+      <div class="logo-en">MATERIALS TIMES</div>
+    </div>
+    <div class="header-meta">
+      <div class="hdate" id="today-date"></div>
+      <div>반도체 · 첨단소재 · 희귀금속 · 산업재</div>
+    </div>
+  </div>
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html">전체</a>
+      <a href="category.html?cat=반도체소재">반도체·소재</a>
+      <a href="category.html?cat=희귀금속">희귀금속·광물</a>
+      <a href="category.html?cat=산업재">산업재·화학</a>
+      <a href="category.html?cat=글로벌">글로벌공급망</a>
+      <div class="nav-search">
+        <input type="text" id="search-input" placeholder="기사 검색..." onkeydown="if(event.key==='Enter')goSearch()">
+        <button onclick="goSearch()">🔍</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="breadcrumb">
+  <div class="bc-inner">
+    <a href="index.html">홈</a>
+    <span class="bc-sep">›</span>
+    <span>광고안내</span>
+  </div>
+</div>
+
+<div class="page-wrap">
+  <div class="page-card">
+    <h1 class="page-title">광고안내</h1>
+
+    <!-- 독자 현황 -->
+    <div class="section">
+      <div class="section-title">독자층 현황</div>
+      <p>소재타임스는 반도체·소재·희귀금속·산업재 분야 종사자 및 관심층을 주 독자로 합니다. 업계 실무자, 연구원, 투자자, 정책 담당자 등 고관여 독자를 대상으로 광고를 집행하실 수 있습니다.</p>
+      <div class="reader-grid">
+        <div class="reader-item">
+          <div class="reader-pct">47%</div>
+          <div class="reader-label">업계 종사자<br>(제조·연구·영업)</div>
+        </div>
+        <div class="reader-item">
+          <div class="reader-pct">31%</div>
+          <div class="reader-label">투자자·애널리스트</div>
+        </div>
+        <div class="reader-item">
+          <div class="reader-pct">22%</div>
+          <div class="reader-label">학생·일반 관심층</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 광고 상품 -->
+    <div class="section">
+      <div class="section-title">광고 상품</div>
+      <div class="ad-grid">
+        <div class="ad-item">
+          <div class="ad-item-name">배너 광고 (본문형)</div>
+          <div class="ad-item-size">680 × 140 px</div>
+          <div class="ad-item-desc">기사 본문 중간에 노출되는 캐러셀형 배너입니다. 높은 클릭률과 노출 빈도를 제공합니다.</div>
+        </div>
+        <div class="ad-item">
+          <div class="ad-item-name">사이드바 광고</div>
+          <div class="ad-item-size">300 × 300 px</div>
+          <div class="ad-item-desc">우측 사이드바에 고정 노출되는 광고입니다. 페이지 전체에서 지속적으로 노출됩니다.</div>
+        </div>
+        <div class="ad-item">
+          <div class="ad-item-name">리더보드 광고</div>
+          <div class="ad-item-size">728 × 90 px</div>
+          <div class="ad-item-desc">기사 하단에 노출되는 가로형 배너입니다. 콘텐츠 소비 후 자연스럽게 접촉됩니다.</div>
+        </div>
+        <div class="ad-item">
+          <div class="ad-item-name">협찬 기사 / 네이티브 광고</div>
+          <div class="ad-item-size">별도 협의</div>
+          <div class="ad-item-desc">소재·반도체 산업 관련 제품·서비스를 기사 형태로 소개합니다. 상세 내용은 별도 협의.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 광고 집행 안내 -->
+    <div class="section">
+      <div class="section-title">광고 집행 안내</div>
+      <table class="info-table">
+        <tbody>
+          <tr><th>집행 단위</th><td>월 단위 기준 (최소 1개월)</td></tr>
+          <tr><th>결제 방식</th><td>세금계산서 발행 후 선불 입금</td></tr>
+          <tr><th>소재 규격</th><td>JPG·PNG·GIF (정지/애니메이션), 최대 500KB</td></tr>
+          <tr><th>링크</th><td>광고주 지정 URL (HTTPS 필수)</td></tr>
+          <tr><th>승인 기준</th><td>도박·성인·불법 사이트 등 부적절한 광고주는 게재 거절 가능</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 쿠팡 파트너스 고지 -->
+    <div class="section">
+      <div class="section-title">제휴 광고 안내</div>
+      <p>
+        소재타임스는 <strong>쿠팡 파트너스</strong> 활동에 참여하고 있습니다.
+        사이트 내 쿠팡 광고 배너를 통해 구매가 이루어질 경우, 쿠팡으로부터 일정 수수료를 제공받습니다.
+        이는 독자 여러분의 구매 가격에 영향을 주지 않습니다.
+      </p>
+    </div>
+
+    <!-- 문의 -->
+    <div class="section">
+      <div class="section-title">광고 문의</div>
+      <div class="contact-box">
+        <div class="contact-title">광고 문의 채널</div>
+        <div class="contact-row">
+          <span class="contact-label">이메일</span>
+          <span><a href="mailto:ads@sojaetimes.co.kr">ads@sojaetimes.co.kr</a></span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">응답 기한</span>
+          <span>영업일 기준 1~2일 이내 답변</span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">문의 내용</span>
+          <span>광고 상품명, 집행 기간, 소재 크기, 예산 범위를 함께 알려주시면 빠른 답변이 가능합니다.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">소재타임스</div>
+      <div class="footer-info" style="margin-top:6px;">
+        반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어<br>
+        발행인: 대표 | 편집국 | 광고문의: ads@sojaetimes.co.kr
+      </div>
+    </div>
+    <div>
+      <div class="footer-links">
+        <a href="about.html">회사소개</a>
+        <a href="advertising.html">광고안내</a>
+        <a href="privacy.html">개인정보처리방침</a>
+        <a href="terms.html">이용약관</a>
+      </div>
+      <div style="margin-top:8px;text-align:right;">© 2026 소재타임스. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const _d = new Date();
+const _dw = ['일','월','화','수','목','금','토'];
+document.getElementById('today-date').textContent =
+  `${_d.getFullYear()}년 ${_d.getMonth()+1}월 ${_d.getDate()}일 ${_dw[_d.getDay()]}요일`;
+
+function goSearch() {
+  const q = document.getElementById('search-input').value.trim();
+  if (q) location.href = 'search.html?q=' + encodeURIComponent(q);
+}
+</script>
+</body>
+</html>

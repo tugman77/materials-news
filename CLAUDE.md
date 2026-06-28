@@ -1,4 +1,4 @@
-# 201 소재경제신문 — CLAUDE.md
+# 201 소재타임스 — CLAUDE.md
 
 ## 개요
 반도체·소재·희귀금속·산업재 전문 뉴스 자동 생성 사이트.
@@ -8,6 +8,20 @@
 - **배포 방식:** GitHub Pages (main 브랜치 / root 디렉터리)
 - **AI 모델:** `claude-sonnet-4-6`
 - **DB:** 없음 (JSON 파일 기반)
+
+---
+
+## 브랜드 정보 (2026-06-28 확정)
+
+| 항목 | 내용 |
+|------|------|
+| **제호** | 소재타임스 |
+| **영문 제호** | MATERIALS TIMES |
+| **도메인** | sojaetimes.co.kr (등록 예정) |
+| **이메일** | ads@sojaetimes.co.kr |
+| **현재 URL** | tugman77.github.io/materials-news (GitHub Pages) |
+
+> 도메인 등록 후: GitHub → Settings → Pages → Custom domain → `sojaetimes.co.kr` 입력
 
 ---
 
@@ -21,6 +35,11 @@
 ├── index.html             ← 메인 뉴스 페이지 (홈)
 ├── article.html           ← 기사 본문 페이지
 ├── category.html          ← 카테고리별 기사 목록 페이지 (URL param: ?cat=...)
+├── search.html            ← 검색 결과 페이지 (?q=검색어)
+├── about.html             ← 회사소개
+├── advertising.html       ← 광고안내
+├── privacy.html           ← 개인정보처리방침
+├── terms.html             ← 이용약관
 ├── images/                ← 기사 이미지 (YYYY-MM-DD_article_N.jpg)
 ├── archive/               ← 날짜별 기사 아카이브
 │   ├── index.json         ← 날짜 목록 (최대 90일)
@@ -244,7 +263,11 @@ new PartnersCoupang.G({id:XXXXX, trackingCode:"AF9787280", subId:null, template:
 - [x] 코드 push
 - [x] ANTHROPIC_API_KEY Secret 등록
 - [x] GitHub Actions `.github/workflows/자동기사생성.yml` (기사생성 + 검수 연속 실행)
-- [ ] **GitHub Pages 활성화** (Settings → Pages → Deploy from branch → main / root)
+- [x] GitHub Pages 활성화 ✅ 2026-06-28 완료
+- [x] Actions 정상 실행 확인 ✅ 2026-06-28 성공
+- [x] 제호 확정: **소재타임스** / MATERIALS TIMES ✅ 2026-06-28
+- [x] 회사소개·광고안내·개인정보처리방침·이용약관 페이지 생성 ✅ 2026-06-28
+- [x] 전체 HTML footer 링크 연결 (about/advertising/privacy/terms) ✅ 2026-06-28
+- [ ] **sojaetimes.co.kr 도메인 등록** → GitHub Pages Custom domain 설정
 - [ ] UNSPLASH_ACCESS_KEY Secret 등록 (선택 — 없으면 loremflickr 사용)
 - [ ] TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID Secret 등록 (선택 — 검수 보고용)
-- [ ] Actions 정상 실행 확인
