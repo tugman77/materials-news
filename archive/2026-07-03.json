@@ -24,18 +24,7 @@
       "image_keyword": "glass substrate semiconductor",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-07-03_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "유리기판 시장 2030년 30억 달러 이상, 연평균 50% 성장 전망 — 출처 Yole Intelligence 인용이나 수치 확인 필요",
-          "신호 손실률 플라스틱 대비 최대 40% 낮다 — 구체적 수치의 출처 미표기",
-          "엔비디아·AMD·인텔이 유리기판 채택 '적극 검토 중' — 공식 확인되지 않은 주장"
-        ],
-        "notes": "전반적으로 사실성 높음. 일부 수치 출처 표기 보완 권장.",
-        "verified_at": "2026-07-03 07:05"
-      }
+      "image_url": "images/2026-07-03_article_0.jpg"
     },
     {
       "id": 2,
@@ -59,18 +48,7 @@
       "image_keyword": "diamond semiconductor space",
       "is_featured": false,
       "timestamp": "오전 09:20",
-      "image_url": "images/2026-07-03_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "다이아몬드 열전도율이 실리콘의 약 22배 — 물성 수치 출처 미표기, 검증 권장",
-          "글로벌 우주 반도체 시장 2030년 90억 달러 성장 전망 — 출처 불명확",
-          "남옥현 교수 기조강연 발표 사실 여부 — 공식 보도자료 또는 학회 자료 확인 필요"
-        ],
-        "notes": "소재 물성 수치 및 시장 전망 출처 보완 필요. 인물 발표 사실 확인 권장.",
-        "verified_at": "2026-07-03 07:05"
-      }
+      "image_url": "images/2026-07-03_article_1.jpg"
     },
     {
       "id": 3,
@@ -94,18 +72,7 @@
       "image_keyword": "coltan mining Congo",
       "is_featured": false,
       "timestamp": "오전 09:25",
-      "image_url": "images/2026-07-03_article_2.jpg",
-      "review": {
-        "trust_score": 2,
-        "status": "warning",
-        "suspicious_claims": [
-          "루바야 광산이 전 세계 탄탈럼 생산량의 15% 담당 — 루바야는 소규모 ASM 산지로 15% 비중은 과대 추정 가능성",
-          "사망자 최소 200명 — 실제 사고 여부 및 사망자 규모 공식 확인 필요",
-          "콩고가 글로벌 탄탈럼 공급의 60% 이상 담당 — 수치는 개연성 있으나 최신 데이터 기준 확인 요망"
-        ],
-        "notes": "광산 붕괴 사고 실재 여부 및 사망자 수 공식 확인 필수. 15% 점유율 재검토 권장.",
-        "verified_at": "2026-07-03 07:05"
-      }
+      "image_url": "images/2026-07-03_article_2.jpg"
     },
     {
       "id": 4,
@@ -126,21 +93,10 @@
         "대동금속의 사례는 전통 제조업 기반의 소재·금속 기업들이 신성장 동력을 로봇·방산·우주항공 분야에서 찾는 '업종 전환형 성장 전략'의 대표적 모델로 주목받고 있다. 이러한 흐름이 업계 전반으로 확산될 경우 국내 산업재 시장의 질적 고도화에도 기여할 것으로 기대된다.",
         "증권가에서는 대동금속의 로봇 소재 사업 성과가 가시화될 경우 기업 밸류에이션 재평가로 이어질 수 있다고 분석하며, 2027년 이후 관련 매출 본격화 여부를 핵심 모니터링 포인트로 제시하고 있다. 단기 실적보다는 파트너십의 구체적 계약 현황과 수주 공시를 지켜볼 필요가 있다는 조언도 잇따른다."
       ],
-      "image_keyword": "humanoid robot titanium alloy parts",
+      "image_keyword": "humanoid robot lightweight alloy",
       "is_featured": false,
       "timestamp": "오전 09:30",
-      "image_url": "images/2026-07-03_article_3.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "대동금속-보스턴다이나믹스 기술 협력 공식 발표 여부 — 양사 공식 보도자료 확인 필요",
-          "로봇 1대당 구조용 금속 부품 단가 '수천만 원' — 출처 없는 추정치로 검증 필요",
-          "글로벌 휴머노이드 로봇 시장 2030년 380억 달러 전망 — 출처 미표기, 기관별 편차 큰 수치"
-        ],
-        "notes": "협력 공식화 여부 불분명. 시장 수치 출처 명기 및 협력 사실 확인 요망.",
-        "verified_at": "2026-07-03 07:05"
-      }
+      "image_url": "images/2026-07-03_article_3.jpg"
     },
     {
       "id": 5,
@@ -164,17 +120,7 @@
       "image_keyword": "trade negotiation Washington steel",
       "is_featured": false,
       "timestamp": "오전 09:35",
-      "image_url": "images/2026-07-03_article_4.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "한국의 대미 철강 수출액 연간 약 30억 달러 — 공신력 있는 최신 무역통계 기준 재확인 권장",
-          "SHIPS Act 조항이 한국 조선소 시장 접근성에 영향 — 구체적 조항 내용 출처 명기 필요"
-        ],
-        "notes": "232조 관세·SHIPS Act 등 정책명 실재 확인됨. 수치 일부 출처 보강 권장.",
-        "verified_at": "2026-07-03 07:05"
-      }
+      "image_url": "images/2026-07-03_article_4.jpg"
     }
   ],
   "editorial_briefing": "AI 반도체·로봇 소재 분야에서 한국 기업들의 기술 도약이 가시화되는 한편, 콩고 광산 붕괴로 탄탈럼 공급망에 비상이 걸렸다. 미국 보호무역 기조 속 철강·조선 통상 압박도 지속되며 소재 산업 전반의 리스크가 고조되고 있다.",
@@ -204,6 +150,5 @@
       "label": "로봇 소재 기술 협력",
       "status": "글로벌 협력 개시"
     }
-  ],
-  "last_reviewed_at": "2026-07-03 07:05"
+  ]
 }
