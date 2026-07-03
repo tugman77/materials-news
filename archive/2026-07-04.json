@@ -26,17 +26,7 @@
       "image_keyword": "silicon wafer semiconductor material",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-07-04_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "실리콘 웨이퍼 시장 2025년 약 180억 달러 규모 — 출처 명시 없어 검증 필요",
-          "2030년까지 연평균 5% 이상 성장 전망 — 기관명 미기재로 신뢰도 불확실"
-        ],
-        "notes": "기업 실체·사업 방향 무난. 시장 수치 출처 불명확하나 업계 추정치와 근접.",
-        "verified_at": "2026-07-04 07:03"
-      }
+      "image_url": "images/2026-07-04_article_0.jpg"
     },
     {
       "id": 2,
@@ -61,18 +51,7 @@
       "image_keyword": "AI semiconductor material investment",
       "is_featured": false,
       "timestamp": "오전 10:02",
-      "image_url": "images/2026-07-04_article_1.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "파미셀의 AI 반도체 소재 사업 구체적 공급 계획 — 공식 발표 여부 불분명",
-          "가트너 인용 AI 반도체 시장 2025년 900억 달러 수치 — 원본 보고서 확인 필요",
-          "MK시그널 추천 후 누적 20.51% 상승 — 특정 추천 서비스 홍보성 내용 포함 우려"
-        ],
-        "notes": "주가 상승 기사에 특정 추천 서비스 언급은 홍보성 오해 소지. 파미셀 사업 전환 사실 재확인 권고.",
-        "verified_at": "2026-07-04 07:03"
-      }
+      "image_url": "images/2026-07-04_article_1.jpg"
     },
     {
       "id": 3,
@@ -98,17 +77,7 @@
       "image_keyword": "rare earth metal mining",
       "is_featured": false,
       "timestamp": "오전 10:45",
-      "image_url": "images/2026-07-04_article_2.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "2025년 희귀금속 시장 규모 약 3,000억 달러 — 출처 없이 제시되어 과대 추정 가능성",
-          "2030년까지 시장 두 배 이상 성장 전망 — 근거 기관 미기재로 신뢰도 낮음"
-        ],
-        "notes": "SF 소재 활용은 흥미롭지만 시장 수치 출처 부재가 치명적. 검증된 데이터 보강 필요.",
-        "verified_at": "2026-07-04 07:03"
-      }
+      "image_url": "images/2026-07-04_article_2.jpg"
     },
     {
       "id": 4,
@@ -130,19 +99,10 @@
         "다만 기술 내재화까지 상당한 시간이 필요하다는 현실적 제약도 있다. 반도체·로봇 소재는 수율 관리와 품질 인증에만 수년이 걸리는 경우가 많아 단기 성과에 대한 기대는 금물이라는 조언도 있다.",
         "결국 석화업계의 '첨단소재 올인' 전략이 실질적인 수익으로 연결되려면 꾸준한 R&D 투자와 함께 수요 기업과의 긴밀한 협력이 필수적이다. 업계의 구조 전환이 한국 소재 산업의 경쟁력을 한 단계 끌어올릴 계기가 될지 귀추가 주목된다."
       ],
-      "image_keyword": "petrochemical plant specialty materials",
+      "image_keyword": "petrochemical advanced materials factory",
       "is_featured": false,
       "timestamp": "오전 11:20",
-      "image_url": "images/2026-07-04_article_3.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "업계 전반 설비 가동률 70% 아래 — 출처 없는 수치로 공식 통계 확인 필요"
-        ],
-        "notes": "기업명·전환 전략 등 사실 부합. 가동률 수치 출처 보강 권고. 이미지 키워드 구체화 필요.",
-        "verified_at": "2026-07-04 07:03"
-      }
+      "image_url": "images/2026-07-04_article_3.jpg"
     },
     {
       "id": 5,
@@ -165,20 +125,10 @@
         "환율 전문가들은 '하반기에도 글로벌 달러 강세 기조가 이어질 경우 원·달러 환율이 1,550원을 넘볼 수 있다'며 '수입 원가 부담이 누적되면 산업재 및 소재 업체들의 하반기 실적에 부정적 영향이 불가피하다'고 전망했다.",
         "결국 환율 변수는 국내 반도체 소재·희귀금속·산업재 업계 전반에 걸쳐 핵심 경영 리스크로 자리 잡고 있다. 각 기업과 정부가 환율 대응력을 높이기 위한 체계적인 전략을 마련해야 할 시점이라는 목소리가 커지고 있다."
       ],
-      "image_keyword": "Korean won dollar exchange rate",
+      "image_keyword": "currency exchange rate dollar yen",
       "is_featured": false,
       "timestamp": "오후 12:05",
-      "image_url": "images/2026-07-04_article_4.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "원·달러 환율 1,530원 마감 — 실제 발행일 기준 환율과 대조 검증 필요",
-          "엔·달러 환율 155엔대 돌파 — BOJ 정책 기조와의 정합성 확인 필요"
-        ],
-        "notes": "환율·휴장일 등 시의성 정보는 실시간 검증 필수. 이미지 키워드에 원화 맥락 반영 권고.",
-        "verified_at": "2026-07-04 07:03"
-      }
+      "image_url": "images/2026-07-04_article_4.jpg"
     }
   ],
   "editorial_briefing": "반도체 소재 국산화와 첨단 소재 다각화가 가속되며 산업 체질 변화가 뚜렷하다. 희귀금속·석화업계도 고부가가치 소재로 피벗 중이나, 원·달러 환율 1,530원 돌파로 원자재 수입 비용 부담이 커지고 있어 면밀한 모니터링이 필요하다.",
@@ -208,6 +158,5 @@
       "label": "원·달러 환율 급등",
       "status": "1,530원 마감"
     }
-  ],
-  "last_reviewed_at": "2026-07-04 07:03"
+  ]
 }
