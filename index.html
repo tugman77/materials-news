@@ -212,7 +212,7 @@
     .header-meta { display: none; }
   }
   @media (max-width: 420px) {
-    .cat-grid { grid-template-columns: 1fr; }
+    .cat-grid { grid-template-columns: 1fr 1fr; }
   }
 </style>
 </head>
@@ -425,7 +425,8 @@ let allArchiveDates = [];  // 오늘 제외 아카이브 날짜들
 let archiveIdx = 0;
 let isLoading = false;
 let currentFilter = '';
-const heroIndices = new Set(); // 히어로에 사용된 오늘 기사 idx → 카테고리 섹션에서 제외
+const heroIndices = new Set();        // 히어로에 사용된 오늘 기사 idx → 카테고리 섹션에서 제외
+const sectionShownTitles = new Set(); // 카테고리 섹션에 표시된 기사 제목 → 최신 피드에서 제외
 
 // ── 링크 생성 ──
 function artLink(date, idx) {
@@ -488,10 +489,18 @@ function renderHero(articles) {
 function renderCatSections() {
   const cats = ['반도체소재', '희귀금속', '산업재', '글로벌'];
   cats.forEach(cat => {
-    const items = allArticles
-      .filter(r => r.article.category === cat
-        && !(r.date === todayISO && heroIndices.has(r.idx)))
-      .slice(0, 3);
+    const seenTitles = new Set(); // 섹션 내 중복 제목 방지
+    const items = [];
+    for (const r of allArticles) {
+      if (r.article.category !== cat) continue;
+      if (r.date === todayISO && heroIndices.has(r.idx)) continue; // 히어로 기사 제외
+      const title = r.article.title;
+      if (seenTitles.has(title)) continue; // 같은 제목 중복 제외
+      seenTitles.add(title);
+      sectionShownTitles.add(title); // 최신 피드 제외용 전역 등록
+      items.push(r);
+      if (items.length >= 3) break;
+    }
     if (!items.length) return;
 
     const grid = document.getElementById('grid-' + cat);
@@ -519,7 +528,8 @@ function renderCatSections() {
 // ── 최신 기사 렌더 ──
 function renderLatest(filter) {
   const filtered = allArticles.filter(r =>
-    !(r.date === todayISO && heroIndices.has(r.idx)) &&
+    !(r.date === todayISO && heroIndices.has(r.idx)) && // 히어로 기사 제외
+    !sectionShownTitles.has(r.article.title) &&         // 카테고리 섹션 기사 제외
     (!filter || r.article.category === filter)
   );
   const el = document.getElementById('latest-list');
