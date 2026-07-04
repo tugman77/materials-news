@@ -26,18 +26,7 @@
       "image_keyword": "semiconductor packaging material",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-07-05_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "야노경제연구소 출처 '2027년까지 연평균 8% 성장' 수치 원문 확인 필요",
-          "'톱티어 모바일 기기 제조사' 고객사명 미공개로 사실 검증 불가",
-          "올해 하반기 본격 매출 기여 전망 — 구체적 근거 없는 회사 측 주장"
-        ],
-        "notes": "전반적으로 개연성 있는 내용이나 익명 고객사·미확인 수치 주의 필요",
-        "verified_at": "2026-07-05 06:55"
-      }
+      "image_url": "images/2026-07-05_article_0.jpg"
     },
     {
       "id": 2,
@@ -59,21 +48,10 @@
         "삼성전자가 HBF 구상을 현실화하기 위해서는 낸드 기술의 고속화와 패키징 기술의 혁신이 동시에 이뤄져야 한다. 이에 따라 삼성전자의 DS(반도체) 부문 내 메모리와 파운드리 기술 협력이 더욱 긴밀해질 것으로 예상된다.",
         "투자 관점에서는 차세대 메모리 전환 사이클이 시작되면 관련 소재·장비 기업들이 수혜를 입을 수 있어, 선제적 포지셔닝이 중요하다는 분석이 나온다. 다만 HBF의 상용화 시기는 아직 불확실하기 때문에 단기 투자보다 중장기적 관점에서의 접근이 권고된다."
       ],
-      "image_keyword": "Samsung HBM next generation flash memory",
+      "image_keyword": "HBM next generation memory",
       "is_featured": false,
       "timestamp": "오전 09:30",
-      "image_url": "images/2026-07-05_article_1.jpg",
-      "review": {
-        "trust_score": 2,
-        "status": "warning",
-        "suspicious_claims": [
-          "HBF(High Bandwidth Flash)는 업계 공식 표준 용어가 아니며 실체 불분명",
-          "이재용 회장이 사내 전략 회의에서 HBF 로드맵을 직접 챙긴다는 주장 — 출처 없음",
-          "삼성이 HBF 시장 창출을 전략적으로 추진 중이라는 주장 — 공식 발표 없음"
-        ],
-        "notes": "HBF 용어 자체가 비공식적이며 이재용 발언·전략 내용 출처 불명, 신뢰도 낮음",
-        "verified_at": "2026-07-05 06:55"
-      }
+      "image_url": "images/2026-07-05_article_1.jpg"
     },
     {
       "id": 3,
@@ -98,18 +76,7 @@
       "image_keyword": "diamond semiconductor wafer",
       "is_featured": false,
       "timestamp": "오전 09:45",
-      "image_url": "images/2026-07-05_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "다이아몬드 열전도도 '실리콘의 약 13배' 수치 — 일반적으로 약 13~14배로 통용되나 출처 명시 필요",
-          "절연 파괴 전압 '실리콘 대비 약 30배' 주장 — 문헌에 따라 20~30배 편차 있어 확인 필요",
-          "중국의 공업용 인조 다이아몬드 세계 점유율 '약 90%' — 널리 인용되나 최신 통계 출처 필요"
-        ],
-        "notes": "물성 수치 출처 미표기가 아쉽지만 업계 통용 수준과 크게 벗어나지 않아 양호",
-        "verified_at": "2026-07-05 06:55"
-      }
+      "image_url": "images/2026-07-05_article_2.jpg"
     },
     {
       "id": 4,
@@ -131,21 +98,10 @@
         "산업재 공급망 관점에서는 홈플러스 사태를 교훈 삼아 대형 유통사 의존도를 낮추고 거래처를 다변화하는 전략이 중요해졌다. 전문가들은 공급업체들이 거래 대금의 조기 회수 구조를 강화하고, 기업 신용 리스크 모니터링 체계를 갖출 것을 권고하고 있다.",
         "향후 홈플러스의 운명은 채권단과 법원의 결정에 달려 있다. 기업회생 전문가들은 최악의 파산 시나리오를 피하기 위해 자산 매각을 통한 긴급 유동성 확보와 일부 우량 점포 분리 매각 등의 절충안이 논의될 수 있다고 전망하고 있다."
       ],
-      "image_keyword": "supermarket bankruptcy supply chain crisis",
+      "image_keyword": "retail store bankruptcy supply chain",
       "is_featured": false,
       "timestamp": "오전 10:00",
-      "image_url": "images/2026-07-05_article_3.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "법원의 홈플러스 회생절차 폐지 결정 — 실제 절차 진행 여부 및 날짜 교차 확인 필요",
-          "홈플러스 점포 수 '약 130여 개' — 최근 폐점으로 실제 수치와 다를 수 있음",
-          "납품업체 미수금 '수십억~수백억 원' — 구체적 출처 없는 추정치로 과장 가능성"
-        ],
-        "notes": "회생절차 폐지 사실 여부가 핵심이며, 점포 수·미수금 수치 출처 보강 필요",
-        "verified_at": "2026-07-05 06:55"
-      }
+      "image_url": "images/2026-07-05_article_3.jpg"
     },
     {
       "id": 5,
@@ -170,18 +126,7 @@
       "image_keyword": "stock market volatility trading",
       "is_featured": false,
       "timestamp": "오전 10:15",
-      "image_url": "images/2026-07-05_article_4.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "기사 발행 시점이 '오늘'이나 본문에 '2026년 상반기' 기준으로 서술 — 미래 시점 혼재 가능성",
-          "코스피 VI 발동 건수 '전년 동기 대비 40% 이상 급증' — 한국거래소 공식 통계 원문 확인 필요",
-          "VKOSPI '역대 두 번째로 높은 수준' 주장 — 구체적 수치 없이 순위만 제시해 검증 어려움"
-        ],
-        "notes": "2026년 상반기 기준 서술로 발행일 기준 시제 혼선 우려, 통계 출처 명시 필요",
-        "verified_at": "2026-07-05 06:55"
-      }
+      "image_url": "images/2026-07-05_article_4.jpg"
     }
   ],
   "editorial_briefing": "반도체 패키징·차세대 메모리 등 첨단 소재 밸류체인 재편이 가속화되는 가운데, 중국발 다이아몬드 소재 도전과 홈플러스 파산 위기로 공급망 긴장이 고조되고 있다. 코스피 VI 역대 최다 발동은 소재·산업재 전반의 불안한 투자 심리를 단적으로 보여준다.",
@@ -211,6 +156,5 @@
       "label": "코스피 VI 역대 최대",
       "status": "변동성 경고 수위"
     }
-  ],
-  "last_reviewed_at": "2026-07-05 06:55"
+  ]
 }
