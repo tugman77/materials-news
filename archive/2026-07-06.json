@@ -29,17 +29,7 @@
       "image_keyword": "semiconductor chemical stripper",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-07-06_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "앰코테크놀로지가 '세계 2위 OSAT'라는 순위 주장 — 실제 순위는 시기별로 변동 가능",
-          "앰코의 주요 고객사로 애플·퀄컴·엔비디아 동시 언급 — 공식 공개 고객 목록 확인 필요"
-        ],
-        "notes": "기업명·제품명 정확, 스트리퍼 공정 설명도 적절. 순위·고객사 출처 보강 권고.",
-        "verified_at": "2026-07-06 07:00"
-      }
+      "image_url": "images/2026-07-06_article_0.jpg"
     },
     {
       "id": 2,
@@ -64,17 +54,7 @@
       "image_keyword": "chemical plant semiconductor materials",
       "is_featured": false,
       "timestamp": "오전 09:32",
-      "image_url": "images/2026-07-06_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "에틸렌·프로필렌 스프레드가 '역대 최저 수준'이라는 표현 — 구체적 수치·출처 미기재",
-          "석유화학 업황 침체가 '2025년까지 지속'라는 전망 — 특정 기관 근거 없이 단정적 서술"
-        ],
-        "notes": "전반적 흐름은 업계 현실과 부합. 핵심 수치에 출처 명시 필요.",
-        "verified_at": "2026-07-06 07:00"
-      }
+      "image_url": "images/2026-07-06_article_1.jpg"
     },
     {
       "id": 3,
@@ -102,18 +82,7 @@
       "image_keyword": "urban mining recycling rare metals",
       "is_featured": false,
       "timestamp": "오전 10:05",
-      "image_url": "images/2026-07-06_article_2.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "연간 전자 폐기물 '5,000만 톤 이상' — UNEP 최신 보고서 기준 약 6,200만 톤(2022)과 괴리",
-          "회수 가능 금속 가치 '약 570억 달러(약 78조 원)' — 환율 및 산출 기준 출처 불명확",
-          "실제 재활용률 '20% 안팎' — 기관·연도별 편차 큰 수치로 단일 수치 제시 시 오해 소지"
-        ],
-        "notes": "UNEP 수치 오류 가능성 있음. 인용 통계 원문 보고서 버전·연도 명시 필요.",
-        "verified_at": "2026-07-06 07:00"
-      }
+      "image_url": "images/2026-07-06_article_2.jpg"
     },
     {
       "id": 4,
@@ -135,21 +104,10 @@
         "전문가들은 크루즈 산업을 '움직이는 리조트 경제'로 정의하며, 조선·항만·관광·서비스업이 연계된 복합 산업 생태계 형성에 주목해야 한다고 조언한다. 국내 기업들이 크루즈 전문 산업재 공급망에 조기 진입할수록 장기적인 수익 기반을 확보할 수 있다는 분석이다.",
         "향후 아시아 크루즈 시장은 중국·일본·동남아시아 출발 노선을 중심으로 연평균 10% 이상 성장할 것으로 전망된다. 한국이 동북아 크루즈 허브로 자리 잡을 경우, 항만 및 조선 산업재 분야에서의 수혜는 더욱 커질 것으로 예상된다."
       ],
-      "image_keyword": "cruise ship docking port terminal",
+      "image_keyword": "cruise ship port industrial",
       "is_featured": false,
       "timestamp": "오전 10:48",
-      "image_url": "images/2026-07-06_article_3.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "5월 크루즈 방한객 '사상 첫 20만 명 돌파' — 한국관광공사 공식 통계 원문 확인 필요",
-          "전년 동월 대비 '약 40% 증가' — 구체적 비교 기준 시점·집계 방식 미기재",
-          "기항 1회당 경제효과 '수억~수십억 원' — 범위가 지나치게 넓어 사실상 검증 불가 수준"
-        ],
-        "notes": "산업재 연결 논리는 유효하나 핵심 통계 출처·기준 불명확. 이미지 키워드 구체화 권고.",
-        "verified_at": "2026-07-06 07:00"
-      }
+      "image_url": "images/2026-07-06_article_3.jpg"
     },
     {
       "id": 5,
@@ -175,17 +133,7 @@
       "image_keyword": "rare earth minerals supply chain global",
       "is_featured": false,
       "timestamp": "오전 11:20",
-      "image_url": "images/2026-07-06_article_4.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "USGS 기준 수입 의존 핵심 광물 '50종 이상' — 실제 USGS 목록(50종)과 거의 일치하나 최신 업데이트 확인 필요",
-          "중국이 갈륨·게르마늄 등 '전 세계 생산량 60~90% 장악' — 품목별 편차 크므로 단일 범위 표기에 주의"
-        ],
-        "notes": "MSP 등 정책명 정확, 전반적 사실성 양호. 품목별 점유율 수치 세분화 권고.",
-        "verified_at": "2026-07-06 07:00"
-      }
+      "image_url": "images/2026-07-06_article_4.jpg"
     }
   ],
   "editorial_briefing": "국내 화학업계가 석유화학 불황을 넘어 반도체 소재로 전환을 가속하며 공급망 내 위상을 높이고 있다. 희귀금속 자원 확보를 둘러싼 글로벌 패권 경쟁이 심화되는 가운데, 도시광산·동맹국 협력 등 다변화 전략이 동시에 부상 중이다.",
@@ -215,6 +163,5 @@
       "label": "美 공급망 재편",
       "status": "동맹국 협력 확대 중"
     }
-  ],
-  "last_reviewed_at": "2026-07-06 07:00"
+  ]
 }
