@@ -21,6 +21,7 @@ PEXELS_API_KEY     = os.environ.get("PEXELS_API_KEY", "")    # https://www.pexel
 PIXABAY_API_KEY    = os.environ.get("PIXABAY_API_KEY", "")   # https://pixabay.com/api/docs/
 OUTPUT_FILE = "articles.json"
 IMAGES_DIR  = "images"
+IMAGE_HISTORY_FILE = "image_history.json"  # 날짜 간(run 간) 이미지 재사용 방지용 영구 기록
 
 # 수집할 RSS 피드 (소재·산업·경제 분야)
 RSS_FEEDS = [
@@ -328,9 +329,52 @@ _UNSPLASH_POOL = {
 }
 _UNSPLASH_BASE = "https://images.unsplash.com/{id}?w=800&h=450&fit=crop&auto=format"
 
-# ── 실행(run)별 중복 방지 상태 ────────────────────────
+# ── 중복 방지 상태 ────────────────────────────────────
+# _used_photo_ids / _downloaded_hashes 는 "이번 실행" 범위.
+# _photo_id_last_used / (영구 hashes) 는 image_history.json 으로 "날짜 간" 유지된다.
 _used_photo_ids: set   = set()   # 이번 실행에서 선택된 Unsplash photo-ID
-_downloaded_hashes: set = set()  # 이번 실행에서 저장된 이미지 MD5
+_downloaded_hashes: set = set()  # 지금까지(과거 포함) 저장된 이미지 MD5
+_photo_id_last_used: dict = {}   # photo-ID → 마지막 사용 날짜(YYYY-MM-DD)
+
+
+def _load_image_history():
+    """image_history.json 로드 → 과거 MD5 해시와 photo-ID 사용 이력을 메모리에 적재.
+    파일이 없으면 images/ 폴더의 기존 파일을 해시해 부트스트랩한다."""
+    global _downloaded_hashes, _photo_id_last_used
+    try:
+        with open(IMAGE_HISTORY_FILE, "r", encoding="utf-8") as f:
+            hist = json.load(f)
+        _photo_id_last_used = dict(hist.get("photo_ids", {}))
+        _downloaded_hashes = set(hist.get("hashes", []))
+    except (FileNotFoundError, json.JSONDecodeError):
+        _photo_id_last_used = {}
+        _downloaded_hashes = set()
+
+    # 디스크의 기존 이미지 해시도 항상 흡수 (히스토리 파일이 유실돼도 재사용 방지)
+    if os.path.isdir(IMAGES_DIR):
+        for fn in os.listdir(IMAGES_DIR):
+            fp = os.path.join(IMAGES_DIR, fn)
+            if not os.path.isfile(fp):
+                continue
+            try:
+                with open(fp, "rb") as f:
+                    _downloaded_hashes.add(hashlib.md5(f.read()).hexdigest())
+            except Exception:
+                pass
+    print(f"🗂️  이미지 히스토리 로드: 해시 {len(_downloaded_hashes)}개 · photo-ID {len(_photo_id_last_used)}개")
+
+
+def _save_image_history():
+    """이번 실행에서 갱신된 photo-ID 사용 이력과 MD5 해시를 image_history.json에 저장.
+    해시는 최근 800개까지만 보존해 파일 크기를 제한한다."""
+    hashes = list(_downloaded_hashes)[-800:]
+    data = {"photo_ids": _photo_id_last_used, "hashes": hashes}
+    try:
+        with open(IMAGE_HISTORY_FILE, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        print(f"🗂️  이미지 히스토리 저장: 해시 {len(hashes)}개 · photo-ID {len(_photo_id_last_used)}개")
+    except Exception as e:
+        print(f"   → 히스토리 저장 오류: {e}")
 
 
 def _validate_pool():
@@ -343,17 +387,30 @@ def _validate_pool():
             seen[pid] = cat
 
 
-def _pick_pool_url(category: str, seed_str: str) -> str:
-    """카테고리 풀에서 미사용 photo-ID를 시드 기반으로 선택, 사용 목록에 추가"""
-    global _used_photo_ids
+def _pick_pool_url(category: str, seed_str: str) -> tuple[str, str]:
+    """카테고리 풀에서 photo-ID를 선택. (url, photo_id) 반환.
+    선택 우선순위:
+      1. 이번 실행에서 아직 안 쓴 ID 중
+      2. '가장 오래전에 사용(또는 미사용)' 그룹을 우선(LRU) → 날짜 간 반복 간격 최대화
+      3. 동률이면 시드 해시로 결정(변화 부여)
+    실제 저장 성공 시점에 _record_photo_id로 사용 날짜를 기록한다."""
     pool = _UNSPLASH_POOL.get(category) or _UNSPLASH_POOL["반도체소재"]
     available = [p for p in pool if p not in _used_photo_ids]
     if not available:
-        available = pool  # 풀 전체 소진 시 재사용 허용
-    idx = int(hashlib.md5(seed_str.encode()).hexdigest(), 16) % len(available)
-    chosen = available[idx]
+        available = pool  # 이번 실행에서 풀 소진 시 재사용 허용
+    # 마지막 사용 날짜 오름차순 — 미사용("")이 가장 앞 = 최우선
+    oldest_key = min(_photo_id_last_used.get(p, "") for p in available)
+    tied = [p for p in available if _photo_id_last_used.get(p, "") == oldest_key]
+    idx = int(hashlib.md5(seed_str.encode()).hexdigest(), 16) % len(tied)
+    chosen = tied[idx]
     _used_photo_ids.add(chosen)
-    return _UNSPLASH_BASE.format(id=chosen)
+    return _UNSPLASH_BASE.format(id=chosen), chosen
+
+
+def _record_photo_id(photo_id: str):
+    """실제로 저장에 사용된 photo-ID의 마지막 사용 날짜를 오늘로 기록"""
+    if photo_id:
+        _photo_id_last_used[photo_id] = datetime.now(KST).strftime("%Y-%m-%d")
 
 
 # ── 외부 이미지 소스 함수 ─────────────────────────────
@@ -423,19 +480,21 @@ def _download_single_image(keyword: str, img_path: str, category: str = "", seed
     keyword_q = quote(keyword)
     seed = hashlib.md5(keyword.encode()).hexdigest()[:8]
 
-    # (source_name, direct_url_or_None)
-    candidates: list[tuple[str, str | None]] = []
-
+    # 소스 우선순위(풀은 소진 시 재시도용으로 여러 번 시도)
+    order: list[str] = []
     if UNSPLASH_ACCESS_KEY:
-        candidates.append(("unsplash_api", None))   # URL은 API 응답에서 추출
+        order.append("unsplash_api")
     if PEXELS_API_KEY:
-        candidates.append(("pexels", None))
+        order.append("pexels")
     if PIXABAY_API_KEY:
-        candidates.append(("pixabay", None))
-    candidates.append(("unsplash_pool", _pick_pool_url(category or "반도체소재", seed_str or keyword)))
-    candidates.append(("picsum", f"https://picsum.photos/seed/{seed}/800/450"))
+        order.append("pixabay")
+    # 풀은 중복 거부 시 다음 후보로 넘어갈 수 있도록 풀 크기만큼 재시도
+    order += ["unsplash_pool"] * 8
+    order.append("picsum")
 
-    for source, preset_url in candidates:
+    pool_try = 0
+    for source in order:
+        chosen_pid = None
         try:
             # 소스별 URL 확정
             if source == "unsplash_api":
@@ -457,20 +516,27 @@ def _download_single_image(keyword: str, img_path: str, category: str = "", seed
                 img_url = _fetch_pixabay(keyword)
                 if not img_url:
                     continue
+            elif source == "unsplash_pool":
+                # 재시도마다 시드를 바꿔 다른 photo-ID가 선택되게 함
+                img_url, chosen_pid = _pick_pool_url(
+                    category or "반도체소재", f"{seed_str or keyword}_{pool_try}"
+                )
+                pool_try += 1
             else:
-                img_url = preset_url
+                img_url = f"https://picsum.photos/seed/{seed}/800/450"
 
             resp = requests.get(img_url, timeout=30, allow_redirects=True)
             if resp.status_code != 200 or len(resp.content) < 1000:
                 continue
 
-            # MD5 중복 체크
+            # MD5 중복 체크 (과거 날짜 포함 — 히스토리에 축적된 해시와 대조)
             img_hash = hashlib.md5(resp.content).hexdigest()
             if img_hash in _downloaded_hashes:
                 print(f"   → 중복 이미지 [{source}] md5={img_hash[:8]}, 다음 소스 시도...")
                 continue
 
             _downloaded_hashes.add(img_hash)
+            _record_photo_id(chosen_pid)  # 풀 이미지일 때만 사용 날짜 기록
             with open(img_path, "wb") as f:
                 f.write(resp.content)
             print(f"   → 이미지 저장: {img_path} [{category}] ({source})")
@@ -485,12 +551,13 @@ def _download_single_image(keyword: str, img_path: str, category: str = "", seed
 def download_article_images(articles):
     """각 기사의 카테고리 기반 이미지 다운로드 → images/YYYY-MM-DD_article_N.jpg
     날짜 포함 파일명으로 날짜별 이미지 중복을 방지한다.
-    실행 시작 시 _used_photo_ids / _downloaded_hashes를 초기화해 run 단위 dedup 보장.
+    _used_photo_ids만 run 단위로 초기화하고, _downloaded_hashes·_photo_id_last_used는
+    image_history.json에서 로드해 날짜 간(run 간) 재사용을 방지한다.
     """
-    global _used_photo_ids, _downloaded_hashes
+    global _used_photo_ids
     _used_photo_ids.clear()
-    _downloaded_hashes.clear()
-    _validate_pool()  # 풀 cross-category 중복 감지 (로그 출력)
+    _load_image_history()  # 과거 해시·photo-ID 이력 적재 (_downloaded_hashes 채움)
+    _validate_pool()       # 풀 cross-category 중복 감지 (로그 출력)
 
     os.makedirs(IMAGES_DIR, exist_ok=True)
     date_prefix = datetime.now(KST).strftime("%Y-%m-%d")
@@ -504,6 +571,8 @@ def download_article_images(articles):
         else:
             article["image_url"] = None
             print(f"   → 이미지 모두 실패 [{keyword}]")
+
+    _save_image_history()  # 이번 실행에서 갱신된 이력 영구 저장
     return articles
 
 

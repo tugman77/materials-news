@@ -28,7 +28,45 @@ NAVER_CLIENT_SECRET = os.environ.get("NAVER_CLIENT_SECRET", "")
 
 IMAGES_DIR = "images"
 OUTPUT_FILE = "articles.json"
+IMAGE_HISTORY_FILE = "image_history.json"  # 기사자동생성.py와 공유하는 날짜 간 재사용 방지 기록
 KST = timezone(timedelta(hours=9))
+
+# ── 이미지 재사용 방지 상태 (기사자동생성.py와 동일 포맷) ──
+_used_photo_ids: set   = set()   # 이번 검수에서 선택된 photo-ID
+_downloaded_hashes: set = set()  # 과거 포함 저장된 이미지 MD5
+_photo_id_last_used: dict = {}   # photo-ID → 마지막 사용 날짜(YYYY-MM-DD)
+
+
+def _load_image_history():
+    """image_history.json + images/ 폴더 해시를 적재해 과거 이미지 재사용을 막는다."""
+    global _downloaded_hashes, _photo_id_last_used
+    try:
+        with open(IMAGE_HISTORY_FILE, "r", encoding="utf-8") as f:
+            hist = json.load(f)
+        _photo_id_last_used = dict(hist.get("photo_ids", {}))
+        _downloaded_hashes = set(hist.get("hashes", []))
+    except (FileNotFoundError, json.JSONDecodeError):
+        _photo_id_last_used = {}
+        _downloaded_hashes = set()
+    if os.path.isdir(IMAGES_DIR):
+        for fn in os.listdir(IMAGES_DIR):
+            fp = os.path.join(IMAGES_DIR, fn)
+            if os.path.isfile(fp):
+                try:
+                    with open(fp, "rb") as f:
+                        _downloaded_hashes.add(hashlib.md5(f.read()).hexdigest())
+                except Exception:
+                    pass
+
+
+def _save_image_history():
+    """검수 중 갱신된 photo-ID 이력·해시를 image_history.json에 저장 (최근 800개)."""
+    data = {"photo_ids": _photo_id_last_used, "hashes": list(_downloaded_hashes)[-800:]}
+    try:
+        with open(IMAGE_HISTORY_FILE, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"   → 히스토리 저장 오류: {e}")
 
 
 # ── 텔레그램 ────────────────────────────────────────────────
@@ -121,49 +159,73 @@ _UNSPLASH_POOL = {
 }
 _UNSPLASH_BASE = "https://images.unsplash.com/{id}?w=800&h=450&fit=crop&auto=format"
 
-def _pick_pool_url(category: str, seed_str: str) -> str:
+def _pick_pool_url(category: str, seed_str: str) -> tuple[str, str]:
+    """풀에서 '가장 오래전에 사용(또는 미사용)'한 photo-ID를 LRU로 선택. (url, photo_id) 반환."""
     pool = _UNSPLASH_POOL.get(category) or _UNSPLASH_POOL["반도체소재"]
-    idx = int(hashlib.md5(seed_str.encode()).hexdigest(), 16) % len(pool)
-    return _UNSPLASH_BASE.format(id=pool[idx])
+    available = [p for p in pool if p not in _used_photo_ids]
+    if not available:
+        available = pool
+    oldest_key = min(_photo_id_last_used.get(p, "") for p in available)
+    tied = [p for p in available if _photo_id_last_used.get(p, "") == oldest_key]
+    idx = int(hashlib.md5(seed_str.encode()).hexdigest(), 16) % len(tied)
+    chosen = tied[idx]
+    _used_photo_ids.add(chosen)
+    return _UNSPLASH_BASE.format(id=chosen), chosen
 
 
 def download_image(keyword: str, img_path: str, category: str = "", seed_str: str = "") -> str | None:
     """이미지 다운로드 → img_path에 저장.
     1차: Unsplash API (UNSPLASH_ACCESS_KEY 있을 때)
-    2차: 카테고리별 Unsplash 풀 (내용 관련 이미지, API 키 불필요)
+    2차: 카테고리별 Unsplash 풀 (LRU 선택, 과거 사용분 최대한 회피)
     3차: picsum 최종 폴백
-    loremflickr 제외 — 전문 산업 키워드에서 무관한 이미지를 반환함.
+    저장 직전 MD5를 히스토리와 대조 — 과거(다른 날짜 포함) 이미지와 같으면 다음 후보로 넘어감.
     """
     os.makedirs(IMAGES_DIR, exist_ok=True)
     keyword_q = quote(keyword)
     seed = hashlib.md5(keyword.encode()).hexdigest()[:8]
 
-    candidates = []
+    order = []
     if UNSPLASH_ACCESS_KEY:
-        candidates.append(("unsplash_api",
-            f"https://api.unsplash.com/photos/random?query={keyword_q}&orientation=landscape"
-            f"&client_id={UNSPLASH_ACCESS_KEY}"))
-    pool_url = _pick_pool_url(category or "반도체소재", seed_str or keyword)
-    candidates.append(("unsplash_pool", pool_url))
-    candidates.append(("picsum", f"https://picsum.photos/seed/{seed}/800/450"))
+        order.append("unsplash_api")
+    order += ["unsplash_pool"] * 8   # 중복 거부 시 다른 photo-ID로 재시도
+    order.append("picsum")
 
-    for source, img_url in candidates:
+    pool_try = 0
+    for source in order:
+        chosen_pid = None
         try:
-            resp = requests.get(img_url, timeout=20, allow_redirects=True)
-            if resp.status_code == 200:
-                if source == "unsplash_api":
-                    raw_url = resp.json().get("urls", {}).get("regular", "")
-                    if not raw_url:
-                        continue
-                    resp = requests.get(raw_url, timeout=30, allow_redirects=True)
-                    if resp.status_code != 200 or len(resp.content) < 1000:
-                        continue
-                elif len(resp.content) < 1000:
+            if source == "unsplash_api":
+                r = requests.get(
+                    f"https://api.unsplash.com/photos/random?query={keyword_q}&orientation=landscape"
+                    f"&client_id={UNSPLASH_ACCESS_KEY}", timeout=20, allow_redirects=True)
+                if r.status_code != 200:
                     continue
-                with open(img_path, "wb") as f:
-                    f.write(resp.content)
-                print(f"   이미지 저장: {img_path} [{category or keyword}] ({source})")
-                return img_path
+                img_url = r.json().get("urls", {}).get("regular", "")
+                if not img_url:
+                    continue
+            elif source == "unsplash_pool":
+                img_url, chosen_pid = _pick_pool_url(
+                    category or "반도체소재", f"{seed_str or keyword}_{pool_try}")
+                pool_try += 1
+            else:
+                img_url = f"https://picsum.photos/seed/{seed}/800/450"
+
+            resp = requests.get(img_url, timeout=30, allow_redirects=True)
+            if resp.status_code != 200 or len(resp.content) < 1000:
+                continue
+
+            img_hash = hashlib.md5(resp.content).hexdigest()
+            if img_hash in _downloaded_hashes:
+                print(f"   중복 이미지 [{source}] md5={img_hash[:8]}, 다음 후보 시도...")
+                continue
+
+            _downloaded_hashes.add(img_hash)
+            if chosen_pid:
+                _photo_id_last_used[chosen_pid] = datetime.now(KST).strftime("%Y-%m-%d")
+            with open(img_path, "wb") as f:
+                f.write(resp.content)
+            print(f"   이미지 저장: {img_path} [{category or keyword}] ({source})")
+            return img_path
         except Exception as e:
             print(f"   이미지 오류 ({source}): {e}")
     return None
@@ -473,6 +535,7 @@ def main():
 
     # 3. 누락·중복 이미지 확인 + 다운로드
     print("이미지 파일 확인 중 (누락 + 중복 감지)...")
+    _load_image_history()  # 과거 해시·photo-ID 이력 적재 → 재다운로드 시 재사용 방지
     missing_fixed = check_and_fix_missing_images(articles, date_prefix)
     if missing_fixed:
         print(f"   이미지 {missing_fixed}건 조치 완료")
@@ -536,6 +599,8 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     print("검수 결과 articles.json 저장 완료")
+
+    _save_image_history()  # 검수 중 재다운로드로 갱신된 이미지 이력 영구 저장
 
     # 7. 텔레그램 보고
     send_review_report(articles, reviews, naver_map, image_fixes, missing_fixed, date_str, dup_issues)
