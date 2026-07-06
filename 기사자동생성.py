@@ -95,7 +95,7 @@ def generate_articles_with_claude(raw_news_list, recent_topics=None):
     if news_text:
         news_section = f"[수집된 원본 뉴스]\n{news_text}\n\n원문을 참고해서 핵심 내용을 바탕으로 새로운 문장으로 작성하세요."
     else:
-        news_section = "[원본 뉴스 없음]\nRSS 수집에 실패했습니다. 최근 반도체·소재·희귀금속·산업재 업계 동향을 바탕으로 실제 있을 법한 기사를 작성하세요."
+        news_section = "[원본 뉴스 없음]\nRSS 수집에 실패했습니다. 최근 반도체·소재·희귀금속·화학소재·정책제도 업계 동향을 바탕으로 실제 있을 법한 기사를 작성하세요."
 
     # 최근 다룬 주제 → 중복 금지 섹션
     if recent_topics:
@@ -119,13 +119,15 @@ def generate_articles_with_claude(raw_news_list, recent_topics=None):
     else:
         avoid_section = ""
 
-    prompt = f"""반도체·소재·희귀금속·산업재 전문 뉴스 사이트용 기사 5개를 작성해주세요.
+    prompt = f"""반도체·소재·희귀금속·화학소재·정책제도 전문 뉴스 사이트용 기사 5개를 작성해주세요.
 
 {avoid_section}{news_section}
 
 [작성 규칙]
-- 카테고리: "반도체소재" / "희귀금속" / "산업재" / "글로벌" 중 하나
-- tag_type: "tag-semi" / "tag-rare" / "tag-industry" / "tag-global" 중 하나 (카테고리에 맞게)
+- 카테고리: "반도체소재" / "희귀금속" / "화학·소재" / "정책·제도" / "글로벌" 중 하나
+  · 화학·소재: 화학물질, 신소재, 소재 기술, 배터리 소재, 디스플레이 소재 등
+  · 정책·제도: 정부 정책, 규제, 법률, 지원 제도, 통상 정책 등
+- tag_type: "tag-semi" / "tag-rare" / "tag-chemical" / "tag-policy" / "tag-global" 중 하나 (카테고리에 맞게)
 - 제목: 15~25자, 핵심 팩트 중심
 - summary: 2~3문장 핵심 요약 (150자 이내)
 - body: 10~13개 단락 각각을 문자열로 담은 배열. 각 단락 200~300자. 반드시 포함할 내용: ①사건 배경 및 원인 분석 ②구체적 수치·통계(수출액·생산량·가격 변동 포함) ③주요 관련 기업명과 최신 동향 ④전문가·업계 관계자 의견(직접 인용 형식) ⑤국내 산업별 파급 효과 ⑥글로벌·해외 동향 ⑦관련 정책·규제 현황 ⑧향후 시장 전망 및 투자 시사점. 전문 용어는 쉽게 풀어서 작성
@@ -154,7 +156,7 @@ save_articles 도구를 사용해 기사 5개를 저장하세요.
                             "type": "object",
                             "properties": {
                                 "id":            {"type": "integer"},
-                                "category":      {"type": "string", "enum": ["반도체소재","희귀금속","산업재","글로벌"]},
+                                "category":      {"type": "string", "enum": ["반도체소재","희귀금속","화학·소재","정책·제도","글로벌"]},
                                 "tag_type":      {"type": "string"},
                                 "title":         {"type": "string"},
                                 "summary":       {"type": "string"},
