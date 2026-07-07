@@ -1,7 +1,6 @@
-// 소재타임스 문의 모달 — Telegram 봇으로 즉시 전송
+// 소재타임스 문의 모달 — 이메일로 전송 (공개 정적 사이트에는 토큰을 두지 않는다)
 (function () {
-  const BOT = '8860516747:AAGikwdjA120Jy8Dei9_IFVCFh4l3LudruI';
-  const CID = '6625834513';
+  const CONTACT_EMAIL = 'tugman77@gmail.com'; // 도메인 메일(ads@sojaetimes.co.kr) 개통 시 교체
 
   /* ── CSS ── */
   const s = document.createElement('style');
@@ -85,51 +84,30 @@
     wrap.classList.remove('open');
   };
 
-  window.submitContact = async function () {
+  window.submitContact = function () {
     const type    = document.getElementById('cm-type').value;
     const name    = document.getElementById('cm-name').value.trim();
     const contact = document.getElementById('cm-contact').value.trim();
     const body    = document.getElementById('cm-body').value.trim();
     const fb      = document.getElementById('cm-feedback');
-    const btn     = document.getElementById('cm-btn');
 
     fb.className = '';
     if (!body) { fb.className = 'err'; fb.textContent = '문의 내용을 입력해 주세요.'; return; }
 
-    btn.disabled = true;
-    btn.textContent = '전송 중...';
-
     const lines = [
-      '📬 <b>[소재타임스 문의]</b>',
       `유형: ${type}`,
       name    ? `이름: ${name}` : '',
       contact ? `연락처: ${contact}` : '',
       '',
       body,
-    ].filter((l, i) => i < 4 || l !== '').join('\n');
+    ].filter((l, i) => i < 3 || l !== '').join('\n');
 
-    try {
-      const res = await fetch(
-        `https://api.telegram.org/bot${BOT}/sendMessage`,
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ chat_id: CID, text: lines, parse_mode: 'HTML' }),
-        }
-      );
-      if (!res.ok) throw new Error();
-      fb.className = 'ok';
-      fb.textContent = '문의가 접수되었습니다. 빠르게 답변드리겠습니다.';
-      document.getElementById('cm-name').value    = '';
-      document.getElementById('cm-contact').value = '';
-      document.getElementById('cm-body').value    = '';
-      setTimeout(closeContactModal, 2200);
-    } catch {
-      fb.className = 'err';
-      fb.textContent = '전송에 실패했습니다. 잠시 후 다시 시도해 주세요.';
-    } finally {
-      btn.disabled = false;
-      btn.textContent = '보내기';
-    }
+    const subject = `[소재타임스 문의] ${type}`;
+    window.location.href =
+      `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines)}`;
+
+    fb.className = 'ok';
+    fb.textContent = '메일 앱이 열립니다. 전송 버튼을 눌러 주세요.';
+    setTimeout(closeContactModal, 2500);
   };
 })();

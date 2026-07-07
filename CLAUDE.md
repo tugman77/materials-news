@@ -2,7 +2,7 @@
 
 ## 개요
 반도체·소재·희귀금속·산업재 전문 뉴스 자동 생성 사이트.
-매일 KST 09:00 GitHub Actions로 기사 5개 + 시세 데이터 자동 생성.
+매일 KST 06:00 GitHub Actions로 기사 5개 + 시세 데이터 자동 생성.
 
 - **GitHub 저장소:** `tugman77/materials-news`
 - **배포 방식:** GitHub Pages (main 브랜치 / root 디렉터리)
@@ -45,7 +45,7 @@
 │   ├── index.json         ← 날짜 목록 (최대 90일)
 │   └── YYYY-MM-DD.json    ← 날짜별 기사 데이터
 └── .github/workflows/
-    └── 자동기사생성.yml   ← GitHub Actions (매일 UTC 00:00 = KST 09:00)
+    └── 자동기사생성.yml   ← GitHub Actions (매일 UTC 21:00 = KST 06:00)
 ```
 
 ---
