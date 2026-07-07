@@ -291,8 +291,28 @@ def check_and_fix_missing_images(articles: list, date_prefix: str) -> int:
 
 # ── 제목 중복 감지 ──────────────────────────────────────────
 
-def detect_duplicate_titles(articles: list, days: int = 3) -> dict:
-    """당일 기사 내 제목 중복 + 최근 N일 아카이브와의 제목 중복 감지"""
+def _title_bigrams(title: str) -> set:
+    """제목을 문자 2-gram 집합으로 변환 (유사도 비교용).
+    단어 단위 비교는 조사(도시광산→도시광산서)·붙여쓰기(자원 순환→자원순환)에
+    깨지므로 문자 단위 2-gram을 사용한다."""
+    import re as _re
+    s = "".join(_re.findall(r"[0-9A-Za-z가-힣]+", title))
+    return {s[i:i + 2] for i in range(len(s) - 1)}
+
+
+def _title_similarity(t1: str, t2: str) -> float:
+    """문자 2-gram 자카드 유사도 (0~1).
+    실측 기준: 동일 사건 재보도 0.25~0.46, 무관한 기사 0.00~0.09 → 임계값 0.20"""
+    a, b = _title_bigrams(t1), _title_bigrams(t2)
+    if not a or not b:
+        return 0.0
+    return len(a & b) / len(a | b)
+
+
+def detect_duplicate_titles(articles: list, days: int = 14) -> dict:
+    """당일 기사 내 제목 중복 + 최근 N일 아카이브와의 제목 '유사' 중복 감지.
+    완전 일치뿐 아니라 문자 2-gram 자카드 유사도 0.20 이상이면 동일 사건 재보도로 판단.
+    [속보]/[후속] 표기가 있는 기사는 의도된 후속 보도로 보고 제외."""
     issues: dict = {"within_today": [], "cross_days": []}
 
     # 당일 기사 내 중복
@@ -308,9 +328,11 @@ def detect_duplicate_titles(articles: list, days: int = 3) -> dict:
         else:
             seen[title] = a["id"]
 
-    # 최근 N일 아카이브와 비교
-    today_title_map = {a["title"]: a["id"] for a in articles}
+    # 최근 N일 아카이브와 비교 (유사도 기반)
+    SIM_THRESHOLD = 0.20
+    today_list = [(a["title"], a["id"]) for a in articles]
     now = datetime.now(KST)
+    flagged = set()  # (today_id) — 기사당 1회만 보고
     for d in range(1, days + 1):
         date_key = (now - timedelta(days=d)).strftime("%Y-%m-%d")
         try:
@@ -318,13 +340,23 @@ def detect_duplicate_titles(articles: list, days: int = 3) -> dict:
                 arch_data = json.load(f)
             for arch_a in arch_data.get("articles", []):
                 arch_title = arch_a.get("title", "")
-                if arch_title in today_title_map:
-                    issues["cross_days"].append({
-                        "title": arch_title,
-                        "today_id": today_title_map[arch_title],
-                        "past_date": date_key,
-                    })
-                    print(f"   ⚠️ 날짜 간 제목 중복: 오늘 id={today_title_map[arch_title]} = {date_key} — '{arch_title}'")
+                for today_title, today_id in today_list:
+                    if today_id in flagged:
+                        continue
+                    if today_title.startswith(("[속보]", "[후속]")):
+                        continue  # 의도된 후속 보도는 허용
+                    sim = _title_similarity(today_title, arch_title)
+                    if today_title == arch_title or sim >= SIM_THRESHOLD:
+                        flagged.add(today_id)
+                        issues["cross_days"].append({
+                            "title": today_title,
+                            "similar_to": arch_title,
+                            "similarity": round(sim, 2),
+                            "today_id": today_id,
+                            "past_date": date_key,
+                        })
+                        print(f"   ⚠️ 유사 주제 재보도 의심: 오늘 id={today_id} '{today_title}'")
+                        print(f"      ↔ {date_key} '{arch_title}' (유사도 {sim:.2f})")
         except (FileNotFoundError, json.JSONDecodeError):
             pass
 
@@ -451,8 +483,11 @@ def send_review_report(articles: list, reviews: list, naver_map: dict,
             lines.append(f"   \"{dup['title'][:30]}...\"")
             has_issues = True
         for dup in dup_issues.get("cross_days", []):
-            lines.append(f"⚠️ <b>날짜 간 제목 중복</b>: 오늘 id={dup['today_id']} ↔ {dup['past_date']}")
-            lines.append(f"   \"{dup['title'][:30]}...\"")
+            sim_info = f" (유사도 {dup['similarity']})" if "similarity" in dup else ""
+            lines.append(f"⚠️ <b>유사 주제 재보도 의심</b>: 오늘 id={dup['today_id']} ↔ {dup['past_date']}{sim_info}")
+            lines.append(f"   오늘: \"{dup['title'][:30]}\"")
+            if dup.get("similar_to"):
+                lines.append(f"   과거: \"{dup['similar_to'][:30]}\"")
             has_issues = True
         if has_issues:
             lines.append("")  # 빈 줄 구분
@@ -526,7 +561,7 @@ def main():
 
     # 2. 제목 중복 감지 (당일 내 + 최근 3일)
     print("제목 중복 감지 중...")
-    dup_issues = detect_duplicate_titles(articles, days=3)
+    dup_issues = detect_duplicate_titles(articles, days=14)
     total_dups = len(dup_issues["within_today"]) + len(dup_issues["cross_days"])
     if total_dups:
         print(f"   ⚠️ 제목 중복 {total_dups}건 감지")

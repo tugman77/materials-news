@@ -57,7 +57,7 @@ def collect_news_from_rss(max_per_feed=5):
     return collected
 
 # ── 최근 N일치 아카이브에서 기사 주제 추출 ──────────
-def load_recent_topics(days: int = 3) -> list:
+def load_recent_topics(days: int = 14) -> list:
     """최근 N일치 아카이브 파일에서 기사 제목·카테고리·핵심어 추출.
     오늘 기사 생성 시 유사 주제 반복을 막는 데 사용한다.
     """
@@ -112,6 +112,10 @@ def generate_articles_with_claude(raw_news_list, recent_topics=None):
   · 동일 소재/물질명 중심 기사 (예: 탄탈럼, CO2, HBM 등)
   · 동일 정책·규제 이슈 (예: 탄탈럼 수입금지, OPEC+ 감산 등)
   · 동일 이슈 흐름 (예: 석화업계 반도체 피벗, 국제유가 변동 등)
+  · **동일 사건은 기간과 무관하게 재보도 금지** (예: 같은 광산 사고, 같은 기업 발표를
+    날짜만 바꿔 다시 쓰는 것). 실제로 새로운 후속 진행(사상자 집계 변경, 정부 대응 발표,
+    조업 재개 등)이 있을 때만 허용하며, 이 경우 제목 앞에 [속보] 또는 [후속]을 붙이고
+    본문 첫 문단에서 기존 보도 이후 무엇이 새로 확인됐는지 명시할 것.
 같은 소재를 다루더라도 "각도"가 완전히 다른 경우(예: 공급망 → 기술 개발)는 허용.
 
 {topic_lines}
@@ -626,7 +630,7 @@ def main():
 
     # 2. 최근 기사 주제 로드 (중복 방지용, 최근 3일)
     print("📋 최근 기사 주제 로드 중 (3일치)...")
-    recent_topics = load_recent_topics(days=3)
+    recent_topics = load_recent_topics(days=14)
     if recent_topics:
         days_covered = sorted(set(t["date"] for t in recent_topics), reverse=True)
         print(f"   → {len(recent_topics)}건 로드 ({', '.join(days_covered)})")
