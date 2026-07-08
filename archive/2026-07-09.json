@@ -29,17 +29,7 @@
       "image_keyword": "semiconductor testbed factory",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-07-09_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "구미가 2023년 국가 반도체 특화단지로 지정됐다는 연도 확인 필요",
-          "테스트베드 장비·시설이 '전무하다시피'라는 표현은 과장 가능성"
-        ],
-        "notes": "전반적으로 사실 개연성 높음. 특화단지 지정 연도 출처 보강 권장.",
-        "verified_at": "2026-07-09 07:04"
-      }
+      "image_url": "images/2026-07-09_article_0.jpg"
     },
     {
       "id": 2,
@@ -64,18 +54,7 @@
       "image_keyword": "rare earth metal processing",
       "is_featured": false,
       "timestamp": "오전 09:30",
-      "image_url": "images/2026-07-09_article_1.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "EBITDA 전년 동기 대비 '약 85% 증가' 수치의 출처·근거 불명확",
-          "Nd·Pr 판매 단가 '연초 대비 40% 이상' 상승 주장 검증 필요",
-          "2026년 1분기 실적 발표 — 미래 시점 데이터로 실존 여부 확인 불가"
-        ],
-        "notes": "2026년 1분기 실적은 현재 시점 기준 미래 데이터로, 수치 전반 검증 필요.",
-        "verified_at": "2026-07-09 07:04"
-      }
+      "image_url": "images/2026-07-09_article_1.jpg"
     },
     {
       "id": 3,
@@ -103,17 +82,7 @@
       "image_keyword": "smart factory AI manufacturing",
       "is_featured": false,
       "timestamp": "오전 09:45",
-      "image_url": "images/2026-07-09_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "불량률 30% 이상 절감·에너지 20% 절감 목표 수치의 공식 출처 불명확",
-          "협의체 출범일 '9일' 표기만으로는 월·연도 특정 불가"
-        ],
-        "notes": "기업·기관명 실존 확인됨. 목표 수치 출처 명시 및 날짜 표기 보완 권장.",
-        "verified_at": "2026-07-09 07:04"
-      }
+      "image_url": "images/2026-07-09_article_2.jpg"
     },
     {
       "id": 4,
@@ -138,21 +107,10 @@
         "향후 전망은 글로벌 반도체 업황과 긴밀히 연결돼 있다. AI 서버용 고대역폭 메모리(HBM) 수요 확대, 차세대 파운드리 투자 경쟁, 소재 공급망 재편 등 구조적 성장 동력이 유지될 경우 외국인의 국내 기술주 투자 매력도는 지속될 것으로 전망된다.",
         "금융서비스수지 사상 최대 기록은 한국 자본시장이 글로벌 투자자들에게 점차 매력적인 시장으로 인식되고 있다는 신호다. 반도체·소재 산업의 기술 경쟁력을 바탕으로 금융 서비스 수출도 함께 성장하는 선순환 구조 형성이 기대된다."
       ],
-      "image_keyword": "Korea stock exchange trading floor",
+      "image_keyword": "stock market foreign investment",
       "is_featured": false,
       "timestamp": "오전 10:00",
-      "image_url": "images/2026-07-09_article_3.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "금융서비스수지 '5억 6,000만 달러 사상 최대' — 한국은행 원문 통계 교차 확인 필요",
-          "외국인 국내 주식 거래대금 '890조 원, 전년비 38% 증가' 수치 출처 불명확",
-          "외국인 순매수 '약 12조 원' 수치, 특정 기간·집계 기준 명시 없어 검증 곤란"
-        ],
-        "notes": "구체 수치 다수가 출처 불명. 한국은행·한국거래소 공식 통계 원문 인용 필요.",
-        "verified_at": "2026-07-09 07:04"
-      }
+      "image_url": "images/2026-07-09_article_3.jpg"
     },
     {
       "id": 5,
@@ -174,21 +132,10 @@
         "탄탈럼 시장은 구조적으로 공급 집중도가 높고 대체재가 제한적이어서 사고 등 공급 충격에 취약한 특성을 지닌다. 향후 전기차, AI 서버, 웨어러블 기기 확산으로 탄탈럼 수요가 증가할수록 공급망 취약성이 더 부각될 것으로 전문가들은 경고한다.",
         "이번 콩고 콜탄 광산 붕괴 사고는 희귀금속 공급망의 지리적 편중이 가져오는 위험을 다시 한번 상기시켜 준다. 기업과 정부 모두 조달 다변화, 재활용 기술 투자, 비축 확대 등 다층적 리스크 관리 전략을 강화해야 한다는 목소리가 높아지고 있다."
       ],
-      "image_keyword": "coltan tantalum ore mining DRC",
+      "image_keyword": "coltan mining Congo minerals",
       "is_featured": false,
       "timestamp": "오전 10:15",
-      "image_url": "images/2026-07-09_article_4.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "사망자 '200명 이상' — 대형 사고임에도 국제 보도 교차 확인 필요",
-          "콩고 콜탄 글로벌 공급 비중 '40~50%' 수치, 출처에 따라 편차 있어 검증 필요",
-          "사고 직후 탄탈럼 현물가 '5% 내외 급등' — 현물 시세 출처 미기재"
-        ],
-        "notes": "사건 개연성은 높으나 사상자 수·가격 급등 등 핵심 수치 출처 보강 필수.",
-        "verified_at": "2026-07-09 07:04"
-      }
+      "image_url": "images/2026-07-09_article_4.jpg"
     }
   ],
   "editorial_briefing": "콩고 콜탄 광산 붕괴로 희귀금속 공급망에 비상이 걸린 가운데, 네오 퍼포먼스의 역대 최고 실적이 가격 급등을 방증한다. 국내에서는 구미 반도체·울산 제조 AX 전환 등 산업 고도화 움직임이 본격화되며 외국인 자금 유입도 사상 최대치를 기록했다.",
@@ -218,6 +165,5 @@
       "label": "금융서비스수지 최대",
       "status": "5.6억달러 달성"
     }
-  ],
-  "last_reviewed_at": "2026-07-09 07:04"
+  ]
 }
