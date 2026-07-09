@@ -26,18 +26,7 @@
       "image_keyword": "coltan mine Congo",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-07-10_article_0.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'루바야 광산이 전 세계 탄탈럼 생산량의 15%를 담당' — 단일 광산 점유율 출처 불명확",
-          "사망자 200명 이상 — 구체적 수치이나 공식 확인 보도 여부 불명",
-          "'글로벌 최대 수준 단일 광산' 표현 — 과장 가능성, 검증 필요"
-        ],
-        "notes": "인명사고 개연성은 있으나 탄탈럼 점유율·사망자 수 등 핵심 수치 출처 명시 필요",
-        "verified_at": "2026-07-10 07:19"
-      }
+      "image_url": "images/2026-07-10_article_0.jpg"
     },
     {
       "id": 2,
@@ -63,17 +52,7 @@
       "image_keyword": "semiconductor precursor material lab",
       "is_featured": false,
       "timestamp": "오전 09:32",
-      "image_url": "images/2026-07-10_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "'R&D 인력 30% 확대' — 내부 발표 수치로 외부 검증 어려움",
-          "전고체 상용화 시점 '2027~2028년 이후' — 업계 추정치로 단정적 서술 주의"
-        ],
-        "notes": "레이크머티리얼즈 실존 여부 및 사업 전환 방향은 개연성 있음. 수치 출처 보강 권고",
-        "verified_at": "2026-07-10 07:19"
-      }
+      "image_url": "images/2026-07-10_article_1.jpg"
     },
     {
       "id": 3,
@@ -95,20 +74,10 @@
         "업계 전문가들은 수입차 점유율 25% 돌파가 국내 자동차 소재·부품 산업의 체질 전환을 가속화하는 기폭제가 될 것으로 보고 있다. 단순 납품 의존 구조에서 벗어나 글로벌 Tier-1 진입과 소재 경쟁력 강화가 생존의 열쇠가 될 전망이다.",
         "향후 전망으로는 수입차 점유율이 2027년까지 27~28%까지 추가 상승할 가능성이 제기된다. 이는 국내 자동차 소재·부품 기업에게 구조적 매출 감소 위험을 의미하는 동시에, 글로벌 공급망 재편 과정에서 새로운 시장을 찾아야 하는 전략적 전환점이기도 하다."
       ],
-      "image_keyword": "imported luxury cars dealership",
+      "image_keyword": "imported car market auto parts",
       "is_featured": false,
       "timestamp": "오전 09:48",
-      "image_url": "images/2026-07-10_article_2.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'2026년 상반기 누적 기준 25% 돌파' — 미래 시점 데이터로 현재 기준 확인 필요",
-          "수입차 점유율 25% 역대 최고 주장 — 실제 통계청·카이즈유 데이터와 대조 필요"
-        ],
-        "notes": "'2026년 상반기' 미래 시점 기재 오류 의심. 점유율 수치 공식 출처 명시 필요",
-        "verified_at": "2026-07-10 07:19"
-      }
+      "image_url": "images/2026-07-10_article_2.jpg"
     },
     {
       "id": 4,
@@ -133,16 +102,7 @@
       "image_keyword": "SME venture capital investment",
       "is_featured": false,
       "timestamp": "오전 10:05",
-      "image_url": "images/2026-07-10_article_3.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "'연간 2조 원 이상 모험자본 공급' — 금융위 공식 발표 수치인지 출처 확인 필요"
-        ],
-        "notes": "중기특화 증권사 제도는 실재하며 정책 방향 부합. 공급 규모 수치 출처 보강 권고",
-        "verified_at": "2026-07-10 07:19"
-      }
+      "image_url": "images/2026-07-10_article_3.jpg"
     },
     {
       "id": 5,
@@ -164,19 +124,10 @@
         "인력 양성도 병행 과제다. TK 지역에는 경북대·포스텍·DGIST 등 이공계 중심 대학이 다수 소재하고 있어 반도체 인력 공급 기반은 충분하다는 평가다. 다만 졸업 후 수도권으로 인재가 유출되는 문제를 해결하기 위한 정주 여건 개선이 함께 추진돼야 한다는 지적도 있다.",
         "장기적으로 TK 반도체 소재 클러스터가 가시화될 경우, 경북·대구는 첨단 소재 공급과 시스템 반도체 설계(팹리스) 역량이 결합된 독자적 반도체 생태계를 갖추게 된다. 이는 수도권 편중 구조를 탈피한 한국 반도체 산업의 지역 균형 발전 모델로 자리매김할 수 있다는 기대를 모은다."
       ],
-      "image_keyword": "semiconductor fab construction site",
+      "image_keyword": "semiconductor fab cluster industrial park",
       "is_featured": false,
       "timestamp": "오전 10:22",
-      "image_url": "images/2026-07-10_article_4.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "TK 지역 전용 변전소·초순수 시설 '확보' — 계획 단계인지 확정 단계인지 불분명"
-        ],
-        "notes": "정책 방향·지역 현황 서술은 개연성 높음. 인프라 구축 진행 단계 명확화 필요",
-        "verified_at": "2026-07-10 07:19"
-      }
+      "image_url": "images/2026-07-10_article_4.jpg"
     }
   ],
   "editorial_briefing": "콩고 광산 붕괴로 탄탈럼 공급망에 경고등이 켜진 가운데, 국내는 수입차 점유율 25% 돌파로 소재·부품 생태계 재편 압박이 커지고 있다. 반면 TK 반도체 클러스터 구축과 중소기업 특화 금융 지원은 소재산업 체력 강화의 긍정 신호다.",
@@ -206,6 +157,5 @@
       "label": "TK 반도체 클러스터",
       "status": "소재 거점 선제 구축"
     }
-  ],
-  "last_reviewed_at": "2026-07-10 07:19"
+  ]
 }
