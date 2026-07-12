@@ -26,18 +26,7 @@
       "image_keyword": "semiconductor chip inflation repair",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-07-13_article_0.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "삼성전자 서비스 자재비 평균 8~15% 인상 – 공식 발표 없이 '알려졌다'로만 처리",
-          "일부 프리미엄 스마트폰 수리 비용 20% 이상 상승 – 구체적 모델·근거 미제시",
-          "'칩플레이션' 용어가 공식 경제 용어인지 출처 불명확"
-        ],
-        "notes": "핵심 수치 대부분이 익명 출처에 의존, 공식 확인 필요. 개념 정의는 무난.",
-        "verified_at": "2026-07-13 06:47"
-      }
+      "image_url": "images/2026-07-13_article_0.jpg"
     },
     {
       "id": 2,
@@ -62,18 +51,7 @@
       "image_keyword": "semiconductor university professor shortage",
       "is_featured": false,
       "timestamp": "오전 09:32",
-      "image_url": "images/2026-07-13_article_1.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "2025년 기준 반도체 관련 학과 약 120개·2020년 대비 2배 증가 – 교육부 원문 확인 필요",
-          "전임 교수 증가율 약 18% – 출처·조사 방법 미기재",
-          "기업 박사급 초봉이 조교수 연봉의 1.5~2배 – 구체 수치 근거 없음"
-        ],
-        "notes": "정책 방향은 사실에 부합하나, 핵심 통계 수치의 출처가 불명확하여 검증 필요.",
-        "verified_at": "2026-07-13 06:47"
-      }
+      "image_url": "images/2026-07-13_article_1.jpg"
     },
     {
       "id": 3,
@@ -99,17 +77,7 @@
       "image_keyword": "manganese mining battery supply",
       "is_featured": false,
       "timestamp": "오전 09:48",
-      "image_url": "images/2026-07-13_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "중국이 전 세계 망간 정련 물량의 약 93% 처리 – 통상 50~70%대로 알려져 과장 가능성",
-          "2030년 글로벌 망간 수요 3,500만 톤 전망 – 인용 기관·보고서 미명시"
-        ],
-        "notes": "LMFP·하이망간 배터리 설명 등 전반적 사실성 양호. 중국 정련 점유율 수치 재확인 권고.",
-        "verified_at": "2026-07-13 06:47"
-      }
+      "image_url": "images/2026-07-13_article_2.jpg"
     },
     {
       "id": 4,
@@ -131,21 +99,10 @@
         "전문가들은 현재의 전력 인프라 투자 사이클이 최소 10년 이상 지속될 것으로 내다보고 있다. 에너지경제연구원 연구위원은 'AI, 전기차, 재생에너지의 동시 확산이 전력망에 가하는 수요 압박은 단기에 해소될 성질이 아니다'며 '전력 인프라 산업재 기업들이 20년 만에 맞이하는 최대 호황 국면에 들어서고 있다'고 분석했다.",
         "투자 시사점으로, 전력 인프라 산업재 섹터는 AI 반도체·데이터센터 테마의 간접 수혜주로 주목받고 있다. 국내 증권가에서는 LS일렉트릭, 효성중공업, 대한전선, HD현대일렉트릭 등을 핵심 수혜주로 꼽으며, 2026~2027년 실적 성장 가시성이 높은 업종으로 분류하고 있다."
       ],
-      "image_keyword": "power transformer electrical substation",
+      "image_keyword": "power infrastructure transformer AI datacenter",
       "is_featured": false,
       "timestamp": "오전 10:05",
-      "image_url": "images/2026-07-13_article_3.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "LS일렉트릭 2026년 상반기 수주잔고 4조 2,000억·전년比 38% – 미래 시점 수치로 현재 검증 불가",
-          "효성중공업 변압기 수주잔고 3조 원 초과 – 공식 IR 자료와 대조 필요",
-          "IEA 데이터센터 전력소비 2030년 1,000TWh 초과 전망 – IEA 원문과 수치 일치 여부 확인 필요"
-        ],
-        "notes": "2026년 기준 수치가 현재 검증 불가. 기업 수주 수치는 공식 공시와 대조 필수.",
-        "verified_at": "2026-07-13 06:47"
-      }
+      "image_url": "images/2026-07-13_article_3.jpg"
     },
     {
       "id": 5,
@@ -170,18 +127,7 @@
       "image_keyword": "critical minerals ETF global investment",
       "is_featured": false,
       "timestamp": "오전 10:22",
-      "image_url": "images/2026-07-13_article_4.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "핵심광물 ETF AUM 480억 달러(2026년 상반기) – 미래 시점 수치로 현시점 검증 불가",
-          "REMX 올해 상반기 순유입 15억 달러 이상 – ETFGI 원문 확인 필요",
-          "AUM이 2023년 말 대비 2배 이상 성장 – 급격한 성장률로 출처·산정 범위 불명확"
-        ],
-        "notes": "ETF 상품명·운용사 실존 확인됨. 단, 2026년 기준 수치는 현재 검증이 불가능한 미래값.",
-        "verified_at": "2026-07-13 06:47"
-      }
+      "image_url": "images/2026-07-13_article_4.jpg"
     }
   ],
   "editorial_briefing": "칩플레이션이 서비스 시장까지 번지고 망간 등 핵심광물 공급망 경쟁이 심화되며 소재·부품 전반의 불안정성이 고조되고 있다. AI·로봇 확산이 전력 인프라 수요를 끌어올리는 한편, 핵심광물 ETF 급성장으로 투자 패러다임도 빠르게 재편 중이다.",
@@ -211,6 +157,5 @@
       "label": "핵심광물 ETF 급성장",
       "status": "투자 패러다임 전환"
     }
-  ],
-  "last_reviewed_at": "2026-07-13 06:47"
+  ]
 }
