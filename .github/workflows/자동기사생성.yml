@@ -2,8 +2,8 @@ name: 매일 자동 기사 생성
 
 on:
   schedule:
-    # 매일 오전 6시 (KST) = UTC 21:00 전날
-    - cron: '0 21 * * *'
+    # 매일 오전 5시 (KST) = UTC 20:00 전날 — Batch API 대기시간(최대 30분)을 흡수해 6시 이전 발행 유지
+    - cron: '0 20 * * *'
   workflow_dispatch:  # 수동 실행도 가능
 
 permissions:
@@ -27,10 +27,10 @@ jobs:
 
       - name: 기사 자동 생성
         env:
-       
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          USE_BATCH_API: "1"   # Batch API 사용 — 토큰 비용 50% 절감, 실패 시 자동 스트리밍 폴백
         run: python 기사자동생성.py
 
       - name: 기사 검수 (사실성 + 이미지)

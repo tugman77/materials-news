@@ -11,17 +11,28 @@ import json
 import os
 import random
 import requests
+import time
 from datetime import datetime, timezone, timedelta
 from urllib.parse import quote
 
 # ── 설정 ──────────────────────────────────────────
 ANTHROPIC_API_KEY  = os.environ.get("ANTHROPIC_API_KEY", "여기에_API키_입력")
+
+# Batch API 사용 여부 (GitHub Actions에서 USE_BATCH_API=1로 설정 → 토큰 비용 50% 절감)
+# 실시간성이 필요 없는 일일 발행이므로 Batch 제출 후 폴링, 시간 초과 시 스트리밍 폴백
+USE_BATCH_API        = os.environ.get("USE_BATCH_API", "") == "1"
+BATCH_TIMEOUT_MIN    = int(os.environ.get("BATCH_TIMEOUT_MIN", "30"))
+BATCH_POLL_SEC       = 60
 UNSPLASH_ACCESS_KEY = os.environ.get("UNSPLASH_ACCESS_KEY", "")
 PEXELS_API_KEY     = os.environ.get("PEXELS_API_KEY", "")    # https://www.pexels.com/api/
 PIXABAY_API_KEY    = os.environ.get("PIXABAY_API_KEY", "")   # https://pixabay.com/api/docs/
 OUTPUT_FILE = "articles.json"
 IMAGES_DIR  = "images"
 IMAGE_HISTORY_FILE = "image_history.json"  # 날짜 간(run 간) 이미지 재사용 방지용 영구 기록
+EVENT_MEMORY_FILE  = "event_memory.json"   # 진행 중 사건 지문 — 30일 쿨다운으로 반복 보도 차단
+
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+TELEGRAM_CHAT_ID   = os.environ.get("TELEGRAM_CHAT_ID", "")
 
 # 수집할 RSS 피드 (소재·산업·경제 분야)
 RSS_FEEDS = [
@@ -34,6 +45,89 @@ RSS_FEEDS = [
 ]
 
 KST = timezone(timedelta(hours=9))
+
+
+# ── 텔레그램 알림 ────────────────────────────────────────────────────
+def send_telegram(message: str) -> bool:
+    if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
+        print(f"[텔레그램 미설정] {message[:80]}")
+        return False
+    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
+    try:
+        resp = requests.post(url, json={
+            "chat_id": TELEGRAM_CHAT_ID,
+            "text": message,
+            "parse_mode": "HTML"
+        }, timeout=10)
+        return resp.ok
+    except Exception as e:
+        print(f"텔레그램 전송 오류: {e}")
+        return False
+
+
+# ── 중복 탐지 유틸리티 ────────────────────────────────────
+def title_similarity(t1: str, t2: str) -> float:
+    """두 제목의 2-gram 자카드 유사도 (0.0~1.0). 0.7 이상이면 같은 뉴스로 간주."""
+    if not t1 or not t2:
+        return 0.0
+    def bigrams(s):
+        return set(s[i:i+2] for i in range(len(s) - 1))
+    b1, b2 = bigrams(t1), bigrams(t2)
+    if not b1 or not b2:
+        return 0.0
+    return len(b1 & b2) / len(b1 | b2)
+
+def deduplicate_rss(items: list) -> list:
+    """같은 URL + 제목 유사도 70% 이상 항목 제거. 먼저 나온 것을 유지."""
+    seen_urls: set = set()
+    seen_titles: list = []
+    result = []
+    removed = 0
+    for item in items:
+        url   = item.get("link", "").strip()
+        title = item.get("title", "").strip()
+        if url and url in seen_urls:
+            removed += 1
+            continue
+        if url:
+            seen_urls.add(url)
+        is_dup = False
+        for st in seen_titles:
+            if title_similarity(title, st) >= 0.70:
+                print(f"   중복 RSS 제거: '{title[:35]}' (유사: '{st[:35]}')")
+                is_dup = True
+                removed += 1
+                break
+        if is_dup:
+            continue
+        seen_titles.append(title)
+        result.append(item)
+    if removed:
+        print(f"   → RSS 중복 {removed}건 제거 (남은 {len(result)}건)")
+    return result
+
+def deduplicate_articles(articles: list) -> list:
+    """생성된 기사 중 제목 유사도 70% 이상인 중복 제거. 먼저 나온 것을 유지."""
+    seen_titles: list = []
+    result = []
+    removed = 0
+    for article in articles:
+        title = article.get("title", "")
+        is_dup = False
+        for st in seen_titles:
+            sim = title_similarity(title, st)
+            if sim >= 0.70:
+                print(f"🚫 중복 기사 제거: '{title}' (유사도 {int(sim*100)}%, 유지: '{st}')")
+                is_dup = True
+                removed += 1
+                break
+        if is_dup:
+            continue
+        seen_titles.append(title)
+        result.append(article)
+    if removed:
+        print(f"   → 기사 중복 {removed}건 제거 (확정 {len(result)}건)")
+    return result
 
 # ── RSS 수집 ───────────────────────────────────────
 def collect_news_from_rss(max_per_feed=5):
@@ -54,7 +148,151 @@ def collect_news_from_rss(max_per_feed=5):
                 })
         except Exception as e:
             print(f"RSS 오류 [{name}]: {e}")
-    return collected
+    return deduplicate_rss(collected)
+
+# ══════════════════════════════════════════════════════
+# 중복 뉴스 방지 시스템 (DUPLICATE DETECTION SYSTEM)
+# ══════════════════════════════════════════════════════
+# 3단 방어:
+#   1단) 과거 기사 제목 목록 → Claude 프롬프트에 "금지어" 로 전달
+#   2단) 키워드 지문(KP) 비교 → 생성 후 40% 이상 겹치면 자동 재생성
+#   3단) event_memory.json → 광산사고·파업 등 '현장 사건'은 30일 쿨다운 강제
+# ══════════════════════════════════════════════════════
+
+# 지문 추출에 쓸 핵심 명사 사전 (확장 가능)
+_LOC_WORDS  = ["콩고", "중국", "미국", "유럽", "호주", "칠레", "인도", "러시아",
+               "아프리카", "중동", "일본", "대만", "인도네시아", "필리핀", "페루",
+               "캐나다", "브라질", "사우디", "이란"]
+_EVT_WORDS  = ["광산", "붕괴", "폭발", "화재", "파업", "홍수", "지진", "침수",
+               "산사태", "사고", "폐쇄", "조업중단", "수출금지", "제재", "감산",
+               "파산", "리콜", "사망", "부상", "실종"]
+_MAT_WORDS  = ["탄탈럼", "코발트", "리튬", "니켈", "구리", "아연", "망간", "크롬",
+               "희토류", "텅스텐", "몰리브덴", "인듐", "갈륨", "게르마늄", "셀레늄",
+               "HBM", "실리콘", "SiC", "배터리", "전구체"]
+
+
+def extract_keyword_pairs(text: str) -> set:
+    """제목·요약 텍스트에서 (장소+사건), (소재+사건) 조합 키워드 지문을 추출한다.
+    예: '콩고 광산 붕괴' → {'콩고+광산', '콩고+붕괴', '광산+붕괴'}
+    단독 핵심어도 포함: {'콩고', '광산', '붕괴'}
+    """
+    found_locs = [w for w in _LOC_WORDS if w in text]
+    found_evts = [w for w in _EVT_WORDS if w in text]
+    found_mats = [w for w in _MAT_WORDS if w in text]
+
+    pairs: set = set()
+    all_kw = found_locs + found_evts + found_mats
+    # 단독어 등록
+    pairs.update(all_kw)
+    # 2-gram 조합 등록
+    for a in found_locs:
+        for b in found_evts + found_mats:
+            pairs.add(f"{a}+{b}")
+    for a in found_evts:
+        for b in found_mats:
+            pairs.add(f"{a}+{b}")
+    return pairs
+
+
+def load_event_memory() -> dict:
+    """event_memory.json 로드.
+    구조: { "이벤트지문": {"first_date": "YYYY-MM-DD", "last_date": "YYYY-MM-DD",
+                          "count": N, "titles": [...]} }
+    """
+    try:
+        with open(EVENT_MEMORY_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
+def save_event_memory(memory: dict):
+    """event_memory.json 저장. 180일 초과 항목은 자동 삭제."""
+    today = datetime.now(KST).strftime("%Y-%m-%d")
+    cutoff = (datetime.now(KST) - timedelta(days=180)).strftime("%Y-%m-%d")
+    pruned = {k: v for k, v in memory.items() if v.get("last_date", "") >= cutoff}
+    try:
+        with open(EVENT_MEMORY_FILE, "w", encoding="utf-8") as f:
+            json.dump(pruned, f, ensure_ascii=False, indent=2)
+        print(f"🧠 이벤트 메모리 저장: {len(pruned)}개 항목")
+    except Exception as e:
+        print(f"   → 이벤트 메모리 저장 오류: {e}")
+
+
+def update_event_memory(articles: list, memory: dict):
+    """발행 확정된 기사로 event_memory 갱신."""
+    today = datetime.now(KST).strftime("%Y-%m-%d")
+    for a in articles:
+        text = a.get("title", "") + " " + (a.get("summary") or "")
+        pairs = extract_keyword_pairs(text)
+        for kp in pairs:
+            if kp in memory:
+                memory[kp]["last_date"] = today
+                memory[kp]["count"] += 1
+                titles = memory[kp].setdefault("titles", [])
+                if a.get("title") not in titles:
+                    titles.append(a.get("title", ""))
+            else:
+                memory[kp] = {
+                    "first_date": today,
+                    "last_date": today,
+                    "count": 1,
+                    "titles": [a.get("title", "")]
+                }
+
+
+def check_duplicate_articles(new_articles: list, recent_topics: list,
+                             event_memory: dict, cooldown_days: int = 30) -> list[str]:
+    """생성된 기사 중 중복으로 판단되는 인덱스(0~4)와 이유를 반환.
+
+    판단 기준 (OR 조건):
+      A) 제목 키워드 지문이 최근 기사와 40% 이상 겹침
+      B) event_memory에 동일 지문이 있고 cooldown_days 이내에 보도된 적 있음
+    """
+    today = datetime.now(KST).strftime("%Y-%m-%d")
+    cooldown_cutoff = (datetime.now(KST) - timedelta(days=cooldown_days)).strftime("%Y-%m-%d")
+
+    # 과거 기사 지문 세트 미리 빌드
+    past_pairs_list = []
+    for t in recent_topics:
+        text = t.get("title", "") + " " + t.get("summary", "")
+        past_pairs_list.append(extract_keyword_pairs(text))
+
+    duplicates = []
+    for i, article in enumerate(new_articles):
+        text = article.get("title", "") + " " + (article.get("summary") or "")
+        new_pairs = extract_keyword_pairs(text)
+        if not new_pairs:
+            continue
+
+        reason = None
+
+        # [A] 최근 기사와 키워드 겹침 비율 체크
+        for past_pairs in past_pairs_list:
+            if not past_pairs:
+                continue
+            overlap = new_pairs & past_pairs
+            ratio = len(overlap) / max(len(new_pairs), len(past_pairs))
+            if ratio >= 0.40:
+                reason = f"과거 기사와 키워드 {int(ratio*100)}% 겹침 (공통: {', '.join(list(overlap)[:5])})"
+                break
+
+        # [B] event_memory 쿨다운 체크
+        if not reason:
+            for kp in new_pairs:
+                if kp in event_memory:
+                    last = event_memory[kp].get("last_date", "")
+                    if last >= cooldown_cutoff:
+                        reason = (f"이벤트 쿨다운 [{kp}] 최근 보도: {last}"
+                                  f" (제목: {event_memory[kp]['titles'][-1] if event_memory[kp].get('titles') else '?'})")
+                        break
+
+        if reason:
+            print(f"🚫 중복 감지 기사 {i+1}: '{article.get('title')}' → {reason}")
+            duplicates.append(i)
+
+    return duplicates
+
 
 # ── 최근 N일치 아카이브에서 기사 주제 추출 ──────────
 def load_recent_topics(days: int = 14) -> list:
@@ -82,9 +320,46 @@ def load_recent_topics(days: int = 14) -> list:
 
 
 # ── Claude API로 기사 생성 ─────────────────────────
-def generate_articles_with_claude(raw_news_list, recent_topics=None):
+def _generate_via_batch(client, request_params):
+    """Message Batches API로 기사 생성 요청 (정가 대비 50% 절감).
+
+    제출 → BATCH_TIMEOUT_MIN분 동안 폴링 → 성공 시 Message 반환.
+    시간 초과·오류 시 배치를 취소하고 None 반환 (호출부가 스트리밍으로 폴백).
+    """
+    try:
+        batch = client.messages.batches.create(
+            requests=[{"custom_id": "articles", "params": request_params}]
+        )
+        print(f"   📦 Batch 제출됨: {batch.id} (최대 {BATCH_TIMEOUT_MIN}분 대기)")
+
+        deadline = time.time() + BATCH_TIMEOUT_MIN * 60
+        while time.time() < deadline:
+            status = client.messages.batches.retrieve(batch.id)
+            if status.processing_status == "ended":
+                for entry in client.messages.batches.results(batch.id):
+                    if entry.result.type == "succeeded":
+                        print("   📦 Batch 완료 — 결과 수신 (비용 50% 절감)")
+                        return entry.result.message
+                    print(f"   ⚠️  Batch 결과 실패: {entry.result.type} → 스트리밍 폴백")
+                    return None
+                return None
+            time.sleep(BATCH_POLL_SEC)
+
+        print(f"   ⚠️  Batch {BATCH_TIMEOUT_MIN}분 시간 초과 → 취소 후 스트리밍 폴백")
+        try:
+            client.messages.batches.cancel(batch.id)
+        except Exception:
+            pass
+        return None
+    except Exception as e:
+        print(f"   ⚠️  Batch 오류: {type(e).__name__}: {e} → 스트리밍 폴백")
+        return None
+
+
+def generate_articles_with_claude(raw_news_list, recent_topics=None, event_memory=None):
     """수집된 뉴스를 바탕으로 Claude가 독창적 기사 작성.
     recent_topics: 최근 N일치 기사 목록 — 이 주제들과 겹치지 않게 작성 지시.
+    event_memory:  진행 중 사건 메모리 — 쿨다운 중인 사건 지문을 명시적으로 금지.
     """
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
@@ -105,19 +380,35 @@ def generate_articles_with_claude(raw_news_list, recent_topics=None):
             f"  [{t['date']}] [{t['category']}] {t['title']}"
             for t in recent_topics
         )
-        avoid_section = f"""[최근 {len(days_set)}일간 이미 다룬 주제 — 반드시 피할 것]
-아래 기사들과 주제가 겹치면 안 됩니다.
-중복 판단 기준:
-  · 동일 기업명이 주인공인 기사 (예: OCI, 아지노모토, 아람코 등 재등장 금지)
-  · 동일 소재/물질명 중심 기사 (예: 탄탈럼, CO2, HBM 등)
-  · 동일 정책·규제 이슈 (예: 탄탈럼 수입금지, OPEC+ 감산 등)
-  · 동일 이슈 흐름 (예: 석화업계 반도체 피벗, 국제유가 변동 등)
-  · **동일 사건은 기간과 무관하게 재보도 금지** (예: 같은 광산 사고, 같은 기업 발표를
-    날짜만 바꿔 다시 쓰는 것). 실제로 새로운 후속 진행(사상자 집계 변경, 정부 대응 발표,
-    조업 재개 등)이 있을 때만 허용하며, 이 경우 제목 앞에 [속보] 또는 [후속]을 붙이고
-    본문 첫 문단에서 기존 보도 이후 무엇이 새로 확인됐는지 명시할 것.
-같은 소재를 다루더라도 "각도"가 완전히 다른 경우(예: 공급망 → 기술 개발)는 허용.
 
+        # ── 키워드 지문 기반 명시적 금지어 추출 ──────────
+        banned_pairs: set = set()
+        cooldown_cutoff = (datetime.now(KST) - timedelta(days=30)).strftime("%Y-%m-%d")
+        for t in recent_topics:
+            text = t.get("title", "") + " " + t.get("summary", "")
+            banned_pairs.update(extract_keyword_pairs(text))
+        # event_memory 쿨다운 중인 지문도 추가
+        if event_memory:
+            for kp, info in event_memory.items():
+                if info.get("last_date", "") >= cooldown_cutoff:
+                    banned_pairs.add(kp)
+        banned_str = ", ".join(sorted(banned_pairs)) if banned_pairs else "없음"
+
+        avoid_section = f"""[최근 {len(days_set)}일간 이미 다룬 주제 — 반드시 피할 것]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🚫 절대 금지 키워드 조합 (아래 단어 조합이 기사 핵심에 포함되면 해당 기사를 버리고 다른 주제로 교체):
+{banned_str}
+
+중복 판단 기준:
+  · 동일 기업명이 주인공인 기사 재등장 금지
+  · 동일 소재·물질명 중심 기사 재등장 금지
+  · 동일 정책·규제 이슈 재등장 금지
+  · **동일 사건(광산 붕괴·파업·폭발 등) 은 날짜와 관계없이 재보도 절대 금지**.
+    단, 실제 새로운 진전(사상자 집계 변경, 정부 공식 발표, 조업 재개 등)이 있으면
+    제목 앞에 [속보] 또는 [후속]을 붙이고 본문 첫 문단에 "기존 보도 이후 변경 사항"을 명시할 것.
+같은 소재라도 "각도"가 완전히 다른 경우(예: 공급망 이슈 → 기술 개발)는 허용.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[최근 기사 목록]
 {topic_lines}
 
 """
@@ -143,8 +434,8 @@ save_articles 도구를 사용해 기사 5개를 저장하세요.
 - body 배열 예시: ["첫째 단락 본문...", "둘째 단락 본문...", ...]
 """
 
-    # tool_use로 JSON 구조 보장 (스트리밍: 32000 토큰 비스트리밍 금지 우회)
-    with client.messages.stream(
+    # 요청 파라미터 (Batch·스트리밍 공용)
+    request_params = dict(
         model="claude-sonnet-4-6",
         max_tokens=32000,
         tools=[{
@@ -179,8 +470,17 @@ save_articles 도구를 사용해 기사 5개를 저장하세요.
         }],
         tool_choice={"type": "tool", "name": "save_articles"},
         messages=[{"role": "user", "content": prompt}]
-    ) as stream:
-        response = stream.get_final_message()
+    )
+
+    # 1차: Batch API (50% 할인) — 실패·시간초과 시 None 반환
+    response = None
+    if USE_BATCH_API:
+        response = _generate_via_batch(client, request_params)
+
+    # 2차(폴백): 기존 스트리밍 호출 (32000 토큰 비스트리밍 금지 우회)
+    if response is None:
+        with client.messages.stream(**request_params) as stream:
+            response = stream.get_final_message()
 
     # tool_use 블록에서 결과 추출
     tool_block = next(b for b in response.content if b.type == "tool_use")
@@ -621,40 +921,86 @@ def save_data(articles, briefing, issues):
 
 # ── 메인 실행 ──────────────────────────────────────
 def main():
+    now_str = datetime.now(KST).strftime("%Y-%m-%d %H:%M")
     print(f"[{datetime.now(KST).strftime('%H:%M')}] 기사 생성 시작...")
 
-    # 1. RSS 수집
-    print("📡 RSS 뉴스 수집 중...")
-    raw_news = collect_news_from_rss()
-    print(f"   → {len(raw_news)}건 수집됨")
+    try:
+        # 1. RSS 수집
+        print("📡 RSS 뉴스 수집 중...")
+        raw_news = collect_news_from_rss()
+        print(f"   → {len(raw_news)}건 수집됨")
 
-    # 2. 최근 기사 주제 로드 (중복 방지용, 최근 3일)
-    print("📋 최근 기사 주제 로드 중 (3일치)...")
-    recent_topics = load_recent_topics(days=14)
-    if recent_topics:
-        days_covered = sorted(set(t["date"] for t in recent_topics), reverse=True)
-        print(f"   → {len(recent_topics)}건 로드 ({', '.join(days_covered)})")
-        for t in recent_topics:
-            print(f"      [{t['date']}] {t['title']}")
-    else:
-        print("   → 아카이브 없음 (첫 실행)")
+        # 2. 최근 기사 주제 로드 (중복 방지용, 최근 14일)
+        print("📋 최근 기사 주제 로드 중 (14일치)...")
+        recent_topics = load_recent_topics(days=14)
+        if recent_topics:
+            days_covered = sorted(set(t["date"] for t in recent_topics), reverse=True)
+            print(f"   → {len(recent_topics)}건 로드 ({', '.join(days_covered)})")
+            for t in recent_topics:
+                print(f"      [{t['date']}] {t['title']}")
+        else:
+            print("   → 아카이브 없음 (첫 실행)")
 
-    # 3. Claude로 기사 생성 (최근 주제 중복 금지)
-    print("✍️  Claude API로 기사 작성 중...")
-    articles = generate_articles_with_claude(raw_news, recent_topics)
-    print(f"   → 기사 {len(articles)}건 생성됨")
+        # 2-2. 이벤트 메모리 로드 (30일 쿨다운)
+        print("🧠 이벤트 메모리 로드 중...")
+        event_memory = load_event_memory()
+        print(f"   → 추적 중 이벤트 지문 {len(event_memory)}개")
 
-    # 3. 기사 이미지 다운로드 (로컬 저장)
-    print("🖼️  기사 이미지 다운로드 중...")
-    articles = download_article_images(articles)
+        # 3. Claude로 기사 생성 (최근 주제·이벤트 메모리 중복 금지)
+        print("✍️  Claude API로 기사 작성 중...")
+        MAX_RETRY = 2
+        for attempt in range(1, MAX_RETRY + 2):
+            articles = generate_articles_with_claude(raw_news, recent_topics, event_memory)
+            print(f"   → 기사 {len(articles)}건 생성됨 (시도 {attempt})")
 
-    # 4. 편집국 브리핑 + 글로벌 이슈 레이더 생성
-    print("📰 편집국 브리핑 + 이슈 레이더 생성 중...")
-    briefing, issues = generate_editorial(articles)
+            # 3-1. 생성 후 중복 검증
+            dup_indices = check_duplicate_articles(articles, recent_topics, event_memory)
+            if not dup_indices:
+                print("   ✅ 중복 없음 — 확정")
+                break
+            if attempt > MAX_RETRY:
+                print(f"   ⚠️  {MAX_RETRY}회 재시도 후에도 중복 {len(dup_indices)}건 → 그대로 진행 (수동 검토 필요)")
+                break
+            print(f"   🔄 중복 {len(dup_indices)}건 감지 → 재생성 요청 (시도 {attempt+1}/{MAX_RETRY+1})...")
 
-    # 5. 저장
-    save_data(articles, briefing, issues)
-    print("🎉 완료!")
+        # 3-2. 제목 유사도 기반 최종 중복 제거
+        articles = deduplicate_articles(articles)
+
+        # 3. 기사 이미지 다운로드 (로컬 저장)
+        print("🖼️  기사 이미지 다운로드 중...")
+        articles = download_article_images(articles)
+
+        # 4. 편집국 브리핑 + 글로벌 이슈 레이더 생성
+        print("📰 편집국 브리핑 + 이슈 레이더 생성 중...")
+        briefing, issues = generate_editorial(articles)
+
+        # 5. 저장
+        save_data(articles, briefing, issues)
+
+        # 5-1. 이벤트 메모리 업데이트 (발행 확정 기사로 지문 갱신)
+        update_event_memory(articles, event_memory)
+        save_event_memory(event_memory)
+
+        print("🎉 완료!")
+
+        # 6. 텔레그램 완료 알림
+        title_list = "\n".join(
+            f"  {i+1}. [{a.get('category','')}] {a.get('title','')}"
+            for i, a in enumerate(articles)
+        )
+        tg_msg = (
+            f"✅ <b>소재타임스 기사 생성 완료</b>\n"
+            f"{now_str}\n\n"
+            f"기사 {len(articles)}건 생성:\n{title_list}\n\n"
+            f"📋 편집장 브리핑: {briefing[:80]}{'...' if len(briefing) > 80 else ''}"
+        )
+        send_telegram(tg_msg)
+
+    except Exception as e:
+        error_msg = f"❌ <b>소재타임스 기사 생성 오류</b>\n{now_str}\n\n{type(e).__name__}: {e}"
+        print(error_msg)
+        send_telegram(error_msg)
+        raise
 
 if __name__ == "__main__":
     main()
