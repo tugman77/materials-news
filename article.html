@@ -272,6 +272,35 @@
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang .coupang-ad-top { border-radius: 0; }
 
+  /* ── 뉴스레터 구독 CTA ── */
+  .newsletter-cta {
+    margin: 32px 0 4px;
+    border: 1px solid var(--primary);
+    border-left: 4px solid var(--accent);
+    background: #f8f9fc;
+    padding: 22px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .nl-cta-title { font-size: 16px; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+  .nl-cta-desc { font-size: 13.5px; color: var(--text-muted); line-height: 1.6; word-break: keep-all; }
+  .nl-cta-btn {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 26px;
+    cursor: pointer;
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+    transition: background .15s;
+  }
+  .nl-cta-btn:hover { background: var(--accent); }
+
   @media (max-width: 768px) {
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
@@ -357,6 +386,15 @@
       </div>
 
       <div class="art-body" id="art-body"></div>
+
+      <!-- 뉴스레터 구독 CTA (Stibee 연동 시 버튼 onclick을 구독폼 링크로 교체) -->
+      <div class="newsletter-cta">
+        <div>
+          <div class="nl-cta-title">📬 소재인사이트 뉴스레터</div>
+          <div class="nl-cta-desc">반도체·희소금속·소재 공급망의 핵심 신호만 골라 이메일로 보내드립니다.<br>30년 현장 전문가가 직접 고릅니다. 무료입니다.</div>
+        </div>
+        <button class="nl-cta-btn" onclick="openContactModal('뉴스레터 구독 신청')">구독 신청</button>
+      </div>
 
       <!-- 쿠팡 광고 (본문 하단 728×90 리더보드) -->
       <iframe class="coupang-leader-ad" src="coupang-ad-leaderboard.html" frameborder="0" scrolling="no" title="쿠팡 파트너스 광고"></iframe>

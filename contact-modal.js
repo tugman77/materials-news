@@ -37,6 +37,7 @@
         <label>문의 유형</label>
         <select id="cm-type">
           <option>광고 문의</option>
+          <option>뉴스레터 구독 신청</option>
           <option>기사 제보</option>
           <option>오류 신고</option>
           <option>기타</option>
