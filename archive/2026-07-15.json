@@ -26,18 +26,7 @@
       "image_keyword": "interest rate monetary policy",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-07-15_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "한국 10년물 국채금리 3.85%, 미국 10년물 4.20% — 최신 실제 수치와 대조 필요",
-          "2023년 초 한미 금리 역전 폭 최대 150bp — 실제 피크 수치 검증 필요",
-          "한국은행 기준금리 인상 가능성 '높아졌다' — 구체적 회의 일정·근거 출처 없음"
-        ],
-        "notes": "전반적 논리 구조는 양호하나 금리 수치·역전 폭 수치의 출처 명시 필요",
-        "verified_at": "2026-07-15 06:23"
-      }
+      "image_url": "images/2026-07-15_article_0.jpg"
     },
     {
       "id": 2,
@@ -62,18 +51,7 @@
       "image_keyword": "nuclear reactor semiconductor silicon",
       "is_featured": false,
       "timestamp": "오전 09:30",
-      "image_url": "images/2026-07-15_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "요르단 연구용 원자로(JRTR) NTD 시설 구축 완료 — 공식 발표 출처 확인 필요",
-          "NTD 실리콘 잉곳 글로벌 시장 kg당 100달러 이상 프리미엄 — 구체 가격 출처 없음",
-          "연간 최대 수십 톤 규모 NTD 잉곳 생산 가능 — '수십 톤' 범위가 모호하여 검증 필요"
-        ],
-        "notes": "NTD 기술 설명은 정확하나 생산 수치·가격 데이터 출처 보강 필요",
-        "verified_at": "2026-07-15 06:23"
-      }
+      "image_url": "images/2026-07-15_article_1.jpg"
     },
     {
       "id": 3,
@@ -98,18 +76,7 @@
       "image_keyword": "oil tanker Hormuz Strait",
       "is_featured": false,
       "timestamp": "오전 10:00",
-      "image_url": "images/2026-07-15_article_2.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "호르무즈 해협 세계 원유 해상 수송 약 20% 통과 — 통상 인용되는 수치이나 최신 데이터 확인 필요",
-          "봉쇄 시 하루 1,700만 배럴 차단 가능 — 구체 수치 출처 없음, 과장 여부 검토 필요",
-          "트럼프 대통령 '통행료 관련 발언 번복' — 구체 발언 일시·출처 미기재로 사실 확인 필요"
-        ],
-        "notes": "유가·봉쇄 수치 출처 미기재, 트럼프 발언 인용은 원문 출처 명시 필수",
-        "verified_at": "2026-07-15 06:23"
-      }
+      "image_url": "images/2026-07-15_article_2.jpg"
     },
     {
       "id": 4,
@@ -134,18 +101,7 @@
       "image_keyword": "minimum wage manufacturing factory",
       "is_featured": false,
       "timestamp": "오전 10:30",
-      "image_url": "images/2026-07-15_article_3.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "내년 최저임금 1만700원(3.7% 인상) — 최저임금위원회 공식 의결 결과와 대조 필요",
-          "올해 최저임금 1만320원 — 실제 고시된 수치와 일치 여부 확인 필요",
-          "300인 미만 기업 인건비 '수천만~수억 원 증가' — 한국경영자총협회 원문 데이터 출처 불명확"
-        ],
-        "notes": "최저임금 수치 및 경총 인용 데이터 공식 발표 출처 명기 필요",
-        "verified_at": "2026-07-15 06:23"
-      }
+      "image_url": "images/2026-07-15_article_3.jpg"
     },
     {
       "id": 5,
@@ -168,21 +124,10 @@
         "투자 측면에서 도시광산 기업들은 ESG 경영 트렌드와도 결을 같이하며 기관투자자들의 관심을 받고 있다. 희귀금속 재활용을 통한 탄소 저감 효과와 순환경제 기여도가 높은 평가를 받으면서, 관련 기업 주가가 최근 1년간 평균 30% 이상 상승한 것으로 집계된다.",
         "업계 전문가는 '도시광산 기술의 경제성이 확보되고 정책 지원이 강화되면서, 향후 10년 내 주요 희귀금속의 재활용 비중이 신규 채굴 비중을 넘어설 수 있다'며 '자원 순환 생태계 구축이 희귀금속 공급망 안보의 가장 현실적 해법'이라고 강조했다."
       ],
-      "image_keyword": "e-waste recycling rare earth metals",
+      "image_keyword": "urban mining rare metal recycling",
       "is_featured": false,
       "timestamp": "오전 11:00",
-      "image_url": "images/2026-07-15_article_4.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "IEA: 2030년까지 희귀금속 수요 현재 대비 최대 6배 증가 — IEA 보고서 제목·연도 출처 불명확",
-          "신규 광산 개발 사이클 평균 15~20년 — 광종별 편차가 크므로 일반화 여부 검토 필요",
-          "스마트폰 1대 금 0.03g·은 0.3g·팔라듐 0.015g 함유 — 기종별 편차 있어 단일 수치 제시 오해 소지"
-        ],
-        "notes": "IEA 인용 출처 불명확, 이미지 키워드가 다소 포괄적이어서 구체화 권장",
-        "verified_at": "2026-07-15 06:23"
-      }
+      "image_url": "images/2026-07-15_article_4.jpg"
     }
   ],
   "editorial_briefing": "호르무즈 긴장·최저임금 인상으로 공급망·원가 압박이 가중되는 가운데, 한국은행 금리 인상 가능성이 금융시장 변수로 부상했다. 반면 원자력 NTD 기술 수출·도시광산 성장은 소재 산업의 새 돌파구로 주목된다.",
@@ -212,6 +157,5 @@
       "label": "도시광산 희귀금속",
       "status": "2차 공급망 핵심 부상"
     }
-  ],
-  "last_reviewed_at": "2026-07-15 06:23"
+  ]
 }
