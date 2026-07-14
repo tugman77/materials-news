@@ -240,8 +240,8 @@ document.querySelectorAll('#main-nav a[data-cat]').forEach(a => {
 let allArticles = [];
 let archiveDates = [];
 let archiveIdx = 0;
-let visibleCount = 9;
-const PAGE = 9;
+let visibleCount = 20;
+const PAGE = 12;
 
 function filtered() {
   return allArticles.filter(r => r.article.category === currentCat);

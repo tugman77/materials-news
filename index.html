@@ -427,7 +427,7 @@ let isLoading = false;
 let currentFilter = '';
 const heroIndices = new Set();        // 히어로에 사용된 오늘 기사 idx → 카테고리 섹션에서 제외
 const sectionShownTitles = new Set(); // 카테고리 섹션에 표시된 기사 제목 → 최신 피드에서 제외
-const CAT_TARGET = 3;                 // 카테고리 섹션당 채울 기사 수 (한 줄 = 3열)
+const CAT_TARGET = window.innerWidth <= 768 ? 4 : 3; // 모바일: 2열×2행=4 / 데스크탑: 3열×1행=3
 const CAT_LIST = ['반도체소재', '희귀금속', '산업재', '글로벌'];
 
 // ── 링크 생성 ──
