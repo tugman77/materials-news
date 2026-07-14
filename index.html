@@ -427,6 +427,8 @@ let isLoading = false;
 let currentFilter = '';
 const heroIndices = new Set();        // 히어로에 사용된 오늘 기사 idx → 카테고리 섹션에서 제외
 const sectionShownTitles = new Set(); // 카테고리 섹션에 표시된 기사 제목 → 최신 피드에서 제외
+const CAT_TARGET = 3;                 // 카테고리 섹션당 채울 기사 수 (한 줄 = 3열)
+const CAT_LIST = ['반도체소재', '희귀금속', '산업재', '글로벌'];
 
 // ── 링크 생성 ──
 function artLink(date, idx) {
@@ -485,10 +487,27 @@ function renderHero(articles) {
   document.getElementById('hero-section').innerHTML = html;
 }
 
+// ── 카테고리별 사용 가능한(중복·히어로 제외) 기사 수 ──
+function catAvailableCount(cat) {
+  const seen = new Set();
+  let n = 0;
+  for (const r of allArticles) {
+    if (r.article.category !== cat) continue;
+    if (r.date === todayISO && heroIndices.has(r.idx)) continue; // 히어로 기사 제외
+    if (seen.has(r.article.title)) continue;                      // 같은 제목 중복 제외
+    seen.add(r.article.title);
+    n++;
+  }
+  return n;
+}
+// 모든 카테고리 섹션이 target개씩 채워졌는지
+function allCatsFilled(target) {
+  return CAT_LIST.every(c => catAvailableCount(c) >= target);
+}
+
 // ── 카테고리 섹션 렌더 ──
 function renderCatSections() {
-  const cats = ['반도체소재', '희귀금속', '산업재', '글로벌'];
-  cats.forEach(cat => {
+  CAT_LIST.forEach(cat => {
     const seenTitles = new Set(); // 섹션 내 중복 제목 방지
     const items = [];
     for (const r of allArticles) {
@@ -499,7 +518,7 @@ function renderCatSections() {
       seenTitles.add(title);
       sectionShownTitles.add(title); // 최신 피드 제외용 전역 등록
       items.push(r);
-      if (items.length >= 3) break;
+      if (items.length >= CAT_TARGET) break;
     }
     if (!items.length) return;
 
@@ -839,8 +858,18 @@ async function init() {
     }
   } catch(e) {}
 
-  // 3. 최근 2일치 아카이브 미리 로드
+  // 3. 최근 6일치 아카이브 미리 로드 (카테고리 섹션 채우기)
   await loadMoreArchive();
+  await loadMoreArchive();
+  await loadMoreArchive();
+
+  // 3-2. 각 카테고리 섹션이 CAT_TARGET개씩 찰 때까지 이전 기사 추가 로드
+  //      (아카이브 소진 또는 안전 상한 도달 시 중단)
+  let guard = 0;
+  while (!allCatsFilled(CAT_TARGET) && archiveIdx < allArchiveDates.length && guard < 15) {
+    await loadMoreArchive();
+    guard++;
+  }
 
   // 4. 카테고리 섹션 + 최신 기사 렌더
   renderCatSections();
