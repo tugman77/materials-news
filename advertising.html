@@ -66,10 +66,11 @@
   .ad-item-size { font-size: 12px; color: var(--accent); font-weight: 600; margin-bottom: 8px; }
   .ad-item-desc { font-size: 13px; color: var(--text-muted); line-height: 1.7; }
 
-  .reader-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 4px; }
-  .reader-item { background: #f0ede8; border: 1px solid var(--border); padding: 16px; text-align: center; }
-  .reader-pct { font-size: 26px; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
-  .reader-label { font-size: 12.5px; color: var(--text-muted); }
+  .section ul { margin: 8px 0 12px; padding-left: 18px; }
+  .section li { font-size: 14.5px; line-height: 1.9; color: var(--text-muted); margin-bottom: 6px; word-break: keep-all; }
+  .section li strong { color: var(--text); }
+  .ad-item-price { font-size: 14px; font-weight: 700; color: var(--accent); margin-top: 8px; }
+  .price-note { font-size: 12px; color: var(--text-light); margin-top: 12px; line-height: 1.7; }
 
   .contact-box {
     background: var(--primary); color: #fff; padding: 28px 32px; margin-top: 4px;
@@ -95,7 +96,6 @@
   @media (max-width: 640px) {
     .page-card { padding: 28px 20px; }
     .ad-grid { grid-template-columns: 1fr; }
-    .reader-grid { grid-template-columns: repeat(3, 1fr); }
     .nav-search { display: none; }
     .header-meta { display: none; }
   }
@@ -141,24 +141,16 @@
   <div class="page-card">
     <h1 class="page-title">광고안내</h1>
 
-    <!-- 독자 현황 -->
+    <!-- 타깃 독자 -->
     <div class="section">
-      <div class="section-title">독자층 현황</div>
-      <p>소재타임스는 반도체·소재·희귀금속·산업재 분야 종사자 및 관심층을 주 독자로 합니다. 업계 실무자, 연구원, 투자자, 정책 담당자 등 고관여 독자를 대상으로 광고를 집행하실 수 있습니다.</p>
-      <div class="reader-grid">
-        <div class="reader-item">
-          <div class="reader-pct">47%</div>
-          <div class="reader-label">업계 종사자<br>(제조·연구·영업)</div>
-        </div>
-        <div class="reader-item">
-          <div class="reader-pct">31%</div>
-          <div class="reader-label">투자자·애널리스트</div>
-        </div>
-        <div class="reader-item">
-          <div class="reader-pct">22%</div>
-          <div class="reader-label">학생·일반 관심층</div>
-        </div>
-      </div>
+      <div class="section-title">타깃 독자 · 편집 지향</div>
+      <p>소재타임스는 <strong>반도체·소재·희귀금속·산업재 분야의 뉴스를 매일 정리</strong>하는 산업 전문 미디어입니다. 다음 독자를 위해 만듭니다.</p>
+      <ul>
+        <li><strong>업계 실무자·연구원</strong> — 소재·부품·장비 제조, R&D, 구매·영업 담당</li>
+        <li><strong>투자자·애널리스트</strong> — 소재·반도체·희귀금속 관련주와 산업 동향을 추적하는 독자</li>
+        <li><strong>정책·일반 관심층</strong> — 공급망·산업 정책과 소재 이슈에 관심 있는 독자</li>
+      </ul>
+      <p>업계 실무자·연구원, 투자자, 정책 담당자 등 <strong>고관여 독자</strong>를 대상으로 광고를 집행하실 수 있습니다.</p>
     </div>
 
     <!-- 광고 상품 -->
@@ -169,22 +161,29 @@
           <div class="ad-item-name">배너 광고 (본문형)</div>
           <div class="ad-item-size">680 × 140 px</div>
           <div class="ad-item-desc">기사 본문 중간에 노출되는 캐러셀형 배너입니다. 높은 클릭률과 노출 빈도를 제공합니다.</div>
+          <div class="ad-item-price">월 20만원</div>
         </div>
         <div class="ad-item">
           <div class="ad-item-name">사이드바 광고</div>
           <div class="ad-item-size">300 × 300 px</div>
           <div class="ad-item-desc">우측 사이드바에 고정 노출되는 광고입니다. 페이지 전체에서 지속적으로 노출됩니다.</div>
+          <div class="ad-item-price">월 30만원</div>
         </div>
         <div class="ad-item">
           <div class="ad-item-name">리더보드 광고</div>
           <div class="ad-item-size">728 × 90 px</div>
           <div class="ad-item-desc">기사 하단에 노출되는 가로형 배너입니다. 콘텐츠 소비 후 자연스럽게 접촉됩니다.</div>
+          <div class="ad-item-price">월 15만원</div>
         </div>
         <div class="ad-item">
           <div class="ad-item-name">협찬 기사 / 네이티브 광고</div>
           <div class="ad-item-size">별도 협의</div>
           <div class="ad-item-desc">소재·반도체 산업 관련 제품·서비스를 기사 형태로 소개합니다. 상세 내용은 별도 협의.</div>
+          <div class="ad-item-price">건당 50만원</div>
         </div>
+      </div>
+      <div class="price-note">
+        ※ 상기 금액은 <strong>런칭 도입 특가</strong>이며 월 단위·VAT 별도입니다. 기간·물량에 따라 협의 가능하며, 집행 여부와 소재는 광고 정책 검토 후 확정됩니다.
       </div>
     </div>
 
