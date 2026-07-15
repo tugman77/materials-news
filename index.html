@@ -310,7 +310,7 @@
     </div>
     <div class="latest-list" id="latest-list"></div>
     <div class="load-more-wrap">
-      <button class="load-more-btn" id="load-more-btn" style="display:none" onclick="loadMoreArchive()">기사 더 불러오기 ▼</button>
+      <button class="load-more-btn" id="load-more-btn" style="display:none" onclick="showMoreLatest()">기사 더 불러오기 ▼</button>
       <div id="load-end" style="display:none;font-size:13px;color:var(--text-light);padding:8px;">모든 기사를 불러왔습니다.</div>
     </div>
   </div>
@@ -425,9 +425,11 @@ let allArchiveDates = [];  // 오늘 제외 아카이브 날짜들
 let archiveIdx = 0;
 let isLoading = false;
 let currentFilter = '';
+let latestVisible = 20;    // 최신 기사 피드 초기 노출 수 (더보기로 12개씩 증가)
+const LATEST_STEP = 12;
 const heroIndices = new Set();        // 히어로에 사용된 오늘 기사 idx → 카테고리 섹션에서 제외
 const sectionShownTitles = new Set(); // 카테고리 섹션에 표시된 기사 제목 → 최신 피드에서 제외
-const CAT_TARGET = window.innerWidth <= 768 ? 4 : 3; // 모바일: 2열×2행=4 / 데스크탑: 3열×1행=3
+const CAT_TARGET = window.innerWidth <= 640 ? 4 : 3; // 모바일(2열): 2×2=4 / 데스크탑(3열): 3×1=3 — 빈칸 없이
 const CAT_LIST = ['반도체소재', '희귀금속', '산업재', '글로벌'];
 
 // ── 링크 생성 ──
@@ -544,17 +546,22 @@ function renderCatSections() {
   });
 }
 
-// ── 최신 기사 렌더 ──
-function renderLatest(filter) {
-  const filtered = allArticles.filter(r =>
+// ── 최신 기사 필터 (히어로·섹션 기사 제외) ──
+function latestFiltered(filter) {
+  return allArticles.filter(r =>
     !(r.date === todayISO && heroIndices.has(r.idx)) && // 히어로 기사 제외
     !sectionShownTitles.has(r.article.title) &&         // 카테고리 섹션 기사 제외
     (!filter || r.article.category === filter)
   );
+}
+
+// ── 최신 기사 렌더 ──
+function renderLatest(filter) {
+  const filtered = latestFiltered(filter);
   const el = document.getElementById('latest-list');
   if (!el) return;
 
-  el.innerHTML = filtered.slice(0, 10).map(({article: a, date, idx}) => {
+  el.innerHTML = filtered.slice(0, latestVisible).map(({article: a, date, idx}) => {
     const thumb = a.image_url
       ? `<img class="li-thumb" src="${a.image_url}" alt="${a.title}" onerror="this.style.display='none'">`
       : `<div class="li-thumb-ph"></div>`;
@@ -568,6 +575,7 @@ function renderLatest(filter) {
       </div>
     </div>`;
   }).join('');
+  updateLoadMoreBtn();
 }
 
 // ── 검색 페이지 이동 ──
@@ -585,6 +593,7 @@ function navFilter(cat) {
 // ── 카테고리 필터 ──
 function filterCat(cat) {
   currentFilter = cat;
+  latestVisible = 20;   // 필터 바꾸면 초기 노출 수로 리셋
   // 네비 active
   document.querySelectorAll('.nav-inner a[data-cat]').forEach(a => {
     a.classList.toggle('active', a.dataset.cat === cat);
@@ -739,7 +748,8 @@ function updateLoadMoreBtn() {
   const btn = document.getElementById('load-more-btn');
   const end = document.getElementById('load-end');
   if (!btn || !end) return;
-  const hasMore = archiveIdx < allArchiveDates.length;
+  const hasMore = archiveIdx < allArchiveDates.length
+    || latestVisible < latestFiltered(currentFilter).length; // 아직 안 보인 로드분 있음
   if (isLoading) {
     btn.disabled = true; btn.textContent = '불러오는 중...'; btn.style.display=''; end.style.display='none';
   } else if (hasMore) {
@@ -768,6 +778,17 @@ async function loadMoreArchive() {
   updateLoadMoreBtn();
 }
 
+// ── 최신 피드 더 보기 (표시 수 증가 + 필요 시 아카이브 추가 로드) ──
+async function showMoreLatest() {
+  latestVisible += LATEST_STEP;
+  // 로드된 기사를 거의 다 보여줬고 아카이브가 남았으면 다음분 미리 로드
+  if (latestVisible >= latestFiltered(currentFilter).length && archiveIdx < allArchiveDates.length) {
+    await loadMoreArchive();   // 데이터 로드 + renderLatest
+  } else {
+    renderLatest(currentFilter);
+  }
+}
+
 async function loadUntilDate(targetDate) {
   while (archiveIdx < allArchiveDates.length && allArchiveDates[archiveIdx-1] !== targetDate) {
     await loadMoreArchive();
@@ -778,7 +799,7 @@ async function loadUntilDate(targetDate) {
 function setupScroll() {
   if (!('IntersectionObserver' in window)) return;
   const obs = new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting && !isLoading) loadMoreArchive();
+    if (entries[0].isIntersecting && !isLoading) showMoreLatest();
   }, { rootMargin: '500px' });
   const sentinel = document.getElementById('load-more-btn');
   if (sentinel) obs.observe(sentinel);
@@ -874,6 +895,13 @@ async function init() {
   // 4. 카테고리 섹션 + 최신 기사 렌더
   renderCatSections();
   renderKeywords();
+
+  // 4-2. 최신 피드가 초기 노출 수(latestVisible)만큼 차도록 이전 기사 추가 로드
+  let gLatest = 0;
+  while (latestFiltered('').length < latestVisible && archiveIdx < allArchiveDates.length && gLatest < 15) {
+    await loadMoreArchive();
+    gLatest++;
+  }
 
   // URL 파라미터/해시로 자동 필터·검색 처리 (article.html에서 넘어올 때)
   const urlParams = new URLSearchParams(location.search);

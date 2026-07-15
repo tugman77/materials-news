@@ -330,10 +330,11 @@ async function init() {
     }
   } catch(e) {}
 
-  // 최근 2일치 미리 로드
-  const preload = Math.min(2, archiveDates.length);
-  for (let i = 0; i < preload; i++) {
+  // 이 카테고리 기사가 초기 노출 수(visibleCount)만큼 찰 때까지 아카이브 로드 (최대 25일)
+  let guard = 0;
+  while (filtered().length < visibleCount && archiveIdx < archiveDates.length && guard < 25) {
     const date = archiveDates[archiveIdx++];
+    guard++;
     try {
       const res = await fetch(`archive/${date}.json`);
       if (res.ok) {
