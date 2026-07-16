@@ -25,6 +25,12 @@ jobs:
       - name: 라이브러리 설치
         run: pip install anthropic feedparser requests json-repair
 
+      - name: sojaetimes 전문 정보 수집
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+        run: python sojaetimes/collect.py
+
       - name: 기사 자동 생성
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -48,6 +54,6 @@ jobs:
         run: |
           git config user.name "소재경제신문 봇"
           git config user.email "bot@materials-press.co.kr"
-          git add articles.json images/ archive/
+          git add articles.json images/ archive/ sojaetimes/
           git commit -m "자동 기사 업데이트 $(date +'%Y-%m-%d %H:%M')" || echo "변경사항 없음"
           git push

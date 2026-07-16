@@ -319,6 +319,27 @@ def load_recent_topics(days: int = 14) -> list:
     return topics
 
 
+# ── sojaetimes 브리핑 로드 ────────────────────────────
+def load_sojaetimes_briefing() -> dict:
+    """sojaetimes/collect.py가 저장한 전문 수집 결과를 로드한다.
+    파일이 없으면 빈 dict 반환 (기존 RSS 단독으로 계속 진행).
+    """
+    date_key = datetime.now(KST).strftime("%Y-%m-%d")
+    path = f"sojaetimes/briefing_{date_key}.json"
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            briefing = json.load(f)
+        total = briefing.get("total_count", 0)
+        print(f"📊 sojaetimes 브리핑 로드: {total}건 ({date_key})")
+        return briefing
+    except FileNotFoundError:
+        print(f"   → sojaetimes 브리핑 없음 ({path}), RSS만 사용")
+        return {}
+    except Exception as e:
+        print(f"   → sojaetimes 브리핑 로드 오류: {e}")
+        return {}
+
+
 # ── Claude API로 기사 생성 ─────────────────────────
 def _generate_via_batch(client, request_params):
     """Message Batches API로 기사 생성 요청 (정가 대비 50% 절감).
@@ -356,10 +377,11 @@ def _generate_via_batch(client, request_params):
         return None
 
 
-def generate_articles_with_claude(raw_news_list, recent_topics=None, event_memory=None):
+def generate_articles_with_claude(raw_news_list, recent_topics=None, event_memory=None, sojaetimes_briefing=None):
     """수집된 뉴스를 바탕으로 Claude가 독창적 기사 작성.
-    recent_topics: 최근 N일치 기사 목록 — 이 주제들과 겹치지 않게 작성 지시.
-    event_memory:  진행 중 사건 메모리 — 쿨다운 중인 사건 지문을 명시적으로 금지.
+    recent_topics:       최근 N일치 기사 목록 — 이 주제들과 겹치지 않게 작성 지시.
+    event_memory:        진행 중 사건 메모리 — 쿨다운 중인 사건 지문을 명시적으로 금지.
+    sojaetimes_briefing: sojaetimes 전문 수집 결과 — 5개 분야 특화 이슈 우선 반영.
     """
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
@@ -415,9 +437,36 @@ def generate_articles_with_claude(raw_news_list, recent_topics=None, event_memor
     else:
         avoid_section = ""
 
+    # sojaetimes 전문 이슈 섹션 구성
+    sojaetimes_section = ""
+    if sojaetimes_briefing and sojaetimes_briefing.get("topics"):
+        lines = ["[sojaetimes 전문 이슈 — 분야별 우선 반영]",
+                 "━" * 42]
+        topic_labels = {
+            "반도체소재부품장비": "반도체 소재/부품/장비",
+            "디스플레이소재":    "디스플레이 소재",
+            "배터리이차전지":    "배터리/이차전지",
+            "희토류핵심광물":   "희토류/핵심광물",
+            "글로벌규제":       "글로벌 규제 (중국 수출규제 포함)",
+        }
+        for key, label in topic_labels.items():
+            items = sojaetimes_briefing["topics"].get(key, [])[:4]
+            if not items:
+                continue
+            lines.append(f"\n[{label}]")
+            for i, it in enumerate(items, 1):
+                lang_tag = "[영문]" if it.get("lang") == "en" else ""
+                lines.append(f"  {i}. {lang_tag}{it['title']}")
+                if it.get("summary"):
+                    lines.append(f"     {it['summary'][:120]}")
+        lines += ["━" * 42,
+                  "위 전문 이슈 중 소재타임스 독자(소부장 업계)에게 중요한 내용을 기사에 적극 반영하세요.",
+                  "특히 [글로벌 규제] 이슈는 최우선으로 검토하세요.\n"]
+        sojaetimes_section = "\n".join(lines) + "\n\n"
+
     prompt = f"""반도체·소재·희귀금속·산업재 전문 뉴스 사이트용 기사 5개를 작성해주세요.
 
-{avoid_section}{news_section}
+{avoid_section}{sojaetimes_section}{news_section}
 
 [작성 규칙]
 - 카테고리: "반도체소재" / "희귀금속" / "산업재" / "글로벌" 중 하나
@@ -946,11 +995,15 @@ def main():
         event_memory = load_event_memory()
         print(f"   → 추적 중 이벤트 지문 {len(event_memory)}개")
 
+        # 2-3. sojaetimes 전문 수집 브리핑 로드
+        print("📊 sojaetimes 전문 브리핑 로드 중...")
+        sojaetimes_briefing = load_sojaetimes_briefing()
+
         # 3. Claude로 기사 생성 (최근 주제·이벤트 메모리 중복 금지)
         print("✍️  Claude API로 기사 작성 중...")
         MAX_RETRY = 2
         for attempt in range(1, MAX_RETRY + 2):
-            articles = generate_articles_with_claude(raw_news, recent_topics, event_memory)
+            articles = generate_articles_with_claude(raw_news, recent_topics, event_memory, sojaetimes_briefing)
             print(f"   → 기사 {len(articles)}건 생성됨 (시도 {attempt})")
 
             # 3-1. 생성 후 중복 검증
