@@ -44,6 +44,10 @@
 ├── archive/               ← 날짜별 기사 아카이브
 │   ├── index.json         ← 날짜 목록 (최대 90일)
 │   └── YYYY-MM-DD.json    ← 날짜별 기사 데이터
+├── sojaetimes/            ← 전문 정보수집 파이프라인 (2026-07-16 추가)
+│   ├── collect.py         ← 5개 분야 뉴스 수집 (네이버API + Google RSS)
+│   ├── agent_prompt.md    ← RemoteTrigger 저널리스트 브리핑 프롬프트
+│   └── briefing_YYYY-MM-DD.json  ← 수집 결과 (GitHub Actions에서 생성)
 └── .github/workflows/
     └── 자동기사생성.yml   ← GitHub Actions (매일 UTC 21:00 = KST 06:00)
 ```
