@@ -25,18 +25,7 @@
       "image_keyword": "oil price surge Middle East",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-07-18_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "미·이란 '무력 충돌' 1주일 지속 — 현재 시점 기준 실제 교전 여부 확인 필요",
-          "브렌트유 4.5% 급등·89달러 후반 수치 — 실시간 시세와 교차 검증 필요",
-          "호르무즈 해협 전 세계 원유 물동량 20% 통과 — 통상 20~21% 인용, 출처 명시 권장"
-        ],
-        "notes": "소재 공급망 연계 분석은 논리적이나, 충돌 사실 자체가 픽션일 가능성 있어 팩트체크 필수",
-        "verified_at": "2026-07-18 06:28"
-      }
+      "image_url": "images/2026-07-18_article_0.jpg"
     },
     {
       "id": 2,
@@ -61,18 +50,7 @@
       "image_keyword": "semiconductor material AI development",
       "is_featured": false,
       "timestamp": "오전 09:40",
-      "image_url": "images/2026-07-18_article_1.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "AI 도입 후 신소재 후보 발굴 기간 40% 단축 — 출처·근거 없는 자사 주장으로 독립 검증 불가",
-          "AI 비전 검사로 불량률 30% 이상 감소 — 수치 출처가 '회사 측'으로만 표기, 제3자 확인 필요",
-          "KAIST 2D 반도체 AI 탐색 연구와의 연계 서술 — 구체 논문·과제명 미기재로 사실 확인 어려움"
-        ],
-        "notes": "삼양그룹 반도체소재 사업 방향은 실재하나, 핵심 수치 모두 자사 주장에만 의존해 신뢰도 제한",
-        "verified_at": "2026-07-18 06:28"
-      }
+      "image_url": "images/2026-07-18_article_1.jpg"
     },
     {
       "id": 3,
@@ -96,18 +74,7 @@
       "image_keyword": "titanium alloy foldable display",
       "is_featured": false,
       "timestamp": "오전 10:05",
-      "image_url": "images/2026-07-18_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "티타늄 합금 필름 강성이 폴리머 대비 '약 20배' — 삼성 공식 발표 여부 및 측정 조건 확인 필요",
-          "필름 두께 약 70마이크로미터(머리카락 굵기) — 극박 압연 제품으로 실제 수치 검증 필요",
-          "알루미늄·바나듐 첨가 비율로 크랙 억제 — 합금 조성 세부 정보 출처 불명확"
-        ],
-        "notes": "삼성 폴더블 티타늄 소재 혁신 방향은 업계 개연성 있으나, 구체 스펙 수치 출처 보완 필요",
-        "verified_at": "2026-07-18 06:28"
-      }
+      "image_url": "images/2026-07-18_article_2.jpg"
     },
     {
       "id": 4,
@@ -131,18 +98,7 @@
       "image_keyword": "urban mining electronic waste recycling",
       "is_featured": false,
       "timestamp": "오전 10:30",
-      "image_url": "images/2026-07-18_article_3.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "회수 금속 순도 99.99% — 도시광산 공정 특성상 달성 가능 여부 제3자 검증 필요",
-          "신규 공장 연간 처리량 3만 톤 — 기존 공장 대비 '두 배 이상' 수치와 정합성 확인 필요",
-          "한민에코텍 기업 실재 여부 — 국내 도시광산 업체로 등록 여부 및 소재지 사실 확인 권장"
-        ],
-        "notes": "도시광산 산업 맥락·정책 서술은 타당하나, 한민에코텍 실재 여부와 핵심 수치 팩트체크 요망",
-        "verified_at": "2026-07-18 06:28"
-      }
+      "image_url": "images/2026-07-18_article_3.jpg"
     },
     {
       "id": 5,
@@ -163,21 +119,10 @@
         "전문가들은 이번 이비덴 사태를 계기로 AI 반도체 관련 소재·부품 투자에서 '선별적 접근'이 더욱 중요해졌다고 조언한다. 단순히 AI 공급망에 속해 있다는 이유만으로 고평가를 유지하기 어려우며, 실제 기술 경쟁력·수주 잔고·원가 구조를 면밀히 분석해야 한다는 것이다. 국내 소재 기업들도 이 기준을 충족하는지 재점검이 필요하다.",
         "중장기적으로는 AI 반도체 수요의 구조적 성장이 소재·기판 업계를 뒷받침할 것이라는 전망이 지배적이다. 이비덴이 12% 폭락했음에도 불구하고 연초 대비로는 여전히 상당한 수익률을 유지하고 있다는 점이 이를 방증한다. 시장의 관심은 이제 단기 주가 등락보다, 어떤 소재 기업이 다음 세대 AI 반도체 패키징 기술 변화에 가장 잘 적응할 것인지로 이동하고 있다."
       ],
-      "image_keyword": "ABF substrate circuit board",
+      "image_keyword": "semiconductor packaging substrate stock market",
       "is_featured": false,
       "timestamp": "오전 10:55",
-      "image_url": "images/2026-07-18_article_4.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "이비덴 주가 하루 12.53% 폭락 — 실제 거래일 및 종가 데이터와 교차 검증 필요",
-          "시가총액 하루 1조 엔 이상 증발 — 현재 이비덴 시총 규모 대비 산술적 정합성 확인 필요",
-          "2025 회계연도 PER 40배 상회 — 출처 없는 추정치로 발표 리포트 원문 확인 권장"
-        ],
-        "notes": "이비덴·ABF 기판 사업은 실재하며 서술 맥락 양호, 주가·밸류에이션 수치 출처 명기 필요",
-        "verified_at": "2026-07-18 06:28"
-      }
+      "image_url": "images/2026-07-18_article_4.jpg"
     }
   ],
   "editorial_briefing": "미·이란 충돌로 유가 급등과 소재 공급망 불안이 가중되는 가운데, AI·반도체 소재 투자 과열 우려까지 겹치며 글로벌 소재 시장이 복합 리스크에 직면했다. 반면 티타늄 합금·도시광산 등 첨단 소재 혁신은 착실히 진전 중이다.",
@@ -207,6 +152,5 @@
       "label": "폴더블·도시광산 부상",
       "status": "첨단 소재 투자 확대"
     }
-  ],
-  "last_reviewed_at": "2026-07-18 06:28"
+  ]
 }
