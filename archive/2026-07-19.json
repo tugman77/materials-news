@@ -25,18 +25,7 @@
       "image_keyword": "semiconductor materials factory",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-07-19_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "2분기 영업이익 1200억 원 및 전년 동기 대비 40% 개선은 증권가 전망 수치로, 확정치 아님을 명확히 해야 함",
-          "폴리실리콘 평균 판가 전분기 대비 8% 상승 추정치의 출처 불분명",
-          "OCI Malaysia가 말레이시아 법인명으로 정확한지 확인 필요"
-        ],
-        "notes": "전망 수치 위주 구성으로 확정 실적과 혼동 가능성 있음. 출처 명시 보완 권장.",
-        "verified_at": "2026-07-19 05:59"
-      }
+      "image_url": "images/2026-07-19_article_0.jpg"
     },
     {
       "id": 2,
@@ -60,17 +49,7 @@
       "image_keyword": "semiconductor cluster industrial park",
       "is_featured": false,
       "timestamp": "오전 09:32",
-      "image_url": "images/2026-07-19_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "삼성 구역 60~80개·SK구역 55개 협력기업 입주 계획의 공식 출처 확인 필요",
-          "드레스덴 소부장 기업 760여 개 수치의 출처 불분명"
-        ],
-        "notes": "전반적으로 개연성 높고 팩트 오류 없음. 협력사 수치 출처 보강 권장.",
-        "verified_at": "2026-07-19 05:59"
-      }
+      "image_url": "images/2026-07-19_article_1.jpg"
     },
     {
       "id": 3,
@@ -94,18 +73,7 @@
       "image_keyword": "China memory semiconductor factory",
       "is_featured": false,
       "timestamp": "오전 09:48",
-      "image_url": "images/2026-07-19_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "CXMT 2028년 DRAM 점유율 15% 전망은 트렌드포스 인용이나 원문 확인 필요",
-          "CXMT가 현재 19nm DDR4 양산 중이라는 공정 세부 수치 검증 필요",
-          "미국 의회 보고서 '국가 안보에 용납할 수 없는 위험' 인용구의 원문·출처 불명확"
-        ],
-        "notes": "핵심 수치·인용문 출처 불명확. 트렌드포스 원문 링크 및 의회 보고서 명시 필요.",
-        "verified_at": "2026-07-19 05:59"
-      }
+      "image_url": "images/2026-07-19_article_2.jpg"
     },
     {
       "id": 4,
@@ -126,21 +94,10 @@
         "시장 전망 측면에서 전문가들은 탄탈럼의 구조적 공급 부족이 수년간 지속될 가능성이 높다고 본다. 새로운 광산 개발부터 정제 시설 가동까지 최소 5~7년이 소요되는 특성상 단기간에 공급 부족을 해소하기 어렵다. 이는 탄탈럼 가격의 중장기 상승 압력으로 작용하며, 재활용 기술과 대체소재 개발에 대한 투자를 촉진하는 동인이 될 것으로 전망된다.",
         "글로벌 탄탈럼 시장의 재편은 한국 소재·전자부품 업계에 공급망 전략 재설계를 요구하고 있다. 핵심 원자재 조달 다변화, 재활용 기술 투자, 대체 소재 개발이라는 세 가지 축을 동시에 강화하지 않으면 탄탈럼 공급망 불안에 따른 생산 차질 리스크를 피하기 어렵다는 것이 업계의 공통된 인식이다."
       ],
-      "image_keyword": "tantalum rare metal refinery",
+      "image_keyword": "tantalum capacitor rare metal",
       "is_featured": false,
       "timestamp": "오전 10:05",
-      "image_url": "images/2026-07-19_article_3.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "호주 기업 'AMG Advanced Metallurgy'는 실제 네덜란드 기업으로 국적 오류 의심",
-          "스마트폰 1대당 탄탈럼 커패시터 40개 수치의 출처 불분명",
-          "상위 15개사가 글로벌 공급량 80% 이상 장악한다는 과점 수치 출처 불명확"
-        ],
-        "notes": "AMG 국적 오류 가능성 있어 즉시 확인 필요. 주요 수치 출처 보강 요망.",
-        "verified_at": "2026-07-19 05:59"
-      }
+      "image_url": "images/2026-07-19_article_3.jpg"
     },
     {
       "id": 5,
@@ -164,17 +121,7 @@
       "image_keyword": "semiconductor export industrial complex Korea",
       "is_featured": false,
       "timestamp": "오전 10:22",
-      "image_url": "images/2026-07-19_article_4.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "상반기 수출 59억 달러 및 전년比 30% 증가 수치의 공식 발표 출처 명시 필요",
-          "축전지·소재 부문 226.1% 증가율은 매우 이례적 수치로 원 데이터 확인 필요"
-        ],
-        "notes": "수치 자체의 개연성은 있으나 출처(관세청·충북도 공식 발표)가 불명확. 근거 보강 요망.",
-        "verified_at": "2026-07-19 05:59"
-      }
+      "image_url": "images/2026-07-19_article_4.jpg"
     }
   ],
   "editorial_briefing": "태양광·반도체 소재 수요 확대로 국내 소재 기업 실적이 개선되는 가운데, 중국 CXMT의 13조 메모리 굴기가 공급망 변수로 부상했다. 용인 산단과 충북 수출 호조는 긍정적이나, 소부장 생태계 구축과 탄탈럼 등 핵심 광물 공급망 재편이 성패를 가를 전망이다.",
@@ -204,6 +151,5 @@
       "label": "충북 반도체 수출",
       "status": "상반기 역대 최고치"
     }
-  ],
-  "last_reviewed_at": "2026-07-19 05:59"
+  ]
 }
