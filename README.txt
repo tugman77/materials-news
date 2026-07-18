@@ -57,7 +57,7 @@ articles.json                     자동 생성된 기사 데이터 (실행 후 
 ## 로컬 테스트 방법
 
   1. API 키 환경변수 설정 후 스크립트 실행:
-       export ANTHROPIC_API_KEY="sk-ant-..."
+       export ANTHROPIC_API_KEY="${ANTHROPIC_API_KEY}"
        python 기사자동생성.py
 
   2. articles.json 생성 확인

@@ -1,0 +1,38 @@
+name: 주간 뉴스레터 자동 생성
+
+on:
+  schedule:
+    # 매주 금요일 오전 8시 (KST) = UTC 23시 (목요일)
+    - cron: '0 23 * * 4'
+  workflow_dispatch:  # 수동 실행 버튼
+
+jobs:
+  generate-newsletter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 저장소 체크아웃
+        uses: actions/checkout@v4
+
+      - name: Python 설치
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 의존성 설치
+        run: pip install anthropic requests
+
+      - name: 뉴스레터 생성
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python 뉴스레터생성.py
+
+      - name: 생성된 뉴스레터 커밋 & 푸시
+        run: |
+          git config user.name "소재타임스 뉴스봇"
+          git config user.email "actions@github.com"
+          git add newsletter/
+          git diff --staged --quiet || git commit -m "📰 주간 뉴스레터 자동 생성 $(date +'%Y-%m-%d')"
+          git push

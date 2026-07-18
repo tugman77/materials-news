@@ -17,11 +17,11 @@
 |------|------|
 | **제호** | 소재타임스 |
 | **영문 제호** | MATERIALS TIMES |
-| **도메인** | sojaetimes.co.kr (등록 예정) |
-| **이메일** | ads@sojaetimes.co.kr |
+| **도메인** | materialtimes.co.kr (2026-07-07 등록, 비아웹, 만료 2027-07-07) |
+| **이메일** | ads@materialtimes.co.kr (도메인 메일 개통 후 사용) |
 | **현재 URL** | tugman77.github.io/materials-news (GitHub Pages) |
 
-> 도메인 등록 후: GitHub → Settings → Pages → Custom domain → `sojaetimes.co.kr` 입력
+> DNS(비아웹) A레코드 4개 + www CNAME 설정 → GitHub Pages Custom domain `materialtimes.co.kr` 입력 → Enforce HTTPS
 
 ---
 
@@ -136,7 +136,7 @@
 
 ```bash
 cd "200 News_manager/201 News_Material industry"
-export ANTHROPIC_API_KEY="sk-ant-..."
+export ANTHROPIC_API_KEY="${ANTHROPIC_API_KEY}"
 export UNSPLASH_ACCESS_KEY="..."  # 선택: 없으면 loremflickr 사용
 pip install anthropic feedparser requests
 python 기사자동생성.py
