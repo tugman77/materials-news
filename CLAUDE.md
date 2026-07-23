@@ -1,13 +1,25 @@
 # 201 소재타임스 — CLAUDE.md
 
 ## 개요
-반도체·소재·희귀금속·산업재 전문 뉴스 자동 생성 사이트.
-매일 KST 06:00 GitHub Actions로 기사 5개 + 시세 데이터 자동 생성.
+반도체·소재·희귀금속·산업재 전문 뉴스 자동 생성 사이트. 매일 기사 5개 + 시세 데이터 자동 발행.
 
 - **GitHub 저장소:** `tugman77/materials-news`
 - **배포 방식:** GitHub Pages (main 브랜치 / root 디렉터리)
 - **AI 모델:** `claude-sonnet-4-6`
 - **DB:** 없음 (JSON 파일 기반)
+
+### 발행 하이브리드 (2026-07-23 전환) — 구독코인 우선 + API코인 백업
+API코인이 0이어도 발행이 멈추지 않도록 이원화.
+
+1. **로컬 구독코인 (우선):** 맥에서 launchd `com.aios.sojaetimes`가 매일 **KST 05:00** →
+   `800_스킬함/스크립트/소재타임스_로컬발행.command` 실행 (수집→생성→검수→push).
+   `LLM_BACKEND=claude_code`로 Claude Code 헤드리스(`claude -p --output-format json`)를 써서 **구독코인** 사용. pmset 04:57 자동 기상 + caffeinate로 발행 중 절전 방지.
+2. **클라우드 API코인 (백업):** GitHub Actions `.github/workflows/자동기사생성.yml` cron **KST 06:00**.
+   첫 `guard` 스텝이 `articles.json`의 `generated_at`에 오늘(KST) 날짜가 있으면 skip → **로컬 성공한 날은 API코인 안 씀.** 로컬 실패·맥 꺼짐이면 API코인으로 백업 발행.
+
+**백엔드 스위치** (`llm_backend.py`): `LLM_BACKEND=claude_code`(구독) / 미설정=`api`(기본, 기존 SDK 경로 그대로 — 클라우드 하위호환). `기사자동생성.py`·`기사검수.py`가 이 모듈로 분기.
+※ 로컬 python은 `/usr/bin/python3`(3.9)뿐이라 두 스크립트에 `from __future__ import annotations` 추가(3.10+ 유니온 어노테이션 회피), `json_repair`는 `--user` 설치.
+※ 구독코인을 실제로 쓰려면 맥이 05:00에 깨어 있어야 함(아니면 06:00 클라우드 백업).
 
 ---
 
