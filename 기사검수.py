@@ -11,7 +11,10 @@
   7. 텔레그램으로 검수 보고
 """
 
+from __future__ import annotations  # 로컬 Python 3.9에서 `str | None` 등 어노테이션 허용 (지연 평가)
+
 import anthropic
+import llm_backend  # 구독코인(로컬 Claude Code) / API코인(anthropic SDK) 전환
 import hashlib
 import json
 import os
@@ -406,7 +409,7 @@ def review_articles_with_claude(articles: list) -> list:
 
 review_articles 도구로 전체 검수 결과를 반환하세요."""
 
-    response = client.messages.create(
+    request_params = dict(
         model="claude-sonnet-4-6",
         max_tokens=4096,
         tools=[{
@@ -463,6 +466,11 @@ review_articles 도구로 전체 검수 결과를 반환하세요."""
         messages=[{"role": "user", "content": prompt}]
     )
 
+    # ── LLM 호출: 구독코인(Claude Code) vs API코인(anthropic SDK) ──
+    if llm_backend.using_subscription():
+        return llm_backend.call_tool(request_params, "review_articles")["reviews"]
+
+    response = client.messages.create(**request_params)
     tool_block = next(b for b in response.content if b.type == "tool_use")
     return tool_block.input["reviews"]
 

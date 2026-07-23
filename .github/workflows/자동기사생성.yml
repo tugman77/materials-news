@@ -2,8 +2,9 @@ name: 매일 자동 기사 생성
 
 on:
   schedule:
-    # 매일 오전 5시 (KST) = UTC 20:00 전날 — Batch API 대기시간(최대 30분)을 흡수해 6시 이전 발행 유지
-    - cron: '0 20 * * *'
+    # 매일 오전 6시 (KST) = UTC 21:00 전날 — 로컬 구독 발행(KST 05:00)에 1시간 여유를 주고,
+    # 로컬이 실패/누락된 날만 API코인으로 백업 발행 (아래 guard 스텝이 판단)
+    - cron: '0 21 * * *'
   workflow_dispatch:  # 수동 실행도 가능
 
 permissions:
@@ -17,21 +18,41 @@ jobs:
       - name: 코드 체크아웃
         uses: actions/checkout@v4
 
+      - name: 오늘 로컬 구독 발행 여부 확인 (백업 판단)
+        id: guard
+        run: |
+          # 로컬(맥)에서 구독코인으로 이미 오늘 기사를 발행·push 했으면 클라우드 백업을 건너뛴다.
+          # articles.json 의 generated_at 이 오늘(KST) 날짜를 포함하는지로 판단한다.
+          TODAY=$(TZ=Asia/Seoul date '+%Y년 %m월 %d일')
+          GEN=$(grep -o '"generated_at":[^,]*' articles.json 2>/dev/null | head -1)
+          echo "오늘=$TODAY / $GEN"
+          if echo "$GEN" | grep -q "$TODAY"; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "✅ 로컬 구독 발행이 이미 완료됨 — 클라우드 백업 생략 (API코인 절약)"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            echo "⚠️ 오늘 발행 없음 — 클라우드가 API코인으로 백업 발행"
+          fi
+
       - name: Python 설치
+        if: steps.guard.outputs.skip != 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: 라이브러리 설치
+        if: steps.guard.outputs.skip != 'true'
         run: pip install anthropic feedparser requests json-repair
 
       - name: sojaetimes 전문 정보 수집
+        if: steps.guard.outputs.skip != 'true'
         env:
           NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
         run: python sojaetimes/collect.py
 
       - name: 기사 자동 생성
+        if: steps.guard.outputs.skip != 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
@@ -42,6 +63,7 @@ jobs:
         run: python 기사자동생성.py
 
       - name: 기사 검수 (사실성 + 이미지)
+        if: steps.guard.outputs.skip != 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
@@ -53,6 +75,7 @@ jobs:
         run: python 기사검수.py
 
       - name: 변경사항 GitHub에 저장
+        if: steps.guard.outputs.skip != 'true'
         run: |
           git config user.name "소재경제신문 봇"
           git config user.email "bot@materials-press.co.kr"

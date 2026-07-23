@@ -4,7 +4,10 @@
 필요: pip install anthropic requests feedparser
 """
 
+from __future__ import annotations  # 로컬 Python 3.9에서 `str | None` 등 어노테이션 허용 (지연 평가)
+
 import anthropic
+import llm_backend  # 구독코인(로컬 Claude Code) / API코인(anthropic SDK) 전환
 import feedparser
 import hashlib
 import json
@@ -521,19 +524,24 @@ save_articles 도구를 사용해 기사 5개를 저장하세요.
         messages=[{"role": "user", "content": prompt}]
     )
 
-    # 1차: Batch API (50% 할인) — 실패·시간초과 시 None 반환
-    response = None
-    if USE_BATCH_API:
-        response = _generate_via_batch(client, request_params)
+    # ── LLM 호출: 구독코인(Claude Code) vs API코인(anthropic SDK) ──
+    if llm_backend.using_subscription():
+        # 로컬 구독 경로 — Claude Code 헤드리스로 JSON 직접 생성
+        articles = llm_backend.call_tool(request_params, "save_articles")["articles"]
+    else:
+        # 1차: Batch API (50% 할인) — 실패·시간초과 시 None 반환
+        response = None
+        if USE_BATCH_API:
+            response = _generate_via_batch(client, request_params)
 
-    # 2차(폴백): 기존 스트리밍 호출 (32000 토큰 비스트리밍 금지 우회)
-    if response is None:
-        with client.messages.stream(**request_params) as stream:
-            response = stream.get_final_message()
+        # 2차(폴백): 기존 스트리밍 호출 (32000 토큰 비스트리밍 금지 우회)
+        if response is None:
+            with client.messages.stream(**request_params) as stream:
+                response = stream.get_final_message()
 
-    # tool_use 블록에서 결과 추출
-    tool_block = next(b for b in response.content if b.type == "tool_use")
-    articles = tool_block.input["articles"]
+        # tool_use 블록에서 결과 추출
+        tool_block = next(b for b in response.content if b.type == "tool_use")
+        articles = tool_block.input["articles"]
     # 혹시 문자열로 반환된 경우 파싱 (double-serialization 방어)
     if isinstance(articles, str):
         print(f"⚠️  articles가 str 타입 (len={len(articles)}), json_repair 시도...")
@@ -575,41 +583,48 @@ def generate_editorial(articles):
    - status: 상태 한 줄 (12자 이내)
 """
 
-    try:
-        response = client.messages.create(
-            model="claude-sonnet-4-6",
-            max_tokens=800,
-            tools=[{
-                "name": "save_editorial",
-                "description": "편집국 브리핑과 글로벌 이슈 레이더를 저장합니다",
-                "input_schema": {
-                    "type": "object",
-                    "properties": {
-                        "briefing": {"type": "string"},
-                        "issues": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "icon":   {"type": "string", "enum": ["🔴","🟡","🟢"]},
-                                    "label":  {"type": "string"},
-                                    "status": {"type": "string"}
-                                },
-                                "required": ["icon","label","status"]
+    request_params = dict(
+        model="claude-sonnet-4-6",
+        max_tokens=800,
+        tools=[{
+            "name": "save_editorial",
+            "description": "편집국 브리핑과 글로벌 이슈 레이더를 저장합니다",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "briefing": {"type": "string"},
+                    "issues": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "icon":   {"type": "string", "enum": ["🔴","🟡","🟢"]},
+                                "label":  {"type": "string"},
+                                "status": {"type": "string"}
                             },
-                            "minItems": 4,
-                            "maxItems": 5
-                        }
-                    },
-                    "required": ["briefing","issues"]
-                }
-            }],
-            tool_choice={"type": "tool", "name": "save_editorial"},
-            messages=[{"role": "user", "content": prompt}]
-        )
-        tool_block = next(b for b in response.content if b.type == "tool_use")
-        briefing = tool_block.input["briefing"]
-        issues   = tool_block.input["issues"]
+                            "required": ["icon","label","status"]
+                        },
+                        "minItems": 4,
+                        "maxItems": 5
+                    }
+                },
+                "required": ["briefing","issues"]
+            }
+        }],
+        tool_choice={"type": "tool", "name": "save_editorial"},
+        messages=[{"role": "user", "content": prompt}]
+    )
+
+    try:
+        # ── LLM 호출: 구독코인 vs API코인 ──
+        if llm_backend.using_subscription():
+            data = llm_backend.call_tool(request_params, "save_editorial")
+            briefing, issues = data["briefing"], data["issues"]
+        else:
+            response = client.messages.create(**request_params)
+            tool_block = next(b for b in response.content if b.type == "tool_use")
+            briefing = tool_block.input["briefing"]
+            issues   = tool_block.input["issues"]
         print(f"   → 브리핑 생성 완료, 이슈 {len(issues)}개")
         return briefing, issues
     except Exception as e:
