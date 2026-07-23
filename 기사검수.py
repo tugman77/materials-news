@@ -262,8 +262,8 @@ def check_and_fix_missing_images(articles: list, date_prefix: str) -> int:
     # 1) 누락 이미지 보충
     for i, article in enumerate(articles):
         expected = f"{IMAGES_DIR}/{date_prefix}_article_{i}.jpg"
-        current = article.get("image_url", "")
-        if not os.path.exists(current) or os.path.getsize(current) < 1000:
+        current = article.get("image_url") or ""  # image_url이 None으로 존재할 수 있어 or ""로 방어
+        if not current or not os.path.exists(current) or os.path.getsize(current) < 1000:
             keyword = article.get("image_keyword", "semiconductor technology materials")
             category = article.get("category", "반도체소재")
             seed_str = f"{date_prefix}_{i}_{article.get('title','')}"
