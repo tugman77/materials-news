@@ -26,17 +26,7 @@
       "image_keyword": "SiC semiconductor radiation",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-07-27_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "결정 구조의 '80% 이상' 유지 수치는 출처 논문 미확인 상태",
-          "다이아몬드 반도체의 높은 방사선 내성 언급 — 상용화 수준 과장 가능성"
-        ],
-        "notes": "전반적으로 기술 내용 신뢰도 높음. 80% 수치 출처 보강 권장.",
-        "verified_at": "2026-07-27 07:05"
-      }
+      "image_url": "images/2026-07-27_article_0.jpg"
     },
     {
       "id": 2,
@@ -62,18 +52,7 @@
       "image_keyword": "semiconductor precursor material",
       "is_featured": false,
       "timestamp": "오전 09:20",
-      "image_url": "images/2026-07-27_article_1.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'레이크머티리얼즈' 기업 실존 여부 및 업종 적합성 확인 필요",
-          "상반기 매출 35% 증가 수치는 '추정'으로만 표기 — 공식 공시 미확인",
-          "2026년 매출 목표 1100억 원 — 회사 공식 발표 출처 불명확"
-        ],
-        "notes": "기업 실존·수치 출처 미확인. 공식 IR 자료 교차 검증 필요.",
-        "verified_at": "2026-07-27 07:05"
-      }
+      "image_url": "images/2026-07-27_article_1.jpg"
     },
     {
       "id": 3,
@@ -96,21 +75,10 @@
         "정부는 2030년까지 주요 핵심광물의 특정국 의존도를 50% 이하로 낮추겠다는 목표를 제시했다. 이를 위해 브라질뿐 아니라 호주, 인도네시아, 아프리카 광물 자원 국가들과의 복수 협력 채널을 동시에 구축하는 전략을 추진 중이다.",
         "전문가들은 이번 중남미 순방이 실질적인 성과로 이어지려면 정부 간 협력을 넘어 민간 기업들의 현지 투자와 합작법인(JV) 설립이 뒤따라야 한다고 강조한다. 외교적 성과를 공급망 안정화로 전환하는 후속 실행 체계 마련이 관건이다."
       ],
-      "image_keyword": "critical minerals Brazil mining",
+      "image_keyword": "rare earth mineral diplomacy",
       "is_featured": false,
       "timestamp": "오전 09:25",
-      "image_url": "images/2026-07-27_article_2.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "브라질의 희토류 매장량 '세계 2위' 주장 — 실제 순위는 국가마다 집계 기준 상이",
-          "이재명 대통령 국빈 방문 및 정상회담 사실 여부 — 날짜·공식 일정 확인 필요",
-          "'패키지 딜' 협력 모델 논의 — 익명 소식통 수준의 미확인 정보"
-        ],
-        "notes": "정상회담 일정·희토류 매장 순위 등 핵심 팩트 검증 필수.",
-        "verified_at": "2026-07-27 07:05"
-      }
+      "image_url": "images/2026-07-27_article_2.jpg"
     },
     {
       "id": 4,
@@ -135,17 +103,7 @@
       "image_keyword": "sodium ion battery materials",
       "is_featured": false,
       "timestamp": "오전 09:30",
-      "image_url": "images/2026-07-27_article_3.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "에코프로비엠 파일럿 라인 '연산 1000톤' 규모 — 공식 공시 출처 미확인",
-          "'중국 경쟁사 대비 우수한 성능' 주장 — 내부 평가로만 표기, 객관적 근거 없음"
-        ],
-        "notes": "기업명·역할 분담 등 주요 사실 개연성 높음. 수치 출처 보강 권장.",
-        "verified_at": "2026-07-27 07:05"
-      }
+      "image_url": "images/2026-07-27_article_3.jpg"
     },
     {
       "id": 5,
@@ -168,20 +126,10 @@
         "소재 공급망 재편은 AI·반도체 분야의 핵심 광물 경쟁과 함께 2026년 글로벌 소재 산업의 핵심 화두로 자리잡고 있다. 한미 간 AI 플랫폼·공급망 협력, 한일 간 소재·부품 제조 AI 연계 등 다차원적인 글로벌 협력 구조 속에서 한국 소재 산업의 전략적 포지셔닝이 중요해지고 있다.",
         "결국 중국 태양광 출혈경쟁이 글로벌 소재 공급망에 던지는 메시지는 명확하다. 가격 경쟁만으로는 살아남을 수 없으며, 기술력과 공급 안정성을 갖춘 소재 기업만이 재편 이후 시장에서 주도권을 쥘 수 있다. 한국 소부장 업계의 구조적 체질 개선이 더욱 절실한 시점이다."
       ],
-      "image_keyword": "China solar panel overproduction",
+      "image_keyword": "solar panel supply chain factory",
       "is_featured": false,
       "timestamp": "오전 09:35",
-      "image_url": "images/2026-07-27_article_4.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "상반기 누적 적자 '3조 6000억 원' — 복수 기업 합산 기준 및 출처 불명확",
-          "중국 태양광 모듈 생산능력이 '글로벌 수요의 3배 이상' — 추산 근거 미제시"
-        ],
-        "notes": "거시 흐름 서술은 타당하나 핵심 수치의 출처 명기 필요.",
-        "verified_at": "2026-07-27 07:05"
-      }
+      "image_url": "images/2026-07-27_article_4.jpg"
     }
   ],
   "editorial_briefing": "우주·반도체·배터리 등 첨단 소재 경쟁이 전방위로 격화되는 가운데, 한-브라질 핵심광물 협력으로 공급망 다변화에 속도가 붙었다. 중국발 태양광 과잉공급 충격은 글로벌 소재 밸류체인 재편을 더욱 압박하고 있다.",
@@ -211,6 +159,5 @@
       "label": "레이크머티리얼즈",
       "status": "매출 1100억 목표"
     }
-  ],
-  "last_reviewed_at": "2026-07-27 07:05"
+  ]
 }
