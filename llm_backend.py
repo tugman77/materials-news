@@ -84,12 +84,17 @@ def call_tool(request_params: dict, tool_name: str) -> dict:
         capture_output=True, text=True, timeout=CLAUDE_CODE_TIMEOUT,
     )
     if proc.returncode != 0:
+        # 오류 상세는 stderr가 비어 있을 때가 많아 stdout(JSON 응답의 result 등)도 함께 노출
+        detail = (proc.stderr or "").strip() or (proc.stdout or "").strip()
         raise RuntimeError(
-            f"claude 헤드리스 실패(rc={proc.returncode}): {proc.stderr[:400]}"
+            f"claude 헤드리스 실패(rc={proc.returncode}): {detail[:600] or '(출력 없음 — rate limit/네트워크 의심)'}"
         )
 
-    envelope = json.loads(proc.stdout)
+    try:
+        envelope = json.loads(proc.stdout)
+    except json.JSONDecodeError:
+        raise RuntimeError(f"claude 헤드리스 응답 JSON 파싱 실패: {(proc.stdout or '')[:600]}")
     if envelope.get("is_error"):
-        raise RuntimeError(f"claude 헤드리스 오류 응답: {str(envelope.get('result'))[:400]}")
+        raise RuntimeError(f"claude 헤드리스 오류 응답: {str(envelope.get('result'))[:600]}")
 
     return _parse_json(envelope.get("result", ""))
