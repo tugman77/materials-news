@@ -1017,8 +1017,18 @@ def main():
         # 3. Claude로 기사 생성 (최근 주제·이벤트 메모리 중복 금지)
         print("✍️  Claude API로 기사 작성 중...")
         MAX_RETRY = 2
+        articles = None
         for attempt in range(1, MAX_RETRY + 2):
-            articles = generate_articles_with_claude(raw_news, recent_topics, event_memory, sojaetimes_briefing)
+            try:
+                new_articles = generate_articles_with_claude(raw_news, recent_topics, event_memory, sojaetimes_briefing)
+            except Exception as e:
+                # 재생성 시도(2회차 이후) 실패는 직전 성공 결과로 계속 진행 — 중복 1건 남더라도
+                # 발행 자체가 통째로 중단되는 것보다 낫다. 최초 시도 실패는 그대로 전파.
+                if articles:
+                    print(f"   ⚠️  재생성 실패({e}) — 직전 시도({attempt - 1}) 결과로 계속 진행")
+                    break
+                raise
+            articles = new_articles
             print(f"   → 기사 {len(articles)}건 생성됨 (시도 {attempt})")
 
             # 3-1. 생성 후 중복 검증

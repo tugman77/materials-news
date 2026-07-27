@@ -12,7 +12,7 @@
 API코인이 0이어도 발행이 멈추지 않도록 이원화.
 
 1. **로컬 구독코인 (우선):** 맥에서 launchd `com.aios.sojaetimes`가 매일 **KST 05:00** →
-   `800_스킬함/스크립트/소재타임스_로컬발행.command` 실행 (수집→생성→검수→push).
+   `800_스킬함/스크립트/소재타임스_로컬발행.command` 실행 (수집→생성→검수→기사기획브리핑→push).
    `LLM_BACKEND=claude_code`로 Claude Code 헤드리스(`claude -p --output-format json`)를 써서 **구독코인** 사용. pmset 04:57 자동 기상 + caffeinate로 발행 중 절전 방지.
 2. **클라우드 API코인 (백업):** GitHub Actions `.github/workflows/자동기사생성.yml` cron **KST 06:00**.
    첫 `guard` 스텝이 `articles.json`의 `generated_at`에 오늘(KST) 날짜가 있으면 skip → **로컬 성공한 날은 API코인 안 씀.** 로컬 실패·맥 꺼짐이면 API코인으로 백업 발행.
@@ -58,8 +58,16 @@ API코인이 0이어도 발행이 멈추지 않도록 이원화.
 │   └── YYYY-MM-DD.json    ← 날짜별 기사 데이터
 ├── sojaetimes/            ← 전문 정보수집 파이프라인 (2026-07-16 추가)
 │   ├── collect.py         ← 5개 분야 뉴스 수집 (네이버API + Google RSS)
-│   ├── agent_prompt.md    ← RemoteTrigger 저널리스트 브리핑 프롬프트
-│   └── briefing_YYYY-MM-DD.json  ← 수집 결과 (GitHub Actions에서 생성)
+│   ├── agent_prompt.md    ← 기사기획브리핑.py 프롬프트 스펙 요약본
+│   ├── briefing_YYYYMMDD.json        ← 수집 결과
+│   └── YYYYMMDD_소재타임스_기사기획브리핑.md  ← 기사기획브리핑.py 산출물
+├── 기사기획브리핑.py       ← 기사 기획 지원 에이전트 (2026-07-26 추가, 구독코인 전용)
+│   국내 수집본(sojaetimes/briefing) 재사용 + WebSearch/WebFetch 글로벌 보강 →
+│   이슈별 [A]중요도~[E]선행보도 분석 + ★★★ 초안 뼈대 → md 저장 + 텔레그램 발송.
+│   오늘 이미 발행된 5건과 겹치면 "후속 심화 필요"로 표시(중복 추천 방지).
+│   ※ 클라우드 RemoteTrigger 버전(Google Drive+Gmail)은 은퇴 — Gmail MCP가 초안 생성만
+│      가능하고 실제 발송이 안 돼 10일치가 임시보관함에 안 읽힌 채 쌓여있던 것을 발견,
+│      기사검수.py가 쓰는 텔레그램 봇 재사용 방식으로 로컬 전환.
 └── .github/workflows/
     └── 자동기사생성.yml   ← GitHub Actions (매일 UTC 21:00 = KST 06:00)
 ```
