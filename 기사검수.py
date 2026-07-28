@@ -531,8 +531,8 @@ def send_review_report(articles: list, reviews: list, naver_map: dict,
     if not has_issues:
         lines.append("\n✨ 모든 기사 검수 통과")
 
-    send_telegram("\n".join(lines))
-    print("텔레그램 검수 보고 전송 완료")
+    ok = send_telegram("\n".join(lines))
+    print("텔레그램 검수 보고 전송 완료" if ok else "⚠️ 텔레그램 검수 보고 전송 실패")
 
 
 # ── 메인 ─────────────────────────────────────────────────────
