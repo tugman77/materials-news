@@ -544,6 +544,15 @@
       const article = data.articles[articleId];
       if (!article) throw new Error('기사 없음');
 
+      // 정본은 정적 페이지(news/YYYY-MM-DD-N.html). 이 페이지는 옛 링크 호환용이라
+      // canonical을 정적 페이지로 넘겨 중복 콘텐츠로 잡히지 않게 한다.
+      const dk = articleDate || data.date_key;
+      if (dk) {
+        const link = document.head.querySelector('link[rel="canonical"]')
+          || document.head.appendChild(Object.assign(document.createElement('link'), {rel:'canonical'}));
+        link.href = `https://tugman77.github.io/materials-news/news/${dk}-${articleId}.html`;
+      }
+
       // 속보 바 업데이트
       document.getElementById('breaking-text').textContent =
         data.articles.map(a => a.title).join('  |  ');

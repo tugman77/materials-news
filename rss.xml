@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>소재타임스 — MATERIALS TIMES</title>
+    <link>https://tugman77.github.io/materials-news/</link>
+    <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
+    <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
+    <language>ko-KR</language>
+    <lastBuildDate>Wed, 29 Jul 2026 23:18:32 +0900</lastBuildDate>
+    <item>
+      <title>KAIST, 150℃ 저온 적층 원천기술 세계 최초</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-28-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-28-0.html</guid>
+      <category>반도체소재</category>
+      <description>KAIST 연구팀이 150도 저온에서 반도체 웨이퍼를 결정학적으로 정렬해 쌓는 원천기술을 세계 최초로 구현했다. 기존 고온 공정 대비 에너지 소비를 최대 60% 줄이면서도 동등한 소자 성능을 확보해 AI 반도체 소재·장비 업계에 광범위한 파급효과가 기대된다.</description>
+      <pubDate>Tue, 28 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>이엔에프테크놀로지, 고난도 습식 식각 시장 선점</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-28-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-28-1.html</guid>
+      <category>반도체소재</category>
+      <description>이엔에프테크놀로지가 고난도 습식 식각 기술을 앞세워 첨단 반도체 공급망의 핵심 소재 기업으로 자리매김하고 있다. 고기능성 에칭 케미컬 수요 급증으로 올해 상반기 매출이 전년 동기 대비 약 25% 증가한 것으로 추산된다.</description>
+      <pubDate>Tue, 28 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>OLED 소재기업 SFC, 코스피 상장 예심 청구</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-28-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-28-2.html</guid>
+      <category>산업재</category>
+      <description>OLED 발광재료 전문 기업 SFC가 유가증권시장 상장 예비심사를 청구하며 기업공개 절차에 본격 돌입했다. 삼성디스플레이가 2대 주주로 있는 SFC의 IPO 성공 여부가 국내 디스플레이 소재 투자 생태계에 미칠 영향에 업계 이목이 집중되고 있다.</description>
+      <pubDate>Tue, 28 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>외국인, 7월 반도체 소부장 집중 매수</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-28-3.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-28-3.html</guid>
+      <category>글로벌</category>
+      <description>외국인 투자자들이 7월 한 달간 국내 증시에서 13조 원 이상을 순매수하는 가운데 반도체 소재·부품·장비(소부장) 종목이 핵심 매수 대상으로 부각됐다. AI 반도체 슈퍼사이클 기대감과 국내 반도체 클러스터 투자 확대가 글로벌 자금을 끌어들이는 핵심 요인으로 분석된다.</description>
+      <pubDate>Tue, 28 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>구미, 전자유리·그래핀으로 AI 소재 허브 도전</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-28-4.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-28-4.html</guid>
+      <category>산업재</category>
+      <description>경북 구미시가 전자유리와 그래핀 등 AI 반도체 핵심 소재 산업 육성에 본격 나서며 첨단소재 허브로의 도약을 선언했다. 기존 전자 산업 기반을 활용해 2027년까지 관련 기업 30곳 이상 유치, 매출 1조 원 달성을 목표로 한다.</description>
+      <pubDate>Tue, 28 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>우주 방사선 버티는 차세대 반도체 소재 밝혀졌다</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-27-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-27-0.html</guid>
+      <category>반도체소재</category>
+      <description>극한 우주 환경에서 방사선에 노출된 차세대 반도체 소재의 내구성을 실시간으로 분석한 연구 결과가 공개됐다. 특정 소재가 방사선에도 구조적 안정성을 유지한다는 사실이 확인되며 우주·방산 반도체 소재 개발에 새 이정표를 세웠다.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>레이크머티리얼즈, 매출 1100억 목표…글로벌 공략 가속</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-27-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-27-1.html</guid>
+      <category>반도체소재</category>
+      <description>반도체 소재 전문기업 레이크머티리얼즈가 올해 매출 1100억 원 달성을 목표로 글로벌 고객사 확대에 나서고 있다. 국내외 반도체 소재 수요 증가에 발맞춰 제품 포트폴리오를 고도화하며 공급망 국산화의 선두주자로 떠오르고 있다.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>한-브라질 정상회담, 핵심광물 공급망 협력 본격화</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-27-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-27-2.html</guid>
+      <category>희귀금속</category>
+      <description>이재명 대통령이 브라질을 국빈 방문해 룰라 대통령과 핵심광물 공급망 협력 방안을 논의했다. 세계 2위 희토류 매장국 브라질과의 협력 강화는 중국 의존도를 낮추려는 한국의 자원 외교에 새로운 전기가 될 전망이다.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>소듐배터리 소재 동맹 출범…K-배터리 밸류체인 재편</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-27-3.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-27-3.html</guid>
+      <category>글로벌</category>
+      <description>에코프로비엠이 애경케미칼, 솔브레인과 손잡고 소듐이온배터리 핵심 소재 공급망 구축에 나섰다. 리튬이온배터리의 대안으로 주목받는 소듐배터리의 국내 밸류체인이 본격적으로 형성되기 시작했다.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>중국 태양광 출혈경쟁 심화…소재 공급망 재편 압박</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-27-4.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-27-4.html</guid>
+      <category>글로벌</category>
+      <description>중국 태양광 업계가 극심한 공급 과잉으로 상반기 3조 6000억 원대 적자를 기록했다. 중국 정부가 2027년부터 강력한 규제를 예고한 가운데, 관련 소재 공급망 재편이 불가피해졌다.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>티이엠씨씨엔에스, SK하이닉스 소재 공급 재개</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-25-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-25-0.html</guid>
+      <category>반도체소재</category>
+      <description>반도체 소재 전문기업 티이엠씨씨엔에스가 충북 보은공장에서 SK하이닉스향 핵심 소재 공급을 재개하고 첫 출하를 완료했다. 품질 인증 통과와 공급망 정상화가 동시에 이뤄지며 소재 자립화 흐름에 긍정적 신호를 보내고 있다.</description>
+      <pubDate>Sat, 25 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>삼성D, K-디스플레이서 미래차·AI OLED 선봬</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-25-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-25-1.html</guid>
+      <category>산업재</category>
+      <description>삼성디스플레이가 K-디스플레이 2026에서 미래차·AI·게이밍 분야에 특화된 차세대 OLED 기술을 공개했다. 고성능 패널 양산 확대에 따라 국내 OLED 소재·부품 업계의 수혜가 기대된다.</description>
+      <pubDate>Sat, 25 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>광주시, 반도체 소부장 특화단지 유치 도전장</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-25-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-25-2.html</guid>
+      <category>반도체소재</category>
+      <description>광주특별시가 반도체 소재·부품·장비 특화단지 유치 경쟁에 본격 뛰어들었다. 지역 제조 인프라와 연구기관 역량을 결합해 반도체 공급망 거점으로 도약하겠다는 구상이다.</description>
+      <pubDate>Sat, 25 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>충주, 핵심광물 국산화로 소재 자립 시동</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-25-3.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-25-3.html</guid>
+      <category>희귀금속</category>
+      <description>충주시가 반도체·첨단 소재 산업에 필요한 핵심광물의 국내 생산 및 공급망 구축에 나섰다. 해외 의존도를 낮추고 국산 공급망을 확보해 소재 자립 거점도시로 도약한다는 계획이다.</description>
+      <pubDate>Sat, 25 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>AI 반도체 공급망 병목, 기술 아닌 '소재 부족'</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-25-4.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-25-4.html</guid>
+      <category>글로벌</category>
+      <description>AI 반도체 수요 폭증으로 공급망의 실질적 병목이 설계·기술력이 아닌 소재 부족으로 드러나고 있다. 특수 소재와 공정 가스 공급이 팹리스·파운드리의 생산 확대 속도를 따라가지 못하는 구조적 불균형이 심화되는 상황이다.</description>
+      <pubDate>Sat, 25 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>OCI, 반도체 소재 앞세워 2분기 433억 흑자</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-23-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-23-0.html</guid>
+      <category>반도체소재</category>
+      <description>OCI가 2026년 2분기 영업이익 433억원으로 흑자전환하며 법인 분할 이후 최대 분기 실적을 달성했다. 반도체 소재와 기초화학 부문이 동반 개선됐고, 회사는 반도체 소재를 중장기 핵심 성장 축으로 공식화했다.</description>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>월덱스, 구미에 2600억 투자…소부장 거점화</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-23-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-23-1.html</guid>
+      <category>산업재</category>
+      <description>반도체 부품 전문기업 월덱스가 경북 구미에 2600억원 규모 설비 투자를 확정했다. 정부의 서남권 투자 촉진 기조에도 소부장 기업들이 구미를 선택하는 흐름이 이어지며 구미의 반도체 소부장 거점화 전략에 탄력이 붙고 있다.</description>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>국민성장펀드, 핵심광물 공급망 투자 본격화</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-23-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-23-2.html</guid>
+      <category>희귀금속</category>
+      <description>금융위원회와 산업통상자원부가 국민성장펀드를 핵심광물 공급망 강화에 활용하기로 했다. 민간 투자자들이 부담하기 어려운 지정학적 리스크를 공공 부문이 분담해 핵심광물 확보 자금 조달 체계를 획기적으로 개선할 것으로 기대된다.</description>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>머크, K-디스플레이서 중수소화 OLED 소재 공개</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-23-3.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-23-3.html</guid>
+      <category>반도체소재</category>
+      <description>한국머크가 K-디스플레이 2026에서 중수소화(deuterated) OLED 소재와 차세대 광학 솔루션을 공개했다. 기존 소재 대비 발광 효율과 수명을 동시에 향상시킨 신소재로 국내 디스플레이 소재 업계의 관심이 집중되고 있다.</description>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>국민성장펀드, LG디스플레이에 1조원대 저리 지원</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-23-4.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-23-4.html</guid>
+      <category>글로벌</category>
+      <description>국민성장펀드가 OLED 산업 경쟁력 강화를 위해 LG디스플레이에 1조원대 저리 대출을 지원하기로 결정했다. 재무 압박을 받던 LG디스플레이는 이 자금으로 OLED 생산 설비 확충과 기술 개발을 가속화하고 글로벌 디스플레이 시장 선두 지위를 굳힌다는 전략이다.</description>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>최태원 &quot;내년 반도체 수요 50% 폭증…소재·장비 증설이 생명줄&quot;</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-20-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-20-0.html</guid>
+      <category>반도체소재</category>
+      <description>최태원 대한상공회의소 회장이 글로벌 메모리 반도체 수요가 내년 최소 50% 이상 급증할 것이라 경고하며, 소재·부품·장비 공급망의 신속한 증설을 최우선 과제로 꼽았다. 한국은행도 반도체발 교역조건 개선이 소부장 업계 전반으로 확산돼야 한다고 강조했다.</description>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>경북 구미, 대경권 반도체 소부장 혁신거점 구축 본격화</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-20-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-20-1.html</guid>
+      <category>반도체소재</category>
+      <description>경상북도가 구미를 중심으로 대경권 반도체 소재·부품·장비 혁신거점 구축에 본격 나섰다. 반도체 공급망 국산화와 국가 안보 강화를 동시에 겨냥한 이번 프로젝트는 지역 소재 기업들의 경쟁력 도약 발판이 될 전망이다.</description>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>중희토류 수요 급증…제이에스링크, 방산 공급망 수혜 본격화</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-20-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-20-2.html</guid>
+      <category>희귀금속</category>
+      <description>글로벌 방산 투자 확대와 희토류 공급망 다변화 흐름 속에 중희토류 몸값이 가파르게 오르고 있다. 제이에스링크 등 서방권 영구자석 공급망 확대 수혜 기업들이 주목받으며, 희토류 관련 투자 패러다임이 빠르게 변화하고 있다.</description>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>美 태양광 공급망 규제 강화…한화솔루션·OCI 실적 회복 탄력</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-20-3.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-20-3.html</guid>
+      <category>글로벌</category>
+      <description>미국이 중국산 태양광 공급망에 대한 규제를 대폭 강화하면서 비중국산 태양광 소재를 보유한 한화솔루션과 OCI홀딩스가 직접적인 수혜를 받고 있다. 현지 제품 가격 상승과 정책 지원이 맞물려 두 기업의 실적 회복에 가속도가 붙는 모습이다.</description>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>UNIST, 산화물 반도체 결함 원리 세계 최초 규명…OLED 소재 혁신 기대</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-20-4.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-20-4.html</guid>
+      <category>반도체소재</category>
+      <description>UNIST 반도체소재·부품대학원 연구팀이 디스플레이 핵심 소자인 산화물 반도체 내부의 '산소 빈자리 결함' 작동 원리를 이론 계산으로 세계 최초 입증했다. 이번 성과는 OLED·차세대 디스플레이 소재 개발에 획기적인 전기를 마련할 것으로 기대된다.</description>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>OCI홀딩스, 2분기 1200억 흑자…태양광·반도체 소재 쌍끌이</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-19-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-19-0.html</guid>
+      <category>반도체소재</category>
+      <description>OCI홀딩스가 태양광 폴리실리콘과 반도체 소재 사업 호조에 힘입어 2분기 약 1200억 원 규모의 영업이익을 기록할 것으로 전망된다. 반도체 소재 부문의 수익성 개선이 전체 실적을 견인하고 있다는 분석이다.</description>
+      <pubDate>Sun, 19 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>용인 반도체 산단, 소부장 생태계 구축이 성패 좌우</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-19-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-19-1.html</guid>
+      <category>반도체소재</category>
+      <description>용인 반도체 국가산업단지의 성공 여부가 소재·부품·장비 생태계 구축에 달렸다는 분석이 나오고 있다. 삼성전자·SK하이닉스 팹을 중심으로 최대 135개 협력기업이 입주할 계획이며, 중앙정부의 실행력이 핵심 변수로 꼽힌다.</description>
+      <pubDate>Sun, 19 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>中 메모리 굴기 CXMT, 13조 실탄…韓 소재 공급망 변수</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-19-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-19-2.html</guid>
+      <category>글로벌</category>
+      <description>중국 메모리 반도체 기업 CXMT가 13조 원 규모의 대규모 투자를 단행하며 삼성전자·SK하이닉스를 위협하는 '메모리 3강' 구도를 예고하고 있다. 미국의 장비 수출 규제와 소재 공급망 재편이 CXMT 성장의 핵심 변수로 부각된다.</description>
+      <pubDate>Sun, 19 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>글로벌 탄탈럼 시장 상위 15개사 경쟁 구도 재편 가속</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-19-3.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-19-3.html</guid>
+      <category>희귀금속</category>
+      <description>글로벌 탄탈럼 시장이 공급망 다변화 압력과 수요 증가로 급격한 구도 재편을 맞고 있다. 전자·반도체·방산 수요가 맞물리며 상위 15개 기업 간 점유율 경쟁이 더욱 치열해지고 있다.</description>
+      <pubDate>Sun, 19 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>충북 반도체·소재 수출 상반기 역대 최고…59억 달러 돌파</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-19-4.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-19-4.html</guid>
+      <category>산업재</category>
+      <description>충청북도가 반도체와 이차전지 소재 수출 호조에 힘입어 올해 상반기 역대 최고 수출 실적을 기록했다. 반도체가 수출을 이끌고 축전지·소재가 뒤를 받쳐 지역 산업 생태계의 체력을 입증했다.</description>
+      <pubDate>Sun, 19 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+  </channel>
+</rss>

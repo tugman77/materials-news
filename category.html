@@ -210,8 +210,17 @@ function fmtDate(s) {
   const [y,m,d] = s.split('-');
   return `${y}.${m}.${d}`;
 }
+// 오늘자 기사의 날짜 키 — articles.json의 date_key로 채워진다.
+let todayKey = null;
+
+// 기사 링크는 정적 페이지(news/YYYY-MM-DD-N.html)를 정본으로 가리킨다.
 function artLink(date, idx) {
-  return date === todayISO ? `article.html?id=${idx}` : `article.html?date=${date}&id=${idx}`;
+  // 오늘 기사는 실제 발행일(todayKey)로만 경로를 만든다 — 브라우저 로컬 날짜로
+  // 추측하면 발행이 하루 밀렸을 때 없는 파일을 가리키게 된다.
+  if (date === todayISO) {
+    return todayKey ? `news/${todayKey}-${idx}.html` : `article.html?id=${idx}`;
+  }
+  return `news/${date}-${idx}.html`;
 }
 
 const CATS = {
@@ -316,6 +325,7 @@ async function init() {
     if (res.ok) {
       const data = await res.json();
       const arts = data.articles || [];
+      todayKey = data.date_key || null;
       document.getElementById('breaking-text').textContent = arts.map(a => a.title).join('  |  ');
       arts.forEach((a, idx) => allArticles.push({article:a, date:todayISO, idx}));
     }

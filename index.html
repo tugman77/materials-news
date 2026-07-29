@@ -433,10 +433,19 @@ const CAT_TARGET = window.innerWidth <= 640 ? 4 : 3; // 모바일(2열): 2×2=4 
 const CAT_LIST = ['반도체소재', '희귀금속', '산업재', '글로벌'];
 
 // ── 링크 생성 ──
+// 오늘자 기사의 날짜 키 — articles.json의 date_key로 채워진다.
+// (todayISO는 브라우저 로컬 시간이라 해외 접속 시 KST 발행일과 어긋날 수 있어 별도 보관)
+let todayKey = null;
+
+// 기사 링크는 정적 페이지(news/YYYY-MM-DD-N.html)를 정본으로 가리킨다.
+// 크롤러가 따라갈 수 있는 실제 HTML이라 색인·애드센스 심사 대상이 된다.
 function artLink(date, idx) {
-  return date === todayISO
-    ? `article.html?id=${idx}`
-    : `article.html?date=${date}&id=${idx}`;
+  // 오늘 기사는 실제 발행일(todayKey)로만 경로를 만든다 — 브라우저 로컬 날짜로
+  // 추측하면 발행이 하루 밀렸을 때 없는 파일을 가리키게 된다.
+  if (date === todayISO) {
+    return todayKey ? `news/${todayKey}-${idx}.html` : `article.html?id=${idx}`;
+  }
+  return `news/${date}-${idx}.html`;
 }
 
 // ── 태그 HTML ──
@@ -616,7 +625,7 @@ function renderRanking(articles) {
   const el = document.getElementById('rank-list');
   if (!el) return;
   el.innerHTML = articles.slice(0, 7).map((a, i) =>
-    `<div class="rank-item" onclick="location.href='article.html?id=${i}'">
+    `<div class="rank-item" onclick="location.href='${artLink(todayISO, i)}'">
       <span class="rank-num">${i+1}</span>
       <span class="rank-title">${a.title}</span>
     </div>`
@@ -854,6 +863,7 @@ async function init() {
     if (!res.ok) throw new Error();
     const data = await res.json();
     const arts = data.articles || [];
+    todayKey = data.date_key || null;
 
     document.getElementById('breaking-text').textContent = arts.map(a=>a.title).join('  |  ');
     const upEl = document.getElementById('update-time');

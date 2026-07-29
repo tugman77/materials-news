@@ -944,6 +944,91 @@ def download_article_images(articles):
     return articles
 
 
+# ── SEO 파일 생성 ──────────────────────────────────
+SITE_URL = "https://tugman77.github.io/materials-news"  # 커스텀 도메인 연결 시 변경
+
+
+def _xml_escape(s) -> str:
+    return (str(s).replace("&", "&amp;").replace("<", "&lt;")
+            .replace(">", "&gt;").replace('"', "&quot;"))
+
+
+def generate_seo_files(date_key, now):
+    """sitemap.xml + rss.xml 생성 — 검색엔진 크롤링·구독 경로 확보.
+    기사 URL은 정적 페이지(news/YYYY-MM-DD-N.html)를 가리킨다.
+    article.html?date=..&id=.. 는 본문이 JS로만 그려져 크롤러에겐 빈 페이지다.
+    순수 파일 생성(추가 API 호출 없음)."""
+    static_pages = ["", "category.html", "search.html", "about.html",
+                    "advertising.html", "privacy.html", "terms.html"]
+    lastmod = now.strftime("%Y-%m-%d")
+
+    try:
+        with open("archive/index.json", "r", encoding="utf-8") as f:
+            dates = json.load(f).get("dates", [])
+    except (FileNotFoundError, json.JSONDecodeError):
+        dates = [date_key]
+
+    date_articles = []
+    for dk in dates:
+        try:
+            with open(f"archive/{dk}.json", "r", encoding="utf-8") as f:
+                date_articles.append((dk, json.load(f).get("articles", [])))
+        except (FileNotFoundError, json.JSONDecodeError):
+            continue
+
+    # ── sitemap.xml ──
+    urls = []
+    for p in static_pages:
+        loc = f"{SITE_URL}/{p}" if p else f"{SITE_URL}/"
+        pr = "1.0" if p == "" else "0.6"
+        urls.append(f"  <url><loc>{_xml_escape(loc)}</loc>"
+                    f"<lastmod>{lastmod}</lastmod>"
+                    f"<changefreq>daily</changefreq><priority>{pr}</priority></url>")
+    for dk, arts in date_articles:
+        for i, _ in enumerate(arts):
+            loc = f"{SITE_URL}/news/{dk}-{i}.html"
+            urls.append(f"  <url><loc>{_xml_escape(loc)}</loc>"
+                        f"<lastmod>{dk}</lastmod>"
+                        f"<changefreq>monthly</changefreq><priority>0.8</priority></url>")
+    with open("sitemap.xml", "w", encoding="utf-8") as f:
+        f.write('<?xml version="1.0" encoding="UTF-8"?>\n'
+                '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+                + "\n".join(urls) + "\n</urlset>\n")
+    print(f"🗺️  sitemap.xml 저장 — URL {len(urls)}개")
+
+    # ── rss.xml (최신 30개) ──
+    items = []
+    for dk, arts in date_articles:
+        for i, a in enumerate(arts):
+            items.append((dk, i, a))
+    items.sort(key=lambda x: x[0], reverse=True)
+    rss_items = []
+    for dk, i, a in items[:30]:
+        link = f"{SITE_URL}/news/{dk}-{i}.html"
+        pub = datetime.strptime(dk, "%Y-%m-%d").replace(tzinfo=KST)
+        rss_items.append(
+            "    <item>\n"
+            f"      <title>{_xml_escape(a.get('title', ''))}</title>\n"
+            f"      <link>{_xml_escape(link)}</link>\n"
+            f"      <guid isPermaLink=\"true\">{_xml_escape(link)}</guid>\n"
+            f"      <category>{_xml_escape(a.get('category', ''))}</category>\n"
+            f"      <description>{_xml_escape(a.get('summary', ''))}</description>\n"
+            f"      <pubDate>{pub.strftime('%a, %d %b %Y %H:%M:%S %z')}</pubDate>\n"
+            "    </item>")
+    with open("rss.xml", "w", encoding="utf-8") as f:
+        f.write('<?xml version="1.0" encoding="UTF-8"?>\n'
+                '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n'
+                '  <channel>\n'
+                '    <title>소재타임스 — MATERIALS TIMES</title>\n'
+                f'    <link>{SITE_URL}/</link>\n'
+                f'    <atom:link href="{SITE_URL}/rss.xml" rel="self" type="application/rss+xml" />\n'
+                '    <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>\n'
+                '    <language>ko-KR</language>\n'
+                f'    <lastBuildDate>{now.strftime("%a, %d %b %Y %H:%M:%S %z")}</lastBuildDate>\n'
+                + "\n".join(rss_items) + "\n  </channel>\n</rss>\n")
+    print(f"📡 rss.xml 저장 — 아이템 {len(rss_items)}개")
+
+
 # ── 최종 데이터 파일 저장 ──────────────────────────
 def save_data(articles, briefing, issues):
     """index.html이 읽을 수 있는 JSON 파일로 저장 + 날짜별 아카이브 저장"""
@@ -952,6 +1037,7 @@ def save_data(articles, briefing, issues):
     data = {
         "generated_at": now.strftime("%Y년 %m월 %d일 %H:%M"),
         "date_str": now.strftime("%Y년 %m월 %d일"),
+        "date_key": date_key,   # 프런트가 오늘 기사의 정적 페이지 경로를 만들 때 사용
         "articles": articles,
         "editorial_briefing": briefing,
         "global_issues": issues,
@@ -982,6 +1068,23 @@ def save_data(articles, briefing, issues):
     with open(index_file, "w", encoding="utf-8") as f:
         json.dump(archive_index, f, ensure_ascii=False, indent=2)
     print(f"📋 아카이브 인덱스 업데이트: {len(archive_index['dates'])}일치")
+
+    # 4. 정적 기사 페이지 생성 — 크롤러가 읽는 정본(본문 포함 HTML).
+    #    article.html은 JS 렌더라 소스에 본문이 없어 색인·애드센스 심사에서 불리하다.
+    try:
+        import 정적페이지생성
+        n = 정적페이지생성.generate_for_date(
+            date_key, data, 정적페이지생성.extract_style())
+        print(f"🏗️  정적 기사 페이지 {n}건 생성 — news/{date_key}-*.html")
+    except Exception as e:
+        print(f"⚠️ 정적 페이지 생성 실패(발행에는 영향 없음): {type(e).__name__}: {e}")
+
+    # 5. SEO/구독 파일 갱신 (sitemap·rss)
+    try:
+        generate_seo_files(date_key, now)
+    except Exception as e:
+        print(f"⚠️ SEO 파일 생성 실패(발행에는 영향 없음): {type(e).__name__}: {e}")
+
 
 # ── 메인 실행 ──────────────────────────────────────
 def main():

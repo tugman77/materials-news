@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tugman77.github.io/materials-news/sitemap.xml
