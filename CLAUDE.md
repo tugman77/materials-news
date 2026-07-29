@@ -68,6 +68,12 @@ API코인이 0이어도 발행이 멈추지 않도록 이원화.
 │   ※ 클라우드 RemoteTrigger 버전(Google Drive+Gmail)은 은퇴 — Gmail MCP가 초안 생성만
 │      가능하고 실제 발송이 안 돼 10일치가 임시보관함에 안 읽힌 채 쌓여있던 것을 발견,
 │      기사검수.py가 쓰는 텔레그램 봇 재사용 방식으로 로컬 전환.
+├── 정적페이지생성.py       ← SEO 정적 페이지 생성기 (2026-07-29 추가)
+│   archive/*.json → news/YYYY-MM-DD-N.html 정적 렌더링 + sitemap.xml/rss.xml/robots.txt 생성.
+│   발행 파이프라인(save_data)에 연결되어 매일 자동 실행. article.html은 클라이언트 렌더링이라
+│   크롤러가 본문을 못 읽던 문제를 해결 (canonical을 정적 페이지로 지정, article.html은 구링크 호환용).
+├── news/                  ← 정적페이지생성.py 산출물 (YYYY-MM-DD-N.html, 크롤러용)
+├── sitemap.xml / rss.xml / robots.txt  ← 정적페이지생성.py 산출물
 └── .github/workflows/
     └── 자동기사생성.yml   ← GitHub Actions (매일 UTC 21:00 = KST 06:00)
 ```
@@ -306,6 +312,9 @@ new PartnersCoupang.G({id:XXXXX, trackingCode:"AF9787280", subId:null, template:
 - [x] 제호 확정: **소재타임스** / MATERIALS TIMES ✅ 2026-06-28
 - [x] 회사소개·광고안내·개인정보처리방침·이용약관 페이지 생성 ✅ 2026-06-28
 - [x] 전체 HTML footer 링크 연결 (about/advertising/privacy/terms) ✅ 2026-06-28
-- [ ] **sojaetimes.co.kr 도메인 등록** → GitHub Pages Custom domain 설정
+- [x] SEO 정적 페이지 + sitemap/rss/robots 도입 ✅ 2026-07-29 (기존 150건 백필 완료)
+- [ ] **materialtimes.co.kr 커스텀 도메인 연결** → GitHub Pages Custom domain 설정
+      ※ 연결 시 `정적페이지생성.py`·`기사자동생성.py`의 `SITE_URL`과 `robots.txt`도
+      `tugman77.github.io/materials-news`에서 `materialtimes.co.kr`로 함께 바꿔야 함.
 - [ ] UNSPLASH_ACCESS_KEY Secret 등록 (선택 — 없으면 loremflickr 사용)
-- [ ] TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID Secret 등록 (선택 — 검수 보고용)
+- [x] TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID Secret 등록 ✅ (기사검수.py 검수 보고 + 기사기획브리핑.py 발송용)
