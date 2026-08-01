@@ -38,7 +38,13 @@ KST = timezone(timedelta(hours=9))
 # ── 이미지 재사용 방지 상태 (기사자동생성.py와 동일 포맷) ──
 _used_photo_ids: set   = set()   # 이번 검수에서 선택된 photo-ID
 _downloaded_hashes: set = set()  # 과거 포함 저장된 이미지 MD5
+_run_hashes: set       = set()   # 이번 검수에서만 저장된 MD5 (큐레이션 풀 전용 판정)
 _photo_id_last_used: dict = {}   # photo-ID → 마지막 사용 날짜(YYYY-MM-DD)
+
+# ⚠️ 큐레이션 풀은 영구 해시 대조에서 제외한다 (2026-08-02).
+# 풀 URL은 고정이라 바이트가 매일 같아, 한 번 쓰면 영구 히스토리에 박혀 재사용이 막힌다.
+# 실제로 풀 33장 중 29장이 죽어 picsum 폴백이 났고, 그 결과가 '삼성SDI OLED' 기사의 갈매기 사진이다.
+# (재다운로드는 이 파일에서 일어났다 — 검수가 키워드를 바꾸고 다시 받는 경로.)
 
 
 def _load_image_history():
@@ -230,12 +236,18 @@ def download_image(keyword: str, img_path: str, category: str = "", seed_str: st
             if resp.status_code != 200 or len(resp.content) < 1000:
                 continue
 
+            # 외부 소스는 과거 날짜까지, 큐레이션 풀은 이번 실행만 대조 — 위 주석 참조
+            is_pool = (source == "unsplash_pool")
             img_hash = hashlib.md5(resp.content).hexdigest()
-            if img_hash in _downloaded_hashes:
-                print(f"   중복 이미지 [{source}] md5={img_hash[:8]}, 다음 후보 시도...")
+            if img_hash in (_run_hashes if is_pool else _downloaded_hashes):
+                scope = "오늘 이미 사용" if is_pool else "과거 사용"
+                print(f"   중복 이미지 [{source}] md5={img_hash[:8]} ({scope}), 다음 후보 시도...")
                 continue
 
-            _downloaded_hashes.add(img_hash)
+            _run_hashes.add(img_hash)
+            if not is_pool:
+                # 풀 해시를 영구 히스토리에 넣으면 그 photo-ID가 영영 죽는다
+                _downloaded_hashes.add(img_hash)
             if chosen_pid:
                 _photo_id_last_used[chosen_pid] = datetime.now(KST).strftime("%Y-%m-%d")
             with open(img_path, "wb") as f:

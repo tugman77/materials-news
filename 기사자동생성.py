@@ -768,7 +768,14 @@ _UNSPLASH_BASE = "https://images.unsplash.com/{id}?w=800&h=450&fit=crop&auto=for
 # _photo_id_last_used / (영구 hashes) 는 image_history.json 으로 "날짜 간" 유지된다.
 _used_photo_ids: set   = set()   # 이번 실행에서 선택된 Unsplash photo-ID
 _downloaded_hashes: set = set()  # 지금까지(과거 포함) 저장된 이미지 MD5
+_run_hashes: set       = set()   # 이번 실행에서만 저장된 MD5 (큐레이션 풀 전용 판정)
 _photo_id_last_used: dict = {}   # photo-ID → 마지막 사용 날짜(YYYY-MM-DD)
+
+# ⚠️ 큐레이션 풀은 영구 해시 대조에서 제외한다 (2026-08-02).
+# 풀 URL은 고정이라 바이트가 매일 같다 → 한 번 쓰면 MD5가 영구 히스토리에 박히고
+# 그 photo-ID는 두 번 다시 통과하지 못한다. 그렇게 4개 카테고리 풀 33장 중 29장이
+# 죽어 picsum(내용 무관 랜덤)으로 폴백, '삼성SDI OLED' 기사에 갈매기 사진이 실렸다.
+# 풀의 날짜 간 반복은 _photo_id_last_used LRU가 맡고, 같은 날 중복만 _run_hashes로 막는다.
 
 
 def _load_image_history():
@@ -982,13 +989,19 @@ def _download_single_image(keyword: str, img_path: str, category: str = "", seed
             if resp.status_code != 200 or len(resp.content) < 1000:
                 continue
 
-            # MD5 중복 체크 (과거 날짜 포함 — 히스토리에 축적된 해시와 대조)
+            # MD5 중복 체크. 외부 소스는 과거 날짜까지(_downloaded_hashes),
+            # 큐레이션 풀은 이번 실행만(_run_hashes) 대조한다 — 위 주석 참조.
+            is_pool = (source == "unsplash_pool")
             img_hash = hashlib.md5(resp.content).hexdigest()
-            if img_hash in _downloaded_hashes:
-                print(f"   → 중복 이미지 [{source}] md5={img_hash[:8]}, 다음 소스 시도...")
+            if img_hash in (_run_hashes if is_pool else _downloaded_hashes):
+                scope = "오늘 이미 사용" if is_pool else "과거 사용"
+                print(f"   → 중복 이미지 [{source}] md5={img_hash[:8]} ({scope}), 다음 후보 시도...")
                 continue
 
-            _downloaded_hashes.add(img_hash)
+            _run_hashes.add(img_hash)
+            if not is_pool:
+                # 풀 해시를 영구 히스토리에 넣으면 그 photo-ID가 영영 죽는다
+                _downloaded_hashes.add(img_hash)
             _record_photo_id(chosen_pid)  # 풀 이미지일 때만 사용 날짜 기록
             with open(img_path, "wb") as f:
                 f.write(resp.content)
@@ -1070,6 +1083,7 @@ def download_article_images(articles):
     """
     global _used_photo_ids
     _used_photo_ids.clear()
+    _run_hashes.clear()
     _load_image_history()  # 과거 해시·photo-ID 이력 적재 (_downloaded_hashes 채움)
     _validate_pool()       # 풀 cross-category 중복 감지 (로그 출력)
 
