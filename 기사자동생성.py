@@ -8,6 +8,7 @@ from __future__ import annotations  # 로컬 Python 3.9에서 `str | None` 등 �
 
 import anthropic
 import llm_backend  # 구독코인(로컬 Claude Code) / API코인(anthropic SDK) 전환
+import 이미지필터    # 이미지 키워드 오매칭(예: wafer → 과자) 방지 필터
 import feedparser
 import hashlib
 import json
@@ -477,7 +478,7 @@ def generate_articles_with_claude(raw_news_list, recent_topics=None, event_memor
 - 제목: 15~25자, 핵심 팩트 중심
 - summary: 2~3문장 핵심 요약 (150자 이내)
 - body: 10~13개 단락 각각을 문자열로 담은 배열. 각 단락 200~300자. 반드시 포함할 내용: ①사건 배경 및 원인 분석 ②구체적 수치·통계(수출액·생산량·가격 변동 포함) ③주요 관련 기업명과 최신 동향 ④전문가·업계 관계자 의견(직접 인용 형식) ⑤국내 산업별 파급 효과 ⑥글로벌·해외 동향 ⑦관련 정책·규제 현황 ⑧향후 시장 전망 및 투자 시사점. 전문 용어는 쉽게 풀어서 작성
-- image_keyword: 기사 내용과 관련된 영문 이미지 검색 키워드 2~3단어 (예: "semiconductor wafer", "rare earth mining", "supply chain factory")
+- image_keyword: 기사 내용과 관련된 영문 이미지 검색 키워드 2~3단어 (예: "semiconductor wafer", "rare earth mining", "supply chain factory"). wafer·chip·foil·plant·crystal처럼 일상 사물(과자·감자칩·식물)로도 읽히는 단어는 semiconductor·metal·industrial 같은 업계 한정어를 반드시 함께 넣을 것
 - timestamp: 현재 시각 기준 오전/오후 HH:MM 형식
 
 save_articles 도구를 사용해 기사 5개를 저장하세요.
@@ -796,8 +797,12 @@ def _fetch_pexels(keyword: str) -> str | None:
         )
         if resp.status_code == 200:
             photos = resp.json().get("photos", [])
-            if photos:
-                return random.choice(photos)["src"]["large2x"]
+            # alt(사진 설명)로 오매칭을 거른 뒤 남은 후보 중 첫 장을 쓴다.
+            # 셔플은 기존 random.choice의 날짜별 변화를 유지하기 위한 것.
+            random.shuffle(photos)
+            return 이미지필터.pick_relevant(
+                [(p.get("src", {}).get("large2x"), p.get("alt")) for p in photos],
+                "pexels")
     except Exception as e:
         print(f"   → Pexels 오류: {e}")
     return None
@@ -822,8 +827,11 @@ def _fetch_pixabay(keyword: str) -> str | None:
         )
         if resp.status_code == 200:
             hits = resp.json().get("hits", [])
-            if hits:
-                return random.choice(hits)["largeImageURL"]
+            # 2026-08-01 스트룹와플 사고가 난 지점 — tags로 음식 사진을 걸러낸다.
+            random.shuffle(hits)
+            return 이미지필터.pick_relevant(
+                [(h.get("largeImageURL"), h.get("tags")) for h in hits],
+                "pixabay")
     except Exception as e:
         print(f"   → Pixabay 오류: {e}")
     return None
@@ -845,6 +853,11 @@ def _download_single_image(keyword: str, img_path: str, category: str = "", seed
       - _used_photo_ids: Unsplash 풀에서 이미 사용한 photo-ID는 재선택 안 함
     """
     global _downloaded_hashes
+    # 검색 전 1차 방어 — 중의적 키워드(wafer/chip/foil…)에 업계 한정어를 붙인다
+    refined = 이미지필터.refine_keyword(keyword, category)
+    if refined != keyword:
+        print(f"   → 키워드 보정: '{keyword}' → '{refined}'")
+        keyword = refined
     keyword_q = quote(keyword)
     seed = hashlib.md5(keyword.encode()).hexdigest()[:8]
 
@@ -866,14 +879,21 @@ def _download_single_image(keyword: str, img_path: str, category: str = "", seed
         try:
             # 소스별 URL 확정
             if source == "unsplash_api":
+                # count=5 — 한 장만 받으면 오매칭일 때 이 소스를 통째로 잃는다
                 r = requests.get(
                     f"https://api.unsplash.com/photos/random?query={keyword_q}&orientation=landscape"
-                    f"&client_id={UNSPLASH_ACCESS_KEY}",
+                    f"&count=5&client_id={UNSPLASH_ACCESS_KEY}",
                     timeout=15,
                 )
                 if r.status_code != 200:
                     continue
-                img_url = r.json().get("urls", {}).get("regular", "")
+                photos = r.json()
+                if isinstance(photos, dict):   # count 미반영 응답 방어
+                    photos = [photos]
+                img_url = 이미지필터.pick_relevant(
+                    [(p.get("urls", {}).get("regular"),
+                      f"{p.get('alt_description') or ''} {p.get('description') or ''}")
+                     for p in photos], "unsplash_api")
                 if not img_url:
                     continue
             elif source == "pexels":

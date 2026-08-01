@@ -15,6 +15,7 @@ from __future__ import annotations  # 로컬 Python 3.9에서 `str | None` 등 �
 
 import anthropic
 import llm_backend  # 구독코인(로컬 Claude Code) / API코인(anthropic SDK) 전환
+import 이미지필터    # 이미지 키워드 오매칭(예: wafer → 과자) 방지 필터
 import hashlib
 import json
 import os
@@ -184,6 +185,11 @@ def download_image(keyword: str, img_path: str, category: str = "", seed_str: st
     저장 직전 MD5를 히스토리와 대조 — 과거(다른 날짜 포함) 이미지와 같으면 다음 후보로 넘어감.
     """
     os.makedirs(IMAGES_DIR, exist_ok=True)
+    # 검색 전 1차 방어 — 중의적 키워드(wafer/chip/foil…)에 업계 한정어를 붙인다
+    refined = 이미지필터.refine_keyword(keyword, category)
+    if refined != keyword:
+        print(f"   키워드 보정: '{keyword}' → '{refined}'")
+        keyword = refined
     keyword_q = quote(keyword)
     seed = hashlib.md5(keyword.encode()).hexdigest()[:8]
 
@@ -198,12 +204,19 @@ def download_image(keyword: str, img_path: str, category: str = "", seed_str: st
         chosen_pid = None
         try:
             if source == "unsplash_api":
+                # count=5 — 한 장만 받으면 오매칭일 때 이 소스를 통째로 잃는다
                 r = requests.get(
                     f"https://api.unsplash.com/photos/random?query={keyword_q}&orientation=landscape"
-                    f"&client_id={UNSPLASH_ACCESS_KEY}", timeout=20, allow_redirects=True)
+                    f"&count=5&client_id={UNSPLASH_ACCESS_KEY}", timeout=20, allow_redirects=True)
                 if r.status_code != 200:
                     continue
-                img_url = r.json().get("urls", {}).get("regular", "")
+                photos = r.json()
+                if isinstance(photos, dict):   # count 미반영 응답 방어
+                    photos = [photos]
+                img_url = 이미지필터.pick_relevant(
+                    [(p.get("urls", {}).get("regular"),
+                      f"{p.get('alt_description') or ''} {p.get('description') or ''}")
+                     for p in photos], "unsplash_api")
                 if not img_url:
                     continue
             elif source == "unsplash_pool":

@@ -72,6 +72,9 @@ API코인이 0이어도 발행이 멈추지 않도록 이원화.
 │   archive/*.json → news/YYYY-MM-DD-N.html 정적 렌더링 + sitemap.xml/rss.xml/robots.txt 생성.
 │   발행 파이프라인(save_data)에 연결되어 매일 자동 실행. article.html은 클라이언트 렌더링이라
 │   크롤러가 본문을 못 읽던 문제를 해결 (canonical을 정적 페이지로 지정, article.html은 구링크 호환용).
+├── 이미지필터.py           ← 이미지 키워드 오매칭 방지 (2026-08-01 추가, 기사자동생성·기사검수 공용)
+│   검색 전 키워드 한정어 부착 + 검색 후 태그 기반 음식/생활 사진 거부.
+│   단독 실행(`python3 이미지필터.py`)으로 자가 검증 케이스 통과 확인.
 ├── news/                  ← 정적페이지생성.py 산출물 (YYYY-MM-DD-N.html, 크롤러용)
 ├── sitemap.xml / rss.xml / robots.txt  ← 정적페이지생성.py 산출물
 └── .github/workflows/
@@ -105,6 +108,23 @@ API코인이 0이어도 발행이 멈추지 않도록 이원화.
 - **원인 추정**: `--output-format json`은 완료 전까지 아무것도 출력하지 않아 "서버가 느린 것"과 "진짜 멈춘 것"을 구분할 수 없음. 수동 재시도가 수 분 내 성공한 사례(07-27)로 볼 때 일시적 지연/큐잉일 가능성이 높음.
 - **완화**: `llm_backend.py`의 `call_tool()`에 타임아웃 전용 자동 재시도 추가. `CLAUDE_CODE_TIMEOUT`은 이제 "총 예산"이 아니라 "시도 1회당 예산"(기본 1200s)이고, 무응답 시 `CLAUDE_CODE_RETRIES`(기본 2회)만큼 재시도. rc≠0 등 실제 실패는 재시도하지 않고 바로 올림(반복해도 같은 결과일 가능성이 높으므로).
 - **미해결**: 근본 원인(서버 큐잉 vs 클라이언트 문제) 특정 안 됨. 로컬이 실패해도 KST 06:00 클라우드(API코인) 백업이 있어 발행 자체는 안전.
+
+### [수정됨] 이미지 키워드 오매칭 — 웨이퍼 기사에 과자 사진 (2026-08-01)
+- **증상**: '두산, SK실트론 2.3조 인수' 기사 대표이미지가 스트룹와플(웨이퍼 과자) 접시 사진
+- **원인**: `image_keyword`는 `"semiconductor wafer production"`으로 정상이었으나 Pixabay가
+  `wafer`를 과자로 해석해 음식 사진 반환. 기존 코드는 `random.choice(hits)`로 검증 없이 1건 채택
+- **해결**: `이미지필터.py` 신설 — 검색 전 키워드 한정어 부착 + 검색 후 태그 기반 거부·다음 후보 이동
+  (위 '오매칭 방지 규칙' 참조). 해당 기사 이미지는 美 에너지부 PD 클린룸 웨이퍼 사진으로 교체
+- **교훈**: 이미지 소스 API는 결과를 검증 없이 신뢰하면 안 된다. Claude가 뽑은 키워드가
+  멀쩡해도 검색엔진 쪽에서 오매칭이 난다 — `기사검수.py`의 키워드 적절성 검토만으로는 못 잡는다
+
+### [수정됨] 정적 페이지가 커밋되지 않아 기사 링크 전량 404 (2026-08-01)
+- **증상**: 메인에서 기사 클릭 시 404. 2026-07-29~08-01 4일치 전부
+- **원인**: `자동기사생성.yml`의 `git add` 목록에 `news/`·`sitemap.xml`·`rss.xml`이 빠져 있었다.
+  정적 페이지는 생성됐지만 커밋되지 않았고, `index.html`은 기사 링크를 `news/YYYY-MM-DD-N.html`로 만든다.
+  로컬 발행은 `git add -A`라 무사했는데 07-29부터 로컬이 계속 실패해 클라우드 백업만 돌면서 드러났다
+- **해결**: 워크플로 `git add`에 `news/ sitemap.xml rss.xml robots.txt` 추가 + 누락분 백필
+- **교훈**: 발행 산출물이 늘면 **로컬(`git add -A`)과 클라우드(명시 목록) 양쪽**을 함께 확인해야 한다
 
 ### [수정됨] tool_use double-serialization (2026-06-25)
 - **증상**: `json.decoder.JSONDecodeError` — body 안의 따옴표/줄바꿈 이스케이프 실패
@@ -146,6 +166,23 @@ API코인이 0이어도 발행이 멈추지 않도록 이원화.
 | 3 | Pixabay API | `PIXABAY_API_KEY` | 키워드 매칭, 대용량 DB |
 | 4 | Unsplash 큐레이션 풀 | 불필요 | 카테고리 연관, 항상 사용 가능 |
 | 5 | picsum | 불필요 | 최종 폴백, 내용 무관 |
+
+### 오매칭 방지 규칙 (2026-08-01 추가 — `이미지필터.py`)
+`기사자동생성.py`·`기사검수.py`가 공유하는 모듈. 방어선이 둘이다.
+
+1. **검색 전 — `refine_keyword()`**: `wafer`·`chip`·`foil`·`plant`·`crystal`·`mine`처럼
+   일상 사물로도 읽히는 단어에 업계 한정어를 자동 부착
+   (`"wafer production"` → `"wafer production semiconductor"`). 이미 한정어가 있으면 그대로 둔다.
+2. **검색 후 — `is_offtopic()` / `pick_relevant()`**: 이미지 자신의 태그·alt·설명에
+   음식·생활 차단어가 있으면 거부하고 **같은 소스의 다음 후보**로 넘어간다.
+   Pexels `alt`, Pixabay `tags`, Unsplash `alt_description`을 검사한다.
+   후보를 여럿 받으려고 Unsplash random 호출에 `count=5`를 붙였다.
+   전량 거부되면 `None` 반환 → 큐레이션 풀로 폴백.
+
+- **차단어에 `wafer`/`wafers`/`plate`/`sheet`/`crystal`을 넣지 말 것** — 반도체·철강 사진의
+  정상 태그다. 과자 사진은 함께 붙는 `waffle`·`cookie`·`dessert`로 걸린다.
+- 메타데이터가 비어 있으면 통과시킨다. 근거 없는 거부는 picsum(내용 무관) 폴백을 부른다.
+- 필터 수정 후 `python3 이미지필터.py`로 자가 검증 케이스를 반드시 통과시킬 것.
 
 ### 중복 방지 규칙 (3중 보호)
 1. **Cross-category 중복 금지** — `_UNSPLASH_POOL` 각 photo-ID는 단일 카테고리에만 등록. `_validate_pool()` 함수가 실행마다 자동 감지.
