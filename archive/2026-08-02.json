@@ -26,17 +26,7 @@
       "image_keyword": "rare metal industrial supply chain",
       "is_featured": true,
       "timestamp": "오전 09:10",
-      "image_url": "images/2026-08-02_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "미국 국방부가 북·중·러산 탄탈럼 수입금지를 '공식 확정'했다는 구체적 근거·법령명 미제시",
-          "북한산 탄탈럼이 중국 경유로 글로벌 시장에 유입됐다는 주장은 출처 없는 의혹 수준"
-        ],
-        "notes": "전반적 개연성 높으나 금지 조치의 구체적 법적 근거 및 시행일 명시 필요",
-        "verified_at": "2026-08-02 08:56"
-      }
+      "image_url": "images/2026-08-02_article_0.jpg"
     },
     {
       "id": 1,
@@ -60,18 +50,7 @@
       "image_keyword": "semiconductor material spin-on carbon",
       "is_featured": false,
       "timestamp": "오전 09:30",
-      "image_url": "images/2026-08-02_article_1.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'코이즈'가 실제 SOC 전구체 공급 전문기업으로 전환했는지 공식 발표 출처 불명확",
-          "삼성전자·SK하이닉스의 2나노 이하 공정 전환 가속이 SOC 전구체 수요 확대와 직결된다는 인과 근거 미제시",
-          "코이즈의 기존 사업이 '범용 화학소재'라는 설명이 실제 사업 현황과 일치하는지 검증 필요"
-        ],
-        "notes": "코이즈의 사업 전환 선언 출처가 불명확하며 핵심 주장의 공식 확인이 필요함",
-        "verified_at": "2026-08-02 08:56"
-      }
+      "image_url": "images/2026-08-02_article_1.jpg"
     },
     {
       "id": 2,
@@ -92,21 +71,10 @@
         "희귀금속 수직 계열화 M&A 트렌드는 국내 소재 기업들에게도 파트너십 또는 투자 유치의 기회를 제공하고 있다. 정련·분리·가공 기술을 보유한 국내 중소·중견 기업들이 글로벌 M&A 대상으로 부상할 수 있으며, 이는 밸류에이션 재평가로 이어질 가능성이 높다.",
         "향후 시장 전망과 관련해, AI 데이터센터 투자가 계속되는 한 희귀금속 수요는 구조적 강세를 유지할 것으로 예측된다. 수직 계열화 M&A는 단기 이슈가 아니라 향후 10년을 좌우할 산업 재편의 핵심 동력으로 작동할 전망이다."
       ],
-      "image_keyword": "semiconductor parts components factory",
+      "image_keyword": "rare earth metal industrial processing",
       "is_featured": false,
       "timestamp": "오전 09:50",
-      "image_url": "images/2026-08-02_article_2.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'청와대'는 현 정부 체계와 맞지 않는 명칭(대통령실이 정확)으로 사실 오류 가능성",
-          "'이 대통령'의 미·남미 순방 결과로 브라질·아르헨티나와 희토류 협력을 확대했다는 내용의 공식 출처 불명확",
-          "AI 데이터센터 구축 시 핵심광물 수요가 기존 서버팜 대비 '수배 이상'이라는 수치의 근거 미제시"
-        ],
-        "notes": "'청와대' 표현은 현 정부 기준 오류이며, 순방 외교 성과 내용의 출처 보강 필요",
-        "verified_at": "2026-08-02 08:56"
-      }
+      "image_url": "images/2026-08-02_article_2.jpg"
     },
     {
       "id": 3,
@@ -130,16 +98,7 @@
       "image_keyword": "semiconductor industrial complex factory",
       "is_featured": false,
       "timestamp": "오전 10:10",
-      "image_url": "images/2026-08-02_article_3.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "'가칭 국가피지컬AI연구원'의 전북 설립 추진이 공식 정부 계획인지 지자체 건의 수준인지 불명확"
-        ],
-        "notes": "전반적으로 사실에 부합하나 이미지 키워드가 다소 일반적이어서 구체화 권장",
-        "verified_at": "2026-08-02 08:56"
-      }
+      "image_url": "images/2026-08-02_article_3.jpg"
     },
     {
       "id": 4,
@@ -160,20 +119,10 @@
         "국내 정책 당국도 반도체 소부장 국산화 지원을 지속 확대하고 있다. 국민성장펀드가 HBM 전용 테스트장비 생산기업 지원을 승인하는 등, 정책금융이 소부장 생태계의 핵심 성장 엔진으로 작동하고 있다. 트럼프 행정부의 핵심광물 폐기물 수출 규제 서명도 글로벌 공급망 재편을 더욱 가속화하는 변수로 작용하고 있다.",
         "향후 시장 전망과 관련해, 미·중 반도체 갈등의 구조적 지속성을 감안하면 국내 소부장 기업들의 수혜 기회는 중단기적으로 지속될 가능성이 높다. 다만 기술 경쟁력 유지와 공급망 다변화, 고객사 포트폴리오 다각화가 장기 성장의 관건이 될 것으로 시장은 내다보고 있다."
       ],
-      "image_keyword": "magnesium metal export customs",
+      "image_keyword": "semiconductor supply chain global trade",
       "is_featured": false,
       "timestamp": "오전 10:30",
-      "image_url": "images/2026-08-02_article_4.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "미국이 중국산 반도체 소재·부품 연방 조달을 '2027년 12월부터 금지'한다는 구체적 시점의 법적 근거 미제시",
-          "외국인 투자자의 '7월 들어' 소부장 집중 매수 주장은 구체적 데이터·출처 없이 서술됨"
-        ],
-        "notes": "미국 조달 금지 시점(2027년 12월)의 법령 근거 명시가 필요하며 투자 동향 출처 보완 요망",
-        "verified_at": "2026-08-02 08:56"
-      }
+      "image_url": "images/2026-08-02_article_4.jpg"
     },
     {
       "category": "글로벌",
@@ -200,17 +149,7 @@
       "is_featured": false,
       "timestamp": "08:56",
       "id": 5,
-      "image_url": "images/2026-08-02_article_5.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "공고 제26호 시행일이 본문에서 '2026년 7월 1일'로 기재되어 있어 오늘 발행 기사와 연도 표기 정합성 확인 필요",
-          "SMM 보도 날짜를 '7월 10일'로 특정했으나 해당 보도의 원문 링크·출처 미제시"
-        ],
-        "notes": "시행일 연도(2026년) 표기 오류 가능성 있으며, SMM 인용 출처 명시 및 이미지 키워드 구체화 필요",
-        "verified_at": "2026-08-02 08:56"
-      }
+      "image_url": "images/2026-08-02_article_5.jpg"
     }
   ],
   "editorial_briefing": "미·중 공급망 갈등이 탄탈럼 수입금지·반도체 규제 강화로 전선을 넓히며 글로벌 소재 산업 재편이 가속되고 있다. 중국의 전략광물 수출통제 강화 속에 한국 소부장 기업의 반사이익이 현실화되고, 수직계열화 M&A와 특화단지 경쟁도 본격화되는 중이다.",
@@ -240,6 +179,5 @@
       "label": "韓 소부장 반사이익",
       "status": "미·중 갈등 수혜"
     }
-  ],
-  "last_reviewed_at": "2026-08-02 08:56"
+  ]
 }
