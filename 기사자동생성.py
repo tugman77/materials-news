@@ -1328,8 +1328,17 @@ def main():
 
         print("🎉 완료!")
 
-        # 5-3. 공개 채널 발행 (독자용) — 실패해도 발행 자체는 성공으로 둔다
-        post_to_channel(articles, date_key, now)
+        # 5-3. 공개 채널 발행 (독자용)
+        #  · now/date_key는 save_data() 지역변수라 여기서 다시 구한다.
+        #    (2026-08-02 사고: main() 스코프에 있는 줄 알고 그대로 쓴 탓에 NameError로
+        #     클라우드 발행이 통째로 실패했다. 생성·저장까지 끝난 뒤였는데 커밋 전에
+        #     죽어 그날 기사가 유실됐다.)
+        #  · 채널 발행 실패가 발행 자체를 무너뜨리면 안 되므로 예외를 삼킨다.
+        try:
+            _now = datetime.now(KST)
+            post_to_channel(articles, _now.strftime("%Y-%m-%d"), _now)
+        except Exception as e:
+            print(f"⚠️ 채널 발행 건너뜀: {type(e).__name__}: {e}")
 
         # 6. 텔레그램 완료 알림
         title_list = "\n".join(

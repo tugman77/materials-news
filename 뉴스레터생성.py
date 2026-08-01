@@ -8,6 +8,7 @@ import anthropic
 import json
 import os
 import requests
+import llm_backend  # 구독코인(로컬 Claude Code) / API코인(anthropic SDK) 전환
 from datetime import datetime, timezone, timedelta
 from urllib.parse import quote
 
@@ -102,6 +103,47 @@ def post_to_channel(nl, week_str, article_count, web_url) -> bool:
         return False
 
 
+# ── 뉴스레터 구조 스키마 ────────────────────────────────────────
+# 구독코인 경로(llm_backend)와 API코인 경로가 같은 스키마를 쓴다.
+# llm_backend.call_tool()이 input_schema를 프롬프트에 실어 순수 JSON을 받아내므로,
+# 헤드리스에서도 tool_use와 동일한 dict가 나온다.
+MODEL = "claude-sonnet-4-6"  # 기사 생성과 동일 모델. 주간 요약은 Sonnet으로 충분하다.
+
+NEWSLETTER_TOOL = {
+    "name": "save_newsletter",
+    "description": "주간 뉴스레터 구성요소를 저장한다.",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "headline": {
+                "type": "string",
+                "description": "이번 주 핵심 메시지 한 줄. 30자 이내.",
+            },
+            "intro": {
+                "type": "string",
+                "description": "편집장 인트로 200자 내외. 이번 주 가장 중요한 산업 흐름을 독자에게 설명한다.",
+            },
+            "top_picks": {
+                "type": "array",
+                "description": "이번 주 주목할 기사 3건.",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "title": {"type": "string", "description": "기사 제목 그대로"},
+                        "reason": {"type": "string", "description": "이 기사가 중요한 이유. 60자 이내."},
+                    },
+                    "required": ["title", "reason"],
+                },
+            },
+            "week_signal": {
+                "type": "string",
+                "description": "이번 주 산업 시그널 한마디. 100자 이내, 다음 주를 전망한다.",
+            },
+        },
+        "required": ["headline", "intro", "top_picks", "week_signal"],
+    },
+}
+
 # 카테고리 색상 맵
 CAT_COLORS = {
     "반도체소재": ("#e8f0fb", "#0057a8"),
@@ -147,8 +189,10 @@ def load_this_week_articles():
 
 # ── Claude 뉴스레터 내용 생성 ─────────────────────
 def generate_newsletter_content(articles):
-    """Claude로 편집장 인트로·픽·시그널 생성"""
-    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+    """편집장 인트로·픽·시그널 생성. 구독코인/API코인 양쪽 지원."""
+    # 구독코인 경로에서는 API 클라이언트가 필요 없다 — 키 없이도 로컬 실행이 되도록 지연 생성.
+    client = None if llm_backend.using_subscription() \
+        else anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
     article_list = "\n".join([
         f"[{a.get('category','')}] {a.get('title','')} — {(a.get('summary',''))[:100]}"
@@ -160,34 +204,30 @@ def generate_newsletter_content(articles):
 이번 주 기사 목록:
 {article_list}
 
-아래 JSON 형식으로만 답해주세요 (다른 텍스트 없이):
-{{
-  "headline": "이번 주 핵심 메시지 한 줄 (30자 이내)",
-  "intro": "편집장 인트로 200자. 이번 주 가장 중요한 산업 흐름을 독자에게 설명.",
-  "top_picks": [
-    {{"title": "기사 제목 그대로", "reason": "이 기사가 중요한 이유 60자 이내"}}
-  ],
-  "week_signal": "이번 주 산업 시그널 한마디 (100자 이내, 다음 주를 전망)"
-}}
+top_picks는 이번 주 가장 중요한 3건을 골라주세요. title은 기사 제목 그대로 씁니다."""
 
-top_picks는 3개를 골라주세요."""
+    request_params = {
+        "model": MODEL,
+        "max_tokens": 4000,
+        "messages": [{"role": "user", "content": prompt}],
+        "tools": [NEWSLETTER_TOOL],
+        "tool_choice": {"type": "tool", "name": "save_newsletter"},
+    }
 
     try:
-        message = client.messages.create(
-            model="claude-opus-4-5",
-            max_tokens=2000,
-            messages=[{"role": "user", "content": prompt}]
-        )
-        content = message.content[0].text.strip()
-        # 코드블록 제거
-        if "```" in content:
-            content = content.split("```")[1]
-            if content.startswith("json"):
-                content = content[4:]
-            content = content.split("```")[0]
-        return json.loads(content.strip())
+        if llm_backend.using_subscription():
+            # 구독코인 — 로컬 Claude Code 헤드리스. 스키마를 프롬프트에 실어 순수 JSON을 받는다.
+            return llm_backend.call_tool(request_params, "save_newsletter")
+
+        # API코인 — 기존 경로. tool_use로 구조화 출력을 강제해
+        # 코드블록 수동 제거(```json …)를 없앴다. 그쪽이 파싱 실패의 원인이었다.
+        message = client.messages.create(**request_params)
+        for block in message.content:
+            if block.type == "tool_use":
+                return block.input
+        raise ValueError("tool_use 블록 없음")
     except Exception as e:
-        print(f"   ⚠️  Claude 생성 실패: {e}")
+        print(f"   ⚠️  뉴스레터 생성 실패({llm_backend.backend_label()}): {e}")
         return {
             "headline": "이번 주 소재산업 주요 동향",
             "intro": "이번 주 소재산업 뉴스를 요약해드립니다. 반도체·희귀금속·공급망 분야의 주요 이슈를 확인하세요.",
