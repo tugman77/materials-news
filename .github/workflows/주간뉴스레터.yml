@@ -6,6 +6,12 @@ on:
     - cron: '0 23 * * 4'
   workflow_dispatch:  # 수동 실행 버튼
 
+permissions:
+  contents: write   # newsletter/ 커밋·푸시 권한
+                    # 없으면 push 단계에서 github-actions[bot]이 403.
+                    # 2026-07-24·31 두 주 연속 이 사유로 아카이브 커밋 실패
+                    # (뉴스레터 생성·발송 자체는 성공했다).
+
 jobs:
   generate-newsletter:
     runs-on: ubuntu-latest
@@ -27,6 +33,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}   # 공개 채널 @materialtimes
         run: python 뉴스레터생성.py
 
       - name: 생성된 뉴스레터 커밋 & 푸시
