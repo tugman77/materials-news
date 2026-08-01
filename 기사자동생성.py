@@ -35,8 +35,9 @@ IMAGES_DIR  = "images"
 IMAGE_HISTORY_FILE = "image_history.json"  # 날짜 간(run 간) 이미지 재사용 방지용 영구 기록
 EVENT_MEMORY_FILE  = "event_memory.json"   # 진행 중 사건 지문 — 30일 쿨다운으로 반복 보도 차단
 
-TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
-TELEGRAM_CHAT_ID   = os.environ.get("TELEGRAM_CHAT_ID", "")
+TELEGRAM_BOT_TOKEN  = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+TELEGRAM_CHAT_ID    = os.environ.get("TELEGRAM_CHAT_ID", "")     # 관리자 알림(대표님 개인 채팅)
+TELEGRAM_CHANNEL_ID = os.environ.get("TELEGRAM_CHANNEL_ID", "")  # 공개 채널 발행용(@materialtimes)
 
 # 수집할 RSS 피드 (소재·산업·경제 분야)
 RSS_FEEDS = [
@@ -66,6 +67,70 @@ def send_telegram(message: str) -> bool:
         return resp.ok
     except Exception as e:
         print(f"텔레그램 전송 오류: {e}")
+        return False
+
+
+# ── 공개 텔레그램 채널 발행 (독자용) ──────────────────────────────
+# 시그널코리아 기사자동생성.py의 post_to_channel을 이식. 관리자 알림(send_telegram)과 분리하고
+# TELEGRAM_CHANNEL_ID가 있을 때만 동작한다 — 미설정 환경(클라우드 백업 등)에서 조용히 skip.
+#
+# ⚠️ 하루 1개 메시지로 묶는다. 기사 5건을 5개 메시지로 보내면 도배가 되어 구독 해지를 부른다.
+# ⚠️ 링크는 정적 페이지(news/{date}-{id}.html)를 쓴다. article.html은 클라이언트 렌더링이라
+#    텔레그램 미리보기 크롤러가 본문을 못 읽는다.
+_CAT_EMOJI = {
+    "반도체소재": "🔵", "희귀금속": "🟠", "산업재": "🟢", "글로벌": "🔴",
+}
+
+
+def _tg_escape(s) -> str:
+    return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def build_channel_message(articles, date_key, now) -> str:
+    date_label = now.strftime("%Y년 %m월 %d일")
+    lines = ["📊 <b>소재타임스</b>",
+             f"{date_label} · 오늘의 기사 {len(articles)}건", ""]
+    for i, a in enumerate(articles):
+        emoji = _CAT_EMOJI.get(a.get("category", ""), "📌")
+        title = _tg_escape(a.get("title", ""))
+        cat = _tg_escape(a.get("category", ""))
+        summary = _tg_escape((a.get("summary", "") or "").strip())
+        if len(summary) > 110:
+            summary = summary[:110].rstrip() + "…"
+        link = f"{SITE_URL}/news/{date_key}-{i}.html"
+        lines.append(f"{emoji} <b>[{cat}]</b> {title}")
+        if summary:
+            lines.append(f"<i>{summary}</i>")
+        lines.append(f'<a href="{link}">▸ 기사 보기</a>')
+        lines.append("")
+    lines.append(f'🔗 <a href="{SITE_URL}/">전체 기사 보기</a>')
+    lines.append("#반도체소재 #희귀금속 #산업재 #공급망")
+    return "\n".join(lines)
+
+
+def post_to_channel(articles, date_key, now) -> bool:
+    """오늘 발행분을 공개 채널에 독자용 다이제스트로 발행. 채널 미설정 시 skip."""
+    if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHANNEL_ID:
+        print("[채널 미설정] TELEGRAM_CHANNEL_ID 없음 — 채널 발행 건너뜀")
+        return False
+    if not articles:
+        return False
+
+    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
+    try:
+        resp = requests.post(url, json={
+            "chat_id": TELEGRAM_CHANNEL_ID,
+            "text": build_channel_message(articles, date_key, now),
+            "parse_mode": "HTML",
+            "disable_web_page_preview": True,
+        }, timeout=15)
+        if resp.ok:
+            print(f"📣 채널 발행 완료 — {len(articles)}건")
+            return True
+        print(f"❌ 채널 발행 실패 {resp.status_code}: {resp.text[:200]}")
+        return False
+    except Exception as e:
+        print(f"채널 발행 오류: {e}")
         return False
 
 
@@ -1262,6 +1327,9 @@ def main():
         archive_manual_files(manual_files)
 
         print("🎉 완료!")
+
+        # 5-3. 공개 채널 발행 (독자용) — 실패해도 발행 자체는 성공으로 둔다
+        post_to_channel(articles, date_key, now)
 
         # 6. 텔레그램 완료 알림
         title_list = "\n".join(

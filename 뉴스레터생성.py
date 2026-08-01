@@ -9,12 +9,15 @@ import json
 import os
 import requests
 from datetime import datetime, timezone, timedelta
+from urllib.parse import quote
 
 # ── 설정 ──────────────────────────────────────────
-ANTHROPIC_API_KEY  = os.environ.get("ANTHROPIC_API_KEY", "여기에_API키_입력")
-TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
-TELEGRAM_CHAT_ID   = os.environ.get("TELEGRAM_CHAT_ID", "")
+ANTHROPIC_API_KEY   = os.environ.get("ANTHROPIC_API_KEY", "여기에_API키_입력")
+TELEGRAM_BOT_TOKEN  = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+TELEGRAM_CHAT_ID    = os.environ.get("TELEGRAM_CHAT_ID", "")     # 관리자 알림(대표님 개인 채팅)
+TELEGRAM_CHANNEL_ID = os.environ.get("TELEGRAM_CHANNEL_ID", "")  # 공개 채널 발행용(@materialtimes)
 OUTPUT_DIR = "newsletter"
+SITE_URL = "https://tugman77.github.io/materials-news"  # 커스텀 도메인 연결 시 변경
 KST = timezone(timedelta(hours=9))
 
 
@@ -34,6 +37,70 @@ def send_telegram(message: str) -> bool:
     except Exception as e:
         print(f"텔레그램 전송 오류: {e}")
         return False
+
+
+# ── 공개 채널 발행 (독자용) ────────────────────────────────────────
+# 웹판(전문 HTML)과 텔레그램판(요약+링크)을 분리한다. 텔레그램에 전문을 다 넣으면
+# 웹으로 올 이유가 없어져 검색 유입도 안 쌓이고 뉴스레터가 트래픽 자산이 되지 못한다.
+# 관리자 알림(send_telegram)은 그대로 유지 — 발행 성공 여부 확인용이다.
+def _tg_escape(s) -> str:
+    return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def build_channel_message(nl, week_str, article_count, web_url) -> str:
+    headline = _tg_escape(nl.get("headline", ""))
+    intro = _tg_escape((nl.get("intro", "") or "").strip())
+    if len(intro) > 160:
+        intro = intro[:160].rstrip() + "…"
+    lines = ["📊 <b>소재타임스 위클리</b>",
+             f"{week_str} · 기사 {article_count}건", ""]
+    if headline:
+        lines += [f"<b>{headline}</b>", ""]
+    if intro:
+        lines += [f"<i>{intro}</i>", ""]
+
+    picks = nl.get("top_picks", []) or []
+    if picks:
+        lines.append("<b>이번 주 Pick</b>")
+        for p in picks[:3]:
+            t = _tg_escape(p.get("title", ""))
+            r = _tg_escape((p.get("reason", "") or "").strip())
+            lines.append(f"📌 {t}")
+            if r:
+                lines.append(f"   <i>{r}</i>")
+        lines.append("")
+
+    signal = _tg_escape((nl.get("week_signal", "") or "").strip())
+    if signal:
+        lines += [f"📡 <b>다음 주</b> {signal}", ""]
+
+    lines.append(f'<a href="{web_url}">▸ 전문 보기</a>')
+    lines.append("#소재 #반도체 #희귀금속 #공급망")
+    return "\n".join(lines)
+
+
+def post_to_channel(nl, week_str, article_count, web_url) -> bool:
+    """주간 뉴스레터 요약을 공개 채널에 발행. 채널 미설정 시 skip."""
+    if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHANNEL_ID:
+        print("[채널 미설정] TELEGRAM_CHANNEL_ID 없음 — 채널 발행 건너뜀")
+        return False
+    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
+    try:
+        resp = requests.post(url, json={
+            "chat_id": TELEGRAM_CHANNEL_ID,
+            "text": build_channel_message(nl, week_str, article_count, web_url),
+            "parse_mode": "HTML",
+            "disable_web_page_preview": False,  # 웹판 미리보기는 노출 — 클릭 유도
+        }, timeout=15)
+        if resp.ok:
+            print("📣 채널 발행 완료 — 주간 뉴스레터")
+            return True
+        print(f"❌ 채널 발행 실패 {resp.status_code}: {resp.text[:200]}")
+        return False
+    except Exception as e:
+        print(f"채널 발행 오류: {e}")
+        return False
+
 
 # 카테고리 색상 맵
 CAT_COLORS = {
@@ -306,7 +373,14 @@ def main():
         print(f"✅ 완료! 저장 위치: {filename}")
         print(f"   브라우저로 열면 뉴스레터를 확인할 수 있습니다.")
 
-        # 5. 텔레그램 완료 알림
+        # 5. 공개 채널 발행 (독자용 요약 + 웹판 링크)
+        #    파일명이 한글이라 URL은 percent-encoding된다. 동작에는 문제없으나
+        #    공유·인용에 불리하므로 ASCII 경로(newsletter/YYYY-MM-DD.html)로의
+        #    전환은 별건으로 남아 있다.
+        web_url = f"{SITE_URL}/{quote(filename)}"
+        post_to_channel(nl_data, week_str, len(articles), web_url)
+
+        # 6. 텔레그램 완료 알림 (관리자용 — 발행 성공 확인)
         headline = nl_data.get("headline", "")
         week_signal = nl_data.get("week_signal", "")
         picks = nl_data.get("top_picks", [])
