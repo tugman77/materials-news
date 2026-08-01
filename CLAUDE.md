@@ -32,16 +32,51 @@ API코인이 0이어도 발행이 멈추지 않도록 이원화.
 | **도메인** | materialtimes.co.kr (2026-07-07 등록, 비아웹, 만료 2027-07-07) |
 | **이메일** | ads@materialtimes.co.kr (도메인 메일 개통 후 사용) |
 | **현재 URL** | tugman77.github.io/materials-news (GitHub Pages) |
+| **텔레그램 채널** | @materialtimes (공개 채널, 2026-08-01 개설) |
 
 > DNS(비아웹) A레코드 4개 + www CNAME 설정 → GitHub Pages Custom domain `materialtimes.co.kr` 입력 → Enforce HTTPS
+
+### 브랜드 자산 (2026-08-01 추가)
+
+`python3 scripts/make_logos.py` (Pillow 필요) → `images/`에 6종 생성.
+색상은 `index.html` 실사용값에서 가져온다 — **블루 `#0057a8` + 레드 `#c8102e`**.
+
+| 자산 | 용도 |
+|------|------|
+| `logo-rect.png` | 가로형 — 외부 등록·제휴 제출용 |
+| `logo-square.png` / `logo-square-hex.png` | 정사각 — 텔레그램·SNS 프로필 |
+| `og-default.jpg` | 홈 공유 미리보기(개별 기사는 정적페이지생성.py가 따로 생성) |
+| `favicon-32.png` / `favicon-180.png` | 브라우저 탭·iOS 홈화면 |
+
+- **텔레그램은 프로필을 원형으로 크롭한다** → 정사각 아이콘 요소를 전부 중앙에 몰았다.
+  모서리에 번호를 넣는 원소기호 타일안은 그래서 뺐다.
+- **헤더 로고는 텍스트 조판(`.logo-kr`/`.logo-en`) 유지.** 반응형·접근성에서 이미지 교체보다 낫다.
+  생성한 로고는 OG·파비콘·외부 등록용 자산으로만 쓴다.
+
+---
+
+## 텔레그램 발행 구조 (2026-08-01 확립)
+
+**봇 하나, 목적지 둘.** 환경변수를 반드시 구분해서 쓴다.
+
+| 환경변수 | 목적지 | 내용 | 쓰는 곳 |
+|---------|--------|------|--------|
+| `TELEGRAM_CHAT_ID` | 대표님 개인 채팅 | 운영 알림 — 검수 결과, 실패 보고 | `기사검수.py`, `기사기획브리핑.py`, `뉴스레터생성.py` |
+| `TELEGRAM_CHANNEL_ID` | 공개 채널 @materialtimes | 독자용 다이제스트 | `기사자동생성.py` `post_to_channel()`, `뉴스레터생성.py` |
+
+- **채널 ID 미설정이면 채널 발행만 skip** — 발행 파이프라인 자체는 계속 진행한다.
+- 일일 5건은 **1개 메시지로 묶는다.** 5개로 나눠 보내면 채널이 도배된다.
+- 채널 링크는 **정적 페이지(`news/{date}-{id}.html`)** 를 쓴다. `article.html`은 클라이언트
+  렌더링이라 텔레그램 미리보기 크롤러가 본문을 못 읽는다.
+- **관리자 알림을 없애지 말 것.** 주간 뉴스레터가 2주간 실패했는데 아무도 몰랐던 게 이 알림이 필요한 이유다.
 
 ---
 
 ## 파일 구조
 
 ```
-201 News_Material industry/
-├── 기사자동생성.py        ← 메인 스크립트 (RSS 수집 → Claude API → JSON 저장)
+400_채널/410_소재/소재타임스/
+├── 기사자동생성.py        ← 메인 스크립트 (RSS 수집 → Claude API → JSON 저장 → 채널 발행)
 ├── 기사검수.py            ← 이미지·중복·사실성 검수 + Telegram 보고
 ├── articles.json          ← 최신 기사 데이터 (index.html이 읽음)
 ├── index.html             ← 메인 뉴스 페이지 (홈)
@@ -52,7 +87,9 @@ API코인이 0이어도 발행이 멈추지 않도록 이원화.
 ├── advertising.html       ← 광고안내
 ├── privacy.html           ← 개인정보처리방침
 ├── terms.html             ← 이용약관
-├── images/                ← 기사 이미지 (YYYY-MM-DD_article_N.jpg)
+├── images/                ← 기사 이미지 (YYYY-MM-DD_article_N.jpg) + 브랜드 자산
+│   logo-rect.png / logo-square.png / logo-square-hex.png / og-default.jpg
+│   favicon-32.png / favicon-180.png  ← scripts/make_logos.py 산출물
 ├── archive/               ← 날짜별 기사 아카이브
 │   ├── index.json         ← 날짜 목록 (최대 90일)
 │   └── YYYY-MM-DD.json    ← 날짜별 기사 데이터
@@ -75,11 +112,22 @@ API코인이 0이어도 발행이 멈추지 않도록 이원화.
 ├── 이미지필터.py           ← 이미지 키워드 오매칭 방지 (2026-08-01 추가, 기사자동생성·기사검수 공용)
 │   검색 전 키워드 한정어 부착 + 검색 후 태그 기반 음식/생활 사진 거부.
 │   단독 실행(`python3 이미지필터.py`)으로 자가 검증 케이스 통과 확인.
+├── 뉴스레터생성.py         ← 주간 뉴스레터 (매주 금 KST 08:00)
+│   웹판(newsletter/*.html 전문)과 텔레그램판(요약+링크)을 분리한다.
+│   텔레그램에 전문을 다 넣으면 웹 유입이 안 쌓인다.
+├── newsletter/            ← 주간 뉴스레터 아카이브 (뉴스레터_YYYYMMDD.html)
+├── scripts/
+│   └── make_logos.py      ← 브랜드 자산 생성기 (2026-08-01 추가, Pillow 필요)
 ├── news/                  ← 정적페이지생성.py 산출물 (YYYY-MM-DD-N.html, 크롤러용)
 ├── sitemap.xml / rss.xml / robots.txt  ← 정적페이지생성.py 산출물
 └── .github/workflows/
-    └── 자동기사생성.yml   ← GitHub Actions (매일 UTC 21:00 = KST 06:00)
+    ├── 자동기사생성.yml   ← GitHub Actions (매일 UTC 21:00 = KST 06:00)
+    └── 주간뉴스레터.yml   ← 매주 목 UTC 23:00 = 금 KST 08:00
 ```
+
+> ⚠️ **워크플로에 `permissions: contents: write`를 빠뜨리지 말 것.** 없으면 push 단계가
+> `github-actions[bot]` 403으로 실패한다. 주간뉴스레터.yml에 이게 없어서 2026-07-24·31
+> 두 주 연속 `newsletter/` 아카이브 커밋이 누락됐다(생성·발송 자체는 성공해 알아채기 어려웠다).
 
 ---
 
@@ -204,13 +252,18 @@ API코인이 0이어도 발행이 멈추지 않도록 이원화.
 ## 로컬 실행
 
 ```bash
-cd "200 News_manager/201 News_Material industry"
+cd "400_채널/410_소재/소재타임스"
 export ANTHROPIC_API_KEY="${ANTHROPIC_API_KEY}"
-export UNSPLASH_ACCESS_KEY="..."  # 선택: 없으면 loremflickr 사용
+export UNSPLASH_ACCESS_KEY="..."  # 선택: 없으면 큐레이션 풀 사용
 pip install anthropic feedparser requests
-python 기사자동생성.py
-python 기사검수.py  # 이미지 중복·불일치 검수 + 텔레그램 보고
+python3 기사자동생성.py
+python3 기사검수.py       # 이미지 중복·불일치 검수 + 텔레그램 보고
+python3 이미지필터.py     # 이미지 필터 수정 시 자가 검증
+python3 정적페이지생성.py  # 정적 페이지 전량 재생성(백필)
 ```
+
+※ 로컬 python은 `/usr/bin/python3`(3.9)뿐이다. 3.10+ 문법을 쓰지 말 것
+  (`from __future__ import annotations`로 어노테이션만 회피 중).
 
 ---
 
@@ -350,8 +403,15 @@ new PartnersCoupang.G({id:XXXXX, trackingCode:"AF9787280", subId:null, template:
 - [x] 회사소개·광고안내·개인정보처리방침·이용약관 페이지 생성 ✅ 2026-06-28
 - [x] 전체 HTML footer 링크 연결 (about/advertising/privacy/terms) ✅ 2026-06-28
 - [x] SEO 정적 페이지 + sitemap/rss/robots 도입 ✅ 2026-07-29 (기존 150건 백필 완료)
+- [x] 정적 페이지 404 수정 — 워크플로 `git add`에 `news/`·`sitemap.xml`·`rss.xml` 추가 ✅ 2026-08-01
+- [x] 이미지 오매칭 방지 필터 `이미지필터.py` 도입 ✅ 2026-08-01
+- [x] 브랜드 자산(로고·OG·파비콘) 생성 + 홈 OG/트위터 카드 ✅ 2026-08-01
+- [x] 텔레그램 공개 채널 @materialtimes 개설 + 일일·주간 발행 연결 ✅ 2026-08-01
+- [x] 주간뉴스레터.yml `permissions: contents: write` 추가 ✅ 2026-08-01 (403으로 2주 누락되던 것)
 - [ ] **materialtimes.co.kr 커스텀 도메인 연결** → GitHub Pages Custom domain 설정
-      ※ 연결 시 `정적페이지생성.py`·`기사자동생성.py`의 `SITE_URL`과 `robots.txt`도
+      ※ 연결 시 `정적페이지생성.py`·`기사자동생성.py`·`뉴스레터생성.py`의 `SITE_URL`과 `robots.txt`도
       `tugman77.github.io/materials-news`에서 `materialtimes.co.kr`로 함께 바꿔야 함.
 - [ ] UNSPLASH_ACCESS_KEY Secret 등록 (선택 — 없으면 loremflickr 사용)
 - [x] TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID Secret 등록 ✅ (기사검수.py 검수 보고 + 기사기획브리핑.py 발송용)
+- [x] TELEGRAM_CHANNEL_ID Secret 등록 ✅ 2026-08-01 (공개 채널 @materialtimes 발행용)
+- [ ] 로컬 구독코인 발행 복구 — 2026-07-29부터 연속 실패, 클라우드 API코인으로 백업 중
