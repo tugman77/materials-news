@@ -8,6 +8,7 @@ from __future__ import annotations  # 로컬 Python 3.9에서 `str | None` 등 �
 
 import anthropic
 import llm_backend  # 구독코인(로컬 Claude Code) / API코인(anthropic SDK) 전환
+import 피드목록    # RSS 피드 레지스트리 (활성/후보/사망 관리 + 헬스체크)
 import 이미지필터    # 이미지 키워드 오매칭(예: wafer → 과자) 방지 필터
 import 이미지소스    # 외부 이미지 소스 API (Unsplash/Pexels/Pixabay) — 기사검수.py와 공용
 import 이미지풀      # 카테고리별 큐레이션 풀 (로컬 self-host + Unsplash hotlink) — 공용
@@ -200,12 +201,24 @@ def deduplicate_articles(articles: list) -> list:
     return result
 
 # ── RSS 수집 ───────────────────────────────────────
-def collect_news_from_rss(max_per_feed=5):
-    """RSS 피드에서 최신 뉴스 제목·요약 수집"""
+# 수집 중 0건을 낸 활성 피드 이름. 발행 후 텔레그램 보고에 실어 조용한 고사를 막는다.
+DEAD_FEEDS: list = []
+
+
+def collect_news_from_rss(max_per_feed=8):
+    """RSS 피드에서 최신 뉴스 제목·요약 수집.
+
+    피드 목록은 피드목록.py가 관리한다 — 피드를 늘리거나 뺄 때 이 파일은 건드리지 않는다.
+    ⚠️ agent(UA) 필수: Mining.com 등은 기본 UA를 차단해 0건을 반환한다.
+       기존 RSS_FEEDS의 전자신문·한국경제가 오랫동안 0건이었는데 아무도 몰랐다
+       (2026-08-02 발견). 피드 상태는 `python3 피드목록.py`로 정기 점검할 것.
+    """
     collected = []
-    for name, url in RSS_FEEDS:
+    DEAD_FEEDS.clear()
+    for name, url in 피드목록.active_feeds():
         try:
-            feed = feedparser.parse(url)
+            feed = feedparser.parse(url, agent=피드목록.USER_AGENT)
+            got = 0
             for entry in feed.entries[:max_per_feed]:
                 title = entry.get("title", "")
                 summary = entry.get("summary", entry.get("description", ""))[:300]
@@ -216,8 +229,16 @@ def collect_news_from_rss(max_per_feed=5):
                     "summary": summary,
                     "link": link
                 })
+                got += 1
+            if got == 0:
+                DEAD_FEEDS.append(name)   # 활성으로 등록됐는데 0건 → 주소가 죽었을 가능성
+            print(f"   [{name}] {got}건")
         except Exception as e:
+            DEAD_FEEDS.append(f"{name}({type(e).__name__})")
             print(f"RSS 오류 [{name}]: {e}")
+
+    if DEAD_FEEDS:
+        print(f"⚠️ 0건 피드 {len(DEAD_FEEDS)}개: {', '.join(DEAD_FEEDS)}")
     return deduplicate_rss(collected)
 
 # ══════════════════════════════════════════════════════
@@ -457,7 +478,8 @@ def generate_articles_with_claude(raw_news_list, recent_topics=None, event_memor
 
     # 원본 뉴스 목록을 텍스트로 변환
     news_text = ""
-    for i, item in enumerate(raw_news_list[:15], 1):  # 최대 15개 처리
+    for i, item in enumerate(raw_news_list[:35], 1):  # 소재 풀. 15건이면 선택지가 좁아
+        # 매일 비슷한 기사가 나온다(2026-08-02). 피드 24개 체제에 맞춰 확대.
         news_text += f"{i}. [{item['source']}] {item['title']}\n   {item['summary']}\n\n"
 
     if news_text:
@@ -474,12 +496,16 @@ def generate_articles_with_claude(raw_news_list, recent_topics=None, event_memor
         )
 
         # ── 키워드 지문 기반 명시적 금지어 추출 ──────────
+        # ⚠️ 조합(A+B)만 금지한다. 단독어를 금지하면 14일이면 미국·중국·일본·유럽·희토류·
+        #    배터리처럼 이 업계의 핵심 어휘가 통째로 막혀(2026-08-02 실측: 지역어 42%,
+        #    소재어 30%) 모델이 남은 좁은 공간을 맴돌며 오히려 서로 닮은 기사를 쓴다.
+        #    "같은 사건 재보도 금지"는 조합 지문 + event_memory + 아래 [최근 기사 목록]이 맡는다.
         banned_pairs: set = set()
         cooldown_cutoff = (datetime.now(KST) - timedelta(days=30)).strftime("%Y-%m-%d")
         for t in recent_topics:
             text = t.get("title", "") + " " + t.get("summary", "")
-            banned_pairs.update(extract_keyword_pairs(text))
-        # event_memory 쿨다운 중인 지문도 추가
+            banned_pairs.update(kp for kp in extract_keyword_pairs(text) if "+" in kp)
+        # event_memory 쿨다운 중인 지문도 추가 (사건 단위 — 단독어여도 유지)
         if event_memory:
             for kp, info in event_memory.items():
                 if info.get("last_date", "") >= cooldown_cutoff:
@@ -537,6 +563,16 @@ def generate_articles_with_claude(raw_news_list, recent_topics=None, event_memor
     prompt = f"""반도체·소재·희귀금속·산업재 전문 뉴스 사이트용 기사 5개를 작성해주세요.
 
 {avoid_section}{sojaetimes_section}{news_section}
+
+[편집 규칙 — 5건을 한 판으로 볼 것]
+- **카테고리 균형**: 4개 카테고리 중 **최소 3개**가 포함돼야 한다. 한 카테고리가 3건을
+  넘지 않는다. (반도체소재로 쏠리는 경향이 있다)
+- **각도 분산**: 5건이 전부 "무슨 일이 있었다" 식 스트레이트면 지면이 단조로워진다.
+  아래에서 서로 다른 각도를 최소 3종 섞을 것.
+    ① 사건·발표 (스트레이트)   ② 실적·수치 분석   ③ 정책·규제 해설
+    ④ 기술·개발 동향          ⑤ 시장 구조 변화(M&A·공급망 재편)
+- **소스 다양성**: 원본 뉴스에는 국내지·해외 전문지·중국 소스가 섞여 있다. 국내 기사만
+  골라 쓰지 말 것. 해외·중국 원문에서 출발한 기사를 최소 1건 포함하면 차별화된다.
 
 [작성 규칙]
 - 카테고리: "반도체소재" / "희귀금속" / "산업재" / "글로벌" 중 하나
@@ -1239,11 +1275,27 @@ def main():
             f"  {i+1}. [{a.get('category','')}] {a.get('title','')}"
             for i, a in enumerate(articles)
         )
+        # 카테고리 분포 — 한쪽 쏠림을 매일 눈으로 확인한다
+        cats = {}
+        for a in articles:
+            c = a.get("category", "?")
+            cats[c] = cats.get(c, 0) + 1
+        cat_line = " · ".join(f"{k} {v}" for k, v in sorted(cats.items(), key=lambda x: -x[1]))
+
+        # 0건 피드 경고 — 주 1회 점검을 기다리지 않고 그날 바로 알아챈다.
+        # 전자신문·한국경제가 언제부터인지 모르게 0건이었던 게 이 경고가 없어서였다.
+        feed_line = ""
+        if DEAD_FEEDS:
+            feed_line = (f"\n\n⚠️ <b>0건 피드 {len(DEAD_FEEDS)}개</b>: {', '.join(DEAD_FEEDS)}\n"
+                         f"   → <code>python3 피드목록.py --all</code> 로 점검")
+
         tg_msg = (
             f"✅ <b>소재타임스 기사 생성 완료</b>\n"
             f"{now_str}\n\n"
             f"기사 {len(articles)}건 생성:\n{title_list}\n\n"
+            f"🗂 카테고리: {cat_line}\n"
             f"📋 편집장 브리핑: {briefing[:80]}{'...' if len(briefing) > 80 else ''}"
+            f"{feed_line}"
         )
         send_telegram(tg_msg)
 
