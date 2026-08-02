@@ -55,7 +55,7 @@ def build_channel_message(nl, week_str, article_count, web_url) -> str:
     if len(intro) > 160:
         intro = intro[:160].rstrip() + "…"
     lines = ["📊 <b>소재타임스 위클리</b>",
-             f"{week_str} · 기사 {article_count}건", ""]
+             f"{week_str} · 이번 주 주요 기사 {article_count}건", ""]
     if headline:
         lines += [f"<b>{headline}</b>", ""]
     if intro:
@@ -109,6 +109,10 @@ def post_to_channel(nl, week_str, article_count, web_url) -> bool:
 # llm_backend.call_tool()이 input_schema를 프롬프트에 실어 순수 JSON을 받아내므로,
 # 헤드리스에서도 tool_use와 동일한 dict가 나온다.
 MODEL = "claude-sonnet-4-6"  # 기사 생성과 동일 모델. 주간 요약은 Sonnet으로 충분하다.
+
+# 웹판 뉴스레터에 카드로 싣는 기사 수. 채널 메시지의 "주요 기사 N건"도 이 값을 쓴다 —
+# 따로 두면 "채널엔 36건인데 열어보니 8건"처럼 어긋난다(2026-08-02 시범 발행에서 발생).
+DISPLAY_LIMIT = 8
 
 NEWSLETTER_TOOL = {
     "name": "save_newsletter",
@@ -281,7 +285,7 @@ def generate_html(articles, nl, week_str):
 
     # 기사 카드 HTML (최대 8개)
     articles_html = ""
-    for a in articles[:8]:
+    for a in articles[:DISPLAY_LIMIT]:
         img_html = ""
         if a.get("image_url"):
             img_html = (
@@ -450,7 +454,9 @@ def main():
         #    공유·인용에 불리하므로 ASCII 경로(newsletter/YYYY-MM-DD.html)로의
         #    전환은 별건으로 남아 있다.
         web_url = f"{SITE_URL}/{quote(filename)}"
-        post_to_channel(nl_data, week_str, len(articles), web_url)
+        # 수집 건수(len(articles))가 아니라 웹판이 실제로 보여주는 건수를 넘긴다.
+        # 채널엔 36건이라 써놓고 열어보니 8건이면 독자가 속았다고 느낀다.
+        post_to_channel(nl_data, week_str, min(len(articles), DISPLAY_LIMIT), web_url)
 
         # 6. 텔레그램 완료 알림 (관리자용 — 발행 성공 확인)
         headline = nl_data.get("headline", "")
