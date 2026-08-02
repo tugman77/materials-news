@@ -204,6 +204,56 @@ def deduplicate_articles(articles: list) -> list:
 # 수집 중 0건을 낸 활성 피드 이름. 발행 후 텔레그램 보고에 실어 조용한 고사를 막는다.
 DEAD_FEEDS: list = []
 
+# ── 관련성 필터 ────────────────────────────────────────
+# 종합지·경제지 피드는 섹션 전체를 주므로 씨름·의료·중동 뉴스가 딸려온다.
+# 실측(2026-08-02): 모델에 전달되는 35칸 중 6~8칸이 이런 기사로 낭비됐다.
+# 전문지·원자재·중국·구글 피드는 이미 주제가 좁아 거르면 유효 기사가 떨어져 나가므로
+# 아래 그룹만 필터한다.
+FILTER_GROUPS = {"국내종합"}
+
+_TOPIC_WORDS = [
+    # 한국어 — 소재·부품·장비
+    "소재", "반도체", "웨이퍼", "파운드리", "소부장", "부품", "장비",
+    # "공정"은 넣지 말 것 — "공정거래위원회/공정위"에 걸려 규제 뉴스를 통과시킨다.
+    # 반도체 공정 기사는 "반도체"로 이미 잡힌다.
+    "디스플레이", "OLED", "패널", "기판", "패키징", "식각", "증착", "포토레지스트",
+    "배터리", "이차전지", "양극재", "음극재", "전해질", "분리막", "동박",
+    "화학", "석유화학", "정밀화학", "세라믹", "합금", "철강", "제련", "정련",
+    # 한국어 — 광물·금속
+    "광물", "희토류", "희귀금속", "광산", "금속", "리튬", "니켈", "코발트", "구리",
+    "실리콘", "갈륨", "게르마늄", "탄탈럼", "텅스텐", "마그네슘", "흑연", "비스무트",
+    # 한국어 — 공급망·정책
+    "공급망", "수출규제", "수출통제", "관세", "무역", "국산화", "자립", "조달",
+    # 영문
+    "semiconductor", "wafer", "foundry", "chip", "material", "mineral", "mining",
+    "rare earth", "lithium", "nickel", "cobalt", "copper", "graphite", "gallium",
+    "tantalum", "tungsten", "magnesium", "silicon", "battery", "cathode", "anode",
+    "display", "oled", "substrate", "packaging", "etch", "deposition",
+    "supply chain", "export control", "tariff", "critical minerals", "smelter",
+]
+
+
+def is_topic_relevant(item: dict) -> bool:
+    """제목에 업계 키워드가 하나라도 있으면 통과.
+
+    요약까지 보면 오탐이 급증한다 — 종합지 요약에는 본문 곁가지가 섞여
+    무관한 기사가 통과한다. 제목이 주제를 가장 정확히 드러낸다.
+    """
+    text = (item.get("title", "") or "").lower()
+    return any(w.lower() in text for w in _TOPIC_WORDS)
+
+
+def filter_by_relevance(items: list, feed_group: dict) -> list:
+    kept, dropped = [], 0
+    for it in items:
+        if feed_group.get(it["source"]) in FILTER_GROUPS and not is_topic_relevant(it):
+            dropped += 1
+            continue
+        kept.append(it)
+    if dropped:
+        print(f"   관련성 필터: 종합지 무관 기사 {dropped}건 제외 → {len(kept)}건")
+    return kept
+
 
 def collect_news_from_rss(max_per_feed=8):
     """RSS 피드에서 최신 뉴스 제목·요약 수집.
@@ -239,7 +289,11 @@ def collect_news_from_rss(max_per_feed=8):
 
     if DEAD_FEEDS:
         print(f"⚠️ 0건 피드 {len(DEAD_FEEDS)}개: {', '.join(DEAD_FEEDS)}")
-    return interleave_by_source(deduplicate_rss(collected))
+
+    feed_group = {f["name"]: f["group"] for f in 피드목록.FEEDS}
+    # 순서 주의: 관련성 필터 → 인터리브. 필터를 나중에 걸면 소스별 균형이 깨진다.
+    return interleave_by_source(
+        filter_by_relevance(deduplicate_rss(collected), feed_group))
 
 
 def interleave_by_source(items: list) -> list:
