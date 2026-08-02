@@ -9,6 +9,7 @@ from __future__ import annotations  # 로컬 Python 3.9에서 `str | None` 등 �
 import anthropic
 import llm_backend  # 구독코인(로컬 Claude Code) / API코인(anthropic SDK) 전환
 import 이미지필터    # 이미지 키워드 오매칭(예: wafer → 과자) 방지 필터
+import 이미지소스    # 외부 이미지 소스 API (Unsplash/Pexels/Pixabay) — 기사검수.py와 공용
 import feedparser
 import hashlib
 import json
@@ -17,7 +18,6 @@ import random
 import requests
 import time
 from datetime import datetime, timezone, timedelta
-from urllib.parse import quote
 
 # ── 설정 ──────────────────────────────────────────
 ANTHROPIC_API_KEY  = os.environ.get("ANTHROPIC_API_KEY", "여기에_API키_입력")
@@ -855,58 +855,16 @@ def _record_photo_id(photo_id: str):
 
 
 # ── 외부 이미지 소스 함수 ─────────────────────────────
+# 실제 구현은 이미지소스.py로 옮겼다 — 기사검수.py에 Pexels·Pixabay가 빠져 있어
+# 검수 재다운로드가 풀→picsum으로만 떨어지던 문제(2026-08-02)를 구조적으로 막기 위함.
+# 아래 두 이름은 기존 호출부 호환용 얇은 위임이다.
 
 def _fetch_pexels(keyword: str) -> str | None:
-    """Pexels API로 키워드 관련 이미지 URL 반환 (PEXELS_API_KEY 필요)"""
-    if not PEXELS_API_KEY:
-        return None
-    try:
-        resp = requests.get(
-            f"https://api.pexels.com/v1/search",
-            params={"query": keyword, "per_page": 10, "orientation": "landscape"},
-            headers={"Authorization": PEXELS_API_KEY},
-            timeout=15,
-        )
-        if resp.status_code == 200:
-            photos = resp.json().get("photos", [])
-            # alt(사진 설명)로 오매칭을 거른 뒤 남은 후보 중 첫 장을 쓴다.
-            # 셔플은 기존 random.choice의 날짜별 변화를 유지하기 위한 것.
-            random.shuffle(photos)
-            return 이미지필터.pick_relevant(
-                [(p.get("src", {}).get("large2x"), p.get("alt")) for p in photos],
-                "pexels")
-    except Exception as e:
-        print(f"   → Pexels 오류: {e}")
-    return None
+    return 이미지소스.fetch_pexels(keyword)
 
 
 def _fetch_pixabay(keyword: str) -> str | None:
-    """Pixabay API로 키워드 관련 이미지 URL 반환 (PIXABAY_API_KEY 필요)"""
-    if not PIXABAY_API_KEY:
-        return None
-    try:
-        resp = requests.get(
-            "https://pixabay.com/api/",
-            params={
-                "key": PIXABAY_API_KEY,
-                "q": keyword,
-                "image_type": "photo",
-                "orientation": "horizontal",
-                "per_page": 10,
-                "safesearch": "true",
-            },
-            timeout=15,
-        )
-        if resp.status_code == 200:
-            hits = resp.json().get("hits", [])
-            # 2026-08-01 스트룹와플 사고가 난 지점 — tags로 음식 사진을 걸러낸다.
-            random.shuffle(hits)
-            return 이미지필터.pick_relevant(
-                [(h.get("largeImageURL"), h.get("tags")) for h in hits],
-                "pixabay")
-    except Exception as e:
-        print(f"   → Pixabay 오류: {e}")
-    return None
+    return 이미지소스.fetch_pixabay(keyword)
 
 
 # ── 이미지 다운로드 (중복 방지 포함) ─────────────────
@@ -930,17 +888,11 @@ def _download_single_image(keyword: str, img_path: str, category: str = "", seed
     if refined != keyword:
         print(f"   → 키워드 보정: '{keyword}' → '{refined}'")
         keyword = refined
-    keyword_q = quote(keyword)
     seed = hashlib.md5(keyword.encode()).hexdigest()[:8]
 
     # 소스 우선순위(풀은 소진 시 재시도용으로 여러 번 시도)
-    order: list[str] = []
-    if UNSPLASH_ACCESS_KEY:
-        order.append("unsplash_api")
-    if PEXELS_API_KEY:
-        order.append("pexels")
-    if PIXABAY_API_KEY:
-        order.append("pixabay")
+    # 외부 소스 목록은 이미지소스.py가 키 등록 상태를 보고 결정한다 — 기사검수.py와 동일.
+    order: list[str] = list(이미지소스.available_sources())
     # 풀은 중복 거부 시 다음 후보로 넘어갈 수 있도록 풀 크기만큼 재시도
     order += ["unsplash_pool"] * 8
     order.append("picsum")
@@ -950,30 +902,8 @@ def _download_single_image(keyword: str, img_path: str, category: str = "", seed
         chosen_pid = None
         try:
             # 소스별 URL 확정
-            if source == "unsplash_api":
-                # count=5 — 한 장만 받으면 오매칭일 때 이 소스를 통째로 잃는다
-                r = requests.get(
-                    f"https://api.unsplash.com/photos/random?query={keyword_q}&orientation=landscape"
-                    f"&count=5&client_id={UNSPLASH_ACCESS_KEY}",
-                    timeout=15,
-                )
-                if r.status_code != 200:
-                    continue
-                photos = r.json()
-                if isinstance(photos, dict):   # count 미반영 응답 방어
-                    photos = [photos]
-                img_url = 이미지필터.pick_relevant(
-                    [(p.get("urls", {}).get("regular"),
-                      f"{p.get('alt_description') or ''} {p.get('description') or ''}")
-                     for p in photos], "unsplash_api")
-                if not img_url:
-                    continue
-            elif source == "pexels":
-                img_url = _fetch_pexels(keyword)
-                if not img_url:
-                    continue
-            elif source == "pixabay":
-                img_url = _fetch_pixabay(keyword)
+            if source in 이미지소스.FETCHERS:
+                img_url = 이미지소스.fetch(source, keyword)
                 if not img_url:
                     continue
             elif source == "unsplash_pool":

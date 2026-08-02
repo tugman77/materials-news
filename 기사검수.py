@@ -16,12 +16,12 @@ from __future__ import annotations  # 로컬 Python 3.9에서 `str | None` 등 �
 import anthropic
 import llm_backend  # 구독코인(로컬 Claude Code) / API코인(anthropic SDK) 전환
 import 이미지필터    # 이미지 키워드 오매칭(예: wafer → 과자) 방지 필터
+import 이미지소스    # 외부 이미지 소스 API (Unsplash/Pexels/Pixabay) — 기사자동생성.py와 공용
 import hashlib
 import json
 import os
 import requests
 from datetime import datetime, timezone, timedelta
-from urllib.parse import quote
 
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 UNSPLASH_ACCESS_KEY = os.environ.get("UNSPLASH_ACCESS_KEY", "")
@@ -184,11 +184,11 @@ def _pick_pool_url(category: str, seed_str: str) -> tuple[str, str]:
 
 
 def download_image(keyword: str, img_path: str, category: str = "", seed_str: str = "") -> str | None:
-    """이미지 다운로드 → img_path에 저장.
-    1차: Unsplash API (UNSPLASH_ACCESS_KEY 있을 때)
-    2차: 카테고리별 Unsplash 풀 (LRU 선택, 과거 사용분 최대한 회피)
-    3차: picsum 최종 폴백
-    저장 직전 MD5를 히스토리와 대조 — 과거(다른 날짜 포함) 이미지와 같으면 다음 후보로 넘어감.
+    """이미지 다운로드 → img_path에 저장. 기사자동생성.py와 동일한 소스 순서를 쓴다.
+    1차: 외부 API — Unsplash → Pexels → Pixabay (키가 등록된 것만, 이미지소스.py가 판단)
+    2차: 카테고리별 Unsplash 큐레이션 풀 (LRU 선택, 과거 사용분 최대한 회피)
+    3차: picsum 최종 폴백 — 내용 무관 랜덤이므로 여기까지 오면 사실상 실패다
+    저장 직전 MD5 대조: 외부 소스는 과거 날짜까지, 풀은 이번 실행만.
     """
     os.makedirs(IMAGES_DIR, exist_ok=True)
     # 검색 전 1차 방어 — 중의적 키워드(wafer/chip/foil…)에 업계 한정어를 붙인다
@@ -196,12 +196,12 @@ def download_image(keyword: str, img_path: str, category: str = "", seed_str: st
     if refined != keyword:
         print(f"   키워드 보정: '{keyword}' → '{refined}'")
         keyword = refined
-    keyword_q = quote(keyword)
     seed = hashlib.md5(keyword.encode()).hexdigest()[:8]
 
-    order = []
-    if UNSPLASH_ACCESS_KEY:
-        order.append("unsplash_api")
+    # 외부 소스(Unsplash·Pexels·Pixabay)를 기사자동생성.py와 동일하게 먼저 시도한다.
+    # 2026-08-02까지 이 파일에는 Pexels·Pixabay가 없어 풀→picsum밖에 없었고,
+    # 풀이 고갈되자 검수 재다운로드가 곧바로 내용 무관 랜덤 이미지로 떨어졌다.
+    order = list(이미지소스.available_sources())
     order += ["unsplash_pool"] * 8   # 중복 거부 시 다른 photo-ID로 재시도
     order.append("picsum")
 
@@ -209,20 +209,8 @@ def download_image(keyword: str, img_path: str, category: str = "", seed_str: st
     for source in order:
         chosen_pid = None
         try:
-            if source == "unsplash_api":
-                # count=5 — 한 장만 받으면 오매칭일 때 이 소스를 통째로 잃는다
-                r = requests.get(
-                    f"https://api.unsplash.com/photos/random?query={keyword_q}&orientation=landscape"
-                    f"&count=5&client_id={UNSPLASH_ACCESS_KEY}", timeout=20, allow_redirects=True)
-                if r.status_code != 200:
-                    continue
-                photos = r.json()
-                if isinstance(photos, dict):   # count 미반영 응답 방어
-                    photos = [photos]
-                img_url = 이미지필터.pick_relevant(
-                    [(p.get("urls", {}).get("regular"),
-                      f"{p.get('alt_description') or ''} {p.get('description') or ''}")
-                     for p in photos], "unsplash_api")
+            if source in 이미지소스.FETCHERS:
+                img_url = 이미지소스.fetch(source, keyword)
                 if not img_url:
                     continue
             elif source == "unsplash_pool":
