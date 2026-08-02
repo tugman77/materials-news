@@ -36,30 +36,47 @@ def available_sources() -> list:
     return order
 
 
-def fetch_unsplash(keyword: str) -> str | None:
-    """Unsplash random API. count=5로 후보를 받아 오매칭을 거른다."""
+def fetch_unsplash_candidates(keyword: str, count: int = 10) -> list:
+    """Unsplash random API에서 오매칭을 거른 후보 URL 목록을 반환.
+
+    한 번 호출에 여러 장을 받아 두면, MD5 중복으로 거부돼도 같은 소스의
+    다음 후보로 넘어갈 수 있다 (시그널코리아의 후보 캐시 방식을 공용화한 것).
+    """
     api_key = _key("UNSPLASH_ACCESS_KEY")
     if not api_key:
-        return None
+        return []
     try:
         r = requests.get(
             "https://api.unsplash.com/photos/random",
             params={"query": keyword, "orientation": "landscape",
-                    "count": 5, "client_id": api_key},
+                    "count": count, "client_id": api_key},
             timeout=15,
         )
         if r.status_code != 200:
-            return None
+            return []
         photos = r.json()
         if isinstance(photos, dict):      # count 미반영 응답 방어
             photos = [photos]
-        return 이미지필터.pick_relevant(
-            [(p.get("urls", {}).get("regular"),
-              f"{p.get('alt_description') or ''} {p.get('description') or ''}")
-             for p in photos], "unsplash_api")
+        out = []
+        for p in photos:
+            url = p.get("urls", {}).get("regular")
+            meta = f"{p.get('alt_description') or ''} {p.get('description') or ''}"
+            if not url:
+                continue
+            if 이미지필터.is_offtopic(meta):
+                print(f"   → 오매칭 이미지 거부 [unsplash_api]: {이미지필터.offtopic_reason(meta)}")
+                continue
+            out.append(url)
+        return out
     except Exception as e:
         print(f"   → Unsplash 오류: {e}")
-    return None
+    return []
+
+
+def fetch_unsplash(keyword: str) -> str | None:
+    """오매칭을 거른 Unsplash 후보 중 첫 장."""
+    cands = fetch_unsplash_candidates(keyword)
+    return cands[0] if cands else None
 
 
 def fetch_pexels(keyword: str) -> str | None:

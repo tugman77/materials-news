@@ -70,11 +70,16 @@ def refine_keyword(keyword: str, category: str = "") -> str:
     """
     kw = (keyword or "").strip()
     if not kw:
+        # 소재타임스 4종 + 시그널코리아 4종 — 두 채널이 같은 파일을 쓰도록 함께 둔다
         return {
             "반도체소재": "semiconductor wafer fab",
             "희귀금속": "rare earth mining ore",
             "산업재": "industrial factory manufacturing",
             "글로벌": "cargo container port logistics",
+            "공급망전쟁": "cargo container port supply chain",
+            "기술패권": "semiconductor chip technology",
+            "산업전략": "industrial factory manufacturing",
+            "글로벌분석": "global trade economy industry",
         }.get(category, "semiconductor materials industry")
 
     have = _words(kw)
