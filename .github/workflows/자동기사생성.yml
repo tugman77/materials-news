@@ -85,3 +85,14 @@ jobs:
           git add articles.json images/ archive/ sojaetimes/ news/ sitemap.xml rss.xml robots.txt
           git commit -m "자동 기사 업데이트 $(date +'%Y-%m-%d %H:%M')" || echo "변경사항 없음"
           git push
+
+      # 채널 발행은 push 성공 이후에만. 발행 안 된 기사를 독자에게 알리지 않는다.
+      # (2026-08-01 시그널코리아: push 실패한 세트를 채널에 알린 뒤 다른 세트가 올라가
+      #  채널 링크가 엉뚱한 기사를 열었다.)
+      - name: 텔레그램 채널 발행
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+        run: python 채널발행.py
+
