@@ -1,0 +1,370 @@
+{
+  "반도체소재": [
+    {
+      "id": "pexels-5118461",
+      "file": "pool/semi_pexels_5118461.jpg",
+      "md5": "b8a7d9c4ea26cd49f35be2ed7c888f89",
+      "source": "pexels",
+      "credit": "Российский центр  гибкой электроники",
+      "desc": "cleanroom semiconductor engineer"
+    },
+    {
+      "id": "pexels-36169774",
+      "file": "pool/semi_pexels_36169774.jpg",
+      "md5": "276e6abce2e4f3025d4028ff55083396",
+      "source": "pexels",
+      "credit": "Jakub Pabis",
+      "desc": "microchip circuit board macro"
+    },
+    {
+      "id": "pexels-5554949",
+      "file": "pool/semi_pexels_5554949.jpg",
+      "md5": "c5b3ee6571e2c5d7688ab8adb0596dd2",
+      "source": "pexels",
+      "credit": "Andrey Matveev",
+      "desc": "chip production line factory"
+    },
+    {
+      "id": "pexels-18471441",
+      "file": "pool/semi_pexels_18471441.jpg",
+      "md5": "e00f2357d81e7b1c75c58fa6e3424542",
+      "source": "pexels",
+      "credit": "Ludovic Delot",
+      "desc": "chip production line factory"
+    },
+    {
+      "id": "pexels-18471537",
+      "file": "pool/semi_pexels_18471537.jpg",
+      "md5": "8c568e8931c1a69f03d5150b1575ad46",
+      "source": "pexels",
+      "credit": "Ludovic Delot",
+      "desc": "chip production line factory"
+    },
+    {
+      "id": "pixabay-6322085",
+      "file": "pool/semi_pixabay_6322085.jpg",
+      "md5": "38c98170eda447d42f2aeac4f54383ca",
+      "source": "pixabay",
+      "credit": "Quanlecntt2004",
+      "desc": "chip production line factory"
+    },
+    {
+      "id": "pixabay-6322029",
+      "file": "pool/semi_pixabay_6322029.jpg",
+      "md5": "48675a340a04724d065d42f1d506f6b3",
+      "source": "pixabay",
+      "credit": "Quanlecntt2004",
+      "desc": "chip production line factory"
+    },
+    {
+      "id": "pexels-5118460",
+      "file": "pool/semi_pexels_5118460.jpg",
+      "md5": "04a55aa502af342ac666655aed2c8fad",
+      "source": "pexels",
+      "credit": "Российский центр  гибкой электроники",
+      "desc": "OLED display panel technology"
+    },
+    {
+      "id": "pexels-37426135",
+      "file": "pool/semi_pexels_37426135.jpg",
+      "md5": "2b196e0bbd3665ad3187cd66817b70f7",
+      "source": "pexels",
+      "credit": "Maikol Herrera",
+      "desc": "electronic components laboratory"
+    }
+  ],
+  "산업재": [
+    {
+      "id": "pixabay-3613522",
+      "file": "pool/indus_pixabay_3613522.jpg",
+      "md5": "f1ec30b3a3a41a2087ce30c197ab191c",
+      "source": "pixabay",
+      "credit": "SatyaPrem",
+      "desc": "chemical plant industrial"
+    },
+    {
+      "id": "pexels-3730670",
+      "file": "pool/indus_pexels_3730670.jpg",
+      "md5": "7c139140b3978600252c54b5455b5908",
+      "source": "pexels",
+      "credit": "Kateryna Babaieva",
+      "desc": "steel mill production line"
+    },
+    {
+      "id": "pixabay-2905361",
+      "file": "pool/indus_pixabay_2905361.jpg",
+      "md5": "fa18c69fe5e9076a10d69106ff598d84",
+      "source": "pixabay",
+      "credit": "Martinelle",
+      "desc": "factory automation robot arm"
+    },
+    {
+      "id": "pixabay-4600914",
+      "file": "pool/indus_pixabay_4600914.jpg",
+      "md5": "5c927ecb6b1f72f059cd0a3219c1300b",
+      "source": "pixabay",
+      "credit": "vipragen",
+      "desc": "industrial research laboratory"
+    },
+    {
+      "id": "pixabay-1825278",
+      "file": "pool/indus_pixabay_1825278.jpg",
+      "md5": "d82fb4d86a0d5702e20d0480736634a9",
+      "source": "pixabay",
+      "credit": "jdn2001cn0",
+      "desc": "industrial research laboratory"
+    },
+    {
+      "id": "pixabay-2815640",
+      "file": "pool/indus_pixabay_2815640.jpg",
+      "md5": "f8a69a055ba927477fea7d485890a6a5",
+      "source": "pixabay",
+      "credit": "jarmoluk",
+      "desc": "industrial research laboratory"
+    },
+    {
+      "id": "pexels-36594160",
+      "file": "pool/indus_pexels_36594160.jpg",
+      "md5": "ac83184a366362580d92082da88195b1",
+      "source": "pexels",
+      "credit": "Heru Dharma",
+      "desc": "battery manufacturing plant"
+    },
+    {
+      "id": "pexels-38688812",
+      "file": "pool/indus_pexels_38688812.jpg",
+      "md5": "e534ad07a3a861a8f2de308c177bd5dd",
+      "source": "pexels",
+      "credit": "Elements Interactive",
+      "desc": "battery manufacturing plant"
+    },
+    {
+      "id": "pexels-38427501",
+      "file": "pool/indus_pexels_38427501.jpg",
+      "md5": "646179cc62a6b08b7937f1f982eea899",
+      "source": "pexels",
+      "credit": "Michael Li",
+      "desc": "battery manufacturing plant"
+    },
+    {
+      "id": "pexels-5118462",
+      "file": "pool/indus_pexels_5118462.jpg",
+      "md5": "7c08bde00a249fc050f2d2215981e4ac",
+      "source": "pexels",
+      "credit": "Российский центр  гибкой электроники",
+      "desc": "display panel factory cleanroom"
+    },
+    {
+      "id": "pexels-5953827",
+      "file": "pool/indus_pexels_5953827.jpg",
+      "md5": "6ea4b673e28af32d75d3e66f459a321d",
+      "source": "pexels",
+      "credit": "Anna Shvets",
+      "desc": "display panel factory cleanroom"
+    },
+    {
+      "id": "pexels-32399139",
+      "file": "pool/indus_pexels_32399139.jpg",
+      "md5": "81e033a5dcfb1da0f39988c672c6c486",
+      "source": "pexels",
+      "credit": "Igor Passchier",
+      "desc": "petrochemical refinery night"
+    }
+  ],
+  "희귀금속": [
+    {
+      "id": "pexels-12201831",
+      "file": "pool/metal_pexels_12201831.jpg",
+      "md5": "a4d6adb2dbfc95bc158f12af2a870af4",
+      "source": "pexels",
+      "credit": "Tom Fisk",
+      "desc": "rare earth mining site"
+    },
+    {
+      "id": "pexels-2892618",
+      "file": "pool/metal_pexels_2892618.jpg",
+      "md5": "590f1a69fd7eb98ca42fc8b5f6b93cbf",
+      "source": "pexels",
+      "credit": "Vlad Chețan",
+      "desc": "rare earth mining site"
+    },
+    {
+      "id": "pixabay-2653706",
+      "file": "pool/metal_pixabay_2653706.jpg",
+      "md5": "4e1791f33783a10a4639cc7c8a1f2501",
+      "source": "pixabay",
+      "credit": "shibang",
+      "desc": "rare earth mining site"
+    },
+    {
+      "id": "pexels-2101134",
+      "file": "pool/metal_pexels_2101134.jpg",
+      "md5": "054253e41f272c6dd5a598bbea34a466",
+      "source": "pexels",
+      "credit": "Tom Fisk",
+      "desc": "ore processing plant"
+    },
+    {
+      "id": "pexels-4993793",
+      "file": "pool/metal_pexels_4993793.jpg",
+      "md5": "06b05d285f1d974424b2d5c44e14ff3a",
+      "source": "pexels",
+      "credit": "Karl Gerber",
+      "desc": "ore processing plant"
+    },
+    {
+      "id": "pixabay-856022",
+      "file": "pool/metal_pixabay_856022.jpg",
+      "md5": "cf0a9c75f9cb319058e3174d48176d0e",
+      "source": "pixabay",
+      "credit": "sarangib",
+      "desc": "ore processing plant"
+    },
+    {
+      "id": "pexels-36423794",
+      "file": "pool/metal_pexels_36423794.jpg",
+      "md5": "06b36812e705b5a8e90f0c87caa3b0ac",
+      "source": "pexels",
+      "credit": "Keegan Checks",
+      "desc": "metal refinery furnace"
+    },
+    {
+      "id": "pexels-23022540",
+      "file": "pool/metal_pexels_23022540.jpg",
+      "md5": "b83c9f17d8506fe5ded005f9f11db745",
+      "source": "pexels",
+      "credit": "Matt Arellano",
+      "desc": "lithium mine aerial"
+    },
+    {
+      "id": "pexels-36397989",
+      "file": "pool/metal_pexels_36397989.jpg",
+      "md5": "59e6acbec883a48be94d7e1c211316f0",
+      "source": "pexels",
+      "credit": "Willians Huerta",
+      "desc": "metal ingot stack industry"
+    },
+    {
+      "id": "pixabay-932218",
+      "file": "pool/metal_pixabay_932218.jpg",
+      "md5": "1fcd5a4657d77a69d348df30367188cf",
+      "source": "pixabay",
+      "credit": "tookapic",
+      "desc": "metal ingot stack industry"
+    },
+    {
+      "id": "pexels-31721779",
+      "file": "pool/metal_pexels_31721779.jpg",
+      "md5": "d3e5ec34a317f83c26f705de8731e734",
+      "source": "pexels",
+      "credit": "Mark Thomas",
+      "desc": "mining haul truck quarry"
+    },
+    {
+      "id": "pixabay-900392",
+      "file": "pool/metal_pixabay_900392.jpg",
+      "md5": "e07f47b16a5ba352a76a7d986e2195a5",
+      "source": "pixabay",
+      "credit": "Erdenebayar",
+      "desc": "smelting molten metal"
+    }
+  ],
+  "글로벌": [
+    {
+      "id": "pexels-4570835",
+      "file": "pool/global_pexels_4570835.jpg",
+      "md5": "e1f7313cbbc2b81b708d8980a3a8ca08",
+      "source": "pexels",
+      "credit": "James Heming",
+      "desc": "container port aerial view"
+    },
+    {
+      "id": "pixabay-3021820",
+      "file": "pool/global_pixabay_3021820.jpg",
+      "md5": "7e9c949cffa1299d0e3b7096a741708b",
+      "source": "pixabay",
+      "credit": "Julius_Silver",
+      "desc": "container port aerial view"
+    },
+    {
+      "id": "pixabay-6631117",
+      "file": "pool/global_pixabay_6631117.jpg",
+      "md5": "ce97a9586fa4607c3d2f3121b35683e9",
+      "source": "pixabay",
+      "credit": "dendoktoor",
+      "desc": "cargo ship ocean logistics"
+    },
+    {
+      "id": "pexels-12196579",
+      "file": "pool/global_pexels_12196579.jpg",
+      "md5": "21e32f215bd9572baf0ef5cbc33597c6",
+      "source": "pexels",
+      "credit": "Robert So",
+      "desc": "freight train container"
+    },
+    {
+      "id": "pexels-27624035",
+      "file": "pool/global_pexels_27624035.jpg",
+      "md5": "9d743366c72b7feb063a86c920145f01",
+      "source": "pexels",
+      "credit": "jim jorjani",
+      "desc": "freight train container"
+    },
+    {
+      "id": "pixabay-8568473",
+      "file": "pool/global_pixabay_8568473.jpg",
+      "md5": "36c8efbc4ba72bea76d286d8a28715ad",
+      "source": "pixabay",
+      "credit": "Ralf1403",
+      "desc": "freight train container"
+    },
+    {
+      "id": "pexels-36398150",
+      "file": "pool/global_pexels_36398150.jpg",
+      "md5": "886c8d0c27bcb974bb886d62831dbf44",
+      "source": "pexels",
+      "credit": "Willians Huerta",
+      "desc": "logistics warehouse interior"
+    },
+    {
+      "id": "pexels-8555467",
+      "file": "pool/global_pexels_8555467.jpg",
+      "md5": "aa0caae0c418d2c58dcfa2a38ae04a92",
+      "source": "pexels",
+      "credit": "Marcello Sokal",
+      "desc": "port crane loading containers"
+    },
+    {
+      "id": "pixabay-4661420",
+      "file": "pool/global_pixabay_4661420.jpg",
+      "md5": "8b84d0bd71272eb287ee4dd211d7bcd7",
+      "source": "pixabay",
+      "credit": "trixtammy",
+      "desc": "port crane loading containers"
+    },
+    {
+      "id": "pexels-9749472",
+      "file": "pool/global_pexels_9749472.jpg",
+      "md5": "225c0d1088ae14cc5eac2b3de701f15a",
+      "source": "pexels",
+      "credit": "Ethan  Nguyen",
+      "desc": "air cargo freight terminal"
+    },
+    {
+      "id": "pixabay-6670684",
+      "file": "pool/global_pixabay_6670684.jpg",
+      "md5": "cb7a47091e6027d07c6b6d636c1efd16",
+      "source": "pixabay",
+      "credit": "smartschwarz",
+      "desc": "air cargo freight terminal"
+    },
+    {
+      "id": "pexels-29091980",
+      "file": "pool/global_pexels_29091980.jpg",
+      "md5": "2892835a6a9e8f13f38ed0858fec4ca3",
+      "source": "pexels",
+      "credit": "Wolfgang Weiser",
+      "desc": "global shipping trade"
+    }
+  ]
+}

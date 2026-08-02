@@ -10,6 +10,7 @@ import anthropic
 import llm_backend  # 구독코인(로컬 Claude Code) / API코인(anthropic SDK) 전환
 import 이미지필터    # 이미지 키워드 오매칭(예: wafer → 과자) 방지 필터
 import 이미지소스    # 외부 이미지 소스 API (Unsplash/Pexels/Pixabay) — 기사검수.py와 공용
+import 이미지풀      # 카테고리별 큐레이션 풀 (로컬 self-host + Unsplash hotlink) — 공용
 import feedparser
 import hashlib
 import json
@@ -718,50 +719,7 @@ def generate_editorial(articles):
 
 # ── 카테고리별 Unsplash 큐레이션 풀 ──────────────────
 # 규칙: 동일 photo-ID가 두 카테고리에 나타나서는 안 된다.
-_UNSPLASH_POOL = {
-    "반도체소재": [
-        "photo-1518770660439-4636190af475",  # PCB 회로기판 클로즈업 (초록)
-        "photo-1591799265444-d66432b91588",  # AMD Ryzen CPU 칩
-        "photo-1562408590-e32931084e23",     # PCB 회로기판 (파랑/보라)
-        "photo-1597852074816-d933c7d2b988",  # 전자 부품 HDD 내부
-        "photo-1581092918056-0c4c3acd3789",  # 전자기기 납땜 작업
-        "photo-1451187580459-43490279c0fa",  # 서버 데이터센터 랙
-        "photo-1526374965328-7f61d4dc18c5",  # 코드 스크린 (매트릭스)
-        "photo-1555680202-c86f0e12f086",     # 컴퓨터 마더보드 내부
-        "photo-1558494949-ef010cbdcc31",     # 광섬유 케이블 (파랑/컬러)
-    ],
-    "희귀금속": [
-        "photo-1504917595217-d4dc5ebe6122",  # 금속 용접 불꽃
-        "photo-1504328345606-18bbc8c9d7d1",  # 용접사 클로즈업
-        "photo-1527515637462-cff94eecc1ac",  # 채석장·광산 암반
-        "photo-1531538606174-0f90ff5dce83",  # 광물·금 원석
-        "photo-1565793298595-6a879b1d9492",  # 광산 덤프트럭
-        "photo-1574482620826-40685ca5ebd2",  # 산업 금속 생산 라인
-        "photo-1581094244429-b9b51e78f1d7",  # 건설 현장 항공뷰
-        "photo-1578375819537-b95e00c82429",  # 금속 제련 용광로
-    ],
-    "산업재": [
-        "photo-1567789884554-0b844b597180",  # 자동차 공장 로봇
-        "photo-1473341304170-971dccb5ac1e",  # 고압 송전탑
-        "photo-1541888946425-d81bb19240f5",  # 건설 현장 엔지니어
-        "photo-1495576775051-8af0d10f68d1",  # 제철·철강 생산
-        "photo-1504711434969-e33886168f5c",  # 제철소 용융 쇳물
-        "photo-1565791380713-1756b9a05343",  # 화학 플랜트 항공뷰
-        "photo-1582139329536-e7284fece509",  # 건설 크레인 군집
-        "photo-1581092160607-ee22621dd758",  # 엔지니어 기계 작업
-    ],
-    "글로벌": [
-        "photo-1494412519320-aa613dfb7738",  # 컨테이너 항구 항공뷰
-        "photo-1578575437130-527eed3abbec",  # 컨테이너선 접안 항구
-        "photo-1586528116311-ad8dd3c8310d",  # 물류 창고 내부
-        "photo-1521790361543-f645cf042ec4",  # 화물 항공기
-        "photo-1488229297570-58520851e868",  # 화물선 드론 항공뷰
-        "photo-1545193544-312489b2d26c",     # 물류 트럭 주차장
-        "photo-1558618666-fcd25c85cd64",     # 글로벌 해운 항로
-        "photo-1586769852044-692d6e3703f0",  # 세계 공급망 지도
-    ],
-}
-_UNSPLASH_BASE = "https://images.unsplash.com/{id}?w=800&h=450&fit=crop&auto=format"
+# 풀 목록은 이미지풀.py 한 곳에서만 관리한다 (두 파일 복붙으로 어긋나던 것을 통합).
 
 # ── 중복 방지 상태 ────────────────────────────────────
 # _used_photo_ids / _downloaded_hashes 는 "이번 실행" 범위.
@@ -819,33 +777,16 @@ def _save_image_history():
 
 
 def _validate_pool():
-    """풀 내 cross-category 중복 ID 감지 (디버그용)"""
-    seen = {}
-    for cat, ids in _UNSPLASH_POOL.items():
-        for pid in ids:
-            if pid in seen:
-                print(f"⚠️  중복 photo-ID: {pid} — {seen[pid]} ↔ {cat}")
-            seen[pid] = cat
+    """풀 cross-category 중복 감지 (이미지풀.py 위임)"""
+    이미지풀.validate()
 
 
-def _pick_pool_url(category: str, seed_str: str) -> tuple[str, str]:
-    """카테고리 풀에서 photo-ID를 선택. (url, photo_id) 반환.
-    선택 우선순위:
-      1. 이번 실행에서 아직 안 쓴 ID 중
-      2. '가장 오래전에 사용(또는 미사용)' 그룹을 우선(LRU) → 날짜 간 반복 간격 최대화
-      3. 동률이면 시드 해시로 결정(변화 부여)
-    실제 저장 성공 시점에 _record_photo_id로 사용 날짜를 기록한다."""
-    pool = _UNSPLASH_POOL.get(category) or _UNSPLASH_POOL["반도체소재"]
-    available = [p for p in pool if p not in _used_photo_ids]
-    if not available:
-        available = pool  # 이번 실행에서 풀 소진 시 재사용 허용
-    # 마지막 사용 날짜 오름차순 — 미사용("")이 가장 앞 = 최우선
-    oldest_key = min(_photo_id_last_used.get(p, "") for p in available)
-    tied = [p for p in available if _photo_id_last_used.get(p, "") == oldest_key]
-    idx = int(hashlib.md5(seed_str.encode()).hexdigest(), 16) % len(tied)
-    chosen = tied[idx]
-    _used_photo_ids.add(chosen)
-    return _UNSPLASH_BASE.format(id=chosen), chosen
+def _pick_pool_entry(category: str, seed_str: str):
+    """풀에서 LRU로 한 항목 선택 → 항목 dict 반환 (없으면 None)"""
+    entry = 이미지풀.pick(category, seed_str, _used_photo_ids, _photo_id_last_used)
+    if entry:
+        _used_photo_ids.add(entry["id"])
+    return entry
 
 
 def _record_photo_id(photo_id: str):
@@ -894,7 +835,7 @@ def _download_single_image(keyword: str, img_path: str, category: str = "", seed
     # 외부 소스 목록은 이미지소스.py가 키 등록 상태를 보고 결정한다 — 기사검수.py와 동일.
     order: list[str] = list(이미지소스.available_sources())
     # 풀은 중복 거부 시 다음 후보로 넘어갈 수 있도록 풀 크기만큼 재시도
-    order += ["unsplash_pool"] * 8
+    order += ["unsplash_pool"] * max(이미지풀.size(category or "반도체소재"), 8)
     order.append("picsum")
 
     pool_try = 0
@@ -907,22 +848,31 @@ def _download_single_image(keyword: str, img_path: str, category: str = "", seed
                 if not img_url:
                     continue
             elif source == "unsplash_pool":
-                # 재시도마다 시드를 바꿔 다른 photo-ID가 선택되게 함
-                img_url, chosen_pid = _pick_pool_url(
+                # 재시도마다 시드를 바꿔 다른 항목이 선택되게 함
+                entry = _pick_pool_entry(
                     category or "반도체소재", f"{seed_str or keyword}_{pool_try}"
                 )
                 pool_try += 1
+                if not entry:
+                    continue
+                chosen_pid = entry["id"]
+                content = 이미지풀.read_bytes(entry)   # 로컬은 파일 읽기, 원격은 HTTP
+                if not content:
+                    continue
+                img_url = entry["ref"]
             else:
                 img_url = f"https://picsum.photos/seed/{seed}/800/450"
 
-            resp = requests.get(img_url, timeout=30, allow_redirects=True)
-            if resp.status_code != 200 or len(resp.content) < 1000:
-                continue
+            is_pool = (source == "unsplash_pool")
+            if not is_pool:
+                resp = requests.get(img_url, timeout=30, allow_redirects=True)
+                if resp.status_code != 200 or len(resp.content) < 1000:
+                    continue
+                content = resp.content
 
             # MD5 중복 체크. 외부 소스는 과거 날짜까지(_downloaded_hashes),
             # 큐레이션 풀은 이번 실행만(_run_hashes) 대조한다 — 위 주석 참조.
-            is_pool = (source == "unsplash_pool")
-            img_hash = hashlib.md5(resp.content).hexdigest()
+            img_hash = hashlib.md5(content).hexdigest()
             if img_hash in (_run_hashes if is_pool else _downloaded_hashes):
                 scope = "오늘 이미 사용" if is_pool else "과거 사용"
                 print(f"   → 중복 이미지 [{source}] md5={img_hash[:8]} ({scope}), 다음 후보 시도...")
@@ -934,7 +884,7 @@ def _download_single_image(keyword: str, img_path: str, category: str = "", seed
                 _downloaded_hashes.add(img_hash)
             _record_photo_id(chosen_pid)  # 풀 이미지일 때만 사용 날짜 기록
             with open(img_path, "wb") as f:
-                f.write(resp.content)
+                f.write(content)
             print(f"   → 이미지 저장: {img_path} [{category}] ({source})")
             return True
 
