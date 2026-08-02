@@ -25,18 +25,7 @@
       "image_keyword": "helium gas industrial semiconductor",
       "is_featured": true,
       "timestamp": "오전 08:30",
-      "image_url": "images/2026-08-03_article_0.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "중국의 헬륨 수출 금지 조치 — 중국 헬륨 자체 생산량은 미미하여 수출금지 실효성 의문",
-          "헬륨이 '사실상 대체 불가능'하다는 표현 — 아르곤 등 부분 대체 가능 공정 존재",
-          "아시아 유통망 영향력 주장 — 구체적 근거 없는 추정 서술"
-        ],
-        "notes": "중국 헬륨 통제 개연성은 있으나 자국 생산량 감안 시 파급력 과장 가능성",
-        "verified_at": "2026-08-03 03:46"
-      }
+      "image_url": "images/2026-08-03_article_0.jpg"
     },
     {
       "id": 1,
@@ -60,18 +49,7 @@
       "image_keyword": "semiconductor materials factory industrial",
       "is_featured": false,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-08-03_article_1.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "소부장 상장사 30곳 중 15~16곳 실적 개선 — 출처 없는 수치",
-          "고부가 소재 업체 영업이익 증가율 '평균 40~60%' — 출처 불명확",
-          "SOC 전구체·HBM 접착 소재 영업이익 수치가 특정 업체 미명시 상태로 제시"
-        ],
-        "notes": "수치들이 '업계 분석'으로 뭉뚱그려져 출처 확인 불가, 방향성은 합리적",
-        "verified_at": "2026-08-03 03:46"
-      }
+      "image_url": "images/2026-08-03_article_1.jpg"
     },
     {
       "id": 2,
@@ -95,17 +73,7 @@
       "image_keyword": "circuit board manufacturing factory",
       "is_featured": false,
       "timestamp": "오전 10:00",
-      "image_url": "images/2026-08-03_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "신영환 대덕전자 사장 등 실명 임원 직함 — 현시점 재직 여부 확인 필요",
-          "태성의 생산능력 '두 배 이상 증가' — 구체적 수치 근거 미제시"
-        ],
-        "notes": "태성·대덕전자·심텍 등 실존 기업, 유리기판 장비 확장 방향성 업계 현실과 부합",
-        "verified_at": "2026-08-03 03:46"
-      }
+      "image_url": "images/2026-08-03_article_2.jpg"
     },
     {
       "id": 3,
@@ -126,20 +94,10 @@
         "국내 희귀금속 관련 업계는 이번 IEA 경고를 투자 확대의 근거로 활용하려는 움직임이다. 핵심광물 국산화 사업과 도시광산 전문기업 M&A 확대 등 민간 차원의 자립화 노력도 이어지고 있다. 업계 관계자는 '핵심광물 확보는 이제 선택이 아닌 국가 경쟁력의 필수 조건'이라고 강조했다.",
         "전문가들은 IEA 보고서를 계기로 산학연 공동 대응 체계 마련이 시급하다고 입을 모은다. 단기적으로는 전략비축 확대와 수입 다변화가 필요하고, 중장기적으로는 자원 개발 투자와 도시광산 기술 고도화를 병행해야 한다. 첨단 산업 강국의 위상을 유지하려면 소재 자립에 대한 국가 차원의 체계적 전략이 불가결하다는 지적이다."
       ],
-      "image_keyword": "OLED display panel manufacturing",
+      "image_keyword": "critical minerals mining industrial",
       "is_featured": false,
       "timestamp": "오전 10:45",
-      "image_url": "images/2026-08-03_article_3.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "IEA 보고서 인용이지만 발표 일자·보고서명 미기재 — 출처 특정 불가",
-          "리튬 2개국 70% 점유율 — 호주·칠레 기준이면 부합하나 명시 없음"
-        ],
-        "notes": "IEA 핵심광물 경고 기조·수치는 기존 보고서와 대체로 일치, 신뢰도 높음",
-        "verified_at": "2026-08-03 03:46"
-      }
+      "image_url": "images/2026-08-03_article_3.jpg"
     },
     {
       "id": 4,
@@ -163,18 +121,7 @@
       "image_keyword": "OLED display material organic",
       "is_featured": false,
       "timestamp": "오전 11:30",
-      "image_url": "images/2026-08-03_article_4.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "OLED 발광재료 시장 22억달러 수치 — 출처·조사기관 미기재",
-          "중국 로컬 업체 점유율 5년 만에 5%→15~20% 급성장 — 출처 불명확",
-          "2030년 30% 초과 전망 — 인용 기관 없이 서술"
-        ],
-        "notes": "시장 규모·점유율 수치 방향성은 합리적이나 전부 출처 없는 추정치로 제시됨",
-        "verified_at": "2026-08-03 03:46"
-      }
+      "image_url": "images/2026-08-03_article_4.jpg"
     }
   ],
   "editorial_briefing": "중국의 헬륨 수출 금지로 반도체 공정 소재 위기가 고조되는 가운데, IEA는 핵심광물 공급망의 3중 위기를 경보했다. AI·HBM 고부가 소재 업체만 실적 호조를 보이며 소부장 업계 양극화가 심화되고 있다.",
@@ -204,6 +151,5 @@
       "label": "OLED 발광재료 성장",
       "status": "중국 추격 가속"
     }
-  ],
-  "last_reviewed_at": "2026-08-03 03:46"
+  ]
 }
