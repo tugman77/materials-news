@@ -7,9 +7,10 @@
 import anthropic
 import json
 import os
+import re
 import requests
 import llm_backend  # 구독코인(로컬 Claude Code) / API코인(anthropic SDK) 전환
-from datetime import datetime, timezone, timedelta
+from datetime import date, datetime, timezone, timedelta
 from urllib.parse import quote
 
 # ── 설정 ──────────────────────────────────────────
@@ -154,20 +155,40 @@ CAT_COLORS = {
 
 
 # ── 기사 수집 ─────────────────────────────────────
+def _articles_json_date(data, fallback: str) -> str:
+    """articles.json의 실제 발행일을 generated_at("2026년 08월 02일 08:56")에서 뽑는다.
+
+    오늘치 발행 전에는 이 파일에 '어제' 기사가 들어 있다. 무조건 오늘로 라벨링하면
+    아카이브의 어제치와 날짜만 다른 같은 기사가 되어 뉴스레터에 두 번 실린다.
+    """
+    m = re.search(r"(\d{4})\D+(\d{1,2})\D+(\d{1,2})", str(data.get("generated_at", "")))
+    if m:
+        try:
+            return date(*(int(x) for x in m.groups())).isoformat()
+        except ValueError:
+            pass
+    return fallback
+
+
 def load_this_week_articles():
-    """이번 주(최근 7일) 기사를 articles.json + archive에서 수집"""
+    """이번 주(최근 7일) 기사를 articles.json + archive에서 수집.
+
+    ⚠️ articles.json의 기사는 발행과 동시에 archive/YYYY-MM-DD.json 에도 저장된다.
+       두 소스를 그대로 합치면 항상 같은 기사가 두 번 들어온다 — 제목 기준으로 걷어낸다.
+       (2026-08-02 발견: 시범 발행에서 두산·LG화학 기사가 08-02와 08-01로 중복 노출)
+    """
     articles = []
     today = datetime.now(KST).date()
     week_ago = today - timedelta(days=7)
 
-    # 오늘 기사
+    # 최신 발행분 (articles.json) — 날짜는 파일이 말하는 값을 쓴다
     if os.path.exists("articles.json"):
         with open("articles.json", "r", encoding="utf-8") as f:
             data = json.load(f)
-        date_str = str(today)
+        date_str = _articles_json_date(data, str(today))
         for i, a in enumerate(data.get("articles", [])):
             articles.append({**a, "date": date_str, "idx": i})
-        print(f"   오늘 기사: {len(data.get('articles', []))}개")
+        print(f"   최신 발행분({date_str}): {len(data.get('articles', []))}개")
 
     # 아카이브 (최근 7일)
     if os.path.exists("archive/index.json"):
@@ -179,12 +200,23 @@ def load_this_week_articles():
             if os.path.exists(path):
                 with open(path, "r", encoding="utf-8") as f:
                     data = json.load(f)
-                arts = data.get("articles", [])
-                for i, a in enumerate(arts):
+                for i, a in enumerate(data.get("articles", [])):
                     articles.append({**a, "date": date_str, "idx": i})
-        print(f"   아카이브 기사: {len(articles)}개 누계")
+        print(f"   아카이브 포함 누계: {len(articles)}개")
 
-    return articles
+    # 제목 기준 중복 제거 — 먼저 온 것(=최신 발행분, 그다음 최신 날짜순)을 남긴다
+    seen, unique = set(), []
+    for a in articles:
+        key = (a.get("title") or "").strip()
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        unique.append(a)
+
+    dropped = len(articles) - len(unique)
+    if dropped:
+        print(f"   중복 제거: {dropped}개 → 최종 {len(unique)}개")
+    return unique
 
 
 # ── Claude 뉴스레터 내용 생성 ─────────────────────
