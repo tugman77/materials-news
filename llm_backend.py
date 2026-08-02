@@ -18,6 +18,7 @@ import subprocess
 # ── 설정 ──────────────────────────────────────────────
 LLM_BACKEND        = os.environ.get("LLM_BACKEND", "api").strip().lower()
 CLAUDE_CLI         = os.environ.get("CLAUDE_CLI", "claude")
+CLAUDE_CODE_EFFORT = os.environ.get("CLAUDE_CODE_EFFORT", "medium")  # low|medium|high|xhigh|max
 CLAUDE_CODE_MODEL  = os.environ.get("CLAUDE_CODE_MODEL", "claude-sonnet-4-6")
 CLAUDE_CODE_TIMEOUT = int(os.environ.get("CLAUDE_CODE_TIMEOUT", "1200"))  # 초 — 시도 1회당 예산(총 예산 아님)
 CLAUDE_CODE_RETRIES = int(os.environ.get("CLAUDE_CODE_RETRIES", "2"))    # 타임아웃(무응답) 시 재시도 횟수
@@ -88,7 +89,16 @@ def call_tool(request_params: dict, tool_name: str) -> dict:
             proc = subprocess.run(
                 [CLAUDE_CLI, "-p", full_prompt,
                  "--output-format", "json",
-                 "--model", CLAUDE_CODE_MODEL],
+                 "--model", CLAUDE_CODE_MODEL,
+                 # 구조화 JSON 생성에 도구가 필요 없다. 프롬프트로만 금지하면 모델이
+                 # 파일을 뒤지거나 검색을 시도해 턴이 늘어난다(2026-08-02 실패 응답의
+                 # num_turns=2). 아예 막아 한 번에 끝내게 한다.
+                 "--disallowedTools", "Bash", "Edit", "Write", "Read", "Glob", "Grep",
+                 "WebSearch", "WebFetch", "Task",
+                 # 사고 깊이 제한. 정해진 스키마를 채우는 작업이라 깊은 추론이 불필요한데,
+                 # 기본값으로 두면 사고 토큰이 폭주한다 — 같은 실패 응답에서 출력이
+                 # 75,532토큰(기대치의 약 10배)까지 부풀어 rc=1로 끝났다.
+                 "--effort", CLAUDE_CODE_EFFORT],
                 capture_output=True, text=True, timeout=CLAUDE_CODE_TIMEOUT,
             )
         except subprocess.TimeoutExpired:
