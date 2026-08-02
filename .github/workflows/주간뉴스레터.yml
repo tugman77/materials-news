@@ -26,7 +26,32 @@ jobs:
           python-version: '3.11'
 
       - name: 의존성 설치
-        run: pip install anthropic requests
+        run: pip install anthropic requests feedparser
+
+      # 주 1회 심층 피드 점검. 활성뿐 아니라 candidate·dead까지 전부 재검증한다 —
+      # 죽었던 피드가 되살아나거나, 후보 쿼리가 신선해지는 경우를 잡기 위함.
+      # (일상 감시는 매일 발행 때 0건 피드를 텔레그램으로 알리는 쪽이 담당한다.)
+      # continue-on-error: 피드 점검 실패가 뉴스레터 발행을 막아선 안 된다.
+      - name: 피드 헬스체크 (주간 심층)
+        id: feedcheck
+        continue-on-error: true
+        run: |
+          python 피드목록.py --all 2>&1 | tee /tmp/feedcheck.txt
+          echo "exit=$?" >> "$GITHUB_OUTPUT"
+
+      - name: 피드 이상 텔레그램 보고
+        if: steps.feedcheck.outcome == 'failure'
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          BODY=$(grep -E '❌|⚠️' /tmp/feedcheck.txt | head -20)
+          [ -z "$BODY" ] && exit 0
+          MSG=$(printf '🔧 소재타임스 주간 피드 점검 — 조치 필요\n\n%s\n\n피드목록.py 의 status를 갱신하세요.' "$BODY")
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
+            --data-urlencode "text=${MSG}" >/dev/null
 
       - name: 뉴스레터 생성
         env:
