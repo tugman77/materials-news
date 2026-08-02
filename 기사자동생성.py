@@ -239,7 +239,27 @@ def collect_news_from_rss(max_per_feed=8):
 
     if DEAD_FEEDS:
         print(f"⚠️ 0건 피드 {len(DEAD_FEEDS)}개: {', '.join(DEAD_FEEDS)}")
-    return deduplicate_rss(collected)
+    return interleave_by_source(deduplicate_rss(collected))
+
+
+def interleave_by_source(items: list) -> list:
+    """소스별로 한 건씩 번갈아 배치한다.
+
+    ⚠️ 이게 없으면 피드 확장이 무의미하다. 수집은 피드 순서대로 쌓이는데
+       프롬프트는 앞에서 N건만 잘라 쓰므로, 목록 앞쪽 피드(국내종합)가 슬롯을
+       전부 먹고 영문·중국 소스는 한 건도 모델에 닿지 않는다.
+       (2026-08-02 실측: 피드 24개로 186건을 모았는데 상위 35건이 전부 국내종합이었다.)
+    """
+    buckets: dict = {}
+    for it in items:
+        buckets.setdefault(it["source"], []).append(it)
+
+    out, order = [], list(buckets)
+    while any(buckets[s] for s in order):
+        for s in order:
+            if buckets[s]:
+                out.append(buckets[s].pop(0))
+    return out
 
 # ══════════════════════════════════════════════════════
 # 중복 뉴스 방지 시스템 (DUPLICATE DETECTION SYSTEM)
