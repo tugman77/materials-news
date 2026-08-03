@@ -6,7 +6,47 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Mon, 03 Aug 2026 03:46:24 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 03:32:51 +0900</lastBuildDate>
+    <item>
+      <title>LB세미콘, 퀄컴 AI·차량용 PMIC 후공정 양산</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-04-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-04-0.html</guid>
+      <category>반도체소재</category>
+      <description>LB세미콘이 퀄컴의 AI 데이터센터·차량용 PMIC 후공정 양산 승인을 획득하고 8월부터 본격 생산에 돌입한다. 범핑·테스트·백엔드를 일괄 처리하는 턴키 방식으로 글로벌 팹리스 1위와 협력을 확대하며 국내 OSAT 산업의 새 이정표를 세웠다는 평가다.</description>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>中·美日 소부장 증설 경쟁…韓만 자금줄 고갈</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-04-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-04-1.html</guid>
+      <category>글로벌</category>
+      <description>중국·미국·일본이 국가 주도로 반도체 소부장 증설 투자를 경쟁적으로 늘리는 가운데, 국내 소부장 업체들은 금리 부담과 민간 투자 위축으로 자금 조달에 어려움을 겪으며 격차가 벌어지고 있다는 경고가 잇따른다.</description>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>희토류 산화물 가격 반등…자석 업계 비수기 압박</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-04-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-04-2.html</guid>
+      <category>희귀금속</category>
+      <description>글로벌 희토류 시장에서 네오디뮴·프라세오디뮴 산화물 가격이 반등하며 금속 가격도 동반 상승하고 있다. 반면 영구자석 업체들은 여름 고온 비수기로 수요가 위축돼 상·하류 간 수급 불일치가 단기 변동성을 키우고 있다.</description>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>초경량 재활용 복합소재 패널, 운송 혁신 선도</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-04-3.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-04-3.html</guid>
+      <category>산업재</category>
+      <description>유럽을 중심으로 초경량이면서 재활용 가능한 복합소재 패널 개발 프로젝트가 본격화되고 있다. 기존 금속재·탄소섬유 복합재의 고비용·저재활용성 한계를 극복해 운송 산업의 경량화와 탄소 중립 목표를 동시에 겨냥한 차세대 소재로 주목받는다.</description>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>OCI, 日 기업과 패키징 웨이퍼 재생사업 진출</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-04-4.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-04-4.html</guid>
+      <category>반도체소재</category>
+      <description>OCI가 일본 기업과 손잡고 반도체 패키징용 캐리어 웨이퍼 재생·재사용 사업에 진출한다. 첨단 패키징 수요 급증에 따른 웨이퍼 수급 긴장과 자원 순환 트렌드가 맞물려 새로운 시장 기회로 주목받고 있다.</description>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>중국, 헬륨 수출 금지…반도체 공정 직격탄</title>
       <link>https://tugman77.github.io/materials-news/news/2026-08-03-0.html</link>
@@ -206,46 +246,6 @@
       <category>산업재</category>
       <description>엘앤에프가 미국 스타트업 코어셸에 LFP 양극재를 공급하는 계약을 체결, 중국산 광물·부품을 완전 배제한 북미 배터리 공급망 구축에 나섰다. OBBB 등 미국 배터리 규제 대응력을 강화하며 방산 시장 공략도 본격화한다.</description>
       <pubDate>Thu, 30 Jul 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>AI 버블론에 반도체 소부장 주가 급락…실적과 주가의 괴리 확대</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-07-30-4.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-30-4.html</guid>
-      <category>글로벌</category>
-      <description>SK하이닉스가 역대급 실적을 발표했음에도 AI 버블 우려로 반도체 관련주가 동반 급락하는 현상이 나타났다. 소재·부품·장비 업종은 완성품 기업보다 더 큰 낙폭을 기록하며 밸류체인 전반의 투자 심리 위축이 확인됐다.</description>
-      <pubDate>Thu, 30 Jul 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>中 반도체 굴기의 역설, 韓 소재株 수혜 본격화</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-07-29-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-29-0.html</guid>
-      <category>글로벌</category>
-      <description>중국이 첨단 반도체 내재화에 속도를 내면서 오히려 한국 반도체 소재 기업들의 공급 기회가 확대되고 있다. 중국 팹 증설이 한국산 특수 소재 수요를 견인하는 '역설적 수혜' 구도가 형성됐다.</description>
-      <pubDate>Wed, 29 Jul 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>SKC, 동박·반도체 소재 호조로 2분기 적자폭 대폭 축소</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-07-29-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-29-1.html</guid>
-      <category>반도체소재</category>
-      <description>SKC가 동박과 반도체 소재 사업의 매출 호조에 힘입어 2026년 2분기 영업적자 규모를 크게 줄이는 데 성공했다. AI 서버 기판용 동박 수요 급증과 반도체 패키징 소재 확대가 실적 개선을 이끌었다.</description>
-      <pubDate>Wed, 29 Jul 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>中, 2400℃ 견디는 초내열 신합금 개발…소재 패권 경쟁 가열</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-07-29-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-29-2.html</guid>
-      <category>희귀금속</category>
-      <description>중국 과학자들이 2400도 초고온 환경을 견딜 수 있는 신합금 개발에 성공했다고 발표했다. 이 합금은 차세대 항공우주·방산 분야의 핵심 소재로 주목받으며, 글로벌 희귀금속 기반 고성능 합금 시장 경쟁을 더욱 뜨겁게 달구고 있다.</description>
-      <pubDate>Wed, 29 Jul 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>동우화인켐, 투명 LED 유리 'G-TLD'로 옥외광고 시장 공략</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-07-29-3.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-29-3.html</guid>
-      <category>산업재</category>
-      <description>동우화인켐이 자체 개발한 투명 LED 유리 'G-TLD'로 옥외광고 혁신에 나서고 있다. 반도체·디스플레이 소재 기반 기술력을 바탕으로 한 이 제품은 미관과 안전성을 동시에 충족하는 차세대 광고 플랫폼으로 주목받고 있다.</description>
-      <pubDate>Wed, 29 Jul 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>

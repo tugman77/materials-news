@@ -21,20 +21,10 @@
         "PMIC 후공정 양산이 본격화되면 솔더볼(납·주석 합금 구슬)·언더필 소재(에폭시 수지) 수요도 늘어난다. 덕산하이메탈 등 국내 솔더볼 업체들이 반사 수혜를 입을 수 있다는 시각도 나온다. AI 반도체 붐이 팹리스에서 후공정 소재 공급망까지 낙수 효과를 만들어내고 있는 구조다.",
         "전력 반도체 후공정에 특화된 기업들의 수주 잔고와 가동률이 2026년 하반기 핵심 투자 지표로 주목받고 있다. 이번 퀄컴 수주를 계기로 국내 OSAT 산업의 글로벌 위상이 한 단계 높아질지 귀추가 주목된다. AI·차량용 전력 반도체 수요는 구조적 성장 국면에 있어 후공정 업체들의 장기 수혜 가능성이 크다는 분석이 지배적이다."
       ],
-      "image_keyword": "semiconductor supply chain factory investment",
+      "image_keyword": "semiconductor packaging manufacturing process",
       "is_featured": true,
       "timestamp": "오전 08:30",
-      "image_url": "images/2026-08-04_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "LB세미콘이 퀄컴 PMIC 후공정 턴키 계약 수주 — 공식 발표 여부 확인 필요",
-          "8월 본격 양산 시점 구체성 — 출처가 '3일 밝혔다'로만 표기"
-        ],
-        "notes": "LB세미콘·퀄컴 모두 실존 기업, PMIC·OSAT 맥락 정합. 대체로 신뢰 가능.",
-        "verified_at": "2026-08-04 03:32"
-      }
+      "image_url": "images/2026-08-04_article_0.jpg"
     },
     {
       "id": 1,
@@ -57,17 +47,7 @@
       "image_keyword": "industrial factory supply chain manufacturing",
       "is_featured": false,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-08-04_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "SMEE가 28nm 이하 공정 진입 목표 — 현재 기술 격차 과소평가 가능성",
-          "'공급망 동반 이전' 전략이 미·일 표준으로 자리 잡았다는 단정적 표현"
-        ],
-        "notes": "CHIPS Act·신에쓰화학·도쿄일렉트론 실존. 이미지 키워드가 기사 맥락과 다소 무관.",
-        "verified_at": "2026-08-04 03:32"
-      }
+      "image_url": "images/2026-08-04_article_1.jpg"
     },
     {
       "id": 2,
@@ -90,17 +70,7 @@
       "image_keyword": "rare earth metal mining industrial",
       "is_featured": false,
       "timestamp": "오전 10:00",
-      "image_url": "images/2026-08-04_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "SMM 주간 브리핑 인용 — 구체적 수치 없이 인용 출처만 명시",
-          "생산 쿼터 관리·광산 가동 조정 내용 — 구체적 정책명·수치 없음"
-        ],
-        "notes": "NdPr 시장 구조·비수기 패턴 등 업계 현실과 부합. 전반적으로 신뢰 가능.",
-        "verified_at": "2026-08-04 03:32"
-      }
+      "image_url": "images/2026-08-04_article_2.jpg"
     },
     {
       "id": 3,
@@ -123,18 +93,7 @@
       "image_keyword": "composite material lightweight industrial panel",
       "is_featured": false,
       "timestamp": "오전 10:45",
-      "image_url": "images/2026-08-04_article_3.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "AZoM 보도 인용 — 특정 프로젝트명·참여 기관 없이 '복수 기관'으로만 표기",
-          "차량 중량 10% 감소 시 연비 6~8% 개선 수치 — 출처 없는 시뮬레이션 결과",
-          "'수십 킬로미터 이상' 주행거리 향상 — 근거 시뮬레이션 기관·조건 불명확"
-        ],
-        "notes": "일반적 복합소재 트렌드는 타당하나 구체 프로젝트·수치 출처 보강 필요.",
-        "verified_at": "2026-08-04 03:32"
-      }
+      "image_url": "images/2026-08-04_article_3.jpg"
     },
     {
       "id": 4,
@@ -157,17 +116,7 @@
       "image_keyword": "semiconductor silicon wafer manufacturing industrial",
       "is_featured": false,
       "timestamp": "오전 11:30",
-      "image_url": "images/2026-08-04_article_4.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "디일렉 보도 인용 — OCI 공식 발표 여부와 일본 파트너사명 미공개",
-          "캐리어 웨이퍼 재생 국내 시장 진출 추진 단계 — 계약 확정 여부 불명확"
-        ],
-        "notes": "OCI 실존·캐리어 웨이퍼 개념 정확. 파트너사명 미공개는 보도 특성상 허용 범위.",
-        "verified_at": "2026-08-04 03:32"
-      }
+      "image_url": "images/2026-08-04_article_4.jpg"
     }
   ],
   "editorial_briefing": "LB세미콘의 퀄컴 AI·차량용 후공정 진입, OCI의 웨이퍼 재생사업 등 국내 업계가 고부가 틈새 공략에 나섰지만, 소부장 자금난과 희토류 비용 상승이 하반기 경쟁력을 압박하고 있다.",
@@ -197,6 +146,5 @@
       "label": "복합소재 패널 개발",
       "status": "유럽 경량화 본격화"
     }
-  ],
-  "last_reviewed_at": "2026-08-04 03:32"
+  ]
 }
