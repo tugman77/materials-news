@@ -1,0 +1,935 @@
+{
+  "date": "2026-08-06",
+  "collected_at": "2026-08-06 07:07 KST",
+  "total_count": 102,
+  "topics": {
+    "반도체소재부품장비": [
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "반도체소재부품장비",
+        "title": "방성환 경기도의회 국힘 대표의원, 정책역량 집중 대안 제시하는 야당 ...",
+        "summary": "(AI)과 반도체 산업 육성을 최우선 과제로 제시했다. 성남을 지역구로 둔 3선의 방성환 대표의원은... 방 대표의원은 AI 산업이 대기업 중심으로 성장해서는 한계가 있다며 소재·부품·장비 기업과 대학, 연구기관이 함께... ",
+        "link": "https://www.discoverynews.kr/news/articleView.html?idxno=1097830",
+        "published": "Thu, 06 Aug 2026 07:00:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "반도체소재부품장비",
+        "title": "삼성·SK하이닉스의 '3D D램' 로드맵…'수직 채널' 경쟁 막 올랐다",
+        "summary": "이러한 변화가 현실화될 경우 증착·식각·CMP·본딩·계측 등 국내 반도체 장비 산업 전반의 구조적 재편이... 회사는 기존 미세화 중심 전략의 한계를 구조·소재·부품 혁신으로 극복하겠다는 방향을 제시했다. 4F²... ",
+        "link": "https://www.the-stock.kr/news/articleView.html?idxno=33096",
+        "published": "Thu, 06 Aug 2026 07:00:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "반도체소재부품장비",
+        "title": "[中 하드테크 IPO 빅뱅] ㉒본원양자, '풀스택 역량' 기반 생태계 확장",
+        "summary": "이와 함께 반도체 제조 기술을 활용한 '본원오본(本源悟本)' 반도체 양자컴퓨터도 연구·개발하며 서로... 이를 통해 양자컴퓨터의 핵심 부품부터 극저온 냉각, 제어 장비에 이르는 핵심 하드웨어 기술을 내재화하고... ",
+        "link": "https://www.newspim.com/news/view/20260805001217",
+        "published": "Thu, 06 Aug 2026 07:00:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "반도체소재부품장비",
+        "title": "동박 넘어 유리기판·로봇·우주항공까지…SKC·롯데·솔루스의 '영역 파...",
+        "summary": "통신 부품에 공급하고 있다. 또 반도체 미세 회로 구현을 위한 1.5㎛(마이크로미터) 수준의 초극박 기술을 고도화해 AI 가속기, 고성능 자율주행차 및 로보틱스용 센서 레이더 소재에 선제 적용하고 있다. 이밖에... ",
+        "link": "https://www.goodkyung.com/news/articleView.html?idxno=289966",
+        "published": "Thu, 06 Aug 2026 06:30:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "반도체소재부품장비",
+        "title": "“땡큐, 삼성·마이크론”…머스크 “메모리 수요 200% 폭증” [글로벌...",
+        "summary": "광트랜시버부터 로봇까지…미, 대중 봉쇄망 넓힌다 미국이 인공지능 데이터센터 부품과 로봇, 태양광·반도체 소재 등 첨단 공급망 전반에서 중국을 배제하기 위한 수출통제 조치를 잇달아 내놓고 있습니다. 다음 달... ",
+        "link": "https://n.news.naver.com/mnews/article/011/0004649008?sid=104",
+        "published": "Thu, 06 Aug 2026 06:06:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "반도체소재부품장비",
+        "title": "[더벨][삼성·SK 메가 투자 낙수효과] 재무 체력 다진 동진쎄미켐, 테일...",
+        "summary": "삼성전자는 2019년 일본의 수출 규제 이후 소재 공급망 안정화를 위해 동진쎄미켐과 극자외선(EUV)용 포토레지스트 국산화를 추진했다. 거래 관계가 확대되면서 삼성전자에 대한 매출 의존도도 높아졌다. 올해 1분기 기준... ",
+        "link": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202608041519208640106866",
+        "published": "Thu, 06 Aug 2026 07:02:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "반도체소재부품장비",
+        "title": "AI 반도체 시장 공략 나선 삼성SDI..국내 첫 SOH 상용화 20년",
+        "summary": "식각 과정에서 포토레지스트(PR)가 형성한 미세 회로 패턴이 무너지기 쉬워지는데 SOH는 식각 저항성이... D램용 EUV 소재와 파운더리용 패터닝 소재, 패키징 소재의 확대뿐 아니라 최근 글로벌 반도체사의 패키징 소재... ",
+        "link": "https://n.news.naver.com/mnews/article/008/0005395627?sid=101",
+        "published": "Tue, 04 Aug 2026 18:10:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "반도체소재부품장비",
+        "title": "[반도체 진주, 일본서 캐다] 칩은 바뀌어도 원판은 안 바뀐다 ①웨이퍼...",
+        "summary": "EUV용 포토레지스트 양산 인증을 확보한 소수 업체 중 하나이기도 하다. 반도체 밖에서는 건축 자재의 원료인 염화비닐 수지가 세계 1위여서 첨단 소재와 범용 화학을 양대 축으로 삼는 사업 구조를 갖추고 있다. 최신... ",
+        "link": "https://www.newspim.com/news/view/20260729001108",
+        "published": "Thu, 30 Jul 2026 07:19:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "반도체소재부품장비",
+        "title": "중국은 정말 'ASML의 벽'을 넘었나… 中 노광장비 실체와 반도체 패권의...",
+        "summary": "노광기의 진짜 벽은 '빛'보다 정밀제어에 있다 노광장비를 이해하려면 먼저 DUV와 EUV의 차이를 알아야... 온도 변화에 따른 광학왜곡, 반복 노광에서 발생하는 오버레이 편차, 웨이퍼 변형, 포토레지스트와의... ",
+        "link": "https://www.mtnews.net/news/articleView.html?idxno=25468",
+        "published": "Tue, 28 Jul 2026 16:30:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "반도체소재부품장비",
+        "title": "[채수환 칼럼] 소.부.장. 축적의 시간",
+        "summary": "바로 극자외선(EUV) 노광장비다. 반도체 회로를 웨이퍼 위에 새기는 게 노광장비인데, AI 반도체와 HBM... 반도체용 고순도 불화수소의 국산화라든지 포토레지스트, CMP슬러리(연마제)와 같은 핵심 소재의 국산 공급이 크게... ",
+        "link": "https://n.news.naver.com/mnews/article/009/0005712937?sid=004",
+        "published": "Mon, 27 Jul 2026 17:44:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "반도체소재부품장비",
+        "title": "&quot;계속 떨어지더니 드디어&quot; 다시 뛰는 코스닥...ETF 수익률도 28%[ETFvsETF]",
+        "summary": "액티브 ETF들이 반도체 소부장 등 IT(정보기술)주를 중심으로 포트폴리오를 구성한 것이 성과를 갈랐다. 최근 일주일간 코스닥 시장에서 기계·장비와 전기·전자 업종은 16% 이상 상승했는데, 코스닥 액티브... ",
+        "link": "https://n.news.naver.com/mnews/article/008/0005396262?sid=101",
+        "published": "Thu, 06 Aug 2026 05:30:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "반도체소재부품장비",
+        "title": "반도체 다음은 바이오·로봇?...코스닥 4일간 24% 뛰며 순환매 확산",
+        "summary": "자료=한국거래소 반도체 대형주에 집중됐던 국내 증시의 자금 흐름이 바이오와 로봇, 반도체 소부장 등 코스닥 성장주로 빠르게 확산하고 있다. 코스닥지수는 지난달 31일부터 이달 5일까지 4거래일 연속 상승하며 800선... ",
+        "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=474752",
+        "published": "Wed, 05 Aug 2026 21:04:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "반도체소재부품장비",
+        "title": "구미, 로봇·반도체·방산 묶어 '첨단산업 전환' 속도",
+        "summary": "정부의 영남권 첨단산업 발전비전에서 구미가 첨단로봇 초혁신 벨트의 핵심 거점과 반도체 소부장·방산 특화형 테스트베드로 제시된 데 이어 삼성전자와 삼성SDS도 구미에 휴머노이드 양산 라인과 AI 드리븐 팩토리, AI... ",
+        "link": "https://www.bzeronews.com/news/articleView.html?idxno=820906",
+        "published": "Wed, 05 Aug 2026 20:20:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "반도체소재부품장비",
+        "title": "NNFC &quot;국내 공공 반도체 인프라, 해외의 15분의 1...확대 필요&quot;",
+        "summary": "팹리스(반도체 설계)부터 첨단 패키징, 소부장(소재·부품·장비)까지 연계하는 국가 공공 인프라가 필요하다&quot;며 &quot;공공 나노팹의 역할을 지속적으로 확대해 나가겠다&quot;고 말했다. 행사에는 김형준 서울대... ",
+        "link": "https://n.news.naver.com/mnews/article/031/0001047579?sid=105",
+        "published": "Wed, 05 Aug 2026 19:28:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "반도체소재부품장비",
+        "title": "[테헤란로] 한국판 나스닥은 왜 없나",
+        "summary": "인공지능(AI)·바이오·반도체 소부장 기업은 연구개발에 오랜 시간이 필요하고, 시장 상황에 따라 주가도 크게 흔들린다. 일시적인 시가총액만으로 기업의 미래를 판단하기는 어렵다. 정책이 던져야 할 질문도 달라야 한다.... ",
+        "link": "https://n.news.naver.com/mnews/article/014/0005557823?sid=110",
+        "published": "Wed, 05 Aug 2026 18:56:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "반도체소재부품장비",
+        "title": "직업·영재교육 체질 확 바꾼 전남광주교육청… 반도체 인재 10만명 키운...",
+        "summary": "통합교육청은 지역 58개 특성화고 교육과정을 반도체 공정과 패키징, AI 데이터센터 등 첨단산업 분야... 광주권은 AI·모빌리티, 전남 동부권은 우주항공·신소재, 전남 서부권은 에너지·반도체를 중심으로 교육과정을... ",
+        "link": "https://n.news.naver.com/mnews/article/081/0003668014?sid=102",
+        "published": "Thu, 06 Aug 2026 05:04:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "반도체소재부품장비",
+        "title": "정부 '비수도권 우선' 반도체 클러스터…인천 후순위 놓이나",
+        "summary": "비수도권 우선 원칙에 인천 긴장 첨단 패키징 거점 경쟁력 시험대 산업 기반 중심 평가 요구 커져 정부가... 반도체 패키징·테스트(OSAT) 기업이 자리 잡고 있으며, 관련 소재·부품·장비 기업과 연구개발 기반도 구축돼... ",
+        "link": "https://www.kgnews.co.kr/news/article.html?no=906613",
+        "published": "Wed, 05 Aug 2026 16:48:00 +0900"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "ko",
+        "topic": "반도체소재부품장비",
+        "title": "손실나도 대안 종목 없다···코스닥 ETF 자산 과반이 ‘반도체 소부장株’ - 시사저널e",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTE5qYy1zQVR3RXVHTFJaSm5abU1zMU1EOVJ6M1NEVlRGRTJTQzRZbkNCa0tBalgxeVdONjVxc0dKYnBLSzZza1lkbFBJSnpGUFZGZXRTb1RRLXpIcEZGNGxJYmRkSjRmQ1p3NEdOZ3dGUEU1Z9IBdkFVX3lxTE1NOVhmSEtHMVdPOF9tSXVwa3NxT0VLQm5Sd3ExWDZTSDJKRXB3WUZMS0M2OFJuX1ZZYXdRWkdmajJHWVRxc2",
+        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5qYy1zQVR3RXVHTFJaSm5abU1zMU1EOVJ6M1NEVlRGRTJTQzRZbkNCa0tBalgxeVdONjVxc0dKYnBLSzZza1lkbFBJSnpGUFZGZXRTb1RRLXpIcEZGNGxJYmRkSjRmQ1p3NEdOZ3dGUEU1Z9IBdkFVX3lxTE1NOVhmSEtHMVdPOF9tSXVwa3NxT0VLQm5Sd3ExWDZTSDJKRXB3WUZMS0M2OFJuX1ZZYXdRWkdmajJHWVRxc2xGTFU1UC1WNkVyT05GZmdsVk5tX3RxbnNkenI5OEdoaXZfSFRBcW05UFZxZ3gzRVE?oc=5",
+        "published": "Wed, 05 Aug 2026 06:42:12 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "ko",
+        "topic": "반도체소재부품장비",
+        "title": "글로벌 반도체 장비 ‘훈풍’… 소부장업계로 번지나 - 대한경제",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMidEFVX3lxTE8xdU5qdEtCTFE3WDJGczFpVFUwZlhqMU82U2tzakNfU1BsRFM3QkFUWDVhY1c1ZGlRUDNRMmtmcHdKYlQ2QnV5UzQwaXZFazlqRi1yZC12TnhpOWh3aFdIUVRUT3dHaV9nbUdvaVBkeG1oakt1?oc=5\" target=\"_blank\">글로벌 반도체 장비 ‘훈풍’… 소부장업계로 번지나</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">대한경제</",
+        "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE8xdU5qdEtCTFE3WDJGczFpVFUwZlhqMU82U2tzakNfU1BsRFM3QkFUWDVhY1c1ZGlRUDNRMmtmcHdKYlQ2QnV5UzQwaXZFazlqRi1yZC12TnhpOWh3aFdIUVRUT3dHaV9nbUdvaVBkeG1oakt1?oc=5",
+        "published": "Mon, 03 Aug 2026 21:00:34 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "ko",
+        "topic": "반도체소재부품장비",
+        "title": "[새만금에 1000조(兆) 담기] ⑤ 배후도시 익산에 '반도체 소부장 특화단지' 조성…\"전남광주와 시너지 효과도\" - 프레시안",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTFBGTVdnZEJNY3k0Q0g5UE1jZGVSdXBfUFhreC1sbmoyLTJjWEFXVjluSnUwWXhjNENsSDA0VDM0S0U2Z0F0ek9IMW9sXzZ0ZTk5cUszMk9IMldneGtDRXNCQUNOS29rODlpaHI4?oc=5\" target=\"_blank\">[새만금에 1000조(兆) 담기] ⑤ 배후도시 익산에 '반도체 소부장 특화단지' 조성…\"전남광주와 시너지 효과도\"</a>&nbsp;&nbsp;<fon",
+        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBGTVdnZEJNY3k0Q0g5UE1jZGVSdXBfUFhreC1sbmoyLTJjWEFXVjluSnUwWXhjNENsSDA0VDM0S0U2Z0F0ek9IMW9sXzZ0ZTk5cUszMk9IMldneGtDRXNCQUNOS29rODlpaHI4?oc=5",
+        "published": "Mon, 03 Aug 2026 21:36:40 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "ko",
+        "topic": "반도체소재부품장비",
+        "title": "[사설]소부장 ‘증설전쟁’… 뿌리가 단단해야 진짜 ‘반도체 강국’ - v.daum.net",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTE14Q2dFeTN5Ri11bDZCeEJIRVNuQ25kdTYtYURuNmhLWDhGVGJ2b296aDhLM2h4S0tILVdEU19pczNnbVNlU1UxVE9iNGxYMWRkaFd4RQ?oc=5\" target=\"_blank\">[사설]소부장 ‘증설전쟁’… 뿌리가 단단해야 진짜 ‘반도체 강국’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">v.daum.net</font>",
+        "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE14Q2dFeTN5Ri11bDZCeEJIRVNuQ25kdTYtYURuNmhLWDhGVGJ2b296aDhLM2h4S0tILVdEU19pczNnbVNlU1UxVE9iNGxYMWRkaFd4RQ?oc=5",
+        "published": "Sun, 02 Aug 2026 14:25:50 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "en",
+        "topic": "반도체소재부품장비",
+        "title": "AI boom tests Korea’s semiconductor suppliers - 동아일보",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE42Y3FhcWIybmVKWHJwRGFMc2tOUHhCdnJFbFlmbWlualhWajJ2Rk5fVlg2eU1EcHRIYUlPTUQ4aFMzb1dmck5WcVJUdUpsWTUtZXpQNGsxZG91ZlJ6NzlIdm5sdURjUQ?oc=5\" target=\"_blank\">AI boom tests Korea’s semiconductor suppliers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">동아일보</",
+        "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE42Y3FhcWIybmVKWHJwRGFMc2tOUHhCdnJFbFlmbWlualhWajJ2Rk5fVlg2eU1EcHRIYUlPTUQ4aFMzb1dmck5WcVJUdUpsWTUtZXpQNGsxZG91ZlJ6NzlIdm5sdURjUQ?oc=5",
+        "published": "Sun, 02 Aug 2026 23:38:13 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "en",
+        "topic": "반도체소재부품장비",
+        "title": "U.S. Semiconductor Ecosystem Map - Semiconductor Industry Association | SIA",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE5kT1JaQ0k5aEtPamFzUnJpVVRLUVc4Z09ra2JDUkdETFFzRmo0Q0hmVHBtcGU4SHNnZlVhZWZqUzR6cjZxR2dlNXBQUmEtVlN1dENZ?oc=5\" target=\"_blank\">U.S. Semiconductor Ecosystem Map</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Semiconductor Industry Association | SIA</fon",
+        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5kT1JaQ0k5aEtPamFzUnJpVVRLUVc4Z09ra2JDUkdETFFzRmo0Q0hmVHBtcGU4SHNnZlVhZWZqUzR6cjZxR2dlNXBQUmEtVlN1dENZ?oc=5",
+        "published": "Mon, 01 Dec 2025 08:00:00 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "en",
+        "topic": "반도체소재부품장비",
+        "title": "China’s Localization Drive in Semiconductors Gains Impetus from Allied Chip Export Controls - CSIS | Center for Strategic and International Studies",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxQNXNzbHRYUmVEM1dKejE1Zmtva3E1ZW9iSzNqREo0MjZFWnpDbXg3NmhxV3lDeGFXUlp2VjBTdU1LV0QyZmN1UjhHREpnUW9mRFpXQS1TR1dBRW03XzA1NVFpTWlTR1J4WjhrQXZpMG1Ia0hNb1M3VXBzeUctelFqbkN0blIxM3lwVXVVQWlFWGt6NGNfREpXZHg2QVlvYUFDTW94THFmd1BJQlgwMEpmb05B?oc=5\" tar",
+        "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQNXNzbHRYUmVEM1dKejE1Zmtva3E1ZW9iSzNqREo0MjZFWnpDbXg3NmhxV3lDeGFXUlp2VjBTdU1LV0QyZmN1UjhHREpnUW9mRFpXQS1TR1dBRW03XzA1NVFpTWlTR1J4WjhrQXZpMG1Ia0hNb1M3VXBzeUctelFqbkN0blIxM3lwVXVVQWlFWGt6NGNfREpXZHg2QVlvYUFDTW94THFmd1BJQlgwMEpmb05B?oc=5",
+        "published": "Tue, 24 Mar 2026 07:00:00 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "en",
+        "topic": "반도체소재부품장비",
+        "title": "Engineers improve infrared devices using century-old materials - news.stanford.edu",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxQZ3RFeUJfYkJObFZYTy1JY3ZsQjJFa0RyT0lXNF93MGt5TnV1UGJ4RnVKRFlNeTdsektaQXlhMmdybkh1eGIyVTQtN0tDUE0yQ3htZVA3elladUxfdl9wV0RFU1E0aVNKT0NweUd3WmZQblJnU1Z5RkxmRVFRX05zVjdNb2xkUzdsejk3SnZUVF8?oc=5\" target=\"_blank\">Engineers improve infrared devic",
+        "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQZ3RFeUJfYkJObFZYTy1JY3ZsQjJFa0RyT0lXNF93MGt5TnV1UGJ4RnVKRFlNeTdsektaQXlhMmdybkh1eGIyVTQtN0tDUE0yQ3htZVA3elladUxfdl9wV0RFU1E0aVNKT0NweUd3WmZQblJnU1Z5RkxmRVFRX05zVjdNb2xkUzdsejk3SnZUVF8?oc=5",
+        "published": "Thu, 05 Mar 2026 08:00:00 GMT"
+      }
+    ],
+    "디스플레이소재": [
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "디스플레이소재",
+        "title": "선익시스템, 5823억원 수주잔고 바탕 '3대 성장축' 가속",
+        "summary": "소재별 증발 특성 제어, 대면적 기판 균일도, 공정 안정성 확보 등 기술 경쟁력을 갖췄다. 이를 바탕으로 8.6세대 IT OLED 장비로 고성능 IT 기기 전환에 대응하고, 올레도스 장비로 스마트 글래스 및 XR(확장현실) 기기... ",
+        "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1719202",
+        "published": "Thu, 06 Aug 2026 06:00:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "디스플레이소재",
+        "title": "[헬로스톡] 8/5 주목할 종목 : 비에이치·한화엔진·GS피앤엘·SKC",
+        "summary": "IT OLED용 HDI 기판도 2분기부터 추가 1개 기종 양산 공급을 시작했으며, 27년에는 추가 2종 공급으로... 이차전지소재 매출은 2,540억원(+100% YoY)으로 역대 분기 최대를 기록했고, 동박 출하량은 10,600톤(QoQ +47... ",
+        "link": "https://www.hellot.net/news/article.html?no=114183",
+        "published": "Wed, 05 Aug 2026 17:18:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "디스플레이소재",
+        "title": "하반기 산업 기상도…반도체 '맑음'",
+        "summary": "디스플레이는 IT·자동차 제품의 유기발광다이오드(OLED) 전환과 폴더블·LTPO(저전력 디스플레이) 등 프리미엄... 섬유패션은 K패션과 탄소섬유 등 고부가가치 소재의 선전에도 불구하고 전망이 흐리다. 중국산 저가 공세... ",
+        "link": "https://www.yonhapmidas.com/news/articleView.html?idxno=10504",
+        "published": "Wed, 05 Aug 2026 14:50:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "디스플레이소재",
+        "title": "빅테크 OLED 라인 증설 최대 수혜주... 야스, 핵심 증착원 독점 공급 모...",
+        "summary": "OLED 소재 전구체 전문 덕산테코피아, OLED 모듈 이송용 로봇 전문 로보스타, 물류 로봇 및 이송 시스템의 티로보틱스, 디스플레이용 SMPS 전문 와이투솔루션, OLED 유기 소재 합성 전문 한켐이 동반 상승세를 나타내는... ",
+        "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=474616",
+        "published": "Wed, 05 Aug 2026 14:44:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "디스플레이소재",
+        "title": "노트북·태블릿 'OLED' 비중 확대에 삼성디스플레이 '방긋'",
+        "summary": "중국 OLED 업체는 소재·부품 로컬화가 아직 완성되지 않아 현지화가 진행될수록 원가가 더 내려갈 수 있는 반면, LCD는 이미 원가절감 한계에 근접한 상황&quot;이라며, &quot;8.6세대 OLED 라인이 안정화되면 OLED 침투율은 더... ",
+        "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=422879",
+        "published": "Wed, 05 Aug 2026 14:02:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "디스플레이소재",
+        "title": "첨단항공엔진 특화단지, 올 하반기 발표… 창원산단 지정될까",
+        "summary": "정부가 지난 2023~2024년 반도체·디스플레이·2차전지·바이오 등 산업과 관련 전국 12개 지역을 특화단지로... 중심으로 △핵심 소재·부품 △엔진 모듈 △시험평가 및 인증 기술 등 전주기 산업 생태계를 구축하고, 생산... ",
+        "link": "https://www.knnews.co.kr/news/articleView.php?idxno=1548064",
+        "published": "Wed, 05 Aug 2026 21:48:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "디스플레이소재",
+        "title": "경희대, 용인시 고등학생 대상 반도체 교육 프로그램 운영",
+        "summary": "용인시 관내 고등학생 30여 명이 프로그램에 참여하며 경희대 디스플레이 부품소재 지역혁신센터(RIC)가 보유한 클린룸 등 반도체 전문 실습 인프라를 활용한 교육이 이뤄진다. 이를 통해 대학의 첨단 자원을 지역 학생에... ",
+        "link": "https://n.news.naver.com/mnews/article/030/0003454592?sid=102",
+        "published": "Wed, 05 Aug 2026 17:19:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "디스플레이소재",
+        "title": "첨단 제조 장비 쥐락펴락… 아진엑스텍, 원격 제어 핵심 기술로 독보적...",
+        "summary": "이어 네트워크 기반 스마트 제어의 오픈베이스, 2차전지 및 디스플레이 자동화 장비의 톱텍, 제조 실행 시스템(MES) 전문 엠아이큐브솔루션, 산업용 용해로 및 특수 소재의 동국알앤에스, 콘텐트 및 고객센터 AI 스마트... ",
+        "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=474662",
+        "published": "Wed, 05 Aug 2026 15:30:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "디스플레이소재",
+        "title": "꿈의 소재 '그래핀' 실용화 나선 다산솔루에타… 차세대 IT 기기 방열·차...",
+        "summary": "그래핀 제조 제조용 황동 및 동합금 부품 소재를 영위하는 대창, 그래핀 산화물 유기 합성 기술력을 보유한... 수소 및 화학 소재 관련 사업을 영위하는 디와이덕양, 광학 필름 및 3D 디스플레이 소재의 엘엠에스, 고성능... ",
+        "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=474639",
+        "published": "Wed, 05 Aug 2026 15:08:00 +0900"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "ko",
+        "topic": "디스플레이소재",
+        "title": "中 CETC 풍화, LG디스플레이에 OLED장비 첫 직거래 - 디일렉",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE8xRGNjNllCZ1IzdDlGZjlTUkdRSU5oSkdaNEJ3YWlsQ0NmZ29IVlVYRGtfNWV2T0JfX09Fd1hoNGd6YW5lRktOb3poblpKQ1VwTmZHZS1fMEFZUk56S2N4UEc2REphdw?oc=5\" target=\"_blank\">中 CETC 풍화, LG디스플레이에 OLED장비 첫 직거래</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">디일렉</font>",
+        "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE8xRGNjNllCZ1IzdDlGZjlTUkdRSU5oSkdaNEJ3YWlsQ0NmZ29IVlVYRGtfNWV2T0JfX09Fd1hoNGd6YW5lRktOb3poblpKQ1VwTmZHZS1fMEFZUk56S2N4UEc2REphdw?oc=5",
+        "published": "Wed, 05 Aug 2026 05:55:17 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "ko",
+        "topic": "디스플레이소재",
+        "title": "노트북·태블릿 ‘OLED’ 비중 확대에 삼성디스플레이 '방긋' - 시사저널e",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTE0wd2pvLTVrRWRNR2lHNEZ5Nmc5Q0pfb1BMN2J0bmZiT1RhSEZsdU5pamUxbkxab05xZDFaQ05aeklwMTU3YVczem85dTZ5ZWU1T2dpc0tzRHV5R1pxcm9aRUstSW51b3NzcUFsMjZadW1Nd9IBdkFVX3lxTE9yc2o2al9QRnNIaFhuRUtXT1B3QU5FSUNhRVdDZmRKWnR4OHlZQkdlM0QtSkJmOVVrd0FiWC1PTmU1bEFSZl",
+        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE0wd2pvLTVrRWRNR2lHNEZ5Nmc5Q0pfb1BMN2J0bmZiT1RhSEZsdU5pamUxbkxab05xZDFaQ05aeklwMTU3YVczem85dTZ5ZWU1T2dpc0tzRHV5R1pxcm9aRUstSW51b3NzcUFsMjZadW1Nd9IBdkFVX3lxTE9yc2o2al9QRnNIaFhuRUtXT1B3QU5FSUNhRVdDZmRKWnR4OHlZQkdlM0QtSkJmOVVrd0FiWC1PTmU1bEFSZl9EX1Z3VmU3SHc3cVNlZVZ2RnhSMEtqbnRRLUQ1TjRyZ2w2UFZvRm1JQ0ZwWDA2c3c?oc=5",
+        "published": "Wed, 05 Aug 2026 05:00:28 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "ko",
+        "topic": "디스플레이소재",
+        "title": "삼성디스플레이·LGD, K-디스플레이서 차세대 OLED 총출동 - 연합뉴스",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiW0FVX3lxTE1YemJTTjVsR09LUXFLZ0xqVEdORThncEFoeUNLck00QlM3dTNPNURJb010TFJ4ZEU0TDNWajBDXzJZTW5ramNEUG5laXhhV25tOUFoZ0Jfb0IyVGfSAWBBVV95cUxNQ0hmV3dSSXlFR2h4dzM1VFA2MGJfY1NmcEMwZDdTb1hfTHM5XzhUQ0o3TVd3cXZGanRBWFBzaGh6Tm1YblMyd0UycHBJNEFzRzRXRkI4ak5ibXRPaV",
+        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1YemJTTjVsR09LUXFLZ0xqVEdORThncEFoeUNLck00QlM3dTNPNURJb010TFJ4ZEU0TDNWajBDXzJZTW5ramNEUG5laXhhV25tOUFoZ0Jfb0IyVGfSAWBBVV95cUxNQ0hmV3dSSXlFR2h4dzM1VFA2MGJfY1NmcEMwZDdTb1hfTHM5XzhUQ0o3TVd3cXZGanRBWFBzaGh6Tm1YblMyd0UycHBJNEFzRzRXRkI4ak5ibXRPaVpGUEY?oc=5",
+        "published": "Wed, 22 Jul 2026 07:00:00 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "ko",
+        "topic": "디스플레이소재",
+        "title": "中공장 인수 … 車 디스플레이 원스톱 생산 - 매일경제",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE5ySEFhbGdsUDVobVM5MVdza0ZtaUUtUzFJZ2hWZ2IzWlpuQmNNWTFmek9scFhXaGNsRDRNMVBLbW9tUkJmSGZZWllQdy11eWhvQ3VUVHdn?oc=5\" target=\"_blank\">中공장 인수 … 車 디스플레이 원스톱 생산</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">매일경제</font>",
+        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5ySEFhbGdsUDVobVM5MVdza0ZtaUUtUzFJZ2hWZ2IzWlpuQmNNWTFmek9scFhXaGNsRDRNMVBLbW9tUkJmSGZZWllQdy11eWhvQ3VUVHdn?oc=5",
+        "published": "Tue, 04 Aug 2026 08:34:25 GMT"
+      }
+    ],
+    "배터리이차전지": [
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "배터리이차전지",
+        "title": "[N2 포커스] 포스코퓨처엠, '배터리 선생님' 된 이유는…'소통 실험' 눈...",
+        "summary": "양극재와 음극재처럼 일반 소비자에게 낯선 배터리 소재를 예능과 생활상식, AI(인공지능) 숏폼 등 다양한 형식으로 풀어내며 '설명하는 기업'으로 변신하고 있다. AI 데이터센터와 전기차, ESS(에너지저장장치) 확산으로... ",
+        "link": "https://www.news2day.co.kr/article/20260805500203",
+        "published": "Thu, 06 Aug 2026 07:02:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "배터리이차전지",
+        "title": "[주식마감] 美 &quot;중국산 광통신 수입 금지&quot; 소식에 빛과전자·오이솔루션...",
+        "summary": "전기차 배터리 제조 과정에서 양극재·음극재 등 배터리 소재를 일정한 품질로 혼합하는 공정은 배터리 성능과 생산 효율을 좌우하는 핵심 단계로 평가받는다. 윤성에프앤씨는 이러한 믹싱 공정에 필요한 대용량... ",
+        "link": "https://www.ggilbo.com/news/articleView.html?idxno=1173680",
+        "published": "Wed, 05 Aug 2026 19:40:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "배터리이차전지",
+        "title": "'니켈에서 반도체 소재까지'···에코프로, 제2의 전성기 열까",
+        "summary": "미래 성장동력 확보와 관련해서는 전고체 배터리용 소재와 리튬망간리치(LMR) 양극재, 소듐이온 양극재, 실리콘 음극재 등 차세대 배터리 소재를 육성하는 한편, 반도체 소재 사업도 확대하고 있다. 계열사인... ",
+        "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=422891",
+        "published": "Wed, 05 Aug 2026 16:32:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "배터리이차전지",
+        "title": "&quot;2분기 바닥 찍었다…포스코퓨처엠, 하반기 반등과 LFP 승부수&quot;",
+        "summary": "국내에서 양극재와 음극재 두 병목을 동시에 해소할 수 있는 업체는 포스코퓨처엠이 유일하다. 박형우 SK증권 연구원은 &quot;포스코퓨처엠을 양극재 중 최선호주로 제시하며, 국내 양극재 업체 중 전구체 조달이... ",
+        "link": "https://www.newsquest.co.kr/news/articleView.html?idxno=271161",
+        "published": "Wed, 05 Aug 2026 15:40:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "배터리이차전지",
+        "title": "“흑자는 돌아왔지만”…소재업계 ‘진짜 반등’은 아직",
+        "summary": "양극재는 재고평가 효과에 힘입어 흑자를 유지했고, 음극재 역시 판매량 회복과 가동률 상승, 고정비 절감으로 적자 폭을 줄이며 수익성을 개선했다. 포스코퓨처엠은 ESS용 LFP 양극재와 LMR, 나트륨이온 배터리용 양극재 등... ",
+        "link": "https://www.ekn.kr/web/view.php?key=20260805027229773",
+        "published": "Wed, 05 Aug 2026 14:54:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "배터리이차전지",
+        "title": "모험자본 15조 쌓였는데…'탈중국 배터리망'은 왜 금융 문턱 못 넘나",
+        "summary": "국민성장펀드는 전고체 배터리 핵심소재 공장과 LFP 양극재 생산시설 등에 장기·저리 대출과 지분투자를 공급하기 시작했다. 금융당국은 정책자금이 사업의 재무적 안정성을 높이고 민간 금융기관의 참여를 유도하는... ",
+        "link": "https://www.greened.kr/news/articleView.html?idxno=346929",
+        "published": "Wed, 05 Aug 2026 21:40:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "배터리이차전지",
+        "title": "1600조 메가프로젝트 '승부수'…한국 산업 대도약의 조건은?",
+        "summary": "배터리는 전고체 등 차세대 기술 확보와 함께 소재·원료·생산을 연결하는 국내 공급망 구축에 초점을 맞춘다. 특히 배터리 산업은 원료 확보 경쟁이 심화되고 있는 만큼 핵심광물 공급망 안정성이 중요한 경쟁 요소로... ",
+        "link": "https://www.energy-news.co.kr/news/articleView.html?idxno=227252",
+        "published": "Wed, 05 Aug 2026 13:28:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "배터리이차전지",
+        "title": "[진단_화장품원료 ⑦한농화성] 김응상 대표이사 회장, 대표·이사회 의...",
+        "summary": "한농화성은 비이온 계면활성제 생산 시설과 바스프 합작법인, 전고체 배터리 소재 개발 등에 자금을 투입하고 있어 배당보다 성장 재원을 우선할 필요도 있다. 그러나 2025년 당기순이익이 전년보다 13.6% 감소한 데 비해... ",
+        "link": "http://www.newsworker.co.kr/news/articleView.html?idxno=439880",
+        "published": "Wed, 05 Aug 2026 13:06:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "배터리이차전지",
+        "title": "북미·유럽 공급망 내재화 가속화… 2차전지 핵심 소재·부품주 상승 기...",
+        "summary": "습식 분리막 제조업체 더블유씨피와 점착 테이프 소재사 테이팩스 역시 오름세를 유지 중이다. ■ 고성능... ■ 양극재 및 전해질 대형주 부문: 밸류체인 핵심의 상승세 2차전지 산업의 핵심 축인 양극재 및 전해질... ",
+        "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=474272",
+        "published": "Tue, 04 Aug 2026 15:18:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "배터리이차전지",
+        "title": "불확실성에 갇힌 기후테크, '보험'이 자본 빗장 푼다",
+        "summary": "배터리 셀 내부의 미세한 오염이나 조립 불량으로 분리막이 손상되면 내부 단락(합선)이 발생한다. 이는 연쇄 과열로 이어져 폭발적인 화재를 유발한다. 특히 배터리 내부 가연성 전해질이 고온에서 분해될 때 나오는... ",
+        "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1718607",
+        "published": "Fri, 31 Jul 2026 14:00:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "배터리이차전지",
+        "title": "[논현논단-이덕환 칼럼] ‘리튬이온 배터리’ 상식이 필요한 까닭",
+        "summary": "그러나 충전 과정에서 음극(-극)에 모아놓은 리튬 양이온이 액체 전해질을 통해서 양극(+극)으로 이동하는 리튬이온 배터리의 경우에는 사정이 전혀 다르다. 리튬이온의 이동을 통제하는 얇은 ‘분리막’이 파손되면... ",
+        "link": "https://www.etoday.co.kr/news/view/2608003",
+        "published": "Tue, 28 Jul 2026 06:02:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "배터리이차전지",
+        "title": "두께는 얇아지고, 배터리 용량은 커진 갤럭시Z 폴드8 비결은?",
+        "summary": "실리콘 기반 음극재는 기존의 흑연 기반 음극재보다 에너지 밀도가 높다. 문 부사장은 “높은 에너지 밀도를 안정적으로 구현하도록 양극, 전해질, 분리막 등 배터리 시스템 전체를 다시 설계했다”고 강조했다.",
+        "link": "https://n.news.naver.com/mnews/article/020/0003736771?sid=105",
+        "published": "Mon, 27 Jul 2026 15:49:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "배터리이차전지",
+        "title": "삼성, 갤럭시Z8 3종에 실리콘-카본 첫 적용…S시리즈 확대 검토",
+        "summary": "전해질과 분리막도 보호막 형성, 이온 이동성, 열 안정성을 고려해 조정했다. 배터리 팽창과 반복 충·방전, 고온·저온 환경 등 실제 사용 조건을 장기간 검증한 뒤 양산 제품에 적용했다. 적용 대상은 갤럭시S 시리즈 등... ",
+        "link": "https://n.news.naver.com/mnews/article/030/0003451340?sid=105",
+        "published": "Mon, 27 Jul 2026 14:04:00 +0900"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "ko",
+        "topic": "배터리이차전지",
+        "title": "[N2 포커스] 포스코퓨처엠, '배터리 선생님' 된 이유는…'소통 실험' 눈길 - 뉴스투데이",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiXkFVX3lxTFBiVFhFSEJYZzVTSk9YR1E4YzI3MnV0VFNTcGVNVHFiVTNVcEt1MFgwNWNVMnVjVGJBOFFDWl9iU19JOVRjSTlHRDJST0YxdVFhZXZYY0FRcmNsUXBLTXc?oc=5\" target=\"_blank\">[N2 포커스] 포스코퓨처엠, '배터리 선생님' 된 이유는…'소통 실험' 눈길</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">뉴스투데이</font>",
+        "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBiVFhFSEJYZzVTSk9YR1E4YzI3MnV0VFNTcGVNVHFiVTNVcEt1MFgwNWNVMnVjVGJBOFFDWl9iU19JOVRjSTlHRDJST0YxdVFhZXZYY0FRcmNsUXBLTXc?oc=5",
+        "published": "Wed, 05 Aug 2026 22:00:45 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "ko",
+        "topic": "배터리이차전지",
+        "title": "“흑자는 돌아왔지만”…소재업계 ‘진짜 반등’은 아직 - 에너지경제신문",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiYkFVX3lxTE1rZkZUazRESUJMNXlqRDFudXlaZC1GM3dNXzZmMkJzYzBBZU1BeFZ3NGR5TnF2cG5SSlN6MWJlWGNGdkIybnMxYVhOQWtKVE5ISnJfYnhJSzZjUnF2MnRDUlVn?oc=5\" target=\"_blank\">“흑자는 돌아왔지만”…소재업계 ‘진짜 반등’은 아직</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">에너지경제신문</font>",
+        "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1rZkZUazRESUJMNXlqRDFudXlaZC1GM3dNXzZmMkJzYzBBZU1BeFZ3NGR5TnF2cG5SSlN6MWJlWGNGdkIybnMxYVhOQWtKVE5ISnJfYnhJSzZjUnF2MnRDUlVn?oc=5",
+        "published": "Wed, 05 Aug 2026 05:53:08 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "ko",
+        "topic": "배터리이차전지",
+        "title": "`EV 판매 저조` 배터리 소재사 목표 주가 줄하향 - 매일신문",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiYkFVX3lxTFBpTFRqMWpPUnc4SnpESmVnSmwtSC1jMWZYazJzMGZJakpxY1ZWVWEzeE11b3pnd1A0YzltMXhaZjBZNHE5Rjl6V2Z1eTB1dlBURlJuVVdWdFVnZ3FUUGJwOFFn?oc=5\" target=\"_blank\">`EV 판매 저조` 배터리 소재사 목표 주가 줄하향</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">매일신문</font>",
+        "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBpTFRqMWpPUnc4SnpESmVnSmwtSC1jMWZYazJzMGZJakpxY1ZWVWEzeE11b3pnd1A0YzltMXhaZjBZNHE5Rjl6V2Z1eTB1dlBURlJuVVdWdFVnZ3FUUGJwOFFn?oc=5",
+        "published": "Mon, 03 Aug 2026 06:29:04 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "ko",
+        "topic": "배터리이차전지",
+        "title": "성능·시장 준비 끝…에코프로가 '소금 배터리' 연합 전선 만든 이유 - 지디넷코리아",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE9CeFVYdk1HSFBEM0hReEJoT3J5SGdZRl84enp1Y0xKSTNQTTNKMnJRMGZSY3NIdVpDNjlhZzVxdTdaR2pCNkdST09KTzBkN3Q5cVA4cW1n?oc=5\" target=\"_blank\">성능·시장 준비 끝…에코프로가 '소금 배터리' 연합 전선 만든 이유</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">지디넷코리아</font>",
+        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9CeFVYdk1HSFBEM0hReEJoT3J5SGdZRl84enp1Y0xKSTNQTTNKMnJRMGZSY3NIdVpDNjlhZzVxdTdaR2pCNkdST09KTzBkN3Q5cVA4cW1n?oc=5",
+        "published": "Tue, 04 Aug 2026 01:32:15 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "en",
+        "topic": "배터리이차전지",
+        "title": "Solid-State Battery vs. Lithium-Ion: The Complete Comparison - Intelligent Living",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTE5mWDJ5d1pxS282aWtXV3JMZzRjX3VwSXBpWEZoSHNnSFhDamRXRzBQZkFmNC1NOXhUcU5KU1QxMzZ1M2ozUEp0bGZpQVFfZ1dlZkxXVkNrazFEQmN2V3FpeTBUMjFlZ2M2eThIZml4ejd5ZlVjSU5r?oc=5\" target=\"_blank\">Solid-State Battery vs. Lithium-Ion: The Complete Comparison</a>&nb",
+        "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5mWDJ5d1pxS282aWtXV3JMZzRjX3VwSXBpWEZoSHNnSFhDamRXRzBQZkFmNC1NOXhUcU5KU1QxMzZ1M2ozUEp0bGZpQVFfZ1dlZkxXVkNrazFEQmN2V3FpeTBUMjFlZ2M2eThIZml4ejd5ZlVjSU5r?oc=5",
+        "published": "Mon, 03 Aug 2026 02:20:11 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "en",
+        "topic": "배터리이차전지",
+        "title": "Recent Developments in Solid-State (and other) Battery Materials - AZoM",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiXkFVX3lxTE95d01yZEFjUndhWGwwTjVmd1B5QTh0Z2lOa1pXWkNXYnh2RFB6cmJsSklKYWgxbVZVQ2E0TGp1ZzFVd3M5WFdFU0hma21RaVF5NEIzTlZId0QwY1oxSWc?oc=5\" target=\"_blank\">Recent Developments in Solid-State (and other) Battery Materials</a>&nbsp;&nbsp;<font color=\"#6f6f6f",
+        "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE95d01yZEFjUndhWGwwTjVmd1B5QTh0Z2lOa1pXWkNXYnh2RFB6cmJsSklKYWgxbVZVQ2E0TGp1ZzFVd3M5WFdFU0hma21RaVF5NEIzTlZId0QwY1oxSWc?oc=5",
+        "published": "Mon, 04 May 2026 07:00:00 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "en",
+        "topic": "배터리이차전지",
+        "title": "Challenges of the infiltration method for halide-based solid‑state battery cathodes - Nature",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTE03emdLVnZsUkt2VlNCQ3I4MHJMb0doaGdfYjFpVTRNQnJrSkVaNlVxZWVtdkNvbzhhWmw3MURnTFU1Yk1HVG9FN0VRb2REcS1Od3FUd05CSGcwTWtWTU1V?oc=5\" target=\"_blank\">Challenges of the infiltration method for halide-based solid‑state battery cathodes</a>&nbsp;&nbsp;",
+        "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE03emdLVnZsUkt2VlNCQ3I4MHJMb0doaGdfYjFpVTRNQnJrSkVaNlVxZWVtdkNvbzhhWmw3MURnTFU1Yk1HVG9FN0VRb2REcS1Od3FUd05CSGcwTWtWTU1V?oc=5",
+        "published": "Sun, 05 Apr 2026 07:00:00 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "en",
+        "topic": "배터리이차전지",
+        "title": "EcoPro BM Targets 2027 Mass Production of Solid-State Electrolyte - thelec.net",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB0c0Mzei1LU3VDeEdjM1JPZTB3Tjc4UWlGc2xkMHZhMndCRXFNQXNWbWtQdFJ2Sks1YXZEaTNvRVpwMl9sNHNEdGxWbHFXckMwX2JJRnZNakRfTnUtM1RwS05OTm5FcEU?oc=5\" target=\"_blank\">EcoPro BM Targets 2027 Mass Production of Solid-State Electrolyte</a>&nbsp;&nbsp;<font c",
+        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB0c0Mzei1LU3VDeEdjM1JPZTB3Tjc4UWlGc2xkMHZhMndCRXFNQXNWbWtQdFJ2Sks1YXZEaTNvRVpwMl9sNHNEdGxWbHFXckMwX2JJRnZNakRfTnUtM1RwS05OTm5FcEU?oc=5",
+        "published": "Mon, 20 Jul 2026 22:32:08 GMT"
+      }
+    ],
+    "희토류핵심광물": [
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "희토류핵심광물",
+        "title": "中, 드론 수출 빗장 더 걸었다…美에 &quot;제재 안 풀면 추가 보복&quot; 경고",
+        "summary": "부품 공급망에서도 높은 점유율을 확보하고 있다. 미국은 최근 중국산 드론이 안보 위협이 될 수 있다며 수입... 중국은 이에 맞서 희토류와 핵심 광물, 반도체 소재에 이어 드론까지 전략 품목을 협상 카드로 활용하는... ",
+        "link": "https://n.news.naver.com/mnews/article/119/0003118712?sid=104",
+        "published": "Thu, 06 Aug 2026 05:35:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "희토류핵심광물",
+        "title": "'위기 속 단비' 포스코 상장 계열사 5곳 중 3곳 선방",
+        "summary": "생산성 향상과 통합 마진 확대를 통한 팜 사업 고도화와 희토류 등 핵심 광물 공급망 확보도 지속 추진한다. 지난 5월에는 미국 희토류 분리·정제 기업 리엘리먼트와 현지 생산 합작법인 설립을 위한 협약을... ",
+        "link": "https://www.hidomin.com/news/articleView.html?idxno=716178",
+        "published": "Wed, 05 Aug 2026 20:42:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "희토류핵심광물",
+        "title": "[fn광장] 왕이의 입에 주목하자",
+        "summary": "그럼에도 일본은 중국산 희토류 의존도(50~60%)를 2012년부터 상당히 낮췄다. 공급망 동맹 참여에도 적극적이다. 우리는 아직 90%를 넘는다. 우리에겐 기회가 있었다. 일례로, 지난 6월 주요 7개국(G7) 정상회의가 채택한... ",
+        "link": "https://n.news.naver.com/mnews/article/014/0005557819?sid=110",
+        "published": "Wed, 05 Aug 2026 18:54:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "희토류핵심광물",
+        "title": "[알고 가자, 북극항로] 첨단산업 클러스터 연계망 강화 글로벌 자원개발...",
+        "summary": "북극항로가 ‘글로벌 핵심 광물 공급망의 새로운 수송축’으로 부상하고 있다. 부산항 또한 단순 환적항만을 넘어 북극권에 매장된 니켈, 희토류, 코발트, 백금류 금속 등 핵심 광물자원이 아시아로 이동할 때, 최종... ",
+        "link": "https://n.news.naver.com/mnews/article/082/0001392744?sid=101",
+        "published": "Wed, 05 Aug 2026 17:55:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "희토류핵심광물",
+        "title": "AIDC·로봇·태양광 소재까지...美, 첨단 공급망서 ‘中 지우기’",
+        "summary": "미국이 인공지능(AI) 데이터센터 부품과 로봇, 태양광·반도체 소재 등 첨단 공급망에서 중국을 차단하기... 중국의 희토류 수출통제를 감안할 때 이번 조치가 실제로 실현될 위험은 낮다”며 “9월 시 주석의 방미를... ",
+        "link": "https://n.news.naver.com/mnews/article/011/0004648899?sid=104",
+        "published": "Wed, 05 Aug 2026 17:51:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "희토류핵심광물",
+        "title": "대통령 순방에 남미 비중이 높았던 이유 : AI강국을 위한 설계",
+        "summary": "두 번째 이유는 단연 핵심 광물이다. 브라질은 희토류와 니켈, 흑연 등 미래산업에 필요한 광물을 풍부하게... 이재명 대통령과호세 안토니오 카스트 칠레 대통령 한국이 칠레를 방문한 첫 번째 이유는 구리와 리튬이다. AI... ",
+        "link": "http://www.ddanzi.com/891039022",
+        "published": "Wed, 05 Aug 2026 17:28:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "희토류핵심광물",
+        "title": "아프리카 외교는 이제 산업정책이다",
+        "summary": "리튬, 코발트, 망간, 니켈, 흑연, 희토류 등 핵심 광물 없이 한국의 미래 산업 경쟁력도 유지되기 어렵다. 그러나 핵심광물 공급망 채굴은 일부 자원 부국에, 정제·가공은 중국에 과도하게 집중된 구조를 보인다. 미중... ",
+        "link": "https://www.yonhapmidas.com/news/articleView.html?idxno=10524",
+        "published": "Wed, 05 Aug 2026 15:36:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "희토류핵심광물",
+        "title": "[대통령 업무보고] 기후부, 반도체·AI 전력수요 대응…재생에너지 100G...",
+        "summary": "기후부는 리튬·니켈·코발트·망간·흑연과 네오디뮴·디스프로슘·테르븀·세륨·란탄 등 핵심광물 10종을 집중 관리한다. 핵심광물이 든 고부가가치 전자폐기물의 수입 절차는 허가에서 신고로 바꾸고 국내 수급... ",
+        "link": "https://www.ziksir.com/news/articleView.html?idxno=142126",
+        "published": "Tue, 04 Aug 2026 15:38:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "희토류핵심광물",
+        "title": "[Who Is ?] 이계인 포스코인터내셔널 대표이사 사장",
+        "summary": "장인화 포스코그룹 회장이 직접 발표자로 나서 산업자원(철강), 전략자원(리튬, 양·음극재, 희토류 등)... &lt;관세청&gt; △핵심 전략광물 '희토류-영구자석' 가치사슬 투자 포스코인터내셔널은 광산-분리정제-영구자석... ",
+        "link": "https://www.businesspost.co.kr/BP?command=article_view&num=443145",
+        "published": "Tue, 04 Aug 2026 07:00:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "희토류핵심광물",
+        "title": "미·중 장악 깨는 남미발 자원외교…韓 '공급망' 돌파구 열다",
+        "summary": "MOU 넘어 광산 지분·장기구매권 확보해야 -2007년 북한산 흑연 500톤 반입...남북 자원협력 재개 가능성도 이재명 대통령이 이달 말 브라질·칠레·아르헨티나 순방을 통해 희토류와 리튬, 구리 등 핵심광물 공급망 확대에... ",
+        "link": "https://www.m-economynews.com/news/article.html?no=69359",
+        "published": "Mon, 03 Aug 2026 18:54:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "희토류핵심광물",
+        "title": "[Who Is ?] 김동명 LG에너지솔루션 대표이사 사장",
+        "summary": "동시에 2025년 9월 대규모 구금 사태 이후 미국 현지 공장에서 한국인 숙련 노동자 수급에 차질을 빚으며... 이번 계약을 통해 LG에너지솔루션은 파우치 배터리 분야에서 하이니켈 니켈·코발트·망간·알루미늄(NCMA)... ",
+        "link": "https://www.businesspost.co.kr/BP?command=article_view&num=443746",
+        "published": "Wed, 05 Aug 2026 07:00:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "희토류핵심광물",
+        "title": "[2차 부처보고-산업·에너지·노동] 李 &quot;AI 대격변기, 과감한 투자·속도...",
+        "summary": "원전은 안전 운영을 전제로 신규 원전과 소형모듈원자로(SMR) 도입 여부를 검토해 제12차 전력수급기본계획... 자원안보 전략으로는 리튬·니켈·코발트·희토류 등 10대 핵심광물 관리 강화, 폐배터리·전자폐기물... ",
+        "link": "https://www.polinews.co.kr/news/articleView.html?idxno=739140",
+        "published": "Tue, 04 Aug 2026 19:52:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "희토류핵심광물",
+        "title": "'전기국가' 내건 기후부…재생E 100GW·수자원 재편 총력",
+        "summary": "전력수급기본계획에 반영한다. 전력망은 첨단산업 입주보다 앞서 구축한다. 기존 송전선로의 용량을 늘려... 리튬과 니켈, 코발트, 희토류 등 10대 전략 핵심광물을 중점 관리하고, 핵심광물이 포함된 전자폐기물과... ",
+        "link": "https://n.news.naver.com/mnews/article/421/0009097033?sid=101",
+        "published": "Tue, 04 Aug 2026 17:45:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "희토류핵심광물",
+        "title": "&quot;AI 시대 전기는 국가 전략자산&quot;... 김성환 장관이 꺼낸 '전기 국가' 구...",
+        "summary": "제12차 전력수급기본계획(아래 전기본)과 신규 원전 문제에 대해서는 &quot;다음 주부터 국민 공론화를 본격... 김 장관은 &quot;희토류와 코발트, 니켈, 망간 같은 핵심 광물을 쓰고 버리는 시대는 끝났다&quot;며 &quot;모든 자원을 순환... ",
+        "link": "https://n.news.naver.com/mnews/article/047/0002524587?sid=101",
+        "published": "Tue, 04 Aug 2026 16:56:00 +0900"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "ko",
+        "topic": "희토류핵심광물",
+        "title": "‘中 희토류 완전 퇴출’… 美, 방위산업 공급망 행정명령 발동 - 글로벌이코노믹",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxNYjk0XzFLNUVEUVJJdWtLU0tIbWZuOEpEeHY5bFNpTlYyampkX3F3eGI4MVgteXN3M2FrYmt5enJPbnpubXpnNkZLM25ENlpTcVEyb2g4V0xqdE9DZzAzTU9FR2xVOTJnUGZpX2o0VDBURm8tWEFfQzNGbG1ieGE2R3NrR1kwS2RV?oc=5\" target=\"_blank\">‘中 희토류 완전 퇴출’… 美, 방위산업 공급망 행정명령 발동</a>&nbsp",
+        "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNYjk0XzFLNUVEUVJJdWtLU0tIbWZuOEpEeHY5bFNpTlYyampkX3F3eGI4MVgteXN3M2FrYmt5enJPbnpubXpnNkZLM25ENlpTcVEyb2g4V0xqdE9DZzAzTU9FR2xVOTJnUGZpX2o0VDBURm8tWEFfQzNGbG1ieGE2R3NrR1kwS2RV?oc=5",
+        "published": "Sun, 02 Aug 2026 21:05:00 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "ko",
+        "topic": "희토류핵심광물",
+        "title": "포스코, 브라질 희토류 공급망 확보…영구자석 밸류체인 강화 - 에너지프로슈머",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiTEFVX3lxTE5UVW9PdGNWQ1VtOV9XbFVScGo2b01uQ2x2MGhsenFzTUZvMnN0WVkyc1V0S3R5LVg0SElnLVhMWFF2N0RMOWhLU0x3SnM?oc=5\" target=\"_blank\">포스코, 브라질 희토류 공급망 확보…영구자석 밸류체인 강화</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">에너지프로슈머</font>",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5UVW9PdGNWQ1VtOV9XbFVScGo2b01uQ2x2MGhsenFzTUZvMnN0WVkyc1V0S3R5LVg0SElnLVhMWFF2N0RMOWhLU0x3SnM?oc=5",
+        "published": "Sun, 02 Aug 2026 22:31:00 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "ko",
+        "topic": "희토류핵심광물",
+        "title": "미·중 장악 깨는 남미발 자원외교…韓 '공급망' 돌파구 열다 - M이코노미뉴스",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA1cUZJSjQzbjMwVDlkUkVhVFEydFJZLXRvVXR5b0FSN092ZVI0b3I3bWxsRHR0TmhvMElhSXpIWnhFOXFCY3hITmZ0ckpLdTdSMzdOZnpPME8yWUlQc0Yza3JpeDFmQUk?oc=5\" target=\"_blank\">미·중 장악 깨는 남미발 자원외교…韓 '공급망' 돌파구 열다</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">M이코노미뉴스</font>",
+        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA1cUZJSjQzbjMwVDlkUkVhVFEydFJZLXRvVXR5b0FSN092ZVI0b3I3bWxsRHR0TmhvMElhSXpIWnhFOXFCY3hITmZ0ckpLdTdSMzdOZnpPME8yWUlQc0Yza3JpeDFmQUk?oc=5",
+        "published": "Mon, 03 Aug 2026 09:50:05 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "ko",
+        "topic": "희토류핵심광물",
+        "title": "이 대통령 남미 순방, 핵심광물·에너지 공급망 다변화 ‘성과’ - kihoilbo.co.kr",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMib0FVX3lxTE11cHFQMTZQUFNxR3IxZk9JSEt0dnEtWFZGaWtCZnZXSFkxNjNVS1Y3a3Q0RHJva0JnTmw4SG9iRlo5Rll0SGpWcTAtejhMMDk0aFVSdVBKX19DakNKUE9sUTFkVlZvYjJCc1loOXJscw?oc=5\" target=\"_blank\">이 대통령 남미 순방, 핵심광물·에너지 공급망 다변화 ‘성과’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">kihoi",
+        "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE11cHFQMTZQUFNxR3IxZk9JSEt0dnEtWFZGaWtCZnZXSFkxNjNVS1Y3a3Q0RHJva0JnTmw4SG9iRlo5Rll0SGpWcTAtejhMMDk0aFVSdVBKX19DakNKUE9sUTFkVlZvYjJCc1loOXJscw?oc=5",
+        "published": "Sun, 02 Aug 2026 16:00:41 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "en",
+        "topic": "희토류핵심광물",
+        "title": "Heavy Rare Earth Metals Plant Boosts U.S. Supply Chain Independence - Forbes",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxPM2hpT2Z2UzZuZmNyWkpCWlpla2xJSHp6TXNGV29pdml2cW1JYzVXZllXckNtRWxUcG9GNUV4MEtXdGQwbmoweWxZR09fX3JPLWFpVklZSHI4RlFDcXA5ZndteWpRbXdWbTJCU2p5dUN3bklxQ2k0Wnk2LVNzbTRuY2dwTkczR0xqSm0xS0tFVC1FZ0xfZWJDanNBSG01N200RkdSOFV5YWE2MS1xVWJSZ0xyeXlFN0c2aG",
+        "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPM2hpT2Z2UzZuZmNyWkpCWlpla2xJSHp6TXNGV29pdml2cW1JYzVXZllXckNtRWxUcG9GNUV4MEtXdGQwbmoweWxZR09fX3JPLWFpVklZSHI4RlFDcXA5ZndteWpRbXdWbTJCU2p5dUN3bklxQ2k0Wnk2LVNzbTRuY2dwTkczR0xqSm0xS0tFVC1FZ0xfZWJDanNBSG01N200RkdSOFV5YWE2MS1xVWJSZ0xyeXlFN0c2aGJhaw?oc=5",
+        "published": "Tue, 04 Aug 2026 17:20:45 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "en",
+        "topic": "희토류핵심광물",
+        "title": "US faces new pressure to build weapons without China's rare earth magnets - ABC News - Breaking News, Latest News and Videos",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxOX25wcVNmWFVSMm1UWThBSEJpd3lxVjJFU2NLdUxYNW9tbkJ1UF9ibHE3RjF4Yy1iXzUxQmhNa290al94OXZGcURYWjVwODJRdl9Nc2c5NVRrV2Y4YUU3enRDeGhPQnJxbFlQR0prRWZ5ZjE1MDdXa1A0a0JXVnlnZ3RzOXJKYU94OVZMT0dnWEFEM00y0gGaAUFVX3lxTE9ZU3BReGg5eWtWOWFUb1NiSGk4bGpHWkkzMW",
+        "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOX25wcVNmWFVSMm1UWThBSEJpd3lxVjJFU2NLdUxYNW9tbkJ1UF9ibHE3RjF4Yy1iXzUxQmhNa290al94OXZGcURYWjVwODJRdl9Nc2c5NVRrV2Y4YUU3enRDeGhPQnJxbFlQR0prRWZ5ZjE1MDdXa1A0a0JXVnlnZ3RzOXJKYU94OVZMT0dnWEFEM00y0gGaAUFVX3lxTE9ZU3BReGg5eWtWOWFUb1NiSGk4bGpHWkkzMWw5Rnc1UldrOHJDU251Sy1mUWwzS2JGUXVnT2hyVDdsZzExQU1YMTg2UHdaeXM4RzlaYWN5R00yc0pWdVlOUVNEYzFsWnYtdFQ4N05waG8yNVdVRGRSb0owMGtTSzlaZThlR1dzSFRSbjJzM2gzRjhuX3J6SGhhb2c?oc=5",
+        "published": "Mon, 03 Aug 2026 11:31:39 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "en",
+        "topic": "희토류핵심광물",
+        "title": "How Government-Backed Financing Is Closing the Gap for Critical Minerals Projects - Crux Investor",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxQQmktNnltQ2ZyZTJKakxiQkRJU0g3bWloQ0ZweGcwcG9GM0JBTHJZRUxWdnY3UkpKWkdPTjdmVWNVYnBNMU9UOWFic2VHYVUwTG1MLUZzM2xzcGY2amVLdjk2QU8tVEpxbE9lZlB2TjRzV01pd3RsamQyaTBpcEtkcTlSTHJBZGptNzZuV1NFVnVkZU1yaW9oRjUyZ0dEMExDQ01aNVY3MGxJM1NSLXUzckFtWnd1Vjg?oc",
+        "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQQmktNnltQ2ZyZTJKakxiQkRJU0g3bWloQ0ZweGcwcG9GM0JBTHJZRUxWdnY3UkpKWkdPTjdmVWNVYnBNMU9UOWFic2VHYVUwTG1MLUZzM2xzcGY2amVLdjk2QU8tVEpxbE9lZlB2TjRzV01pd3RsamQyaTBpcEtkcTlSTHJBZGptNzZuV1NFVnVkZU1yaW9oRjUyZ0dEMExDQ01aNVY3MGxJM1NSLXUzckFtWnd1Vjg?oc=5",
+        "published": "Wed, 05 Aug 2026 14:31:53 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "en",
+        "topic": "희토류핵심광물",
+        "title": "US commits $4.48 million to Madagascar rare earths project to counter China's grip on critical minerals supply chains - Energies Media",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMieEFVX3lxTFBSenZ2SlVhd2x3UFNxYkZjWVNETG1ZUFJvX0tpM0tFQXhWNHhxTXpReVNBR1l0aG1GNkVEQmlnVWRBeV9PYVM4NUFRR0FOOWlSVlFMNmZLZjFLbmlYd0lCNnplVmd3eDRlLUs3c1JGQ3IyTC03RWNPXw?oc=5\" target=\"_blank\">US commits $4.48 million to Madagascar rare earths project to cou",
+        "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBSenZ2SlVhd2x3UFNxYkZjWVNETG1ZUFJvX0tpM0tFQXhWNHhxTXpReVNBR1l0aG1GNkVEQmlnVWRBeV9PYVM4NUFRR0FOOWlSVlFMNmZLZjFLbmlYd0lCNnplVmd3eDRlLUs3c1JGQ3IyTC03RWNPXw?oc=5",
+        "published": "Tue, 04 Aug 2026 20:23:58 GMT"
+      }
+    ],
+    "글로벌규제": [
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "글로벌규제",
+        "title": "삼성·SK하이닉스, 美 규제 위험 분산…中 장비·주주환원·美 상장 '3중...",
+        "summary": "SK하이닉스 미국 상장 효과 본격화 삼성전자와 SK하이닉스가 미국의 대(對)중국 수출 규제 강화에 대비해... 평가&quot;…양사, 중국 공장용 시험 부인삼성전자와 SK하이닉스는 중국 상하이(上海) 소재 반도체 장비업체... ",
+        "link": "https://www.asiatoday.co.kr/kn/view.php?key=20260806010001783",
+        "published": "Thu, 06 Aug 2026 05:04:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "글로벌규제",
+        "title": "테슬라 상하이 공장, 합병 구상의 딜레마",
+        "summary": "북미 지역 공급업체에도 테슬라에 납품하는 부품이 중국산 부품이나 소재에 의존하지 않도록 요구해왔다. 미국 시장은 여전히 테슬라의 최대 시장이다. 미국의 규제 강화에 따라 북미에서 판매하는 차량의 생산과... ",
+        "link": "https://www.g-enews.com/view.php?ud=2026080521505553539a1f309431_1",
+        "published": "Thu, 06 Aug 2026 03:02:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "글로벌규제",
+        "title": "[뉴욕증시] 다우 '최고치'·기술주 '주춤'···엔비디아 3%↑·스페이스...",
+        "summary": "그는 &quot;스페이스 X 매출은 애널리스트 예상을 웃돌았지만, AI에 대한 지출은 통제하기 어려운 수준으로... 반도체 종목들은 대체로 약세를 보였다. 마이크론(0.06%)과 브로드컴(0.03%은 강보합으로 마감했지만, AMD는 전날... ",
+        "link": "https://www.seoulfn.com/news/articleView.html?idxno=635037",
+        "published": "Thu, 06 Aug 2026 06:42:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "글로벌규제",
+        "title": "[사설]8주 새 최첨단 모델 5개 공개, 중국 'AI 돌진'의 경고",
+        "summary": "미국의 첨단 반도체 수출통제에도 중국 기업들은 제한된 자원으로 성능을 높이는 기술을 꾸준히 축적했다. 알리바바의 큐원 계열은 세계 개발자 생태계로 빠르게 확산하고 있다. 중국은 미국 기업들이 폐쇄형 모델과... ",
+        "link": "https://n.news.naver.com/mnews/article/018/0006345435?sid=110",
+        "published": "Thu, 06 Aug 2026 05:02:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "글로벌규제",
+        "title": "[애널픽] 2026 세제개편, '인센티브→통제' 전환",
+        "summary": "해당 공제는 ▲태양광발전 ▲풍력발전 ▲이차전지 ▲반도체 ▲핵심소재 ▲인공지능(AI) 로봇부품 등 6개 품목에 적용된다. 강 애널리스트는 &quot;국내생산세액공제는 미국의 반도체지원법(CHIPS Act)이나 IRA와 유사하게 국내... ",
+        "link": "https://theviewers.co.kr/View.aspx?No=4174757",
+        "published": "Wed, 05 Aug 2026 10:18:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "글로벌규제",
+        "title": "&quot;돈과 공장, 국장에 묶는다&quot;…2026 세제개편이 그린 자본 지도 셈법",
+        "summary": "CHIPS Act)이나 인플레이션감축법(IRA)과 유사한 구조이다. 국내 생산기반 강화와 공급망 경쟁력 제고를 목표로 한다. 정부는 세액공제 적용 품목을 △태양광발전 △풍력발전 △이차전지 △반도체 △핵심소재 △AI... ",
+        "link": "http://www.ftoday.co.kr/news/articleView.html?idxno=363080",
+        "published": "Wed, 05 Aug 2026 08:22:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "글로벌규제",
+        "title": "[미국 ETF 히든 챔피언] ㉑ 리쇼어링·AI 인프라 베팅으로 연 34%",
+        "summary": "감축법(IRA)와 칩스(CHIPS) 법안 등 리쇼어링 정책의 온기를 가장 직접적으로 받는 알짜 중소형주를 적극... 복합 소재와 첨단 부품을 제조한다. AIRR가 쏠쏠한 수익률을 제공하고 있지만 편입 종목 가운데 토목과 중장비... ",
+        "link": "https://www.newspim.com/news/view/20260804001254",
+        "published": "Tue, 04 Aug 2026 16:02:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "글로벌규제",
+        "title": "'AI가 바꾸고 중국이 흔든다'…한국 공급망도 빠르게 변화",
+        "summary": "일본과 미국 역시 핵심 장비와 소재 공급국 역할을 담당하고 있다. 이에 최근 몇 년간 세계 공급망 정책은 '효율성'보다 '안보'로 중심축이 이동했다는 분석에 무게가 실린다. 미국은 2022년 CHIPS and Science Act를 통해... ",
+        "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=267978",
+        "published": "Mon, 27 Jul 2026 14:00:00 +0900"
+      },
+      {
+        "source": "네이버뉴스",
+        "lang": "ko",
+        "topic": "글로벌규제",
+        "title": "[fn광장] 공급망 재편 시대, 한국의 생존 전략",
+        "summary": "기존 패권국인 미국은 반도체법(CHIPS Act·칩스법)·인플레이션감축법(IRA)·인프라법 등 '빅3' 법안을 앞세워... 미국에 도전하는 입장인 중국은 '중국제조 2025'를 통해 핵심 부품·소재 국산화율 70% 달성을 목표로... ",
+        "link": "https://n.news.naver.com/mnews/article/014/0005553038?sid=110",
+        "published": "Sun, 26 Jul 2026 18:29:00 +0900"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "ko",
+        "topic": "글로벌규제",
+        "title": "中, 반도체 생산 핵심소재 ‘헬륨’ 수출 금지…“오늘부터 시행” - 중앙일보",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTFBOMFkyQy14N2g3YmEwV2VYM0labjRjajVvUVhVYlR3UzdBS05jUFFPdXVVTkwxZzFrUklFMFFzZkpmY0V1MU9UZEVWMHhGcHVVVkF4R2R3?oc=5\" target=\"_blank\">中, 반도체 생산 핵심소재 ‘헬륨’ 수출 금지…“오늘부터 시행”</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">중앙일보</font>",
+        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBOMFkyQy14N2g3YmEwV2VYM0labjRjajVvUVhVYlR3UzdBS05jUFFPdXVVTkwxZzFrUklFMFFzZkpmY0V1MU9UZEVWMHhGcHVVVkF4R2R3?oc=5",
+        "published": "Sat, 11 Jul 2026 07:00:00 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "ko",
+        "topic": "글로벌규제",
+        "title": "中 한일령에 日 반도체 소재 수출 제한 맞대응… 韓 소재업계 ‘촉각’ - 조선비즈 - Chosunbiz",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxPTkxka2h1ZU9pOXZ3SVRqSnJ2aGk2ejNaX29uaEFGQUhTWHlTYWlWS2FwMUYwU0xpa0tSR2s3cWVSbUpIWDZCRmJKRlNOeXFjZndlN1hHWGs3bDJzN2NBQkRxX3VXSXRHcXpQNmtPV3Jwb1BzbFNiVUhqNFloMFExY0tn0gGWAUFVX3lxTE1iOG9mMmhIdXpDYnR2U0FTY0l6SGpQWDNWNUY4WUhtVmFRbnJkSnZacEVCZD",
+        "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPTkxka2h1ZU9pOXZ3SVRqSnJ2aGk2ejNaX29uaEFGQUhTWHlTYWlWS2FwMUYwU0xpa0tSR2s3cWVSbUpIWDZCRmJKRlNOeXFjZndlN1hHWGs3bDJzN2NBQkRxX3VXSXRHcXpQNmtPV3Jwb1BzbFNiVUhqNFloMFExY0tn0gGWAUFVX3lxTE1iOG9mMmhIdXpDYnR2U0FTY0l6SGpQWDNWNUY4WUhtVmFRbnJkSnZacEVCZDl6ZVhIbk01QnZybDQ4X0xDV2dDX3ZRU3JhVl9nc25fd1Ffd1l4bjVGU1p2dmtSUG4wanRhWHZyYjM3WnRpUWRIeGoyaWJJb3VoMVI3Uy1sOV8yZzF0Y0N4SmNKSWtGWGJHdw?oc=5",
+        "published": "Fri, 05 Dec 2025 08:00:00 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "ko",
+        "topic": "글로벌규제",
+        "title": "日, 포토레지스트 수출 통제...中 반도체 생산 '직격탄' - 글로벌이코노믹",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxPRWJ4UGZlQktNLW1RS3l6V1U5bGVpZ29SM29jQVo3U3FxbXdWYlJuWHVuSzZhTE1jczlIRk9CSDc0SmZjeTYzYmstS1U1T3B1dVBRZ0s1dHZxVzJlQjZpUWdBclY4QkozaDVYb3lKVmJXa21INjNmMUVXQXRXdGJuRzdsQjNUazR4?oc=5\" target=\"_blank\">日, 포토레지스트 수출 통제...中 반도체 생산 '직격탄'</a>&nbsp;&",
+        "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPRWJ4UGZlQktNLW1RS3l6V1U5bGVpZ29SM29jQVo3U3FxbXdWYlJuWHVuSzZhTE1jczlIRk9CSDc0SmZjeTYzYmstS1U1T3B1dVBRZ0s1dHZxVzJlQjZpUWdBclY4QkozaDVYb3lKVmJXa21INjNmMUVXQXRXdGJuRzdsQjNUazR4?oc=5",
+        "published": "Mon, 01 Dec 2025 08:00:00 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "ko",
+        "topic": "글로벌규제",
+        "title": "중국, 이번엔 헬륨 막았다…반도체 핵심 소재 수출 금지 - 매일경제",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE9nZ1ZwV2JFcjByNGdVNjFKaTJuaHNTbm1IaXNnUjh0c1NYYlpNWWZTa0llSktPbnFwX0FNRi1zNTlJVmh1SmZ6cEY1U0NLMTBWTUE?oc=5\" target=\"_blank\">중국, 이번엔 헬륨 막았다…반도체 핵심 소재 수출 금지</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">매일경제</font>",
+        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9nZ1ZwV2JFcjByNGdVNjFKaTJuaHNTbm1IaXNnUjh0c1NYYlpNWWZTa0llSktPbnFwX0FNRi1zNTlJVmh1SmZ6cEY1U0NLMTBWTUE?oc=5",
+        "published": "Fri, 10 Jul 2026 07:00:00 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "en",
+        "topic": "글로벌규제",
+        "title": "Beijing's Export Control Counterpunch: 14 EU Entities Added to China's Controlled List - Geopolitechs",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE5lUEd4cTdMa1UxZFJaTFBBamhkR0NaelFhVGNxQ2x5T1JCMENJUUxqS20yTGJUY0xIXzZDZGZ2Q1hQc0NHNHhDX3dsNDYtUGxNam55Q3ZjcmNTVTQ3R2Vwazl0d3J6cmxhRmFXX1NLTDFMN3M4U3c?oc=5\" target=\"_blank\">Beijing's Export Control Counterpunch: 14 EU Entities Added to China",
+        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5lUEd4cTdMa1UxZFJaTFBBamhkR0NaelFhVGNxQ2x5T1JCMENJUUxqS20yTGJUY0xIXzZDZGZ2Q1hQc0NHNHhDX3dsNDYtUGxNam55Q3ZjcmNTVTQ3R2Vwazl0d3J6cmxhRmFXX1NLTDFMN3M4U3c?oc=5",
+        "published": "Fri, 24 Jul 2026 07:00:00 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "en",
+        "topic": "글로벌규제",
+        "title": "China Rare Earth Export Controls 2026: Tech Risk - tech-insider.org",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTFBBQVRWMUM5MnhKanFjQy10aXFZOGVlZ2ZfWHNaTjQ0bDZqaVVOclRaWHczeFVjbHEtRVpzTDJKcHRrTlN6TkVneXBQTE9lTXlLMGQ3Z3lPUmw0WEJKZkNKNzBNU1FVRTlQM19UUGRmNWJzQU9TM0VaQWhFdDc?oc=5\" target=\"_blank\">China Rare Earth Export Controls 2026: Tech Risk</a>&nbsp;&n",
+        "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBBQVRWMUM5MnhKanFjQy10aXFZOGVlZ2ZfWHNaTjQ0bDZqaVVOclRaWHczeFVjbHEtRVpzTDJKcHRrTlN6TkVneXBQTE9lTXlLMGQ3Z3lPUmw0WEJKZkNKNzBNU1FVRTlQM19UUGRmNWJzQU9TM0VaQWhFdDc?oc=5",
+        "published": "Thu, 30 Jul 2026 01:34:37 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "en",
+        "topic": "글로벌규제",
+        "title": "China adds 10 US firms, including rare-earth miner, to export control list - Al Jazeera",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxNNnkxelBpRHVwRWNKbmZPMVM4Si1FQlZRVHh5MHZxRlFSWU9paHBVTmZBSW5uR0ZEcnlJeFM1WTNpR1pZMEJ3am1YN3NEVzRZdkZMV2ZibjJqaXZVVU1RNFZINHR1NnVwbnVSWVJxbVJxejRSbDVjZ3E5MFhVUEcwcFVBUFlfeWlfVXJNWjNQOWItNXdCR0J4azhqcTBPZEhOakpaU0p4WElyLW9tQjF0bTdhY9IBuAFBVV",
+        "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNNnkxelBpRHVwRWNKbmZPMVM4Si1FQlZRVHh5MHZxRlFSWU9paHBVTmZBSW5uR0ZEcnlJeFM1WTNpR1pZMEJ3am1YN3NEVzRZdkZMV2ZibjJqaXZVVU1RNFZINHR1NnVwbnVSWVJxbVJxejRSbDVjZ3E5MFhVUEcwcFVBUFlfeWlfVXJNWjNQOWItNXdCR0J4azhqcTBPZEhOakpaU0p4WElyLW9tQjF0bTdhY9IBuAFBVV95cUxOVHVRVWs4LVJlN1h6cS1ndFVDUE1qU1FNbWtBdHJtS2Z6MUlnYU5ZaUdla202N1FTUVpucDBWd0pxSnJ6c21tQmpsQjloeTNMbHR0MHNReVpwX2lqQmFueU5DdndzR2pzcExZcE5QdEkybFNwdktoMEg3RDdMcE9OZkEyd3hiQ3NBSmFxMUxxbS1UUEplaUU2a0gyQjFXMnpabHl1TzU2dWtwUFMtU0dRQldySVBBZ2Zt?oc=5",
+        "published": "Mon, 22 Jun 2026 07:00:00 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "en",
+        "topic": "글로벌규제",
+        "title": "Applied Materials, semiconductors, China news, SMIC, BIS, export controls, Commerce Department - Kharon",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxQTHhwTkNQdXdfTTFNZUZCT3otNHBvQjF4cTZmZEVvM3l2UGxhSGhJbG1PNThaY3NaeGc4V003RnpjZUJpaHBxNWN5QWptWFJldXNUNmFnZVlkRHk3RkNlVzdvaVF5LU84dE5Fdld0cUl3WllINEhqYThFU1NDMmRIVWpNSmViRHNqYWdvY2tUZUdFdVRBYklN?oc=5\" target=\"_blank\">Applied Materials, semi",
+        "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQTHhwTkNQdXdfTTFNZUZCT3otNHBvQjF4cTZmZEVvM3l2UGxhSGhJbG1PNThaY3NaeGc4V003RnpjZUJpaHBxNWN5QWptWFJldXNUNmFnZVlkRHk3RkNlVzdvaVF5LU84dE5Fdld0cUl3WllINEhqYThFU1NDMmRIVWpNSmViRHNqYWdvY2tUZUdFdVRBYklN?oc=5",
+        "published": "Tue, 24 Feb 2026 08:00:00 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "en",
+        "topic": "글로벌규제",
+        "title": "South Korea to Introduce 'K-Chips Act' Tax Credits for Domestic Production of Semiconductors, AI Robots, and More Next Year - finance.biggo.com",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE5DMTNuNmVPWW0zTy1KWGQwT3RVUG9iUmdPWkNpbEJZVUtMajdlamFHM05wMnFnbjhJb3JwakdjanRUdWt0eHJ1MlAySnN6eXJqRDVZRlUyRVVzd2J3TDFIOFBIRThfdTM0d2dock5ET1ZWbVFwdmc?oc=5\" target=\"_blank\">South Korea to Introduce 'K-Chips Act' Tax Credits for Domestic Prod",
+        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5DMTNuNmVPWW0zTy1KWGQwT3RVUG9iUmdPWkNpbEJZVUtMajdlamFHM05wMnFnbjhJb3JwakdjanRUdWt0eHJ1MlAySnN6eXJqRDVZRlUyRVVzd2J3TDFIOFBIRThfdTM0d2dock5ET1ZWbVFwdmc?oc=5",
+        "published": "Tue, 28 Jul 2026 09:25:00 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "en",
+        "topic": "글로벌규제",
+        "title": "A New Phase for the U.S. Battery Industry - CSIS | Center for Strategic and International Studies",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTE9hbzg0ZzIyOGc5d3JHM01jb1kxcFh5WDJaT2hwSWk4am9HaHZiV3FDNGpNZGpFRDFwZmROamJBcUhIOHVYM3dGZHRSUU5EX2FqMURGWHdONVdfSHgtVUdld0N5NjRKbVF5ZHBz?oc=5\" target=\"_blank\">A New Phase for the U.S. Battery Industry</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CSIS",
+        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9hbzg0ZzIyOGc5d3JHM01jb1kxcFh5WDJaT2hwSWk4am9HaHZiV3FDNGpNZGpFRDFwZmROamJBcUhIOHVYM3dGZHRSUU5EX2FqMURGWHdONVdfSHgtVUdld0N5NjRKbVF5ZHBz?oc=5",
+        "published": "Mon, 27 Apr 2026 07:00:00 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "en",
+        "topic": "글로벌규제",
+        "title": "Chinese Cathode Supplier to LG Energy Solution Restructures to Meet U.S. IRA Rules - thelec.net",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE9Qc1dtMlJ5X1UtNDltLURHbVA4LVJFMzZfZ0REWmtLQ3dTSlZGN185RkRSWE1PMTVNdmVYUG9MUzBITm0wYkJZZVFia0xfZUxickx2anEzUUhyeGx2ZXUzNXFLbVZzQQ?oc=5\" target=\"_blank\">Chinese Cathode Supplier to LG Energy Solution Restructures to Meet U.S. IRA Rules</a>&nb",
+        "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9Qc1dtMlJ5X1UtNDltLURHbVA4LVJFMzZfZ0REWmtLQ3dTSlZGN185RkRSWE1PMTVNdmVYUG9MUzBITm0wYkJZZVFia0xfZUxickx2anEzUUhyeGx2ZXUzNXFLbVZzQQ?oc=5",
+        "published": "Tue, 07 Apr 2026 07:00:00 GMT"
+      },
+      {
+        "source": "GoogleNews",
+        "lang": "en",
+        "topic": "글로벌규제",
+        "title": "Posco Future M exits China anode stake, shifts supply chain to North America - CHOSUNBIZ - Chosunbiz",
+        "summary": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxQY0czMnI4aG0wOHhFQUdNeXJHYWhReHg4VzR0dGxVLXpjVDdmZ0VWU1pDY0pQaWxkOEx5dVFxazBJdTZxelhqNlVPQ1d1dGcyQVM2aFhHWjFSX2xXeGdldTdxTVB6TlNpN2JZOXZZay1FWHZUS1VXUnJLYWR3clJWMdIBlAFBVV95cUxNa1VkNmVydU1oWVp6eEV5Umxucm5uZUZULW5NWE1zNEhYUF9tNHpfTDdHbFFKc2",
+        "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQY0czMnI4aG0wOHhFQUdNeXJHYWhReHg4VzR0dGxVLXpjVDdmZ0VWU1pDY0pQaWxkOEx5dVFxazBJdTZxelhqNlVPQ1d1dGcyQVM2aFhHWjFSX2xXeGdldTdxTVB6TlNpN2JZOXZZay1FWHZUS1VXUnJLYWR3clJWMdIBlAFBVV95cUxNa1VkNmVydU1oWVp6eEV5Umxucm5uZUZULW5NWE1zNEhYUF9tNHpfTDdHbFFKc2ZsRTNFZHdxa2g0YTB5LXdfUVJSaF9sWldVTDdxM2tocE0xMXBwSmhQcTdxbnhlbFMxWENobkc0cmdOZXQ3bGFudHJrYkVTN0ZrTC1ZN0FaUE14VEZ3b0ItczFZQWNO?oc=5",
+        "published": "Fri, 22 May 2026 07:00:00 GMT"
+      }
+    ]
+  }
+}

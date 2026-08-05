@@ -26,18 +26,7 @@
       "image_keyword": "rare earth mineral export",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-08-06_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "유럽 14개사 수출 전면 차단 – 구체적 기업명·공식 발표문 출처 미확인",
-          "유럽 희토류 소비의 '약 90% 이상' 중국 의존 수치, 출처 명시 없음",
-          "S&P글로벌·NYT 보도 인용이나 원문 링크·날짜 미제공"
-        ],
-        "notes": "전반적 개연성 높으나 14개사 실명·공식 제재 리스트 교차검증 필요",
-        "verified_at": "2026-08-06 07:29"
-      }
+      "image_url": "images/2026-08-06_article_0.jpg"
     },
     {
       "id": 1,
@@ -61,18 +50,7 @@
       "image_keyword": "semiconductor 3D DRAM stack",
       "is_featured": false,
       "timestamp": "오전 10:02",
-      "image_url": "images/2026-08-06_article_1.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'zHBM·zNAND-O' 제품명 및 HBM5 대비 8배 성능 수치, EE타임스 원문 확인 필요",
-          "삼성·SK하이닉스가 동시에 동일 로드맵을 '본격 공개'했다는 표현 – 공동발표 여부 불명확",
-          "HBM5는 아직 공식 규격 확정 전으로 비교 기준 수치 신뢰도 낮음"
-        ],
-        "notes": "기술 방향성은 타당하나 미확정 제품명·성능 수치 출처 보강 필요",
-        "verified_at": "2026-08-06 07:29"
-      }
+      "image_url": "images/2026-08-06_article_1.jpg"
     },
     {
       "id": 2,
@@ -93,20 +71,10 @@
         "향후 연구팀은 이번 공정 기술의 파일럿 규모 실증을 거쳐 산업화 단계로의 전환을 추진할 계획이다. 상용화 시점은 이르면 2028~2029년으로 예상되며, 성공적으로 양산 체계가 구축될 경우 국내 ESS 소재 산업의 새로운 성장축으로 자리잡을 수 있다.",
         "투자 관점에서는 VRFB 관련 소재·부품 기업과 바나듐 원료 조달 공급망에 대한 관심이 높아질 것으로 보인다. 핵심광물 공급망 투자를 확대하고 있는 국민성장펀드 등 정책금융 자금이 VRFB 관련 기업으로 유입될 가능성도 있어 주목된다."
       ],
-      "image_keyword": "OLED evaporation deposition process",
+      "image_keyword": "vanadium redox flow battery storage",
       "is_featured": false,
       "timestamp": "오전 10:48",
-      "image_url": "images/2026-08-06_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "김희탁 교수 소속이 '생명화학공학과'로 표기 – KAIST 학과명 정확성 확인 필요",
-          "생산 시간 '67% 단축' 수치, 논문·보도자료 원문 교차검증 권고"
-        ],
-        "notes": "KAIST 연구 성과 내용은 전반적으로 개연성 높고 기술 설명 정확함",
-        "verified_at": "2026-08-06 07:29"
-      }
+      "image_url": "images/2026-08-06_article_2.jpg"
     },
     {
       "id": 3,
@@ -131,18 +99,7 @@
       "image_keyword": "OLED display panel manufacturing",
       "is_featured": false,
       "timestamp": "오전 11:30",
-      "image_url": "images/2026-08-06_article_3.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "출원번호 40-2026-0155774·5 실제 특허청 공개 여부 즉시 확인 필요",
-          "출원일 '지난달 30일' – 기사 발행일 기준 날짜 특정 필요, 모호한 표현",
-          "FLiPP 기술의 양산 적용 시기·수율 수치 등 구체적 근거 미제시"
-        ],
-        "notes": "상표 출원번호 진위 및 기술 상용화 현황 교차검증 필요",
-        "verified_at": "2026-08-06 07:29"
-      }
+      "image_url": "images/2026-08-06_article_3.jpg"
     },
     {
       "id": 4,
@@ -166,18 +123,7 @@
       "image_keyword": "black mass battery recycling industrial",
       "is_featured": false,
       "timestamp": "오후 12:15",
-      "image_url": "images/2026-08-06_article_4.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "BIS '임시 최종 규정' 발표 – 관보(Federal Register) 게재 여부·시행일 미확인",
-          "글로벌 텅스텐 생산 '약 80% 중국 담당' 수치, 출처 명시 없음",
-          "블랙매스 수출 허가 의무화 범위(비동맹국 전체 적용 여부) 명확화 필요"
-        ],
-        "notes": "정책 방향성·소재 설명은 타당하나 규정 시행 세부사항 출처 보강 필요",
-        "verified_at": "2026-08-06 07:29"
-      }
+      "image_url": "images/2026-08-06_article_4.jpg"
     }
   ],
   "editorial_briefing": "중국의 희토류 수출 차단과 미국의 핵심광물 수출 통제가 맞물리며 글로벌 공급망 재편이 가속화되고 있다. 반면 삼성·SK하이닉스의 3D D램, KAIST의 VRFB 공정 혁신, LG디스플레이의 FLiPP 기술 등 국내 소재·기술 자립 행보도 뚜렷하다.",
@@ -207,6 +153,5 @@
       "label": "LGD FLiPP OLED",
       "status": "차세대 증착 상표 출원"
     }
-  ],
-  "last_reviewed_at": "2026-08-06 07:29"
+  ]
 }
