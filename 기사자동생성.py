@@ -704,7 +704,8 @@ save_articles 도구를 사용해 기사 5개를 저장하세요.
     # ── LLM 호출: 구독코인(Claude Code) vs API코인(anthropic SDK) ──
     if llm_backend.using_subscription():
         # 로컬 구독 경로 — Claude Code 헤드리스로 JSON 직접 생성
-        articles = llm_backend.call_tool(request_params, "save_articles")["articles"]
+        # effort="low" — 사고 토큰도 32,000 출력 상한을 먹는다 (llm_backend.call_tool 주석)
+        articles = llm_backend.call_tool(request_params, "save_articles", effort="low")["articles"]
     else:
         # 1차: Batch API (50% 할인) — 실패·시간초과 시 None 반환
         response = None

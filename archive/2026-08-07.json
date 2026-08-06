@@ -25,16 +25,7 @@
       "image_keyword": "semiconductor gas supply chain laboratory",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-08-07_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "발표일이 '6일'로 명시되어 있으나 공식 보도자료 날짜 교차 확인 필요"
-        ],
-        "notes": "KRISS 실존 기관, 기술 내용 신뢰도 높음. 전반적으로 양호",
-        "verified_at": "2026-08-07 04:40"
-      }
+      "image_url": "images/2026-08-07_article_0.jpg"
     },
     {
       "id": 1,
@@ -58,18 +49,7 @@
       "image_keyword": "defense industry critical mineral supply chain",
       "is_featured": false,
       "timestamp": "오전 09:30",
-      "image_url": "images/2026-08-07_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "'지난 5월 행정명령 발동' — 구체적 EO 번호·날짜 출처 불명",
-          "2028년 국내 조달 의무 기한 법적 근거 미제시",
-          "로이터 단독 보도 주장 독립 확인 필요"
-        ],
-        "notes": "방산 탈중국 방향성은 타당하나 세부 정책 출처 검증 요망",
-        "verified_at": "2026-08-07 04:40"
-      }
+      "image_url": "images/2026-08-07_article_1.jpg"
     },
     {
       "id": 2,
@@ -93,18 +73,7 @@
       "image_keyword": "MLCC ceramic capacitor manufacturing industrial",
       "is_featured": false,
       "timestamp": "오전 09:45",
-      "image_url": "images/2026-08-07_article_2.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'삼성전기·SEMCO' 병기 — SEMCO는 삼성전기의 영문 약칭으로 동일 기업 중복 표기 오류",
-          "AI 서버 1대당 MLCC 수만 개 수치 출처 미제시",
-          "산둥 시노세라의 삼성전기 납품 여부 독립 검증 필요"
-        ],
-        "notes": "삼성전기·SEMCO 중복 표기 오류 수정 필요, 수치 출처 보강 요망",
-        "verified_at": "2026-08-07 04:40"
-      }
+      "image_url": "images/2026-08-07_article_2.jpg"
     },
     {
       "id": 3,
@@ -128,17 +97,7 @@
       "image_keyword": "lithium iron phosphate battery material factory",
       "is_featured": false,
       "timestamp": "오전 10:00",
-      "image_url": "images/2026-08-07_article_3.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "계약 상대 배터리 기업명 미공개로 계약 실체 독립 확인 불가",
-          "전기차 64만 대분 환산 기준(배터리팩당 양극재량) 명시 필요"
-        ],
-        "notes": "수치 계산 대체로 합리적, 거래 상대방 공개 시 신뢰도 상승",
-        "verified_at": "2026-08-07 04:40"
-      }
+      "image_url": "images/2026-08-07_article_3.jpg"
     },
     {
       "id": 4,
@@ -162,17 +121,7 @@
       "image_keyword": "silicon photonics optical semiconductor material",
       "is_featured": false,
       "timestamp": "오전 10:15",
-      "image_url": "images/2026-08-07_article_4.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "글로벌파운드리스 데이터센터 매출 '45% 성장' — 분기·출처 구체성 독립 확인 필요",
-          "머크 연간 매출 '약 220억 유로' — 최신 실적 기준 검토 필요"
-        ],
-        "notes": "실리콘 포토닉스 방향성 타당, 글로벌파운드리스 수치 출처 보강 요망",
-        "verified_at": "2026-08-07 04:40"
-      }
+      "image_url": "images/2026-08-07_article_4.jpg"
     }
   ],
   "editorial_briefing": "AI·방산 수요를 중심으로 반도체 소재·핵심광물·배터리 공급망 재편이 동시다발적으로 진행 중이다. 미국의 공급망 내재화 압박과 중국의 소재 확장이 맞부딪히며 글로벌 소재 공급망 경쟁이 가속화되고 있다.",
@@ -202,6 +151,5 @@
       "label": "실리콘포토닉스 소재",
       "status": "머크 시장진입 선언"
     }
-  ],
-  "last_reviewed_at": "2026-08-07 04:40"
+  ]
 }

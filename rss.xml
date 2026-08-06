@@ -6,86 +6,46 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 06 Aug 2026 07:29:17 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2026 04:40:41 +0900</lastBuildDate>
     <item>
-      <title>중국, 유럽 14개사 희토류 수출 전면 차단</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-06-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-06-0.html</guid>
-      <category>글로벌</category>
-      <description>중국이 유럽 소재 14개 기업에 대해 희토류 수출을 전면 금지하는 조치를 단행했다. 이는 단순한 무역 분쟁을 넘어 유럽 첨단산업 공급망을 직접 겨냥한 전략적 압박으로 해석된다. 소부장 업계의 원자재 조달 차질이 현실화될 가능성이 높아졌다.</description>
-      <pubDate>Thu, 06 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>삼성·SK하이닉스 3D D램 로드맵 공개…소재·장비 판도 재편</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-06-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-06-1.html</guid>
+      <title>표준연, 반도체 가스 15종 품질평가 체계 구축</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-07-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-07-0.html</guid>
       <category>반도체소재</category>
-      <description>삼성전자와 SK하이닉스가 수직 채널 기반 3D D램 로드맵을 본격 공개하며 AI 메모리 주도권 경쟁에 뛰어들었다. 이 기술 전환은 증착·식각·CMP 등 핵심 공정 소재와 장비 수요 구조를 근본적으로 바꿀 것으로 분석된다. 국내 소부장 기업들에게는 신규 진입과 기존 포지션 재정비가 동시에 요구되는 변곡점이다.</description>
-      <pubDate>Thu, 06 Aug 2026 00:00:00 +0900</pubDate>
+      <description>한국표준과학연구원이 반도체 공정용 고순도 가스 15종의 순도분석기술과 인증표준물질 6종을 개발했다. 공급업체 성적서에만 의존하던 방식에서 벗어나 국내 자체 품질 검증 기반을 마련했다는 점에서 공급망 자립의 전환점으로 평가된다.</description>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 +0900</pubDate>
     </item>
     <item>
-      <title>KAIST, 바나듐 전해질 생산시간 67% 단축 성공</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-06-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-06-2.html</guid>
-      <category>희귀금속</category>
-      <description>KAIST 연구팀이 대용량 ESS용 바나듐 레독스 흐름전지(VRFB)의 핵심 전해질 생산 시간을 67% 줄이는 공정 기술 개발에 성공했다. AI 데이터센터와 재생에너지 연계 초대형 배터리 상용화를 앞당길 핵심 성과로 평가된다. 바나듐 수요 확대 가능성과 함께 국내 희귀금속 공급망 전략에도 영향을 미칠 전망이다.</description>
-      <pubDate>Thu, 06 Aug 2026 00:00:00 +0900</pubDate>
+      <title>록히드마틴, 미국산 핵심광물 직접 조달 추진</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-07-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-07-1.html</guid>
+      <category>글로벌</category>
+      <description>록히드마틴이 트럼프 행정부의 공급망 재편 압박에 따라 미국산 핵심광물 직접 조달을 본격 추진하고 있다고 로이터가 단독 보도했다. 방위산업의 대중 광물 의존 탈피가 가속화되면서 글로벌 핵심광물 공급망 재편이 새로운 국면에 접어들고 있다.</description>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 +0900</pubDate>
     </item>
     <item>
-      <title>LG디스플레이 FMM-Less OLED 'FLiPP' 상표 출원</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-06-3.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-06-3.html</guid>
+      <title>MLCC 소재 공급망, AI 수요로 중국서 급속 확대</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-07-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-07-2.html</guid>
       <category>산업재</category>
-      <description>LG디스플레이가 파인메탈마스크(FMM)를 사용하지 않는 차세대 OLED 증착 기술 'FLiPP'의 로고상표를 출원하며 기술 사업화에 박차를 가하고 있다. FLiPP는 기존 FMM 방식의 한계를 극복해 대형·플렉서블 OLED 패널의 원가 경쟁력을 높일 핵심 기술로 평가된다. OLED 소재·장비 공급망 전반에 구조적 변화를 예고한다.</description>
-      <pubDate>Thu, 06 Aug 2026 00:00:00 +0900</pubDate>
+      <description>AI 수요 급증에 힘입어 중국 MLCC 핵심 소재 공급망이 빠르게 확장되고 있다. 산둥 시노세라 등 중국 유전체 소재 기업들이 대규모 증산에 나서면서 글로벌 MLCC 소재 시장 판도 변화가 예고되고 있다.</description>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 +0900</pubDate>
     </item>
     <item>
-      <title>美 상무부, 블랙매스·텅스텐 스크랩 수출 허가제 전격 도입</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-06-4.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-06-4.html</guid>
-      <category>글로벌</category>
-      <description>미국 상무부 산업안보국(BIS)이 블랙매스(폐배터리 분쇄물)와 텅스텐 스크랩에 대한 수출 허가를 의무화하는 임시 최종 규정을 발표했다. 배터리 재활용 핵심 원료와 공구·방산용 희귀금속의 해외 유출을 차단하겠다는 의도로, 글로벌 핵심광물 재활용 공급망에 새로운 변수로 부상했다. 국내 도시광산 및 소재 기업들의 전략 재검토가 불가피하다.</description>
-      <pubDate>Thu, 06 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>록히드마틴, 美산 핵심광물 직접 조달 나선다</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-05-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-05-0.html</guid>
-      <category>글로벌</category>
-      <description>세계 최대 방산기업 록히드마틴이 트럼프 행정부의 공급망 자립 압박에 따라 미국산 핵심광물 직접 조달에 나섰다. 스칸듐 등 항공·방산 필수 소재를 중국 외 루트로 확보하기 위한 계약 협상이 진행 중이다.</description>
-      <pubDate>Wed, 05 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>[속보] TSMC 구마모토 1공장, 지진 6일 만에 전면 복구 완료</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-05-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-05-1.html</guid>
-      <category>글로벌</category>
-      <description>TSMC가 지진 피해를 입었던 일본 구마모토 JASM 공장의 완전 복구를 공식 발표하고 가동을 재개했다. 지진 발생 약 6일 만의 신속한 복구로, TSMC는 지역사회에 2억5000만 엔을 기부하기로 했다.</description>
-      <pubDate>Wed, 05 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>에코프로, 반도체 전구체 사업 순항…차세대 소재로 확장</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-05-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-05-2.html</guid>
-      <category>반도체소재</category>
-      <description>에코프로가 반도체 소재 사업에서 전구체 공급 확대를 통해 실적 개선 흐름을 이어가고 있다. 2분기 영업이익이 전년 대비 103% 증가한 가운데, 전고체 배터리 소재와 반도체 전·후공정 소재를 신성장 축으로 육성한다는 전략을 구체화하고 있다.</description>
-      <pubDate>Wed, 05 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>중국 중희토류 수출통제, 유럽 겨냥 압박 본격화</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-05-3.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-05-3.html</guid>
+      <title>포스코퓨처엠, LFP 양극재 19만톤 장기 공급 합의</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-07-3.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-07-3.html</guid>
       <category>희귀금속</category>
-      <description>중국이 디스프로슘·테르븀 등 중희토류 수출 통제를 지속 강화하며 유럽과 일본에 대한 자원 지렛대를 본격 활용하고 있다. 6월에 이어 일본향 수출 허가가 사실상 차단된 가운데, 유럽 자동차 공장들의 생산 차질 우려가 고조되고 있다.</description>
-      <pubDate>Wed, 05 Aug 2026 00:00:00 +0900</pubDate>
+      <description>포스코퓨처엠이 국내 배터리 기업과 2027년부터 2032년까지 6년간 LFP 양극재 19만톤 이상을 공급하는 장기 계약에 합의했다. 포항 공장의 하이니켈 생산라인을 LFP용으로 전환하며 비중국 LFP 공급망 구축에 본격 나선 것으로, 국내 배터리 소재 생태계 재편이 가속화될 전망이다.</description>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 +0900</pubDate>
     </item>
     <item>
-      <title>스페인, 복합소재 열가소성 전환으로 순환경제 도전</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-05-4.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-05-4.html</guid>
-      <category>산업재</category>
-      <description>스페인에서 운송 부품의 열가소성 복합소재 전환을 통해 재활용성을 높이는 '슈퍼판(Superpan)' 프로젝트가 추진되고 있다. 기존 열경화성 소재 대비 재활용·경량화·탄소저감 효과가 기대되며, 글로벌 순환경제 흐름과 맞물려 주목받고 있다.</description>
-      <pubDate>Wed, 05 Aug 2026 00:00:00 +0900</pubDate>
+      <title>머크, 실리콘 포토닉스 소재 시장 본격 공략</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-07-4.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-07-4.html</guid>
+      <category>글로벌</category>
+      <description>독일 머크가 실리콘 포토닉스 분야를 신성장 동력으로 선언하고 관련 소재 개발과 공급 체계 구축에 나섰다. AI 데이터센터의 광인터커넥트 수요 급증이 포토닉스 소재 시장을 키우는 핵심 동인으로 작용하고 있다.</description>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 +0900</pubDate>
     </item>
     <item>
       <title>LB세미콘, 퀄컴 AI·차량용 PMIC 후공정 양산</title>
@@ -246,6 +206,46 @@
       <category>산업재</category>
       <description>삼성SDI 전자재료 부문이 폴더블폰용 OLED 소재 매출 확대에 힘입어 전분기 대비 매출 13% 증가, 영업이익률 8.3%p 상승을 기록했다. 고수익성 OLED 소재 비중 확대가 실적 개선의 핵심 동인으로 확인됐다.</description>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>독일·유럽 반도체 연합, 日에 AI 소재 동맹 제안</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-01-4.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-01-4.html</guid>
+      <category>글로벌</category>
+      <description>독일 주도의 유럽 반도체 연합이 일본에 AI 첨단 반도체 공급망 강화를 위한 소재·장비 동맹을 공식 제안했다. 미·중 기술 패권 경쟁 속에서 서방 진영의 소재 공급망 블록화가 가속되고 있다.</description>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>롯데정밀화학, 2Q 영업익 619억…스페셜티 소재가 실적 이끌다</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-31-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-31-0.html</guid>
+      <category>반도체소재</category>
+      <description>롯데정밀화학이 반도체 호황에 힘입어 2분기 영업이익 619억 원을 기록, 전년 동기 대비 612% 급증했다. 고부가 스페셜티 소재 사업이 핵심 성장 동력으로 부상하며 반도체 소재 기업으로의 체질 전환이 가속화되고 있다.</description>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>광양 철강 기지, 반도체·우주 소재 산실로 대변신</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-31-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-31-1.html</guid>
+      <category>반도체소재</category>
+      <description>철강 산업의 메카로 불리던 전남 광양이 반도체 및 우주 소재 생산 거점으로 탈바꿈하고 있다. 포스코 계열사를 중심으로 첨단 소재 생산 인프라가 구축되면서 광양의 산업 지형이 크게 재편되고 있다.</description>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>트럼프, 핵심광물 포함 폐기물 수출 규제 서명…글로벌 공급망 재편 촉발</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-31-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-31-2.html</guid>
+      <category>글로벌</category>
+      <description>트럼프 미국 대통령이 희토류 영구자석 등 핵심광물이 포함된 전자 폐기물의 수출을 금지하는 행정명령에 서명했다. 중국의 핵심광물 패권을 견제하고 국내 공급망을 강화하려는 조치로, 글로벌 소재 공급망에 광범위한 파장이 예상된다.</description>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>포스코홀딩스 2Q 어닝서프라이즈…자원·소재 사업 동반 성장</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-07-31-3.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-07-31-3.html</guid>
+      <category>희귀금속</category>
+      <description>포스코홀딩스가 2분기 영업이익 8,190억 원으로 전년 대비 34.9% 증가하며 어닝서프라이즈를 기록했다. 철강에 이어 이차전지 소재, 에너지 자원 등 전 사업 부문이 고르게 개선됐으며, 아르헨티나 염수리튬 1공장도 첫 분기 흑자 전환에 성공했다.</description>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
