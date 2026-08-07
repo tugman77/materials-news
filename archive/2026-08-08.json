@@ -26,18 +26,7 @@
       "image_keyword": "semiconductor materials tariff trade policy",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-08-08_article_0.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "USTR '연간 수입 규모 약 320억 달러' 수치의 출처·근거 불명확",
-          "USTR 관계자 발언이 구체적이나 이름·날짜 등 출처 없이 인용됨",
-          "행정명령 형식 즉각 발효 여부—실제 입법 절차와 상충 가능성"
-        ],
-        "notes": "수치·인용 출처 보강 필요, 전반적 논지는 개연성 있음",
-        "verified_at": "2026-08-08 03:11"
-      }
+      "image_url": "images/2026-08-08_article_0.jpg"
     },
     {
       "id": 1,
@@ -58,21 +47,10 @@
         "TFLN 소재 기반 광집적회로(PIC)는 향후 LiDAR, 바이오센서, 양자통신 분야로도 응용이 확대될 전망이다. G&H의 케하야스 연구원은 '2027년경 TFLN 기반 PIC가 고속 광통신 시장의 20% 이상을 차지할 것'이라고 전망했다.",
         "국내 투자 업계에서도 TFLN 관련 소재·장비 기업에 대한 관심이 높아지고 있다. 광통신 소재 전문 스타트업에 대한 벤처캐피탈 투자가 올해 들어 전년 대비 2배 이상 증가한 것으로 집계됐다. AI 데이터센터 광인터커넥트 수요가 본격화되면서 TFLN 밸류체인 전반에 걸친 투자 기회가 열리고 있다는 분석이다."
       ],
-      "image_keyword": "engineering plastics compounding production line",
+      "image_keyword": "photonics semiconductor optical waveguide",
       "is_featured": false,
       "timestamp": "오전 10:30",
-      "image_url": "images/2026-08-08_article_1.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "G&H 수석 연구원 '스트라토스 케하야스' 실존 여부 및 Semiconductor Digest 기고 확인 필요",
-          "6인치 웨이퍼 수율 80% 이상 달성 업체 존재 여부—구체적 수치 출처 불명",
-          "InP 대비 구동전압 60% 절감 수치의 실험적 근거 및 출처 미제시"
-        ],
-        "notes": "기술적 방향성은 타당하나 핵심 수치·인물 출처 보강 필요",
-        "verified_at": "2026-08-08 03:11"
-      }
+      "image_url": "images/2026-08-08_article_1.jpg"
     },
     {
       "id": 2,
@@ -97,17 +75,7 @@
       "image_keyword": "industrial plastics compounding factory plant",
       "is_featured": false,
       "timestamp": "오후 01:45",
-      "image_url": "images/2026-08-08_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "2분기 영업이익 1101억원—실제 공시 수치와 대조 검증 권고",
-          "율촌 공장 연산 2만 톤 규모—공식 발표 자료와 일치 여부 확인 필요"
-        ],
-        "notes": "롯데케미칼 실적·공장 정보는 대체로 신뢰, 수치 공시 대조 권고",
-        "verified_at": "2026-08-08 03:11"
-      }
+      "image_url": "images/2026-08-08_article_2.jpg"
     },
     {
       "id": 3,
@@ -132,18 +100,7 @@
       "image_keyword": "critical minerals supply chain logistics port",
       "is_featured": false,
       "timestamp": "오후 02:20",
-      "image_url": "images/2026-08-08_article_3.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "RSM US·Mining.com 공동 보고서 발표 형식—두 기관 공동 발간 여부 불명확",
-          "'정제 물량 60~80% 단일국 집중' 수치—대상 금속 특정 없이 포괄 서술",
-          "항만·물류 인프라 결판 인용구—원문 보고서 내 정확한 표현 확인 필요"
-        ],
-        "notes": "핵심광물 수출통제 사례는 사실에 부합, 출처 표기 구체화 권고",
-        "verified_at": "2026-08-08 03:11"
-      }
+      "image_url": "images/2026-08-08_article_3.jpg"
     },
     {
       "id": 4,
@@ -165,21 +122,10 @@
         "버클리 연구팀은 향후 해당 소재의 도핑 조건과 계면 제어 기술을 고도화해 소자 적용 가능성을 검증하는 후속 연구를 진행할 계획이다. 산업계와의 기술 이전 협의도 이미 시작된 것으로 알려져, 실용화까지의 타임라인이 예상보다 단축될 수 있다는 기대감이 있다.",
         "반도체 소재 분야에서 근본 물리 현상의 새로운 발견이 실용화로 이어진 대표적 사례인 HZO 강유전체의 궤적을 이번 연구가 따라갈 수 있을지 업계가 주목하고 있다. 기초과학 투자가 소부장 경쟁력으로 직결되는 사례가 늘면서, 산학 협력 기반의 소재 연구 생태계 조성이 더욱 중요해지고 있다는 목소리도 높다."
       ],
-      "image_keyword": "semiconductor wafer customs duty inspection",
+      "image_keyword": "ferroelectric thin film semiconductor material",
       "is_featured": false,
       "timestamp": "오후 03:50",
-      "image_url": "images/2026-08-08_article_-1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "연구 대상 소재명이 본문 내 명시되지 않아 재현·검증 어려움",
-          "Nature Materials 게재 논문 제목·DOI 미기재—실제 게재 확인 불가",
-          "2~3nm 강유전성 유지 수치—논문 원문과 대조 필요"
-        ],
-        "notes": "버클리 국립연구소·네이처 머티리얼즈 언급은 신뢰, 소재명 명시 권고",
-        "verified_at": "2026-08-08 03:11"
-      }
+      "image_url": "images/2026-08-08_article_4.jpg"
     }
   ],
   "editorial_briefing": "트럼프발 추가관세로 반도체·태양광 소재 공급망 충격이 예고된 가운데, 핵심광물 집중도 리스크가 구조적 변수로 부상했다. 한편 TFLN·강유전체 등 첨단소재는 상업화 전환으로 새 기회를 열고 있다.",
@@ -209,6 +155,5 @@
       "label": "롯데케미칼 고부가화",
       "status": "율촌공장 연내 가동"
     }
-  ],
-  "last_reviewed_at": "2026-08-08 03:11"
+  ]
 }
