@@ -91,7 +91,11 @@ jobs:
       # 채널 발행은 push 성공 이후에만. 발행 안 된 기사를 독자에게 알리지 않는다.
       # (2026-08-01 시그널코리아: push 실패한 세트를 채널에 알린 뒤 다른 세트가 올라가
       #  채널 링크가 엉뚱한 기사를 열었다.)
+      # guard가 백업을 건너뛴 날(=로컬이 이미 발행한 날)에는 채널 발행도 하지 않는다.
+      # 이 조건이 없으면 로컬이 03:20에 알린 같은 5건을 클라우드가 06:32에 또 알린다
+      # (2026-08-08 발견 — @materialtimes 구독자에게 매일 중복 알림이 나가고 있었다).
       - name: 텔레그램 채널 발행
+        if: steps.guard.outputs.skip != 'true'
         continue-on-error: true
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
