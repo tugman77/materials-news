@@ -25,17 +25,7 @@
       "image_keyword": "industrial metal tantalum niobium supply",
       "is_featured": true,
       "timestamp": "오전 09:10",
-      "image_url": "images/2026-08-10_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "러시아 탄탈럼 글로벌 점유율 '5~8%' 수치의 출처 불명확",
-          "북한산 탄탈럼 미·영 수입금지 조치의 구체적 근거 확인 필요"
-        ],
-        "notes": "탄탈럼·니오븀 용도 및 브라질 니오븀 90% 점유율은 사실에 부합. 전반적으로 신뢰 가능.",
-        "verified_at": "2026-08-10 03:10"
-      }
+      "image_url": "images/2026-08-10_article_0.jpg"
     },
     {
       "id": 1,
@@ -59,17 +49,7 @@
       "image_keyword": "OLED display panel industrial chemical material",
       "is_featured": false,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-08-10_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "EU 전자제품 분야 PFAS 유예기간 '2027~2032년' 세부 수치 확인 필요",
-          "LGD의 2035년 완전 대체 로드맵 공식 발표 여부 미확인"
-        ],
-        "notes": "PFAS 규제 흐름과 기술적 설명은 정확. 공식 발표 여부 출처 보완 권장.",
-        "verified_at": "2026-08-10 03:10"
-      }
+      "image_url": "images/2026-08-10_article_1.jpg"
     },
     {
       "id": 2,
@@ -93,17 +73,7 @@
       "image_keyword": "semiconductor materials equipment manufacturing plant",
       "is_featured": false,
       "timestamp": "오전 09:20",
-      "image_url": "images/2026-08-10_article_2.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'TK 3사' 기업명 비공개로 영업이익률 20% 주장 독립 검증 불가",
-          "중국이 일부 품목에서 가격 경쟁력 확보 중이라는 주장의 출처 미제시"
-        ],
-        "notes": "구체적 기업명 없어 핵심 수치 검증 불가. 출처 보강 또는 기업명 공개 권장.",
-        "verified_at": "2026-08-10 03:10"
-      }
+      "image_url": "images/2026-08-10_article_2.jpg"
     },
     {
       "id": 3,
@@ -127,18 +97,7 @@
       "image_keyword": "lithium iron phosphate battery material cathode",
       "is_featured": false,
       "timestamp": "오전 09:25",
-      "image_url": "images/2026-08-10_article_3.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'드라이브넥'은 LFP 양극재 주요 공급사로 확인되지 않는 업체명",
-          "로팔테크(龍蟠科技)의 LFP 분야 중국 상위권 지위 과장 가능성",
-          "연간 90억 위안 규모 계약의 공시·보도 확인 필요"
-        ],
-        "notes": "로팔테크는 실존 상장사이나 '드라이브넥' 명칭 오류 의심. 경쟁사 표기 재확인 필요.",
-        "verified_at": "2026-08-10 03:10"
-      }
+      "image_url": "images/2026-08-10_article_3.jpg"
     },
     {
       "id": 4,
@@ -162,17 +121,7 @@
       "image_keyword": "photonic quantum computing semiconductor optical chip",
       "is_featured": false,
       "timestamp": "오전 09:30",
-      "image_url": "images/2026-08-10_article_4.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "'미국의 한 연구팀' 등 연구 주체 및 기관명 특정 없어 출처 추적 불가",
-          "Semiconductor Digest 원문 링크 또는 논문 DOI 미제공"
-        ],
-        "notes": "포토닉 양자컴퓨팅 기술 설명은 정확. 출처 익명성이 신뢰도를 낮추는 요인.",
-        "verified_at": "2026-08-10 03:10"
-      }
+      "image_url": "images/2026-08-10_article_4.jpg"
     }
   ],
   "editorial_briefing": "서방의 대러 희귀금속 제재 강화와 PFAS 규제 대응이 공급망 재편을 가속화하는 가운데, 국내 소부장 기업의 수익성 개선과 LFP 배터리 소재 대규모 조달이 맞물리며 산업 구조 전환이 본격화되고 있다.",
@@ -202,6 +151,5 @@
       "label": "광자 양자컴퓨팅",
       "status": "범용 설계 돌파"
     }
-  ],
-  "last_reviewed_at": "2026-08-10 03:10"
+  ]
 }
