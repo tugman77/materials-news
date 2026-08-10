@@ -25,18 +25,7 @@
       "image_keyword": "gallium metal semiconductor material",
       "is_featured": true,
       "timestamp": "오전 09:10",
-      "image_url": "images/2026-08-11_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "갈륨 현물가 kg당 2,000달러 이상 주장은 실시간 시세 데이터 출처 미기재",
-          "게르마늄 4배 상승 수치의 구체적 근거·시점 불명확",
-          "글로벌 시장 조사기관 인용 시 기관명 미특정으로 신뢰도 저하"
-        ],
-        "notes": "수출통제 시행 사실은 정확하나 가격 수치 출처 명시 필요",
-        "verified_at": "2026-08-11 03:09"
-      }
+      "image_url": "images/2026-08-11_article_0.jpg"
     },
     {
       "id": 1,
@@ -60,17 +49,7 @@
       "image_keyword": "semiconductor equipment manufacturing plant",
       "is_featured": false,
       "timestamp": "오전 09:25",
-      "image_url": "images/2026-08-11_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "5조 원 펀드 조성 공식 발표 출처 및 일정 미기재",
-          "소부장 전 품목 연동제 확대를 위한 법안명·입법 시기 불명확"
-        ],
-        "notes": "납품대금연동제는 실존 정책이나 세부 추진 계획 출처 보완 필요",
-        "verified_at": "2026-08-11 03:09"
-      }
+      "image_url": "images/2026-08-11_article_1.jpg"
     },
     {
       "id": 2,
@@ -94,18 +73,7 @@
       "image_keyword": "zinc smelter industrial metal refinery",
       "is_featured": false,
       "timestamp": "오전 09:40",
-      "image_url": "images/2026-08-11_article_2.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "트럼프 행정부 발표 문서에서 고려아연 제련소가 직접 언급됐다는 주장 미검증",
-          "트럼프 대통령 발언 인용구 원문 출처 불명확",
-          "미국 정부 30억 달러 투자 계획의 구체적 프로그램명·집행 기관 미기재"
-        ],
-        "notes": "고려아연 기업 정보는 정확하나 미국 공식 문서 언급 주장은 독립 검증 필요",
-        "verified_at": "2026-08-11 03:09"
-      }
+      "image_url": "images/2026-08-11_article_2.jpg"
     },
     {
       "id": 3,
@@ -125,20 +93,10 @@
         "LG디스플레이는 PFAS 대체 소재 전환(2035년 목표)과 병행해 5스택 OLED 기술을 미래 주력 제품군으로 육성한다는 전략이다. 환경 규제 대응과 성능 혁신을 동시에 추구하는 이중 전략이 중장기 경쟁력을 좌우할 것으로 분석된다.",
         "5스택 OLED 상용화가 본격화되면 OLED 소재 시장의 성장도 가속화될 전망이다. 발광 소재, CGL 소재, 봉지(Encapsulation) 소재 등 전방위적인 소재 수요 증가가 예상되며, 국내 소재 업체들의 선제적 기술 개발과 공급 계약 확보가 수혜를 결정짓는 관건이 될 것이다."
       ],
-      "image_keyword": "rare earth neodymium oxide mineral",
+      "image_keyword": "OLED display panel industrial manufacturing",
       "is_featured": false,
       "timestamp": "오전 09:55",
-      "image_url": "images/2026-08-11_article_3.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "5스택 OLED 개발 성공의 공식 발표 여부 및 출처 확인 필요",
-          "기존 3스택 대비 수명·효율 개선 폭 수치 미기재로 정량 검증 불가"
-        ],
-        "notes": "OLED 스택 기술 설명은 정확하나 5스택 개발 공식 발표 근거 보완 필요",
-        "verified_at": "2026-08-11 03:09"
-      }
+      "image_url": "images/2026-08-11_article_3.jpg"
     },
     {
       "id": 4,
@@ -162,17 +120,7 @@
       "image_keyword": "rare earth oxide industrial supply chain",
       "is_featured": false,
       "timestamp": "오전 10:10",
-      "image_url": "images/2026-08-11_article_4.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "대일 희토류 수출 50% 감소 수치의 구체적 데이터 출처(중국 세관 통계 등) 미기재",
-          "일본 ODA 활용 공급망 다변화 구체적 계획 내용 및 규모 불명확"
-        ],
-        "notes": "전반적 사실관계 양호하나 이미지 키워드가 스톡 검색에 다소 추상적",
-        "verified_at": "2026-08-11 03:09"
-      }
+      "image_url": "images/2026-08-11_article_4.jpg"
     }
   ],
   "editorial_briefing": "중국의 핵심광물 수출통제가 갈륨·희토류 가격 급등과 공급망 재편을 촉발하며 글로벌 소재 패권 경쟁이 가속화되고 있다. 한국과 미국은 소부장 펀드 조성·핵심광물 투자로 대응에 나섰으며, 기술 측면에서도 LG디스플레이의 5스택 OLED 등 소재 혁신이 이어지고 있다.",
@@ -202,6 +150,5 @@
       "label": "5스택 OLED 개발",
       "status": "수명·효율 도약 성공"
     }
-  ],
-  "last_reviewed_at": "2026-08-11 03:09"
+  ]
 }
