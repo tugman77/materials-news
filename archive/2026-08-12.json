@@ -24,17 +24,7 @@
       "image_keyword": "China technology export control semiconductor",
       "is_featured": true,
       "timestamp": "오전 09:05",
-      "image_url": "images/2026-08-12_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "SCMP 보도 기반이나 구금 일시·기업명 등 구체 사실 미확인",
-          "'소재에서 기술로 전선 확장' 업계 표현의 실제 출처 불명"
-        ],
-        "notes": "전반적 맥락은 검증 가능하나 구금 사실 세부 내용 확인 필요",
-        "verified_at": "2026-08-12 04:12"
-      }
+      "image_url": "images/2026-08-12_article_0.jpg"
     },
     {
       "id": 1,
@@ -54,21 +44,10 @@
         "정부는 반도체 소부장 자립을 위한 공급망 안정화 펀드 5조원 외에, 납품단가 연동제 확대를 통해 중소 소재 기업의 원가 부담 경감도 추진 중이다. 납품단가 연동제는 원자재 가격 변동을 납품가에 자동 반영하는 제도로, 세라믹 원료 가격 상승기에 중소기업 수익성 보호 효과가 기대된다.",
         "세라믹 소재 국산화의 성패는 소재·부품·장비의 동반 성장 여부에 달려 있다는 게 전문가들의 공통된 시각이다. 개별 기업의 노력만으로는 한계가 있으며, 이번 구미 산학연 협력처럼 생태계 단위의 접근이 장기적으로 공급망 회복력을 높이는 열쇠가 될 것이라는 전망이다."
       ],
-      "image_keyword": "critical minerals mining supply chain",
+      "image_keyword": "semiconductor ceramic component industrial manufacturing",
       "is_featured": false,
       "timestamp": "오전 09:20",
-      "image_url": "images/2026-08-12_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "국내 세라믹 부품 시장 연간 8000억원 추정치 출처 불명",
-          "5조원 소부장 투자 펀드 규모 및 존재 여부 확인 필요",
-          "2030년 국산화율 60% 목표 공식 정책 문서 미확인"
-        ],
-        "notes": "세라믹 소재 기술 설명 정확, 수치·정책 출처 보강 권장",
-        "verified_at": "2026-08-12 04:12"
-      }
+      "image_url": "images/2026-08-12_article_1.jpg"
     },
     {
       "id": 2,
@@ -88,20 +67,10 @@
         "한국이 핵심 수입국으로 의존하고 있는 텅스텐·몰리브덴·바나듐·인듐 등 전략 광물의 경우, 단일국 의존도를 낮추는 것이 가장 시급한 과제다. 이번 협약이 공급처 다변화의 실질적 첫걸음이 될 수 있을지 업계의 관심이 집중된다.",
         "전문가들은 공급망 다변화의 성과가 가시화되기까지는 수년의 시간이 필요하다고 지적하면서도, 이번처럼 기관 간 협력 체계를 조기에 구축하는 것이 장기적인 광물 안보의 기초가 된다고 강조한다. 공급망 위기 대응은 단기 처방보다 지속적인 인프라 구축이 핵심이라는 것이다."
       ],
-      "image_keyword": "OLED tablet display panel BOE",
+      "image_keyword": "critical minerals supply chain research cooperation",
       "is_featured": false,
       "timestamp": "오전 09:35",
-      "image_url": "images/2026-08-12_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "IEA '핵심광물 3중 위기' 표현의 원문 보고서·발표 시점 불명확",
-          "미국 30억 달러 핵심광물 투자 계획 구체 출처 미제시"
-        ],
-        "notes": "기관 정보 정확, IEA·미국 투자 관련 인용 출처 명시 필요",
-        "verified_at": "2026-08-12 04:12"
-      }
+      "image_url": "images/2026-08-12_article_2.jpg"
     },
     {
       "id": 3,
@@ -124,17 +93,7 @@
       "image_keyword": "OLED display panel industrial manufacturing",
       "is_featured": false,
       "timestamp": "오전 09:50",
-      "image_url": "images/2026-08-12_article_3.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "BOE 아이패드 에어 OLED 납품 협의 진행 여부 단독 보도 수준",
-          "BOE 태블릿 OLED 수율 안정화 달성 여부 미확인"
-        ],
-        "notes": "2024년 아이패드 프로 OLED 출시 사실 등 핵심 내용 정확",
-        "verified_at": "2026-08-12 04:12"
-      }
+      "image_url": "images/2026-08-12_article_3.jpg"
     },
     {
       "id": 4,
@@ -157,18 +116,7 @@
       "image_keyword": "semiconductor tungsten gas industrial supply",
       "is_featured": false,
       "timestamp": "오전 10:05",
-      "image_url": "images/2026-08-12_article_4.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "일본 2개사 영구 생산 중단 결정, 더구루 단독 보도로 교차 검증 필요",
-          "해당 2개사의 글로벌 WF6 시장 점유율 수치 미제시",
-          "스텔라 케미파·관토덴카·모리타 중 구체적으로 어느 2곳인지 불명확"
-        ],
-        "notes": "WF6 기술 설명 정확, 생산 중단 사실 자체는 추가 출처 확인 요망",
-        "verified_at": "2026-08-12 04:12"
-      }
+      "image_url": "images/2026-08-12_article_4.jpg"
     }
   ],
   "editorial_briefing": "중국의 이중용도 기술 수출 규제와 육불화텅스텐 공급 중단 등 소재·부품 공급망 리스크가 고조되는 가운데, 국내에서는 세라믹 소재 산학연 협력과 핵심광물 대응 체계를 강화하며 자립화에 속도를 내고 있다.",
@@ -198,6 +146,5 @@
       "label": "세라믹 소재 국산화",
       "status": "구미 산학연 가동"
     }
-  ],
-  "last_reviewed_at": "2026-08-12 04:12"
+  ]
 }
