@@ -27,17 +27,7 @@
       "image_keyword": "semiconductor materials factory",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-08-13_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "2026년 2분기 실적 공시 언급 — 미래 시점 표기로 현재 기준 검증 불가",
-          "전분기 대비 영업이익 32.8% 증가 수치의 출처 미명시"
-        ],
-        "notes": "전반적으로 개연성 높은 실적 기사. 2026년 시점 표기만 주의 필요.",
-        "verified_at": "2026-08-13 06:57"
-      }
+      "image_url": "images/2026-08-13_article_0.jpg"
     },
     {
       "id": 1,
@@ -59,21 +49,10 @@
         "시장 전문가들은 구리 가격이 단기간에 조정을 받더라도 구조적 공급 부족이 해소되기 전까지는 높은 수준을 유지할 것으로 전망한다. 특히 탐파칸·파나구나 등 정치적·환경적 갈등 광산이 실제 생산에 돌입하려면 각국 정부의 규제 해결과 지역사회 합의라는 높은 장벽을 넘어야 한다.",
         "국내 소부장 업계 입장에서는 구리 가격 고점이 지속될 경우 반도체·디스플레이 장비용 부품, 산업용 배선재 등의 조달 비용 상승으로 이어질 수 있다. 업계는 원재료 분산 조달과 대체 소재 개발을 통해 리스크 관리를 강화해야 한다는 목소리가 높아지고 있다."
       ],
-      "image_keyword": "rare earth elements powder",
+      "image_keyword": "copper metal mining",
       "is_featured": false,
       "timestamp": "오전 10:02",
-      "image_url": "images/2026-08-13_article_1.jpg",
-      "review": {
-        "trust_score": 2,
-        "status": "warning",
-        "suspicious_claims": [
-          "LME·Comex 구리 동시 사상 최고치 경신 — 발행 시점 기준 구체적 가격 미제시로 검증 어려움",
-          "파나구나·탐파칸·라베르 3대 광산이 '같은 날' 동시 재개 신호 — 동시성 주장이 작위적이고 출처 없음",
-          "2026~2028년 구리 공급 부족 '연간 수십만 톤' — 인용 시장조사업체명 미명시, 수치 검증 불가"
-        ],
-        "notes": "3대 광산 동시 재개 주장은 출처 없이 창작된 것처럼 보여 사실 확인 필수.",
-        "verified_at": "2026-08-13 06:57"
-      }
+      "image_url": "images/2026-08-13_article_1.jpg"
     },
     {
       "id": 2,
@@ -97,16 +76,7 @@
       "image_keyword": "rare earth metal oxide",
       "is_featured": false,
       "timestamp": "오전 10:48",
-      "image_url": "images/2026-08-13_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "중희토류 미얀마 공급 불안 언급 — 최신 정세 반영 여부 확인 필요"
-        ],
-        "notes": "희토류 시장 흐름 서술은 대체로 사실 부합. 이미지 키워드 구체화 권장.",
-        "verified_at": "2026-08-13 06:57"
-      }
+      "image_url": "images/2026-08-13_article_2.jpg"
     },
     {
       "id": 3,
@@ -128,20 +98,10 @@
         "아이폰18 프로에서 OLED 디스플레이 비중이 원가의 약 10% 수준으로 유지될 것이라는 전망이 나오는 가운데, 애플이 OLED 소재 원가 절감 압박을 가속화할 것이라는 우려도 있다. 이에 따라 OLED 소재 업체들은 원가 경쟁력 강화와 고성능 신소재 개발을 동시에 추진해야 하는 이중 과제를 안고 있다.",
         "투자 시사점으로는 설비투자 급증 사이클이 2027년까지 이어질 것으로 예상되면서, 고부가 OLED 소재와 8.6세대 장비에 특화된 기업들의 수주 증가가 기대된다. 다만 중국 현지 소재 업체들의 기술 수준이 빠르게 올라오고 있어, 기술 격차를 유지하는 기업과 그렇지 못한 기업 간의 실적 차별화가 심화될 전망이다."
       ],
-      "image_keyword": "Korean semiconductor components manufacturing",
+      "image_keyword": "OLED display manufacturing",
       "is_featured": false,
       "timestamp": "오전 11:30",
-      "image_url": "images/2026-08-13_article_3.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "글로벌 디스플레이 설비투자 '전년 대비 57% 급증' — 출처가 유비리서치로만 언급, 공식 보고서 확인 필요",
-          "삼성SDI가 OLED 발광 소재 공급사로 거론 — 삼성SDI는 배터리 중심 기업으로 OLED 발광소재 주력 여부 불명확"
-        ],
-        "notes": "삼성SDI OLED 발광소재 공급 주장은 사실관계 재확인 필요. 57% 수치 출처 보강 권장.",
-        "verified_at": "2026-08-13 06:57"
-      }
+      "image_url": "images/2026-08-13_article_3.jpg"
     },
     {
       "id": 4,
@@ -166,18 +126,7 @@
       "image_keyword": "industrial supply chain factory",
       "is_featured": false,
       "timestamp": "오후 12:15",
-      "image_url": "images/2026-08-13_article_4.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'슈퍼 을' 15곳·5년 10조 투자 계획 — 공식 정책 발표 여부 및 정책명 출처 미명시",
-          "중희토류 중국 의존도 '99%' 수치 — 출처 없이 단정적으로 기술되어 검증 필요",
-          "소부장 5조 신규 펀드·5조 상생무역 금융 세부 구성 — 공식 발표 문서 대조 확인 필요"
-        ],
-        "notes": "정책 수치와 명칭의 공식 출처가 불명확. 발표 원문과 대조 검수 필요.",
-        "verified_at": "2026-08-13 06:57"
-      }
+      "image_url": "images/2026-08-13_article_4.jpg"
     }
   ],
   "editorial_briefing": "구리·희토류 등 핵심 소재 가격이 요동치는 가운데, OLED 설비투자 급증과 반도체 소재 수요 확대로 소부장 밸류체인 전반이 활기를 띠고 있다. 정부의 10조 원 규모 슈퍼 을 육성 계획까지 맞물리며 국내 소재·부품·장비 산업의 구조적 성장 기대감이 높아지는 국면이다.",
@@ -207,6 +156,5 @@
       "label": "소부장 슈퍼 을 육성",
       "status": "5년 10조 집중투자"
     }
-  ],
-  "last_reviewed_at": "2026-08-13 06:57"
+  ]
 }
