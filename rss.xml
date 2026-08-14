@@ -6,7 +6,47 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Fri, 14 Aug 2026 06:52:08 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2026 06:30:07 +0900</lastBuildDate>
+    <item>
+      <title>솔브레인, 2Q 영업익 128% 급증…테일러팹 공급 확대 본격화</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-15-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-15-0.html</guid>
+      <category>반도체소재</category>
+      <description>솔브레인이 2분기 매출 3120억원, 영업이익 460억원을 기록하며 전년 대비 각각 36.3%, 128.2% 급증했다. 반도체 소재 매출이 전체의 86%를 차지하며 실적을 이끌었고, 삼성전자 미국 테일러팹 공급도 본격 확대되고 있다.</description>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>빌 게이츠 방한, 韓 SMR 공급망 '핵심 거점' 낙점</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-15-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-15-1.html</guid>
+      <category>산업재</category>
+      <description>빌 게이츠 테라파워 이사회 의장이 방한해 SK이노베이션, HD현대와 SMR '나트륨' 사업협력을 확대했다. 두산에너빌리티도 핵심 기자재 공급에 합류하며 한국이 테라파워의 글로벌 SMR 공급망 중심으로 부상하고 있다.</description>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>트럼프, 중국 핵심광물 독점 타파 전방위 압박</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-15-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-15-2.html</guid>
+      <category>글로벌</category>
+      <description>트럼프 행정부가 중국의 핵심광물 수출통제에 맞서 동맹국 공급망 다변화, 자국 광물 생산 확대, 수입 규제 강화 등 다각도 전략을 동시에 가동하고 있다. 미국 에너지부는 핵심광물 인력 양성에 1억 달러(약 1400억 원) 규모 이니셔티브를 출범시켰다.</description>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>인듐·Pr-Nd 가격 급등…중국 수출통제 수혜주 확산</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-15-3.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-15-3.html</guid>
+      <category>희귀금속</category>
+      <description>인듐, 프라세오디뮴-네오디뮴(Pr-Nd), 탄탈럼 등 희귀금속 복수 품목이 올해 들어 가격이 급등하며 중국 수출통제 수혜 구간에 진입했다. 중국 내 희토류 기업들이 잇따라 중간 실적 호조를 예고하는 가운데, 공급망 다변화 수요가 글로벌 소재 시장을 재편하고 있다.</description>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>TSMC, 0.42㎚ 산화알루미늄 계면 개발…실리콘 한계 돌파</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-15-4.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-15-4.html</guid>
+      <category>반도체소재</category>
+      <description>TSMC와 국립양명교통대학 공동 연구팀이 0.42나노미터 두께의 산화알루미늄 계면을 활용해 단층 이황화몰리브덴(MoS₂) 트랜지스터를 구현하는 데 성공했다. 실리콘 트랜지스터의 물리적 한계를 넘어설 차세대 소재 기술의 돌파구로 주목받고 있다.</description>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>반도체 소재 담합 3476억…범죄수익 첫 추징보전</title>
       <link>https://tugman77.github.io/materials-news/news/2026-08-14-0.html</link>
@@ -206,46 +246,6 @@
       <category>글로벌</category>
       <description>연구팀이 빛을 이용한 양자 컴퓨팅 시스템에 유연한 '형상 변환' 구조를 적용해 기존 설계로는 불가능했던 복잡한 문제를 해결할 수 있는 광학 컴퓨팅 플랫폼을 개발했다. 반도체 광소자 소재 수요 확대에 중장기 영향을 줄 수 있는 기술 동향이다.</description>
       <pubDate>Mon, 10 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>미 국방부, 희귀소재 탈중국에 1500억 투자</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-09-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-09-0.html</guid>
-      <category>글로벌</category>
-      <description>미 국방부가 중국의 희토류 수출통제를 무력화하기 위해 1억5000만 달러(약 2000억원)를 화학 기반 대체 기술 개발에 투입한다. 중국이 유럽 14개사에 희토류 수출을 차단한 직후 나온 대응으로, 글로벌 핵심광물 공급망 재편이 가속화되고 있다.</description>
-      <pubDate>Sun, 09 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>SK하이닉스, 용인·청주 신규 팹에 54조 베팅</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-09-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-09-1.html</guid>
-      <category>반도체소재</category>
-      <description>SK하이닉스가 용인 Y2 팹과 청주 M17 팹 건설에 총 54조원을 투자한다고 이사회에서 결의했다. AI 수요 확대에 대비한 중장기 생산능력 확충이 목적이며, 소재·부품·장비 협력사들의 동반 수혜가 기대된다.</description>
-      <pubDate>Sun, 09 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>HD하이드로젠, SOFC 양산체계 2년 만에 완성</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-09-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-09-2.html</guid>
-      <category>산업재</category>
-      <description>HD현대그룹 계열 HD하이드로젠이 설립 2년 만에 고체산화물연료전지(SOFC) 양산체계를 구축했다. 한국전기안전공사 검사를 완료한 'HD250'·'HD300' 모델을 앞세워 육상·해상 분산발전 시장 공략에 나선다.</description>
-      <pubDate>Sun, 09 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>스칸듐 프로젝트에 美 국방부 4000억 조건부 융자</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-09-3.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-09-3.html</guid>
-      <category>희귀금속</category>
-      <description>미국 국방부가 호주 Sunrise Energy Metals의 시어스턴 스칸듐 광산 개발에 4억 달러(약 5600억원) 조건부 융자를 결정했다. 스칸듐의 세계 첫 단독 1차 광산 공급원을 확보해 중국 의존에서 벗어나겠다는 전략이다.</description>
-      <pubDate>Sun, 09 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>美·中 공급망 규제, 소재·드론으로 전선 확대</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-09-4.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-09-4.html</guid>
-      <category>글로벌</category>
-      <description>미국과 중국의 공급망 규제 갈등이 반도체를 넘어 소재·드론 분야로 빠르게 확산되고 있다. 양측의 수출입 통제 조치가 동시다발적으로 강화되며 글로벌 소부장 기업들의 전략 수정이 불가피해졌다.</description>
-      <pubDate>Sun, 09 Aug 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
