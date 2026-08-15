@@ -26,18 +26,7 @@
       "image_keyword": "nuclear SMR reactor plant",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-08-16_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "나트륨 SMR 용융염 에너지저장 탑재 시 출력 500MW까지 확대 가능 — 수치 출처 불명확",
-          "테라파워 설립 연도 2006년 — 일반적으로 2008년으로 알려져 있어 확인 필요",
-          "와이오밍주 켐머 345MW급 실증로 건설 중 — 사실이나 공식 MW 수치 재확인 권장"
-        ],
-        "notes": "전반적으로 사실에 부합하나 테라파워 설립연도(2006 vs 2008) 오류 가능성 있음.",
-        "verified_at": "2026-08-16 06:27"
-      }
+      "image_url": "images/2026-08-16_article_0.jpg"
     },
     {
       "id": 1,
@@ -59,21 +48,10 @@
         "DOE는 이번 1억 달러 외에 별도 예산으로 스칸듐·바나듐·인듐 등 초희소 금속 정제 기술 R&D 지원도 병행할 방침이다. 업계에서는 이번 이니셔티브가 미국 핵심광물 공급망 독립의 진짜 '마지막 퍼즐'이 될 수 있다고 평가하고 있다.",
         "향후 시장 전망과 관련해 핵심광물 전문 리서치 기관들은 미국의 인력·인프라 투자가 2028~2030년 이후에야 실질적인 공급 확대로 이어질 것으로 보고 있다. 그 전까지는 동맹국 기반의 수입 다변화와 재활용 확대가 병행될 수밖에 없으며, 이 과정에서 한국·캐나다·호주 기업들의 역할이 커질 것으로 전망된다."
       ],
-      "image_keyword": "rare metal indium tantalum",
+      "image_keyword": "critical minerals supply chain workforce",
       "is_featured": false,
       "timestamp": "오전 09:45",
-      "image_url": "images/2026-08-16_article_1.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "DOE '1억 달러 인력 양성 이니셔티브' 공식 출범 — 구체적 프로그램명·발표일 출처 불명확",
-          "중국이 희토류·갈륨·게르마늄 정제·분리 단계 세계 시장 70~90% 장악 — 품목별 편차 크며 단일 수치 단순화 우려",
-          "DOE 관계자 직접 인용 발언 — 출처·발언자 직함 미명시로 창작 여부 확인 필요"
-        ],
-        "notes": "DOE 프로그램 실재 여부 및 인용 발언 출처 검증 필요. 수치 단순화 주의.",
-        "verified_at": "2026-08-16 06:27"
-      }
+      "image_url": "images/2026-08-16_article_1.jpg"
     },
     {
       "id": 2,
@@ -97,18 +75,7 @@
       "image_keyword": "rare earth metal price market",
       "is_featured": false,
       "timestamp": "오전 10:20",
-      "image_url": "images/2026-08-16_article_2.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'2025년 말 대비 30~60% 이상 상승' — 기준 시점이 미래(2025년 말)로 표기되어 시제 오류 가능성",
-          "미국·영국의 러시아산 탄탈럼 수입 제재 — 구체적 제재 조치명·시행일 출처 불명확",
-          "인듐 전 세계 공급 60% 이상 중국산 의존 — 출처 미명시, 실제 수치와 차이 날 수 있음"
-        ],
-        "notes": "'2025년 말 대비' 시제 표현 오류 의심. 제재 출처 및 수치 근거 보완 필요.",
-        "verified_at": "2026-08-16 06:27"
-      }
+      "image_url": "images/2026-08-16_article_2.jpg"
     },
     {
       "id": 3,
@@ -129,20 +96,10 @@
         "향후 이지켐은 ESG 경영 체계를 국제 표준 인증(ISO 14001, ISO 45001 등)으로 공식화하고, 고객사 요청에 따른 공급망 탄소 보고서(Scope 3 포함)를 정기 발행하는 방향으로 단계를 높일 계획이다. 업계에서는 이지켐의 이번 행보가 동종 중소 소부장 기업들의 ESG 전환을 자극하는 기폭제가 될 수 있을 것으로 전망하고 있다.",
         "전문가들은 반도체 소재 분야의 ESG 내재화가 단기적으로는 비용 상승 요인이지만, 중장기적으로는 기업 지속가능성과 글로벌 경쟁력의 핵심 축이 될 것이라고 입을 모은다. 소부장 업계의 ESG 전환이 뒤처질수록 공급망에서 탈락할 위험이 높아진다는 경고음이 현실로 다가오고 있다."
       ],
-      "image_keyword": "India semiconductor factory investment",
+      "image_keyword": "semiconductor materials ESG supply chain",
       "is_featured": false,
       "timestamp": "오전 11:00",
-      "image_url": "images/2026-08-16_article_3.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "TSMC 등 주요 팹이 협력사에 PFAS 사용 현황 보고를 이미 의무화 — 공식 정책 시행 여부 확인 권장",
-          "이지켐 ESG 선포 관련 '헬로티 보도' 단독 출처 인용 — 원문 확인 필요"
-        ],
-        "notes": "사실관계 대체로 무난. TSMC 조달 정책 의무화 표현 강도 완화 검토 권장.",
-        "verified_at": "2026-08-16 06:27"
-      }
+      "image_url": "images/2026-08-16_article_3.jpg"
     },
     {
       "id": 4,
@@ -166,18 +123,7 @@
       "image_keyword": "semiconductor materials India market",
       "is_featured": false,
       "timestamp": "오후 12:10",
-      "image_url": "images/2026-08-16_article_4.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'Semicon India' 프로그램 2026년까지 760억 달러 투자 유치 목표 — 공식 발표 수치(약 100억 달러 규모)와 괴리, 과장 가능성",
-          "'토라스코'의 인도 반도체 조립·테스트 공장 가동 — 토라스코는 소재 유통사로 팹 운영 여부 확인 필요",
-          "CBC를 '화학·소재 분야 종합상사'로 소개 — CBC의 주력 사업 분류 정확성 재확인 권장"
-        ],
-        "notes": "Semicon India 투자 목표 수치 760억 달러는 공식 발표와 큰 차이 가능. 팩트체크 필수.",
-        "verified_at": "2026-08-16 06:27"
-      }
+      "image_url": "images/2026-08-16_article_4.jpg"
     }
   ],
   "editorial_briefing": "SMR·핵심광물·반도체 소재 전반에서 글로벌 공급망 재편이 가속화되고 있다. 희귀금속 가격 급등이 소재 기업 실적을 견인하는 가운데, 한·미·일 기업들의 전략적 협력이 본격화되고 있다.",
@@ -207,6 +153,5 @@
       "label": "인도 반도체 시장",
       "status": "한·일 공동 공략"
     }
-  ],
-  "last_reviewed_at": "2026-08-16 06:27"
+  ]
 }
