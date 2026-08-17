@@ -492,6 +492,23 @@ new PartnersCoupang.G({id:XXXXX, trackingCode:"AF9787280", subId:null, template:
 - [x] 브랜드 자산(로고·OG·파비콘) 생성 + 홈 OG/트위터 카드 ✅ 2026-08-01
 - [x] 텔레그램 공개 채널 @materialtimes 개설 + 일일·주간 발행 연결 ✅ 2026-08-01
 - [x] 주간뉴스레터.yml `permissions: contents: write` 추가 ✅ 2026-08-01 (403으로 2주 누락되던 것)
+- [x] **뉴스레터 구독 CTA를 텔레그램 우선으로 교체** ✅ 2026-08-17
+      기존 CTA는 "핵심 신호만 골라 **이메일로 보내드립니다**"라고 약속했는데 발송 수단이 없었다
+      (`뉴스레터생성.py`에 SMTP 0줄 / 구독자 명단 없음 / Stibee 미구축). 신청해도 아무것도 못 받는 상태가
+      about·article·news 전 페이지에 노출돼 있었다. 실제로 발행 중인 @materialtimes를 1순위로 안내하도록 교체.
+      - 수정 3곳: `article.html`(CSS+마크업) · `about.html`(인라인 스타일) · `정적페이지생성.py`(news/ 템플릿).
+        **CSS는 `article.html`의 `<style>`이 단일 소스** — `extract_style()`이 통째로 퍼간다. 여기만 고치면 된다.
+      - `contact-modal.js`: 구독 신청일 때만 연락처를 필수로, 내용을 선택으로 뒤바꾼다(라벨도 함께 전환).
+        예전엔 연락처가 선택이라 **이메일 없는 구독 신청이 접수**됐다.
+      - ⚠️ 이메일 수집 폼(Google Form 등)이 생기면 3곳의 `이메일로 받아보기` onclick을 href로 교체할 것.
+- [ ] **8/5·8/6 기사 10건이 사이트에서 안 보임** — `archive/2026-08-05.json`·`2026-08-06.json`은 디스크에
+      있는데 `archive/index.json`에 등재돼 있지 않다. 생성기가 index를 순회하므로 두 날짜만 건너뛴다.
+      index.json에 두 날짜를 넣고 `python3 정적페이지생성.py` 재실행하면 복구된다.
+- [ ] **2026-08-14 기사 4번 본문 인용문이 조각나 있음** — `archive/2026-08-14.json` 기사 index 3
+      (`윈팩, 2Q 흑자 전환…`)의 `body[15]~[19]`가 원래 한 문단인데 따옴표 기준으로 5조각 났고,
+      `body[16]`은 문자열이 아닌 **정수 `2024`**다. 이것 때문에 `정적페이지생성.py`가 `AttributeError`로
+      죽어 그 날짜 기사 3·4번 정적페이지가 통째로 누락돼 있었다(2026-08-17 발견·복구).
+      생성기 쪽은 `str(p).strip()`으로 방어했지만 **본문 데이터는 아직 조각난 상태**라 문단이 어색하게 끊긴다.
 - [ ] **materialtimes.co.kr 커스텀 도메인 연결** → GitHub Pages Custom domain 설정
       ※ 연결 시 `정적페이지생성.py`·`기사자동생성.py`·`뉴스레터생성.py`의 `SITE_URL`과 `robots.txt`도
       `tugman77.github.io/materials-news`에서 `materialtimes.co.kr`로 함께 바꿔야 함.

@@ -287,6 +287,7 @@
   }
   .nl-cta-title { font-size: 16px; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
   .nl-cta-desc { font-size: 13.5px; color: var(--text-muted); line-height: 1.6; word-break: keep-all; }
+  .nl-cta-actions { display: flex; flex-direction: column; align-items: center; gap: 8px; }
   .nl-cta-btn {
     background: var(--primary);
     color: #fff;
@@ -298,8 +299,19 @@
     white-space: nowrap;
     letter-spacing: 0.3px;
     transition: background .15s;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
   }
   .nl-cta-btn:hover { background: var(--accent); }
+  .nl-cta-alt {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-decoration: underline;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .nl-cta-alt:hover { color: var(--primary); }
 
   @media (max-width: 768px) {
     .page-wrap { grid-template-columns: 1fr; }
@@ -387,13 +399,21 @@
 
       <div class="art-body" id="art-body"></div>
 
-      <!-- 뉴스레터 구독 CTA (Stibee 연동 시 버튼 onclick을 구독폼 링크로 교체) -->
+      <!-- 뉴스레터 구독 CTA
+           ⚠️ 문구는 "실제로 발행 중인 것"만 약속할 것. 이메일 발송 수단은 아직 없다
+              (뉴스레터생성.py에 SMTP 없음 / 구독자 명단 없음 / Stibee 미구축).
+           ▶ 이메일 수집 폼(Google Form 등)이 준비되면 아래 .nl-cta-alt의 onclick을
+             href="<폼 URL>" target="_blank" rel="noopener" 로 교체한다.
+             같은 블록이 정적페이지생성.py·about.html에도 있으니 3곳을 함께 고칠 것. -->
       <div class="newsletter-cta">
         <div>
-          <div class="nl-cta-title">📬 소재인사이트 뉴스레터</div>
-          <div class="nl-cta-desc">반도체·희소금속·소재 공급망의 핵심 신호만 골라 이메일로 보내드립니다.<br>30년 현장 전문가가 직접 고릅니다. 무료입니다.</div>
+          <div class="nl-cta-title">📡 소재인사이트 뉴스레터</div>
+          <div class="nl-cta-desc">매일 아침 핵심 기사, 매주 금요일 주간 브리핑을 텔레그램으로 보내드립니다.<br>30년 현장 전문가가 직접 고릅니다. 무료입니다.</div>
         </div>
-        <button class="nl-cta-btn" onclick="openContactModal('뉴스레터 구독 신청')">구독 신청</button>
+        <div class="nl-cta-actions">
+          <a class="nl-cta-btn" href="https://t.me/materialtimes" target="_blank" rel="noopener">텔레그램으로 구독</a>
+          <a class="nl-cta-alt" onclick="openContactModal('뉴스레터 구독 신청')">이메일로 받아보기</a>
+        </div>
       </div>
 
       <!-- 쿠팡 광고 (본문 하단 728×90 리더보드) -->

@@ -72,7 +72,10 @@ def paras(article: dict) -> list:
     body = article.get("body")
     if body:
         raw = body if isinstance(body, list) else re.split(r"\n+", str(body))
-        return [p.strip() for p in raw if p and str(p).strip()]
+        # body 원소가 항상 문자열이라는 보장이 없다. 생성 과정에서 따옴표가 낀 문장이
+        # 조각나면서 숫자만 남은 원소(예: 2024)가 들어오면 p.strip()이 터진다.
+        # (2026-08-14 archive에서 실제 발생 — 그 날짜 기사 3·4번 정적페이지가 통째로 누락됐다)
+        return [str(p).strip() for p in raw if p and str(p).strip()]
     summary = article.get("summary", "")
     return [s.strip() for s in re.split(r"(?<=[.!?])\s+", summary) if s.strip()]
 
@@ -235,12 +238,17 @@ def build_page(article: dict, idx: int, all_articles: list, date_key: str,
 {body_html}
       </div>
 
+      <!-- 뉴스레터 구독 CTA — 문구는 실제 발행 중인 것만 약속할 것 (이메일 발송 수단 없음).
+           이메일 수집 폼 준비되면 .nl-cta-alt의 onclick을 href로 교체. article.html·about.html도 함께. -->
       <div class="newsletter-cta">
         <div>
-          <div class="nl-cta-title">📬 소재인사이트 뉴스레터</div>
-          <div class="nl-cta-desc">반도체·희소금속·소재 공급망의 핵심 신호만 골라 이메일로 보내드립니다.<br>30년 현장 전문가가 직접 고릅니다. 무료입니다.</div>
+          <div class="nl-cta-title">📡 소재인사이트 뉴스레터</div>
+          <div class="nl-cta-desc">매일 아침 핵심 기사, 매주 금요일 주간 브리핑을 텔레그램으로 보내드립니다.<br>30년 현장 전문가가 직접 고릅니다. 무료입니다.</div>
         </div>
-        <button class="nl-cta-btn" onclick="openContactModal('뉴스레터 구독 신청')">구독 신청</button>
+        <div class="nl-cta-actions">
+          <a class="nl-cta-btn" href="https://t.me/materialtimes" target="_blank" rel="noopener">텔레그램으로 구독</a>
+          <a class="nl-cta-alt" onclick="openContactModal('뉴스레터 구독 신청')">이메일로 받아보기</a>
+        </div>
       </div>
 
       <iframe class="coupang-leader-ad" src="{BASE}coupang-ad-leaderboard.html" frameborder="0" scrolling="no" title="쿠팡 파트너스 광고" loading="lazy"></iframe>

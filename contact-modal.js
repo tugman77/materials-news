@@ -48,11 +48,11 @@
         <input id="cm-name" type="text" placeholder="홍길동" autocomplete="name">
       </div>
       <div class="cm-row">
-        <label>연락처 <span class="cm-opt">(이메일 또는 전화번호, 선택)</span></label>
+        <label id="cm-contact-label">연락처 <span class="cm-opt">(이메일 또는 전화번호, 선택)</span></label>
         <input id="cm-contact" type="text" placeholder="이메일 또는 전화번호 (답변 받으실 곳)">
       </div>
       <div class="cm-row">
-        <label>문의 내용 <span style="color:#c8102e">*</span></label>
+        <label id="cm-body-label">문의 내용 <span style="color:#c8102e">*</span></label>
         <textarea id="cm-body" placeholder="문의 내용을 자유롭게 입력해 주세요."></textarea>
       </div>
       <button id="cm-btn" onclick="submitContact()">보내기</button>
@@ -68,6 +68,21 @@
     if (e.key === 'Escape') closeContactModal();
   });
 
+  /* 구독 신청은 필수 항목이 뒤바뀐다 — 연락처가 필수, 내용은 선택. */
+  function isSubscription() {
+    return document.getElementById('cm-type').value.indexOf('구독') !== -1;
+  }
+  function syncLabels() {
+    const isSub = isSubscription();
+    document.getElementById('cm-contact-label').innerHTML =
+      isSub ? '이메일 <span style="color:#c8102e">*</span>'
+            : '연락처 <span class="cm-opt">(이메일 또는 전화번호, 선택)</span>';
+    document.getElementById('cm-body-label').innerHTML =
+      isSub ? '남기실 말씀 <span class="cm-opt">(선택)</span>'
+            : '문의 내용 <span style="color:#c8102e">*</span>';
+  }
+  document.getElementById('cm-type').addEventListener('change', syncLabels);
+
   /* ── 공개 API ── */
   window.openContactModal = function (type) {
     wrap.classList.add('open');
@@ -78,7 +93,8 @@
       }
     }
     document.getElementById('cm-feedback').textContent = '';
-    document.getElementById('cm-body').focus();
+    syncLabels();
+    document.getElementById(isSubscription() ? 'cm-contact' : 'cm-body').focus();
   };
 
   window.closeContactModal = function () {
@@ -93,7 +109,14 @@
     const fb      = document.getElementById('cm-feedback');
 
     fb.className = '';
-    if (!body) { fb.className = 'err'; fb.textContent = '문의 내용을 입력해 주세요.'; return; }
+    // 구독 신청은 연락처가 없으면 보낼 곳이 없다 — 다른 유형과 달리 필수로 받는다.
+    const isSub = isSubscription();
+    if (isSub && !contact) {
+      fb.className = 'err';
+      fb.textContent = '뉴스레터를 받으실 이메일 주소를 입력해 주세요.';
+      return;
+    }
+    if (!isSub && !body) { fb.className = 'err'; fb.textContent = '문의 내용을 입력해 주세요.'; return; }
 
     const lines = [
       `유형: ${type}`,
