@@ -6,7 +6,47 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Sun, 16 Aug 2026 06:27:47 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2026 03:11:55 +0900</lastBuildDate>
+    <item>
+      <title>인디켐 대표 </title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-21-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-21-0.html</guid>
+      <category>글로벌</category>
+      <description></description>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>AI 반도체 열풍에 기판 '풀가동'…디스플레이 소재 주춤</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-21-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-21-1.html</guid>
+      <category>반도체소재</category>
+      <description>AI 반도체 수요 폭증으로 반도체 기판 소재 업체들이 100% 가동률을 기록하고 있다. 반면 디스플레이 및 배터리 소재 업체들은 수요 부진으로 가동률이 하락하며 소부장 업계 내 양극화가 심화되고 있다.</description>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>프라임마스, CXL 메모리로 2800억 매출 도전장</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-21-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-21-2.html</guid>
+      <category>반도체소재</category>
+      <description>팹리스 기업 프라임마스가 CXL 기반 풀드 메모리 솔루션 'JBOM'으로 내년 말까지 2억 달러(약 2800억 원) 매출을 목표로 제시했다. 서버 한 대에서 100TB 이상의 메모리를 지원하는 기술로, AI 인프라의 메모리 병목 문제를 해소하겠다는 전략이다.</description>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>에스켐, OLED 공통층 매출 122% 급증…소재 도약 신호</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-21-3.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-21-3.html</guid>
+      <category>산업재</category>
+      <description>디스플레이·반도체 소재 기업 에스켐의 OLED 공통층 소재 매출이 전년 대비 122% 급증했다. 디스플레이 소재 업계 전반이 수요 둔화를 겪는 가운데 나온 서프라이즈 실적으로, 고부가 OLED 소재 집중 전략이 주효했다는 평가다.</description>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>디스프로슘·홀뮴 강세…중희토류 시장 내 양극화 심화</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-21-4.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-21-4.html</guid>
+      <category>희귀금속</category>
+      <description>상하이금속시장(SMM)에 따르면 디스프로슘과 홀뮴 가격이 인상되며 강세를 보이는 반면, 같은 희귀금속군 내 다른 금속들은 약세를 지속하며 시장 내 양극화가 뚜렷해지고 있다. 수요 구조 변화와 공급 측 조정이 맞물린 결과로 분석된다.</description>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>SK이노, 테라파워 '나트륨' SMR 사업협력 합의…글로벌 원전 공급망 진입</title>
       <link>https://tugman77.github.io/materials-news/news/2026-08-16-0.html</link>
@@ -206,46 +246,6 @@
       <category>반도체소재</category>
       <description>반도체 핵심 공정 소재인 육불화텅스텐(WF6)을 생산하는 일본 업체 2곳이 영구 생산 중단을 결정했다. 삼성전자·SK하이닉스 등 국내 반도체 기업의 공급망에 직접적인 타격이 우려된다.</description>
       <pubDate>Wed, 12 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>갈륨 가격 3년새 9배…중국 수출통제 파급력 현실화</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-11-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-11-0.html</guid>
-      <category>글로벌</category>
-      <description>중국이 2023년 갈륨·게르마늄 수출통제를 시행한 이후 갈륨 현물 가격이 3년 만에 약 9배 급등했다. 차세대 전력반도체의 핵심 소재인 갈륨은 대체 공급선 확보가 지연되면서 반도체 업계의 원가 부담이 가중되고 있다.</description>
-      <pubDate>Tue, 11 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>소부장 5조 펀드 조성, 납품단가 연동제도 확대</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-11-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-11-1.html</guid>
-      <category>반도체소재</category>
-      <description>정부가 반도체 소재·부품·장비 산업 육성을 위해 5조 원 규모 투자 펀드를 조성하고 납품대금 연동제를 대폭 확대하는 방안을 추진한다. 소부장 중소·중견기업의 자금난 해소와 대기업 종속 구조 개선에 방점을 둔 대책이다.</description>
-      <pubDate>Tue, 11 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>고려아연, 美 핵심광물 공급망 핵심 파트너로 급부상</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-11-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-11-2.html</guid>
-      <category>희귀금속</category>
-      <description>미국 정부가 탈중국 핵심광물 공급망 구축에 약 4조 원을 투자한다고 발표하며 고려아연의 아연·납 제련 역량이 주목받고 있다. 트럼프 행정부의 광물 자립 전략에서 고려아연의 제련소가 직접 언급된 것으로 알려졌다.</description>
-      <pubDate>Tue, 11 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>LG디스플레이 5스택 OLED 개발…수명·효율 도약</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-11-3.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-11-3.html</guid>
-      <category>산업재</category>
-      <description>LG디스플레이가 발광층을 5단으로 쌓는 '5스택 OLED' 기술을 개발했다. 기존 3스택 대비 수명과 발광 효율이 대폭 향상돼 대형 TV 및 차량용 디스플레이 시장에서 경쟁 우위를 확보할 것으로 기대된다.</description>
-      <pubDate>Tue, 11 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>중국 희토류 수출통제, 對日 수출 반토막…공급망 재편 가속</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-11-4.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-11-4.html</guid>
-      <category>글로벌</category>
-      <description>중국의 희토류 수출통제 강화 이후 올해 상반기 대일 희토류 수출량이 전년 동기 대비 절반 수준으로 급감했다. 일본은 ODA를 활용한 공급망 다변화로 대응에 나서고 있으며, 글로벌 희토류 공급 재편이 빠르게 진행되고 있다.</description>
-      <pubDate>Tue, 11 Aug 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
