@@ -25,18 +25,7 @@
       "image_keyword": "semiconductor helium gas supply chain",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-08-22_article_0.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "중국의 헬륨 수출 즉시 금지 조치 — 공식 발표 출처 불명확",
-          "중국이 아시아 헬륨 공급망 핵심 중계 역할 주장 — 실제 물량 비중 과장 가능성",
-          "유예 기간 없이 당일 발효 — 기존 수출통제 선례와 차이, 신빙성 확인 필요"
-        ],
-        "notes": "헬륨 기술 정보는 정확하나 수출 금지 조치 자체의 출처 검증 필요",
-        "verified_at": "2026-08-22 03:14"
-      }
+      "image_url": "images/2026-08-22_article_0.jpg"
     },
     {
       "id": 1,
@@ -57,20 +46,10 @@
         "전문가들은 루테늄 배선이 2027~2028년 양산 공정에 본격 적용되기 시작할 것으로 전망하며, 그에 앞서 전구체 소재의 순도 향상과 대량 생산 기술 확보가 선결 과제라고 지적한다. 이번 연구팀의 성과가 관련 상용화 일정을 앞당기는 계기가 될지 주목된다.",
         "소재타임스 분석에 따르면, 루테늄 관련 특허 출원 건수는 2023년 이후 연평균 35% 이상 증가하고 있으며, 주요 파운드리 업체들의 선행 연구 투자도 빠르게 확대되고 있어 관련 밸류체인 전반에 걸친 투자 기회가 가시화되고 있다."
       ],
-      "image_keyword": "advanced semiconductor packaging JCET chip assembly",
+      "image_keyword": "ruthenium semiconductor metal thin film",
       "is_featured": false,
       "timestamp": "오전 09:30",
-      "image_url": "images/2026-08-22_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "45% 저항 절감 수치 — 인용 학술지명·DOI 미기재로 독립 검증 어려움",
-          "'기존 루테늄 배선 대비' 기준값 명시 없어 수치 맥락 불분명"
-        ],
-        "notes": "루테늄 배선 연구 방향은 업계 사실과 부합, 수치 출처 보완 권장",
-        "verified_at": "2026-08-22 03:14"
-      }
+      "image_url": "images/2026-08-22_article_1.jpg"
     },
     {
       "id": 2,
@@ -94,16 +73,7 @@
       "image_keyword": "semiconductor packaging industrial assembly",
       "is_featured": false,
       "timestamp": "오전 09:45",
-      "image_url": "images/2026-08-22_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "195억 3000만 위안을 '약 3조 7000억 원'으로 환산 — 환율 기준일 미기재"
-        ],
-        "notes": "JCET는 실존 상장사(600584), 수치는 공개 실적 검증 가능 수준",
-        "verified_at": "2026-08-22 03:14"
-      }
+      "image_url": "images/2026-08-22_article_2.jpg"
     },
     {
       "id": 3,
@@ -124,21 +94,10 @@
         "향후 이번 사태가 공식적인 수출 금지 조치로 격상될지 여부가 최대 변수다. 중국이 기존 갈륨·게르마늄·흑연에 이어 희토류 자석까지 공식 통제 품목에 추가할 경우, 글로벌 공급망 재편은 더욱 가속화될 전망이며, 자석 재활용·회수 기술에 대한 투자 관심도 높아질 것으로 예상된다.",
         "투자 측면에서는 희토류 자석 대체 공급처 개발에 나선 비중국계 소재·광업 기업들과, NdFeB 자석을 재활용하는 도시광산 관련 기업들에 대한 관심이 높아질 전망이다. 국내에서도 고려아연, 한국희토류 등 관련 기업의 동향에 주목할 필요가 있다."
       ],
-      "image_keyword": "OLED foldable display polarizer film material",
+      "image_keyword": "rare earth magnet neodymium industrial",
       "is_featured": false,
       "timestamp": "오전 10:00",
-      "image_url": "images/2026-08-22_article_3.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'복수의 업계 소식통' 익명 진술에만 근거 — 공식 확인 불가",
-          "통관 지연이 수주 단위 지속 — 구체 기업·건수 미기재",
-          "조직적 차단 의도 단정 — 행정 지연과 고의적 차단 구별 어려움"
-        ],
-        "notes": "희토류 중국 의존도 사실 부합, 단 익명 소식통 의존도 높아 주의",
-        "verified_at": "2026-08-22 03:14"
-      }
+      "image_url": "images/2026-08-22_article_3.jpg"
     },
     {
       "id": 4,
@@ -162,14 +121,7 @@
       "image_keyword": "OLED display material industrial film",
       "is_featured": false,
       "timestamp": "오전 10:15",
-      "image_url": "images/2026-08-22_article_4.jpg",
-      "review": {
-        "trust_score": 5,
-        "status": "pass",
-        "suspicious_claims": [],
-        "notes": "동우화인켐·K-Display·고객사 모두 검증 가능, 제품 포트폴리오 일치",
-        "verified_at": "2026-08-22 03:14"
-      }
+      "image_url": "images/2026-08-22_article_4.jpg"
     }
   ],
   "editorial_briefing": "중국의 헬륨·희토류 수출통제 확대로 반도체·전장 공급망 긴장이 고조되는 가운데, 한·미 루테늄 저항 절감 기술 개발 등 소재 자립 움직임도 가속화되고 있다. AI 수요 급증에 힘입어 첨단 패키징 시장은 고성장세를 유지 중이다.",
@@ -199,6 +151,5 @@
       "label": "차세대 디스플레이",
       "status": "소재 공개"
     }
-  ],
-  "last_reviewed_at": "2026-08-22 03:14"
+  ]
 }
