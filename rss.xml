@@ -6,7 +6,47 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Sat, 22 Aug 2026 03:14:05 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2026 03:10:43 +0900</lastBuildDate>
+    <item>
+      <title>中 희토류 휴전 만료 임박…글로벌 공급망 재편 기로</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-23-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-23-0.html</guid>
+      <category>글로벌</category>
+      <description>미중 간 잠정 합의된 희토류 수출통제 유예 기간이 종료를 앞두면서 글로벌 소재 공급망이 다시 위기에 처했다. 중국이 유예 연장 여부를 결정하지 않은 채 협상 국면에서 우위를 점하려는 전략적 움직임을 보이고 있다는 분석이 나온다.</description>
+      <pubDate>Sun, 23 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>소재 5社 2Q 영업익 동반 상승…반도체 호황 낙수 가시화</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-23-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-23-1.html</guid>
+      <category>반도체소재</category>
+      <description>국내 주요 반도체 소재 기업 5곳이 2026년 2분기 영업이익을 일제히 늘리며 반도체 경기 호황의 낙수 효과가 소재 산업 전반으로 확산되고 있음을 확인했다. AI 수요 증가에 따른 첨단 공정 소재 발주 급증이 실적 개선의 핵심 요인으로 분석된다.</description>
+      <pubDate>Sun, 23 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>IMID 2026, 비FMM·폴더블 차세대 OLED 격전지 됐다</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-23-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-23-2.html</guid>
+      <category>산업재</category>
+      <description>삼성디스플레이와 LG디스플레이가 국내 최대 디스플레이 학술대회 'IMID 2026'에서 각각 광시야각 폴더블 기술과 파인메탈마스크(FMM) 없이 구현하는 OLED 신기술을 공개하며 차세대 디스플레이 주도권 경쟁에 불을 붙였다.</description>
+      <pubDate>Sun, 23 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>그린란드 희토류 탐사권 취득…서방 공급망 교두보 주목</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-23-3.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-23-3.html</guid>
+      <category>희귀금속</category>
+      <description>캐나다 탐사 기업 그린란드 마인스(Greenland Mines)가 그린란드 내 '사파토크(Sarfartoq)' 광구의 희토류 탐사권을 취득하며 주가가 급등했다. 사파토크는 그린란드에서 가장 앞선 희토류 프로젝트 중 하나로 평가받고 있어, 서방 공급망 다변화의 주요 거점으로 부상하고 있다.</description>
+      <pubDate>Sun, 23 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>YMTC, AI 메모리 수요 겨냥 IPO 추진 가속화</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-23-4.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-23-4.html</guid>
+      <category>글로벌</category>
+      <description>중국 최대 낸드플래시 전문기업 양쯔메모리테크놀로지(YMTC)가 인공지능 시대의 메모리 수요를 공략하기 위해 기업공개(IPO)를 본격 추진 중인 것으로 알려졌다. 국내외 자본 조달과 AI 서버용 낸드 시장 공략을 동시에 노리는 이중 전략이 주목받고 있다.</description>
+      <pubDate>Sun, 23 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>중국, 헬륨 수출 금지…반도체 공정 핵심 기체 공급망 비상</title>
       <link>https://tugman77.github.io/materials-news/news/2026-08-22-0.html</link>
@@ -206,46 +246,6 @@
       <category>희귀금속</category>
       <description>고기능 디스플레이 소재 전문기업 아이컴포넌트가 광학 필름·편광 소재 분야에서 차세대 제품 라인업을 강화하며 글로벌 공급망 진입을 가속화하고 있다. AI 기기·차량용 디스플레이 확대에 따른 고기능 광학 소재 수요 급증이 사업 기회로 작용하고 있다.</description>
       <pubDate>Fri, 14 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>와이씨켐, 2Q 영업익 21억…고부가 소재로 흑자 전환</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-13-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-13-0.html</guid>
-      <category>반도체소재</category>
-      <description>와이씨켐이 반도체 공정용 고부가 소재 판매 확대에 힘입어 2분기 매출 271억원, 영업이익 21억원을 기록했다. 전년 대비 매출은 43% 급증하고 영업이익은 적자에서 흑자로 전환하며 연간 흑자 달성에 청신호가 켜졌다.</description>
-      <pubDate>Thu, 13 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>구리 가격, 런던·뉴욕서 동반 사상최고…3대 광산 개발 동시 재개</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-13-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-13-1.html</guid>
-      <category>글로벌</category>
-      <description>구리 가격이 런던과 뉴욕 시장에서 동시에 사상 최고치를 경신했다. 같은 날 부건빌 파나구나·필리핀 탐파칸·스웨덴 라베르 등 장기 중단됐던 3대 구리 광산 개발 프로젝트가 일제히 재개 신호를 보내며 공급망 재편에 촉각이 쏠리고 있다.</description>
-      <pubDate>Thu, 13 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>프라세오디뮴·네오디뮴 가격 약세…중희토류는 강보합 유지</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-13-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-13-2.html</guid>
-      <category>희귀금속</category>
-      <description>글로벌 희토류 시장에서 프라세오디뮴-네오디뮴(Pr-Nd) 산화물 가격이 약세를 보이는 반면 중·중희토류 가격은 강보합세를 유지하며 뚜렷한 양극화가 나타나고 있다. 거래 부진 속에서도 정책 자금과 공급망 전략이 희토류 시장의 새 변수로 부상하고 있다.</description>
-      <pubDate>Thu, 13 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>OLED 설비투자 57% 급증…소재·장비업계 수혜 가시화</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-13-3.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-13-3.html</guid>
-      <category>산업재</category>
-      <description>글로벌 디스플레이 설비투자가 전년 대비 57% 증가할 것으로 전망된 가운데, OLED가 성장을 주도하며 관련 소재·장비 업계의 수혜가 본격화되고 있다. 중국의 8.6세대 OLED 라인 확장과 한국 업체의 고사양 소재 공급이 맞물리며 공급망 재편이 가속화되고 있다.</description>
-      <pubDate>Thu, 13 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>소부장 '슈퍼 을' 15곳 육성…5년 10조 집중 투자</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-13-4.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-13-4.html</guid>
-      <category>글로벌</category>
-      <description>정부가 핵심 소부장(소재·부품·장비) 기업 육성에 5년간 10조원을 투자하고 2030년까지 '슈퍼 을' 기업 15곳을 키우는 계획을 공식 발표했다. AI·반도체·방산 공급망 내재화를 위한 전방위 지원책이 담겼으며, 소부장 업계의 구조적 체질 개선 기대감이 높아지고 있다.</description>
-      <pubDate>Thu, 13 Aug 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>

@@ -25,18 +25,7 @@
       "image_keyword": "rare earth mineral supply chain",
       "is_featured": true,
       "timestamp": "오전 09:05",
-      "image_url": "images/2026-08-23_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "중국 희토류 정제·가공량 85% 이상 점유 수치는 출처마다 편차 있음",
-          "유예 조치 만료 시점·구체 조건 미공개라는 주장은 검증 어려움",
-          "Modern Diplomacy 보도 내용의 원문 인용 없이 간접 서술"
-        ],
-        "notes": "핵심 수치와 정책 맥락은 업계 상식과 부합. 출처 명시 보강 권장.",
-        "verified_at": "2026-08-23 03:10"
-      }
+      "image_url": "images/2026-08-23_article_0.jpg"
     },
     {
       "id": 1,
@@ -60,18 +49,7 @@
       "image_keyword": "semiconductor material manufacturing plant",
       "is_featured": false,
       "timestamp": "오전 09:40",
-      "image_url": "images/2026-08-23_article_1.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "솔브레인 2Q 영업익 128% 급증 수치, 공식 실적 발표와 대조 필요",
-          "와이씨켐 흑자전환 규모 '21억 원' 등 세부 수치 출처 불명확",
-          "에스켐 OLED 공통층 소재 122% 급증—에스켐의 실제 사업 포트폴리오 확인 필요"
-        ],
-        "notes": "기업 실존 확인되나 구체 수치 전부 타사(조선일보) 집계 재인용 형태.",
-        "verified_at": "2026-08-23 03:10"
-      }
+      "image_url": "images/2026-08-23_article_1.jpg"
     },
     {
       "id": 2,
@@ -95,17 +73,7 @@
       "image_keyword": "OLED display panel manufacturing",
       "is_featured": false,
       "timestamp": "오전 10:15",
-      "image_url": "images/2026-08-23_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "삼성디스플레이 광시야각 기술 '최초 공개' 여부 미확인",
-          "LG디스플레이 비FMM 상용화 일정·양산 목표 언급 없음"
-        ],
-        "notes": "IMID 실존, FMM 기술 설명 정확. 발표 내용 자체 검증은 필요.",
-        "verified_at": "2026-08-23 03:10"
-      }
+      "image_url": "images/2026-08-23_article_2.jpg"
     },
     {
       "id": 3,
@@ -128,18 +96,7 @@
       "image_keyword": "rare earth exploration arctic geology",
       "is_featured": false,
       "timestamp": "오전 10:50",
-      "image_url": "images/2026-08-23_article_3.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'Greenland Mines'라는 기업명 미확인—사파토크 광구는 Hudson Resources 연관 이력",
-          "사파토크 광구 상업적 매장 가능성 '확인'이라는 표현 과장 우려",
-          "주가 급등 수치 미기재로 사실 검증 불가"
-        ],
-        "notes": "사파토크 광구·CRMA는 실존하나 취득 기업명 확인 필수.",
-        "verified_at": "2026-08-23 03:10"
-      }
+      "image_url": "images/2026-08-23_article_3.jpg"
     },
     {
       "id": 4,
@@ -160,20 +117,10 @@
         "시장 조사기관들은 2027년까지 AI 서버용 낸드 수요가 현재 대비 2배 이상 성장할 것으로 전망하고 있다. YMTC가 IPO를 통해 충분한 자본을 확보하고 기술력을 계속 향상시킬 경우, 글로벌 낸드 시장 점유율을 현재 한 자릿수에서 두 자릿수로 끌어올리려는 목표에 한 발 더 가까워질 수 있을 것으로 분석된다.",
         "한국 반도체 소재·장비 업계에는 이 변화가 복잡한 시사점을 던진다. YMTC 공급망에 편입된 일부 국내 소재 기업들은 매출 기회를 얻을 수 있지만, 동시에 YMTC의 기술 자립이 장기적으로는 중국 내 로컬 소재 기업의 성장을 촉진할 수 있다는 점도 고려해야 한다는 지적이 나온다."
       ],
-      "image_keyword": "rare earth mining refinery China",
+      "image_keyword": "NAND flash memory semiconductor chip",
       "is_featured": false,
       "timestamp": "오전 11:20",
-      "image_url": "images/2026-08-23_article_-1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "YMTC IPO 추진 구체 일정·규모 미공개 상태에서 '가속화' 표현",
-          "232단 이상 양산 성공 여부는 대외 검증 한계 있음"
-        ],
-        "notes": "YMTC·Xtacking 기술·EE Times 모두 실존. IPO 보도 신빙성 양호.",
-        "verified_at": "2026-08-23 03:10"
-      }
+      "image_url": "images/2026-08-23_article_4.jpg"
     }
   ],
   "editorial_briefing": "중국 희토류 유예 만료 임박으로 공급망 불확실성이 고조되는 가운데, 국내 반도체 소재 기업들은 2Q 실적 호조로 호황 수혜를 확인했다. OLED·메모리 분야에서도 차세대 기술 경쟁과 IPO 행보가 동시에 가속화되고 있다.",
@@ -203,6 +150,5 @@
       "label": "YMTC IPO 추진",
       "status": "AI 메모리 겨냥 가속"
     }
-  ],
-  "last_reviewed_at": "2026-08-23 03:10"
+  ]
 }
