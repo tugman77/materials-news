@@ -22,21 +22,10 @@
         "LG화학 관계자는 '단순한 사업 다각화가 아니라 전자소재를 미래 핵심 수익원으로 키우겠다는 확고한 의지의 표현'이라며 '2030년까지 전자소재 매출 2조원을 달성해 글로벌 톱티어 소재 기업으로 도약하겠다'고 밝혔다.",
         "향후 LG화학이 전자소재 분야에서 성과를 거두면 국내 소재 산업 전반의 대형화 흐름을 이끌 수 있다는 기대감도 형성되고 있다. 동종업계 경쟁사들도 유사한 포트폴리오 재편을 검토 중인 것으로 알려져, 한국 소재 산업의 고부가가치화 경쟁이 가속화될 전망이다."
       ],
-      "image_keyword": "US Canada trade tariff supply chain",
+      "image_keyword": "semiconductor electronic materials factory",
       "is_featured": true,
       "timestamp": "오전 09:10",
-      "image_url": "images/2026-08-24_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "욜디벨로프먼트 2025년 230억→2030년 370억달러 수치 원출처 직접 확인 필요",
-          "2조원 투자 계획의 공식 발표 시점·채널 불명확",
-          "포토레지스트 보조재 진출 계획의 구체적 근거 부재"
-        ],
-        "notes": "실존 기업·시장조사기관 인용, 수치 업계 통상 범위 내. 대체로 신뢰 가능.",
-        "verified_at": "2026-08-24 03:09"
-      }
+      "image_url": "images/2026-08-24_article_0.jpg"
     },
     {
       "id": 1,
@@ -60,18 +49,7 @@
       "image_keyword": "trade war industrial supply chain",
       "is_featured": false,
       "timestamp": "오전 09:35",
-      "image_url": "images/2026-08-24_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "'우리는 미국과 전쟁 중' 발언 출처·날짜 미기재로 창작 인용 가능성",
-          "연간 교역액 9,000억 달러 수치는 맞으나 1,260조원 환산 환율 확인 필요",
-          "헬륨을 희토류 수출 통제 품목으로 묶어 서술—헬륨은 희토류 아님"
-        ],
-        "notes": "카니 총리 발언 출처 불명, 헬륨 분류 오류 주의. 핵심 사실은 대체로 부합.",
-        "verified_at": "2026-08-24 03:09"
-      }
+      "image_url": "images/2026-08-24_article_1.jpg"
     },
     {
       "id": 2,
@@ -95,18 +73,7 @@
       "image_keyword": "semiconductor thermal management coating",
       "is_featured": false,
       "timestamp": "오전 10:05",
-      "image_url": "images/2026-08-24_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "남영석·임성갑 교수 소속 및 공동연구 여부 직접 확인 권장",
-          "Nature Communications 게재 논문 DOI·권호 미기재로 검증 어려움",
-          "5.5배 향상 수치가 어떤 기준 조건에서 측정됐는지 불명확"
-        ],
-        "notes": "iCVD 공정·응축 열전달 메커니즘 등 과학적 내용은 타당. 논문 출처 보강 필요.",
-        "verified_at": "2026-08-24 03:09"
-      }
+      "image_url": "images/2026-08-24_article_2.jpg"
     },
     {
       "id": 3,
@@ -130,18 +97,7 @@
       "image_keyword": "rare earth metal processing plant",
       "is_featured": false,
       "timestamp": "오전 10:40",
-      "image_url": "images/2026-08-24_article_3.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "헬륨 수출 제한 조치 시행 시점·근거 법령 미기재",
-          "Pr-Nd 약세 원인으로 전기차 수요 둔화 단정—시장 해석 과도할 수 있음",
-          "SMM 분석 원문 링크·날짜 미기재로 인용 검증 불가"
-        ],
-        "notes": "중국 수출통제 흐름·희토류 품목 구분 정확. SMM 출처 명기 보강 권장.",
-        "verified_at": "2026-08-24 03:09"
-      }
+      "image_url": "images/2026-08-24_article_3.jpg"
     },
     {
       "id": 4,
@@ -165,18 +121,7 @@
       "image_keyword": "OLED display panel industrial manufacturing",
       "is_featured": false,
       "timestamp": "오전 11:15",
-      "image_url": "images/2026-08-24_article_4.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "BOE 애플 아이패드 에어 OLED 납품 추진 여부 공식 확인 필요",
-          "'복수의 기업 상장 완료' 주장에 구체적 기업명·거래소 미기재",
-          "전자신문 보도 날짜·기사 URL 미제공으로 1차 출처 검증 어려움"
-        ],
-        "notes": "BOE·CSOT·Visionox 실존 기업, OLED 추격 구도 업계 사실 부합. 출처 구체화 권장.",
-        "verified_at": "2026-08-24 03:09"
-      }
+      "image_url": "images/2026-08-24_article_4.jpg"
     }
   ],
   "editorial_briefing": "AI반도체 소재 투자 확대와 미·캐나다 무역전쟁 속 공급망 불안이 공존하는 가운데, 희토류 수급 불균형과 중국 디스플레이 업계의 자본력 강화가 한국 소부장 산업에 복합적 도전을 던지고 있다.",
@@ -206,6 +151,5 @@
       "label": "KAIST 나노코팅 기술",
       "status": "열전달 5.5배 향상"
     }
-  ],
-  "last_reviewed_at": "2026-08-24 03:09"
+  ]
 }
