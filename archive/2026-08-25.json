@@ -24,18 +24,7 @@
       "image_keyword": "semiconductor manufacturing facility Japan",
       "is_featured": true,
       "timestamp": "오전 09:10",
-      "image_url": "images/2026-08-25_article_0.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'인프라·소재·장비가 잘 갖춰진 일본이 유력 후보지' 인용 출처·발언자 불명확",
-          "IBM 일본 R&D 거점 보조금 지원 전례 언급 — 사실 여부 확인 필요",
-          "SK하이닉스 일본 공장 검토 사실 자체의 공식 확인 여부 불분명"
-        ],
-        "notes": "핵심 인용 출처 없고 IBM 보조금 사례 검증 필요, 주의 요망",
-        "verified_at": "2026-08-25 03:16"
-      }
+      "image_url": "images/2026-08-25_article_0.jpg"
     },
     {
       "id": 1,
@@ -55,19 +44,10 @@
         "국내 업계 전문가는 '일본 소재사들의 생산 능력 확대는 단기적으로 공급 안정에 기여하지만, 장기적으로는 국내 소재 기업의 독자 기술 개발 필요성을 더욱 부각시킨다'고 강조했다. 국산화 없이는 일본 의존 구조가 고착될 수 있다는 경고다.",
         "후지필름의 AI 소재 사업 확장은 '필름 회사'라는 구시대적 이미지를 벗고 첨단 소재 기업으로 거듭나려는 장기 전략의 결실이다. 반도체 소재·바이오 이미징·의료 등으로 다각화된 사업 포트폴리오가 수익성 개선으로 이어지고 있다는 분석이다."
       ],
-      "image_keyword": "Korea government industrial policy support",
+      "image_keyword": "photoresist semiconductor material production",
       "is_featured": false,
       "timestamp": "오전 10:35",
-      "image_url": "images/2026-08-25_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "후지필름 포토레지스트 세계 시장 점유율 '약 15%' — 수치 출처 불명확"
-        ],
-        "notes": "기업 실존·사업 전환 방향 부합, 점유율 수치만 검증 필요",
-        "verified_at": "2026-08-25 03:16"
-      }
+      "image_url": "images/2026-08-25_article_1.jpg"
     },
     {
       "id": 2,
@@ -91,16 +71,7 @@
       "image_keyword": "industrial supply chain factory Korea",
       "is_featured": false,
       "timestamp": "오전 11:20",
-      "image_url": "images/2026-08-25_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "투자비 최대 50% 지원 비율 — 실제 공고 기준과 일치 여부 확인 필요"
-        ],
-        "notes": "정책 사실성 양호, 이미지 키워드가 지나치게 일반적",
-        "verified_at": "2026-08-25 03:16"
-      }
+      "image_url": "images/2026-08-25_article_2.jpg"
     },
     {
       "id": 3,
@@ -123,18 +94,7 @@
       "image_keyword": "rare metal yttrium mineral supply",
       "is_featured": false,
       "timestamp": "오후 01:05",
-      "image_url": "images/2026-08-25_article_3.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "7월 대미 이트륨 수출 급증 수치 — 구체적 통계 출처 없음",
-          "수출 증가를 정상회담 전략 신호로 연결하는 분석 — 추론적 주장",
-          "중국 이트륨 생산 점유율 '60% 이상' — 희토류 전체 수치와 혼용 가능성"
-        ],
-        "notes": "이트륨 용도 설명은 정확하나 수출 급증 수치·외교 연계 추론은 출처 필요",
-        "verified_at": "2026-08-25 03:16"
-      }
+      "image_url": "images/2026-08-25_article_3.jpg"
     },
     {
       "id": 4,
@@ -158,16 +118,7 @@
       "image_keyword": "industrial ceramic semiconductor component",
       "is_featured": false,
       "timestamp": "오후 02:40",
-      "image_url": "images/2026-08-25_article_4.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "warning",
-        "suspicious_claims": [
-          "삼성·SK하이닉스·램리서치 합동 논의 행사 — 구체적 일시·주최·출처 불명확"
-        ],
-        "notes": "기술 내용·기업 실존 정확, 행사 개최 사실의 공식 확인 필요",
-        "verified_at": "2026-08-25 03:16"
-      }
+      "image_url": "images/2026-08-25_article_4.jpg"
     }
   ],
   "editorial_briefing": "AI 반도체 수요 확대로 소재·장비 공급망 재편이 가속화되고 있다. 한국 대기업과 글로벌 기업들이 세라믹·포토레지스트 등 핵심 소재 확보에 총력을 기울이는 가운데, 미중 자원 외교와 정부 보조금 경쟁도 심화되고 있다.",
@@ -197,6 +148,5 @@
       "label": "반도체 세라믹 공급망",
       "status": "3사 협력 논의 중"
     }
-  ],
-  "last_reviewed_at": "2026-08-25 03:16"
+  ]
 }

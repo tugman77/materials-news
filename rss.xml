@@ -6,7 +6,47 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Mon, 24 Aug 2026 03:08:58 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2026 03:16:23 +0900</lastBuildDate>
+    <item>
+      <title>SK하이닉스, 일본 공장 설립 검토…소재·장비 생태계 주목</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-25-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-25-0.html</guid>
+      <category>반도체소재</category>
+      <description>SK하이닉스가 일본 내 반도체 생산 시설 설립을 검토 중인 것으로 알려졌다. 일본의 탄탄한 소재·장비 인프라와 일본 정부의 대규모 보조금 지원 가능성이 주요 배경으로 꼽힌다. 실현될 경우 한국 소부장 기업의 일본 현지 진출에도 연쇄 효과가 기대된다.</description>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>후지필름, AI 반도체 소재 증산…필름 기업의 변신</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-25-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-25-1.html</guid>
+      <category>반도체소재</category>
+      <description>일본 후지필름이 AI 반도체용 소재 생산 능력을 대폭 확대한다고 밝혔다. 포토레지스트, 세정액 등 핵심 공정 소재 생산설비 증설에 집중 투자하며 필름·사무기기 중심의 사업 구조에서 첨단 소재 기업으로 체질을 전환하고 있다.</description>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>산업부, 소부장 투자지원 접수 연장…최대 50% 지원</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-25-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-25-2.html</guid>
+      <category>글로벌</category>
+      <description>산업통상자원부가 첨단전략산업 소재·부품·장비(소부장) 분야 투자지원 사업의 신청 접수 기간을 연장했다. 투자비의 최대 50%까지 지원하는 이번 사업은 반도체·디스플레이·이차전지 등 핵심 산업 공급망 강화를 목표로 한다.</description>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>중국, 7월 대미 이트륨 수출 급증…정상회담 전략적 신호?</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-25-3.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-25-3.html</guid>
+      <category>희귀금속</category>
+      <description>중국이 지난 7월 미국에 대한 이트륨(Yttrium) 수출량을 큰 폭으로 늘린 것으로 나타났다. 미중 정상회담 개최 가능성이 거론되는 가운데, 핵심광물 수출 조정이 외교적 레버리지로 활용되고 있다는 분석이 제기된다.</description>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>삼성·SK하이닉스·램리서치, 반도체 세라믹 공급망 강화 한 목소리</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-25-4.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-25-4.html</guid>
+      <category>산업재</category>
+      <description>삼성전자, SK하이닉스, 램리서치가 한자리에 모여 반도체 공정용 세라믹 소재 공급망 협력 방안을 논의했다. 세라믹 부품은 식각·증착 장비의 핵심 소모품으로, 국산화 및 품질 고도화 필요성이 높아지고 있다.</description>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>LG화학, AI반도체 전자소재 2조 육성 선언</title>
       <link>https://tugman77.github.io/materials-news/news/2026-08-24-0.html</link>
@@ -206,46 +246,6 @@
       <category>글로벌</category>
       <description>국내 소재 기업 제이아이테크가 일본 종합상사 CBC와 손잡고 인도 반도체 소재 시장 공략에 나선다. 인도 정부의 반도체 굴기 정책과 글로벌 공급망 다변화 흐름이 맞물리며 인도가 새로운 소재 수요 거점으로 급부상하는 가운데, 한·일 기업 간 협력이 인도 시장 진입의 새 모델을 제시하고 있다.</description>
       <pubDate>Sun, 16 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>솔브레인, 2Q 영업익 128% 급증…테일러팹 공급 확대 본격화</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-15-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-15-0.html</guid>
-      <category>반도체소재</category>
-      <description>솔브레인이 2분기 매출 3120억원, 영업이익 460억원을 기록하며 전년 대비 각각 36.3%, 128.2% 급증했다. 반도체 소재 매출이 전체의 86%를 차지하며 실적을 이끌었고, 삼성전자 미국 테일러팹 공급도 본격 확대되고 있다.</description>
-      <pubDate>Sat, 15 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>빌 게이츠 방한, 韓 SMR 공급망 '핵심 거점' 낙점</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-15-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-15-1.html</guid>
-      <category>산업재</category>
-      <description>빌 게이츠 테라파워 이사회 의장이 방한해 SK이노베이션, HD현대와 SMR '나트륨' 사업협력을 확대했다. 두산에너빌리티도 핵심 기자재 공급에 합류하며 한국이 테라파워의 글로벌 SMR 공급망 중심으로 부상하고 있다.</description>
-      <pubDate>Sat, 15 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>트럼프, 중국 핵심광물 독점 타파 전방위 압박</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-15-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-15-2.html</guid>
-      <category>글로벌</category>
-      <description>트럼프 행정부가 중국의 핵심광물 수출통제에 맞서 동맹국 공급망 다변화, 자국 광물 생산 확대, 수입 규제 강화 등 다각도 전략을 동시에 가동하고 있다. 미국 에너지부는 핵심광물 인력 양성에 1억 달러(약 1400억 원) 규모 이니셔티브를 출범시켰다.</description>
-      <pubDate>Sat, 15 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>인듐·Pr-Nd 가격 급등…중국 수출통제 수혜주 확산</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-15-3.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-15-3.html</guid>
-      <category>희귀금속</category>
-      <description>인듐, 프라세오디뮴-네오디뮴(Pr-Nd), 탄탈럼 등 희귀금속 복수 품목이 올해 들어 가격이 급등하며 중국 수출통제 수혜 구간에 진입했다. 중국 내 희토류 기업들이 잇따라 중간 실적 호조를 예고하는 가운데, 공급망 다변화 수요가 글로벌 소재 시장을 재편하고 있다.</description>
-      <pubDate>Sat, 15 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>TSMC, 0.42㎚ 산화알루미늄 계면 개발…실리콘 한계 돌파</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-15-4.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-15-4.html</guid>
-      <category>반도체소재</category>
-      <description>TSMC와 국립양명교통대학 공동 연구팀이 0.42나노미터 두께의 산화알루미늄 계면을 활용해 단층 이황화몰리브덴(MoS₂) 트랜지스터를 구현하는 데 성공했다. 실리콘 트랜지스터의 물리적 한계를 넘어설 차세대 소재 기술의 돌파구로 주목받고 있다.</description>
-      <pubDate>Sat, 15 Aug 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
