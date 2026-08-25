@@ -26,17 +26,7 @@
       "image_keyword": "CNT semiconductor EUV pellicle",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-08-26_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "카나투 'CNT100 SEMI 리액터' 제품명 공식 확인 필요",
-          "500만유로=약 80억원 환율 적용 시점 명시 없음"
-        ],
-        "notes": "에프에스티·카나투 모두 실존 기업, 계약 구조와 수치 개연성 높음",
-        "verified_at": "2026-08-26 03:11"
-      }
+      "image_url": "images/2026-08-26_article_0.jpg"
     },
     {
       "id": 1,
@@ -60,17 +50,7 @@
       "image_keyword": "OLED display panel industrial manufacturing",
       "is_featured": false,
       "timestamp": "오전 10:40",
-      "image_url": "images/2026-08-26_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "EU PFAS 규제 '발효 임박' 표현—현재 제안·협의 단계로 최종 발효 일정 미확정",
-          "LG디스플레이 소형 OLED 퇴출 착수 사실 공식 발표 여부 불명확"
-        ],
-        "notes": "EU PFAS 규제·LG디스플레이 모두 실존, 기술 맥락 정확하나 일부 미확인 사실 포함",
-        "verified_at": "2026-08-26 03:11"
-      }
+      "image_url": "images/2026-08-26_article_1.jpg"
     },
     {
       "id": 2,
@@ -94,17 +74,7 @@
       "image_keyword": "3D printing nuclear reactor industrial component",
       "is_featured": false,
       "timestamp": "오후 01:20",
-      "image_url": "images/2026-08-26_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "A.J. 터크(Tuck)사 실존 여부 및 ORNL 협력 공식 발표 확인 필요",
-          "니켈 합금 적층 제조가 단조·주조와 '동등' 기계적 특성 달성—인증 수준 표현 과장 가능성"
-        ],
-        "notes": "ORNL 원자로 3D프린팅 연구는 실제 진행 중, 협력사 정보 추가 검증 권장",
-        "verified_at": "2026-08-26 03:11"
-      }
+      "image_url": "images/2026-08-26_article_2.jpg"
     },
     {
       "id": 3,
@@ -128,17 +98,7 @@
       "image_keyword": "2D semiconductor material thin film process",
       "is_featured": false,
       "timestamp": "오후 02:55",
-      "image_url": "images/2026-08-26_article_3.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "'국내 연구팀' 소속 기관·논문 출처 전혀 명시되지 않음",
-          "보호층 선택적 제거 후 소자 특성 무영향 주장—검증 데이터 인용 없음"
-        ],
-        "notes": "기술 내용은 정확하나 연구 출처 불명으로 독립 검증 불가",
-        "verified_at": "2026-08-26 03:11"
-      }
+      "image_url": "images/2026-08-26_article_3.jpg"
     },
     {
       "id": 4,
@@ -162,18 +122,7 @@
       "image_keyword": "smartphone supply chain component manufacturing",
       "is_featured": false,
       "timestamp": "오후 04:10",
-      "image_url": "images/2026-08-26_article_4.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "렌즈테크놀로지 주력은 커버글라스·금속 케이스—메모리 조달 비용이 직접 타격했다는 주장 부정확 가능",
-          "메모리 가격 급등이 조립·소재 업체 수익성 저하의 주원인이라는 인과관계 단순화 우려",
-          "2026년 상반기 메모리 급등 구체 수치·출처 미인용"
-        ],
-        "notes": "렌즈테크놀로지 사업구조상 메모리 원가 직격 논리 취약—핵심 주장 재검토 필요",
-        "verified_at": "2026-08-26 03:11"
-      }
+      "image_url": "images/2026-08-26_article_4.jpg"
     }
   ],
   "editorial_briefing": "EUV 펠리클 생산 확대·PFAS 규제 대응·3D프린팅 원자로 부품 혁신 등 첨단소재 공급망 전반에 구조적 변화가 가속화되고 있다. 메모리 가격 급등으로 애플 공급망 내 실적 양극화가 심화되는 가운데, 반도체·디스플레이 업계의 소재 기술 경쟁이 본격화되고 있다.",
@@ -203,6 +152,5 @@
       "label": "2D반도체 보호공정",
       "status": "국내 기술 개발"
     }
-  ],
-  "last_reviewed_at": "2026-08-26 03:11"
+  ]
 }
