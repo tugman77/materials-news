@@ -25,18 +25,7 @@
       "image_keyword": "semiconductor manufacturing equipment industrial",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-08-27_article_0.jpg",
-      "review": {
-        "trust_score": 2,
-        "status": "warning",
-        "suspicious_claims": [
-          "가트너 2026년 반도체 매출 92% 급증 전망 — 단일연도 역대 최고치로 비현실적",
-          "2025년 기준 매출 8090억 달러 수치의 출처·근거 불명확",
-          "'반도체 역사상 단일연도 최대 성장률' 단정 표현, 검증 필요"
-        ],
-        "notes": "92% 성장률은 업계 현실과 크게 괴리, 수치 재확인 필수",
-        "verified_at": "2026-08-27 03:18"
-      }
+      "image_url": "images/2026-08-27_article_0.jpg"
     },
     {
       "id": 1,
@@ -60,17 +49,7 @@
       "image_keyword": "MLCC ceramic capacitor electronics components",
       "is_featured": false,
       "timestamp": "오전 09:45",
-      "image_url": "images/2026-08-27_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "'사상 최저' 재고 수준 — 공신력 있는 조사기관 출처 미명시",
-          "AI 서버 1대당 MLCC 수만 개 사용 수치, 구체 근거 없음"
-        ],
-        "notes": "전반적으로 업계 현실과 부합, 출처 표기 보완 권장",
-        "verified_at": "2026-08-27 03:18"
-      }
+      "image_url": "images/2026-08-27_article_1.jpg"
     },
     {
       "id": 2,
@@ -91,21 +70,10 @@
         "업계 관계자는 '로봇 시장에서 GaN 전력반도체 수요는 인간형 로봇 보급 확대와 맞물려 폭발적으로 늘어날 것'이라며, '소형·고효율 제품을 선점한 기업이 시장을 주도하게 될 것'이라고 말했다.",
         "향후 아이언디바이스는 QDD 액추에이터 모듈 완성품 공급으로 사업 영역을 확장할 계획이다. 소자 단품 판매에서 모듈 시스템으로 고도화하면 부가가치와 고객 의존도를 동시에 높일 수 있다는 전략적 판단이다."
       ],
-      "image_keyword": "tantalum niobium rare metal refinery",
+      "image_keyword": "GaN power semiconductor industrial chip",
       "is_featured": false,
       "timestamp": "오전 10:20",
-      "image_url": "images/2026-08-27_article_2.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "아이언디바이스 실존 여부 및 해당 제품 공개 사실 확인 필요",
-          "경쟁사 대비 40% 소형화 수치, 비교 대상 기준 미명시",
-          "PCIM 아시아 2026 개최 일정·장소 사실관계 확인 권장"
-        ],
-        "notes": "기술 내용은 타당하나 스타트업 실존 및 제품 정보 검증 필요",
-        "verified_at": "2026-08-27 03:18"
-      }
+      "image_url": "images/2026-08-27_article_2.jpg"
     },
     {
       "id": 3,
@@ -126,20 +94,10 @@
         "업계 전문가는 '러시아발 공급 차질이 현실화되기 전에 재고 확보와 대체 공급선 계약을 서둘러야 한다'고 강조했다. 특히 장기 계약 구조가 부족한 중소 부품 기업들의 선제적 대응이 필요하다는 지적이다.",
         "탄탈럼·니오븀은 분쟁 광물 이슈와도 연결돼 있어 ESG 공급망 관리 측면에서도 주목된다. 책임 있는 광물 조달을 요구하는 글로벌 규제가 강화되면서, 공급망 투명성 확보가 기업의 핵심 과제로 떠오르고 있다."
       ],
-      "image_keyword": "rare earth mining China supply chain",
+      "image_keyword": "rare metal tantalum industrial supply chain",
       "is_featured": false,
       "timestamp": "오전 11:00",
-      "image_url": "images/2026-08-27_article_3.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "제재 대상 러시아 기업 '4곳' 구체 사명 미기재, 독립 확인 필요",
-          "탄탈럼이 항공기 터빈 부품에 직접 사용된다는 표현 — 니오븀·합금과 혼동 가능성"
-        ],
-        "notes": "공급망·소재 특성 서술은 사실에 부합, 제재 세부 내용 출처 보강 권장",
-        "verified_at": "2026-08-27 03:18"
-      }
+      "image_url": "images/2026-08-27_article_3.jpg"
     },
     {
       "id": 4,
@@ -161,20 +119,10 @@
         "향후 관건은 서방 민주주의 국가들이 얼마나 일관된 자원 안보 정책을 유지할 수 있느냐다. 중국의 수출 통제가 장기화될수록 대안 공급망 투자의 수익성이 높아지는 역설적 구조가 형성되고 있으며, 이것이 새로운 투자 사이클의 출발점이 될 수 있다는 분석도 나온다.",
         "국내 소부장 업계 입장에서는 이 흐름이 위기이자 기회다. 핵심광물 의존도를 낮추는 소재 대체 기술 개발과 함께, 서방 공급망 재편 과정에서 가공·정제 분야의 틈새 포지셔닝을 노릴 수 있는 전략적 시점이라는 평가다."
       ],
-      "image_keyword": "semiconductor wafer fab cleanroom",
+      "image_keyword": "rare earth mineral supply chain global policy",
       "is_featured": false,
       "timestamp": "오전 11:40",
-      "image_url": "images/2026-08-27_article_-1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "The Diplomat 보고서 제목·발행일 미기재로 원문 추적 어려움",
-          "2010년 중국 수출 제한 이후 대안 프로젝트 '대부분 중단' — 일부 성공 사례 누락 가능"
-        ],
-        "notes": "역사적 사실 및 분석 논리 타당, 원문 인용 출처 명시 보완 권장",
-        "verified_at": "2026-08-27 03:18"
-      }
+      "image_url": "images/2026-08-27_article_4.jpg"
     }
   ],
   "editorial_briefing": "AI 인프라 투자 급증으로 반도체 매출이 1.6조 달러를 향해 치솟는 가운데, MLCC 재고 고갈·GaN 전력반도체 부상 등 소부장 전반에 수혜가 확산되고 있다. 반면 희귀금속 제재와 중국의 핵심광물 통제는 서방 공급망의 구조적 취약성을 재부각시키고 있다.",
@@ -204,6 +152,5 @@
       "label": "중국 핵심광물 통제",
       "status": "서방 헤징 실패"
     }
-  ],
-  "last_reviewed_at": "2026-08-27 03:18"
+  ]
 }
