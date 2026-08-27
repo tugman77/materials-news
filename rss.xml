@@ -6,7 +6,47 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 27 Aug 2026 03:18:11 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 28 Aug 2026 03:18:51 +0900</lastBuildDate>
+    <item>
+      <title>화웨이, 칩 접기로 AI 반도체 한계 돌파 선언</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-28-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-28-0.html</guid>
+      <category>글로벌</category>
+      <description>화웨이가 첨단 미세공정 없이도 칩 성능을 끌어올리는 'LogicFolding' 아키텍처를 공개했다. 트랜지스터 축소 대신 회로 구조 자체를 3차원으로 접어 집적도를 높이는 방식으로, 수출규제 속 독자 돌파구를 마련했다는 평가다.</description>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>우주청, 위성 핵심부품 국산화 스타트업 간담회</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-28-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-28-1.html</guid>
+      <category>산업재</category>
+      <description>우주항공청이 위성 핵심부품 개발 스타트업·중소기업 10곳과 현장 간담회를 열고 실증 기회 부족 등 애로사항을 청취했다. 광학 소재·탑재체 부품 국산화와 소부장 생태계 연계 지원 방안을 논의했다.</description>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>페로브스카이트 계면 비틀기로 이온이동 억제 성공</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-28-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-28-2.html</guid>
+      <category>반도체소재</category>
+      <description>국제 연구팀이 페로브스카이트 소재 계면을 28도 각도로 비틀었을 때 이온 이동이 효과적으로 억제된다는 사실을 규명했다. 차세대 태양전지·LED 소자의 핵심 상용화 장벽이던 내구성 문제 해결에 실마리를 제공했다는 평가다.</description>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>로보센스 로봇 라이다, 상반기 510% 폭증…AI 로봇 가속</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-28-3.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-28-3.html</guid>
+      <category>산업재</category>
+      <description>중국 라이다 기업 로보센스가 2026년 상반기 로봇용 라이다 판매량이 전년 동기 대비 510% 급증했다고 발표했다. 전체 매출도 30% 늘어났으며, 자율주행 중심에서 산업·서비스 로봇으로 수요 구조가 급격히 전환되고 있다.</description>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>중국 반도체 소재 자립의 핵심, 남대광전기재료 해부</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-08-28-4.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-28-4.html</guid>
+      <category>글로벌</category>
+      <description>중국 반도체 공정 소재 기업 남대광전기재료가 CXMT의 ArF 포토레지스트·첨단 전구체 핵심 공급사로 자리잡았다. 이 기업 없이는 CXMT 메모리 양산이 불가능하다는 평가가 나올 만큼, 중국의 소재 내재화가 예상보다 빠르게 진행되고 있다.</description>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>반도체 매출 1.6조 달러 시대…소부장 수혜 본격화</title>
       <link>https://tugman77.github.io/materials-news/news/2026-08-27-0.html</link>
@@ -206,46 +246,6 @@
       <category>글로벌</category>
       <description>중국 최대 낸드플래시 전문기업 양쯔메모리테크놀로지(YMTC)가 인공지능 시대의 메모리 수요를 공략하기 위해 기업공개(IPO)를 본격 추진 중인 것으로 알려졌다. 국내외 자본 조달과 AI 서버용 낸드 시장 공략을 동시에 노리는 이중 전략이 주목받고 있다.</description>
       <pubDate>Sun, 23 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>중국, 헬륨 수출 금지…반도체 공정 핵심 기체 공급망 비상</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-22-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-22-0.html</guid>
-      <category>글로벌</category>
-      <description>중국이 반도체 제조 공정에 필수적인 헬륨의 수출을 전격 금지했다. 이번 조치는 기존 갈륨·게르마늄·흑연에 이은 수출통제 범위 확대로, 국내 반도체 소재 기업들의 공급망에 직접적인 타격이 예상된다.</description>
-      <pubDate>Sat, 22 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>韓·美 공동연구팀, 루테늄 배선 저항 45% 절감 기술 개발</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-22-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-22-1.html</guid>
-      <category>반도체소재</category>
-      <description>한국과 미국 공동 연구팀이 차세대 반도체 배선 소재로 주목받는 루테늄의 전기저항을 45% 낮추는 제어 기술을 개발했다. 구리 배선의 한계를 돌파할 핵심 소재로서 루테늄의 상용화 가능성이 높아졌다는 평가다.</description>
-      <pubDate>Sat, 22 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>JCET, 상반기 순이익 79% 급증…첨단 패키징 수요 폭발</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-22-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-22-2.html</guid>
-      <category>산업재</category>
-      <description>중국 최대 반도체 후공정 기업 JCET 그룹이 2026년 상반기 순이익이 전년 동기 대비 79.4% 급증했다고 발표했다. AI 반도체 수요 급증에 따른 첨단 패키징 기술 수요 확대가 실적 호조를 이끌었다.</description>
-      <pubDate>Sat, 22 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>中, 희토류 자석 대만 수출 지연·차단…광물 무기화 본격화</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-22-3.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-22-3.html</guid>
-      <category>희귀금속</category>
-      <description>중국이 희토류 영구자석의 대만 수출을 고의적으로 지연·차단하고 있다는 정황이 포착됐다. 반도체·전장 부품에 핵심적으로 쓰이는 네오디뮴 자석 공급이 대만 기업들을 중심으로 타격을 받고 있어 공급망 재편이 불가피한 상황이다.</description>
-      <pubDate>Sat, 22 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>동우화인켐, K-Display서 차세대 디스플레이 소재 공개</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-22-4.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-22-4.html</guid>
-      <category>반도체소재</category>
-      <description>동우화인켐이 'K-Display 2026' 전시회에 참가해 차세대 디스플레이 소재 및 솔루션을 선보였다. 폴더블·롤러블 등 차세대 폼팩터 대응 소재부터 저반사 하드코팅 소재까지 다양한 포트폴리오를 공개했다.</description>
-      <pubDate>Sat, 22 Aug 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>

@@ -22,21 +22,10 @@
         "향후 관전 포인트는 LogicFolding의 양산 전환 시점과 성능 검증 결과다. 화웨이가 올해 하반기 자사 AI 가속기 칩에 이 기술을 적용한 결과물을 공개할 가능성이 거론되며, 글로벌 반도체 업계는 설계 혁신이 공정 미세화를 대체할 수 있는지 여부를 주시하고 있다.",
         "전문가들은 LogicFolding이 단기 성과보다 중장기 기술 방향성에서 의미가 크다고 본다. 설계 구조 혁신이 소재·패키징 혁신과 맞물릴 경우, 국내 첨단 패키징 소재 기업들에게는 새로운 수요 창출 기회가 될 수 있다는 분석도 나온다. 소부장 업계 입장에서 화웨이의 행보를 단순한 경쟁사 이슈로 치부하기 어렵다는 시각이 확산되고 있다."
       ],
-      "image_keyword": "satellite parts cleanroom assembly",
+      "image_keyword": "semiconductor chip architecture folding",
       "is_featured": true,
       "timestamp": "오후 02:10",
-      "image_url": "images/2026-08-28_article_0.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "LogicFolding 아키텍처의 IEEE ISCAS 발표 여부 독립 확인 필요",
-          "TAU 스케일링 개념의 학술적 근거 및 출처 불명확",
-          "7나노 공정에서 5나노 수준 성능 근접 주장은 검증 필요"
-        ],
-        "notes": "기본 맥락은 타당하나 LogicFolding·TAU 스케일링 핵심 주장 출처 검증 필요",
-        "verified_at": "2026-08-28 03:18"
-      }
+      "image_url": "images/2026-08-28_article_0.jpg"
     },
     {
       "id": 1,
@@ -60,16 +49,7 @@
       "image_keyword": "satellite component manufacturing industrial",
       "is_featured": false,
       "timestamp": "오후 02:25",
-      "image_url": "images/2026-08-28_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "레오스페이스 기업 실존 여부 별도 확인 권장"
-        ],
-        "notes": "우주항공청·텔레픽스 등 주요 사실 확인 가능, 전반적으로 신뢰도 높음",
-        "verified_at": "2026-08-28 03:18"
-      }
+      "image_url": "images/2026-08-28_article_1.jpg"
     },
     {
       "id": 2,
@@ -93,17 +73,7 @@
       "image_keyword": "perovskite solar cell material interface",
       "is_featured": false,
       "timestamp": "오후 02:40",
-      "image_url": "images/2026-08-28_article_2.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "28도 비틀기 최적각의 원본 논문 및 연구팀 출처 미확인",
-          "AZoM 보도 실제 여부 및 게재 시점 확인 필요"
-        ],
-        "notes": "과학 원리는 타당하나 28도 특정 수치 등 핵심 주장 출처 검증 필요",
-        "verified_at": "2026-08-28 03:18"
-      }
+      "image_url": "images/2026-08-28_article_2.jpg"
     },
     {
       "id": 3,
@@ -127,16 +97,7 @@
       "image_keyword": "LiDAR sensor industrial robot",
       "is_featured": false,
       "timestamp": "오후 02:55",
-      "image_url": "images/2026-08-28_article_3.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "510.4% 성장률 등 수치의 공식 실적 발표 여부 확인 권장"
-        ],
-        "notes": "로보센스는 실제 홍콩 상장사, 수치 구체적으로 공식 발표 기반으로 판단",
-        "verified_at": "2026-08-28 03:18"
-      }
+      "image_url": "images/2026-08-28_article_3.jpg"
     },
     {
       "id": 4,
@@ -160,17 +121,7 @@
       "image_keyword": "semiconductor photoresist chemical material factory",
       "is_featured": false,
       "timestamp": "오후 03:10",
-      "image_url": "images/2026-08-28_article_4.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "CXMT 양산이 남대광전 없이 불가능하다는 단정은 과장 가능성",
-          "뉴스핌 중국 거인의 공급망 시리즈 실제 존재 여부 미확인"
-        ],
-        "notes": "남대광전·CXMT 실존 기업, 소재 자립화 맥락 신뢰도 높으나 단정 표현 주의",
-        "verified_at": "2026-08-28 03:18"
-      }
+      "image_url": "images/2026-08-28_article_4.jpg"
     }
   ],
   "editorial_briefing": "화웨이의 칩 폴딩 기술·중국 소재 자립 등 미중 기술 디커플링이 가속되는 가운데, 페로브스카이트·AI 로봇 라이다 등 차세대 소재·부품 혁신이 동시에 진행 중이다. 국내외 공급망 재편 압력이 높아지며 한국 우주·반도체 부품 국산화도 속도를 내고 있다.",
@@ -200,6 +151,5 @@
       "label": "국내 우주부품 국산화",
       "status": "실증 기회 부족"
     }
-  ],
-  "last_reviewed_at": "2026-08-28 03:18"
+  ]
 }
