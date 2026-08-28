@@ -24,18 +24,7 @@
       "image_keyword": "semiconductor chemical sulfuric acid plant",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-08-29_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "동양화학·OCI가 국내 황산 시장 주요 점유자라는 주장 — 출처 미제시",
-          "수 ppb 이하 순도 기준이 업계 표준인지 구체적 근거 없음",
-          "고려아연의 반도체급 황산 증산 계획이 공식 발표인지 불명확"
-        ],
-        "notes": "기업 실재·사업 구조 등 핵심 팩트는 대체로 검증 가능. 시장 점유 주장 출처 보완 필요.",
-        "verified_at": "2026-08-29 03:12"
-      }
+      "image_url": "images/2026-08-29_article_0.jpg"
     },
     {
       "id": 1,
@@ -58,18 +47,7 @@
       "image_keyword": "semiconductor memory chip factory China",
       "is_featured": false,
       "timestamp": "오전 09:45",
-      "image_url": "images/2026-08-29_article_1.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'870%' 매출 증가율 — 매우 구체적이나 출처·원문 보도 미인용",
-          "'중국 최대 시가총액 반도체 기업'으로 등극했다는 주장 — 검증 필요",
-          "HBM 장기 로드맵 포함 주장이 익명 소식통에 의존하는 것으로 보임"
-        ],
-        "notes": "CXMT 실재 및 성장 방향은 타당하나, 870% 수치 출처 명시가 필수적.",
-        "verified_at": "2026-08-29 03:12"
-      }
+      "image_url": "images/2026-08-29_article_1.jpg"
     },
     {
       "id": 2,
@@ -92,18 +70,7 @@
       "image_keyword": "quantum dot display OLED material technology",
       "is_featured": false,
       "timestamp": "오전 10:20",
-      "image_url": "images/2026-08-29_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "'국내 1위 소재 기업' 표현 — 기준(매출·점유율 등) 미명시",
-          "원천특허 확보 주장이 공식 출원·등록 완료인지 불명확",
-          "삼성디스플레이 공급 1위라는 사실의 현재 유효성 확인 필요"
-        ],
-        "notes": "덕산네오룩스·QLEDoS 기술 개요는 사실 부합. 특허 법적 지위 상세화 권고.",
-        "verified_at": "2026-08-29 03:12"
-      }
+      "image_url": "images/2026-08-29_article_2.jpg"
     },
     {
       "id": 3,
@@ -126,18 +93,7 @@
       "image_keyword": "industrial robot hand manufacturing factory",
       "is_featured": false,
       "timestamp": "오전 11:05",
-      "image_url": "images/2026-08-29_article_3.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'국민성장펀드' 정식 명칭·법적 근거 미제시 — 펀드 존재 자체 확인 필요",
-          "1조 6100억·1조 1900억 등 복수 수치가 출처 없이 병기됨",
-          "'국민성장펀드 민간 직접 지분투자 첫 사례' 주장 — 검증 근거 없음"
-        ],
-        "notes": "원익로보틱스 실재·사업 내용은 타당. 펀드 근거 법령 및 수치 출처 보완 필요.",
-        "verified_at": "2026-08-29 03:12"
-      }
+      "image_url": "images/2026-08-29_article_3.jpg"
     },
     {
       "id": 4,
@@ -160,18 +116,7 @@
       "image_keyword": "AI robot laboratory automation interface",
       "is_featured": false,
       "timestamp": "오후 12:30",
-      "image_url": "images/2026-08-29_article_4.jpg",
-      "review": {
-        "trust_score": 2,
-        "status": "warning",
-        "suspicious_claims": [
-          "'MHS(Model Hardware Standard)' — 앤트로픽 공식 발표 여부 미확인, 존재 자체 의심",
-          "'피지컬 AI 진입 첫 시도'라는 외신 해석 — 구체적 매체 인용 없음",
-          "리서치 프리뷰 공개 시점·대상 범위 등 세부 사항 출처 불명확"
-        ],
-        "notes": "앤트로픽은 실재하나 MHS 표준 존재 여부 확인 불가. 공식 발표 링크·출처 필수.",
-        "verified_at": "2026-08-29 03:12"
-      }
+      "image_url": "images/2026-08-29_article_4.jpg"
     }
   ],
   "editorial_briefing": "AI 반도체 수요 급증을 축으로 국내외 소재·부품 공급망이 빠르게 재편되고 있다. 한국은 고순도 황산·QLEDoS 소재 등 핵심 원천기술 확보에 나서는 한편, 중국은 메모리 굴기를 가속해 경쟁 구도가 격화되고 있다.",
@@ -201,6 +146,5 @@
       "label": "AI 장비 표준화",
       "status": "앤트로픽 MHS 공개"
     }
-  ],
-  "last_reviewed_at": "2026-08-29 03:12"
+  ]
 }
