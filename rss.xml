@@ -6,7 +6,47 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Sat, 29 Aug 2026 03:12:26 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 22:29:15 +0900</lastBuildDate>
+    <item>
+      <title>실리콘 작센, 유럽 반도체 심장으로 부상</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-02-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-02-0.html</guid>
+      <category>글로벌</category>
+      <description>독일 작센주가 세미콘 타이완 2026에서 유럽 최대 마이크로일렉트로닉스 클러스터 '실리콘 작센'을 전면에 내세우며 글로벌 반도체 공급망 재편의 핵심 거점임을 선언했다. TSMC 드레스덴 팹 가동을 계기로 유럽 내 소부장 생태계 투자가 가속화되고 있다.</description>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>심텍, 청주에 4000억 베팅…SOCAMM 전용 공장 짓는다</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-02-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-02-1.html</guid>
+      <category>산업재</category>
+      <description>심텍이 충북 청주에 4000억원을 단계적으로 투자해 엔비디아 차세대 AI 가속기용 메모리 모듈 기판 'SOCAMM' 전용 생산라인을 구축한다. AI 인프라 확장 수요에 대응한 기판 공급 역량을 대폭 끌어올리겠다는 전략이다.</description>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>CPO 패키징 소재·공정 기술 경쟁 본격화</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-02-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-02-2.html</guid>
+      <category>반도체소재</category>
+      <description>차세대 AI 인프라의 핵심 기술로 부상한 공동패키지 광학(CPO) 분야에서 EV그룹과 쿨리케앤소파 등 글로벌 패키징 장비·소재 업체들이 기술 선점 경쟁에 나섰다. CPO는 광 인터페이스를 프로세서와 같은 패키지에 통합해 대역폭을 획기적으로 높이는 기술이다.</description>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>화홍반도체, 20억달러 팹 증설…中 파운드리 AI 질주</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-02-3.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-02-3.html</guid>
+      <category>글로벌</category>
+      <description>중국 2위 파운드리 화홍반도체(Hua Hong Grace)가 장쑤성 우시에 20억 달러를 투자해 신규 팹 건설에 나선다. AI 인프라 수요 급증과 미국 기술 제재 우회를 동시에 겨냥한 전략적 대규모 투자다.</description>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>中 과학자, 2400도 버티는 초내열 신합금 개발</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-02-4.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-02-4.html</guid>
+      <category>희귀금속</category>
+      <description>중국 과학자들이 섭씨 2400도의 극한 고온 환경을 견디는 신규 내열 합금 개발에 성공했다고 발표했다. 항공우주·차세대 원자로 등 극한 환경 산업에서 활용 가능한 소재로, 희귀 내열 금속 소재 분야의 기술 패권 경쟁이 본격화되는 신호로 해석된다.</description>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>고려아연, 반도체용 황산 증산 가속</title>
       <link>https://tugman77.github.io/materials-news/news/2026-08-29-0.html</link>
@@ -206,46 +246,6 @@
       <category>산업재</category>
       <description>삼성전자, SK하이닉스, 램리서치가 한자리에 모여 반도체 공정용 세라믹 소재 공급망 협력 방안을 논의했다. 세라믹 부품은 식각·증착 장비의 핵심 소모품으로, 국산화 및 품질 고도화 필요성이 높아지고 있다.</description>
       <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>LG화학, AI반도체 전자소재 2조 육성 선언</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-24-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-24-0.html</guid>
-      <category>반도체소재</category>
-      <description>LG화학이 석유화학 중심 사업 구조를 탈피해 AI 반도체용 전자소재 분야에 2조원 규모의 투자를 단행한다. 반도체 패키징·절연소재·고순도 화학소재 등을 중심으로 포트폴리오를 재편해 2030년 글로벌 소재 강자로 도약한다는 목표다.</description>
-      <pubDate>Mon, 24 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>美·캐나다 무역전쟁, 소부장 공급망 직격탄</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-24-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-24-1.html</guid>
-      <category>글로벌</category>
-      <description>미국과 캐나다의 무역협상이 전면 결렬되며 양국 갈등이 무역전쟁으로 확산됐다. 소재·부품·장비 분야의 북미 공급망이 흔들릴 가능성이 커져 국내 소부장 기업의 수출 전략 재점검이 시급하다는 경고가 나온다.</description>
-      <pubDate>Mon, 24 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>KAIST, 열전달 5.5배 향상 나노 코팅 기술 개발</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-24-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-24-2.html</guid>
-      <category>반도체소재</category>
-      <description>KAIST 연구팀이 구리 표면에 100나노미터 이하 고분자 코팅막을 입혀 열전달 성능을 최대 5.5배 향상시키는 데 성공했다. AI 반도체와 고성능 전자기기의 열 관리 문제를 해결할 핵심 소재 기술로 주목된다.</description>
-      <pubDate>Mon, 24 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>희토류 시장 저가 매물 소진…전반적 가격 유지</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-24-3.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-24-3.html</guid>
-      <category>희귀금속</category>
-      <description>글로벌 희토류 시장에서 저가 공급원이 빠르게 소진되며 가격이 대체로 지지되고 있다. 중국의 수출 규제 장기화 속에 수급 불균형이 심화되는 가운데 주요국의 공급망 다변화 노력도 가속화되고 있다.</description>
-      <pubDate>Mon, 24 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>중국 디스플레이 소재·패널사 상장 러시…韓 업계 긴장</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-24-4.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-24-4.html</guid>
-      <category>산업재</category>
-      <description>중국 디스플레이 소재 및 패널 업체들이 잇따라 자본시장 상장에 나서며 연구개발 자금 확보에 박차를 가하고 있다. 한국 디스플레이 소재·장비 업계의 경쟁 압박이 한층 가중될 것으로 우려된다.</description>
-      <pubDate>Mon, 24 Aug 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
