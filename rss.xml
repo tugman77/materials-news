@@ -6,7 +6,47 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Wed, 02 Sep 2026 22:29:15 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 05:07:14 +0900</lastBuildDate>
+    <item>
+      <title>중국, 헬륨 수출 전격 금지…반도체 공정 직격</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-06-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-06-0.html</guid>
+      <category>글로벌</category>
+      <description>중국 정부가 반도체 핵심 냉각·공정 가스인 헬륨의 수출을 전면 금지하고 즉시 시행에 들어갔다. 삼성전자·SK하이닉스 등 국내 팹 업계는 비상 재고 점검에 나섰으며, 카타르·미국산 대체 공급선 확보가 최우선 과제로 떠올랐다.</description>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>AI 반도체 설계 새 변수 '열'…PPAT 시대 개막</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-06-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-06-1.html</guid>
+      <category>반도체소재</category>
+      <description>AI 반도체 설계 패러다임이 전력·성능·면적(PPA)에서 '열(Thermal)'을 추가한 PPAT 체계로 진화하고 있다. 발열 관리가 소자·소재·패키징의 전제 조건으로 자리 잡으면서 관련 소재·부품 수요가 급증할 전망이다.</description>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>KAIST·삼성, 반도체 온실가스 분해 신촉매 개발</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-06-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-06-2.html</guid>
+      <category>반도체소재</category>
+      <description>KAIST와 삼성전자가 공동으로 반도체 제조 공정에서 배출되는 강력한 온실가스를 99% 이상 분해하는 고내구성 촉매를 개발했다. 엔트로피 안정화 원리를 활용해 기존 촉매의 수명을 수 배 이상 연장한 점이 핵심이다.</description>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>OLED 발광재료 22억달러 돌파…PSF 차세대 경쟁 점화</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-06-3.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-06-3.html</guid>
+      <category>산업재</category>
+      <description>글로벌 OLED 발광재료 시장이 22억달러를 돌파하며 성장세를 이어가는 가운데, 차세대 소재 PSF OLED를 둘러싼 한·중 경쟁이 본격화되고 있다. 삼성디스플레이의 67조원 규모 폴더블 투자 계획이 확정되며 관련 소재 수요가 급증할 전망이다.</description>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>美 기업 4곳, 한국 소재·장비에 20억달러 투자 확정</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-06-4.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-06-4.html</guid>
+      <category>산업재</category>
+      <description>미국 기업 4곳이 한국 반도체 소재·장비 분야에 총 20억달러를 투자하기로 확정했다. 글로벌 공급망 재편 흐름 속에서 한·미 반도체 소부장 협력이 실질적으로 격상됐다는 평가가 나온다.</description>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>실리콘 작센, 유럽 반도체 심장으로 부상</title>
       <link>https://tugman77.github.io/materials-news/news/2026-09-02-0.html</link>
@@ -206,46 +246,6 @@
       <category>글로벌</category>
       <description>스마트폰 핵심 부품인 메모리 가격이 급등하면서 애플 공급업체들의 상반기 실적이 엇갈렸다. 렌즈테크놀로지 등 주요 부품 업체들이 메모리 원가 부담으로 수익성이 눌리면서, 하반기 아이폰 출시에 실적 반등을 기대하는 구도가 형성되고 있다.</description>
       <pubDate>Wed, 26 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>SK하이닉스, 일본 공장 설립 검토…소재·장비 생태계 주목</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-25-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-25-0.html</guid>
-      <category>반도체소재</category>
-      <description>SK하이닉스가 일본 내 반도체 생산 시설 설립을 검토 중인 것으로 알려졌다. 일본의 탄탄한 소재·장비 인프라와 일본 정부의 대규모 보조금 지원 가능성이 주요 배경으로 꼽힌다. 실현될 경우 한국 소부장 기업의 일본 현지 진출에도 연쇄 효과가 기대된다.</description>
-      <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>후지필름, AI 반도체 소재 증산…필름 기업의 변신</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-25-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-25-1.html</guid>
-      <category>반도체소재</category>
-      <description>일본 후지필름이 AI 반도체용 소재 생산 능력을 대폭 확대한다고 밝혔다. 포토레지스트, 세정액 등 핵심 공정 소재 생산설비 증설에 집중 투자하며 필름·사무기기 중심의 사업 구조에서 첨단 소재 기업으로 체질을 전환하고 있다.</description>
-      <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>산업부, 소부장 투자지원 접수 연장…최대 50% 지원</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-25-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-25-2.html</guid>
-      <category>글로벌</category>
-      <description>산업통상자원부가 첨단전략산업 소재·부품·장비(소부장) 분야 투자지원 사업의 신청 접수 기간을 연장했다. 투자비의 최대 50%까지 지원하는 이번 사업은 반도체·디스플레이·이차전지 등 핵심 산업 공급망 강화를 목표로 한다.</description>
-      <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>중국, 7월 대미 이트륨 수출 급증…정상회담 전략적 신호?</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-25-3.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-25-3.html</guid>
-      <category>희귀금속</category>
-      <description>중국이 지난 7월 미국에 대한 이트륨(Yttrium) 수출량을 큰 폭으로 늘린 것으로 나타났다. 미중 정상회담 개최 가능성이 거론되는 가운데, 핵심광물 수출 조정이 외교적 레버리지로 활용되고 있다는 분석이 제기된다.</description>
-      <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>삼성·SK하이닉스·램리서치, 반도체 세라믹 공급망 강화 한 목소리</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-25-4.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-25-4.html</guid>
-      <category>산업재</category>
-      <description>삼성전자, SK하이닉스, 램리서치가 한자리에 모여 반도체 공정용 세라믹 소재 공급망 협력 방안을 논의했다. 세라믹 부품은 식각·증착 장비의 핵심 소모품으로, 국산화 및 품질 고도화 필요성이 높아지고 있다.</description>
-      <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>

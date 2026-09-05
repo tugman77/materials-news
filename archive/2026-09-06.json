@@ -25,18 +25,7 @@
       "image_keyword": "semiconductor helium gas supply",
       "is_featured": true,
       "timestamp": "오전 10:30",
-      "image_url": "images/2026-09-06_article_0.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "중국의 세계 헬륨 생산 비중 10~15% — 실제로 중국은 미국·카타르·러시아보다 생산 비중이 낮음",
-          "헬륨 수출 전면 금지 즉시 시행 — 구체적 정책 발표 출처·일자 미기재",
-          "국제 헬륨 현물 가격 급등 — 구체적 수치 없이 '관계자 전언'으로만 처리"
-        ],
-        "notes": "중국 헬륨 생산 점유율 수치 과장 가능성, 정책 출처 보강 필요",
-        "verified_at": "2026-09-06 05:07"
-      }
+      "image_url": "images/2026-09-06_article_0.jpg"
     },
     {
       "id": 1,
@@ -60,18 +49,7 @@
       "image_keyword": "semiconductor chip thermal management packaging",
       "is_featured": false,
       "timestamp": "오전 10:50",
-      "image_url": "images/2026-09-06_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "인용된 교수 4인 소속·이름 실재 여부 교차 확인 필요",
-          "GPU 단일 칩 소비전력 최대 1kW 수치 — 현세대 최상위 칩 기준으로 경계값",
-          "PPAT 개념 공식 제안 — 학계 공식 표준 채택 여부 불명확"
-        ],
-        "notes": "기술 내용 신뢰도 높음, 인명·소속 팩트체크 권장",
-        "verified_at": "2026-09-06 05:07"
-      }
+      "image_url": "images/2026-09-06_article_1.jpg"
     },
     {
       "id": 2,
@@ -95,18 +73,7 @@
       "image_keyword": "semiconductor catalyst industrial emission control",
       "is_featured": false,
       "timestamp": "오전 11:10",
-      "image_url": "images/2026-09-06_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "분해율 99% 이상 — 실험실 조건 기준이며 실증 규모 미명시",
-          "엔트로피 안정화 촉매 상용화 가능성 높다는 평가 — 평가 주체 출처 불명",
-          "KAIST·삼성전자 공동 연구 논문 게재지·시점 미기재"
-        ],
-        "notes": "과학적 원리·배경 사실 정확, 세부 출처 보강 권장",
-        "verified_at": "2026-09-06 05:07"
-      }
+      "image_url": "images/2026-09-06_article_2.jpg"
     },
     {
       "id": 3,
@@ -127,21 +94,10 @@
         "향후 OLED 발광재료 시장은 연평균 10% 이상의 성장세를 유지할 것으로 예측된다. 폴더블·롤러블·투명 OLED 등 폼팩터 다변화와 차량용 디스플레이 수요 증가가 시장 확대를 이끄는 동력이 될 전망이다. PSF 소재의 상용화 시점이 시장 성장 가속의 분기점이 될 것이라는 분석이 지배적이다.",
         "투자 측면에서는 차세대 OLED 소재 원천 기술을 보유한 국내 중소형 재료 기업들이 주목받을 것으로 예상된다. 삼성디스플레이의 대규모 라인 투자 계획이 확정된 만큼, 그 수혜가 국내 발광재료·봉지재·편광판 등 주변 소재 공급사로 확산될 것이라는 기대가 높아지고 있다."
       ],
-      "image_keyword": "US Korea semiconductor supply chain partnership",
+      "image_keyword": "OLED display material panel organic",
       "is_featured": false,
       "timestamp": "오전 11:30",
-      "image_url": "images/2026-09-06_article_3.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "삼성디스플레이 폴더블 투자 67조원 — 단일 제품군 투자로는 이례적 대규모, 출처 미기재",
-          "PSF OLED 삼성·LG 차기 라인업 검토 — 공식 발표 없이 '검토 중'으로 기재",
-          "OLED 발광재료 시장 22억달러 수치 — 조사기관 출처 미기재"
-        ],
-        "notes": "67조원 투자 수치 출처 불명확, 검증 후 게재 권장",
-        "verified_at": "2026-09-06 05:07"
-      }
+      "image_url": "images/2026-09-06_article_3.jpg"
     },
     {
       "id": 4,
@@ -165,18 +121,7 @@
       "image_keyword": "semiconductor material equipment factory investment",
       "is_featured": false,
       "timestamp": "오전 11:50",
-      "image_url": "images/2026-09-06_article_4.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "투자 확정 미국 기업 4곳 — 코닝 외 나머지 3개사 명칭 미기재로 검증 불가",
-          "투자액 20억달러 구체 배분·계약 시점 출처 없음",
-          "해상풍력 연계 첨단소재 공급망 포함 — 반도체 소부장 투자와 이질적 항목, 출처 불명"
-        ],
-        "notes": "투자 기업명 미공개로 사실 검증 어려움, 구체 출처 필수",
-        "verified_at": "2026-09-06 05:07"
-      }
+      "image_url": "images/2026-09-06_article_4.jpg"
     }
   ],
   "editorial_briefing": "중국의 헬륨 수출 전면 금지로 반도체 공급망에 비상이 걸린 가운데, AI 반도체 설계는 PPAT 체계로 진화하고 한·미 소부장 협력은 강화되는 등 위기와 기회가 공존한다.",
@@ -206,6 +151,5 @@
       "label": "반도체 온실가스 촉매",
       "status": "99% 분해 성공"
     }
-  ],
-  "last_reviewed_at": "2026-09-06 05:07"
+  ]
 }
