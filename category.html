@@ -249,8 +249,8 @@ document.querySelectorAll('#main-nav a[data-cat]').forEach(a => {
 let allArticles = [];
 let archiveDates = [];
 let archiveIdx = 0;
-let visibleCount = 20;
-const PAGE = 12;
+let visibleCount = 21;   // 3열 그리드 — 빈칸 없이 7줄
+const PAGE = 15;         // 더보기 1회당 추가 노출 수 (5줄)
 
 function filtered() {
   return allArticles.filter(r => r.article.category === currentCat);
@@ -289,24 +289,35 @@ function render() {
   document.getElementById('load-end').style.display = hasMore ? 'none' : '';
 }
 
+// 아카이브 하루치(5건)를 이 카테고리로 거르면 1~2건만 남는다. 더보기 1회에 하루만 읽으면
+// 3~4개씩 찔끔 늘어나서(2026-09-16 대표님 지적) 한 페이지(PAGE) 분량이 찰 때까지
+// 며칠치를 묶어 읽는다. 5일씩 병렬로 받아 클릭 한 번에 끝나게 한다.
+async function fetchArchiveDays(n) {
+  const dates = archiveDates.slice(archiveIdx, archiveIdx + n);
+  archiveIdx += dates.length;
+  const results = await Promise.all(dates.map(async date => {
+    try {
+      const res = await fetch(`archive/${date}.json`);
+      if (!res.ok) return [];
+      const data = await res.json();
+      return (data.articles || []).map((a, idx) => ({article:a, date, idx}));
+    } catch(e) { return []; }
+  }));
+  results.forEach(rows => allArticles.push(...rows));   // 날짜 내림차순 유지
+}
+
 async function loadMore() {
   const btn = document.getElementById('load-more-btn');
   btn.disabled = true;
   btn.textContent = '불러오는 중...';
 
-  if (visibleCount < filtered().length) {
-    visibleCount += PAGE;
-  } else if (archiveIdx < archiveDates.length) {
-    const date = archiveDates[archiveIdx++];
-    try {
-      const res = await fetch(`archive/${date}.json`);
-      if (res.ok) {
-        const data = await res.json();
-        (data.articles || []).forEach((a, idx) => allArticles.push({article:a, date, idx}));
-      }
-    } catch(e) {}
-    visibleCount += PAGE;
+  const target = visibleCount + PAGE;
+  let guard = 0;
+  while (filtered().length < target && archiveIdx < archiveDates.length && guard < 12) {
+    await fetchArchiveDays(5);
+    guard++;
   }
+  visibleCount = target;
 
   render();
   btn.disabled = false;
@@ -344,18 +355,11 @@ async function init() {
     }
   } catch(e) {}
 
-  // 이 카테고리 기사가 초기 노출 수(visibleCount)만큼 찰 때까지 아카이브 로드 (최대 25일)
+  // 이 카테고리 기사가 초기 노출 수(visibleCount)만큼 찰 때까지 아카이브 로드 (5일씩 병렬, 최대 30일)
   let guard = 0;
-  while (filtered().length < visibleCount && archiveIdx < archiveDates.length && guard < 25) {
-    const date = archiveDates[archiveIdx++];
+  while (filtered().length < visibleCount && archiveIdx < archiveDates.length && guard < 6) {
+    await fetchArchiveDays(5);
     guard++;
-    try {
-      const res = await fetch(`archive/${date}.json`);
-      if (res.ok) {
-        const data = await res.json();
-        (data.articles || []).forEach((a, idx) => allArticles.push({article:a, date, idx}));
-      }
-    } catch(e) {}
   }
 
   render();
