@@ -435,7 +435,7 @@ function fmtDate(s) {
   const [y,m,d] = s.split('-');
   return `${y}.${m}.${d}`;
 }
-const todayISO = getTodayISO();
+let todayISO = getTodayISO();
 
 // ── 전역 데이터 ──
 let allArticles = [];      // {article, date, idx}
@@ -882,6 +882,10 @@ async function init() {
     const data = await res.json();
     const arts = data.articles || [];
     todayKey = data.date_key || null;
+    // 최신 세트의 날짜는 브라우저 오늘이 아니라 실제 발행일로 쓴다. 발행이 며칠 멈추면
+    // articles.json은 옛 세트인데 todayISO로 넣어 "오늘" 날짜가 찍히고, 같은 날짜의
+    // archive/*.json이 걸러지지 않아 같은 기사가 두 번 나열됐다 (2026-09-15 실측, 9일 공백).
+    if (todayKey) todayISO = todayKey;
 
     document.getElementById('breaking-text').textContent = arts.map(a=>a.title).join('  |  ');
     const upEl = document.getElementById('update-time');
