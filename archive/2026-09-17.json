@@ -25,18 +25,7 @@
       "image_keyword": "semiconductor cooling material laboratory",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-09-17_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "NVIDIA AI 가속기 소비전력 1,000W 초과 주장 — H100은 ~700W이나 Blackwell급에서는 가능",
-          "SK이노베이션 환경과학기술원 원장 '김필석' 실명 인용 — 출처 미확인",
-          "2026년 내 1차 소재 후보군 선정 목표 — 협약 공식 발표 여부 미확인"
-        ],
-        "notes": "주요 기관·기술 개념은 실재하며 전반적으로 신뢰도 높음",
-        "verified_at": "2026-09-17 03:15"
-      }
+      "image_url": "images/2026-09-17_article_0.jpg"
     },
     {
       "id": 1,
@@ -60,18 +49,7 @@
       "image_keyword": "OLED display panel manufacturing process",
       "is_featured": false,
       "timestamp": "오전 10:30",
-      "image_url": "images/2026-09-17_article_1.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "8.6세대 기판이 6세대 대비 면적 2.5배 주장 — 실제 비율은 약 2.16배로 과장 의심",
-          "LG디스플레이 파주 8.6세대 투자 검토 — 공식 발표 없는 미확인 정보",
-          "투자 규모 '수조 원 대' — 구체적 수치 없이 추산으로만 기술"
-        ],
-        "notes": "기판 면적 배수 오류 가능성이 있어 수치 재확인 필요",
-        "verified_at": "2026-09-17 03:15"
-      }
+      "image_url": "images/2026-09-17_article_1.jpg"
     },
     {
       "id": 2,
@@ -92,21 +70,10 @@
         "이번 사례는 광물 자원의 지정학화가 단순한 수출 통제를 넘어 인수·합병 심사 단계로까지 확대되고 있음을 보여준다. 특히 EU가 탄소 규제와 공급망 안보를 연계하는 복합적 접근을 취하기 시작했다는 점에서, 이후 글로벌 광산 M&A 심사의 새로운 선례가 될 수 있다는 평가가 나온다.",
         "업계 전문가는 '이번 EU의 이의 제기는 공급망 안보와 기후 목표를 동시에 고려한 조치'라며 '향후 저탄소 광물 자산의 가치가 매장량 평가를 넘어 지정학·환경 프리미엄을 포함하게 될 것'이라고 전망했다."
       ],
-      "image_keyword": "Kazakhstan uranium mining operation",
+      "image_keyword": "nickel mining industrial smelting plant",
       "is_featured": false,
       "timestamp": "오전 11:00",
-      "image_url": "images/2026-09-17_article_2.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "MMG의 앵글로 아메리칸 니켈 자산 인수 계획 — 공식 계약 체결 여부 미확인",
-          "EU 집행위의 공식 이의 제기 절차 개시 여부 — 구체적 근거 자료 부재",
-          "MMG가 니켈 포트폴리오 '처음으로 구축' 주장 — 기존 자산 보유 여부 재확인 필요"
-        ],
-        "notes": "딜 실재 여부 및 EU 규제 절차 진행 상황 추가 확인 권고",
-        "verified_at": "2026-09-17 03:15"
-      }
+      "image_url": "images/2026-09-17_article_2.jpg"
     },
     {
       "id": 3,
@@ -130,17 +97,7 @@
       "image_keyword": "critical minerals supply chain cooperation Central Asia",
       "is_featured": false,
       "timestamp": "오후 01:30",
-      "image_url": "images/2026-09-17_article_3.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "한-중앙아 광물 협력 포럼 최근 개최 — 구체적 일시·장소 미기재",
-          "우즈베키스탄 리튬 광상 개발 활발 — 상업 규모 개발 현황 과장 가능성"
-        ],
-        "notes": "국가별 광물 매장 현황은 대체로 정확하나 이미지 키워드 수정 권고",
-        "verified_at": "2026-09-17 03:15"
-      }
+      "image_url": "images/2026-09-17_article_3.jpg"
     },
     {
       "id": 4,
@@ -164,18 +121,7 @@
       "image_keyword": "semiconductor chip advanced packaging assembly",
       "is_featured": false,
       "timestamp": "오후 02:45",
-      "image_url": "images/2026-09-17_article_4.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "반도체 패키징 기업 '쿨스' 실재 여부 — 국내 상장·등록 정보 확인 필요",
-          "서멀클러치 공정 시간 '최대 40% 단축' — 출처 없는 자체 주장 수치",
-          "엔비디아 '루빈 울트라' 규격 공식 확정 여부 — 아직 미발표 스펙 인용 가능성"
-        ],
-        "notes": "기업 실재 및 40% 수치 등 자체 발표 클레임 교차 검증 필요",
-        "verified_at": "2026-09-17 03:15"
-      }
+      "image_url": "images/2026-09-17_article_4.jpg"
     }
   ],
   "editorial_briefing": "AI 데이터센터 냉각·반도체 패키징 기술 경쟁이 가속화되는 가운데, 8.6세대 OLED 투자와 핵심광물 공급망 다변화가 동시에 진행 중이다. EU의 니켈 자산 인수 제동으로 글로벌 공급망 재편 리스크도 부각되고 있다.",
@@ -205,6 +151,5 @@
       "label": "AI 패키지 불량 기술",
       "status": "쿨스 신기술 공개"
     }
-  ],
-  "last_reviewed_at": "2026-09-17 03:15"
+  ]
 }

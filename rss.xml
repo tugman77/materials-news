@@ -6,7 +6,47 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Tue, 15 Sep 2026 22:54:45 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 03:15:20 +0900</lastBuildDate>
+    <item>
+      <title>화학연·SK이노, AI 냉각소재 공동개발 착수</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-17-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-17-0.html</guid>
+      <category>반도체소재</category>
+      <description>한국화학연구원과 SK이노베이션 환경과학기술원이 AI 데이터센터의 발열 문제를 해결할 차세대 '2상 냉각' 소재 개발에 공동으로 나선다. 액체가 기체로 바뀌는 상변화 원리를 활용한 이 기술은 기존 수냉식 대비 냉각 효율이 수십 배 높아 AI 반도체 인프라의 게임체인저로 주목받고 있다.</description>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>8.6세대 OLED 투자 본격화…소재·장비株 동반 강세</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-17-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-17-1.html</guid>
+      <category>산업재</category>
+      <description>삼성디스플레이가 8.6세대 OLED 생산라인 구축에 속도를 내면서 관련 소재·장비 기업 주가가 일제히 상승세를 보이고 있다. 기판 면적이 기존 6세대 대비 2.5배로 커지면서 발광 소재 사용량과 신규 장비 발주가 공급망 전반으로 파급되고 있다.</description>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>EU, MMG의 앵글로 니켈 자산 인수에 제동</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-17-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-17-2.html</guid>
+      <category>글로벌</category>
+      <description>유럽연합(EU) 집행위원회가 호주 광산기업 MMG의 앵글로 아메리칸 니켈 자산 인수 계획에 공식 이의를 제기했다. 인수가 성사될 경우 저탄소 페로니켈 공급이 유럽 스테인리스강 제조사에서 이탈할 수 있다는 공급망 안보 우려가 핵심 논거다.</description>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>韓, 중앙아 5개국과 핵심광물 공급망 협력 확대</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-17-3.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-17-3.html</guid>
+      <category>희귀금속</category>
+      <description>한국 정부가 카자흐스탄·우즈베키스탄 등 중앙아시아 5개국과의 핵심광물 협력 범위를 기존 교역 중심에서 탐사·제련·기술 이전 등 전 가치사슬로 확장하기로 했다. 특정 국가에 집중된 전략광물 의존도를 줄이기 위한 공급망 다변화 전략의 일환이다.</description>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>쿨스, 초대면적 AI 패키지 접합 불량 잡는 기술 공개</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-17-4.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-17-4.html</guid>
+      <category>반도체소재</category>
+      <description>반도체 패키징 기업 쿨스가 엔비디아 차세대 AI 가속기 '루빈 울트라'급 초대면적 패키지에서 발생하는 기판 휨(Warpage) 및 접합 불량을 억제하는 신기술을 개발했다. 고강성 리드와 자체 개발 서멀클러치를 결합해 공정 수율과 신뢰성을 동시에 높이는 솔루션이다.</description>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>中 이트륨 수출통제…美·日 공급망 직격</title>
       <link>https://tugman77.github.io/materials-news/news/2026-09-15-0.html</link>
@@ -206,46 +246,6 @@
       <category>글로벌</category>
       <description>중국 반도체 공정 소재 기업 남대광전기재료가 CXMT의 ArF 포토레지스트·첨단 전구체 핵심 공급사로 자리잡았다. 이 기업 없이는 CXMT 메모리 양산이 불가능하다는 평가가 나올 만큼, 중국의 소재 내재화가 예상보다 빠르게 진행되고 있다.</description>
       <pubDate>Fri, 28 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>반도체 매출 1.6조 달러 시대…소부장 수혜 본격화</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-27-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-27-0.html</guid>
-      <category>글로벌</category>
-      <description>가트너는 2026년 전 세계 반도체 매출이 1.6조 달러에 달해 전년 대비 92% 급증할 것으로 전망했다. AI 인프라 투자가 수요를 견인하면서 소재·부품·장비 업계의 낙수효과가 가시화되고 있다.</description>
-      <pubDate>Thu, 27 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>MLCC 재고 사상 최저…AI 인프라 수요 급증 여파</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-27-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-27-1.html</guid>
-      <category>산업재</category>
-      <description>AI 서버 인프라 투자 급증으로 '전자산업의 쌀'로 불리는 MLCC(적층세라믹커패시터) 글로벌 재고가 사상 최저 수준으로 떨어졌다. 유통업체 재고 부족이 가격 상승 압력으로 이어질 수 있어 국내 부품업계가 예의주시하고 있다.</description>
-      <pubDate>Thu, 27 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>GaN 전력반도체, 로보틱스 시장 공략 본격화</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-27-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-27-2.html</guid>
-      <category>반도체소재</category>
-      <description>아이언디바이스가 초소형 GaN(질화갈륨) 전력구동 반도체를 선전 PCIM 아시아 2026에서 공개했다. 팬아웃 웨이퍼레벨패키징으로 경쟁사 대비 40% 소형화를 달성하며 로봇 관절 액추에이터 시장을 공략한다.</description>
-      <pubDate>Thu, 27 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>니오븀·탄탈럼 수입 러 기업 4곳 영국 제재</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-27-3.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-27-3.html</guid>
-      <category>희귀금속</category>
-      <description>영국 정부가 무기급 희귀금속인 탄탈럼과 니오븀을 수출하는 러시아 기업 4곳에 제재를 부과했다. 이들 소재는 항공우주·방산·첨단 전자기기에 필수적으로 사용돼 글로벌 공급망 재편 압력이 커지고 있다.</description>
-      <pubDate>Thu, 27 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>중국 핵심광물 통제, 서방 헤징 전략 왜 실패했나</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-27-4.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-27-4.html</guid>
-      <category>글로벌</category>
-      <description>The Diplomat 분석에 따르면 중국의 희토류 지배에 대응한 서방의 공급망 다변화 전략이 지난 10여 년간 큰 성과를 거두지 못했다. 시장 논리와 정치적 의지의 괴리, 투자 일관성 부족이 주원인으로 꼽힌다.</description>
-      <pubDate>Thu, 27 Aug 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
