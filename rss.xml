@@ -6,7 +6,47 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 17 Sep 2026 03:15:20 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 03:14:26 +0900</lastBuildDate>
+    <item>
+      <title>전북, 반도체 소재·케미컬 소부장 특화단지 선정</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-18-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-18-0.html</guid>
+      <category>반도체소재</category>
+      <description>전북특별자치도가 산업통상자원부의 제3기 소재·부품·장비 특화단지 공모에서 '반도체 소재·케미컬 소부장 특화단지'로 최종 선정됐다. 새만금·익산·완주 일대가 K-반도체 공급망의 핵심 거점으로 부상하게 됐다.</description>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>화웨이 UnifiedBus, 100만 프로세서 단일 시스템 도전</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-18-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-18-1.html</guid>
+      <category>글로벌</category>
+      <description>화웨이가 최대 100만 개 프로세서를 하나의 컴퓨터처럼 연결하는 UnifiedBus 아키텍처를 공개했다. 미국 반도체 제재 우회를 겨냥한 기술로, 데이터센터 설계 패러다임에 근본적인 변화를 예고한다.</description>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>LG디스플레이·한화시스템, 전투기 콕핏 OLED 개발 착수</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-18-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-18-2.html</guid>
+      <category>산업재</category>
+      <description>LG디스플레이가 한화시스템과 손잡고 전투기 조종석(콕핏)용 OLED 디스플레이 개발에 나선다. 방산 분야로 OLED 응용처를 확장하는 첫 사례로, 고신뢰성·광시야각 소재 수요가 새롭게 열릴 전망이다.</description>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>中 과학자, 2400도 견디는 초내열 신합금 개발</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-18-3.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-18-3.html</guid>
+      <category>희귀금속</category>
+      <description>중국 과학자들이 섭씨 2400도 이상의 극한 온도를 견디는 신합금 개발에 성공했다고 발표했다. 차세대 항공우주·방산용 소재로 주목받으며 글로벌 고온 합금 시장 경쟁이 새로운 국면을 맞고 있다.</description>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>아일랜드, 반도체 풀스택 생태계 2040 전략 공개</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-18-4.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-18-4.html</guid>
+      <category>글로벌</category>
+      <description>아일랜드가 50년간 축적한 반도체 생태계를 기반으로 2040년을 목표로 한 '풀스택 반도체 강국' 전략을 발표했다. 인텔·TSMC 등 팹과 소재·장비·설계 전 분야를 아우르는 통합 전략으로, 유럽 반도체 자립의 핵심 거점으로 부상하고 있다.</description>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>화학연·SK이노, AI 냉각소재 공동개발 착수</title>
       <link>https://tugman77.github.io/materials-news/news/2026-09-17-0.html</link>
@@ -206,46 +246,6 @@
       <category>글로벌</category>
       <description>앤트로픽이 AI 에이전트와 현미경·로봇 등 물리적 장비를 연결하는 표준 인터페이스 'MHS(모델 하드웨어 스탠더드)'를 공개했다. 반도체·소재 연구 자동화의 핵심 인프라가 될 수 있다는 평가와 함께, 과학·제조 분야 디지털 전환의 새 장이 열렸다는 분석이 나온다.</description>
       <pubDate>Sat, 29 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>화웨이, 칩 접기로 AI 반도체 한계 돌파 선언</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-28-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-28-0.html</guid>
-      <category>글로벌</category>
-      <description>화웨이가 첨단 미세공정 없이도 칩 성능을 끌어올리는 'LogicFolding' 아키텍처를 공개했다. 트랜지스터 축소 대신 회로 구조 자체를 3차원으로 접어 집적도를 높이는 방식으로, 수출규제 속 독자 돌파구를 마련했다는 평가다.</description>
-      <pubDate>Fri, 28 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>우주청, 위성 핵심부품 국산화 스타트업 간담회</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-28-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-28-1.html</guid>
-      <category>산업재</category>
-      <description>우주항공청이 위성 핵심부품 개발 스타트업·중소기업 10곳과 현장 간담회를 열고 실증 기회 부족 등 애로사항을 청취했다. 광학 소재·탑재체 부품 국산화와 소부장 생태계 연계 지원 방안을 논의했다.</description>
-      <pubDate>Fri, 28 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>페로브스카이트 계면 비틀기로 이온이동 억제 성공</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-28-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-28-2.html</guid>
-      <category>반도체소재</category>
-      <description>국제 연구팀이 페로브스카이트 소재 계면을 28도 각도로 비틀었을 때 이온 이동이 효과적으로 억제된다는 사실을 규명했다. 차세대 태양전지·LED 소자의 핵심 상용화 장벽이던 내구성 문제 해결에 실마리를 제공했다는 평가다.</description>
-      <pubDate>Fri, 28 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>로보센스 로봇 라이다, 상반기 510% 폭증…AI 로봇 가속</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-28-3.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-28-3.html</guid>
-      <category>산업재</category>
-      <description>중국 라이다 기업 로보센스가 2026년 상반기 로봇용 라이다 판매량이 전년 동기 대비 510% 급증했다고 발표했다. 전체 매출도 30% 늘어났으며, 자율주행 중심에서 산업·서비스 로봇으로 수요 구조가 급격히 전환되고 있다.</description>
-      <pubDate>Fri, 28 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>중국 반도체 소재 자립의 핵심, 남대광전기재료 해부</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-28-4.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-28-4.html</guid>
-      <category>글로벌</category>
-      <description>중국 반도체 공정 소재 기업 남대광전기재료가 CXMT의 ArF 포토레지스트·첨단 전구체 핵심 공급사로 자리잡았다. 이 기업 없이는 CXMT 메모리 양산이 불가능하다는 평가가 나올 만큼, 중국의 소재 내재화가 예상보다 빠르게 진행되고 있다.</description>
-      <pubDate>Fri, 28 Aug 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>

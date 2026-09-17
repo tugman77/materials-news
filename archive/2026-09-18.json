@@ -27,17 +27,7 @@
       "image_keyword": "semiconductor material manufacturing plant",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-09-18_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "'소부장특별법' 제45조 근거 지정 절차 — 조문 번호 정확성 확인 필요",
-          "제3기 특화단지 총 4곳 신규 추가 — 공식 공고 대조 필요"
-        ],
-        "notes": "법령 조문 번호 외 전반적 내용 신뢰도 높음",
-        "verified_at": "2026-09-18 03:14"
-      }
+      "image_url": "images/2026-09-18_article_0.jpg"
     },
     {
       "id": 1,
@@ -62,18 +52,7 @@
       "image_keyword": "AI data center semiconductor interconnect",
       "is_featured": false,
       "timestamp": "오전 09:30",
-      "image_url": "images/2026-09-18_article_1.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'피어리엄 컴퓨트(Peerium Compute)' 제품명 — 공식 발표 출처 불확인",
-          "100만 프로세서 단일 시스템 성능 수치 — 검증 가능한 벤치마크 미제시",
-          "InfiniBand 대비 대역폭 '수십 배' 향상 주장 — 구체적 수치·근거 없음"
-        ],
-        "notes": "제품명·성능 수치 등 핵심 주장 출처 불명확, 추가 확인 필요",
-        "verified_at": "2026-09-18 03:14"
-      }
+      "image_url": "images/2026-09-18_article_1.jpg"
     },
     {
       "id": 2,
@@ -97,17 +76,7 @@
       "image_keyword": "OLED display military cockpit",
       "is_featured": false,
       "timestamp": "오전 09:45",
-      "image_url": "images/2026-09-18_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "'이민우 산업성장실장' 직함·발언 — 공식 보도자료 대조 필요",
-          "OLED 응답속도 'LCD의 1/10 수준' — 패널 사양별 편차 커 일반화 주의"
-        ],
-        "notes": "기업·행사명 등 주요 사실 신뢰도 높음, 일부 수치 단순화 주의",
-        "verified_at": "2026-09-18 03:14"
-      }
+      "image_url": "images/2026-09-18_article_2.jpg"
     },
     {
       "id": 3,
@@ -131,18 +100,7 @@
       "image_keyword": "high temperature alloy aerospace material",
       "is_featured": false,
       "timestamp": "오전 10:00",
-      "image_url": "images/2026-09-18_article_3.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "2400도 이상 내열 신합금 성공 — 논문·저널 출처 전무, 독립 검증 필요",
-          "니켈계 초합금 최대 내열 온도 '약 1100도' — 냉각 기술 포함 시 실제 운용 온도와 괴리",
-          "중국 연구팀 소속 기관·저자 미명시 — 발표 주체 불분명"
-        ],
-        "notes": "혁신 주장임에도 학술 출처 전혀 없어 독립 검증 전 주의 요망",
-        "verified_at": "2026-09-18 03:14"
-      }
+      "image_url": "images/2026-09-18_article_3.jpg"
     },
     {
       "id": 4,
@@ -167,18 +125,7 @@
       "image_keyword": "Ireland semiconductor fab manufacturing",
       "is_featured": false,
       "timestamp": "오전 10:15",
-      "image_url": "images/2026-09-18_article_4.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'세계 10대 반도체·ICT 기업 중 9개' 아일랜드 진출 — 출처 없는 구체 통계",
-          "'실리콘 독(Silicon Dock)' — 더블린 IT 클러스터 명칭이며 반도체 특화 클러스터와 혼용 가능성",
-          "시머스 캐럴 IDA 발언 — 직함·원문 출처 확인 필요"
-        ],
-        "notes": "IDA·EU Chips Act 등 근거는 유효하나 일부 통계·명칭 정확성 확인 필요",
-        "verified_at": "2026-09-18 03:14"
-      }
+      "image_url": "images/2026-09-18_article_4.jpg"
     }
   ],
   "editorial_briefing": "전북 소부장 특화단지 선정, 아일랜드 반도체 풀스택 전략 등 각국이 반도체·소재 공급망 내재화에 속도를 내고 있다. 화웨이 UnifiedBus·중국 초내열 합금 등 중국의 기술 자립 행보가 글로벌 공급망 재편을 가속화하는 형국이다.",
@@ -208,6 +155,5 @@
       "label": "방산 OLED 개발",
       "status": "LG·한화 착수"
     }
-  ],
-  "last_reviewed_at": "2026-09-18 03:14"
+  ]
 }
