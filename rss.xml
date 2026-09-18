@@ -6,7 +6,47 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Fri, 18 Sep 2026 03:14:26 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 03:08:15 +0900</lastBuildDate>
+    <item>
+      <title>두산, 반도체 소재에 1조 투자 단행</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-19-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-19-0.html</guid>
+      <category>반도체소재</category>
+      <description>두산그룹이 AI 반도체 수요 급증에 대응해 반도체 소재 사업에 1조 원 규모의 대규모 투자를 결정했다. 국내 소부장 생태계 강화와 함께 두산의 신성장 동력 확보 전략으로 주목받고 있다.</description>
+      <pubDate>Sat, 19 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>AI 수요에 DRAM 공급 부족 2027년까지 지속 전망</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-19-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-19-1.html</guid>
+      <category>글로벌</category>
+      <description>AI 인프라 투자 급증으로 DRAM 시장의 공급 부족이 2027년까지 이어질 것이라는 전망이 나왔다. AI 서버용 고대역폭 메모리 수요가 일반 소비자 전자제품보다 우선시되며 시장 구조가 재편되고 있다.</description>
+      <pubDate>Sat, 19 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>금호전기, 조명 기술로 디스플레이 시장 진출</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-19-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-19-2.html</guid>
+      <category>산업재</category>
+      <description>조명 전문 기업 금호전기가 수십 년간 축적한 발광 소재 기술을 기반으로 차세대 디스플레이 소재 시장에 진출한다. 일반 조명 분야의 노하우를 첨단 디스플레이에 접목해 새로운 성장 동력을 확보하겠다는 전략이다.</description>
+      <pubDate>Sat, 19 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>GlobalFoundries·Marvell, AI 광통신 소재 협력 확대</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-19-3.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-19-3.html</guid>
+      <category>글로벌</category>
+      <description>글로벌파운드리스와 마벨이 AI 인프라 광통신 수요에 대응해 SiGe 기술 기반 다년간 전략 협약을 체결했다. 실리콘-게르마늄 공정 생산 능력을 확대해 데이터센터 고속 광인터커넥트 시장을 공략한다.</description>
+      <pubDate>Sat, 19 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>음극재 中 점유율 96%…K배터리 소재 위기 심화</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-19-4.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-19-4.html</guid>
+      <category>희귀금속</category>
+      <description>한국 배터리 업계의 핵심 소재인 음극재 분야에서 중국 기업들의 시장 점유율이 96%에 육박하며 공급망 취약성이 극도로 높아졌다. 국내 기업들의 음극재 독자 기술 개발과 공급처 다변화가 시급한 과제로 부상하고 있다.</description>
+      <pubDate>Sat, 19 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>전북, 반도체 소재·케미컬 소부장 특화단지 선정</title>
       <link>https://tugman77.github.io/materials-news/news/2026-09-18-0.html</link>
@@ -206,46 +246,6 @@
       <category>희귀금속</category>
       <description>중국 과학자들이 섭씨 2400도의 극한 고온 환경을 견디는 신규 내열 합금 개발에 성공했다고 발표했다. 항공우주·차세대 원자로 등 극한 환경 산업에서 활용 가능한 소재로, 희귀 내열 금속 소재 분야의 기술 패권 경쟁이 본격화되는 신호로 해석된다.</description>
       <pubDate>Wed, 02 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>고려아연, 반도체용 황산 증산 가속</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-29-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-29-0.html</guid>
-      <category>반도체소재</category>
-      <description>고려아연이 반도체 세정·식각 공정 핵심 소재인 고순도 황산 생산능력 확대에 속도를 내고 있다. AI 반도체 수요 급증에 따라 국내 팹 가동률이 높아지면서 초고순도 황산 수급 다변화가 시급해졌다는 분석이다.</description>
-      <pubDate>Sat, 29 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>CXMT 상반기 매출 870% 폭증…중국 메모리 굴기 가속</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-29-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-29-1.html</guid>
-      <category>글로벌</category>
-      <description>중국 메모리 반도체 기업 창신메모리(CXMT)가 2026년 상반기 매출이 전년 동기 대비 870% 급증했다고 발표했다. 중국 최대 시가총액 반도체 기업으로 올라선 CXMT의 폭발적 성장은 글로벌 메모리 공급 구조를 뒤흔들 변수로 부상하고 있다.</description>
-      <pubDate>Sat, 29 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>덕산네오룩스, QLEDoS 소재 원천특허 확보</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-29-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-29-2.html</guid>
-      <category>산업재</category>
-      <description>덕산네오룩스가 차세대 마이크로 디스플레이 기술인 QLEDoS(양자점 발광 다이오드 온 실리콘) 핵심 소재의 원천기술을 확보했다. XR 기기·스마트글래스 시장 확대에 따른 초소형 고휘도 디스플레이 수요에 선제 대응하는 행보로 평가된다.</description>
-      <pubDate>Sat, 29 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>국민성장펀드, 로봇 핸드 공장에 1500억 직접투자</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-29-3.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-29-3.html</guid>
-      <category>산업재</category>
-      <description>금융위원회와 산업통상자원부가 국민성장펀드를 통해 원익로보틱스의 로봇 핸드 생산공장 신축에 1500억 원을 직접 투자하기로 했다. 첨단 산업 전반에 걸쳐 1조 1900억 원 규모의 지원이 승인됐으며, 로봇 제조 공급망 강화에 속도가 붙을 전망이다.</description>
-      <pubDate>Sat, 29 Aug 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>앤트로픽 MHS 공개…AI, 실험장비 제어 표준 첫발</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-08-29-4.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-08-29-4.html</guid>
-      <category>글로벌</category>
-      <description>앤트로픽이 AI 에이전트와 현미경·로봇 등 물리적 장비를 연결하는 표준 인터페이스 'MHS(모델 하드웨어 스탠더드)'를 공개했다. 반도체·소재 연구 자동화의 핵심 인프라가 될 수 있다는 평가와 함께, 과학·제조 분야 디지털 전환의 새 장이 열렸다는 분석이 나온다.</description>
-      <pubDate>Sat, 29 Aug 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
