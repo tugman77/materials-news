@@ -26,18 +26,7 @@
       "image_keyword": "semiconductor EUV lithography equipment",
       "is_featured": true,
       "timestamp": "오전 09:05",
-      "image_url": "images/2026-09-20_article_0.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'이론적으로 8nm 이하 선폭 구현 가능' — High-NA EUV는 ~2nm 이하 반피치 목표, 8nm는 기존 EUV로도 달성 가능한 수준",
-          "Intel Panther Lake에 High-NA EUV 정식 투입 시점·공식 발표 출처 불명확",
-          "전기적 스티칭 기술이 '새로운' 과제라는 표현 — 이미 수년간 알려진 과제"
-        ],
-        "notes": "8nm 수치 오류 의심, High-NA EUV 해상도 설명 수정 필요",
-        "verified_at": "2026-09-20 03:10"
-      }
+      "image_url": "images/2026-09-20_article_0.jpg"
     },
     {
       "id": 1,
@@ -61,17 +50,7 @@
       "image_keyword": "RGB LED display panel technology",
       "is_featured": false,
       "timestamp": "오전 09:10",
-      "image_url": "images/2026-09-20_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "Omdia 컨퍼런스 발표 일시·장소 출처 미기재",
-          "RGB LED와 마이크로 LED 개념 혼용 가능성 — 용어 정확성 확인 필요"
-        ],
-        "notes": "옴디아 전망치 출처 명시 필요, 전반적으로 사실에 부합",
-        "verified_at": "2026-09-20 03:10"
-      }
+      "image_url": "images/2026-09-20_article_1.jpg"
     },
     {
       "id": 2,
@@ -95,18 +74,7 @@
       "image_keyword": "AI semiconductor chip ASIC fabrication",
       "is_featured": false,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-09-20_article_2.jpg",
-      "review": {
-        "trust_score": 2,
-        "status": "warning",
-        "suspicious_claims": [
-          "'Euclyd' 스타트업 실존 여부 미확인 — 공개 정보 부재",
-          "2억 유로 규모 시리즈A는 이례적으로 대형 — 검증 필요",
-          "삼성캐털리스트펀드 참여 여부 공식 발표 출처 불명확"
-        ],
-        "notes": "핵심 기업명·투자 규모 모두 독립 검증 필요, 주의 요망",
-        "verified_at": "2026-09-20 03:10"
-      }
+      "image_url": "images/2026-09-20_article_2.jpg"
     },
     {
       "id": 3,
@@ -130,17 +98,7 @@
       "image_keyword": "rare earth metal refinery industrial",
       "is_featured": false,
       "timestamp": "오전 09:20",
-      "image_url": "images/2026-09-20_article_3.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "중국의 헬륨 수출 금지 조치 — 이트륨 통제는 확인되나 헬륨 금지 시행 여부 재확인 필요",
-          "희토류특별법 발의 주체·구체 추진 일정 출처 불명확"
-        ],
-        "notes": "중국 희토류 점유율 수치는 업계 통계와 부합, 헬륨 조치 출처 보강 권장",
-        "verified_at": "2026-09-20 03:10"
-      }
+      "image_url": "images/2026-09-20_article_3.jpg"
     },
     {
       "id": 4,
@@ -164,17 +122,7 @@
       "image_keyword": "atomic layer deposition semiconductor manufacturing",
       "is_featured": false,
       "timestamp": "오전 09:25",
-      "image_url": "images/2026-09-20_article_4.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "Forge Nano·Archimedes Tech 합병 계약 체결 사실 공개 출처 미확인",
-          "Voltaiq와의 파트너십 '확대' 표현 — 기존 협력 관계 존재 여부 불명확"
-        ],
-        "notes": "양사 실존·ALD 설명은 정확, 합병 건 독립 검증 필요",
-        "verified_at": "2026-09-20 03:10"
-      }
+      "image_url": "images/2026-09-20_article_4.jpg"
     }
   ],
   "editorial_briefing": "반도체 제조 고도화와 희토류 공급망 위기 대응이 맞물리며 기술·소재 전반에 변곡점이 형성되고 있다. 인텔의 High-NA EUV 양산 투입, 삼성의 AI 추론칩 투자, ALD-AI 배터리 융합 등 첨단 기술 가속화가 두드러진다.",
@@ -204,6 +152,5 @@
       "label": "AI 배터리 공정",
       "status": "ALD-AI 파트너십 확대"
     }
-  ],
-  "last_reviewed_at": "2026-09-20 03:10"
+  ]
 }

@@ -6,7 +6,47 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Sat, 19 Sep 2026 03:08:15 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2026 03:10:45 +0900</lastBuildDate>
+    <item>
+      <title>인텔, High-NA EUV 양산 첫 투입…스티칭 기술이 관건</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-20-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-20-0.html</guid>
+      <category>글로벌</category>
+      <description>인텔이 차세대 반도체 공정의 핵심 장비인 High-NA EUV를 '팬서 레이크' 칩 제조에 처음 적용하며 양산 단계에 진입했다. 전기적 스티칭과 대형 마스크 기술이 향후 수율 확보의 핵심 과제로 부상하고 있다.</description>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>RGB LED TV, 2030년 OLED TV 출하량 추월 전망</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-20-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-20-1.html</guid>
+      <category>산업재</category>
+      <description>시장조사업체 옴디아가 2030년 RGB LED TV 출하량이 OLED TV를 넘어설 가능성이 있다고 전망했다. RGB LED는 기존 미니 LED 대비 색순도와 소비전력에서 강점을 가져 프리미엄 TV 시장 지형을 바꿀 변수로 부상하고 있다.</description>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>삼성전자, 네덜란드 AI 추론칩 스타트업 유클리드에 3,151억 공동 투자</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-20-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-20-2.html</guid>
+      <category>반도체소재</category>
+      <description>삼성전자가 GPU 대체 AI 추론용 반도체를 개발 중인 네덜란드 스타트업 유클리드(Euclyd)의 시리즈A에 공동 투자자로 참여했다. 총 2억 유로 규모의 이번 투자는 AI 반도체 생태계가 GPU 중심에서 ASIC으로 다변화되는 흐름을 반영한다.</description>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>韓 '희토류특별법' 추진…공급망 3법 한계 넘는다</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-20-3.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-20-3.html</guid>
+      <category>희귀금속</category>
+      <description>국내에서 희토류 수급 위기에 대응하기 위한 '희토류특별법' 제정 논의가 본격화되고 있다. 기존 공급망 3법(소재·부품·장비 특별법 등)만으로는 급변하는 광물 수출 통제 환경에 대응하기 부족하다는 공감대가 형성되고 있다.</description>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>Forge Nano·Voltaiq, ALD 배터리 공정에 AI 접목</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-20-4.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-20-4.html</guid>
+      <category>반도체소재</category>
+      <description>미국의 ALD 기술 전문기업 Forge Nano가 배터리 AI 소프트웨어 선도 기업 Voltaiq와 파트너십을 확대해 AI 기반 배터리 개발·제조 체계를 구축한다. ALD(원자층 증착) 기술에 AI 분석을 결합해 반도체·방산 배터리 소재의 품질과 수율을 대폭 향상시키는 것이 목표다.</description>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>두산, 반도체 소재에 1조 투자 단행</title>
       <link>https://tugman77.github.io/materials-news/news/2026-09-19-0.html</link>
@@ -206,46 +246,6 @@
       <category>산업재</category>
       <description>미국 기업 4곳이 한국 반도체 소재·장비 분야에 총 20억달러를 투자하기로 확정했다. 글로벌 공급망 재편 흐름 속에서 한·미 반도체 소부장 협력이 실질적으로 격상됐다는 평가가 나온다.</description>
       <pubDate>Sun, 06 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>실리콘 작센, 유럽 반도체 심장으로 부상</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-02-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-02-0.html</guid>
-      <category>글로벌</category>
-      <description>독일 작센주가 세미콘 타이완 2026에서 유럽 최대 마이크로일렉트로닉스 클러스터 '실리콘 작센'을 전면에 내세우며 글로벌 반도체 공급망 재편의 핵심 거점임을 선언했다. TSMC 드레스덴 팹 가동을 계기로 유럽 내 소부장 생태계 투자가 가속화되고 있다.</description>
-      <pubDate>Wed, 02 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>심텍, 청주에 4000억 베팅…SOCAMM 전용 공장 짓는다</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-02-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-02-1.html</guid>
-      <category>산업재</category>
-      <description>심텍이 충북 청주에 4000억원을 단계적으로 투자해 엔비디아 차세대 AI 가속기용 메모리 모듈 기판 'SOCAMM' 전용 생산라인을 구축한다. AI 인프라 확장 수요에 대응한 기판 공급 역량을 대폭 끌어올리겠다는 전략이다.</description>
-      <pubDate>Wed, 02 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>CPO 패키징 소재·공정 기술 경쟁 본격화</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-02-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-02-2.html</guid>
-      <category>반도체소재</category>
-      <description>차세대 AI 인프라의 핵심 기술로 부상한 공동패키지 광학(CPO) 분야에서 EV그룹과 쿨리케앤소파 등 글로벌 패키징 장비·소재 업체들이 기술 선점 경쟁에 나섰다. CPO는 광 인터페이스를 프로세서와 같은 패키지에 통합해 대역폭을 획기적으로 높이는 기술이다.</description>
-      <pubDate>Wed, 02 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>화홍반도체, 20억달러 팹 증설…中 파운드리 AI 질주</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-02-3.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-02-3.html</guid>
-      <category>글로벌</category>
-      <description>중국 2위 파운드리 화홍반도체(Hua Hong Grace)가 장쑤성 우시에 20억 달러를 투자해 신규 팹 건설에 나선다. AI 인프라 수요 급증과 미국 기술 제재 우회를 동시에 겨냥한 전략적 대규모 투자다.</description>
-      <pubDate>Wed, 02 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>中 과학자, 2400도 버티는 초내열 신합금 개발</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-02-4.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-02-4.html</guid>
-      <category>희귀금속</category>
-      <description>중국 과학자들이 섭씨 2400도의 극한 고온 환경을 견디는 신규 내열 합금 개발에 성공했다고 발표했다. 항공우주·차세대 원자로 등 극한 환경 산업에서 활용 가능한 소재로, 희귀 내열 금속 소재 분야의 기술 패권 경쟁이 본격화되는 신호로 해석된다.</description>
-      <pubDate>Wed, 02 Sep 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
