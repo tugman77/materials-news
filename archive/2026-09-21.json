@@ -26,18 +26,7 @@
       "image_keyword": "semiconductor helium gas supply",
       "is_featured": true,
       "timestamp": "오전 09:05",
-      "image_url": "images/2026-09-21_article_0.jpg",
-      "review": {
-        "trust_score": 2,
-        "status": "warning",
-        "suspicious_claims": [
-          "중국의 전 세계 헬륨 공급 점유율 25~30% 주장 (실제 주요 생산국은 미국·카타르·러시아)",
-          "수출규제 발표 직후 스팟가격 15% 이상 급등 주장 (출처 불명)",
-          "헬륨을 갈륨·게르마늄에 이은 연속 수출규제 조치로 서술 (개연성 낮음)"
-        ],
-        "notes": "중국 헬륨 글로벌 점유율 25~30% 주장이 사실과 다를 가능성 높음",
-        "verified_at": "2026-09-21 03:09"
-      }
+      "image_url": "images/2026-09-21_article_0.jpg"
     },
     {
       "id": 1,
@@ -61,16 +50,7 @@
       "image_keyword": "semiconductor glass substrate packaging",
       "is_featured": false,
       "timestamp": "오전 09:10",
-      "image_url": "images/2026-09-21_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "에프엔에스테크 유리기판 R&D 구체적 진척 여부 공식 발표 출처 확인 필요"
-        ],
-        "notes": "기업 실재·기술 내용 대체로 신뢰 가능, 공식 발표 출처 확인 권고",
-        "verified_at": "2026-09-21 03:09"
-      }
+      "image_url": "images/2026-09-21_article_1.jpg"
     },
     {
       "id": 2,
@@ -94,18 +74,7 @@
       "image_keyword": "rare earth metal refinery industrial",
       "is_featured": false,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-09-21_article_2.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "Pr-Nd를 '중경희토류'로 분류 (통상 경희토류에 해당)",
-          "Pr-Nd 산화물 가격 85만~90만 위안/톤 구체 수치 검증 필요",
-          "11월 추가 수출규제 예고 출처 불명확"
-        ],
-        "notes": "Pr-Nd 희토류 분류 오류 의심, 경희토류로 정정 필요",
-        "verified_at": "2026-09-21 03:09"
-      }
+      "image_url": "images/2026-09-21_article_2.jpg"
     },
     {
       "id": 3,
@@ -129,18 +98,7 @@
       "image_keyword": "OLED display panel semiconductor manufacturing",
       "is_featured": false,
       "timestamp": "오전 09:20",
-      "image_url": "images/2026-09-21_article_3.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "M14→M16으로 M15 세대 건너뜀 (패널 세대 명칭 확인 필요)",
-          "갤럭시S27 M16 공급 확정 표현 (미출시 제품, 루머 수준)",
-          "8.6세대 OLED 투자 4조원 이상 주장 출처 불명확"
-        ],
-        "notes": "미출시 제품 루머성 내용 다수, 공식 확인 전 게재 주의",
-        "verified_at": "2026-09-21 03:09"
-      }
+      "image_url": "images/2026-09-21_article_3.jpg"
     },
     {
       "id": 4,
@@ -164,18 +122,7 @@
       "image_keyword": "AI semiconductor chip ASIC data center",
       "is_featured": false,
       "timestamp": "오전 09:25",
-      "image_url": "images/2026-09-21_article_4.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'제피르(Jericho)' 표기 오류: Jericho는 라우팅 칩, Zephyr(제피르)와 별개 제품",
-          "AI 매출 167억 달러·221% 성장 FY2026 Q3 수치 독립 검증 필요",
-          "네트워킹 부문 180% 이상 증가 출처 불명"
-        ],
-        "notes": "제품명 혼용 오류 있음, 실적 수치 방향성은 맞으나 검증 필요",
-        "verified_at": "2026-09-21 03:09"
-      }
+      "image_url": "images/2026-09-21_article_4.jpg"
     }
   ],
   "editorial_briefing": "중국의 헬륨·희토류 수출 통제 연속 시행으로 국내 반도체·소재 공급망에 비상이 걸린 가운데, 브로드컴 AI 반도체 221% 급성장과 유리기판 등 차세대 소재 진출이 맞물리며 산업 재편이 가속화되고 있다.",
@@ -205,6 +152,5 @@
       "label": "유리기판시장진출",
       "status": "차세대패키징확대"
     }
-  ],
-  "last_reviewed_at": "2026-09-21 03:09"
+  ]
 }
