@@ -25,18 +25,7 @@
       "image_keyword": "AMD semiconductor chip AI accelerator",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-09-22_article_0.jpg",
-      "review": {
-        "trust_score": 2,
-        "status": "warning",
-        "suspicious_claims": [
-          "인텔은 시총 1조 달러를 달성한 적 없음 (역대 최고 약 2,900억 달러 수준)",
-          "AMD 주가 606.95달러·8.42% 급등 구체 수치 출처 및 검증 필요",
-          "AI GPU 시장 AMD 점유율 12~15% 추정치 출처 불명확"
-        ],
-        "notes": "인텔 1조 달러 시총 언급은 사실 오류 가능성 높음, 수정 필요",
-        "verified_at": "2026-09-22 03:09"
-      }
+      "image_url": "images/2026-09-22_article_0.jpg"
     },
     {
       "id": 1,
@@ -60,17 +49,7 @@
       "image_keyword": "glass substrate semiconductor packaging TGV",
       "is_featured": false,
       "timestamp": "오전 10:30",
-      "image_url": "images/2026-09-22_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "자기자본 140% 투자 비율은 매우 높은 수준으로 재무 리스크 맥락 보완 필요",
-          "3만 평 부지 규모·위치 공시 원문과 대조 권장"
-        ],
-        "notes": "JNTC의 유리기판 사업 방향과 TGV 기술 설명은 업계 현실과 부합",
-        "verified_at": "2026-09-22 03:09"
-      }
+      "image_url": "images/2026-09-22_article_1.jpg"
     },
     {
       "id": 2,
@@ -94,17 +73,7 @@
       "image_keyword": "OLED gaming monitor display panel",
       "is_featured": false,
       "timestamp": "오전 11:00",
-      "image_url": "images/2026-09-22_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "720Hz OLED 패널 양산 시점 및 실제 출시 여부 확인 필요",
-          "0.03ms 이하 응답속도 측정 기준(GTG·MPRT 등) 미명시"
-        ],
-        "notes": "LG디스플레이 게이밍 OLED 기술 스펙 전반적으로 업계 수준에 부합",
-        "verified_at": "2026-09-22 03:09"
-      }
+      "image_url": "images/2026-09-22_article_2.jpg"
     },
     {
       "id": 3,
@@ -128,17 +97,7 @@
       "image_keyword": "GaN power semiconductor data center",
       "is_featured": false,
       "timestamp": "오전 11:45",
-      "image_url": "images/2026-09-22_article_3.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "EE Times 인용 AI 랙 60~80kW 수치 원문 링크 없어 직접 확인 필요",
-          "GaN 효율 3~5%p 향상 수치 구체 출처 불명확"
-        ],
-        "notes": "GaN 물성(밴드갭 3배) 및 전력밀도 논리는 기술적으로 정확",
-        "verified_at": "2026-09-22 03:09"
-      }
+      "image_url": "images/2026-09-22_article_3.jpg"
     },
     {
       "id": 4,
@@ -162,18 +121,7 @@
       "image_keyword": "Greenland mineral mining Arctic resources",
       "is_featured": false,
       "timestamp": "오후 12:15",
-      "image_url": "images/2026-09-22_article_4.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'Greenland Mines'라는 기업명이 실재하는지 불확실 (Greenland Minerals·Hudson Resources 등과 혼용 가능성)",
-          "헬륨은 중국 주요 생산국이 아니어서 중국의 헬륨 수출 통제 언급은 사실 오류 소지",
-          "이트륨 수출 통제 구체적 발효 시점·근거 법령 미제시"
-        ],
-        "notes": "지정학적 맥락은 사실에 부합하나 기업명·헬륨 통제 사실 재확인 필요",
-        "verified_at": "2026-09-22 03:09"
-      }
+      "image_url": "images/2026-09-22_article_4.jpg"
     }
   ],
   "editorial_briefing": "AI 반도체 수요 급증을 중심으로 AMD 시총 1조 달러 돌파, GaN 전력소자 부상, 유리기판 투자 확대 등 공급망 전반이 AI 인프라 중심으로 재편되고 있다. 핵심광물 공급망도 미국-그린란드 협정으로 새 판도를 예고한다.",
@@ -203,6 +151,5 @@
       "label": "게이밍 OLED 출시",
       "status": "720Hz 시장공략"
     }
-  ],
-  "last_reviewed_at": "2026-09-22 03:09"
+  ]
 }

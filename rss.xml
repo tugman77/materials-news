@@ -6,7 +6,47 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Mon, 21 Sep 2026 03:09:32 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 03:09:42 +0900</lastBuildDate>
+    <item>
+      <title>AMD 시총 1조 달러 첫 돌파…AI 반도체 패권 재편</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-22-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-22-0.html</guid>
+      <category>글로벌</category>
+      <description>AMD가 기술주 랠리에 힘입어 주가 8.4% 급등하며 시가총액 1조 달러를 처음 돌파했다. 엔비디아·인텔에 이어 세 번째 반도체 기업의 1조 달러 클럽 가입으로 AI 반도체 시장 구도가 빠르게 재편되고 있다.</description>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>제이앤티씨, 김천에 3470억 TGV 유리기판 공장 신설</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-22-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-22-1.html</guid>
+      <category>반도체소재</category>
+      <description>제이앤티씨가 경북 김천에 3470억 원을 투자해 유리관통전극(TGV) 기반 유리기판 생산공장을 신설한다. AI·HPC 반도체 패키징 수요 급증에 대응하며, 투자 규모는 자기자본의 140%에 달한다.</description>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>LG디스플레이, 720Hz 게이밍 OLED로 e스포츠 공략</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-22-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-22-2.html</guid>
+      <category>산업재</category>
+      <description>LG디스플레이가 24.5인치 720Hz 주사율의 게이밍 OLED 패널을 출시하며 e스포츠·프리미엄 게이밍 모니터 시장을 정조준했다. 초고속 주사율 OLED는 LCD 대비 응답속도와 색 재현력에서 압도적 우위를 바탕으로 시장 확대에 나선다.</description>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>GaN 전력 소자, AI 데이터센터 핵심 소재로 급부상</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-22-3.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-22-3.html</guid>
+      <category>글로벌</category>
+      <description>AI 데이터센터의 전력 수요 폭증이 GaN(질화갈륨) 기반 전력변환 소재 채택을 가속화하고 있다. 기존 실리콘 MOSFET 대비 효율·전력밀도에서 우위를 갖는 GaN은 차세대 서버 전원공급장치의 핵심 소재로 자리잡고 있다.</description>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>그린란드 핵심광물 미국 협정…공급망 판도 변화 예고</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-22-4.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-22-4.html</guid>
+      <category>희귀금속</category>
+      <description>그린란드 광물 기업 Greenland Mines가 미국과의 핵심광물 공급 협정 가능성을 환영하며 글로벌 공급망 재편의 교두보 역할을 자처했다. 희토류 수출 통제를 앞세운 중국의 자원 압박에 맞서 미국-그린란드 자원 동맹이 본격화되는 국면이다.</description>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>中 헬륨 수출 금지, 반도체 공정 비상</title>
       <link>https://tugman77.github.io/materials-news/news/2026-09-21-0.html</link>
@@ -206,46 +246,6 @@
       <category>반도체소재</category>
       <description>반도체 패키징 기업 쿨스가 엔비디아 차세대 AI 가속기 '루빈 울트라'급 초대면적 패키지에서 발생하는 기판 휨(Warpage) 및 접합 불량을 억제하는 신기술을 개발했다. 고강성 리드와 자체 개발 서멀클러치를 결합해 공정 수율과 신뢰성을 동시에 높이는 솔루션이다.</description>
       <pubDate>Thu, 17 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>中 이트륨 수출통제…美·日 공급망 직격</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-15-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-15-0.html</guid>
-      <category>글로벌</category>
-      <description>중국이 희토류 원소 이트륨에 대한 수출 통제를 전격 시행하며 미국·일본의 첨단산업 공급망을 압박하고 있다. 헬륨에 이어 연속되는 수출통제 조치로 글로벌 소재 공급망 재편이 가속화될 전망이다.</description>
-      <pubDate>Tue, 15 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>TOK첨단재료, 평택에 1010억 반도체 소재 공장 준공</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-15-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-15-1.html</guid>
-      <category>반도체소재</category>
-      <description>일본계 반도체 소재 기업 TOK첨단재료가 경기도 평택 포승산업단지(BIX)에 1,010억 원을 투입한 반도체 소재 제조시설을 준공했다. 삼성전자·SK하이닉스 등 인근 팹과의 공급 연계를 강화해 K소부장 생태계 확충에 기여할 전망이다.</description>
-      <pubDate>Tue, 15 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>韓·카자흐, 우라늄 공급망 동맹 격상…핵심광물 교두보</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-15-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-15-2.html</guid>
-      <category>희귀금속</category>
-      <description>한국과 카자흐스탄이 정상회담을 통해 양국 관계를 '미래지향 포괄 전략 동반자'로 격상하고 우라늄·핵심광물 공급망 협력을 대폭 강화하기로 했다. 세계 최대 우라늄 생산국과의 동맹 강화는 에너지 안보와 소재 공급망 다변화 두 마리 토끼를 잡는 전략적 포석이다.</description>
-      <pubDate>Tue, 15 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>삼성D, 12인치 RGB OLEDoS에 3000억 투자 단행</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-15-3.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-15-3.html</guid>
-      <category>산업재</category>
-      <description>삼성디스플레이가 12인치 RGB OLEDoS(실리콘 기판 위 OLED) 양산 설비에 3,000억 원 규모의 투자를 결정하며 마이크로디스플레이 시장 선점에 나선다. XR·AR 기기 수요 폭증에 대비한 포석으로, 관련 소재·장비 공급망에 파급 효과가 클 전망이다.</description>
-      <pubDate>Tue, 15 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>육불화텅스텐 일본 공급 중단…삼성·SK 소재 비상</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-15-4.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-15-4.html</guid>
-      <category>글로벌</category>
-      <description>반도체 증착 공정에 필수적인 육불화텅스텐(WF₆)을 생산하는 일본 기업 2곳이 생산을 영구 중단한다고 발표했다. 단일 소재의 공급 중단이 삼성전자·SK하이닉스의 생산 라인 전반에 미칠 파급 효과에 대한 우려가 커지고 있다.</description>
-      <pubDate>Tue, 15 Sep 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
