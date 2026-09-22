@@ -33,6 +33,10 @@ UNSPLASH_ACCESS_KEY = os.environ.get("UNSPLASH_ACCESS_KEY", "")
 PEXELS_API_KEY     = os.environ.get("PEXELS_API_KEY", "")    # https://www.pexels.com/api/
 PIXABAY_API_KEY    = os.environ.get("PIXABAY_API_KEY", "")   # https://pixabay.com/api/docs/
 OUTPUT_FILE = "articles.json"
+# 하루 발행 건수. 5건일 때 매일 1~4건이 이벤트 쿨다운에 걸린 채 발행됐다 —
+# 수집 풀(약 146건/일)이 부족한 게 아니라 '하루에 쓸 만한 새 사건'이 5개가 안 됐다.
+# 2026-09-22 대표님 지시로 3건으로 축소. 바꾸려면 이 값만 고친다.
+ARTICLE_COUNT = int(os.environ.get("ARTICLE_COUNT", "3"))
 IMAGES_DIR  = "images"
 IMAGE_HISTORY_FILE = "image_history.json"  # 날짜 간(run 간) 이미지 재사용 방지용 영구 기록
 EVENT_MEMORY_FILE  = "event_memory.json"   # 진행 중 사건 지문 — 30일 쿨다운으로 반복 보도 차단
@@ -634,15 +638,18 @@ def generate_articles_with_claude(raw_news_list, recent_topics=None, event_memor
                   "특히 [글로벌 규제] 이슈는 최우선으로 검토하세요.\n"]
         sojaetimes_section = "\n".join(lines) + "\n\n"
 
-    prompt = f"""반도체·소재·희귀금속·산업재 전문 뉴스 사이트용 기사 5개를 작성해주세요.
+    prompt = f"""반도체·소재·희귀금속·산업재 전문 뉴스 사이트용 기사 {ARTICLE_COUNT}개를 작성해주세요.
 
 {avoid_section}{sojaetimes_section}{news_section}
 
-[편집 규칙 — 5건을 한 판으로 볼 것]
-- **카테고리 균형**: 4개 카테고리 중 **최소 3개**가 포함돼야 한다. 한 카테고리가 3건을
-  넘지 않는다. (반도체소재로 쏠리는 경향이 있다)
-- **각도 분산**: 5건이 전부 "무슨 일이 있었다" 식 스트레이트면 지면이 단조로워진다.
-  아래에서 서로 다른 각도를 최소 3종 섞을 것.
+[편집 규칙 — {ARTICLE_COUNT}건을 한 판으로 볼 것]
+- **카테고리 균형**: {ARTICLE_COUNT}건은 **서로 다른 카테고리**여야 한다.
+  (반도체소재로 쏠리는 경향이 있다)
+- **하루 {ARTICLE_COUNT}건뿐이다. 오늘 가장 중요한 사건만 고른다.** 건수를 채우려고
+  비슷한 사건을 여러 각도로 늘려 쓰지 말 것 — 쓸 만한 새 사건이 {ARTICLE_COUNT}건에
+  못 미치면 억지로 채우기보다 각 기사를 더 깊게 쓴다.
+- **각도 분산**: {ARTICLE_COUNT}건이 전부 "무슨 일이 있었다" 식 스트레이트면 지면이
+  단조로워진다. 아래에서 서로 다른 각도를 최소 2종 섞을 것.
     ① 사건·발표 (스트레이트)   ② 실적·수치 분석   ③ 정책·규제 해설
     ④ 기술·개발 동향          ⑤ 시장 구조 변화(M&A·공급망 재편)
 - **소스 다양성**: 원본 뉴스에는 국내지·해외 전문지·중국 소스가 섞여 있다. 국내 기사만
@@ -657,8 +664,8 @@ def generate_articles_with_claude(raw_news_list, recent_topics=None, event_memor
 - image_keyword: 기사 내용과 관련된 영문 이미지 검색 키워드 2~3단어 (예: "semiconductor wafer", "rare earth mining", "supply chain factory"). wafer·chip·foil·plant·crystal처럼 일상 사물(과자·감자칩·식물)로도 읽히는 단어는 semiconductor·metal·industrial 같은 업계 한정어를 반드시 함께 넣을 것
 - timestamp: 현재 시각 기준 오전/오후 HH:MM 형식
 
-save_articles 도구를 사용해 기사 5개를 저장하세요.
-- 첫 번째 기사만 is_featured: true, 나머지 4개는 false
+save_articles 도구를 사용해 기사 {ARTICLE_COUNT}개를 저장하세요.
+- 첫 번째 기사만 is_featured: true, 나머지 {ARTICLE_COUNT - 1}개는 false
 - body는 각 단락을 별도 문자열로 된 배열 (10~13개 항목, 각 항목 200~300자)
 - body 배열 예시: ["첫째 단락 본문...", "둘째 단락 본문...", ...]
 """
@@ -669,7 +676,7 @@ save_articles 도구를 사용해 기사 5개를 저장하세요.
         max_tokens=32000,
         tools=[{
             "name": "save_articles",
-            "description": "생성된 기사 5개를 저장합니다",
+            "description": f"생성된 기사 {ARTICLE_COUNT}개를 저장합니다",
             "input_schema": {
                 "type": "object",
                 "properties": {
@@ -690,8 +697,8 @@ save_articles 도구를 사용해 기사 5개를 저장하세요.
                             },
                             "required": ["id","category","tag_type","title","summary","body","image_keyword","is_featured","timestamp"]
                         },
-                        "minItems": 5,
-                        "maxItems": 5
+                        "minItems": ARTICLE_COUNT,
+                        "maxItems": ARTICLE_COUNT
                     }
                 },
                 "required": ["articles"]
