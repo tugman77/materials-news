@@ -26,17 +26,7 @@
       "image_keyword": "semiconductor glass substrate packaging",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-09-23_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "앱솔릭스 총 투자 누적 3,731억 원 수치 출처 미확인",
-          "5,900억 원을 3년간 유리기판 사업 집중 투입 계획 발표 시점 불명확"
-        ],
-        "notes": "SKC·앱솔릭스 실존 기업, 유리기판 사업 방향성 업계 현실과 부합",
-        "verified_at": "2026-09-23 03:06"
-      }
+      "image_url": "images/2026-09-23_article_0.jpg"
     },
     {
       "id": 1,
@@ -57,20 +47,10 @@
         "미국도 이에 맞서 그린란드 핵심광물 협정 체결, 캐나다·호주와의 공급망 동맹 강화 등을 통해 반중국 광물 블록 구축에 속도를 내고 있다. 바이든 행정부 이후 트럼프 2기 행정부도 핵심광물 공급망을 국가 안보 1순위 과제로 다루고 있어, 미·중 광물 패권 경쟁은 한층 격화될 전망이다.",
         "국내 반도체·디스플레이·이차전지 기업들은 중국 의존도를 줄이기 위해 소재 다변화와 국내 생산 확대에 적극 나서고 있다. 삼성전자, SK하이닉스 등은 협력 소재사와 공동으로 대체 공급처 인증 작업을 진행 중이며, 일부 품목은 국내 생산 전환을 위한 공정 개발에도 착수한 것으로 알려졌다."
       ],
-      "image_keyword": "OLED pixel define layer process",
+      "image_keyword": "China rare earth mineral export control",
       "is_featured": false,
       "timestamp": "오전 09:30",
-      "image_url": "images/2026-09-23_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "이트륨·헬륨 2026년 수출 통제 시행 여부 현재 시점 기준 미확인",
-          "투자 심사 기준·대상 광물 범위 미공개로 내용 일부 추정 포함"
-        ],
-        "notes": "갈륨·게르마늄·흑연·안티몬 규제 이력 사실, 정책 흐름 논리적으로 타당",
-        "verified_at": "2026-09-23 03:06"
-      }
+      "image_url": "images/2026-09-23_article_1.jpg"
     },
     {
       "id": 2,
@@ -94,18 +74,7 @@
       "image_keyword": "OLED display panel manufacturing process",
       "is_featured": false,
       "timestamp": "오전 09:45",
-      "image_url": "images/2026-09-23_article_2.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'하프톤 블랙 PDL' 기술명 및 내부 검토 사실 출처 불명확",
-          "갤럭시 S27 프로·울트라 M16 OLED 공급 확정 보도 검증 필요",
-          "공정 단계 축소·명암비 유지 동시 달성 주장 기술적 근거 미제시"
-        ],
-        "notes": "PDL 신기술 도입 검토 보도는 미확인 단독 정보로 주의 필요",
-        "verified_at": "2026-09-23 03:06"
-      }
+      "image_url": "images/2026-09-23_article_2.jpg"
     }
   ],
   "editorial_briefing": "AI 패키징 소재·OLED 원가 혁신 등 국내 소재 기업의 기술 투자가 가속화되는 가운데, 중국의 핵심광물 해외투자 보안심사 도입으로 글로벌 공급망 불확실성이 한층 심화되고 있다.",
@@ -135,6 +104,5 @@
       "label": "AI 반도체 패키징",
       "status": "앱솔릭스 개발 중"
     }
-  ],
-  "last_reviewed_at": "2026-09-23 03:06"
+  ]
 }
