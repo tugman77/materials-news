@@ -6,7 +6,31 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Wed, 23 Sep 2026 03:06:01 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 03:04:24 +0900</lastBuildDate>
+    <item>
+      <title>퀄컴 2나노 스냅드래곤, 전량 TSMC 위탁…삼성 파운드리 압박 심화</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-24-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-24-0.html</guid>
+      <category>글로벌</category>
+      <description>퀄컴이 차세대 플래그십 AP 스냅드래곤 8 엘리트 6세대 전량을 TSMC 2나노 공정으로 생산한다고 공식 확인했다. 삼성 파운드리는 선단 공정 협력 가능성만 열어둔 채 주요 물량 확보에 실패하며 경쟁 열세가 심화되고 있다.</description>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>LG디스플레이, AI로 OLED 소재 개발…연간 수백억 원 비용 절감</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-24-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-24-1.html</guid>
+      <category>산업재</category>
+      <description>LG디스플레이가 인공지능을 활용해 OLED 발광 소재를 개발하는 기술을 도입, 연간 수백억 원 규모의 연구개발 비용을 절감하는 성과를 거두고 있다. AI 기반 소재 개발은 탠덤 OLED 등 차세대 패널 경쟁력 강화에도 직결돼 업계 주목을 받고 있다.</description>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>ASM, 플로어블 카본 PECVD 신기술 출시…반도체 미세화 한계 돌파</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-24-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-24-2.html</guid>
+      <category>반도체소재</category>
+      <description>반도체 장비·소재 기업 ASM이 차세대 반도체 스케일링을 위한 플로어블 카본(Flowable Carbon) PECVD 기술 'XP8 Vertos'를 세계 최초로 출시했다. 이 기술은 고종횡비 구조의 보이드 없는 갭필을 가능케 해 2나노 이하 공정의 핵심 소재 과제를 해결할 수 있을 것으로 기대된다.</description>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>SKC, 앱솔릭스에 921억 추가 투입…유리기판 상용화 가속</title>
       <link>https://tugman77.github.io/materials-news/news/2026-09-23-0.html</link>
@@ -222,30 +246,6 @@
       <category>희귀금속</category>
       <description>중국 과학자들이 섭씨 2400도 이상의 극한 온도를 견디는 신합금 개발에 성공했다고 발표했다. 차세대 항공우주·방산용 소재로 주목받으며 글로벌 고온 합금 시장 경쟁이 새로운 국면을 맞고 있다.</description>
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>아일랜드, 반도체 풀스택 생태계 2040 전략 공개</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-18-4.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-18-4.html</guid>
-      <category>글로벌</category>
-      <description>아일랜드가 50년간 축적한 반도체 생태계를 기반으로 2040년을 목표로 한 '풀스택 반도체 강국' 전략을 발표했다. 인텔·TSMC 등 팹과 소재·장비·설계 전 분야를 아우르는 통합 전략으로, 유럽 반도체 자립의 핵심 거점으로 부상하고 있다.</description>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>화학연·SK이노, AI 냉각소재 공동개발 착수</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-17-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-17-0.html</guid>
-      <category>반도체소재</category>
-      <description>한국화학연구원과 SK이노베이션 환경과학기술원이 AI 데이터센터의 발열 문제를 해결할 차세대 '2상 냉각' 소재 개발에 공동으로 나선다. 액체가 기체로 바뀌는 상변화 원리를 활용한 이 기술은 기존 수냉식 대비 냉각 효율이 수십 배 높아 AI 반도체 인프라의 게임체인저로 주목받고 있다.</description>
-      <pubDate>Thu, 17 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>8.6세대 OLED 투자 본격화…소재·장비株 동반 강세</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-17-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-17-1.html</guid>
-      <category>산업재</category>
-      <description>삼성디스플레이가 8.6세대 OLED 생산라인 구축에 속도를 내면서 관련 소재·장비 기업 주가가 일제히 상승세를 보이고 있다. 기판 면적이 기존 6세대 대비 2.5배로 커지면서 발광 소재 사용량과 신규 장비 발주가 공급망 전반으로 파급되고 있다.</description>
-      <pubDate>Thu, 17 Sep 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>

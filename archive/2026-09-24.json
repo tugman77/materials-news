@@ -25,18 +25,7 @@
       "image_keyword": "semiconductor chip TSMC manufacturing",
       "is_featured": true,
       "timestamp": "오전 09:10",
-      "image_url": "images/2026-09-24_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "스냅드래곤 8 엘리트 6세대 명칭 — 실제 발표된 제품명인지 확인 필요",
-          "크리스 패트릭 발언 인용이 공식 자료 없이 재구성된 가능성",
-          "익스트림/기본형 이원화 전략의 구체적 세부사항 공식 확인 필요"
-        ],
-        "notes": "퀄컴·TSMC 협력 구도는 개연성 높으나 일부 발언 인용 출처 불명확",
-        "verified_at": "2026-09-24 03:04"
-      }
+      "image_url": "images/2026-09-24_article_0.jpg"
     },
     {
       "id": 1,
@@ -60,18 +49,7 @@
       "image_keyword": "OLED display panel industrial manufacturing",
       "is_featured": false,
       "timestamp": "오전 09:10",
-      "image_url": "images/2026-09-24_article_1.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "연간 수백억 원 비용 절감 수치 — 공식 발표 없는 추정치 가능성",
-          "소재 후보 검증 기간 절반 이하 단축 — 출처 미명시",
-          "외부 소재 전문 기업 머신러닝 솔루션 병행 활용 — 구체적 파트너 불명확"
-        ],
-        "notes": "절감 규모·기간 단축 수치가 공식 검증 없이 인용돼 주의 필요",
-        "verified_at": "2026-09-24 03:04"
-      }
+      "image_url": "images/2026-09-24_article_1.jpg"
     },
     {
       "id": 2,
@@ -95,17 +73,7 @@
       "image_keyword": "semiconductor wafer PECVD deposition process",
       "is_featured": false,
       "timestamp": "오전 09:10",
-      "image_url": "images/2026-09-24_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "XP8 Vertos 제품명 및 세계 최초 상용화 주장 — 공식 보도자료 확인 필요",
-          "3나노 이하 로직·DRAM·낸드 동시 적용 가능 주장의 구체적 근거 불명확"
-        ],
-        "notes": "ASM의 PECVD 기술 방향성은 업계 흐름과 부합하며 전반적으로 신뢰 가능",
-        "verified_at": "2026-09-24 03:04"
-      }
+      "image_url": "images/2026-09-24_article_2.jpg"
     }
   ],
   "editorial_briefing": "퀄컴의 TSMC 2나노 전환으로 삼성 파운드리가 선단 공정에서 추가 압박을 받는 가운데, LG디스플레이는 AI 기반 OLED 소재 개발로 비용을 절감하고 ASM은 플로어블 카본 PECVD 신기술로 반도체 미세화 한계 돌파에 나서며 공급망 재편과 기술 혁신이 동시에 가속화되고 있다.",
@@ -135,6 +103,5 @@
       "label": "반도체 공급망 재편",
       "status": "파운드리 경쟁 심화"
     }
-  ],
-  "last_reviewed_at": "2026-09-24 03:04"
+  ]
 }
