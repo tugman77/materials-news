@@ -6,7 +6,31 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 24 Sep 2026 03:04:24 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 03:05:49 +0900</lastBuildDate>
+    <item>
+      <title>포스코퓨처엠, SK온에 LFP 양극재 1.1조 공급 계약</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-25-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-25-0.html</guid>
+      <category>글로벌</category>
+      <description>포스코퓨처엠이 SK온과 리튬인산철(LFP) 양극재 1조1000억 원 규모 공급 계약을 체결했다. 기존 삼원계 음극재 협력에서 LFP 양극재로 포트폴리오를 확장하며 배터리 소재 공급망 주도권 강화에 나섰다.</description>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>핵심광물 투자 9% 감소…공급 확대 의지 vs 시장 현실 괴리</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-25-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-25-1.html</guid>
+      <category>희귀금속</category>
+      <description>글로벌 핵심광물 투자액이 2025년 대비 9% 감소한 것으로 집계됐다. 각국 정부의 공급망 강화 선언에도 불구하고 금리 부담과 가격 불확실성으로 민간 자본이 이탈하는 현상이 심화되고 있어 공급 부족 우려가 커지고 있다.</description>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>이천 18만㎡ 소부장 클러스터 착공…2029년 하반기 목표</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-25-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-25-2.html</guid>
+      <category>반도체소재</category>
+      <description>이천시와 경기주택도시공사(GH)가 18만㎡ 규모의 반도체 소부장 클러스터 조성에 합의했다. 2029년 하반기 착공을 목표로 하며, 민선 9기 핵심 공약 실현과 함께 수도권 반도체 공급망 허브 구축을 겨냥하고 있다.</description>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>퀄컴 2나노 스냅드래곤, 전량 TSMC 위탁…삼성 파운드리 압박 심화</title>
       <link>https://tugman77.github.io/materials-news/news/2026-09-24-0.html</link>
@@ -221,30 +245,6 @@
       <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-18-0.html</guid>
       <category>반도체소재</category>
       <description>전북특별자치도가 산업통상자원부의 제3기 소재·부품·장비 특화단지 공모에서 '반도체 소재·케미컬 소부장 특화단지'로 최종 선정됐다. 새만금·익산·완주 일대가 K-반도체 공급망의 핵심 거점으로 부상하게 됐다.</description>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>화웨이 UnifiedBus, 100만 프로세서 단일 시스템 도전</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-18-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-18-1.html</guid>
-      <category>글로벌</category>
-      <description>화웨이가 최대 100만 개 프로세서를 하나의 컴퓨터처럼 연결하는 UnifiedBus 아키텍처를 공개했다. 미국 반도체 제재 우회를 겨냥한 기술로, 데이터센터 설계 패러다임에 근본적인 변화를 예고한다.</description>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>LG디스플레이·한화시스템, 전투기 콕핏 OLED 개발 착수</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-18-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-18-2.html</guid>
-      <category>산업재</category>
-      <description>LG디스플레이가 한화시스템과 손잡고 전투기 조종석(콕핏)용 OLED 디스플레이 개발에 나선다. 방산 분야로 OLED 응용처를 확장하는 첫 사례로, 고신뢰성·광시야각 소재 수요가 새롭게 열릴 전망이다.</description>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>中 과학자, 2400도 견디는 초내열 신합금 개발</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-18-3.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-18-3.html</guid>
-      <category>희귀금속</category>
-      <description>중국 과학자들이 섭씨 2400도 이상의 극한 온도를 견디는 신합금 개발에 성공했다고 발표했다. 차세대 항공우주·방산용 소재로 주목받으며 글로벌 고온 합금 시장 경쟁이 새로운 국면을 맞고 있다.</description>
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
