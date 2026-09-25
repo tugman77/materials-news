@@ -6,7 +6,31 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Fri, 25 Sep 2026 03:05:49 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2026 03:05:51 +0900</lastBuildDate>
+    <item>
+      <title>화웨이 타우 법칙, 칩 설계 판도 바꾼다</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-26-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-26-0.html</guid>
+      <category>글로벌</category>
+      <description>화웨이가 EUV 리소그래피 없이도 성능을 끌어올릴 수 있는 '타우(τ) 스케일링 법칙'을 기린 9050 Pro에 상용화했다. 이는 반도체 미세공정 한계를 우회하는 새로운 아키텍처 패러다임으로 주목받고 있다.</description>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>대동기어, 전기차 부품사로 전환 가속…수주잔고 81% 현대차</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-26-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-26-1.html</guid>
+      <category>산업재</category>
+      <description>농기계 1위 기업 대동 산하 대동기어가 전기차 부품사로 체질을 전환하고 있다. 올해 상반기 말 수주잔고 1조9628억원 중 81%가 현대차그룹 전동화 플랫폼 물량으로, 자동차 부문 매출이 처음으로 농기계를 앞지를 전망이다.</description>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>인도·일본, 희토류 공급망 자립 가속…중국 의존 탈피 전략</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-26-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-26-2.html</guid>
+      <category>희귀금속</category>
+      <description>인도와 일본이 자국 내 희토류 산업 생태계 구축에 속도를 내고 있다. 중국 중심의 희토류 공급망에서 벗어나기 위한 대체 소재 개발과 산업 인프라 투자가 병행되며 글로벌 공급망 재편이 가속화되고 있다.</description>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>포스코퓨처엠, SK온에 LFP 양극재 1.1조 공급 계약</title>
       <link>https://tugman77.github.io/materials-news/news/2026-09-25-0.html</link>
@@ -222,30 +246,6 @@
       <category>산업재</category>
       <description>조명 전문 기업 금호전기가 수십 년간 축적한 발광 소재 기술을 기반으로 차세대 디스플레이 소재 시장에 진출한다. 일반 조명 분야의 노하우를 첨단 디스플레이에 접목해 새로운 성장 동력을 확보하겠다는 전략이다.</description>
       <pubDate>Sat, 19 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>GlobalFoundries·Marvell, AI 광통신 소재 협력 확대</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-19-3.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-19-3.html</guid>
-      <category>글로벌</category>
-      <description>글로벌파운드리스와 마벨이 AI 인프라 광통신 수요에 대응해 SiGe 기술 기반 다년간 전략 협약을 체결했다. 실리콘-게르마늄 공정 생산 능력을 확대해 데이터센터 고속 광인터커넥트 시장을 공략한다.</description>
-      <pubDate>Sat, 19 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>음극재 中 점유율 96%…K배터리 소재 위기 심화</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-19-4.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-19-4.html</guid>
-      <category>희귀금속</category>
-      <description>한국 배터리 업계의 핵심 소재인 음극재 분야에서 중국 기업들의 시장 점유율이 96%에 육박하며 공급망 취약성이 극도로 높아졌다. 국내 기업들의 음극재 독자 기술 개발과 공급처 다변화가 시급한 과제로 부상하고 있다.</description>
-      <pubDate>Sat, 19 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>전북, 반도체 소재·케미컬 소부장 특화단지 선정</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-18-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-18-0.html</guid>
-      <category>반도체소재</category>
-      <description>전북특별자치도가 산업통상자원부의 제3기 소재·부품·장비 특화단지 공모에서 '반도체 소재·케미컬 소부장 특화단지'로 최종 선정됐다. 새만금·익산·완주 일대가 K-반도체 공급망의 핵심 거점으로 부상하게 됐다.</description>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
