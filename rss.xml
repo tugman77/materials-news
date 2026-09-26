@@ -6,7 +6,31 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Sat, 26 Sep 2026 03:05:51 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 27 Sep 2026 03:06:33 +0900</lastBuildDate>
+    <item>
+      <title>中 OLED 인바 내재화, 韓 소재 공급망 균열 시작</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-27-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-27-0.html</guid>
+      <category>산업재</category>
+      <description>중국 타이위안강철이 OLED FMM용 인바 독자 생산에 성공하고, 중링테크놀로지가 이를 활용해 8.6세대 FMM 양산을 시작했다. 일본 의존 일변도였던 인바 공급망이 중국발 내재화로 재편되면서 국내 디스플레이 소재 업계의 경쟁 구도가 흔들리고 있다.</description>
+      <pubDate>Sun, 27 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>한미반도체, AI 패키징용 FC본더 75 첫 출하</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-27-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-27-1.html</guid>
+      <category>글로벌</category>
+      <description>한미반도체가 2.5D AI 반도체 패키징 전용 'FC 본더 75'를 고객사에 첫 출하했다. HBM 중심에서 AI 시스템 반도체 패키징으로 사업 영역을 확장하는 전략적 행보로, 고대역폭 AI 패키지 시장 선점을 위한 장비 경쟁이 가속화되고 있다.</description>
+      <pubDate>Sun, 27 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>콩고 탄탈륨 광산 붕괴 200명 사망, 공급망 비상</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-27-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-27-2.html</guid>
+      <category>희귀금속</category>
+      <description>전 세계 탄탈륨 생산량의 15%를 담당하는 콩고민주공화국 루바야 광산이 붕괴해 최소 200명이 사망했다. 스마트폰·반도체 커패시터의 핵심 소재인 탄탈륨의 공급 차질 우려가 커지며, 국내외 전자부품 업계의 공급망 점검이 시급해졌다.</description>
+      <pubDate>Sun, 27 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>화웨이 타우 법칙, 칩 설계 판도 바꾼다</title>
       <link>https://tugman77.github.io/materials-news/news/2026-09-26-0.html</link>
@@ -222,30 +246,6 @@
       <category>반도체소재</category>
       <description>미국의 ALD 기술 전문기업 Forge Nano가 배터리 AI 소프트웨어 선도 기업 Voltaiq와 파트너십을 확대해 AI 기반 배터리 개발·제조 체계를 구축한다. ALD(원자층 증착) 기술에 AI 분석을 결합해 반도체·방산 배터리 소재의 품질과 수율을 대폭 향상시키는 것이 목표다.</description>
       <pubDate>Sun, 20 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>두산, 반도체 소재에 1조 투자 단행</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-19-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-19-0.html</guid>
-      <category>반도체소재</category>
-      <description>두산그룹이 AI 반도체 수요 급증에 대응해 반도체 소재 사업에 1조 원 규모의 대규모 투자를 결정했다. 국내 소부장 생태계 강화와 함께 두산의 신성장 동력 확보 전략으로 주목받고 있다.</description>
-      <pubDate>Sat, 19 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>AI 수요에 DRAM 공급 부족 2027년까지 지속 전망</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-19-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-19-1.html</guid>
-      <category>글로벌</category>
-      <description>AI 인프라 투자 급증으로 DRAM 시장의 공급 부족이 2027년까지 이어질 것이라는 전망이 나왔다. AI 서버용 고대역폭 메모리 수요가 일반 소비자 전자제품보다 우선시되며 시장 구조가 재편되고 있다.</description>
-      <pubDate>Sat, 19 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>금호전기, 조명 기술로 디스플레이 시장 진출</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-19-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-19-2.html</guid>
-      <category>산업재</category>
-      <description>조명 전문 기업 금호전기가 수십 년간 축적한 발광 소재 기술을 기반으로 차세대 디스플레이 소재 시장에 진출한다. 일반 조명 분야의 노하우를 첨단 디스플레이에 접목해 새로운 성장 동력을 확보하겠다는 전략이다.</description>
-      <pubDate>Sat, 19 Sep 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
