@@ -6,7 +6,31 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Sun, 27 Sep 2026 03:06:33 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 03:10:11 +0900</lastBuildDate>
+    <item>
+      <title>반도체 공급망 '가격 인상 도미노'…원료·웨이퍼·칩 동시 상승</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-28-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-28-0.html</guid>
+      <category>글로벌</category>
+      <description>AI 수요 급증과 각국 수출통제 연쇄 작용으로 반도체 공급망 전반에 걸쳐 가격 인상 도미노가 현실화되고 있다. 원료 소재부터 웨이퍼, 완성 칩까지 동시 상승 압력이 가중되며 국내 소부장 기업들의 비용 부담이 커지고 있다.</description>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>영국, 탄탈륨·니오븀 러 수입 기업 4곳 제재</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-28-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-28-1.html</guid>
+      <category>희귀금속</category>
+      <description>영국 정부가 무기 제조에 사용되는 희귀금속 탄탈륨·니오븀을 러시아에서 수입하는 기업 4곳에 제재를 부과했다. 이번 조치는 러시아의 방산 공급망을 차단하려는 서방 제재 전선이 희귀금속 분야로 확대되는 신호탄으로 해석된다.</description>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>삼에스코리아, AI 훈풍에 FOSB 생산능력 2배 확대</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-28-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-28-2.html</guid>
+      <category>반도체소재</category>
+      <description>삼에스코리아가 반도체 웨이퍼 운송 용기인 FOSB 월 생산 능력을 1만5000개에서 3만개로 두 배 끌어올린다. AI 반도체 수요 급증으로 주요 고객사 주문이 폭증한 데 따른 대응으로, 중국 현지 생산 법인도 확보했다.</description>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>中 OLED 인바 내재화, 韓 소재 공급망 균열 시작</title>
       <link>https://tugman77.github.io/materials-news/news/2026-09-27-0.html</link>
@@ -221,30 +245,6 @@
       <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-20-1.html</guid>
       <category>산업재</category>
       <description>시장조사업체 옴디아가 2030년 RGB LED TV 출하량이 OLED TV를 넘어설 가능성이 있다고 전망했다. RGB LED는 기존 미니 LED 대비 색순도와 소비전력에서 강점을 가져 프리미엄 TV 시장 지형을 바꿀 변수로 부상하고 있다.</description>
-      <pubDate>Sun, 20 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>삼성전자, 네덜란드 AI 추론칩 스타트업 유클리드에 3,151억 공동 투자</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-20-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-20-2.html</guid>
-      <category>반도체소재</category>
-      <description>삼성전자가 GPU 대체 AI 추론용 반도체를 개발 중인 네덜란드 스타트업 유클리드(Euclyd)의 시리즈A에 공동 투자자로 참여했다. 총 2억 유로 규모의 이번 투자는 AI 반도체 생태계가 GPU 중심에서 ASIC으로 다변화되는 흐름을 반영한다.</description>
-      <pubDate>Sun, 20 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>韓 '희토류특별법' 추진…공급망 3법 한계 넘는다</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-20-3.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-20-3.html</guid>
-      <category>희귀금속</category>
-      <description>국내에서 희토류 수급 위기에 대응하기 위한 '희토류특별법' 제정 논의가 본격화되고 있다. 기존 공급망 3법(소재·부품·장비 특별법 등)만으로는 급변하는 광물 수출 통제 환경에 대응하기 부족하다는 공감대가 형성되고 있다.</description>
-      <pubDate>Sun, 20 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>Forge Nano·Voltaiq, ALD 배터리 공정에 AI 접목</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-20-4.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-20-4.html</guid>
-      <category>반도체소재</category>
-      <description>미국의 ALD 기술 전문기업 Forge Nano가 배터리 AI 소프트웨어 선도 기업 Voltaiq와 파트너십을 확대해 AI 기반 배터리 개발·제조 체계를 구축한다. ALD(원자층 증착) 기술에 AI 분석을 결합해 반도체·방산 배터리 소재의 품질과 수율을 대폭 향상시키는 것이 목표다.</description>
       <pubDate>Sun, 20 Sep 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
