@@ -6,7 +6,31 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Mon, 28 Sep 2026 03:10:11 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 03:06:03 +0900</lastBuildDate>
+    <item>
+      <title>TRUMPF, AI 칩 세대 통합냉각 기술 공개</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-29-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-29-0.html</guid>
+      <category>글로벌</category>
+      <description>독일 레이저·공작기계 기업 TRUMPF가 차세대 AI 반도체용 통합 냉각 솔루션을 발표했다. 기존 외부 냉각 방식의 한계를 넘어 칩 내부에 냉각 구조를 직접 구현하는 기술로, AI 데이터센터 고집적 패키징 시대를 겨냥한 행보다.</description>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>프라세오디뮴·네오디뮴 가격 반등, 중중희토류는 부진 지속</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-29-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-29-1.html</guid>
+      <category>희귀금속</category>
+      <description>글로벌 희토류 시장에서 프라세오디뮴·네오디뮴(Pr-Nd) 가격이 회복세를 보이는 반면 중중희토류는 수요 부진으로 약세가 이어지고 있다. 전기차·풍력 수요 회복과 수출 통제 여파가 품목별로 엇갈린 가격 흐름을 만들어내고 있다.</description>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>전북대 소부장 특화단지 실증 허브 본격 가동</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-09-29-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-29-2.html</guid>
+      <category>반도체소재</category>
+      <description>전북 익산·전주 일원에 조성되는 642억 원 규모 반도체 소부장 특화단지의 실증 허브로 전북대학교 반도체공동연구소가 선정됐다. 소재 기업들은 대규모 공장 투입 전 이곳에서 소재·공정 검증을 거칠 수 있게 된다.</description>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>반도체 공급망 '가격 인상 도미노'…원료·웨이퍼·칩 동시 상승</title>
       <link>https://tugman77.github.io/materials-news/news/2026-09-28-0.html</link>
@@ -222,30 +246,6 @@
       <category>산업재</category>
       <description>삼성디스플레이가 내년 출시 예정인 갤럭시S27 프로·울트라 시리즈에 최신 M16 OLED 패널을 공급한다고 확인됐다. M16은 전작 대비 발광 효율과 색재현율이 대폭 향상된 것으로 알려져 있다.</description>
       <pubDate>Mon, 21 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>브로드컴 AI 반도체 매출 221% 급증…맞춤형 칩 시대 개막</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-21-4.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-21-4.html</guid>
-      <category>글로벌</category>
-      <description>브로드컴이 2026 회계연도 3분기에 AI 반도체 매출 167억 달러를 기록하며 전년 동기 대비 221% 성장을 달성했다. 범용 GPU 중심에서 맞춤형 ASIC과 대규모 네트워킹으로 AI 인프라 구조가 빠르게 재편되고 있음을 보여주는 결과다.</description>
-      <pubDate>Mon, 21 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>인텔, High-NA EUV 양산 첫 투입…스티칭 기술이 관건</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-20-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-20-0.html</guid>
-      <category>글로벌</category>
-      <description>인텔이 차세대 반도체 공정의 핵심 장비인 High-NA EUV를 '팬서 레이크' 칩 제조에 처음 적용하며 양산 단계에 진입했다. 전기적 스티칭과 대형 마스크 기술이 향후 수율 확보의 핵심 과제로 부상하고 있다.</description>
-      <pubDate>Sun, 20 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>RGB LED TV, 2030년 OLED TV 출하량 추월 전망</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-20-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-20-1.html</guid>
-      <category>산업재</category>
-      <description>시장조사업체 옴디아가 2030년 RGB LED TV 출하량이 OLED TV를 넘어설 가능성이 있다고 전망했다. RGB LED는 기존 미니 LED 대비 색순도와 소비전력에서 강점을 가져 프리미엄 TV 시장 지형을 바꿀 변수로 부상하고 있다.</description>
-      <pubDate>Sun, 20 Sep 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>

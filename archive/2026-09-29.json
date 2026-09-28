@@ -25,17 +25,7 @@
       "image_keyword": "semiconductor chip integrated cooling laser",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-09-29_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "TRUMPF의 통합 냉각 기술 공식 발표 시점 및 출처 미확인",
-          "초단파 레이저로 수십 마이크로미터 냉각 채널 가공 성능 수치 미검증"
-        ],
-        "notes": "TRUMPF는 실존 기업이며 레이저 기반 반도체 가공 분야 활동 중. 전반적으로 신뢰 가능.",
-        "verified_at": "2026-09-29 03:06"
-      }
+      "image_url": "images/2026-09-29_article_0.jpg"
     },
     {
       "id": 1,
@@ -59,18 +49,7 @@
       "image_keyword": "rare earth metal neodymium industrial",
       "is_featured": false,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-09-29_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "Pr-Nd 산화물 톤당 50만 위안대 가격 수준 최신 데이터 미확인",
-          "테르븀 6,800만 위안·디스프로슘 1,950만 위안대 수치 검증 필요",
-          "9월 중순 대비 4~6% 상승 폭 출처 불명확"
-        ],
-        "notes": "SMM 인용 수치는 검증 필요하나 시장 흐름 서술은 업계 현실과 부합.",
-        "verified_at": "2026-09-29 03:06"
-      }
+      "image_url": "images/2026-09-29_article_1.jpg"
     },
     {
       "id": 2,
@@ -94,17 +73,7 @@
       "image_keyword": "semiconductor materials research laboratory industrial",
       "is_featured": false,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-09-29_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "642억 원 투자 규모 및 확정 여부 공식 발표 출처 미확인",
-          "전북대 반도체공동연구소 8인치 장비 보유 현황 검증 필요"
-        ],
-        "notes": "전북 소부장 특화단지 정책 방향은 실제 정부 계획과 부합. 수치 출처 보강 권장.",
-        "verified_at": "2026-09-29 03:06"
-      }
+      "image_url": "images/2026-09-29_article_2.jpg"
     }
   ],
   "editorial_briefing": "AI 반도체 냉각 기술 혁신과 희토류 시장 분화, 국내 소부장 인프라 확충이 동시에 전개되며 첨단 공급망 재편이 가속화되고 있다. 기술·소재·인프라 삼박자가 맞물리는 산업 구조 변화의 분기점이다.",
@@ -134,6 +103,5 @@
       "label": "희토류 시장분화",
       "status": "양극화 모니터링"
     }
-  ],
-  "last_reviewed_at": "2026-09-29 03:06"
+  ]
 }
