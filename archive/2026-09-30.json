@@ -26,18 +26,7 @@
       "image_keyword": "rare earth metal yttrium industrial",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-09-30_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "중국의 이트륨 세계 생산량 '90% 이상' 장악 - 정확한 수치 출처 불명",
-          "이트륨 수출 통제 품목 추가 공식 발표 날짜·출처 미기재",
-          "희토류 6종 수출 통제 시점을 2025년으로 단정 - 검증 필요"
-        ],
-        "notes": "기술 용도·수출통제 연혁 대체로 정확, 생산량 점유율 출처 보완 권장",
-        "verified_at": "2026-09-30 03:07"
-      }
+      "image_url": "images/2026-09-30_article_0.jpg"
     },
     {
       "id": 1,
@@ -61,17 +50,7 @@
       "image_keyword": "semiconductor materials manufacturing plant",
       "is_featured": false,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-09-30_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "'지난달 실증 허브 본격 가동' - 구체적 날짜·출처 미기재",
-          "전북 특화단지 산업부 공동지정 여부 공식 확인 필요"
-        ],
-        "notes": "OCI 군산 사업장·소부장 정책 배경 정확, 최근 가동 일정 출처 보완 권장",
-        "verified_at": "2026-09-30 03:07"
-      }
+      "image_url": "images/2026-09-30_article_1.jpg"
     },
     {
       "id": 2,
@@ -95,16 +74,7 @@
       "image_keyword": "semiconductor equipment logistics warehouse",
       "is_featured": false,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-09-30_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "'미국 내 최대 규모' 주장 - 비교 기준 및 출처 불명"
-        ],
-        "notes": "램 리서치 사업 배경·고객사 정보 정확, 시설 규모 최대 주장 검증 권장",
-        "verified_at": "2026-09-30 03:07"
-      }
+      "image_url": "images/2026-09-30_article_2.jpg"
     }
   ],
   "editorial_briefing": "중국의 이트륨 수출통제로 미·일 첨단 공급망에 비상이 걸린 가운데, 국내외 기업들은 반도체 소재 거점 확보와 물류 인프라 강화로 대응에 속도를 내고 있다.",
@@ -134,6 +104,5 @@
       "label": "글로벌 반도체 공급망",
       "status": "재편 가속화"
     }
-  ],
-  "last_reviewed_at": "2026-09-30 03:07"
+  ]
 }
