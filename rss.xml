@@ -6,7 +6,31 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Wed, 30 Sep 2026 03:07:10 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 03:06:34 +0900</lastBuildDate>
+    <item>
+      <title>TSMC 3나노 램프업, 역사적 맥락서 다시 읽다</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-01-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-01-0.html</guid>
+      <category>글로벌</category>
+      <description>TSMC 3나노 공정이 매출 비중 선두로 올라섰지만, 과거 7나노 램프업 속도와 비교하면 상승 곡선이 더디다는 분석이 나왔다. 2나노 전환을 앞두고 투자자·공급망 파트너들이 수익성과 시기를 재점검해야 한다는 지적이다.</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>LS전선, 비중국 희토류 자주권에 1616억 베팅</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-01-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-01-1.html</guid>
+      <category>희귀금속</category>
+      <description>LS전선이 비중국 희토류 공급망 확보를 위해 1616억 원 규모의 지분 투자를 단행한다고 밝혔다. 중국의 연이은 수출통제 속에 국내 기업이 직접 원료 조달 자주권 확보에 나선 첫 대형 사례로 주목받는다.</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>신도기연, 디스플레이 벗어나 반도체 패키징 진출</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-01-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-01-2.html</guid>
+      <category>산업재</category>
+      <description>디스플레이 1세대 장비 기업 신도기연이 반도체 패키징 시장으로 사업 영역을 넓히고 있다. OLED 장비로 쌓은 정밀 접합 기술을 반도체 패키지 기판 분야에 이식해 새로운 성장 동력으로 삼겠다는 전략이다.</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>중국, 이트륨 수출통제…美日 공급망 직격</title>
       <link>https://tugman77.github.io/materials-news/news/2026-09-30-0.html</link>
@@ -222,30 +246,6 @@
       <category>산업재</category>
       <description>LG디스플레이가 24.5인치 720Hz 주사율의 게이밍 OLED 패널을 출시하며 e스포츠·프리미엄 게이밍 모니터 시장을 정조준했다. 초고속 주사율 OLED는 LCD 대비 응답속도와 색 재현력에서 압도적 우위를 바탕으로 시장 확대에 나선다.</description>
       <pubDate>Tue, 22 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>GaN 전력 소자, AI 데이터센터 핵심 소재로 급부상</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-22-3.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-22-3.html</guid>
-      <category>글로벌</category>
-      <description>AI 데이터센터의 전력 수요 폭증이 GaN(질화갈륨) 기반 전력변환 소재 채택을 가속화하고 있다. 기존 실리콘 MOSFET 대비 효율·전력밀도에서 우위를 갖는 GaN은 차세대 서버 전원공급장치의 핵심 소재로 자리잡고 있다.</description>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>그린란드 핵심광물 미국 협정…공급망 판도 변화 예고</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-22-4.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-22-4.html</guid>
-      <category>희귀금속</category>
-      <description>그린란드 광물 기업 Greenland Mines가 미국과의 핵심광물 공급 협정 가능성을 환영하며 글로벌 공급망 재편의 교두보 역할을 자처했다. 희토류 수출 통제를 앞세운 중국의 자원 압박에 맞서 미국-그린란드 자원 동맹이 본격화되는 국면이다.</description>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>中 헬륨 수출 금지, 반도체 공정 비상</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-21-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-21-0.html</guid>
-      <category>글로벌</category>
-      <description>중국이 반도체 핵심 공정 소재인 헬륨에 대한 수출 통제를 전격 시행하면서 삼성전자·SK하이닉스 등 국내 반도체 업계에 비상이 걸렸다. 헬륨은 반도체 웨이퍼 세정, 리소그래피 등 핵심 공정에 필수적으로 사용된다.</description>
-      <pubDate>Mon, 21 Sep 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
