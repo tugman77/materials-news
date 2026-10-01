@@ -6,7 +6,31 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 01 Oct 2026 03:06:34 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 03:02:28 +0900</lastBuildDate>
+    <item>
+      <title>美, 탄탈럼 수입금지 확정…북·중·러 공급망 차단</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-02-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-02-0.html</guid>
+      <category>희귀금속</category>
+      <description>미국 정부가 북한·중국·러시아산 희귀금속 탄탈럼에 대한 수입금지를 공식 확정했다. 반도체·항공우주·방산 핵심 소재인 탄탈럼의 공급망 재편이 불가피해졌으며, 글로벌 조달 전략에 중대한 변수가 생겼다.</description>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>인피니온, 태국 방콕에 반도체 후공정 허브 본격 가동</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-02-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-02-1.html</guid>
+      <category>글로벌</category>
+      <description>인피니온 테크놀로지스가 태국 방콕 인근 사뭇프라칸에 신규 반도체 후공정(백엔드) 생산 허브를 공식 개소했다. 최대 1,000개의 고급 일자리를 창출하며 글로벌 생산망 다각화 전략의 핵심 거점으로 부상할 전망이다.</description>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>어펄마-도레이 FCCL 결합, 공정위 공청회 임박</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-02-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-02-2.html</guid>
+      <category>반도체소재</category>
+      <description>사모펀드 어펄마캐피탈의 도레이첨단소재 연성동박적층판(FCCL) 사업 인수 건에 대한 공정거래위원회 공청회가 이르면 10월 중 열릴 전망이다. 1년 이상 지연된 심사가 마무리 국면에 접어들면서 FCCL 시장 재편 여부에 이목이 집중된다.</description>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>TSMC 3나노 램프업, 역사적 맥락서 다시 읽다</title>
       <link>https://tugman77.github.io/materials-news/news/2026-10-01-0.html</link>
@@ -222,30 +246,6 @@
       <category>산업재</category>
       <description>삼성디스플레이가 OLED 패널 원가를 획기적으로 낮출 수 있는 신기술 '하프톤 블랙 PDL' 도입을 검토 중이다. IT·전장용 OLED 수요 확대와 맞물려 소재·공정 혁신이 가속화되면서 관련 소재주에도 관심이 쏠리고 있다.</description>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>AMD 시총 1조 달러 첫 돌파…AI 반도체 패권 재편</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-22-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-22-0.html</guid>
-      <category>글로벌</category>
-      <description>AMD가 기술주 랠리에 힘입어 주가 8.4% 급등하며 시가총액 1조 달러를 처음 돌파했다. 엔비디아·인텔에 이어 세 번째 반도체 기업의 1조 달러 클럽 가입으로 AI 반도체 시장 구도가 빠르게 재편되고 있다.</description>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>제이앤티씨, 김천에 3470억 TGV 유리기판 공장 신설</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-22-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-22-1.html</guid>
-      <category>반도체소재</category>
-      <description>제이앤티씨가 경북 김천에 3470억 원을 투자해 유리관통전극(TGV) 기반 유리기판 생산공장을 신설한다. AI·HPC 반도체 패키징 수요 급증에 대응하며, 투자 규모는 자기자본의 140%에 달한다.</description>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>LG디스플레이, 720Hz 게이밍 OLED로 e스포츠 공략</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-22-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-22-2.html</guid>
-      <category>산업재</category>
-      <description>LG디스플레이가 24.5인치 720Hz 주사율의 게이밍 OLED 패널을 출시하며 e스포츠·프리미엄 게이밍 모니터 시장을 정조준했다. 초고속 주사율 OLED는 LCD 대비 응답속도와 색 재현력에서 압도적 우위를 바탕으로 시장 확대에 나선다.</description>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>

@@ -26,18 +26,7 @@
       "image_keyword": "tantalum metal strategic mineral supply chain",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-10-02_article_0.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "미국의 탄탈럼 수입금지가 '공식 확정'됐다는 구체적 행정명령·법령 근거 미제시",
-          "미국 연간 탄탈럼 소비량 '약 800톤' 수치의 출처 불명확(USGS 인용이나 검증 필요)",
-          "북한산 탄탈럼이 미국으로 실질적으로 유입됐는지 여부 개연성 검토 필요"
-        ],
-        "notes": "수입금지 확정 근거 법령·행정명령 출처 보강 필요",
-        "verified_at": "2026-10-02 03:02"
-      }
+      "image_url": "images/2026-10-02_article_0.jpg"
     },
     {
       "id": 1,
@@ -61,18 +50,7 @@
       "image_keyword": "semiconductor backend manufacturing plant Thailand",
       "is_featured": false,
       "timestamp": "오전 09:30",
-      "image_url": "images/2026-10-02_article_1.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "태국 총리 이름 'Anutin Charnvirakul'이 2026년 10월 현재 재임 중인지 확인 필요",
-          "인피니온 COO 'Alexander Gorski' 실존 여부 및 직함 정확성 확인 필요",
-          "개소식 날짜·투자 규모 등 구체적 수치가 본문에 누락돼 검증 불가"
-        ],
-        "notes": "임원명·총리명 등 고유명사 사실 확인 필요",
-        "verified_at": "2026-10-02 03:02"
-      }
+      "image_url": "images/2026-10-02_article_1.jpg"
     },
     {
       "id": 2,
@@ -96,17 +74,7 @@
       "image_keyword": "flexible copper clad laminate FCCL industrial material",
       "is_featured": false,
       "timestamp": "오전 09:45",
-      "image_url": "images/2026-10-02_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "어펄마캐피탈(Aphirma Capital) 사명 철자가 통상 표기 'Affirma'와 상이할 수 있음",
-          "2025년 4월 SKC로부터 플렉시온 인수 완료 여부 공식 확인 필요"
-        ],
-        "notes": "공정위 심사 일정·기업 인수 경위 등 전반적으로 개연성 높음",
-        "verified_at": "2026-10-02 03:02"
-      }
+      "image_url": "images/2026-10-02_article_2.jpg"
     }
   ],
   "editorial_briefing": "미국의 탄탈럼 수입금지 확정으로 희귀금속 공급망 재편이 가속화되는 가운데, 인피니온의 태국 후공정 허브 가동과 FCCL 시장 재편 심사가 맞물리며 글로벌 소재·반도체 밸류체인 전반에 구조적 변화 압력이 거세지고 있다.",
@@ -136,6 +104,5 @@
       "label": "반도체 공급망 재편",
       "status": "글로벌 거점 다변화"
     }
-  ],
-  "last_reviewed_at": "2026-10-02 03:02"
+  ]
 }
