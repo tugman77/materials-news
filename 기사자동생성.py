@@ -17,6 +17,7 @@ import hashlib
 import json
 import os
 import random
+import re
 import requests
 import time
 from datetime import datetime, timezone, timedelta
@@ -335,6 +336,42 @@ _LOC_WORDS  = ["콩고", "중국", "미국", "유럽", "호주", "칠레", "인�
 _EVT_WORDS  = ["광산", "붕괴", "폭발", "화재", "파업", "홍수", "지진", "침수",
                "산사태", "사고", "폐쇄", "조업중단", "수출금지", "제재", "감산",
                "파산", "리콜", "사망", "부상", "실종"]
+
+# 단순 부분일치(`w in text`)가 엉뚱한 글자를 잡는 단어는 정규식으로 한정한다.
+#  · 부상: 사고 부상(負傷)과 "심장으로 부상"의 부상(浮上)이 같은 글자다. 뒤엣것까지
+#    사건으로 등록돼 [부상] 쿨다운이 9회 오탐을 냈다(2026-10-02 로그 실측).
+#  · 인도: '인도네시아', '장비를 인도했다'와 겹친다.
+#  · 폭발: 사고 폭발과 "수요 폭발"(폭발적 증가)이 같은 글자다.
+#  · 사고: '사고방식'과 겹친다.
+_WORD_PATTERNS = {
+    "부상": re.compile(r"부상자|부상을 입|명 부상|중경상"),
+    "인도": re.compile(r"인도(?!네시아)(?!했|한다|하기|하고|받)"),
+    "폭발": re.compile(r"(?<!수요 )(?<!성장 )(?<!매출 )(?<!급)폭발(?!적|\s*증가|\s*성장)"),
+    "사고": re.compile(r"사고(?!방식|력|팔)"),
+}
+
+
+def _has_word(text: str, w: str) -> bool:
+    pat = _WORD_PATTERNS.get(w)
+    return bool(pat.search(text)) if pat else (w in text)
+
+
+_EVT_SET = set(_EVT_WORDS)
+
+
+def is_event_key(kp: str) -> bool:
+    """event_memory에 30일 쿨다운을 걸 '사건' 지문인가.
+
+    **단독어는 사건이 아니다.** 중국·희토류·배터리는 분야를 가리키는 주제어일 뿐인데,
+    이걸 쿨다운 키로 등록해 그 단어가 든 기사를 전부 중복 처리했다
+    (2026-10-02 실측: [중국] count=43 — 사실상 중국 관련 기사 전면 차단).
+    장소+소재(중국+희토류)도 사건이 아니라 분야 조합이라 제외한다 — 주제 반복은
+    아래 [A] 최근 기사 비교가 14일 창으로 따로 잡는다.
+    쿨다운은 '콩고+붕괴', '광산+폭발'처럼 **한 번 터지고 끝나는 사건**에만 건다.
+    """
+    if "+" not in kp:
+        return False
+    return any(part in _EVT_SET for part in kp.split("+"))
 _MAT_WORDS  = ["탄탈럼", "코발트", "리튬", "니켈", "구리", "아연", "망간", "크롬",
                "희토류", "텅스텐", "몰리브덴", "인듐", "갈륨", "게르마늄", "셀레늄",
                "HBM", "실리콘", "SiC", "배터리", "전구체"]
@@ -345,9 +382,9 @@ def extract_keyword_pairs(text: str) -> set:
     예: '콩고 광산 붕괴' → {'콩고+광산', '콩고+붕괴', '광산+붕괴'}
     단독 핵심어도 포함: {'콩고', '광산', '붕괴'}
     """
-    found_locs = [w for w in _LOC_WORDS if w in text]
-    found_evts = [w for w in _EVT_WORDS if w in text]
-    found_mats = [w for w in _MAT_WORDS if w in text]
+    found_locs = [w for w in _LOC_WORDS if _has_word(text, w)]
+    found_evts = [w for w in _EVT_WORDS if _has_word(text, w)]
+    found_mats = [w for w in _MAT_WORDS if _has_word(text, w)]
 
     pairs: set = set()
     all_kw = found_locs + found_evts + found_mats
@@ -379,7 +416,9 @@ def save_event_memory(memory: dict):
     """event_memory.json 저장. 180일 초과 항목은 자동 삭제."""
     today = datetime.now(KST).strftime("%Y-%m-%d")
     cutoff = (datetime.now(KST) - timedelta(days=180)).strftime("%Y-%m-%d")
-    pruned = {k: v for k, v in memory.items() if v.get("last_date", "") >= cutoff}
+    # 날짜 만료 + 비사건 키 제거(2026-10-02 이전에 쌓인 단독어 키 청소)
+    pruned = {k: v for k, v in memory.items()
+              if v.get("last_date", "") >= cutoff and is_event_key(k)}
     try:
         with open(EVENT_MEMORY_FILE, "w", encoding="utf-8") as f:
             json.dump(pruned, f, ensure_ascii=False, indent=2)
@@ -395,6 +434,8 @@ def update_event_memory(articles: list, memory: dict):
         text = a.get("title", "") + " " + (a.get("summary") or "")
         pairs = extract_keyword_pairs(text)
         for kp in pairs:
+            if not is_event_key(kp):
+                continue   # 주제어·분야 조합은 쿨다운 대상이 아니다
             if kp in memory:
                 memory[kp]["last_date"] = today
                 memory[kp]["count"] += 1
@@ -437,18 +478,27 @@ def check_duplicate_articles(new_articles: list, recent_topics: list,
         reason = None
 
         # [A] 최근 기사와 키워드 겹침 비율 체크
-        for past_pairs in past_pairs_list:
-            if not past_pairs:
-                continue
-            overlap = new_pairs & past_pairs
-            ratio = len(overlap) / max(len(new_pairs), len(past_pairs))
-            if ratio >= 0.40:
-                reason = f"과거 기사와 키워드 {int(ratio*100)}% 겹침 (공통: {', '.join(list(overlap)[:5])})"
-                break
+        #  지문이 빈약하면 비율이 의미를 잃는다 — 양쪽 다 {중국} 하나뿐이면 100%가 된다.
+        #  ('키워드 100% 겹침' 59건의 정체였다, 2026-10-02 로그 실측)
+        #  그래서 ① 양쪽 지문 3개 이상 ② 겹침 2개 이상 ③ 겹침에 조합(2-gram) 포함
+        #  을 모두 만족할 때만 같은 사건으로 본다. 단독어만 겹치는 건 '같은 분야'일 뿐이다.
+        if len(new_pairs) >= 3:
+            for past_pairs in past_pairs_list:
+                if len(past_pairs) < 3:
+                    continue
+                overlap = new_pairs & past_pairs
+                if len(overlap) < 2 or not any("+" in k for k in overlap):
+                    continue
+                ratio = len(overlap) / max(len(new_pairs), len(past_pairs))
+                if ratio >= 0.40:
+                    reason = f"과거 기사와 키워드 {int(ratio*100)}% 겹침 (공통: {', '.join(list(overlap)[:5])})"
+                    break
 
         # [B] event_memory 쿨다운 체크
         if not reason:
             for kp in new_pairs:
+                if not is_event_key(kp):
+                    continue
                 if kp in event_memory:
                     last = event_memory[kp].get("last_date", "")
                     if last >= cooldown_cutoff:
