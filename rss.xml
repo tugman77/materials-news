@@ -6,7 +6,31 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Fri, 02 Oct 2026 03:02:28 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 03:02:37 +0900</lastBuildDate>
+    <item>
+      <title>중국 ASML 장비 대거 비축…미국, 완전 수출금지 압박</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-03-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-03-0.html</guid>
+      <category>글로벌</category>
+      <description>중국 반도체 팹들이 최근 수년간 ASML 액침 리소그래피 장비 343대를 수십억 달러 규모로 확보한 사실이 드러났다. 전직 미국 관료들은 동맹국과 협력해 추가 수출을 전면 차단해야 한다고 촉구하고 있어, 글로벌 반도체 장비 공급망에 새로운 긴장이 고조되고 있다.</description>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>JSR마이크로코리아, 오창에 차세대 소재 공장 준공</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-03-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-03-1.html</guid>
+      <category>반도체소재</category>
+      <description>일본 JSR의 한국 법인 JSR마이크로코리아가 충북 오창에 차세대 반도체 소재 생산공장을 준공했다. 이 공장은 EUV 포토레지스트를 비롯한 고부가 소재를 생산할 예정으로, 국내 소부장 공급망 강화에 기여할 전망이다.</description>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>갈륨 가격 3년 새 9배…中 수출통제의 경제학</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-03-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-03-2.html</guid>
+      <category>희귀금속</category>
+      <description>중국이 갈륨 수출을 통제한 지 3년이 지난 현재 국제 갈륨 가격이 최대 9배까지 폭등한 것으로 나타났다. 차세대 전력 반도체의 핵심 소재인 갈륨화갈륨(GaN) 공급망에 구조적 변화가 불가피한 상황이다.</description>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>美, 탄탈럼 수입금지 확정…북·중·러 공급망 차단</title>
       <link>https://tugman77.github.io/materials-news/news/2026-10-02-0.html</link>
@@ -222,30 +246,6 @@
       <category>반도체소재</category>
       <description>반도체 장비·소재 기업 ASM이 차세대 반도체 스케일링을 위한 플로어블 카본(Flowable Carbon) PECVD 기술 'XP8 Vertos'를 세계 최초로 출시했다. 이 기술은 고종횡비 구조의 보이드 없는 갭필을 가능케 해 2나노 이하 공정의 핵심 소재 과제를 해결할 수 있을 것으로 기대된다.</description>
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>SKC, 앱솔릭스에 921억 추가 투입…유리기판 상용화 가속</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-23-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-23-0.html</guid>
-      <category>반도체소재</category>
-      <description>SKC가 자회사 앱솔릭스 유상증자에 921억 원을 추가 청약하며 총 투자 규모를 3,731억 원으로 확대했다. 이번 투자로 앱솔릭스는 AI 패키지용 유리기판 임베딩 공정 상용화에 박차를 가할 전망이다.</description>
-      <pubDate>Wed, 23 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>중국, 핵심광물 해외투자에 보안심사 도입…공급망 통제 심화</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-23-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-23-1.html</guid>
-      <category>글로벌</category>
-      <description>중국이 일부 핵심광물 분야 해외 투자에 대해 신규 보안심사 제도를 도입하며 자원 통제를 한층 강화했다. 희토류·헬륨에 이어 투자 단계까지 규제를 확대한 조치로, 글로벌 공급망 재편 속도가 빨라질 전망이다.</description>
-      <pubDate>Wed, 23 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>삼성D '하프톤 블랙 PDL' 기술 검토…OLED 원가 혁신 주목</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-23-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-23-2.html</guid>
-      <category>산업재</category>
-      <description>삼성디스플레이가 OLED 패널 원가를 획기적으로 낮출 수 있는 신기술 '하프톤 블랙 PDL' 도입을 검토 중이다. IT·전장용 OLED 수요 확대와 맞물려 소재·공정 혁신이 가속화되면서 관련 소재주에도 관심이 쏠리고 있다.</description>
-      <pubDate>Wed, 23 Sep 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
