@@ -6,7 +6,31 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Sat, 03 Oct 2026 03:02:37 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2026 03:02:37 +0900</lastBuildDate>
+    <item>
+      <title>한국알콜그룹, 반도체 소재 순환 밸류체인 대전환 선언</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-04-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-04-0.html</guid>
+      <category>반도체소재</category>
+      <description>주정(에탄올) 제조 기업으로 알려진 한국알콜그룹이 반도체 공정 소재 사업으로 전면 전환을 선언했다. 에탄올 기반 고순도 용제·세정제를 반도체 제조 공정에 공급하는 순환 밸류체인 구축이 핵심이다.</description>
+      <pubDate>Sun, 04 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>RISC-V 칩 설계, 美中 기술 갈등 속 협력 지속</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-04-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-04-1.html</guid>
+      <category>글로벌</category>
+      <description>오픈소스 칩 설계 표준 RISC-V를 둘러싸고 미국과 중국 기업 간 협력이 기술 패권 경쟁 속에서도 지속되고 있다. 미국 IP 업체 MIPS가 중국 기업들과의 공동 개발을 전례 없는 수준으로 확대하고 있다고 공개 발언해 주목된다.</description>
+      <pubDate>Sun, 04 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>희토류 공급망 무기화, 100억 달러가 6.5조 달러 흔든다</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-04-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-04-2.html</guid>
+      <category>희귀금속</category>
+      <description>전 세계 희토류 시장 규모는 연간 100억 달러에 불과하지만, 이를 활용하는 전방 산업의 경제 규모는 6.5조 달러에 달한다. 희토류 수출 통제가 반도체·방산·자동차 전 산업을 인질로 삼는 구조적 취약성이 재조명되고 있다.</description>
+      <pubDate>Sun, 04 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>중국 ASML 장비 대거 비축…미국, 완전 수출금지 압박</title>
       <link>https://tugman77.github.io/materials-news/news/2026-10-03-0.html</link>
@@ -222,30 +246,6 @@
       <category>반도체소재</category>
       <description>이천시와 경기주택도시공사(GH)가 18만㎡ 규모의 반도체 소부장 클러스터 조성에 합의했다. 2029년 하반기 착공을 목표로 하며, 민선 9기 핵심 공약 실현과 함께 수도권 반도체 공급망 허브 구축을 겨냥하고 있다.</description>
       <pubDate>Fri, 25 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>퀄컴 2나노 스냅드래곤, 전량 TSMC 위탁…삼성 파운드리 압박 심화</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-24-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-24-0.html</guid>
-      <category>글로벌</category>
-      <description>퀄컴이 차세대 플래그십 AP 스냅드래곤 8 엘리트 6세대 전량을 TSMC 2나노 공정으로 생산한다고 공식 확인했다. 삼성 파운드리는 선단 공정 협력 가능성만 열어둔 채 주요 물량 확보에 실패하며 경쟁 열세가 심화되고 있다.</description>
-      <pubDate>Thu, 24 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>LG디스플레이, AI로 OLED 소재 개발…연간 수백억 원 비용 절감</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-24-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-24-1.html</guid>
-      <category>산업재</category>
-      <description>LG디스플레이가 인공지능을 활용해 OLED 발광 소재를 개발하는 기술을 도입, 연간 수백억 원 규모의 연구개발 비용을 절감하는 성과를 거두고 있다. AI 기반 소재 개발은 탠덤 OLED 등 차세대 패널 경쟁력 강화에도 직결돼 업계 주목을 받고 있다.</description>
-      <pubDate>Thu, 24 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>ASM, 플로어블 카본 PECVD 신기술 출시…반도체 미세화 한계 돌파</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-24-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-24-2.html</guid>
-      <category>반도체소재</category>
-      <description>반도체 장비·소재 기업 ASM이 차세대 반도체 스케일링을 위한 플로어블 카본(Flowable Carbon) PECVD 기술 'XP8 Vertos'를 세계 최초로 출시했다. 이 기술은 고종횡비 구조의 보이드 없는 갭필을 가능케 해 2나노 이하 공정의 핵심 소재 과제를 해결할 수 있을 것으로 기대된다.</description>
-      <pubDate>Thu, 24 Sep 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
