@@ -26,18 +26,7 @@
       "image_keyword": "critical mineral supply chain laboratory",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-10-05_article_0.jpg",
-      "review": {
-        "trust_score": 2,
-        "status": "fail",
-        "suspicious_claims": [
-          "제목 '295억 달러'와 본문·요약 '2,950만 달러' 간 1,000배 수치 불일치",
-          "미국이 핵심광물 50개 이상 중 절반 이상을 100% 수입 의존 근거 출처 불명확",
-          "DOE 국립연구소 지원 발표의 구체적 금액·일정 출처 미제시"
-        ],
-        "notes": "제목과 본문 투자액이 1,000배 차이—즉시 수정 필요",
-        "verified_at": "2026-10-05 03:03"
-      }
+      "image_url": "images/2026-10-05_article_0.jpg"
     },
     {
       "id": 1,
@@ -62,16 +51,7 @@
       "image_keyword": "OLED display panel manufacturing",
       "is_featured": false,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-10-05_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "중국과의 OLED 기술 격차 '1.3년' 수치의 산출 근거 및 출처 불명확"
-        ],
-        "notes": "전반적으로 업계 현실과 부합하나 격차 수치 출처 보완 권고",
-        "verified_at": "2026-10-05 03:03"
-      }
+      "image_url": "images/2026-10-05_article_1.jpg"
     },
     {
       "id": 2,
@@ -97,18 +77,7 @@
       "image_keyword": "semiconductor materials manufacturing Korea",
       "is_featured": false,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-10-05_article_2.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'광주·전남 통합특별시' 반도체 클러스터를 기정사실처럼 기술—행정 통합 추진 중으로 확정 아님",
-          "코스닥 900선 재탈환 '가능성 높아지고 있다'는 예측을 사실 어조로 서술",
-          "파이낸셜뉴스·한국경제 보도 인용이 구체적 기사 없이 뭉뚱그려 처리됨"
-        ],
-        "notes": "광주·전남 통합특별시 관련 표현을 추진 중으로 수정 권고",
-        "verified_at": "2026-10-05 03:03"
-      }
+      "image_url": "images/2026-10-05_article_2.jpg"
     }
   ],
   "editorial_briefing": "미국의 핵심광물 공급망 투자와 한국 디스플레이 업계의 세제 지원 건의가 맞물리며 탈중국 공급망 재편이 가속화되고 있다. AI 반도체 수요 확대에 힘입어 국내 소부장 종목이 강세를 보이며 코스닥 900선 탈환 기대감도 고조되고 있다.",
@@ -138,6 +107,5 @@
       "label": "AI 반도체 수요",
       "status": "국내 수혜 확대중"
     }
-  ],
-  "last_reviewed_at": "2026-10-05 03:03"
+  ]
 }
