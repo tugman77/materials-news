@@ -26,18 +26,7 @@
       "image_keyword": "semiconductor helium gas supply",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-10-06_article_0.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "중국의 헬륨 수출 전면 금지 발표 — 실제 공식 발표 여부 미확인",
-          "이트륨 수출통제 2026년 9월 시행 — 검증 필요",
-          "중국이 헬륨을 정제·재수출해 아시아 공급 상당 부분 담당 — 수치 근거 불명확"
-        ],
-        "notes": "헬륨 금수 조치 실제 발표 여부가 핵심 — 공식 출처 확인 필요",
-        "verified_at": "2026-10-06 03:07"
-      }
+      "image_url": "images/2026-10-06_article_0.jpg"
     },
     {
       "id": 1,
@@ -62,18 +51,7 @@
       "image_keyword": "semiconductor manufacturing equipment investment",
       "is_featured": false,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-10-06_article_1.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "마이크론 2026 4분기 매출 87억 달러·전년비 93% 증가 — 수치 검증 필요",
-          "한화자산운용 소부장 ETF 일주일 11% 상승 — 특정 수익률 출처 불명",
-          "소부장 ETF 한 달 20% 상승 및 상위 10개 중 7개 차지 — 코스콤 데이터 확인 필요"
-        ],
-        "notes": "마이크론 실적 수치와 ETF 수익률 구체적 수치 출처 확인 요망",
-        "verified_at": "2026-10-06 03:07"
-      }
+      "image_url": "images/2026-10-06_article_1.jpg"
     },
     {
       "id": 2,
@@ -98,17 +76,7 @@
       "image_keyword": "rare earth mining Greenland mineral",
       "is_featured": false,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-10-06_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "탄브리즈 REO 총 자원량 2억 8900만 톤 — 공식 자원 추정치와 대조 필요",
-          "2022년 그린란드 의회 우라늄 병산 금지로 사업 중단 — 사실 관계 확인 권장"
-        ],
-        "notes": "광산 개발 승인 사실은 개연성 높으나 자원량 수치 출처 명시 권장",
-        "verified_at": "2026-10-06 03:07"
-      }
+      "image_url": "images/2026-10-06_article_2.jpg"
     }
   ],
   "editorial_briefing": "중국의 헬륨 수출 금지로 반도체 공급망 위기가 심화되는 가운데, 소부장 ETF는 AI 투자 기대감에 급등세를 이어가고 있다. 그린란드 희토류 광산 개발 승인은 공급망 다변화의 청신호로 작용할 전망이다.",
@@ -138,6 +106,5 @@
       "label": "공급망 다변화",
       "status": "중국 의존도 탈피 중"
     }
-  ],
-  "last_reviewed_at": "2026-10-06 03:07"
+  ]
 }
