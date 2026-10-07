@@ -6,7 +6,31 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Wed, 07 Oct 2026 03:04:02 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 03:02:13 +0900</lastBuildDate>
+    <item>
+      <title>국내 연구진, AI칩용 단결정 정밀 제어 기술 개발</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-08-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-08-0.html</guid>
+      <category>반도체소재</category>
+      <description>KAIST·UNIST·한양대 공동 연구팀이 반도체 결정의 성장 위치와 시작점을 동시에 제어하는 기술을 개발했다. 3D 집적 및 고집적 AI 반도체에 적용 가능한 원천 기술로 주목받고 있다.</description>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>BGF, 반도체 소재 손자회사 지분 전량 인수…지배구조 수직 통합</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-08-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-08-1.html</guid>
+      <category>글로벌</category>
+      <description>BGF그룹이 반도체 소재 손자회사 지분을 전량 매입하며 지배구조 개편에 나섰다. 소부장 공급망 내재화 전략의 일환으로, 반도체 소재 사업 경쟁력 강화를 본격화하는 행보로 해석된다.</description>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>희귀금속 공급망 대응 전략, 주요국 격차 뚜렷</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-08-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-08-2.html</guid>
+      <category>희귀금속</category>
+      <description>중국의 핵심광물 수출통제가 장기화되는 가운데, 미국·유럽·한국 등 주요국의 대응 전략 간 격차가 뚜렷해지고 있다. 공급망 다변화 속도와 민관 협력 수준이 향후 산업 경쟁력을 가를 핵심 변수로 부상했다.</description>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>한솔케미칼, 대만에 340억 반도체 소재 기지 구축</title>
       <link>https://tugman77.github.io/materials-news/news/2026-10-07-0.html</link>
@@ -222,30 +246,6 @@
       <category>반도체소재</category>
       <description>전북 익산·전주 일원에 조성되는 642억 원 규모 반도체 소부장 특화단지의 실증 허브로 전북대학교 반도체공동연구소가 선정됐다. 소재 기업들은 대규모 공장 투입 전 이곳에서 소재·공정 검증을 거칠 수 있게 된다.</description>
       <pubDate>Tue, 29 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>반도체 공급망 '가격 인상 도미노'…원료·웨이퍼·칩 동시 상승</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-28-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-28-0.html</guid>
-      <category>글로벌</category>
-      <description>AI 수요 급증과 각국 수출통제 연쇄 작용으로 반도체 공급망 전반에 걸쳐 가격 인상 도미노가 현실화되고 있다. 원료 소재부터 웨이퍼, 완성 칩까지 동시 상승 압력이 가중되며 국내 소부장 기업들의 비용 부담이 커지고 있다.</description>
-      <pubDate>Mon, 28 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>영국, 탄탈륨·니오븀 러 수입 기업 4곳 제재</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-28-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-28-1.html</guid>
-      <category>희귀금속</category>
-      <description>영국 정부가 무기 제조에 사용되는 희귀금속 탄탈륨·니오븀을 러시아에서 수입하는 기업 4곳에 제재를 부과했다. 이번 조치는 러시아의 방산 공급망을 차단하려는 서방 제재 전선이 희귀금속 분야로 확대되는 신호탄으로 해석된다.</description>
-      <pubDate>Mon, 28 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>삼에스코리아, AI 훈풍에 FOSB 생산능력 2배 확대</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-28-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-28-2.html</guid>
-      <category>반도체소재</category>
-      <description>삼에스코리아가 반도체 웨이퍼 운송 용기인 FOSB 월 생산 능력을 1만5000개에서 3만개로 두 배 끌어올린다. AI 반도체 수요 급증으로 주요 고객사 주문이 폭증한 데 따른 대응으로, 중국 현지 생산 법인도 확보했다.</description>
-      <pubDate>Mon, 28 Sep 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>

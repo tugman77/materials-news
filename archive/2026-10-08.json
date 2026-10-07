@@ -26,17 +26,7 @@
       "image_keyword": "semiconductor crystal growth AI chip",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-10-08_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "'세계 최초' 주장은 출처·논문 인용 없이 단독 서술됨",
-          "KAIST·UNIST·한양대 3개 기관 공동 연구 구성 확인 불가"
-        ],
-        "notes": "전반적으로 기술 설명 타당, '세계 최초' 표현 출처 보강 권장",
-        "verified_at": "2026-10-08 03:02"
-      }
+      "image_url": "images/2026-10-08_article_0.jpg"
     },
     {
       "id": 1,
@@ -60,18 +50,7 @@
       "image_keyword": "semiconductor material supply chain industrial",
       "is_featured": false,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-10-08_article_1.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "BGF그룹의 반도체 소재 손자회사 구체적 사명·거래 관계 미확인",
-          "'국내 주요 팹리스 및 파운드리 기업과 거래' 주장 출처 없음",
-          "BGF의 반도체 소재 계열사 진출 여부 공개 정보 확인 필요"
-        ],
-        "notes": "BGF의 반도체 소재 사업 연관성 구체 근거 부족, 사실 확인 필요",
-        "verified_at": "2026-10-08 03:02"
-      }
+      "image_url": "images/2026-10-08_article_1.jpg"
     },
     {
       "id": 2,
@@ -97,18 +76,7 @@
       "image_keyword": "rare earth metal supply chain minerals",
       "is_featured": false,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-10-08_article_2.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "갈륨 가격 '3년간 9배 폭등' 수치 출처 미제시, 실제 시세와 대조 필요",
-          "미국 DOE 핵심광물 공급망 295억 달러 투자 계획 원문 확인 필요",
-          "이트륨·프라세오디뮴·네오디뮴 공급 불안정 심화 주장 근거 미흡"
-        ],
-        "notes": "수치 및 정책 인용 출처 보강 필요, 전반적 논지는 업계 현실 부합",
-        "verified_at": "2026-10-08 03:02"
-      }
+      "image_url": "images/2026-10-08_article_2.jpg"
     }
   ],
   "editorial_briefing": "국내 연구진의 AI칩용 반도체 기술 혁신과 BGF의 소재 공급망 내재화가 맞물리며, 희귀금속 수출통제 장기화 속 주요국 간 공급망 대응 격차가 산업 핵심 변수로 부상하고 있다.",
@@ -138,6 +106,5 @@
       "label": "반도체 공급망",
       "status": "내재화 전략 가속"
     }
-  ],
-  "last_reviewed_at": "2026-10-08 03:02"
+  ]
 }
