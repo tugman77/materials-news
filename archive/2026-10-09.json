@@ -26,18 +26,7 @@
       "image_keyword": "silicon carbide semiconductor wafer",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-10-09_article_0.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "지원 주체가 에너지부(DOE)로 명시됐으나, Wolfspeed 정부 지원은 상무부 CHIPS Act 경로가 유력",
-          "지원 규모 15억 달러: 공개된 Wolfspeed CHIPS 조건부 약정은 약 7.5억 달러 수준으로 알려짐",
-          "마르시 공장을 'SiC 웨이퍼 제조 시설'로만 설명하나, 실제는 전력 디바이스 팹으로 알려짐"
-        ],
-        "notes": "지원 주체(DOE vs 상무부)·금액 불일치 가능성, 사실 확인 필요",
-        "verified_at": "2026-10-09 03:06"
-      }
+      "image_url": "images/2026-10-09_article_0.jpg"
     },
     {
       "id": 1,
@@ -61,17 +50,7 @@
       "image_keyword": "semiconductor test socket component",
       "is_featured": false,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-10-09_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "ISC HBM4 테스트 소켓 개발 완료 및 공급 시작 여부: 출처·시점 미확인",
-          "리노공업 2026년 상반기 매출 22% 증가 수치: 공식 실적 발표 여부 확인 필요"
-        ],
-        "notes": "기업 실재성·업종 적합성 문제없음, 수치 출처 보강 권고",
-        "verified_at": "2026-10-09 03:06"
-      }
+      "image_url": "images/2026-10-09_article_1.jpg"
     },
     {
       "id": 2,
@@ -95,17 +74,7 @@
       "image_keyword": "rare earth metal praseodymium neodymium",
       "is_featured": false,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-10-09_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "Pr-Nd 산화물 톤당 47~48만 위안 시세: 최신 SMM 데이터와 대조 필요",
-          "1개월 8~12% 상승 근거 출처 미기재"
-        ],
-        "notes": "SMM 기준 시황 보도로 구성 타당, 가격 수치 출처 명시 권고",
-        "verified_at": "2026-10-09 03:06"
-      }
+      "image_url": "images/2026-10-09_article_2.jpg"
     }
   ],
   "editorial_briefing": "미국 정부의 SiC 반도체 지원과 AI 투자 확대로 전력·테스트 부품 공급망이 활기를 띠는 가운데, 중국 연휴 후 희토류 시장은 회복세를 대기 중이다. 소재·부품·장비 전반에 걸쳐 투자 사이클이 본격화되고 있다.",
@@ -135,6 +104,5 @@
       "label": "글로벌 공급망",
       "status": "투자사이클 진입"
     }
-  ],
-  "last_reviewed_at": "2026-10-09 03:06"
+  ]
 }

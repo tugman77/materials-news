@@ -6,7 +6,31 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 08 Oct 2026 03:02:13 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 03:06:08 +0900</lastBuildDate>
+    <item>
+      <title>Wolfspeed, SiC 생산에 美 정부 15억 달러 조건부 지원 확보</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-09-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-09-0.html</guid>
+      <category>글로벌</category>
+      <description>미국 탄화규소(SiC) 반도체 선두 기업 Wolfspeed가 미국 정부로부터 15억 달러 규모의 조건부 자금 지원을 확보했다. 이는 전력 반도체 국산화를 위한 와이드밴드갭 소재 생산 기반 강화가 목적으로, 글로벌 SiC 공급망 재편에 중요한 분기점이 될 전망이다.</description>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>소부장 테스트 부품株, 반도체 투자 확대 수혜 주목</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-09-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-09-1.html</guid>
+      <category>반도체소재</category>
+      <description>AI 반도체 생산 확대에 따른 투자 사이클이 본격화되면서 리노공업·ISC·티에스이 등 테스트 소켓·인터페이스 부품 전문 기업에 대한 시장 기대감이 높아지고 있다. 반도체 ETF 리밸런싱으로 소부장 종목 수급이 개선되는 가운데, 테스트 공정 고도화 수요가 핵심 투자 논리로 부상했다.</description>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>희토류 가격 중국 연휴 후 회복 대기…Pr-Nd 상승세 견인</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-09-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-09-2.html</guid>
+      <category>희귀금속</category>
+      <description>중국 국경절 연휴 이후 희토류 시장이 거래 회복을 기다리는 관망 국면에 진입했다. 프라세오디뮴·네오디뮴(Pr-Nd) 산화물은 상승세를 유지한 반면, 중희토류 가격은 전반적으로 부진한 흐름을 보이며 품목별 차별화가 뚜렷해지고 있다.</description>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>국내 연구진, AI칩용 단결정 정밀 제어 기술 개발</title>
       <link>https://tugman77.github.io/materials-news/news/2026-10-08-0.html</link>
@@ -222,30 +246,6 @@
       <category>글로벌</category>
       <description>램 리서치가 미국 내 최대 규모인 47만 평방피트(약 4만3천㎡) 물류 허브를 개설하며 AI 반도체 수요 급증에 대비한 공급망 강화에 나섰다. 이 시설은 반도체 장비 부품의 신속 조달과 공급망 복원력 확보를 핵심 목표로 설계됐다.</description>
       <pubDate>Wed, 30 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>TRUMPF, AI 칩 세대 통합냉각 기술 공개</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-29-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-29-0.html</guid>
-      <category>글로벌</category>
-      <description>독일 레이저·공작기계 기업 TRUMPF가 차세대 AI 반도체용 통합 냉각 솔루션을 발표했다. 기존 외부 냉각 방식의 한계를 넘어 칩 내부에 냉각 구조를 직접 구현하는 기술로, AI 데이터센터 고집적 패키징 시대를 겨냥한 행보다.</description>
-      <pubDate>Tue, 29 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>프라세오디뮴·네오디뮴 가격 반등, 중중희토류는 부진 지속</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-29-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-29-1.html</guid>
-      <category>희귀금속</category>
-      <description>글로벌 희토류 시장에서 프라세오디뮴·네오디뮴(Pr-Nd) 가격이 회복세를 보이는 반면 중중희토류는 수요 부진으로 약세가 이어지고 있다. 전기차·풍력 수요 회복과 수출 통제 여파가 품목별로 엇갈린 가격 흐름을 만들어내고 있다.</description>
-      <pubDate>Tue, 29 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>전북대 소부장 특화단지 실증 허브 본격 가동</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-29-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-29-2.html</guid>
-      <category>반도체소재</category>
-      <description>전북 익산·전주 일원에 조성되는 642억 원 규모 반도체 소부장 특화단지의 실증 허브로 전북대학교 반도체공동연구소가 선정됐다. 소재 기업들은 대규모 공장 투입 전 이곳에서 소재·공정 검증을 거칠 수 있게 된다.</description>
-      <pubDate>Tue, 29 Sep 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
