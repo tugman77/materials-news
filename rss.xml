@@ -6,7 +6,31 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Fri, 09 Oct 2026 03:06:08 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2026 03:04:40 +0900</lastBuildDate>
+    <item>
+      <title>EU·중국, 희토류·전기차 관세 상호 양해 도달</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-10-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-10-0.html</guid>
+      <category>글로벌</category>
+      <description>유럽연합과 중국이 하이브리드차 관세 및 희토류 공급 문제에 관한 무역 협상에서 상호 양해에 도달했다. 이번 합의는 양측의 장기 무역 갈등을 완화하는 동시에 유럽 배터리·전기차 산업의 핵심소재 수급 안정성에 직접 영향을 미칠 전망이다.</description>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>기판·동박판 가격 20~30% 급등, 소부장 공급망 요동</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-10-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-10-1.html</guid>
+      <category>반도체소재</category>
+      <description>일본·대만산 반도체 기판과 동박판 가격이 각각 20%, 30% 이상 급등하며 국내 소부장 제조사들의 원가 압박이 심화되고 있다. AI 서버와 고대역폭 메모리(HBM) 수요 급증이 핵심 부품 공급 부족을 촉발한 것으로 분석된다.</description>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>LG디스플레이, AI로 OLED 소재 개발…연간 수백억 절감</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-10-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-10-2.html</guid>
+      <category>산업재</category>
+      <description>LG디스플레이가 인공지능을 활용해 OLED 발광 소재를 개발하는 체계를 구축하고 연간 수백억 원의 개발 비용을 절감하는 효과를 거두고 있다. AI 기반 소재 설계는 OLED 산업 전반의 경쟁 구도를 바꿀 핵심 방법론으로 부상하고 있다.</description>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>Wolfspeed, SiC 생산에 美 정부 15억 달러 조건부 지원 확보</title>
       <link>https://tugman77.github.io/materials-news/news/2026-10-09-0.html</link>
@@ -222,30 +246,6 @@
       <category>산업재</category>
       <description>디스플레이 1세대 장비 기업 신도기연이 반도체 패키징 시장으로 사업 영역을 넓히고 있다. OLED 장비로 쌓은 정밀 접합 기술을 반도체 패키지 기판 분야에 이식해 새로운 성장 동력으로 삼겠다는 전략이다.</description>
       <pubDate>Thu, 01 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>중국, 이트륨 수출통제…美日 공급망 직격</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-30-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-30-0.html</guid>
-      <category>희귀금속</category>
-      <description>중국이 희토류 이트륨에 대한 수출 통제를 새롭게 시행하며 미국과 일본의 첨단 산업 공급망을 압박하고 있다. 이트륨은 OLED 디스플레이·레이저·형광체 등 핵심 소재로 활용되며, 이번 조치로 글로벌 공급 불안이 고조되고 있다.</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>OCI, 전북 소부장 특화단지 앵커기업 합류</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-30-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-30-1.html</guid>
-      <category>반도체소재</category>
-      <description>OCI가 전북 반도체 소재·부품·장비 특화단지의 앵커기업으로 참여를 확정하며 군산 거점을 활용한 반도체 소재 사업 확대에 속도를 낸다. 전북 특화단지는 지난달 본격 가동을 시작한 실증 허브와 연계해 소부장 클러스터 구축을 본격화하고 있다.</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>램 리서치, AI 시대 대응 대형 물류허브 가동</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-09-30-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-09-30-2.html</guid>
-      <category>글로벌</category>
-      <description>램 리서치가 미국 내 최대 규모인 47만 평방피트(약 4만3천㎡) 물류 허브를 개설하며 AI 반도체 수요 급증에 대비한 공급망 강화에 나섰다. 이 시설은 반도체 장비 부품의 신속 조달과 공급망 복원력 확보를 핵심 목표로 설계됐다.</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>

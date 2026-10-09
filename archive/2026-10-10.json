@@ -26,18 +26,7 @@
       "image_keyword": "rare earth metal supply chain Europe",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-10-10_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "관세 인하 폭·수출 쿼터 규모 등 핵심 조건이 '공식 발표 전'으로 미확인",
-          "'상호 양해 도달' 시점·근거 출처 미제시",
-          "네오디뮴·프라세오디뮴·테르븀 공급 조건 구체 내용 불명확"
-        ],
-        "notes": "전반적 사실 개연성 높으나 합의 세부 조건 출처 보완 필요",
-        "verified_at": "2026-10-10 03:04"
-      }
+      "image_url": "images/2026-10-10_article_0.jpg"
     },
     {
       "id": 1,
@@ -61,18 +50,7 @@
       "image_keyword": "semiconductor substrate industrial manufacturing",
       "is_featured": false,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-10-10_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "기판 20%·동박판 30% 인상 수치의 구체 출처·조사 기관 미제시",
-          "'업계에 따르면' 익명 출처로 가격 급등 주장",
-          "공급 증설 18~24개월 소요 근거 미확인"
-        ],
-        "notes": "수치 신뢰도 양호하나 출처 명시 보완 권장",
-        "verified_at": "2026-10-10 03:04"
-      }
+      "image_url": "images/2026-10-10_article_1.jpg"
     },
     {
       "id": 2,
@@ -96,18 +74,7 @@
       "image_keyword": "OLED display material industrial laboratory",
       "is_featured": false,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-10-10_article_2.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "'연간 수백억 원 절감' 수치 출처·산정 근거 미제시",
-          "후보 물질 60~70% 감소 효과 LG디스플레이 자체 주장으로 검증 불가",
-          "개발 기간 2~3년→1년 단축 공식 발표 여부 불명확"
-        ],
-        "notes": "AI 소재 개발 방향성은 사실 부합하나 절감액 수치 출처 필요",
-        "verified_at": "2026-10-10 03:04"
-      }
+      "image_url": "images/2026-10-10_article_2.jpg"
     }
   ],
   "editorial_briefing": "EU·중국 무역 양해로 희토류 공급 불안이 일부 완화됐으나, 반도체 기판·동박판 가격 급등으로 소부장 공급망 압박이 지속되고 있다. LG디스플레이의 AI 소재 개발은 제조업 혁신의 긍정적 신호다.",
@@ -137,6 +104,5 @@
       "label": "LG디스플레이 AI 개발",
       "status": "수백억 절감 효과"
     }
-  ],
-  "last_reviewed_at": "2026-10-10 03:04"
+  ]
 }
