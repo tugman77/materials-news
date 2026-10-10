@@ -6,7 +6,31 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Sat, 10 Oct 2026 03:04:40 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 11 Oct 2026 03:05:56 +0900</lastBuildDate>
+    <item>
+      <title>ASML, 노광장비 부품값 10% 일괄 인상</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-11-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-11-0.html</guid>
+      <category>반도체소재</category>
+      <description>세계 최대 반도체 장비 업체 ASML이 내년 1월부터 EUV·DUV 노광장비 전 부품 가격을 10% 일괄 인상한다. 삼성전자·SK하이닉스와 협의가 완료됐으며, 소모성 부품부터 핵심 광학계까지 전 품목이 대상이다.</description>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>GlobalFoundries, FD-SOI로 물리적 AI 시장 공략</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-11-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-11-1.html</guid>
+      <category>글로벌</category>
+      <description>GlobalFoundries가 EUV 없이 7나노급 성능을 구현하는 스트레인드 실리콘 FD-SOI 기술 'FDX Fusion'으로 물리적 AI 반도체 시장을 겨냥한다. 유럽의 기술 자립을 위한 전략적 선택으로 주목받고 있다.</description>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>희토류 재활용, 공급망 대안으로 부상</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-11-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-11-2.html</guid>
+      <category>희귀금속</category>
+      <description>광산 개발에 수년이 걸리는 현실에서 희토류 재활용이 미국의 공급망 공백을 메울 현실적 대안으로 주목받고 있다. Paladin이 연간 회수 능력을 40톤에서 150톤으로 대폭 확대하며 시장 선도에 나섰다.</description>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>EU·중국, 희토류·전기차 관세 상호 양해 도달</title>
       <link>https://tugman77.github.io/materials-news/news/2026-10-10-0.html</link>
@@ -222,30 +246,6 @@
       <category>반도체소재</category>
       <description>사모펀드 어펄마캐피탈의 도레이첨단소재 연성동박적층판(FCCL) 사업 인수 건에 대한 공정거래위원회 공청회가 이르면 10월 중 열릴 전망이다. 1년 이상 지연된 심사가 마무리 국면에 접어들면서 FCCL 시장 재편 여부에 이목이 집중된다.</description>
       <pubDate>Fri, 02 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>TSMC 3나노 램프업, 역사적 맥락서 다시 읽다</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-10-01-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-01-0.html</guid>
-      <category>글로벌</category>
-      <description>TSMC 3나노 공정이 매출 비중 선두로 올라섰지만, 과거 7나노 램프업 속도와 비교하면 상승 곡선이 더디다는 분석이 나왔다. 2나노 전환을 앞두고 투자자·공급망 파트너들이 수익성과 시기를 재점검해야 한다는 지적이다.</description>
-      <pubDate>Thu, 01 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>LS전선, 비중국 희토류 자주권에 1616억 베팅</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-10-01-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-01-1.html</guid>
-      <category>희귀금속</category>
-      <description>LS전선이 비중국 희토류 공급망 확보를 위해 1616억 원 규모의 지분 투자를 단행한다고 밝혔다. 중국의 연이은 수출통제 속에 국내 기업이 직접 원료 조달 자주권 확보에 나선 첫 대형 사례로 주목받는다.</description>
-      <pubDate>Thu, 01 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>신도기연, 디스플레이 벗어나 반도체 패키징 진출</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-10-01-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-01-2.html</guid>
-      <category>산업재</category>
-      <description>디스플레이 1세대 장비 기업 신도기연이 반도체 패키징 시장으로 사업 영역을 넓히고 있다. OLED 장비로 쌓은 정밀 접합 기술을 반도체 패키지 기판 분야에 이식해 새로운 성장 동력으로 삼겠다는 전략이다.</description>
-      <pubDate>Thu, 01 Oct 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>

@@ -26,18 +26,7 @@
       "image_keyword": "semiconductor EUV lithography equipment",
       "is_featured": true,
       "timestamp": "오전 09:15",
-      "image_url": "images/2026-10-11_article_0.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "삼성전자·SK하이닉스가 10% 일괄 인상안을 이미 수용했다는 주장은 출처 없이 단정적으로 서술됨",
-          "ASML 본사가 지난달 초 한국법인을 통해 인상안을 전달했다는 구체적 일정은 검증 어려움",
-          "소모성 부품부터 광학계까지 '전 품목' 일괄 인상은 실제 계약 관행과 다를 수 있음"
-        ],
-        "notes": "기업·제품명은 실존하나 협의 완료·수용 등 단정 표현에 출처 부재",
-        "verified_at": "2026-10-11 03:05"
-      }
+      "image_url": "images/2026-10-11_article_0.jpg"
     },
     {
       "id": 1,
@@ -62,17 +51,7 @@
       "image_keyword": "semiconductor FD-SOI silicon wafer fabrication",
       "is_featured": false,
       "timestamp": "오전 09:30",
-      "image_url": "images/2026-10-11_article_1.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "CTO 만프레드 호르스트만의 직접 인용 발언은 출처·날짜 미기재로 창작 가능성 있음",
-          "EUV 없이 7나노급 성능 구현 주장은 GF 공식 발표 맥락 확인 필요"
-        ],
-        "notes": "GF·FD-SOI·FDX Fusion 기술 설명은 대체로 사실에 부합하며 신뢰도 높음",
-        "verified_at": "2026-10-11 03:05"
-      }
+      "image_url": "images/2026-10-11_article_1.jpg"
     },
     {
       "id": 2,
@@ -98,18 +77,7 @@
       "image_keyword": "rare earth metal recycling industrial process",
       "is_featured": false,
       "timestamp": "오전 09:45",
-      "image_url": "images/2026-10-11_article_2.jpg",
-      "review": {
-        "trust_score": 3,
-        "status": "warning",
-        "suspicious_claims": [
-          "'Paladin'이라는 희토류 재활용 기업의 실존 여부 및 투자 규모 500만 달러 확인 필요",
-          "40톤→150톤 확대 수치 및 3.75배 계산은 출처 없이 제시됨",
-          "광산 개발 7~15년 소요 기간은 맥락에 따라 과장될 수 있음"
-        ],
-        "notes": "재활용 트렌드 방향성은 타당하나 Paladin 기업 실존·수치 검증 필요",
-        "verified_at": "2026-10-11 03:05"
-      }
+      "image_url": "images/2026-10-11_article_2.jpg"
     }
   ],
   "editorial_briefing": "ASML 부품가 인상·FD-SOI 기술 부상·희토류 재활용 주목 등 반도체 공급망 전반에 걸쳐 비용 압박과 기술 다변화가 동시에 진행 중이다. 소재·장비 의존도 분산과 대체 공급망 구축이 산업계의 핵심 과제로 부상하고 있다.",
@@ -139,6 +107,5 @@
       "label": "글로벌 소재 공급망",
       "status": "불안정 지속"
     }
-  ],
-  "last_reviewed_at": "2026-10-11 03:05"
+  ]
 }
