@@ -2,8 +2,7 @@ name: 주간 뉴스레터 자동 생성
 
 on:
   schedule:
-    # 매주 금요일 오전 8시 (KST) = UTC 23시 (목요일)
-    - cron: '0 23 * * 4'
+    - cron: '0 8 * * 5'   # UTC 08:00 = KST 금 17:00 — 구독 사용량 분산(2026-10-13): 뉴스·블로그 발행 이후
   workflow_dispatch:  # 수동 실행 버튼
 
 permissions:
@@ -53,9 +52,15 @@ jobs:
             --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
             --data-urlencode "text=${MSG}" >/dev/null
 
+      - name: Claude Code CLI 설치 (구독 헤드리스)
+        run: npm install -g @anthropic-ai/claude-code
+
       - name: 뉴스레터 생성
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # 구독코인 전용 (2026-10-13) — API코인 미사용
+          LLM_BACKEND: claude_code
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          CLAUDE_CODE_TIMEOUT: "1800"
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}   # 공개 채널 @materialtimes
