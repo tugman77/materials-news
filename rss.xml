@@ -6,7 +6,31 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Mon, 12 Oct 2026 03:02:18 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 23:30:45 +0900</lastBuildDate>
+    <item>
+      <title>어플라이드 머티리얼즈, 실리콘밸리에 50억 달러 R&amp;D 거점 'EPIC 센터' 개소</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-13-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-13-0.html</guid>
+      <category>글로벌</category>
+      <description>어플라이드 머티리얼즈가 캘리포니아 실리콘밸리에 세계 최대 규모의 반도체 장비·공정 기술 R&amp;D 시설 'EPIC 센터'를 열었다. 총 투자액은 50억 달러(약 6조8000억 원)로, AI·첨단 패키징 시대를 겨냥한 장비 개발의 핵심 거점이 될 전망이다.</description>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>GM, LMR 배터리 양산에 한국 소부장 협력사 낙점…각형 캔·캡 공급망 구축 착수</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-13-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-13-1.html</guid>
+      <category>산업재</category>
+      <description>미국 최대 완성차 GM이 LG에너지솔루션과 공동 개발 중인 리튬망간리치(LMR) 각형 배터리 양산을 위해 국내 배터리 부품 업체를 대상으로 현장 실사에 나섰다. LMR은 코발트 사용을 줄이면서 에너지 밀도와 주행거리를 동시에 높이는 차세대 배터리 기술이다.</description>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>영국, 탄탈럼·니오븀 수입 러시아 기업 4곳 제재…서방 공급망 재편 압박 가속</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-13-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-13-2.html</guid>
+      <category>희귀금속</category>
+      <description>영국 정부가 무기급 희귀금속인 탄탈럼과 니오븀을 서방에 수출해온 러시아 기업 4곳을 대상으로 새로운 제재를 부과했다. 미국의 탄탈럼 수입금지 확정에 이어 영국까지 가세하면서 러시아산 희귀금속 공급망 봉쇄가 서방 전반으로 확산되는 양상이다.</description>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>중국, 핵심광물 해외투자에 보안심사 신설…공급망 통제 강화</title>
       <link>https://tugman77.github.io/materials-news/news/2026-10-12-0.html</link>
@@ -222,30 +246,6 @@
       <category>희귀금속</category>
       <description>전 세계 희토류 시장 규모는 연간 100억 달러에 불과하지만, 이를 활용하는 전방 산업의 경제 규모는 6.5조 달러에 달한다. 희토류 수출 통제가 반도체·방산·자동차 전 산업을 인질로 삼는 구조적 취약성이 재조명되고 있다.</description>
       <pubDate>Sun, 04 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>중국 ASML 장비 대거 비축…미국, 완전 수출금지 압박</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-10-03-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-03-0.html</guid>
-      <category>글로벌</category>
-      <description>중국 반도체 팹들이 최근 수년간 ASML 액침 리소그래피 장비 343대를 수십억 달러 규모로 확보한 사실이 드러났다. 전직 미국 관료들은 동맹국과 협력해 추가 수출을 전면 차단해야 한다고 촉구하고 있어, 글로벌 반도체 장비 공급망에 새로운 긴장이 고조되고 있다.</description>
-      <pubDate>Sat, 03 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>JSR마이크로코리아, 오창에 차세대 소재 공장 준공</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-10-03-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-03-1.html</guid>
-      <category>반도체소재</category>
-      <description>일본 JSR의 한국 법인 JSR마이크로코리아가 충북 오창에 차세대 반도체 소재 생산공장을 준공했다. 이 공장은 EUV 포토레지스트를 비롯한 고부가 소재를 생산할 예정으로, 국내 소부장 공급망 강화에 기여할 전망이다.</description>
-      <pubDate>Sat, 03 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>갈륨 가격 3년 새 9배…中 수출통제의 경제학</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-10-03-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-03-2.html</guid>
-      <category>희귀금속</category>
-      <description>중국이 갈륨 수출을 통제한 지 3년이 지난 현재 국제 갈륨 가격이 최대 9배까지 폭등한 것으로 나타났다. 차세대 전력 반도체의 핵심 소재인 갈륨화갈륨(GaN) 공급망에 구조적 변화가 불가피한 상황이다.</description>
-      <pubDate>Sat, 03 Oct 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
