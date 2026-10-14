@@ -6,7 +6,31 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Wed, 14 Oct 2026 09:09:20 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 08:42:13 +0900</lastBuildDate>
+    <item>
+      <title>엔비디아, 소재 시뮬레이션 툴 '큐포텐셜' 공개…GPU 대비 3배 속도</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-15-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-15-0.html</guid>
+      <category>반도체소재</category>
+      <description>엔비디아가 반도체 소재 물성 시뮬레이션을 가속하는 소프트웨어 '큐포텐셜(cuPotential)'을 처음 공개했다. GPU 병렬 연산을 활용해 기존 CPU 기반 계산 대비 최대 3배 빠른 속도를 구현한다고 밝혔다.</description>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>호주, 구리 사상 최고가·석탄 규제로 광물 시장 양극화</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-15-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-15-1.html</guid>
+      <category>글로벌</category>
+      <description>호주 구리 가격이 AI 데이터센터·전기차 수요에 힘입어 사상 최고치를 경신한 반면, 석탄은 탄소 규제 압박으로 투자 매력이 급격히 낮아지고 있다. 에너지 전환이 광물 시장의 구조적 양극화를 심화시키는 양상이다.</description>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>제일엠앤에스, 회생 10개월 만에 핑거로 경영권 이전</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-15-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-15-2.html</guid>
+      <category>산업재</category>
+      <description>배터리 믹싱장비 전문기업 제일엠앤에스가 유동성 위기로 기업회생을 신청한 지 약 10개월 만에 핀테크 기업 핑거 계열로 경영권이 넘어갔다. 155억 원 규모 제3자배정 유상증자를 통해 새 대주주 에프지투자3호가 지분 79.91%를 확보했다.</description>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>산업부, 반도체 전담 국장급 조직 출범</title>
       <link>https://tugman77.github.io/materials-news/news/2026-10-14-0.html</link>
@@ -222,30 +246,6 @@
       <category>희귀금속</category>
       <description>그린란드 정부가 중국 외 최대 중희토류 미개발 광산 중 하나인 탄브리즈(Tanbreez) 광산의 개발계획을 최종 승인했다. 공급망 다변화를 추진하는 서방 국가들에게 전략적으로 중요한 의미를 가진다.</description>
       <pubDate>Tue, 06 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>美 DOE, 핵심광물 공급망에 295억 달러 투입</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-10-05-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-05-0.html</guid>
-      <category>글로벌</category>
-      <description>미국 에너지부(DOE)가 국립연구소를 통해 핵심광물 공급망 고도화에 2,950만 달러를 지원하겠다고 발표했다. 중국의 수출통제 공세에 맞서 탈중국 공급망 구축을 가속화하려는 전략적 행보로 풀이된다.</description>
-      <pubDate>Mon, 05 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>삼성D·LGD, OLED 초격차 세제 지원 정부에 건의</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-10-05-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-05-1.html</guid>
-      <category>산업재</category>
-      <description>삼성디스플레이와 LG디스플레이가 OLED 기술 초격차 유지를 위해 정부에 세제 지원 패키지를 공동 건의했다. 중국과의 기술 격차가 1.3년 수준으로 좁혀진 가운데, IT용 OLED와 8.6세대 투자 재개 기대감이 장비 업체 주가를 끌어올리고 있다.</description>
-      <pubDate>Mon, 05 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>소부장 강세, 코스닥 900선 재도전 이끈다</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-10-05-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-05-2.html</guid>
-      <category>반도체소재</category>
-      <description>반도체 소재·부품·장비(소부장) 종목이 강세를 보이며 코스닥 지수의 900선 재돌파 기대감을 높이고 있다. AI 반도체 수요 증가와 국내 소부장 클러스터 투자 확대가 맞물려 업종 전반에 투자 모멘텀이 형성되고 있다.</description>
-      <pubDate>Mon, 05 Oct 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
