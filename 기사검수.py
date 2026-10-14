@@ -18,6 +18,8 @@ import llm_backend  # 구독코인(로컬 Claude Code) / API코인(anthropic SDK
 import 이미지필터    # 이미지 키워드 오매칭(예: wafer → 과자) 방지 필터
 import 이미지소스    # 외부 이미지 소스 API (Unsplash/Pexels/Pixabay) — 기사자동생성.py와 공용
 import 이미지풀      # 카테고리별 큐레이션 풀 (로컬 self-host + Unsplash hotlink) — 공용
+import 검수게이트    # 심각한 문제 기사는 공개 전에 뺀다 (컨트롤타워 검수관 체계, 2026-10-14)
+import sys
 import hashlib
 import json
 import os
@@ -577,8 +579,11 @@ def main():
     image_fixes = []
     for review in reviews:
         if not review.get("image_keyword_ok", True) and review.get("suggested_image_keyword"):
-            idx = review["article_id"] - 1
-            article = articles[idx]
+            # id는 0부터 매긴다 — 예전 `article_id - 1`은 엉뚱한 기사(0번→마지막 기사)를 고쳤다 (2026-10-14 수정)
+            article = next((a for a in articles if a.get("id") == review["article_id"]), None)
+            if article is None:
+                continue
+            idx = articles.index(article)
             old_kw = article.get("image_keyword", "")
             new_kw = review["suggested_image_keyword"]
 
@@ -618,8 +623,31 @@ def main():
 
     _save_image_history()  # 검수 중 재다운로드로 갱신된 이미지 이력 영구 저장
 
-    # 7. 텔레그램 보고
+    # 7. 텔레그램 보고 (보류 판정 전 전체 기사 기준)
     send_review_report(articles, reviews, naver_map, image_fixes, missing_fixed, date_str, dup_issues)
+
+    # 8. 검수 게이트 — fail·신뢰도 2 이하·투자 권유 기사는 사이트·채널에 내보내지 않는다
+    holds = 검수게이트.decide(articles, review_map)
+    검수게이트.record("소재타임스", articles, holds, review_map)
+    if holds:
+        reasons = {a.get("title", ""): holds[a.get("id")] for a in articles if a.get("id") in holds}
+        kept, held = 검수게이트.split(articles, holds)
+        lines = [f"⛔ 소재타임스 검수 보류 {len(held)}건 — 사이트·채널에 내보내지 않음"]
+        for t, why in reasons.items():
+            lines.append(f"  · {검수게이트.esc(t[:32])}\n     {검수게이트.esc(' / '.join(why)[:120])}")
+        if kept:
+            검수게이트.remove_static(date_prefix)
+            import 기사자동생성
+            기사자동생성.save_data(kept, data.get("editorial_briefing"), data.get("global_issues"))
+            lines.append(f"  → 남은 {len(kept)}건으로 발행")
+        else:
+            검수게이트.set_output("all_held", "true")
+            lines.append("  → 전부 보류 — 오늘 push 안 함 (로컬이면 클라우드 백업이 새로 만들어 다시 검수)")
+        msg = "\n".join(lines)
+        print(msg)
+        send_telegram(msg)
+        if not kept:
+            sys.exit(3)
 
     print("검수 완료!")
 

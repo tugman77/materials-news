@@ -71,6 +71,7 @@ jobs:
         run: python 기사자동생성.py
 
       - name: 기사 검수 (사실성 + 이미지)
+        id: review   # 검수 게이트: 전부 보류면 종료코드 3 → 이후 단계(커밋·채널) 중단 (2026-10-14)
         if: steps.guard.outputs.skip != 'true'
         env:
           # 구독코인 전용 (2026-10-13) — API코인 미사용. 로컬과 같은 llm_backend 구독 경로
