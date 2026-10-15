@@ -6,7 +6,31 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 15 Oct 2026 08:42:13 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 08:35:32 +0900</lastBuildDate>
+    <item>
+      <title>IBS, 0.7nm급 2D 반도체 모듈형 트랜지스터 개발</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-16-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-16-0.html</guid>
+      <category>반도체소재</category>
+      <description>기초과학연구원(IBS) 연구팀이 하나의 박막에 반도체·절연체·준금속 영역을 원자층 단위로 구현하는 0.7nm급 모듈형 트랜지스터 제작 기술을 개발했다. 이번 성과는 IBM에 이어 세계 두 번째로, 결과물은 국제학술지 '사이언스'에 게재됐다.</description>
+      <pubDate>Fri, 16 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>일본, GlobalFoundries에 210억 달러 지원 제안…미국 팹 증설 협상</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-16-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-16-1.html</guid>
+      <category>글로벌</category>
+      <description>일본 정부가 미국 파운드리 기업 GlobalFoundries의 미국 내 팹 신규 건설을 위해 약 210억 달러(약 28조 원) 규모의 지원을 제안한 것으로 알려졌다. 협상이 타결되면 미국 반도체 생산 능력이 최대 10% 확대될 전망이다.</description>
+      <pubDate>Fri, 16 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>희토류 시장 관망세…Pr-Nd 가격 보합 속 수급 재편 주시</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-16-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-16-2.html</guid>
+      <category>희귀금속</category>
+      <description>중국 국경절 연휴 이후 희토류 시장이 관망세를 이어가는 가운데, 프라세오디뮴-네오디뮴(Pr-Nd) 산화물 가격은 상승 기조를 유지하고 있다. 공급망 무기화 우려가 지속되는 가운데 서방 수요 기업들의 재고 확보 전략이 주목받고 있다.</description>
+      <pubDate>Fri, 16 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>엔비디아, 소재 시뮬레이션 툴 '큐포텐셜' 공개…GPU 대비 3배 속도</title>
       <link>https://tugman77.github.io/materials-news/news/2026-10-15-0.html</link>
@@ -222,30 +246,6 @@
       <category>희귀금속</category>
       <description>글로벌 핵심광물 시장이 정부 주도 공급망에서 민간 상업 공급망 중심으로 전환하는 새로운 국면에 접어들고 있다. 전문가들은 다변화 투자를 단순한 지정학적 대응이 아닌 전략적 위험 관리 관점에서 접근해야 한다고 강조한다.</description>
       <pubDate>Wed, 07 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>중국, 헬륨 수출 전면 금지…반도체 공정 직격</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-10-06-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-06-0.html</guid>
-      <category>글로벌</category>
-      <description>중국이 반도체 제조 핵심 소재인 헬륨의 수출을 전면 금지했다. 이번 조치는 갈륨·게르마늄에 이어 반도체 공급망을 겨냥한 연속 통제로, 국내 팹 및 소부장 업계에 긴장감이 고조되고 있다.</description>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>소부장 ETF 한 달 새 20% 급등, 투자 열기 지속</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-10-06-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-06-1.html</guid>
-      <category>반도체소재</category>
-      <description>AI 설비투자 확대 기대감을 타고 국내 반도체 소재·부품·장비 ETF가 한 달 새 20% 이상 상승하며 삼성전자·SK하이닉스를 앞질렀다. 마이크론 호실적과 아시아 공장 증설 발표가 국내 소부장 업체 수혜 기대를 끌어올리고 있다.</description>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>탄브리즈 희토류 광산, 그린란드 정부 개발 승인</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-10-06-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-06-2.html</guid>
-      <category>희귀금속</category>
-      <description>그린란드 정부가 중국 외 최대 중희토류 미개발 광산 중 하나인 탄브리즈(Tanbreez) 광산의 개발계획을 최종 승인했다. 공급망 다변화를 추진하는 서방 국가들에게 전략적으로 중요한 의미를 가진다.</description>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
