@@ -6,7 +6,31 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Sat, 17 Oct 2026 08:16:02 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2026 07:59:22 +0900</lastBuildDate>
+    <item>
+      <title>EU, 공급망 다각화법 12월 도입 확정</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-18-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-18-0.html</guid>
+      <category>글로벌</category>
+      <description>EU가 중국 의존 공급망 리스크를 줄이기 위한 공급망 다각화법을 오는 12월 전격 도입하기로 확정했다. 원산지 추적 의무와 우회 수출 방지 요건이 강화되면서 유럽에 납품하는 한국 소부장 기업의 공급망 투명성 부담이 커질 전망이다.</description>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>개발은행, 핵심광물 공급망 자금 지원 확대</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-18-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-18-1.html</guid>
+      <category>희귀금속</category>
+      <description>로이터에 따르면 세계 주요 개발은행들이 핵심광물 공급망 전 단계에 걸친 금융 지원을 확대하고 있다. 중국 외 지역 희토류 가격은 이번 주 보합세를 유지했으며, 자원 측에서는 광산 개발 승인과 기업 간 합병이 동시에 진행되는 공급 구조 재편이 본격화하고 있다.</description>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>Saras, AI 가속기 전력용 기판 내장 커패시터 출시</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-18-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-18-2.html</guid>
+      <category>반도체소재</category>
+      <description>미국 사라스 마이크로디바이시스(Saras Micro Devices)가 AI 가속기 전력 공급용 기판 내장형 커패시터를 공개하고 2mm 크기 샘플 출하를 시작했다. PCB나 패키지 코어 내부에 직접 내장해 수직형 전력 전달 경로를 단축하는 방식으로 AI 칩의 전력 효율 한계를 돌파하려는 시도다.</description>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>ASML, 하이브리드 본딩 시장 진출…중국도 채택</title>
       <link>https://tugman77.github.io/materials-news/news/2026-10-17-0.html</link>
@@ -222,30 +246,6 @@
       <category>희귀금속</category>
       <description>중국 국경절 연휴 이후 희토류 시장이 거래 회복을 기다리는 관망 국면에 진입했다. 프라세오디뮴·네오디뮴(Pr-Nd) 산화물은 상승세를 유지한 반면, 중희토류 가격은 전반적으로 부진한 흐름을 보이며 품목별 차별화가 뚜렷해지고 있다.</description>
       <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>국내 연구진, AI칩용 단결정 정밀 제어 기술 개발</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-10-08-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-08-0.html</guid>
-      <category>반도체소재</category>
-      <description>KAIST·UNIST·한양대 공동 연구팀이 반도체 결정의 성장 위치와 시작점을 동시에 제어하는 기술을 개발했다. 3D 집적 및 고집적 AI 반도체에 적용 가능한 원천 기술로 주목받고 있다.</description>
-      <pubDate>Thu, 08 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>BGF, 반도체 소재 손자회사 지분 전량 인수…지배구조 수직 통합</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-10-08-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-08-1.html</guid>
-      <category>글로벌</category>
-      <description>BGF그룹이 반도체 소재 손자회사 지분을 전량 매입하며 지배구조 개편에 나섰다. 소부장 공급망 내재화 전략의 일환으로, 반도체 소재 사업 경쟁력 강화를 본격화하는 행보로 해석된다.</description>
-      <pubDate>Thu, 08 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>희귀금속 공급망 대응 전략, 주요국 격차 뚜렷</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-10-08-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-08-2.html</guid>
-      <category>희귀금속</category>
-      <description>중국의 핵심광물 수출통제가 장기화되는 가운데, 미국·유럽·한국 등 주요국의 대응 전략 간 격차가 뚜렷해지고 있다. 공급망 다변화 속도와 민관 협력 수준이 향후 산업 경쟁력을 가를 핵심 변수로 부상했다.</description>
-      <pubDate>Thu, 08 Oct 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
