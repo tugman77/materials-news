@@ -94,6 +94,9 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
@@ -510,6 +513,8 @@
 </footer>
 
 <script>
+  // 대표 사진은 자동으로 받아온 스톡 이미지 — 직접 찍은 사진은 image_caption으로 바꾼다
+  const DEFAULT_IMAGE_CAPTION = '[자료사진] 기사와 무관한 이미지입니다.';
   // 날짜
   const d = new Date();
   const days = ['일','월','화','수','목','금','토'];
@@ -701,8 +706,15 @@
       imgEl.src = article.image_url;
       imgEl.alt = article.title;
       imgEl.className = 'art-hero-img';
-      imgEl.onerror = function() { this.style.display = 'none'; };
-      bodyEl.parentNode.insertBefore(imgEl, bodyEl);
+      const figEl = document.createElement('figure');
+      figEl.className = 'art-hero-fig';
+      const capEl = document.createElement('figcaption');
+      capEl.className = 'img-caption';
+      capEl.textContent = article.image_caption || DEFAULT_IMAGE_CAPTION;
+      imgEl.onerror = function() { figEl.style.display = 'none'; };
+      figEl.appendChild(imgEl);
+      figEl.appendChild(capEl);
+      bodyEl.parentNode.insertBefore(figEl, bodyEl);
     }
 
     // 본문: body 배열 또는 문자열 모두 지원 (중간 광고 삽입)
