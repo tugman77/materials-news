@@ -109,11 +109,17 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -320,7 +326,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,7 +394,12 @@
         <span>2026.07.23 오후 01:30</span>
       </div>
 
-      <img src="../images/2026-07-23_article_3.jpg" alt="머크, K-디스플레이서 중수소화 OLED 소재 공개" class="art-hero-img">
+      <figure class="art-hero-fig"><img src="../images/2026-07-23_article_3.jpg" alt="머크, K-디스플레이서 중수소화 OLED 소재 공개" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">한국머크가 K-디스플레이 2026에서 중수소화(deuterated) OLED 소재와 차세대 광학 솔루션을 공개했다. 기존 소재 대비 발광 효율과 수명을 동시에 향상시킨 신소재로 국내 디스플레이 소재 업계의 관심이 집중되고 있다.</div>
+      </div>
 
       <div class="art-body">
         <p>한국머크가 K-디스플레이 2026 전시에서 차세대 OLED 소재 라인업을 대거 공개했다. 이번에 선보인 핵심 제품은 중수소화(deuterated) OLED 소재로, 기존 일반 수소 기반 소재 대비 발광 효율과 소자 수명을 동시에 향상시킨 것이 특징이다. 삼성디스플레이·LG디스플레이 등 주요 패널 업체를 비롯해 해외 디스플레이 기업들의 상담이 이어졌다.</p>

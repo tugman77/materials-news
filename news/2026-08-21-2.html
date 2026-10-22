@@ -109,11 +109,17 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -320,7 +326,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,7 +394,12 @@
         <span>2026.08.21 오전 11:45</span>
       </div>
 
-      <img src="../images/2026-08-21_article_2.jpg" alt="프라임마스, CXL 메모리로 2800억 매출 도전장" class="art-hero-img">
+      <figure class="art-hero-fig"><img src="../images/2026-08-21_article_2.jpg" alt="프라임마스, CXL 메모리로 2800억 매출 도전장" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">팹리스 기업 프라임마스가 CXL 기반 풀드 메모리 솔루션 &#x27;JBOM&#x27;으로 내년 말까지 2억 달러(약 2800억 원) 매출을 목표로 제시했다. 서버 한 대에서 100TB 이상의 메모리를 지원하는 기술로, AI 인프라의 메모리 병목 문제를 해소하겠다는 전략이다.</div>
+      </div>
 
       <div class="art-body">
         <p>반도체 설계 전문(팹리스) 기업 프라임마스가 AI 서버 시장을 겨냥한 CXL(컴퓨트 익스프레스 링크) 기반 풀드 메모리 솔루션으로 2027년 말까지 매출 2억 달러(약 2800억 원) 달성에 도전한다고 밝혔다. 박일 프라임마스 대표는 20일 경기 성남 사옥 기자간담회에서 이 같은 목표를 공식화했다.</p>

@@ -109,11 +109,17 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -320,7 +326,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,7 +394,12 @@
         <span>2026.07.07 오전 09:25</span>
       </div>
 
-      <img src="../images/2026-07-07_article_2.jpg" alt="한-싱가포르 FTA 개선 협상…산업재 관세 인하 기대" class="art-hero-img">
+      <figure class="art-hero-fig"><img src="../images/2026-07-07_article_2.jpg" alt="한-싱가포르 FTA 개선 협상…산업재 관세 인하 기대" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">한국과 싱가포르가 2006년 발효된 양국 FTA 개선을 위한 2차 공식 협상을 서울에서 개최했다. 글로벌 통상 환경 변화에 맞춰 산업재·소재 분야의 관세 인하와 비관세 장벽 완화가 핵심 의제로 논의되며 양국 무역 확대에 대한 기대감이 높아지고 있다.</div>
+      </div>
 
       <div class="art-body">
         <p>한국과 싱가포르가 2006년 발효된 자유무역협정(FTA)을 현재의 글로벌 통상 환경에 맞게 개선하기 위한 2차 공식 협상을 서울에서 개최했다. 이번 협상에서는 디지털 무역, 공급망 안정화, 산업재 및 소재 분야의 무역 자유화 확대가 핵심 의제로 다뤄졌다.</p>

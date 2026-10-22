@@ -109,11 +109,17 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -320,7 +326,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,7 +394,12 @@
         <span>2026.06.26 오전 09:15</span>
       </div>
 
-      <img src="../images/2026-06-26_article_0.jpg" alt="석화업계, 반도체 소재로 전략 대전환 가속" class="art-hero-img">
+      <figure class="art-hero-fig"><img src="../images/2026-06-26_article_0.jpg" alt="석화업계, 반도체 소재로 전략 대전환 가속" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">국내 석유화학업계가 업황 부진 장기화 속에서 반도체·AI 소재 분야로의 고부가가치 전환에 속도를 내고 있다. OCI는 OCI스페셜티 지분 100%를 인수하며 반도체 소재 신사업 확장을 선언했고, 다수 업체들이 생존 전략으로 포트폴리오 재편에 나서고 있다.</div>
+      </div>
 
       <div class="art-body">
         <p>국내 석유화학업계가 &#x27;버티기&#x27;에서 &#x27;바꾸기&#x27;로 전략 기조를 전환하며 반도체·인공지능(AI) 핵심 소재 시장 공략에 본격적으로 나서고 있다. 글로벌 공급 과잉과 중국발 저가 공세로 범용 석화 제품의 수익성이 급격히 악화되는 가운데, 고부가가치 소재 사업으로의 대대적인 포트폴리오 재편이 업계 전반의 화두로 떠오르고 있다.</p>

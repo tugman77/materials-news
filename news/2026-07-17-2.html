@@ -109,11 +109,17 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -320,7 +326,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,7 +394,12 @@
         <span>2026.07.17 오전 11:20</span>
       </div>
 
-      <img src="../images/2026-07-17_article_2.jpg" alt="AI 유리기판 공급망 2라운드…소재 동맹 구축 경쟁 격화" class="art-hero-img">
+      <figure class="art-hero-fig"><img src="../images/2026-07-17_article_2.jpg" alt="AI 유리기판 공급망 2라운드…소재 동맹 구축 경쟁 격화" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">AI 반도체용 유리기판 시장을 둘러싼 글로벌 공급망 경쟁이 단순 소재 공급을 넘어 &#x27;소재 동맹&#x27; 형성 단계로 진입했다. 삼성전기·SKC 등 국내 기업들이 해외 소재 파트너와 연합 전선을 구축하며 시장 선점에 나서고 있다.</div>
+      </div>
 
       <div class="art-body">
         <p>AI 반도체용 유리기판 시장에서 공급망 경쟁이 2라운드에 접어들었다. 초기에는 누가 먼저 유리기판 자체를 양산하느냐가 화두였다면, 이제는 유리기판 제조에 필요한 핵심 소재—유리 슬리밍 화학제, 저유전 수지, 고정밀 구리박 등—의 독점적 공급 계약을 어느 기업이 선점하느냐로 경쟁 축이 이동하고 있다.</p>

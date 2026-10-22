@@ -109,11 +109,17 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -320,7 +326,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,7 +394,12 @@
         <span>2026.08.07 오전 10:00</span>
       </div>
 
-      <img src="../images/2026-08-07_article_3.jpg" alt="포스코퓨처엠, LFP 양극재 19만톤 장기 공급 합의" class="art-hero-img">
+      <figure class="art-hero-fig"><img src="../images/2026-08-07_article_3.jpg" alt="포스코퓨처엠, LFP 양극재 19만톤 장기 공급 합의" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">포스코퓨처엠이 국내 배터리 기업과 2027년부터 2032년까지 6년간 LFP 양극재 19만톤 이상을 공급하는 장기 계약에 합의했다. 포항 공장의 하이니켈 생산라인을 LFP용으로 전환하며 비중국 LFP 공급망 구축에 본격 나선 것으로, 국내 배터리 소재 생태계 재편이 가속화될 전망이다.</div>
+      </div>
 
       <div class="art-body">
         <p>포스코퓨처엠이 국내 배터리 기업과 리튬인산철(LFP) 양극재 19만톤(t) 이상을 공급하는 장기 계약에 합의했다고 6일 밝혔다. 공급 기간은 2027년부터 2032년까지 6년이며, 양사는 세부 조건을 협의한 뒤 3분기 중 정식 계약을 체결할 예정이다.</p>

@@ -109,11 +109,17 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -320,7 +326,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,7 +394,12 @@
         <span>2026.08.22 오전 10:00</span>
       </div>
 
-      <img src="../images/2026-08-22_article_3.jpg" alt="中, 희토류 자석 대만 수출 지연·차단…광물 무기화 본격화" class="art-hero-img">
+      <figure class="art-hero-fig"><img src="../images/2026-08-22_article_3.jpg" alt="中, 희토류 자석 대만 수출 지연·차단…광물 무기화 본격화" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">중국이 희토류 영구자석의 대만 수출을 고의적으로 지연·차단하고 있다는 정황이 포착됐다. 반도체·전장 부품에 핵심적으로 쓰이는 네오디뮴 자석 공급이 대만 기업들을 중심으로 타격을 받고 있어 공급망 재편이 불가피한 상황이다.</div>
+      </div>
 
       <div class="art-body">
         <p>중국이 희토류 영구자석, 특히 네오디뮴-철-붕소(NdFeB) 계열 자석의 대만 수출을 조직적으로 지연하거나 차단하고 있다는 복수의 업계 소식통 진술이 나왔다. 이는 중국이 반도체·전장 공급망의 핵심 소재를 지정학적 압박 수단으로 활용하는 &#x27;광물 무기화&#x27; 전략이 대만을 겨냥해 본격화한 것이라는 분석이 제기된다.</p>

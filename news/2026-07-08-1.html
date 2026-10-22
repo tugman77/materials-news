@@ -109,11 +109,17 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -320,7 +326,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,7 +394,12 @@
         <span>2026.07.08 오전 09:32</span>
       </div>
 
-      <img src="../images/2026-07-08_article_1.jpg" alt="LG화학, 반도체 소재 포트폴리오 확장…체질 개선 속도 낸다" class="art-hero-img">
+      <figure class="art-hero-fig"><img src="../images/2026-07-08_article_1.jpg" alt="LG화학, 반도체 소재 포트폴리오 확장…체질 개선 속도 낸다" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">LG화학이 석유화학 불황을 돌파하기 위해 반도체 소재 사업 다각화에 속도를 내고 있다. 기존 스트리퍼 공급을 발판 삼아 전공정·후공정 소재 전반으로 제품군을 빠르게 넓히는 중이다.</div>
+      </div>
 
       <div class="art-body">
         <p>LG화학이 반도체 소재 사업 확장에 본격적으로 시동을 걸고 있다. 최근 미국 반도체 패키징 전문기업 앰코테크놀로지에 반도체용 스트리퍼(세정 화학물질)를 공급하는 계약을 체결한 데 이어, 전공정·후공정 전반에 걸친 소재 포트폴리오 구축 전략을 가속화하고 있다.</p>

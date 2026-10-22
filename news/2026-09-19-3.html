@@ -109,11 +109,17 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -320,7 +326,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,7 +394,12 @@
         <span>2026.09.19 오전 09:15</span>
       </div>
 
-      <img src="../images/2026-09-19_article_3.jpg" alt="GlobalFoundries·Marvell, AI 광통신 소재 협력 확대" class="art-hero-img">
+      <figure class="art-hero-fig"><img src="../images/2026-09-19_article_3.jpg" alt="GlobalFoundries·Marvell, AI 광통신 소재 협력 확대" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">글로벌파운드리스와 마벨이 AI 인프라 광통신 수요에 대응해 SiGe 기술 기반 다년간 전략 협약을 체결했다. 실리콘-게르마늄 공정 생산 능력을 확대해 데이터센터 고속 광인터커넥트 시장을 공략한다.</div>
+      </div>
 
       <div class="art-body">
         <p>반도체 파운드리 업체 글로벌파운드리스(GlobalFoundries)와 팹리스 설계사 마벨(Marvell)이 AI 데이터센터용 광통신 칩 공급을 위한 다년간 전략적 협력 계약을 체결했다고 반도체 전문 매체 세미컨덕터 다이제스트가 보도했다. 이번 협력의 핵심은 실리콘-게르마늄(SiGe) 공정의 생산 능력을 대폭 확충하는 것이다.</p>

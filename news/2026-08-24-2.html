@@ -109,11 +109,17 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -320,7 +326,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,7 +394,12 @@
         <span>2026.08.24 오전 10:05</span>
       </div>
 
-      <img src="../images/2026-08-24_article_2.jpg" alt="KAIST, 열전달 5.5배 향상 나노 코팅 기술 개발" class="art-hero-img">
+      <figure class="art-hero-fig"><img src="../images/2026-08-24_article_2.jpg" alt="KAIST, 열전달 5.5배 향상 나노 코팅 기술 개발" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">KAIST 연구팀이 구리 표면에 100나노미터 이하 고분자 코팅막을 입혀 열전달 성능을 최대 5.5배 향상시키는 데 성공했다. AI 반도체와 고성능 전자기기의 열 관리 문제를 해결할 핵심 소재 기술로 주목된다.</div>
+      </div>
 
       <div class="art-body">
         <p>KAIST 남영석 기계공학과 교수와 임성갑 생명화학공학과 교수 공동 연구팀이 구리 표면에 100나노미터(nm) 이하의 고분자 코팅막을 적용해 열전달 성능을 최대 5.5배 향상시키는 기술을 개발했다고 23일 밝혔다. 연구 결과는 국제 학술지 &#x27;네이처 커뮤니케이션즈&#x27;에 게재됐다.</p>

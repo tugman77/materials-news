@@ -109,11 +109,17 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -320,7 +326,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,7 +394,12 @@
         <span>2026.07.12 오전 10:30</span>
       </div>
 
-      <img src="../images/2026-07-12_article_1.jpg" alt="부산 강서구, AI 반도체 소재 허브 선언…삼성전기와 맞손" class="art-hero-img">
+      <figure class="art-hero-fig"><img src="../images/2026-07-12_article_1.jpg" alt="부산 강서구, AI 반도체 소재 허브 선언…삼성전기와 맞손" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">부산 강서구청장이 삼성전기 부산사업장을 방문해 AI 반도체 소재와 전자부품 산업 육성 의지를 밝혔다. 강서구는 삼성전기와 협력해 지역 내 소재·부품 생태계 구축에 본격 나설 계획이다.</div>
+      </div>
 
       <div class="art-body">
         <p>부산 강서구가 AI 반도체 소재 및 전자부품 산업의 핵심 거점으로 도약하겠다는 청사진을 제시했다. 박상준 강서구청장은 최근 삼성전기 부산사업장을 직접 방문해 지역 산업 발전 방향을 논의하고, 향후 협력 체계 구축을 위한 구체적인 방안을 협의했다.</p>

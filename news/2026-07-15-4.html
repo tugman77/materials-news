@@ -109,11 +109,17 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -320,7 +326,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,7 +394,12 @@
         <span>2026.07.15 오전 11:00</span>
       </div>
 
-      <img src="../images/2026-07-15_article_4.jpg" alt="도시광산 희귀금속 재활용, 2차 공급망 핵심 축으로 성장" class="art-hero-img">
+      <figure class="art-hero-fig"><img src="../images/2026-07-15_article_4.jpg" alt="도시광산 희귀금속 재활용, 2차 공급망 핵심 축으로 성장" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">폐전자제품에서 희귀금속을 회수하는 도시광산 기술이 주요국 정책 지원을 받으며 2차 공급망의 핵심 축으로 급부상하고 있다. 국내외 기업들은 선별·정제 기술 고도화를 통해 자원 순환 생태계 구축에 속도를 내고 있다.</div>
+      </div>
 
       <div class="art-body">
         <p>폐스마트폰·서버·전기차 부품 등에서 희귀금속을 추출하는 도시광산(Urban Mining) 기술이 글로벌 희귀금속 공급망 재편의 주요 대안으로 주목받고 있다. 지정학적 불확실성으로 원산지 조달이 어려워지면서, 이미 사용된 제품에서 자원을 재순환시키는 도시광산의 전략적 가치가 빠르게 높아지는 추세다.</p>

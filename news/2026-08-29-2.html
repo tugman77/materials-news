@@ -109,11 +109,17 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -320,7 +326,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,7 +394,12 @@
         <span>2026.08.29 오전 10:20</span>
       </div>
 
-      <img src="../images/2026-08-29_article_2.jpg" alt="덕산네오룩스, QLEDoS 소재 원천특허 확보" class="art-hero-img">
+      <figure class="art-hero-fig"><img src="../images/2026-08-29_article_2.jpg" alt="덕산네오룩스, QLEDoS 소재 원천특허 확보" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">덕산네오룩스가 차세대 마이크로 디스플레이 기술인 QLEDoS(양자점 발광 다이오드 온 실리콘) 핵심 소재의 원천기술을 확보했다. XR 기기·스마트글래스 시장 확대에 따른 초소형 고휘도 디스플레이 수요에 선제 대응하는 행보로 평가된다.</div>
+      </div>
 
       <div class="art-body">
         <p>덕산네오룩스가 QLEDoS 소재 분야 원천기술 확보에 성공했다고 밝혔다. QLEDoS는 양자점(Quantum Dot) 발광체를 실리콘 기판 위에 집적한 초소형 디스플레이 기술로, 기존 OLED 대비 훨씬 높은 휘도와 색재현율을 구현할 수 있어 증강현실(AR)·혼합현실(XR) 기기의 차세대 디스플레이 규격으로 주목받고 있다.</p>

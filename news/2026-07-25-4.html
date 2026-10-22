@@ -109,11 +109,17 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -320,7 +326,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,7 +394,12 @@
         <span>2026.07.25 오전 06:38</span>
       </div>
 
-      <img src="../images/2026-07-25_article_4.jpg" alt="AI 반도체 공급망 병목, 기술 아닌 &#x27;소재 부족&#x27;" class="art-hero-img">
+      <figure class="art-hero-fig"><img src="../images/2026-07-25_article_4.jpg" alt="AI 반도체 공급망 병목, 기술 아닌 &#x27;소재 부족&#x27;" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">AI 반도체 수요 폭증으로 공급망의 실질적 병목이 설계·기술력이 아닌 소재 부족으로 드러나고 있다. 특수 소재와 공정 가스 공급이 팹리스·파운드리의 생산 확대 속도를 따라가지 못하는 구조적 불균형이 심화되는 상황이다.</div>
+      </div>
 
       <div class="art-body">
         <p>AI 반도체 수요가 폭발적으로 증가하는 가운데, 공급망의 진짜 병목이 기술 설계나 파운드리 생산 능력이 아닌 소재와 특수 화학품 공급 부족에 있다는 분석이 업계 전반에서 힘을 얻고 있다. 설계 능력과 제조 인프라가 아무리 뛰어나도 소재가 제때 공급되지 않으면 생산 라인 자체가 멈출 수밖에 없다는 현실이 구체적인 수치로 확인되고 있다.</p>

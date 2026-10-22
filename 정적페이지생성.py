@@ -76,7 +76,7 @@ def paras(article: dict) -> list:
     body = article.get("body")
     if body:
         raw = body if isinstance(body, list) else re.split(r"\n+", str(body))
-        return [p.strip() for p in raw if p and str(p).strip()]
+        return [str(p).strip() for p in raw if p and str(p).strip()]
     summary = article.get("summary", "")
     return [s.strip() for s in re.split(r"(?<=[.!?])\s+", summary) if s.strip()]
 

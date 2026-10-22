@@ -109,11 +109,17 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -320,7 +326,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,7 +394,12 @@
         <span>2026.09.22 오전 10:30</span>
       </div>
 
-      <img src="../images/2026-09-22_article_1.jpg" alt="제이앤티씨, 김천에 3470억 TGV 유리기판 공장 신설" class="art-hero-img">
+      <figure class="art-hero-fig"><img src="../images/2026-09-22_article_1.jpg" alt="제이앤티씨, 김천에 3470억 TGV 유리기판 공장 신설" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">제이앤티씨가 경북 김천에 3470억 원을 투자해 유리관통전극(TGV) 기반 유리기판 생산공장을 신설한다. AI·HPC 반도체 패키징 수요 급증에 대응하며, 투자 규모는 자기자본의 140%에 달한다.</div>
+      </div>
 
       <div class="art-body">
         <p>제이앤티씨가 경상북도 김천시 산업단지에 3470억 원 규모의 신규 유리기판 생산공장을 짓는다고 21일 공시했다. 이번 투자는 AI(인공지능)와 고성능컴퓨팅(HPC)용 반도체 수요 급증에 선제적으로 대응하기 위한 것으로, 투자 금액은 자기자본의 140.08%에 해당하는 대규모 결단이다.</p>

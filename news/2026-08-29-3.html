@@ -109,11 +109,17 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -320,7 +326,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,7 +394,12 @@
         <span>2026.08.29 오전 11:05</span>
       </div>
 
-      <img src="../images/2026-08-29_article_3.jpg" alt="국민성장펀드, 로봇 핸드 공장에 1500억 직접투자" class="art-hero-img">
+      <figure class="art-hero-fig"><img src="../images/2026-08-29_article_3.jpg" alt="국민성장펀드, 로봇 핸드 공장에 1500억 직접투자" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">금융위원회와 산업통상자원부가 국민성장펀드를 통해 원익로보틱스의 로봇 핸드 생산공장 신축에 1500억 원을 직접 투자하기로 했다. 첨단 산업 전반에 걸쳐 1조 1900억 원 규모의 지원이 승인됐으며, 로봇 제조 공급망 강화에 속도가 붙을 전망이다.</div>
+      </div>
 
       <div class="art-body">
         <p>금융위원회와 산업통상자원부는 국민성장펀드 기금운용심의회를 열고 7개 기업의 총 1조 6100억 원 규모 투자사업에 대한 지원을 확정했다. 정부 직접 지원 규모는 지분투자와 저리대출을 합쳐 1조 1900억 원이며, 로봇·콘텐츠·첨단소재 등 미래 산업 전반을 대상으로 한다.</p>

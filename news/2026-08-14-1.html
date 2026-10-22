@@ -109,11 +109,17 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -320,7 +326,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,7 +394,12 @@
         <span>2026.08.14 오전 09:40</span>
       </div>
 
-      <img src="../images/2026-08-14_article_1.jpg" alt="램리서치, 5년간 3조원 이상 R&amp;D 글로벌 확장" class="art-hero-img">
+      <figure class="art-hero-fig"><img src="../images/2026-08-14_article_1.jpg" alt="램리서치, 5년간 3조원 이상 R&amp;D 글로벌 확장" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">세계 최대 반도체 식각 장비 업체 램리서치가 향후 5년간 30억 달러(약 3조 9000억원) 이상을 투자해 글로벌 연구개발 거점을 대폭 확충한다고 발표했다. 이번 투자는 AI 반도체 수요 급증에 따른 선단 공정 장비 기술 선점을 목표로 한다.</div>
+      </div>
 
       <div class="art-body">
         <p>세계 3대 반도체 장비 업체 중 하나인 램리서치(Lam Research)가 향후 5년간 30억 달러(한화 약 3조 9000억원) 이상을 투자해 글로벌 연구개발(R&amp;D) 네트워크를 확장한다고 공식 발표했다. 이는 AI 가속기·차세대 메모리 수요 폭증에 선제 대응하기 위한 전략적 투자로, 반도체 장비 업계 사상 최대 규모 중 하나다.</p>

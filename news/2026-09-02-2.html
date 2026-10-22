@@ -109,11 +109,17 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -320,7 +326,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,7 +394,12 @@
         <span>2026.09.02 오전 11:45</span>
       </div>
 
-      <img src="../images/2026-09-02_article_2.jpg" alt="CPO 패키징 소재·공정 기술 경쟁 본격화" class="art-hero-img">
+      <figure class="art-hero-fig"><img src="../images/2026-09-02_article_2.jpg" alt="CPO 패키징 소재·공정 기술 경쟁 본격화" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">차세대 AI 인프라의 핵심 기술로 부상한 공동패키지 광학(CPO) 분야에서 EV그룹과 쿨리케앤소파 등 글로벌 패키징 장비·소재 업체들이 기술 선점 경쟁에 나섰다. CPO는 광 인터페이스를 프로세서와 같은 패키지에 통합해 대역폭을 획기적으로 높이는 기술이다.</div>
+      </div>
 
       <div class="art-body">
         <p>인공지능(AI) 데이터센터의 전송 대역폭 한계를 극복할 핵심 기술로 공동패키지 광학(CPO·Co-Packaged Optics)이 급부상하면서, 글로벌 반도체 장비 및 패키징 소재 업체들이 관련 기술 개발에 총력을 기울이고 있다. CPO는 광 트랜시버를 칩과 동일한 패키지에 통합해 신호 손실을 줄이고 전력 효율을 높이는 차세대 패키징 방식이다.</p>

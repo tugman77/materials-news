@@ -109,11 +109,17 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -320,7 +326,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,7 +394,12 @@
         <span>2026.09.22 오전 09:15</span>
       </div>
 
-      <img src="../images/2026-09-22_article_0.jpg" alt="AMD 시총 1조 달러 첫 돌파…AI 반도체 패권 재편" class="art-hero-img">
+      <figure class="art-hero-fig"><img src="../images/2026-09-22_article_0.jpg" alt="AMD 시총 1조 달러 첫 돌파…AI 반도체 패권 재편" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">AMD가 기술주 랠리에 힘입어 주가 8.4% 급등하며 시가총액 1조 달러를 처음 돌파했다. 엔비디아·인텔에 이어 세 번째 반도체 기업의 1조 달러 클럽 가입으로 AI 반도체 시장 구도가 빠르게 재편되고 있다.</div>
+      </div>
 
       <div class="art-body">
         <p>미국 반도체 설계업체 AMD(Advanced Micro Devices)가 21일(현지시간) 장중 주가 606.95달러를 기록하며 시가총액 1조 달러를 사상 처음 돌파했다. 이날 AMD 주가는 전 거래일 대비 8.42% 급등하며 신고점을 경신했다. 1조 달러 시총은 엔비디아, 인텔에 이어 반도체 업계 역대 세 번째 사례로 기록됐다.</p>

@@ -109,11 +109,17 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -320,7 +326,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,7 +394,12 @@
         <span>2026.08.13 오전 10:02</span>
       </div>
 
-      <img src="../images/2026-08-13_article_1.jpg" alt="구리 가격, 런던·뉴욕서 동반 사상최고…3대 광산 개발 동시 재개" class="art-hero-img">
+      <figure class="art-hero-fig"><img src="../images/2026-08-13_article_1.jpg" alt="구리 가격, 런던·뉴욕서 동반 사상최고…3대 광산 개발 동시 재개" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">구리 가격이 런던과 뉴욕 시장에서 동시에 사상 최고치를 경신했다. 같은 날 부건빌 파나구나·필리핀 탐파칸·스웨덴 라베르 등 장기 중단됐던 3대 구리 광산 개발 프로젝트가 일제히 재개 신호를 보내며 공급망 재편에 촉각이 쏠리고 있다.</div>
+      </div>
 
       <div class="art-body">
         <p>국제 구리 가격이 런던금속거래소(LME)와 뉴욕상품거래소(Comex)에서 동시에 사상 최고 기록을 갈아치웠다. 런던 시장에서는 올해 들어 가장 강한 &#x27;스퀴즈(공급 부족에 따른 가격 급등)&#x27; 현상이 나타났으며, Comex 구리 선물도 신고점을 찍으며 글로벌 금속 시장의 관심을 집중시켰다.</p>

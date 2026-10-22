@@ -109,11 +109,17 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -320,7 +326,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,7 +394,12 @@
         <span>2026.07.02 오전 09:30</span>
       </div>
 
-      <img src="../images/2026-07-02_article_1.jpg" alt="중국 반도체 소재사, 日 독점 시장 730억 달러 공략 가속" class="art-hero-img">
+      <figure class="art-hero-fig"><img src="../images/2026-07-02_article_1.jpg" alt="중국 반도체 소재사, 日 독점 시장 730억 달러 공략 가속" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">중국 반도체 소재 기업들이 일본이 오랫동안 독점해온 고순도 화학소재 시장에 본격 진입하고 있다. 포토레지스트·CMP 슬러리 등 핵심 공정 소재 국산화율을 빠르게 높이며 글로벌 공급망 재편을 예고하고 있다.</div>
+      </div>
 
       <div class="art-body">
         <p>중국 반도체 소재 기업들이 일본이 장악해온 하이테크 소재 시장에 대한 대대적인 공세를 시작했다. 포토레지스트(감광제), CMP(화학기계연마) 슬러리, 고순도 식각 가스 등 일본 기업들이 전통적으로 강세를 보여온 분야에서 중국산 제품의 시장 점유율이 빠르게 상승하고 있다.</p>

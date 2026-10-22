@@ -109,11 +109,17 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -320,7 +326,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,7 +394,12 @@
         <span>2026.07.14 오전 09:15</span>
       </div>
 
-      <img src="../images/2026-07-14_article_0.jpg" alt="한울소재과학, 반도체 소재 양산 체제 본격 가동…주가 18% 급등" class="art-hero-img">
+      <figure class="art-hero-fig"><img src="../images/2026-07-14_article_0.jpg" alt="한울소재과학, 반도체 소재 양산 체제 본격 가동…주가 18% 급등" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">한울소재과학이 자회사 PSM의 공정 인증을 통과하며 반도체 소재 생산기지 구축을 완료했다. 양산 체제 전환 소식에 주가가 장중 18% 급등하며 시장의 주목을 받고 있다.</div>
+      </div>
 
       <div class="art-body">
         <p>반도체 소재 전문기업 한울소재과학이 자회사 PSM(Process &amp; Semiconductor Materials)의 핵심 공정 인증을 최종 통과하며 반도체 소재 생산기지 구축을 완료했다고 14일 밝혔다. 이번 인증 통과는 단순한 설비 완공을 넘어 실제 양산 가능 여부를 검증받는 단계로, 업계에서는 사실상의 상업 생산 개시 신호탄으로 평가한다.</p>

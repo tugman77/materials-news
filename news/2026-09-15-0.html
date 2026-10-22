@@ -109,11 +109,17 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -320,7 +326,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,7 +394,12 @@
         <span>2026.09.15 오전 09:15</span>
       </div>
 
-      <img src="../images/2026-09-15_article_0.jpg" alt="中 이트륨 수출통제…美·日 공급망 직격" class="art-hero-img">
+      <figure class="art-hero-fig"><img src="../images/2026-09-15_article_0.jpg" alt="中 이트륨 수출통제…美·日 공급망 직격" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">중국이 희토류 원소 이트륨에 대한 수출 통제를 전격 시행하며 미국·일본의 첨단산업 공급망을 압박하고 있다. 헬륨에 이어 연속되는 수출통제 조치로 글로벌 소재 공급망 재편이 가속화될 전망이다.</div>
+      </div>
 
       <div class="art-body">
         <p>중국이 반도체·디스플레이·레이저 등 첨단산업의 핵심 소재인 이트륨(Yttrium)에 대한 수출 통제 조치를 시행했다. 지난 9월 6일 헬륨 수출 금지에 이어 불과 열흘 만에 또 다른 희토류 원소를 겨냥한 규제가 등장하면서, 중국의 자원 무기화 전략이 체계적으로 전개되고 있다는 분석이 나온다.</p>

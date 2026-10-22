@@ -109,11 +109,17 @@
     display: block;
     margin-bottom: 28px;
   }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -320,7 +326,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,7 +394,12 @@
         <span>2026.08.23 오전 09:05</span>
       </div>
 
-      <img src="../images/2026-08-23_article_0.jpg" alt="中 희토류 휴전 만료 임박…글로벌 공급망 재편 기로" class="art-hero-img">
+      <figure class="art-hero-fig"><img src="../images/2026-08-23_article_0.jpg" alt="中 희토류 휴전 만료 임박…글로벌 공급망 재편 기로" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">미중 간 잠정 합의된 희토류 수출통제 유예 기간이 종료를 앞두면서 글로벌 소재 공급망이 다시 위기에 처했다. 중국이 유예 연장 여부를 결정하지 않은 채 협상 국면에서 우위를 점하려는 전략적 움직임을 보이고 있다는 분석이 나온다.</div>
+      </div>
 
       <div class="art-body">
         <p>미국과 중국이 지난 무역협상 과정에서 잠정 합의한 희토류 수출통제 유예 조치가 만료 시점을 앞두고 있어, 글로벌 첨단 소재 공급망이 다시 한번 극심한 불확실성에 노출될 처지에 놓였다. 외교 전문매체 모던 디플로머시(Modern Diplomacy)는 중국이 이 유예를 연장하지 않을 가능성을 시사하는 신호를 내보내고 있다고 보도했다.</p>
