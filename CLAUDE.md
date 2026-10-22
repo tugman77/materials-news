@@ -540,6 +540,39 @@ new PartnersCoupang.G({id:XXXXX, trackingCode:"AF9787280", subId:null, template:
 
 ---
 
+## 디자인 2.0 — 경제신문형 UI 개편 (2026-10-22)
+
+방향: 경제신문 60% + 산업정보 플랫폼 40%. 기존 색상(#1a2b4a, #0057a8, #c8102e)·URL·데이터·광고·발행 파이프라인 보존.
+브랜치 `design-2.0`에서 작업 후 main 머지. 정적 페이지 390건 전량 재생성.
+
+### 1차: 안정성·가독성
+- **fetch 타임아웃+재시도**: index/article/category/search.html에 `fetchWithTimeout(url, 10000)` (AbortController) + 재시도 버튼
+- **"많이 본 뉴스" → "추천 기사"**: 실제 조회수 없이 명칭만 있던 것을 정직하게 변경 (index.html, article.html)
+- **본문 타이포그래피**: `.art-body` line-height 2→1.75, max-width 700px (모바일 100%)
+
+### 2차: 경제신문형 디자인
+- **히어로**: 리드 기사 좌우 배치(이미지+텍스트, `grid-template-columns: 1fr 1fr`) + 서브 3건 번호 텍스트 리스트
+- **카테고리 섹션**: 대표 1건 이미지 카드(`.cat-lead`) + 나머지 텍스트 리스트(`.cat-list-item`)
+- **이미지 없는 기사**: placeholder 제거, 텍스트형 카드로 표시
+- **기사 요약 박스**: article.html + 정적페이지생성.py 양쪽에 `.art-summary-box` (배경 #f8f4ef, 좌측 보더 accent2)
+- **모바일 사이드바**: `display:none` → `order:1`로 하단 표시. 순서: 편집국 브리핑→추천기사→키워드→글로벌이슈→관련기관→쿠팡
+- **키워드 기준일**: "최근 N일 기사 기준" 캡션 추가
+- **NewsArticle JSON-LD**: 정적페이지생성.py에 이미 구현됨 (확인)
+
+### 수정 파일
+| 파일 | 변경 내용 |
+|------|----------|
+| `index.html` | 히어로·카테고리·최신피드 리디자인, 모바일 사이드바, 키워드 캡션 |
+| `article.html` | 요약 박스, 타이포그래피, 재시도 버튼 |
+| `category.html` | fetchWithTimeout, 텍스트형 카드 |
+| `search.html` | fetchWithTimeout |
+| `정적페이지생성.py` | 요약 박스 HTML, paras() int 방어 |
+
+### 제외 (3차 이후)
+색상 토큰 교체, 편집국 브리핑 구조화, "왜 중요한가?" 섹션, 출처/기준일 관리, 기사자동생성.py 수정
+
+---
+
 ## 배포 체크리스트
 
 - [x] tugman77/materials-news 저장소 생성
