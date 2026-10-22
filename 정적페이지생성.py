@@ -114,6 +114,12 @@ def build_page(article: dict, idx: int, all_articles: list, date_key: str,
             f'<figcaption class="img-caption">{esc(caption)}</figcaption></figure>'
             if img_rel else "")
 
+    summary_box = (
+        f'      <div class="art-summary-box">\n'
+        f'        <div class="art-summary-label">핵심 요약</div>\n'
+        f'        <div class="art-summary-text">{esc(summary)}</div>\n'
+        f'      </div>' if summary else "")
+
     nav_html = "\n".join(
         f'        <a href="{BASE}{esc(href)}">{esc(label)}</a>' for href, label in NAV)
 
@@ -236,6 +242,8 @@ def build_page(article: dict, idx: int, all_articles: list, date_key: str,
       </div>
 
 {hero}
+
+{summary_box}
 
       <div class="art-body">
 {body_html}

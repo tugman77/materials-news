@@ -79,27 +79,26 @@
   /* ── 페이지 레이아웃 ── */
   .page { max-width: 1200px; margin: 0 auto; padding: 20px 16px 48px; display: grid; grid-template-columns: 1fr 280px; gap: 24px; }
 
-  /* ── 히어로 ── */
-  .hero { display: grid; grid-template-columns: 3fr 2fr; grid-template-rows: repeat(3, auto); gap: 0; border: 1px solid var(--border); background: var(--card-bg); margin-bottom: 28px; }
-  .hero-main { grid-row: 1/4; border-right: 1px solid var(--border); cursor: pointer; display: flex; flex-direction: column; }
+  /* ── 히어로 (경제신문형) ── */
+  .hero { border: 1px solid var(--border); background: var(--card-bg); margin-bottom: 28px; }
+  .hero-main { display: grid; grid-template-columns: 1fr 1fr; cursor: pointer; border-bottom: 1px solid var(--border); }
   .hero-main:hover .hero-main-title { color: var(--accent2); }
-  .hero-thumb { width: 100%; flex: 1; object-fit: cover; min-height: 200px; display: block; }
-  .hero-thumb-placeholder { width: 100%; flex: 1; min-height: 200px; background: linear-gradient(135deg,#1a2b4a,#0057a8); display: flex; align-items: center; justify-content: center; font-size: 56px; font-weight: 700; color: rgba(255,255,255,0.12); letter-spacing: -3px; }
-  .hero-main-body { padding: 16px 20px 20px; flex-shrink: 0; }
-  .hero-main-tag { font-size: 10.5px; font-weight: 700; padding: 2px 8px; border-radius: 2px; display: inline-block; margin-bottom: 8px; }
-  .hero-main-title { font-size: 19px; font-weight: 700; line-height: 1.45; color: var(--text); margin-bottom: 10px; transition: color .15s; }
-  .hero-main-summary { font-size: 13.5px; color: var(--text-muted); line-height: 1.7; margin-bottom: 10px; }
+  .hero-thumb { width: 100%; height: 100%; object-fit: cover; min-height: 240px; display: block; }
+  .hero-thumb-placeholder { width: 100%; min-height: 240px; background: linear-gradient(135deg,#1a2b4a,#0057a8); display: flex; align-items: center; justify-content: center; font-size: 56px; font-weight: 700; color: rgba(255,255,255,0.12); letter-spacing: -3px; }
+  .hero-main-body { padding: 24px 28px; display: flex; flex-direction: column; justify-content: center; }
+  .hero-main-tag { font-size: 10.5px; font-weight: 700; padding: 2px 8px; border-radius: 2px; display: inline-block; margin-bottom: 10px; }
+  .hero-main-title { font-size: 28px; font-weight: 700; line-height: 1.35; color: var(--text); margin-bottom: 14px; transition: color .15s; word-break: keep-all; }
+  .hero-main-summary { font-size: 14px; color: var(--text-muted); line-height: 1.7; margin-bottom: 12px; }
   .hero-main-meta { font-size: 12px; color: var(--text-light); }
 
-  .hero-side { border-bottom: 1px solid var(--border); padding: 13px 14px; cursor: pointer; display: flex; gap: 12px; align-items: flex-start; flex: 1; }
+  .hero-sides { display: flex; flex-direction: column; }
+  .hero-side { border-bottom: 1px solid var(--border); padding: 14px 20px; cursor: pointer; display: flex; gap: 10px; align-items: flex-start; }
   .hero-side:last-child { border-bottom: none; }
   .hero-side:hover .hs-title { color: var(--accent2); }
-  .hero-side-thumb { width: 88px; height: 66px; object-fit: cover; flex-shrink: 0; }
-  .hero-side-thumb-ph { width: 88px; height: 66px; background: #e0e0db; flex-shrink: 0; }
+  .hs-num { font-size: 16px; font-weight: 700; color: var(--accent); min-width: 20px; flex-shrink: 0; line-height: 1.4; }
   .hs-tag { font-size: 10px; font-weight: 700; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 4px; }
-  .hs-title { font-size: 13.5px; font-weight: 600; line-height: 1.4; color: var(--text); transition: color .15s; margin-bottom: 4px; }
-  .hs-summary { font-size: 12px; color: var(--text-muted); line-height: 1.55; word-break: keep-all; }
-  .hs-meta { font-size: 11px; color: var(--text-light); margin-top: 5px; }
+  .hs-title { font-size: 15px; font-weight: 600; line-height: 1.45; color: var(--text); transition: color .15s; word-break: keep-all; }
+  .hs-meta { font-size: 11px; color: var(--text-light); margin-top: 4px; }
 
   /* ── 카테고리 섹션 (동아·조선 스타일) ── */
   .cat-section { margin-bottom: 28px; }
@@ -112,16 +111,21 @@
   .cat-more { font-size: 12px; color: var(--text-light); cursor: pointer; }
   .cat-more:hover { color: var(--accent2); }
 
-  .cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-  .cat-card { cursor: pointer; }
-  .cat-card:hover .cat-card-title { color: var(--accent2); }
-  .cat-card-thumb { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #ddd; }
-  .cat-card-thumb-ph { width: 100%; aspect-ratio: 16/9; background: linear-gradient(135deg,#e8f0fb,#c5d9f5); display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 11px; }
-  .cat-card-body { padding: 9px 0 0; }
+  .cat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+  .cat-lead { cursor: pointer; padding-right: 16px; border-right: 1px solid var(--border); }
+  .cat-lead:hover .cat-card-title { color: var(--accent2); }
+  .cat-card-thumb { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #ddd; margin-bottom: 10px; }
+  .cat-card-thumb-ph { width: 100%; aspect-ratio: 16/9; background: linear-gradient(135deg,#e8f0fb,#c5d9f5); display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 11px; margin-bottom: 10px; }
   .cat-card-tag { font-size: 10px; font-weight: 700; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 5px; }
-  .cat-card-title { font-size: 14px; font-weight: 600; line-height: 1.45; color: var(--text); margin-bottom: 5px; word-break: keep-all; transition: color .15s; }
-  .cat-card-summary { font-size: 12px; color: var(--text-muted); line-height: 1.55; word-break: keep-all; margin-bottom: 5px; }
+  .cat-card-title { font-size: 16px; font-weight: 700; line-height: 1.45; color: var(--text); margin-bottom: 5px; word-break: keep-all; transition: color .15s; }
+  .cat-card-summary { font-size: 12.5px; color: var(--text-muted); line-height: 1.55; word-break: keep-all; margin-bottom: 5px; }
   .cat-card-meta { font-size: 11.5px; color: var(--text-light); }
+  .cat-list { padding-left: 16px; display: flex; flex-direction: column; }
+  .cat-list-item { padding: 9px 0; border-bottom: 1px solid var(--border); cursor: pointer; }
+  .cat-list-item:last-child { border-bottom: none; }
+  .cat-list-item:hover .cat-list-title { color: var(--accent2); }
+  .cat-list-title { font-size: 14px; font-weight: 600; line-height: 1.45; color: var(--text); word-break: keep-all; transition: color .15s; }
+  .cat-list-meta { font-size: 11px; color: var(--text-light); margin-top: 3px; }
 
   /* ── 최신 기사 피드 ── */
   .latest-section { margin-bottom: 12px; }
@@ -218,19 +222,25 @@
   /* ── 반응형 ── */
   @media (max-width: 900px) {
     .page { grid-template-columns: 1fr; }
-    .sidebar { display: none; }
+    .sidebar { order: 1; }
   }
   @media (max-width: 640px) {
-    .hero { grid-template-columns: 1fr; }
-    .hero-main { grid-row: auto; border-right: none; border-bottom: 1px solid var(--border); }
-    .cat-grid { grid-template-columns: 1fr 1fr; }
+    .hero-main { grid-template-columns: 1fr; }
+    .hero-thumb { min-height: 180px; }
+    .hero-main-title { font-size: 22px; }
+    .hero-main-body { padding: 16px; }
+    .cat-grid { grid-template-columns: 1fr; }
+    .cat-lead { padding-right: 0; border-right: none; margin-bottom: 12px; }
+    .cat-list { padding-left: 0; border-top: 1px solid var(--border); }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 11px; }
     .nav-search { display: none; }
     .header-meta { display: none; }
   }
   @media (max-width: 420px) {
-    .cat-grid { grid-template-columns: 1fr 1fr; }
+    .cat-grid { grid-template-columns: 1fr; }
+    .cat-lead { padding-right: 0; border-right: none; margin-bottom: 12px; }
+    .cat-list { padding-left: 0; border-top: 1px solid var(--border); }
   }
 </style>
 </head>
@@ -344,15 +354,13 @@
   </div>
 
   <div class="sb-box">
-    <div class="sb-title">많이 본 뉴스</div>
+    <div class="sb-title">추천 기사</div>
     <div id="rank-list"><div style="color:#aaa;font-size:13px;">불러오는 중...</div></div>
   </div>
 
-  <div class="sb-coupang sb-box">
-    <div class="sb-coupang-top"><span>쿠팡 추천 상품</span></div>
-    <script src="https://ads-partners.coupang.com/g.js"></script>
-    <script>new PartnersCoupang.G({id:970543,trackingCode:"AF9787280",subId:null,template:"carousel",width:"100%",height:"200"});</script>
-    <div class="sb-coupang-notice">이 링크는 쿠팡 파트너스 활동의 일환으로 수수료를 제공받습니다.</div>
+  <div class="sb-box">
+    <div class="sb-title">이번 주 키워드</div>
+    <div id="keyword-cloud" class="keyword-cloud"><span style="color:#aaa;font-size:13px;">불러오는 중...</span></div>
   </div>
 
   <div class="sb-box">
@@ -382,9 +390,11 @@
     </a>
   </div>
 
-  <div class="sb-box">
-    <div class="sb-title">이번 주 키워드</div>
-    <div id="keyword-cloud" class="keyword-cloud"><span style="color:#aaa;font-size:13px;">불러오는 중...</span></div>
+  <div class="sb-coupang sb-box">
+    <div class="sb-coupang-top"><span>쿠팡 추천 상품</span></div>
+    <script src="https://ads-partners.coupang.com/g.js"></script>
+    <script>new PartnersCoupang.G({id:970543,trackingCode:"AF9787280",subId:null,template:"carousel",width:"100%",height:"200"});</script>
+    <div class="sb-coupang-notice">이 링크는 쿠팡 파트너스 활동의 일환으로 수수료를 제공받습니다.</div>
   </div>
 
 </aside>
@@ -472,6 +482,13 @@ function tagHtml(a, cls) {
   return `<span class="${cls} ${cv.cls}">${a.category}</span>`;
 }
 
+// ── fetch 타임아웃 래퍼 ──
+function fetchWithTimeout(url, ms = 10000) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), ms);
+  return fetch(url, { signal: ctrl.signal }).finally(() => clearTimeout(timer));
+}
+
 // ── 히어로 렌더 ──
 function renderHero(articles) {
   const featured = articles.find(a => a.is_featured) || articles[0];
@@ -491,27 +508,26 @@ function renderHero(articles) {
     <div class="hero-main-body">
       ${tagHtml(featured,'hero-main-tag')}
       <div class="hero-main-title">${featured.title}</div>
-      <div class="hero-main-summary">${(featured.summary||'').slice(0,110)}…</div>
+      <div class="hero-main-summary">${(featured.summary||'').slice(0,140)}…</div>
       <div class="hero-main-meta">소재산업부 · ${fmtDate(todayISO)} ${featured.timestamp||''}</div>
     </div>
   </div>`;
 
-  sides.forEach(a => {
-    const idx = articles.indexOf(a);
-    const sideThumb = a.image_url
-      ? `<img class="hero-side-thumb" src="${a.image_url}" alt="${a.title}" onerror="this.className='hero-side-thumb-ph'">`
-      : `<div class="hero-side-thumb-ph"></div>`;
-    const summary = (a.summary || '').slice(0, 60);
-    html += `<div class="hero-side" onclick="location.href='${artLink(todayISO, idx)}'">
-      ${sideThumb}
-      <div style="flex:1;min-width:0;">
-        ${tagHtml(a,'hs-tag')}
-        <div class="hs-title">${a.title}</div>
-        <div class="hs-summary">${summary}…</div>
-        <div class="hs-meta">${fmtDate(todayISO)} ${a.timestamp||''}</div>
-      </div>
-    </div>`;
-  });
+  if (sides.length) {
+    html += `<div class="hero-sides">`;
+    sides.forEach((a, i) => {
+      const idx = articles.indexOf(a);
+      html += `<div class="hero-side" onclick="location.href='${artLink(todayISO, idx)}'">
+        <span class="hs-num">${i+1}</span>
+        <div style="flex:1;min-width:0;">
+          ${tagHtml(a,'hs-tag')}
+          <div class="hs-title">${a.title}</div>
+          <div class="hs-meta">${fmtDate(todayISO)} ${a.timestamp||''}</div>
+        </div>
+      </div>`;
+    });
+    html += `</div>`;
+  }
 
   document.getElementById('hero-section').innerHTML = html;
 }
@@ -553,21 +569,31 @@ function renderCatSections() {
 
     const grid = document.getElementById('grid-' + cat);
     if (!grid) return;
-    grid.innerHTML = items.map(({article: a, date, idx}) => {
-      const thumb = a.image_url
-        ? `<img class="cat-card-thumb" src="${a.image_url}" alt="${a.title}" onerror="this.style.display='none'">`
-        : `<div class="cat-card-thumb-ph">이미지 준비 중</div>`;
-      const summary = (a.summary || '').slice(0, 55);
-      return `<div class="cat-card" onclick="location.href='${artLink(date, idx)}'">
-        ${thumb}
-        <div class="cat-card-body">
-          ${tagHtml(a,'cat-card-tag')}
-          <div class="cat-card-title">${a.title}</div>
-          <div class="cat-card-summary">${summary}…</div>
-          <div class="cat-card-meta">${fmtDate(date)} ${a.timestamp||''}</div>
-        </div>
+
+    // 대표 1건 (이미지 카드) + 나머지 텍스트 리스트
+    const lead = items[0];
+    const rest = items.slice(1);
+    const la = lead.article;
+    const leadThumb = la.image_url
+      ? `<img class="cat-card-thumb" src="${la.image_url}" alt="${la.title}" onerror="this.style.display='none'">`
+      : `<div class="cat-card-thumb-ph">이미지 준비 중</div>`;
+    let html = `<div class="cat-lead" onclick="location.href='${artLink(lead.date, lead.idx)}'">
+      ${leadThumb}
+      ${tagHtml(la,'cat-card-tag')}
+      <div class="cat-card-title">${la.title}</div>
+      <div class="cat-card-summary">${(la.summary||'').slice(0,80)}…</div>
+      <div class="cat-card-meta">${fmtDate(lead.date)} ${la.timestamp||''}</div>
+    </div>`;
+    html += `<div class="cat-list">`;
+    rest.forEach(({article: a, date, idx}) => {
+      html += `<div class="cat-list-item" onclick="location.href='${artLink(date, idx)}'">
+        ${tagHtml(a,'cat-card-tag')}
+        <div class="cat-list-title">${a.title}</div>
+        <div class="cat-list-meta">${fmtDate(date)} ${a.timestamp||''}</div>
       </div>`;
-    }).join('');
+    });
+    html += `</div>`;
+    grid.innerHTML = html;
 
     document.getElementById('cat-' + cat).style.display = '';
   });
@@ -589,10 +615,12 @@ function renderLatest(filter) {
   if (!el) return;
 
   el.innerHTML = filtered.slice(0, latestVisible).map(({article: a, date, idx}) => {
-    const thumb = a.image_url
-      ? `<img class="li-thumb" src="${a.image_url}" alt="${a.title}" onerror="this.style.display='none'">`
-      : `<div class="li-thumb-ph"></div>`;
-    return `<div class="latest-item" onclick="location.href='${artLink(date, idx)}'">
+    const hasImg = !!a.image_url;
+    const thumb = hasImg
+      ? `<img class="li-thumb" src="${a.image_url}" alt="${a.title}" onerror="this.parentElement.style.gridTemplateColumns='1fr';this.style.display='none'">`
+      : '';
+    const cols = hasImg ? 'grid-template-columns:96px 1fr' : 'grid-template-columns:1fr';
+    return `<div class="latest-item" style="${cols}" onclick="location.href='${artLink(date, idx)}'">
       ${thumb}
       <div>
         ${tagHtml(a,'li-tag')}
@@ -750,13 +778,14 @@ function renderKeywords() {
 
   if (!sorted.length) { el.innerHTML = '<span style="color:#aaa;font-size:13px;">집계 중...</span>'; return; }
 
+  const days = new Set(allArticles.map(({date}) => date)).size;
   el.innerHTML = sorted.map(w => {
     let cls = '';
     if (CAT_WORDS.rare.has(w)) cls = 'rare';
     else if (CAT_WORDS.industry.has(w)) cls = 'industry';
     else if (CAT_WORDS.global.has(w)) cls = 'global';
     return `<span class="kw-tag ${cls}" onclick="location.href='search.html?q=${encodeURIComponent(w)}'">#${w}</span>`;
-  }).join('');
+  }).join('') + `<div style="margin-top:8px;font-size:11px;color:#aaa;">최근 ${days}일 기사 기준</div>`;
 }
 
 async function jumpToArchive(date) {
@@ -794,7 +823,7 @@ async function loadMoreArchive() {
   for (let i = 0; i < BATCH && archiveIdx < allArchiveDates.length; i++, archiveIdx++) {
     const date = allArchiveDates[archiveIdx];
     try {
-      const res = await fetch(`archive/${date}.json`);
+      const res = await fetchWithTimeout(`archive/${date}.json`);
       if (!res.ok) continue;
       const data = await res.json();
       (data.articles || []).forEach((a, idx) => allArticles.push({article:a, date, idx}));
@@ -877,7 +906,7 @@ function doSearch() {
 async function init() {
   // 1. 오늘 기사
   try {
-    const res = await fetch('articles.json');
+    const res = await fetchWithTimeout('articles.json');
     if (!res.ok) throw new Error();
     const data = await res.json();
     const arts = data.articles || [];
@@ -899,12 +928,15 @@ async function init() {
     arts.forEach((a, idx) => allArticles.push({article:a, date:todayISO, idx}));
   } catch(e) {
     document.getElementById('hero-section').innerHTML =
-      '<div style="grid-column:1/3;padding:40px;text-align:center;color:#aaa;">기사를 불러올 수 없습니다.</div>';
+      `<div style="grid-column:1/3;padding:40px;text-align:center;color:#888;font-size:14px;">
+        기사를 불러올 수 없습니다.<br>
+        <button onclick="location.reload()" style="margin-top:12px;padding:8px 24px;border:1px solid #aaa;background:#fff;cursor:pointer;font-size:13px;color:#444;">다시 시도</button>
+      </div>`;
   }
 
   // 2. 아카이브 인덱스
   try {
-    const res = await fetch('archive/index.json');
+    const res = await fetchWithTimeout('archive/index.json');
     if (res.ok) {
       const idx = await res.json();
       allArchiveDates = (idx.dates || []).filter(d => d !== todayISO);

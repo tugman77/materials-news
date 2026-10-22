@@ -100,8 +100,11 @@
   .art-info .info-sep { color: var(--border); }
   .art-info .art-author { font-weight: 600; color: var(--text-muted); }
 
-  .art-body { font-size: 17px; line-height: 2; color: var(--text-muted); margin-bottom: 32px; }
-  .art-body p { margin-bottom: 20px; word-break: keep-all; }
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
+  .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
 
   .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -308,7 +311,7 @@
     .page-wrap { grid-template-columns: 1fr; }
     .article-area { padding: 24px 20px 32px; }
     .art-title { font-size: 22px; }
-    .art-body { font-size: 16px; }
+    .art-body { font-size: 16px; max-width: 100%; }
     .header-meta { display: none; }
     .nav-inner { overflow-x: auto; }
     .nav-inner a { padding: 10px 12px; }
@@ -388,6 +391,11 @@
         <span id="art-date"></span>
       </div>
 
+      <div class="art-summary-box" id="art-summary" style="display:none">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text" id="art-summary-text"></div>
+      </div>
+
       <div class="art-body" id="art-body"></div>
 
       <!-- 뉴스레터 구독 CTA (Stibee 연동 시 버튼 onclick을 구독폼 링크로 교체) -->
@@ -424,7 +432,9 @@
     </div>
 
     <div id="error-state" class="empty-state" style="display:none">
-      기사를 불러올 수 없습니다.<br><a href="index.html">← 목록으로</a>
+      기사를 불러올 수 없습니다.<br>
+      <button onclick="location.reload()" style="margin-top:12px;padding:8px 24px;border:1px solid #aaa;background:#fff;cursor:pointer;font-size:13px;color:#444;">다시 시도</button>
+      <br><a href="index.html" style="margin-top:8px;display:inline-block;">← 목록으로</a>
     </div>
 
   </div>
@@ -438,7 +448,7 @@
     </div>
 
     <div class="sb-box">
-      <div class="sb-title">많이 본 뉴스</div>
+      <div class="sb-title">추천 기사</div>
       <div id="rank-list"><div style="color:#aaa;font-size:13px;">불러오는 중...</div></div>
     </div>
 
@@ -533,6 +543,13 @@
   };
   function getCat(a) { return CATS[a.category] || { cls:'tag-semi', bg:'#e8f0fb', color:'#0057a8' }; }
 
+  // fetch 타임아웃 래퍼
+  function fetchWithTimeout(url, ms = 10000) {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), ms);
+    return fetch(url, { signal: ctrl.signal }).finally(() => clearTimeout(timer));
+  }
+
   // URL에서 기사 인덱스 및 날짜 추출
   const _params = new URLSearchParams(location.search);
   const articleId = parseInt(_params.get('id') ?? '0');
@@ -542,7 +559,7 @@
   async function load() {
     try {
       const jsonFile = articleDate ? 'archive/' + articleDate + '.json' : 'articles.json';
-      const res = await fetch(jsonFile);
+      const res = await fetchWithTimeout(jsonFile);
       if (!res.ok) throw new Error('데이터 없음');
       const data = await res.json();
 
@@ -698,6 +715,13 @@
     document.getElementById('art-timestamp').textContent = article.timestamp || '';
     document.getElementById('art-title').textContent = article.title;
     document.getElementById('art-date').textContent = `${today} ${article.timestamp || ''}`;
+
+    // 요약 박스
+    if (article.summary) {
+      const sumBox = document.getElementById('art-summary');
+      document.getElementById('art-summary-text').textContent = article.summary;
+      sumBox.style.display = '';
+    }
 
     // 기사 이미지
     const bodyEl = document.getElementById('art-body');
