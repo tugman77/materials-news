@@ -6,7 +6,31 @@
     <atom:link href="https://tugman77.github.io/materials-news/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Sat, 24 Oct 2026 08:47:39 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 07:57:52 +0900</lastBuildDate>
+    <item>
+      <title>중국, 핵심광물 '3중 비축' 체계 가동</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-25-0.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-25-0.html</guid>
+      <category>글로벌</category>
+      <description>중국이 핵심광물 수출통제를 넘어 생산·물류·비축까지 국가가 직접 관리하는 '3중 비축' 체계를 가동했다. 글로벌 공급망 의존도가 높은 한국 소부장 업계의 조달 리스크가 한층 커질 전망이다.</description>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>GIST, 유리기판·2D소재 반도체 혁신기술 공개</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-25-1.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-25-1.html</guid>
+      <category>반도체소재</category>
+      <description>광주과학기술원(GIST)이 유리 기판과 2차원(2D) 소재 기반의 차세대 반도체 혁신기술 2종을 공개했다. 공정 미세화의 물리적 한계를 소재 혁신으로 돌파하려는 시도로 업계의 관심이 집중된다.</description>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>DOE, 헬륨을 핵심소재 목록에 추가</title>
+      <link>https://tugman77.github.io/materials-news/news/2026-10-25-2.html</link>
+      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-25-2.html</guid>
+      <category>희귀금속</category>
+      <description>미국 에너지부(DOE)가 헬륨을 공식 핵심소재(Critical Materials) 목록에 등재했다. 글로벌 수요 증가 속도가 생산 증가를 앞지르면서 반도체·의료·우주항공 분야 공급 리스크가 부각되고 있다.</description>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>영월 상동광산, 32년 만에 텅스텐 채굴 재개</title>
       <link>https://tugman77.github.io/materials-news/news/2026-10-24-0.html</link>
@@ -222,30 +246,6 @@
       <category>희귀금속</category>
       <description>포스코퓨처엠이 삼성SDI에 6조 원 규모의 리튬인산철(LFP) 양극재를 공급하는 장기 계약을 체결했다. K배터리의 탈중국 소재 공급망 구축이 가속화되는 가운데, 국내 소재-배터리 수직 동맹이 본격화됐다.</description>
       <pubDate>Mon, 12 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>ASML, 노광장비 부품값 10% 일괄 인상</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-10-11-0.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-11-0.html</guid>
-      <category>반도체소재</category>
-      <description>세계 최대 반도체 장비 업체 ASML이 내년 1월부터 EUV·DUV 노광장비 전 부품 가격을 10% 일괄 인상한다. 삼성전자·SK하이닉스와 협의가 완료됐으며, 소모성 부품부터 핵심 광학계까지 전 품목이 대상이다.</description>
-      <pubDate>Sun, 11 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>GlobalFoundries, FD-SOI로 물리적 AI 시장 공략</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-10-11-1.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-11-1.html</guid>
-      <category>글로벌</category>
-      <description>GlobalFoundries가 EUV 없이 7나노급 성능을 구현하는 스트레인드 실리콘 FD-SOI 기술 'FDX Fusion'으로 물리적 AI 반도체 시장을 겨냥한다. 유럽의 기술 자립을 위한 전략적 선택으로 주목받고 있다.</description>
-      <pubDate>Sun, 11 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>희토류 재활용, 공급망 대안으로 부상</title>
-      <link>https://tugman77.github.io/materials-news/news/2026-10-11-2.html</link>
-      <guid isPermaLink="true">https://tugman77.github.io/materials-news/news/2026-10-11-2.html</guid>
-      <category>희귀금속</category>
-      <description>광산 개발에 수년이 걸리는 현실에서 희토류 재활용이 미국의 공급망 공백을 메울 현실적 대안으로 주목받고 있다. Paladin이 연간 회수 능력을 40톤에서 150톤으로 대폭 확대하며 시장 선도에 나섰다.</description>
-      <pubDate>Sun, 11 Oct 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
