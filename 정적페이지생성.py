@@ -280,7 +280,8 @@ def build_page(article: dict, idx: int, all_articles: list, date_key: str,
 
 {sources_html}
 
-      <div class="newsletter-cta">
+      <!-- 뉴스레터 구독 CTA (미사용 — 필요 시 display:none 제거) -->
+      <div class="newsletter-cta" style="display:none">
         <div>
           <div class="nl-cta-title">📬 소재인사이트 뉴스레터</div>
           <div class="nl-cta-desc">반도체·희소금속·소재 공급망의 핵심 신호만 골라 이메일로 보내드립니다.<br>30년 현장 전문가가 직접 고릅니다. 무료입니다.</div>
