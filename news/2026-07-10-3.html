@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">금융위원회가 중소기업 특화 금융투자회사 7곳을 새로 지정해 소재·부품·장비 분야 중소·벤처기업에 모험자본을 공급하는 체계를 강화한다. 반도체·소재 분야 중소기업의 R&amp;D 자금 조달 환경 개선이 기대된다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>금융위원회가 중소·벤처기업 전문 자금 공급을 담당할 &#x27;중소기업 특화 금융투자회사(중기특화 증권사)&#x27; 7곳을 새로 지정했다. 앞으로 3년간 이들 증권사가 소재·부품·장비(소부장) 기업을 포함한 중소·벤처기업에 모험자본을 집중적으로 공급하는 역할을 맡는다.</p>
         <p>이번에 지정된 7개 중기특화 증권사는 중소기업 IPO(기업공개), 유상증자, 회사채 발행, 벤처 투자 등을 전문으로 수행하는 기관들이다. 기존 대형 증권사 위주의 자금 시장에서 소외되기 쉬운 소규모 소재·부품 기업들이 보다 원활하게 자본을 조달할 수 있는 기반이 마련됐다는 평가다.</p>
@@ -417,6 +431,8 @@
         <p>한편 반도체 소재 국산화 과제를 수행 중인 일부 중소기업은 이번 제도를 통해 기술 개발 후 상용화 단계에서 필요한 시설 투자 자금을 민간 루트로 확보할 수 있을 것으로 기대하고 있다. 설비 투자는 정책금융 의존도가 특히 높았던 분야여서, 민간 자본 유입 효과가 클 것으로 예상된다.</p>
         <p>향후 중기특화 증권사의 성과는 소부장 생태계 전반의 투자 활성화 지표로 활용될 예정이다. 금융위는 연 1회 실적을 점검해 지정 갱신 여부를 결정하며, 부진한 증권사는 지정을 취소하는 성과 연동 방식으로 운영된다는 계획이다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -443,8 +459,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">콩고 광산 붕괴로 탄탈럼 공급망에 경고등이 켜진 가운데, 국내는 수입차 점유율 25% 돌파로 소재·부품 생태계 재편 압박이 커지고 있다. 반면 TK 반도체 클러스터 구축과 중소기업 특화 금융 지원은 소재산업 체력 강화의 긍정 신호다.</div>
     </div>
 

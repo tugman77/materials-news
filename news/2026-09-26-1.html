@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">농기계 1위 기업 대동 산하 대동기어가 전기차 부품사로 체질을 전환하고 있다. 올해 상반기 말 수주잔고 1조9628억원 중 81%가 현대차그룹 전동화 플랫폼 물량으로, 자동차 부문 매출이 처음으로 농기계를 앞지를 전망이다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>국내 농기계 시장 1위 대동 그룹의 동력전달장치(파워트레인) 전문 자회사 대동기어가 전기차 부품 전문기업으로 빠르게 변신하고 있다. 수십 년간 농기계용 트랜스미션과 기어를 주력으로 성장했던 기업이 전동화 물결에 올라탄 사례로 주목된다.</p>
         <p>2026년 상반기 말 기준 대동기어의 전체 수주잔고는 1조9628억원에 달한다. 이 중 81%인 약 1조5900억원이 현대자동차그룹의 차세대 전기차 플랫폼인 eM(전기 모빌리티)과 eS(전기 스포츠) 플랫폼 관련 전동화 부품 물량이다.</p>
@@ -417,6 +431,8 @@
         <p>농기계 사업은 국내 시장 포화와 해외 경쟁 심화로 성장성이 제한되는 추세다. 대동기어의 전기차 전환은 모회사 대동 그룹 전체의 사업 포트폴리오 재편 전략과도 맞닿아 있으며, 계열사 시너지를 활용한 부품 내재화 전략도 병행되고 있다.</p>
         <p>향후 전기차 시장이 예상대로 성장할 경우, 대동기어의 현대차 의존 구조는 기회이자 리스크다. 현대차그룹의 전동화 전략이 차질을 빚거나 수주 단가 협상에서 불리해질 경우 수익성 압박이 발생할 수 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -443,8 +459,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">화웨이의 타우 스케일링으로 반도체 패권 경쟁이 새 국면을 맞은 가운데, 인도·일본의 희토류 자립과 대동기어의 전기차 전환이 글로벌 공급망 재편을 가속하고 있다.</div>
     </div>
 

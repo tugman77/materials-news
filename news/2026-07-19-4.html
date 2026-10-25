@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">충청북도가 반도체와 이차전지 소재 수출 호조에 힘입어 올해 상반기 역대 최고 수출 실적을 기록했다. 반도체가 수출을 이끌고 축전지·소재가 뒤를 받쳐 지역 산업 생태계의 체력을 입증했다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>충청북도의 올해 상반기 수출액이 59억 달러를 넘어서며 역대 상반기 최고 기록을 갈아치웠다. 이는 전년 동기 대비 30% 이상 증가한 수치로, 반도체와 이차전지 소재가 지역 수출을 쌍끌이한 결과로 분석된다. 충북 수출 성장세는 국내 주요 광역 지자체 중 최상위권에 해당한다.</p>
         <p>가장 큰 성장 폭을 보인 분야는 축전지·소재 부문으로, 전년 동기 대비 226.1%라는 폭발적인 증가율을 기록했다. 이는 충북 지역에 집적된 이차전지 소재 기업들의 수출 물량이 대폭 늘어난 덕분이다. 세계적인 전기차 보급 확대와 에너지저장장치(ESS) 수요 증가가 이 지역 배터리 소재 기업들의 생산 가동률을 끌어올린 주요 원인으로 지목된다.</p>
@@ -416,6 +430,8 @@
         <p>하반기 전망도 밝은 편이다. AI 반도체 투자 사이클이 지속되고 전기차 시장 성장세가 유지되는 한, 충북 지역 반도체·소재 수출의 상승 흐름은 꺾이지 않을 것이라는 전망이 우세하다. 일부 전문가들은 연간 기준 수출액이 전년 대비 25~30% 성장해 120억 달러에 근접할 수도 있다는 낙관적 예측을 내놓고 있다.</p>
         <p>충북의 수출 호황은 지역 산업 생태계 구축의 성과이기도 하다. 메모리 팹-소재-부품으로 이어지는 공급망이 한 지역 내에 집적된 덕분에 시너지 효과가 극대화되고 있다. 이 같은 집적 모델은 용인 반도체 클러스터 구축의 참고 사례로도 주목받고 있으며, 지역 기반 공급망 강화의 유효성을 입증하는 실증 사례로 평가된다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">태양광·반도체 소재 수요 확대로 국내 소재 기업 실적이 개선되는 가운데, 중국 CXMT의 13조 메모리 굴기가 공급망 변수로 부상했다. 용인 산단과 충북 수출 호조는 긍정적이나, 소부장 생태계 구축과 탄탈럼 등 핵심 광물 공급망 재편이 성패를 가를 전망이다.</div>
     </div>
 

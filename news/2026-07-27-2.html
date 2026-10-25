@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">이재명 대통령이 브라질을 국빈 방문해 룰라 대통령과 핵심광물 공급망 협력 방안을 논의했다. 세계 2위 희토류 매장국 브라질과의 협력 강화는 중국 의존도를 낮추려는 한국의 자원 외교에 새로운 전기가 될 전망이다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>이재명 대통령이 브라질을 국빈 방문해 루이스 이나시우 룰라 다 시우바 브라질 대통령과 정상회담을 갖고 핵심광물 공급망 협력, 방산 수출, 경제협력 등 폭넓은 의제를 논의했다. 이번 방문은 한국의 자원 외교 다변화를 위한 중요한 이정표로 평가받고 있다.</p>
         <p>브라질은 전 세계 희토류 매장량 기준 중국에 이어 세계 2위 수준의 자원 보유국이다. 리튬, 니켈, 망간, 희토류 등 전기차와 반도체, 방산 산업에 필수적인 핵심 광물이 풍부하게 매장돼 있어, 공급망 다변화를 원하는 한국에게 전략적 가치가 매우 높은 파트너다.</p>
@@ -418,6 +432,8 @@
         <p>정부는 2030년까지 주요 핵심광물의 특정국 의존도를 50% 이하로 낮추겠다는 목표를 제시했다. 이를 위해 브라질뿐 아니라 호주, 인도네시아, 아프리카 광물 자원 국가들과의 복수 협력 채널을 동시에 구축하는 전략을 추진 중이다.</p>
         <p>전문가들은 이번 중남미 순방이 실질적인 성과로 이어지려면 정부 간 협력을 넘어 민간 기업들의 현지 투자와 합작법인(JV) 설립이 뒤따라야 한다고 강조한다. 외교적 성과를 공급망 안정화로 전환하는 후속 실행 체계 마련이 관건이다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -444,8 +460,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">우주·반도체·배터리 등 첨단 소재 경쟁이 전방위로 격화되는 가운데, 한-브라질 핵심광물 협력으로 공급망 다변화에 속도가 붙었다. 중국발 태양광 과잉공급 충격은 글로벌 소재 밸류체인 재편을 더욱 압박하고 있다.</div>
     </div>
 

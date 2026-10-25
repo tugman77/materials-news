@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">차세대 AI 인프라의 핵심 기술로 부상한 공동패키지 광학(CPO) 분야에서 EV그룹과 쿨리케앤소파 등 글로벌 패키징 장비·소재 업체들이 기술 선점 경쟁에 나섰다. CPO는 광 인터페이스를 프로세서와 같은 패키지에 통합해 대역폭을 획기적으로 높이는 기술이다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>인공지능(AI) 데이터센터의 전송 대역폭 한계를 극복할 핵심 기술로 공동패키지 광학(CPO·Co-Packaged Optics)이 급부상하면서, 글로벌 반도체 장비 및 패키징 소재 업체들이 관련 기술 개발에 총력을 기울이고 있다. CPO는 광 트랜시버를 칩과 동일한 패키지에 통합해 신호 손실을 줄이고 전력 효율을 높이는 차세대 패키징 방식이다.</p>
         <p>오스트리아 EV그룹(EVG)은 최근 CPO 제조 공정 전반에 걸친 기술 솔루션을 공개했다. EVG는 수십 년간 웨이퍼 본딩과 이종 집적(Heterogeneous Integration) 분야에서 쌓은 공정 노하우를 CPO 제조에 적용하고 있다. 광자 집적 회로(PIC) 제작, 고정밀 정렬 본딩, 3D 패키징 등 CPO 가치사슬의 여러 단계를 커버하는 통합 공정 역량이 강점이다.</p>
@@ -416,6 +430,8 @@
         <p>업계 전문가들은 &quot;CPO는 AI 인프라 확장의 병목 구간인 칩 간 데이터 전송 문제를 근본적으로 해결하는 기술&quot;이라며 &quot;소재와 장비에서의 기술 혁신이 CPO 상용화 속도를 결정짓는 핵심 변수&quot;라고 진단한다. 특히 광-전 변환 효율을 높이는 신규 소재 개발이 향후 2~3년의 시장 판도를 가를 것으로 전망된다.</p>
         <p>향후 CPO 기술의 주도권 경쟁은 장비 정밀도, 소재 성능, 양산 수율이라는 세 축을 중심으로 전개될 것으로 예상된다. 국내 소부장 기업들이 이 경쟁에서 의미 있는 위치를 차지하려면 기술 개발 투자와 글로벌 공급망 진입 전략을 서둘러야 한다는 게 업계의 공통된 인식이다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">AI 인프라 수요를 중심으로 반도체 공급망 재편이 가속화되며, 유럽·한국·중국이 각자의 방식으로 첨단 소재·패키징·파운드리 역량 확보에 총력을 기울이고 있다.</div>
     </div>
 

@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">최태원 대한상공회의소 회장이 글로벌 메모리 반도체 수요가 내년 최소 50% 이상 급증할 것이라 경고하며, 소재·부품·장비 공급망의 신속한 증설을 최우선 과제로 꼽았다. 한국은행도 반도체발 교역조건 개선이 소부장 업계 전반으로 확산돼야 한다고 강조했다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>최태원 대한상공회의소 회장이 제주에서 열린 경제계 행사에서 글로벌 메모리 반도체 수요가 내년 최소 50% 이상 증가할 것이라고 전망하며, &#x27;빠른 증설이 생명줄&#x27;이라고 강조했다. 이는 AI 가속기와 고대역폭메모리(HBM) 수요 급팽창에 따른 것으로, 반도체 업계 전반에 강력한 경계 메시지를 던진 셈이다.</p>
         <p>최 회장은 현 상황을 &#x27;아비규환&#x27;에 가까운 수요 폭증 국면으로 표현하며, 단순한 반도체 팹 증설에 그치지 않고 소재·부품·장비(소부장) 공급망 전체를 신속히 확장하지 않으면 병목이 발생할 수 있다고 경고했다. AI 서버 수요가 데이터센터 투자를 이끌며 반도체 소재 수요도 동반 급증하는 구조가 뚜렷하게 나타나고 있다.</p>
@@ -417,6 +431,8 @@
         <p>증권가에서는 반도체 소재 업종을 중심으로 하반기 실적 상향 조정이 이어질 것으로 전망한다. 한 애널리스트는 &#x27;수요 50% 이상 증가 시나리오가 현실화되면 공정소재·장비 업체들의 가동률이 만가동에 근접할 수 있다&#x27;며 &#x27;소재 업체 중심의 포트폴리오 재편이 필요한 시점&#x27;이라고 조언했다.</p>
         <p>향후 시장 전망은 밝으나 리스크 요인도 병존한다. 미·중 무역갈등에 따른 소재 수출 규제 변수, 핵심 원료의 지정학적 리스크, 고금리 장기화에 따른 투자 위축 가능성 등이 변수로 꼽힌다. 그럼에도 AI 수요가 구조적 성장 동력으로 자리 잡으면서, 반도체 소재 업종의 중장기 투자 매력은 유지될 것이라는 전망이 우세하다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -443,8 +459,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">반도체 수요 폭증 예고 속 소부장 공급망 강화가 핵심 과제로 부상했다. 희토류·태양광 등 전략 소재 전반에서 공급망 재편이 가속화되며 국내 기업의 수혜 기회가 확대되고 있다. 기초 연구(UNIST)부터 산업 거점(구미) 구축까지 소재 혁신 생태계 전방위 진전 중.</div>
     </div>
 

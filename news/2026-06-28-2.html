@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">애플이 맥과 아이패드 주요 제품 가격을 최대 300달러 인상하면서 IT 기기 전반의 가격 인상 연쇄 반응이 본격화될 조짐을 보이고 있다. 미국의 관세 정책이 촉발한 부품·소재 비용 상승이 소비자 가격으로 전가되는 흐름이다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>애플이 맥북 프로, 맥 미니, 아이패드 프로 등 주요 제품의 미국 내 판매 가격을 최대 300달러(약 42만 원) 인상하면서 글로벌 IT 기기 업계에 가격 인상 압박이 거세지고 있다. 이번 인상은 미국 정부의 대중국 수입 관세 강화가 부품·소재 원가를 끌어올린 데 따른 결과로 풀이된다.</p>
         <p>애플 측은 공식 성명에서 &#x27;글로벌 무역 환경 변화에 따른 비용 증가를 부분적으로 가격에 반영했다&#x27;고 설명했다. 구체적으로는 맥북 프로 14인치 모델이 199달러, 맥 미니 고사양 모델이 100달러, 아이패드 프로 13인치 모델이 300달러 각각 상향 조정됐다.</p>
@@ -417,6 +431,8 @@
         <p>투자자 관점에서는 부품·소재 공급사 중 가격 전가력(Pricing Power)이 강한 기업에 주목할 필요가 있다. 독과점적 지위를 갖는 첨단 소재·부품 기업은 가격 인상 환경에서 마진 방어가 용이하기 때문이다. 반면 범용 부품 제조사들은 단가 인하 압박에 직면할 수 있어 업체별 선별 투자 전략이 요구된다.</p>
         <p>향후 IT 기기 시장은 &#x27;프리미엄 양극화&#x27; 흐름이 강화될 것으로 예상된다. 가격 인상으로 중저가 제품군의 가성비 메리트가 부각되는 한편, 고성능·고내구성 프리미엄 제품에 대한 충성 고객층의 수요는 지속될 것이기 때문이다. 이에 따라 소재·부품 기업들도 고부가가치 제품 포트폴리오 강화에 주력하는 전략이 유효할 것으로 보인다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -443,8 +459,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">중국의 핵심광물 장악과 美 관세 여파로 글로벌 공급망 긴장이 고조되는 가운데, 한·중 반도체 소재 협력과 그린스틸 투자 재개 등 대응 움직임도 가속화되고 있다. IT 가격 도미노와 대체투자 확대까지, 산업 전반의 구조적 재편이 동시다발로 전개 중이다.</div>
     </div>
 

@@ -721,6 +721,9 @@ def generate_articles_with_claude(raw_news_list, recent_topics=None, event_memor
 - body: 10~13개 단락 각각을 문자열로 담은 배열. 각 단락 200~300자. 반드시 포함할 내용: ①사건 배경 및 원인 분석 ②구체적 수치·통계(수출액·생산량·가격 변동 포함) ③주요 관련 기업명과 최신 동향 ④전문가·업계 관계자 의견 — **원본 뉴스에 실제로 실린 발언만** 출처와 함께 인용, 원본에 없는 인용·익명 관계자 발언을 지어내지 말 것 ⑤국내 산업별 파급 효과 ⑥글로벌·해외 동향 ⑦관련 정책·규제 현황 ⑧향후 시장 전망과 조달·산업 시사점. 전문 용어는 쉽게 풀어서 작성
 - **출처 명시**: 수치가 나오는 문장은 문장 앞부분에 출처를 붙인다 — "OO(기관·매체)에 따르면 (발표 시점)". 출처를 댈 수 없는 수치는 쓰지 않는다
 - **투자 권유 금지**: 특정 상장사를 수혜주로 지목하거나 주가·"투자 논리"를 다루지 않는다. 영향은 산업·공급망 관점으로만 쓴다
+- why_important: 이 뉴스가 소재·부품 업계에 왜 중요한지 2~3문장 (120자 이내). 투자 권유가 아닌 산업·조달 관점으로 작성. 예: "국내 양극재 업체의 원료 조달 비용에 직접 영향을 미친다."
+- sources: 기사 작성에 사용한 원천 매체·기관명 배열 (2~5개). 예: ["야후파이낸스", "한국무역협회", "IEA"]. 출처를 댈 수 없으면 빈 배열
+- reference_date: 원본 뉴스에서 가장 최신 수치·발표의 기준일 (YYYY-MM-DD 형식)
 - image_keyword: 기사 내용과 관련된 영문 이미지 검색 키워드 2~3단어 (예: "semiconductor wafer", "rare earth mining", "supply chain factory"). wafer·chip·foil·plant·crystal처럼 일상 사물(과자·감자칩·식물)로도 읽히는 단어는 semiconductor·metal·industrial 같은 업계 한정어를 반드시 함께 넣을 것
 - timestamp: 현재 시각 기준 오전/오후 HH:MM 형식
 
@@ -751,11 +754,14 @@ save_articles 도구를 사용해 기사 {ARTICLE_COUNT}개를 저장하세요.
                                 "title":         {"type": "string"},
                                 "summary":       {"type": "string"},
                                 "body":          {"type": "array", "items": {"type": "string"}, "minItems": 10, "maxItems": 13},
+                                "why_important":  {"type": "string", "description": "업계 중요성 2~3문장 (120자 이내)"},
+                                "sources":       {"type": "array", "items": {"type": "string"}, "description": "원천 매체·기관명 2~5개"},
+                                "reference_date":{"type": "string", "description": "원본 기준일 YYYY-MM-DD"},
                                 "image_keyword": {"type": "string"},
                                 "is_featured":   {"type": "boolean"},
                                 "timestamp":     {"type": "string"}
                             },
-                            "required": ["id","category","tag_type","title","summary","body","image_keyword","is_featured","timestamp"]
+                            "required": ["id","category","tag_type","title","summary","body","why_important","sources","reference_date","image_keyword","is_featured","timestamp"]
                         },
                         "minItems": ARTICLE_COUNT,
                         "maxItems": ARTICLE_COUNT
@@ -821,8 +827,10 @@ def generate_editorial(articles):
 {titles_text}
 
 위 기사를 바탕으로 save_editorial 도구를 사용해:
-1. briefing: 오늘 산업·공급망 전체 흐름을 2~3문장으로 요약 (150자 이내, 편집장 코멘트 느낌)
-2. issues: 현재 진행 중인 글로벌 주요 이슈 4~5개
+1. headline: 오늘 지면 한 줄 요약 (30자 이내, 편집장 시선)
+2. points: 오늘 핵심 포인트 3~4개 (각 40자 이내, 글머리 기호용)
+3. briefing: headline + points를 이어 쓴 2~3문장 텍스트 (150자 이내, 하위호환용)
+4. issues: 현재 진행 중인 글로벌 주요 이슈 4~5개
    - icon: 🔴(위험/긴급) 🟡(주의/모니터링) 🟢(긍정/개선)
    - label: 이슈명 (15자 이내)
    - status: 상태 한 줄 (12자 이내)
@@ -837,7 +845,13 @@ def generate_editorial(articles):
             "input_schema": {
                 "type": "object",
                 "properties": {
-                    "briefing": {"type": "string"},
+                    "headline": {"type": "string", "description": "한 줄 요약 (30자 이내)"},
+                    "points": {
+                        "type": "array",
+                        "items": {"type": "object", "properties": {"text": {"type": "string"}}, "required": ["text"]},
+                        "minItems": 3, "maxItems": 4
+                    },
+                    "briefing": {"type": "string", "description": "하위호환용 텍스트 요약 (150자 이내)"},
                     "issues": {
                         "type": "array",
                         "items": {
@@ -853,7 +867,7 @@ def generate_editorial(articles):
                         "maxItems": 5
                     }
                 },
-                "required": ["briefing","issues"]
+                "required": ["headline","points","briefing","issues"]
             }
         }],
         tool_choice={"type": "tool", "name": "save_editorial"},
@@ -864,14 +878,15 @@ def generate_editorial(articles):
         # ── LLM 호출: 구독코인 vs API코인 ──
         if llm_backend.using_subscription():
             data = llm_backend.call_tool(request_params, "save_editorial")
-            briefing, issues = data["briefing"], data["issues"]
         else:
             response = client.messages.create(**request_params)
             tool_block = next(b for b in response.content if b.type == "tool_use")
-            briefing = tool_block.input["briefing"]
-            issues   = tool_block.input["issues"]
+            data = tool_block.input
+        briefing = data["briefing"]
+        issues = data["issues"]
+        briefing_v2 = {"headline": data.get("headline", ""), "points": data.get("points", [])}
         print(f"   → 브리핑 생성 완료, 이슈 {len(issues)}개")
-        return briefing, issues
+        return briefing, issues, briefing_v2
     except Exception as e:
         print(f"  편집국 생성 오류: {e} → 기본값 사용")
         return (
@@ -881,7 +896,8 @@ def generate_editorial(articles):
                 {"icon": "🟡", "label": "희귀금속 가격 불안", "status": "모니터링"},
                 {"icon": "🟡", "label": "반도체 소재 국산화", "status": "진행 중"},
                 {"icon": "🟢", "label": "국내 AI 반도체 투자", "status": "확대"},
-            ]
+            ],
+            None
         )
 
 # ════════════════════════════════════════════════════════
@@ -1248,7 +1264,7 @@ def generate_seo_files(date_key, now):
 
 
 # ── 최종 데이터 파일 저장 ──────────────────────────
-def save_data(articles, briefing, issues):
+def save_data(articles, briefing, issues, briefing_v2=None):
     """index.html이 읽을 수 있는 JSON 파일로 저장 + 날짜별 아카이브 저장"""
     now = datetime.now(KST)
     date_key = now.strftime("%Y-%m-%d")
@@ -1260,6 +1276,8 @@ def save_data(articles, briefing, issues):
         "editorial_briefing": briefing,
         "global_issues": issues,
     }
+    if briefing_v2:
+        data["editorial_briefing_v2"] = briefing_v2
 
     # 1. 최신 기사 저장 (articles.json — 사이트 메인)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
@@ -1386,10 +1404,10 @@ def main():
 
         # 4. 편집국 브리핑 + 글로벌 이슈 레이더 생성
         print("📰 편집국 브리핑 + 이슈 레이더 생성 중...")
-        briefing, issues = generate_editorial(articles)
+        briefing, issues, briefing_v2 = generate_editorial(articles)
 
         # 5. 저장
-        save_data(articles, briefing, issues)
+        save_data(articles, briefing, issues, briefing_v2)
 
         # 5-1. 이벤트 메모리 업데이트 (발행 확정 기사로 지문 갱신)
         update_event_memory(articles, event_memory)

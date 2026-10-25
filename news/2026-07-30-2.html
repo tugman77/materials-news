@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">이재명 대통령의 칠레 방문을 계기로 양국이 핵심광물 공급망 파트너십 MOU를 체결했다. 세계 최대 구리 생산국 칠레와의 협력이 반도체·산업재 소재 공급망 안정성을 높이는 전략적 전환점으로 평가된다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>이재명 대통령의 칠레 국빈 방문을 계기로 한국과 칠레 양국이 핵심광물 공급망 파트너십 양해각서(MOU)를 공식 체결했다. 이번 협력은 단순한 광물 거래를 넘어 개발·제련·소재 생산·첨단 제조로 이어지는 풀 밸류체인 구축을 목표로 한다는 점에서 기존 자원 협력과는 차별화된다.</p>
         <p>칠레는 전 세계 구리 매장량의 약 28%를 보유한 세계 1위 구리 생산국이며, 리튬 매장량도 아르헨티나와 함께 세계 최상위권을 형성하고 있다. 또한 희토류 광물도 상당량 매장된 것으로 확인되어 공급망 다변화 파트너로서의 전략적 가치가 높다.</p>
@@ -418,6 +432,8 @@
         <p>시장에서는 이번 협력이 구리 관련 소재주에 긍정적인 신호로 작용할 것으로 보고 있다. LS전선, 대한전선 등 구리 수요 기반 기업들과 솔더볼·구리박 등 반도체 소재 업체들의 원가 안정성 개선에도 기여할 것이라는 분석이 나온다.</p>
         <p>전문가들은 이번 한·칠레 핵심광물 파트너십이 단기 성과보다는 5~10년에 걸친 중장기 공급망 안정화의 초석이 될 것으로 평가한다. 협력의 실질적 성과를 내기 위해서는 현지 투자 이행, 환경·사회 리스크 관리, 제도적 뒷받침이 필수적이라는 조언도 함께 제시됐다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -444,8 +460,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">AI 수요 급증이 반도체 소재·부품 생태계 전반의 수혜 기대를 높이는 가운데, TSMC 구마모토 가동 중단으로 공급망 집중 리스크가 재부각됐다. 한-칠레 핵심광물 협력·엘앤에프의 비중국 배터리 공급망 구축 등 탈중국 다변화는 속도를 내고 있으나, AI 버블론에 소부장 주가가 실적과 괴리되는 혼조세가 지속되고 있다.</div>
     </div>
 

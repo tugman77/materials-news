@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">올해 1분기 국내 건설공사 계약액이 전년 동기 대비 23.4% 증가한 것으로 나타났다. 민간 부문의 반도체 생산시설과 데이터센터 투자가 증가세를 이끌었으며, AI 인프라 확충 수요가 건설 산업 전반의 회복을 견인하고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>국토교통부가 발표한 2026년 1분기 건설공사 계약 현황에 따르면, 올 1분기 전체 건설공사 계약액이 전년 동기 대비 23.4% 증가한 것으로 집계됐다. 이는 민간 부문을 중심으로 반도체 생산 공장과 AI 데이터센터 구축을 위한 대규모 투자가 집중된 결과로, 건설 경기 회복의 핵심 동력으로 작용하고 있다.</p>
         <p>반도체 생산시설 투자의 경우, 삼성전자와 SK하이닉스가 첨단 공정 증설 및 신규 팹(Fab·반도체 공장) 건설에 박차를 가하고 있는 것이 직접적인 배경이다. 삼성전자는 평택 캠퍼스 내 추가 라인 증설을 진행 중이며, SK하이닉스는 HBM 전용 생산라인 확대를 위해 이천 및 청주 사업장에 대규모 투자를 집행 중이다.</p>
@@ -416,6 +430,8 @@
         <p>건설업계 전문가들은 반도체·데이터센터 발주가 향후 3~5년간 지속적으로 증가할 것으로 예상한다. AI 기술의 발전과 전 산업의 디지털 전환 가속화로 인해 데이터 처리 인프라 수요는 구조적으로 확대될 수밖에 없으며, 반도체 공급망 자국화 기조 역시 국내 팹 건설을 계속 촉진할 것이라는 분석이다.</p>
         <p>투자 측면에서도 반도체·데이터센터 건설 수혜 기업들에 대한 관심이 높아지고 있다. 관련 건설사는 물론, 클린룸 시스템 전문업체, 전력 인프라 기업, 냉각 솔루션 업체 등 연관 산업 전체에 긍정적인 파급 효과가 기대된다. 증권가에서는 이 분야 수주 잔고가 풍부한 기업들을 중장기 성장주로 분류해 주목하고 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">석화업계의 반도체 소재 전환과 데이터센터 투자 급증이 산업 구조 재편을 이끌고 있다. 미국의 탄탈럼 수입금지로 글로벌 공급망 긴장이 고조되는 가운데, 유가 하락은 서민 경제에 숨통을 틔우는 긍정 신호로 작용 중이다.</div>
     </div>
 

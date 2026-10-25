@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">중국 디스플레이 소재 및 패널 업체들이 잇따라 자본시장 상장에 나서며 연구개발 자금 확보에 박차를 가하고 있다. 한국 디스플레이 소재·장비 업계의 경쟁 압박이 한층 가중될 것으로 우려된다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>중국 디스플레이 소재 및 패널 업체들이 잇따라 자본시장 상장에 도전하며 기술 고도화와 설비 확충을 위한 대규모 자금 조달에 나서고 있다. 전자신문에 따르면 최근 수개월 사이 복수의 중국 디스플레이 관련 기업이 A주 및 홍콩거래소 상장을 추진하거나 완료한 것으로 확인됐다.</p>
         <p>이번 상장 릴레이에 참여한 기업들은 OLED 발광층 소재, 편광판, 봉지 필름 등 핵심 디스플레이 소재를 공급하는 업체들이 다수 포함된 것으로 전해진다. 이들은 조달 자금을 OLED 소재 국산화 및 차세대 디스플레이 패널 생산라인 구축에 투입할 계획이다.</p>
@@ -416,6 +430,8 @@
         <p>정부 차원에서는 소부장 5조원 펀드 조성과 납품단가 연동제 확대 등을 통해 중소 디스플레이 소재 기업의 경쟁력 강화를 지원하고 있다. 그러나 중국의 거대 자본력과 정부 보조금에 맞서기 위한 보다 강력한 정책 수단이 필요하다는 목소리도 나온다.</p>
         <p>중장기적으로 중국 디스플레이 소재 업체들의 상장 자금이 기술 개발에 본격 투입되기 시작하면 한국 업계의 경쟁 환경이 한층 치열해질 것으로 예상된다. 업계 관계자들은 &#x27;지금이 기술 초격차를 확보할 수 있는 마지막 골든타임&#x27;이라고 입을 모으고 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">AI반도체 소재 투자 확대와 미·캐나다 무역전쟁 속 공급망 불안이 공존하는 가운데, 희토류 수급 불균형과 중국 디스플레이 업계의 자본력 강화가 한국 소부장 산업에 복합적 도전을 던지고 있다.</div>
     </div>
 

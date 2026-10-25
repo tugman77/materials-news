@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">와이씨켐이 반도체 공정용 고부가 소재 판매 확대에 힘입어 2분기 매출 271억원, 영업이익 21억원을 기록했다. 전년 대비 매출은 43% 급증하고 영업이익은 적자에서 흑자로 전환하며 연간 흑자 달성에 청신호가 켜졌다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>반도체 공정용 소재 전문기업 와이씨켐이 2026년 2분기 매출 271억원, 영업이익 21억원을 기록했다고 공시했다. 이는 전년 동기 대비 매출 43% 증가, 영업이익은 11억원 손실에서 흑자로 전환한 수치로, 소부장 업계에서 주목받는 실적이다.</p>
         <p>전분기 대비로도 성장세가 뚜렷하다. 매출은 전분기 대비 4% 증가했고 영업이익은 32.8% 늘었다. 상반기 누적 매출은 531억원으로 전년 동기보다 40.2% 급증했으며, 누적 영업이익 37억원을 기록해 지난해 같은 기간 24억원 적자와 극명히 대비된다.</p>
@@ -418,6 +432,8 @@
         <p>소부장 업계에서는 와이씨켐의 실적 반전이 단기 이벤트가 아닌 구조적 수익성 개선의 신호로 해석된다. 납품단가 연동제도 확대와 함께 원가 안정성도 높아지고 있어, 향후 2~3년간 안정적인 이익 창출이 가능한 체력을 갖추고 있다는 평가가 지배적이다.</p>
         <p>시장 전문가들은 와이씨켐을 포함한 국내 반도체 고부가 소재 기업들의 실적 개선이 하반기에도 이어질 가능성이 높다고 본다. AI 인프라 투자 확대, 차세대 패키징 전환, 소부장 국산화 정책이 맞물리며 구조적 성장 국면이 이어질 것이라는 전망이 힘을 얻고 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -444,8 +460,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">구리·희토류 등 핵심 소재 가격이 요동치는 가운데, OLED 설비투자 급증과 반도체 소재 수요 확대로 소부장 밸류체인 전반이 활기를 띠고 있다. 정부의 10조 원 규모 슈퍼 을 육성 계획까지 맞물리며 국내 소재·부품·장비 산업의 구조적 성장 기대감이 높아지는 국면이다.</div>
     </div>
 

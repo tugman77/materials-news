@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">반도체 장비·소재 기업 ASM이 차세대 반도체 스케일링을 위한 플로어블 카본(Flowable Carbon) PECVD 기술 &#x27;XP8 Vertos&#x27;를 세계 최초로 출시했다. 이 기술은 고종횡비 구조의 보이드 없는 갭필을 가능케 해 2나노 이하 공정의 핵심 소재 과제를 해결할 수 있을 것으로 기대된다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>글로벌 반도체 웨이퍼 공정 장비·소재 기업 ASM이 차세대 스케일링을 위한 혁신 소재 기술인 &#x27;XP8 Vertos 플로어블 카본&#x27;을 공식 출시했다. 이 제품은 플라즈마 강화 화학기상증착(PECVD) 방식으로 형성되는 플로어블 카본 박막으로, 업계 최초 상용 제품으로 주목받고 있다.</p>
         <p>플로어블 카본 기술의 핵심은 액체처럼 흘러들어가는 성질 덕분에 수십 나노미터(nm) 이하의 극미세 트렌치나 홀 구조를 보이드(공극) 없이 완벽하게 채울 수 있다는 점이다. 반도체 공정이 미세화될수록 고종횡비(HAR) 구조가 늘어나는데, 기존 CVD 방식으로는 이런 구조를 결함 없이 채우는 데 한계가 있었다.</p>
@@ -416,6 +430,8 @@
         <p>투자업계에서는 플로어블 카본 기술의 상용화가 반도체 소재 공급망 재편의 계기가 될 수 있다고 본다. 기존 산화물 갭필 소재 시장을 일부 대체할 가능성이 있고, 새로운 탄소 소재 공급망이 형성되는 과정에서 선제 진입 기업이 시장 주도권을 가져갈 것이라는 분석이다.</p>
         <p>ASM은 XP8 Vertos 외에도 ALD 기반 고유전율(High-k) 소재, 에피택시 기반 차세대 채널 소재 등 스케일링 한계 극복을 위한 소재 포트폴리오를 지속 확장하고 있다. 반도체 물리적 미세화의 한계가 가시화되는 가운데, 소재 혁신이 공정 기술 발전의 새로운 축으로 자리잡는 추세다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">퀄컴의 TSMC 2나노 전환으로 삼성 파운드리가 선단 공정에서 추가 압박을 받는 가운데, LG디스플레이는 AI 기반 OLED 소재 개발로 비용을 절감하고 ASM은 플로어블 카본 PECVD 신기술로 반도체 미세화 한계 돌파에 나서며 공급망 재편과 기술 혁신이 동시에 가속화되고 있다.</div>
     </div>
 

@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">퀄컴이 차세대 플래그십 AP 스냅드래곤 8 엘리트 6세대 전량을 TSMC 2나노 공정으로 생산한다고 공식 확인했다. 삼성 파운드리는 선단 공정 협력 가능성만 열어둔 채 주요 물량 확보에 실패하며 경쟁 열세가 심화되고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>퀄컴이 2026년 9월 22일(현지시각) 미국 마우이에서 개최한 &#x27;스냅드래곤 서밋 2026&#x27;에서 차세대 최상위 모바일 AP 라인업 전량을 TSMC 2나노 공정으로 생산한다고 공식 발표했다. 2나노는 현재 업계에서 가장 미세한 첨단 반도체 제조 공정으로, 전력 효율과 연산 성능 모두 이전 세대 대비 비약적으로 향상된다.</p>
         <p>크리스 패트릭 퀄컴 수석 부사장 겸 모바일 핸드셋 본부장은 행사에서 &#x27;이날 발표한 2나노 기반 최신 부품은 모두 TSMC에서 제조된다&#x27;고 명확히 밝혔다. 삼성전자 파운드리와의 협력 가능성에 대해서는 &#x27;완전히 배제하지 않는다&#x27;고 언급했으나, 주요 물량 배정 계획은 언급하지 않았다.</p>
@@ -416,6 +430,8 @@
         <p>시장 전문가들은 퀄컴의 이번 결정이 미디어텍, 애플 등 경쟁사들의 TSMC 집중 현상과 맞물려 파운드리 시장의 &#x27;TSMC 독주&#x27; 구조를 고착화시킬 수 있다고 우려한다. 삼성전자가 2027년 양산 목표로 개발 중인 1.4나노(SF1.4) 공정이 판세 변화의 마지막 변수가 될 것이라는 전망이 지배적이다.</p>
         <p>국내 증권업계는 TSMC 공급망에 소재·장비를 납품하는 기업들에 대한 관심이 높아질 것으로 보고 있다. 특히 EUV 공정용 포토레지스트와 CMP 슬러리 분야에서 TSMC 인증을 획득한 국내 기업들이 수혜를 입을 가능성이 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">퀄컴의 TSMC 2나노 전환으로 삼성 파운드리가 선단 공정에서 추가 압박을 받는 가운데, LG디스플레이는 AI 기반 OLED 소재 개발로 비용을 절감하고 ASM은 플로어블 카본 PECVD 신기술로 반도체 미세화 한계 돌파에 나서며 공급망 재편과 기술 혁신이 동시에 가속화되고 있다.</div>
     </div>
 

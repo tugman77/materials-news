@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">중국 정부가 반도체 핵심 냉각·공정 가스인 헬륨의 수출을 전면 금지하고 즉시 시행에 들어갔다. 삼성전자·SK하이닉스 등 국내 팹 업계는 비상 재고 점검에 나섰으며, 카타르·미국산 대체 공급선 확보가 최우선 과제로 떠올랐다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>중국 정부가 반도체 생산 핵심 소재인 헬륨(He)의 수출을 전면 금지하고 즉각 시행에 들어갔다. 공식 발표와 동시에 즉시 효력이 발생한 이번 조치는 미국 주도의 대중국 반도체 장비 수출 규제에 대한 전략적 보복으로 분석된다. 헬륨은 반도체 웨이퍼 냉각, 이온 주입, 리소그래피 공정 등에서 대체가 어려운 불활성 가스로 공급 차질 우려가 즉각 현실화되고 있다.</p>
         <p>헬륨은 초고순도가 요구되는 반도체 제조 공정 전반에 필수적으로 투입된다. 특히 EUV(극자외선) 리소그래피 장비의 렌즈 냉각과 챔버 환경 유지에 헬륨이 사용되며, 일부 공정에서는 질소나 아르곤으로의 대체가 원천적으로 불가능하다는 게 업계 전문가들의 공통된 의견이다. 차세대 양자 컴퓨팅 소자 개발에도 극저온 냉각제로 헬륨이 필수여서 파급 효과는 반도체를 넘어 첨단 기술 전반으로 확산될 전망이다.</p>
@@ -416,6 +430,8 @@
         <p>전문가들은 이번 조치가 단기 협상 카드를 넘어 구조적 공급망 재편을 촉발할 것으로 내다본다. 공급망 분석 전문가는 &#x27;중국이 단기간에 금지를 철회할 가능성은 낮다. 국내 기업들은 헬륨 재활용률 제고와 비중국 공급원 다변화를 동시에 추진해야 한다&#x27;고 강조했다.</p>
         <p>장기적으로는 헬륨 비의존형 공정 기술 개발이 반도체 소재 R&amp;D의 새로운 화두로 부상할 전망이다. 일부 기업들은 전자기 냉각 방식을 적용한 차세대 공정을 연구 중이며, 헬륨 정제·재활용 전문 기업들의 기업 가치도 빠르게 재평가되고 있다. 이번 사태는 소재 공급망 다변화 투자의 필요성을 다시 한번 각인시키는 계기가 됐다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">중국의 헬륨 수출 전면 금지로 반도체 공급망에 비상이 걸린 가운데, AI 반도체 설계는 PPAT 체계로 진화하고 한·미 소부장 협력은 강화되는 등 위기와 기회가 공존한다.</div>
     </div>
 

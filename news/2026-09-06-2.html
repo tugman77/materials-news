@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">KAIST와 삼성전자가 공동으로 반도체 제조 공정에서 배출되는 강력한 온실가스를 99% 이상 분해하는 고내구성 촉매를 개발했다. 엔트로피 안정화 원리를 활용해 기존 촉매의 수명을 수 배 이상 연장한 점이 핵심이다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>한국과학기술원(KAIST)과 삼성전자가 공동 연구를 통해 반도체 제조 공정에서 배출되는 강력한 온실가스를 효율적으로 분해하는 신규 촉매를 개발했다. 이번에 개발된 촉매는 기존 단일 금속 기반 촉매의 고질적 문제인 고온 열화(劣化)를 극복한 점에서 업계의 주목을 받고 있으며, 상용화 가능성이 높다는 평가를 받는다.</p>
         <p>반도체 제조 현장에서는 식각(에칭) 및 화학기상증착(CVD) 공정에서 이산화탄소보다 온실효과가 수천 배에 달하는 과불화화합물(PFC) 계열 가스가 대량 배출된다. 특히 NF₃(삼불화질소)와 CF₄(사불화탄소)는 대기 중 잔류 기간이 수천 년에 달해 반도체 산업의 주요 탄소 배출원으로 오랫동안 지목돼 왔으며, 이를 처리할 실용적 기술이 절실한 상황이었다.</p>
@@ -416,6 +430,8 @@
         <p>전문가들은 촉매 기술 고도화가 반도체 소재 R&amp;D의 새로운 영역을 열었다고 평가한다. 산학연 공동 연구 관계자는 &#x27;온실가스 처리 촉매는 환경 성과와 비용 절감이라는 두 마리 토끼를 잡을 수 있는 기술이다. 엔트로피 안정화 개념의 확장 적용 가능성을 계속 탐구할 계획&#x27;이라고 밝혔다.</p>
         <p>장기적으로 이 기술이 반도체 공장 운영 비용 구조를 바꿀 수 있다는 시각도 있다. 현재 온실가스 처리에 투입되는 운영 비용과 탄소배출권 구매 비용을 고성능 촉매가 대폭 줄여준다면 첨단 팹의 경쟁력 향상으로도 이어질 수 있다. 국내 소재 기업들에게는 글로벌 촉매 시장 진출의 발판이 될 것으로 기대된다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">중국의 헬륨 수출 전면 금지로 반도체 공급망에 비상이 걸린 가운데, AI 반도체 설계는 PPAT 체계로 진화하고 한·미 소부장 협력은 강화되는 등 위기와 기회가 공존한다.</div>
     </div>
 

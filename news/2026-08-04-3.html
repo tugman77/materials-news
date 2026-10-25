@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">유럽을 중심으로 초경량이면서 재활용 가능한 복합소재 패널 개발 프로젝트가 본격화되고 있다. 기존 금속재·탄소섬유 복합재의 고비용·저재활용성 한계를 극복해 운송 산업의 경량화와 탄소 중립 목표를 동시에 겨냥한 차세대 소재로 주목받는다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>운송 산업에서 차량 경량화와 탄소 배출 저감이 최우선 과제로 부상한 가운데, 유럽을 중심으로 초경량·재활용 가능한 복합소재 패널 개발 프로젝트가 본격화되고 있다. 소재 전문 매체 AZoM에 따르면, 복수의 유럽 연구기관과 산업체가 참여한 이 프로젝트는 기존 금속 구조재 대비 중량을 30% 이상 줄이면서 폐기 시 원료 회수율을 획기적으로 높이는 것을 핵심 목표로 삼는다.</p>
         <p>해당 패널은 열가소성 수지(thermoplastic resin)를 매트릭스로 유리섬유 또는 천연 섬유를 강화재로 결합한 구조다. 가열 후 재성형이 가능한 열가소성 수지 기반이어서 기존 열경화성 탄소섬유 복합재(CFRP)보다 재활용이 수월하다. 이 때문에 &#x27;리사이클러블 컴포짓(recyclable composite)&#x27;으로 불리며 순환경제 측면에서 높은 평가를 받는다.</p>
@@ -415,6 +429,8 @@
         <p>글로벌 경량 복합소재 시장은 2030년까지 연평균 10% 이상 성장할 것으로 예측된다. 재활용 복합소재 패널이 양산 단계에 진입하면 비용 경쟁력도 기존 금속재 수준으로 낮아질 가능성이 있으며, 자동차에서 항공·철도·선박 등 운송 전 분야로 적용 범위가 확대될 전망이다. 탄소 중립 규제 강화와 맞물려 글로벌 복합소재 산업의 패러다임 전환을 이끌 핵심 기술로 평가된다.</p>
         <p>국내 관점에서 복합소재 분야 기술 경쟁력 확보는 수출 산업화의 전제 조건이 된다. 유럽·미국 완성차 고객사들이 요구하는 재활용 소재 기준을 충족하지 못하면 글로벌 공급망 편입 자체가 어려워지기 때문이다. 산업부 주도의 소재 기술 개발 과제에 재활용 복합소재 분야를 우선 포함시켜야 한다는 업계 목소리가 높아지고 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -441,8 +457,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">LB세미콘의 퀄컴 AI·차량용 후공정 진입, OCI의 웨이퍼 재생사업 등 국내 업계가 고부가 틈새 공략에 나섰지만, 소부장 자금난과 희토류 비용 상승이 하반기 경쟁력을 압박하고 있다.</div>
     </div>
 

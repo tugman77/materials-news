@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">국내 주요 반도체 소재 기업 5곳이 2026년 2분기 영업이익을 일제히 늘리며 반도체 경기 호황의 낙수 효과가 소재 산업 전반으로 확산되고 있음을 확인했다. AI 수요 증가에 따른 첨단 공정 소재 발주 급증이 실적 개선의 핵심 요인으로 분석된다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>2026년 2분기 국내 반도체 소재 기업들의 실적이 일제히 개선되며 반도체 호황의 온기가 소부장(소재·부품·장비) 생태계 전반으로 번지고 있다는 신호가 포착됐다. 조선일보가 집계한 국내 주요 5개 소재사의 2분기 영업이익은 전년 동기 대비 평균 40~130% 증가한 것으로 나타났다.</p>
         <p>실적 개선을 이끈 핵심 요인은 인공지능(AI) 반도체 수요 증가에 따른 첨단 공정 소재 발주 급증이다. 2nm급 이하 초미세 공정에 쓰이는 고순도 식각액, 포토레지스트, 특수 세정제 등의 단가와 물량이 동시에 상승하며 매출 규모 자체가 커진 것이 특징이다.</p>
@@ -416,6 +430,8 @@
         <p>국내 증권가는 소재 5개사의 하반기 실적도 상승세를 유지할 것으로 전망하고 있다. 특히 2nm 공정 양산이 본격화되는 2026년 하반기~2027년 초에는 고부가 소재 수요가 추가로 확대될 것으로 예측되며, 관련 종목에 대한 관심이 높아지고 있다.</p>
         <p>소재 업계 전문가들은 &#x27;지금이 한국 소재 기업이 글로벌 시장에서 독자적인 기술력으로 도약할 수 있는 마지막 기회&#x27;라고 강조한다. 중국산 소재에 대한 의존도를 낮추면서 동시에 기술 수준을 끌어올리는 &#x27;투 트랙&#x27; 전략이 필요하다는 지적이다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">중국 희토류 유예 만료 임박으로 공급망 불확실성이 고조되는 가운데, 국내 반도체 소재 기업들은 2Q 실적 호조로 호황 수혜를 확인했다. OLED·메모리 분야에서도 차세대 기술 경쟁과 IPO 행보가 동시에 가속화되고 있다.</div>
     </div>
 

@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">중국이 희토류 원소 이트륨에 대한 수출 통제를 전격 시행하며 미국·일본의 첨단산업 공급망을 압박하고 있다. 헬륨에 이어 연속되는 수출통제 조치로 글로벌 소재 공급망 재편이 가속화될 전망이다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>중국이 반도체·디스플레이·레이저 등 첨단산업의 핵심 소재인 이트륨(Yttrium)에 대한 수출 통제 조치를 시행했다. 지난 9월 6일 헬륨 수출 금지에 이어 불과 열흘 만에 또 다른 희토류 원소를 겨냥한 규제가 등장하면서, 중국의 자원 무기화 전략이 체계적으로 전개되고 있다는 분석이 나온다.</p>
         <p>이트륨은 형광체·레이저·레이더·초전도체 등에 광범위하게 사용되는 원소로, 반도체 공정 장비의 내플라즈마 코팅 소재로도 쓰인다. 특히 반도체 식각(에칭) 챔버 내부를 보호하는 산화이트륨(Y₂O₃) 세라믹 코팅은 ASML·램리서치·어플라이드머티어리얼즈 등 핵심 장비에 필수적으로 적용된다.</p>
@@ -417,6 +431,8 @@
         <p>전문가들은 이트륨 수출 통제가 단순한 경제적 보복 수단을 넘어 미국 주도의 반도체·방위산업 공급망 전체를 교란하려는 전략적 포석이라고 분석한다. 미 싱크탱크 CIMSEC는 &#x27;중국의 희토류 레버리지가 현실화되기 전에 미국과 동맹국이 정제·재활용 역량을 긴급 확충해야 한다&#x27;고 경고했다.</p>
         <p>소재업계 한 전문가는 &#x27;지금 당장 필요한 것은 희토류 재활용(리사이클링) 기술 투자와 해외 광산 지분 확보&#x27;라며 &#x27;정부의 전략비축물자 확대와 함께 민간 기업들이 원료 다변화에 선제적으로 나서야 할 시점&#x27;이라고 진단했다. 국내 소재·부품 기업들의 공급망 리스크 점검이 시급한 과제로 떠올랐다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -443,8 +459,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">중국의 희토류 수출통제와 일본 소재기업 생산중단이 겹치며 반도체·첨단산업 공급망에 복합 위기가 고조되고 있다. 한편 국내외 기업들은 신규 투자와 자원외교로 공급망 다변화에 속도를 내고 있다.</div>
     </div>
 

@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">중국이 지난 7월 미국에 대한 이트륨(Yttrium) 수출량을 큰 폭으로 늘린 것으로 나타났다. 미중 정상회담 개최 가능성이 거론되는 가운데, 핵심광물 수출 조정이 외교적 레버리지로 활용되고 있다는 분석이 제기된다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>중국이 올해 7월 미국에 수출한 이트륨 물량이 전월 대비 눈에 띄게 증가한 것으로 집계됐다. 이트륨은 레이저, 특수 합금, 연료전지 전극 소재 등에 활용되는 희귀금속으로, 중국이 전 세계 생산량의 60% 이상을 차지한다.</p>
         <p>업계 관계자들은 이번 수출량 증가가 단순한 시장 수요 반응이 아닐 수 있다고 본다. 미중 간 핵심광물을 둘러싼 갈등이 계속되는 와중에 정상회담 등 외교적 이벤트를 앞두고 전략적으로 수출 규모를 조정한 것 아니냐는 시각이다.</p>
@@ -415,6 +429,8 @@
         <p>국내 희귀금속 수입 기업들은 모니터링을 강화하는 한편, 일부는 일본·캐나다 등지의 대체 공급선 발굴에 나서고 있다. 이트륨 정제 기술을 보유한 국내 기업도 증산 여력 확보 차원에서 설비 검토에 들어갔다는 전언이다.</p>
         <p>미중 핵심광물 갈등은 이트륨 외에도 다양한 원소로 전선이 확대되는 추세다. 향후 미중 정상회담이나 무역 협상 결과에 따라 이트륨을 포함한 희귀금속 수출 정책이 다시 바뀔 가능성이 있어, 시장 참여자들은 외교 일정을 주시하고 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -441,8 +457,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">AI 반도체 수요 확대로 소재·장비 공급망 재편이 가속화되고 있다. 한국 대기업과 글로벌 기업들이 세라믹·포토레지스트 등 핵심 소재 확보에 총력을 기울이는 가운데, 미중 자원 외교와 정부 보조금 경쟁도 심화되고 있다.</div>
     </div>
 

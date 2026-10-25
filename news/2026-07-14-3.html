@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">한국 기술로 수출된 요르단 연구용 원자로가 반도체 소재로 활용 가능한 핵심 희귀 동위원소 생산에 착수한다. 원자력 기술이 희귀 소재 공급망 다변화의 새로운 돌파구로 부상하고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>한국원자력연구원(KAERI)이 요르단에 수출한 연구용 원자로 &#x27;JRTR(Jordan Research and Training Reactor)&#x27;가 반도체 및 첨단 소재 산업에 활용 가능한 희귀 동위원소(방사성 동위원소) 생산 기능을 본격화하는 방안을 추진 중이다. 이 원자로는 한국이 독자 기술로 설계·건설해 2016년 요르단에 이전한 5MW급 연구로로, 의료용 방사성 동위원소 생산에 주로 활용돼 왔다.</p>
         <p>이번에 새롭게 추진되는 기능은 반도체 공정에서 불순물 도핑(doping) 재료로 활용되는 특수 동위원소 생산이다. 동위원소 도핑 기술은 실리콘 웨이퍼의 전기적 특성을 미세하게 조절하는 데 사용되며, 이른바 &#x27;NTD(중성자 변환 도핑, Neutron Transmutation Doping)&#x27; 공정이 핵심이다. NTD 실리콘은 전력 반도체 소자의 성능과 균일성을 대폭 향상시켜 수요가 빠르게 늘고 있다.</p>
@@ -416,6 +430,8 @@
         <p>전문가들은 이번 사례가 원자력 기술과 첨단 소재 산업의 융복합 가능성을 보여주는 선례라고 평가한다. 한 소재 전문 연구원은 &#x27;핵기술을 활용한 소재 생산은 기존 화학 공정으로는 구현하기 어려운 고균일성·고순도 제품을 만들 수 있다는 점에서 프리미엄 시장을 겨냥한 차별화 전략이 될 수 있다&#x27;고 말했다.</p>
         <p>향후 시장 전망과 관련해 NTD 실리콘 외에도 게르마늄, 셀레늄 등 다양한 희귀 동위원소의 반도체 활용 가능성이 연구되고 있어, 연구용 원자로의 소재 산업 활용 범위가 더욱 넓어질 것이라는 기대도 나오고 있다. 공급망 다변화가 글로벌 과제로 부상한 시대에 원자력 기반 소재 생산 기술은 전략적 가치를 빠르게 높여가고 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">반도체 소재 공급망이 양산 전환과 메모리 호황으로 활기를 띠는 가운데, 미국의 대이란 봉쇄로 국제유가가 급등하며 산업재 전반에 비용 압박이 가중되고 있다. 국내 핵심 프로젝트는 노사 갈등이라는 내부 변수를 안고 험로를 예고한다.</div>
     </div>
 

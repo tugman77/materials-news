@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">KAIST 연구팀이 150도 저온에서 반도체 웨이퍼를 결정학적으로 정렬해 쌓는 원천기술을 세계 최초로 구현했다. 기존 고온 공정 대비 에너지 소비를 최대 60% 줄이면서도 동등한 소자 성능을 확보해 AI 반도체 소재·장비 업계에 광범위한 파급효과가 기대된다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>KAIST 연구팀이 반도체 적층 기술의 패러다임을 바꿀 원천기술을 개발해 학계와 산업계의 이목을 집중시키고 있다. 기존 반도체 웨이퍼 적층 공정은 400도 이상의 고온 환경이 필수적이었으나, 이번 연구는 150도의 저온에서도 결정학적 정렬, 즉 &#x27;결 맞춤&#x27;을 유지하며 웨이퍼를 쌓는 기술을 세계 최초로 구현하는 데 성공했다.</p>
         <p>이 기술의 핵심은 반도체 기판 표면의 원자 배열을 정밀하게 제어하는 저온 분자빔 에피택시 공법을 개선한 데 있다. 기존에는 높은 온도 없이는 원자들이 기판 위에서 충분한 에너지를 얻지 못해 정렬되지 않는 문제가 있었는데, 연구팀은 특수 촉매층을 활용해 이 에너지 장벽을 낮추는 방식으로 난제를 해결했다.</p>
@@ -416,6 +430,8 @@
         <p>연구팀은 특허 출원을 완료하고 국내외 반도체 기업들과 기술 이전 협의를 진행 중이다. 업계 전문가들은 빠르면 2028년 내 상용 생산라인 적용이 가능할 것으로 전망하며, 저온 적층 공정 확산 시 반도체 제조 비용이 추가로 10~15% 절감될 수 있다고 분석한다.</p>
         <p>이번 기술 발표 이후 저온 공정용 반도체 접착 소재, 에칭 케미컬, 봉지 소재 분야에서 독자 기술을 보유한 기업들이 기술이전 수혜 후보로 거론되고 있다. 투자업계에서는 적층 반도체 소재 분야 선도 기업들에 대한 관심을 높일 것을 권고하는 분석 보고서가 잇따르고 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">KAIST 저온 적층 원천기술 세계 최초 구현으로 반도체 공정 혁신이 가속화되는 가운데, 외국인 13조 소부장 집중 매수와 SFC 코스피 상장 추진 등 국내 소재 산업 전반에 자본 유입이 강화되고 있다. 구미의 그래핀·전자유리 AI 허브 전략까지 더해져 한국 첨단소재 공급망이 다층적으로 확장되는 국면이다.</div>
     </div>
 

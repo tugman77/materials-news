@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">미 국방부가 중국의 희토류 수출통제를 무력화하기 위해 1억5000만 달러(약 2000억원)를 화학 기반 대체 기술 개발에 투입한다. 중국이 유럽 14개사에 희토류 수출을 차단한 직후 나온 대응으로, 글로벌 핵심광물 공급망 재편이 가속화되고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>미국 국방부(Pentagon)가 중국의 희토류 수출통제에 정면 대응하는 대규모 투자를 발표했다. 1억5000만 달러(약 2000억원) 규모의 이번 투자는 화학적 합성 방식을 통해 희토류 없이도 동일한 성능을 낼 수 있는 대체 소재 개발을 목표로 한다. 이는 중국이 자국산 희토류를 무기화하는 흐름에 맞서 근본적인 기술 독립을 추구하는 전략으로 풀이된다.</p>
         <p>이번 투자는 중국이 유럽 14개 기업에 희토류 수출을 전면 차단한 직후 나왔다. 중국은 네오디뮴·디스프로슘 등 전기차 모터와 방산 장비에 필수적인 중희토류 소재를 무기화해 서방 공급망을 압박하고 있다. 중국은 전 세계 희토류 생산의 약 60%, 가공·정제의 85% 이상을 장악하고 있어 이 통제의 파장이 광범위하다.</p>
@@ -416,6 +430,8 @@
         <p>전문가들은 이번 흐름이 희토류 의존도를 낮추는 &#x27;소재 탈탄소화&#x27;와 맞닿아 있다고 본다. 비희토류 고성능 자성 소재, 전도성 고분자, 첨단 세라믹 등 차세대 기능성 소재 분야에서 새로운 시장이 열릴 수 있다. 이는 국내 소재 스타트업과 연구기관에도 새로운 기회가 될 수 있다.</p>
         <p>시장 전망 측면에서 희토류 대체 소재 시장은 2030년까지 연평균 15% 이상 성장할 것으로 예측된다. 방산, 전기차, 풍력, 로보틱스 등 수요 산업의 동반 성장이 이 시장을 견인할 전망이다. 투자자 입장에서는 비희토류 자성 소재, 고성능 합금 개발 역량을 보유한 기업에 주목할 필요가 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">미·중 공급망 갈등이 반도체를 넘어 희토류·소재·드론으로 전선이 확대되는 가운데, 미 국방부의 대규모 투자와 한국 기업들의 선제적 설비 확충이 맞물려 글로벌 핵심소재 패권 경쟁이 본격화되고 있다.</div>
     </div>
 

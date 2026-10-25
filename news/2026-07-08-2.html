@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">인듐·갈륨 등 광통신·반도체용 희귀금속에 대한 미국과 중국의 전략 비축 및 수출 통제 경쟁이 격화되고 있다. 한국을 포함한 비(非)생산국들은 안정적 조달처 확보에 비상이 걸렸다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>인듐(In)과 갈륨(Ga)이 글로벌 희귀금속 패권 경쟁의 최전선으로 부상하고 있다. 두 금속은 광반도체·광통신 소자, 태양전지, 반도체 전공정 소재 등에 광범위하게 사용되는 첨단 소재로, 공급의 절대다수를 중국에 의존하고 있어 지정학적 위험이 극도로 높다.</p>
         <p>중국은 2023년 8월 갈륨·게르마늄에 대한 수출 허가제를 전격 시행한 데 이어, 2024년부터는 인듐 관련 수출 심사도 강화하고 있다. 중국이 갈륨 세계 생산의 약 80%, 인듐의 약 55~60%를 차지하고 있어 수출 제한 조치가 글로벌 공급망에 직접적 충격을 주고 있다.</p>
@@ -417,6 +431,8 @@
         <p>시장조사기관 IDTechEx는 2030년 갈륨 수요가 현재의 2.5배 이상으로 늘어날 것으로 예측한다. 갈륨나이트라이드(GaN) 기반 전력 반도체가 전기차·데이터센터 전력 변환에 폭넓게 채택되면서 수요가 급증하고 있기 때문이다.</p>
         <p>전문가들은 갈륨·인듐 공급망 불안이 단기 가격 변동을 넘어 첨단산업 전반의 구조적 위협 요인이 될 수 있다고 경고한다. 국내 기업과 정부가 선제적으로 조달 다변화, 재활용 기술 투자, 동맹국 협력을 병행해야 한다는 목소리가 커지고 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -443,8 +459,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">인듐·갈륨 등 핵심 광물을 둘러싼 미·중 패권 경쟁이 반도체·광통신 공급망 전반을 흔들고 있다. 국내 석유화학 기업들은 반도체 소재 포트폴리오 확장으로 돌파구를 모색 중이나, 전략 소재 자립 기반은 여전히 취약하다. 美·EU 핵심광물 협정 가속화 속 한국의 공급망 편입 전략이 시급하다.</div>
     </div>
 

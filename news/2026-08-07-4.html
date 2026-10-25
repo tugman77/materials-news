@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">독일 머크가 실리콘 포토닉스 분야를 신성장 동력으로 선언하고 관련 소재 개발과 공급 체계 구축에 나섰다. AI 데이터센터의 광인터커넥트 수요 급증이 포토닉스 소재 시장을 키우는 핵심 동인으로 작용하고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>독일 화학·소재 기업 머크(Merck KGaA)가 실리콘 포토닉스(Silicon Photonics) 분야를 차세대 핵심 사업으로 선정하고, 관련 소재 개발 및 공급 체계 구축에 본격 착수했다고 전자신문이 보도했다. 머크는 반도체 소재, 디스플레이 소재, 생명과학 소재를 3대 축으로 하는 글로벌 특수소재 기업으로, 연간 매출이 약 220억 유로에 달한다.</p>
         <p>실리콘 포토닉스는 빛(광자)을 이용해 데이터를 전송하는 기술로, 기존 전기 신호 방식 대비 전력 소비와 발열을 대폭 줄일 수 있다. AI 데이터센터에서 GPU 간 고속 데이터 전송이 폭발적으로 늘면서, 광인터커넥트(Optical Interconnect) 수요가 급격히 증가하고 있다.</p>
@@ -416,6 +430,8 @@
         <p>국내 반도체 장비 기업 관점에서도 변화가 감지된다. 포토닉스 칩 제조에는 기존 전기 반도체와 다른 증착·식각 공정이 필요해, 관련 장비 수요도 늘어날 전망이다. 국내 원익IPS, 피에스케이 등이 포토닉스 공정 장비 개발을 검토 중인 것으로 알려졌다.</p>
         <p>장기 전망을 보면, AI 가속기의 발열 문제가 심화될수록 광인터커넥트 채택이 필수적이 된다. 반도체 다이제스트에 따르면 AI 가속기 패키지의 발열량은 이미 700W를 넘어섰으며 1,000W를 향해 가고 있어, 전력 효율적인 광통신 소재 수요는 구조적으로 증가할 수밖에 없다. 포토닉스 소재 시장에서 누가 선제적 입지를 구축하느냐가 향후 반도체 소재 산업의 새로운 경쟁 축이 될 것이다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">AI·방산 수요를 중심으로 반도체 소재·핵심광물·배터리 공급망 재편이 동시다발적으로 진행 중이다. 미국의 공급망 내재화 압박과 중국의 소재 확장이 맞부딪히며 글로벌 소재 공급망 경쟁이 가속화되고 있다.</div>
     </div>
 

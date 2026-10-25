@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">두산그룹이 AI 반도체 수요 급증에 대응해 반도체 소재 사업에 1조 원 규모의 대규모 투자를 결정했다. 국내 소부장 생태계 강화와 함께 두산의 신성장 동력 확보 전략으로 주목받고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>두산그룹이 인공지능(AI) 반도체 붐을 발판 삼아 반도체 소재 분야에 총 1조 원 규모의 투자를 단행하기로 확정했다. 이번 결정은 글로벌 AI 인프라 수요가 폭발적으로 증가하는 가운데, 반도체 소재 공급망 내재화를 가속화하려는 전략적 판단으로 해석된다.</p>
         <p>두산은 반도체 공정에 필수적인 화학 소재와 특수 소재 생산 역량을 확충하는 데 투자를 집중할 방침이다. 특히 첨단 패키징과 고집적 칩 제조에 필요한 고순도 소재 개발에 역점을 둘 것으로 알려졌다. 업계에서는 이번 투자가 두산의 사업 포트폴리오 재편을 가속화하는 전환점이 될 것으로 보고 있다.</p>
@@ -416,6 +430,8 @@
         <p>투자업계는 두산의 이번 결정이 장기적으로 그룹 밸류에이션 제고에 기여할 것으로 본다. 한 증권사 애널리스트는 &#x27;반도체 소재는 진입장벽이 높고 마진이 안정적인 사업&#x27;이라며 &#x27;두산이 기술력을 확보하는 데 성공한다면 중장기 성장 모멘텀이 강화될 것&#x27;이라고 평가했다.</p>
         <p>향후 두산의 반도체 소재 투자는 국내 소부장 산업 전반의 경쟁력 강화에 긍정적인 신호로 작용할 전망이다. 대기업의 적극적인 참여가 중소·중견 소재 기업들과의 협력을 촉진하고, 국내 반도체 공급망의 자립도를 높이는 계기가 될 것으로 기대된다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">AI 반도체 수요 급증이 DRAM 공급난과 소재 투자 경쟁을 동시에 촉발하고 있으며, 음극재 중국 의존도 심화로 K배터리 공급망 취약성이 위험 수위에 달했다. 글로벌 기업들의 광통신·소부장 협력이 가속화되는 가운데 국내 기업들의 전략적 대응이 시급하다.</div>
     </div>
 

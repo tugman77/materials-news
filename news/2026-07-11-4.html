@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">중국이 헬륨에 이어 희귀가스·핵심 광물 수출 통제를 잇따라 강화하면서 글로벌 소재 공급망이 &#x27;신냉전&#x27; 구도로 재편되고 있다. 미국·EU·한국 등 주요국은 공급망 다변화와 핵심 소재 자립화에 박차를 가하고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>중국이 헬륨 수출 금지를 전격 발표하면서, 글로벌 소재 공급망 재편 흐름이 한층 가속화되고 있다. 앞서 중국은 갈륨·게르마늄(2023년), 흑연(2023년), 안티모니(2024년)에 이어 희토류 전반에 대한 수출 허가 요건을 강화해왔으며, 이번 헬륨 조치는 통제 대상을 광물에서 가스류로 확대한 새로운 국면으로 평가받는다.</p>
         <p>이러한 흐름의 배경에는 미·중 기술 패권 경쟁의 심화가 자리한다. 미국의 반도체·AI 수출 통제에 맞서 중국이 반도체 제조 공정에 필수적인 소재·가스류를 역(逆)으로 통제하는 &#x27;소재 보복&#x27; 전략을 구사하고 있다는 분석이 지배적이다. 양국의 상호 공급망 압박은 사실상 &#x27;소재 냉전&#x27;으로 불릴 만한 수준으로 격화됐다.</p>
@@ -417,6 +431,8 @@
         <p>향후 소재 공급망 재편의 수혜국은 풍부한 자원과 안정적인 정치 환경을 함께 갖춘 국가들이 될 것으로 보인다. 투자자들 사이에서는 호주·캐나다·칠레·카자흐스탄 등 자원 부국의 광물·소재 관련 기업들에 대한 관심이 높아지고 있으며, 핵심 소재 재활용 및 대체 소재 기술을 보유한 기업들의 기업가치도 재평가받는 흐름이 이어지고 있다.</p>
         <p>결론적으로 중국의 자원 무기화 전략은 단기적 충격을 넘어 글로벌 소재 공급망의 구조적 재편을 촉진하는 촉매제로 작용하고 있다. 한국은 이 위기를 소재 자립화와 공급망 다변화의 가속 기회로 삼아, 정부·기업·연구기관의 긴밀한 협력 체계 아래 선제적으로 대응해 나가는 것이 절실하다는 목소리가 높아지고 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -443,8 +459,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">중국의 헬륨·희귀가스 수출 금지로 반도체 공급망에 비상이 걸렸다. 자원 무기화가 가속되며 글로벌 소재 공급망이 신냉전 구도로 재편되는 가운데, 국내는 지역 클러스터 조성과 전문인력 양성으로 정면 돌파에 나서고 있다.</div>
     </div>
 

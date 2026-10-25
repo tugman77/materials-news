@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">팹리스 기업 프라임마스가 CXL 기반 풀드 메모리 솔루션 &#x27;JBOM&#x27;으로 내년 말까지 2억 달러(약 2800억 원) 매출을 목표로 제시했다. 서버 한 대에서 100TB 이상의 메모리를 지원하는 기술로, AI 인프라의 메모리 병목 문제를 해소하겠다는 전략이다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>반도체 설계 전문(팹리스) 기업 프라임마스가 AI 서버 시장을 겨냥한 CXL(컴퓨트 익스프레스 링크) 기반 풀드 메모리 솔루션으로 2027년 말까지 매출 2억 달러(약 2800억 원) 달성에 도전한다고 밝혔다. 박일 프라임마스 대표는 20일 경기 성남 사옥 기자간담회에서 이 같은 목표를 공식화했다.</p>
         <p>CXL은 중앙처리장치(CPU), 그래픽처리장치(GPU) 등 가속기와 메모리 사이에서 데이터를 고속으로 주고받을 수 있는 차세대 인터페이스 표준이다. 기존 DDR 방식보다 메모리 대역폭을 획기적으로 늘릴 수 있어 대용량 데이터를 처리해야 하는 AI 학습·추론 서버에 최적화된 기술로 평가받는다.</p>
@@ -415,6 +429,8 @@
         <p>투자자들의 관심도 높아지고 있다. 프라임마스는 지난 6월 시리즈C 투자 유치를 마무리했으며, 누적 투자 유치액은 800억 원을 넘어섰다. 국내 소부장 ETF의 나스닥 입성 추진과 맞물려 CXL 관련 팹리스 기업들에 대한 해외 기관 투자자들의 관심도 커지고 있다.</p>
         <p>업계에서는 CXL이 AI 반도체 시대의 핵심 인터페이스 표준으로 자리잡을 경우, 관련 컨트롤러 칩 설계·소재·패키징 분야 전반에 걸쳐 대규모 공급망이 새롭게 형성될 것으로 본다. 프라임마스의 매출 목표 달성 여부는 국내 CXL 생태계의 글로벌 경쟁력을 가늠하는 척도가 될 전망이다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -441,8 +457,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">AI 반도체 수요 급증으로 기판 소재 업체는 풀가동 중이나, 디스플레이·배터리 소재는 수요 둔화로 양극화가 심화되고 있다. 희토류 시장에서도 중희토류 내 종목별 차별화가 뚜렷해지는 등 소재 산업 전반의 수요 분화가 가속화되고 있다.</div>
     </div>
 

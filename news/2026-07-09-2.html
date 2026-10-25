@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">삼양사가 반도체 제조에 필수적인 초순수(Ultra Pure Water) 핵심 소재인 이온교환수지 사업을 강화하며 매출 1,200억 원 달성을 목표로 내세웠다. 국산화율이 낮았던 이 분야에서 삼양사의 도전이 주목받고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>삼양사가 반도체 공정에서 사용되는 초순수(UPW·Ultra Pure Water) 생산의 핵심 소재인 이온교환수지 사업을 본격 확대하며 매출 1,200억 원 달성이라는 야심 찬 목표를 공개했다. 이온교환수지는 물속의 이온 성분을 제거해 반도체 세정에 적합한 초고순도 물을 만드는 데 필수적인 기능성 소재다.</p>
         <p>초순수는 반도체 웨이퍼 세정, 포토리소그래피 공정, 화학적 기계적 연마(CMP) 등 반도체 제조의 핵심 공정 전반에 걸쳐 대량으로 소비된다. 1리터 기준으로 일반 정제수보다 수십 배 높은 순도를 요구하며, 특히 3나노 이하 초미세 공정에서는 이온 농도 1ppb(10억분의 1) 이하 수준의 극초순수가 필요하다.</p>
@@ -417,6 +431,8 @@
         <p>삼양사가 이온교환수지 시장에서 성공을 거둘 경우 국내 소재 산업에 미치는 파급 효과도 클 것으로 예상된다. 오랫동안 일본 의존도가 높았던 반도체 소재 분야에서 국산화 성공 사례가 늘어날수록 국내 소재 기업들의 기술 자립도가 높아지고 공급망 안보도 강화되는 선순환 구조가 만들어질 수 있다.</p>
         <p>향후 삼양사는 이온교환수지에 이어 반도체 공정용 특수 케미컬 소재로도 사업 영역을 확장할 계획이다. 초순수 소재 시장에서 쌓은 기술력과 고객 신뢰를 바탕으로 반도체 소재 전문 기업으로서의 입지를 강화하겠다는 중장기 로드맵을 구체화하고 있는 것으로 알려졌다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -443,8 +459,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">핵심광물 공급망 다변화와 AI 기반 소재 혁신이 동시에 가속화되고 있다. 한·몽골 CEPA 타결, 두산의 태국 반도체 소재 거점 착공 등 탈중국 공급망 재편이 본격화되며, 국내외 기업들의 첨단소재 투자도 빠르게 확대되는 흐름이다.</div>
     </div>
 

@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">중국 국경절 연휴 이후 희토류 시장이 거래 회복을 기다리는 관망 국면에 진입했다. 프라세오디뮴·네오디뮴(Pr-Nd) 산화물은 상승세를 유지한 반면, 중희토류 가격은 전반적으로 부진한 흐름을 보이며 품목별 차별화가 뚜렷해지고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>상하이금속시장(SMM) 집계에 따르면, 중국 국경절 연휴(10월 1~7일) 이후 첫 거래일인 10월 8일 희토류 시장은 전반적으로 안정세를 유지하면서도 본격적인 거래량 회복은 아직 이루어지지 않은 상태다. 연휴 직전 형성된 가격 수준에서 큰 변동 없이 시장이 재개됐다.</p>
         <p>경희토류 중에서는 프라세오디뮴·네오디뮴(Pr-Nd) 산화물이 상승세를 주도했다. Pr-Nd 산화물 가격은 최근 1개월간 약 8~12% 상승하며 전기차·풍력발전용 영구자석 수요 증가를 반영하고 있다. 현재 Pr-Nd 산화물 시세는 톤당 약 47만~48만 위안(약 8,500만 원) 수준에서 형성됐다.</p>
@@ -416,6 +430,8 @@
         <p>희토류 투자 측면에서는 Pr-Nd 상승 수혜를 직접 받는 영구자석 소재 업체와 모터 제조사의 실적을 모니터링할 필요가 있다. 국내에서는 성림첨단산업, 이엔플러스 등 희토류 영구자석 관련 기업들이 주목받고 있으며, 비중국 공급망 다변화 수혜주로도 부각되고 있다.</p>
         <p>향후 시장은 중국의 쿼터 정책, 전기차 수요 강도, 비중국 공급망 확장 속도라는 세 가지 변수가 복합적으로 작용할 전망이다. 단기적으로는 Pr-Nd 강세, 중희토류 약세의 분화 국면이 이어질 것으로 예상되며, 이 같은 품목 간 차별화는 소재 기업들의 사업 전략 선택에도 영향을 미칠 것이다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">미국 정부의 SiC 반도체 지원과 AI 투자 확대로 전력·테스트 부품 공급망이 활기를 띠는 가운데, 중국 연휴 후 희토류 시장은 회복세를 대기 중이다. 소재·부품·장비 전반에 걸쳐 투자 사이클이 본격화되고 있다.</div>
     </div>
 

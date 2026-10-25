@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">포스코홀딩스가 2분기 영업이익 8,190억 원으로 전년 대비 34.9% 증가하며 어닝서프라이즈를 기록했다. 철강에 이어 이차전지 소재, 에너지 자원 등 전 사업 부문이 고르게 개선됐으며, 아르헨티나 염수리튬 1공장도 첫 분기 흑자 전환에 성공했다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>포스코홀딩스가 2026년 2분기 연결기준 매출 19조 2,590억 원, 영업이익 8,190억 원, 순이익 7,610억 원을 달성했다고 공시했다. 영업이익은 전년 동기 대비 34.9% 증가한 수치로 시장 예상치를 크게 상회하며 &#x27;어닝 서프라이즈(깜짝 호실적)&#x27;를 연출했다. 철강, 이차전지 소재, 에너지 등 전 부문이 전분기 대비 실적 개선을 이뤄낸 점이 특징이다.</p>
         <p>핵심 광물·자원 사업의 약진이 실적 견인에 결정적인 역할을 했다. 포스코아르헨티나는 아르헨티나 팜파스 살라르 데 옴브레 무에르토 지역의 염수리튬 1공장 조업 안정화와 설비 개선에 성공, 분기 기준 처음으로 흑자 전환을 달성했다. 이는 수년간의 투자가 실질적인 수익 창출 단계로 전환됐음을 의미한다.</p>
@@ -416,6 +430,8 @@
         <p>투자 측면에서는 포스코홀딩스가 핵심광물·배터리 소재·철강이 결합된 복합 소재 기업으로의 재평가 여지가 충분하다는 시각이 우세하다. 글로벌 공급망 다변화 수요와 전기차 전환 가속이라는 메가 트렌드 안에서 포스코홀딩스의 자원 포트폴리오는 장기 성장의 견고한 기반이 될 것으로 전망된다.</p>
         <p>다만 전기차 수요 둔화 우려, 원자재 가격 변동성, 아르헨티나 정치·경제 리스크 등은 지속적으로 모니터링해야 할 요소들이다. 특히 아르헨티나 페소화 가치 불안정성은 현지 투자 비용 산정에 불확실성을 더하는 요인으로 작용하고 있어, 리스크 관리의 정밀도를 높이는 것이 중요 과제로 떠오르고 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">반도체 호황을 발판으로 국내 소재 기업들의 실적이 급반등하며 스페셜티·이차전지 소재 중심의 고부가가치 전환이 가속화되고 있다. 트럼프의 핵심광물 수출 규제로 글로벌 공급망 재편이 본격화된 가운데, 광양 등 전통 산업 거점의 첨단 소재 허브 전환과 소재 스타트업 생태계 성장이 국산화 흐름을 뒷받침하고 있다.</div>
     </div>
 

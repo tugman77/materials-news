@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">코오롱인더스트리가 반도체 소재 사업 부문 매각을 추진 중이며, 앞서 비슷한 움직임을 보인 SK그룹에 이어 대기업들의 반도체 소재 포트폴리오 재편이 본격화되고 있다. 인수전에 뛰어드는 기업들의 행보도 관심을 끌고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>코오롱인더스트리가 보유한 반도체 소재 사업 부문 매각 추진 소식이 전해지면서 산업재 업계에 파장이 일고 있다. SK그룹이 일부 반도체 소재 계열사 정리를 검토한 데 이어 코오롱까지 같은 방향의 움직임을 보이면서, 국내 대기업들의 반도체 소재 사업 재편이 빠르게 진행되고 있다는 분석이 나온다.</p>
         <p>코오롱인더스트리의 반도체 소재 사업은 주로 포토레지스트용 원료와 반도체 공정용 기능성 필름 분야를 중심으로 구성돼 있다. 이 부문의 연간 매출 규모는 수백억 원대로 추산되며, 최근 반도체 소재 시장 호황으로 몸값이 높아진 시점에 매각을 추진하는 것으로 업계는 해석하고 있다.</p>
@@ -417,6 +431,8 @@
         <p>정부는 이 같은 M&amp;A 흐름이 국내 반도체 소재 산업 생태계 강화로 이어질 수 있도록 세제 지원과 규제 완화를 병행할 필요가 있다는 의견이 업계에서 제기되고 있다. 소재 전문 기업들이 자본 확충과 기술 개발에 집중할 수 있는 환경을 조성하는 것이 핵심이다.</p>
         <p>향후 코오롱인더스트리의 반도체 소재 부문 매각이 성사될 경우, 인수자의 전략과 투자 방향이 국내 소재 시장 구도에 상당한 영향을 미칠 전망이다. M&amp;A 협상의 구체적인 내용이 공개되는 시점이 시장의 주요 관전 포인트가 될 것이다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -443,8 +459,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">AI 슈퍼사이클을 등에 업은 반도체 소재 수요가 폭발적으로 확대되며 글로벌 공급망 재편이 가속화되고 있다. 유리기판·희토류 등 핵심 소재 동맹 경쟁이 격화되는 한편, 국내 대기업들은 포트폴리오 선택과 집중에 돌입했다.</div>
     </div>
 

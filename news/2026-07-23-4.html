@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">국민성장펀드가 OLED 산업 경쟁력 강화를 위해 LG디스플레이에 1조원대 저리 대출을 지원하기로 결정했다. 재무 압박을 받던 LG디스플레이는 이 자금으로 OLED 생산 설비 확충과 기술 개발을 가속화하고 글로벌 디스플레이 시장 선두 지위를 굳힌다는 전략이다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>국민성장펀드가 유기발광다이오드(OLED) 산업 경쟁력 강화를 목적으로 LG디스플레이에 1조원대 규모의 저리 대출을 지원하기로 결정했다. 글로벌 OLED 패널 시장에서 선도적 위치를 지키고 있는 LG디스플레이가 재무 부담을 완화하고 신규 투자를 지속할 수 있도록 정책 금융을 투입하겠다는 취지다.</p>
         <p>이번 지원 규모는 1조원을 웃도는 수준으로, 국민성장펀드 단일 건으로는 최대 규모 중 하나다. 저리 대출 조건이 적용돼 LG디스플레이의 연간 이자 비용이 수백억 원 이상 절감될 것으로 추산된다. 재무 압박이 완화되는 만큼 자체 현금흐름을 생산 설비 확충과 연구개발에 집중할 수 있는 여건이 마련된다.</p>
@@ -415,6 +429,8 @@
         <p>OLED 산업 지원이 실효를 거두려면 자금 집행 속도와 투자 효율성이 뒤따라야 한다는 목소리도 있다. 업계 전문가는 &#x27;정책 금융을 받더라도 실제 설비 투자로 연결되는 속도가 핵심&#x27;이라며 &#x27;불필요한 행정 절차를 최소화하는 것이 중요하다&#x27;고 조언했다.</p>
         <p>향후 국민성장펀드의 디스플레이 산업 지원이 OLED를 넘어 마이크로LED 등 차세대 기술로까지 확장될 가능성도 거론되고 있다. 정부는 디스플레이를 반도체와 함께 국가 핵심 전략 산업으로 분류하고 있으며, 경쟁력 유지를 위한 정책 금융 지원을 지속하겠다는 의사를 밝히고 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -441,8 +457,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">OCI 반도체 소재 흑자전환·월덱스 구미 2600억 투자로 소부장 회복세가 가시화되는 가운데, 국민성장펀드가 핵심광물 공급망과 OLED 산업에 공공 자금을 투입하며 민간 투자 공백을 메우고 있다. 머크의 중수소화 OLED 소재 공개는 차세대 디스플레이 소재 경쟁이 본격화됐음을 시사한다.</div>
     </div>
 

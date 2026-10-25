@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">게르마늄 현물 가격이 2026년 들어 연초 대비 102% 상승하며 희귀금속 시장에서 두드러진 강세를 보이고 있다. 중국의 수출통제 조치가 가격 급등의 주된 원인으로, 윈난저마늄 등 중국 주요 업체 주가도 동반 상승했다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>상하이금속시장(SMM)에 따르면 2026년 10월 13일 기준 게르마늄 현물 가격은 연초 대비 약 102% 상승한 것으로 집계됐다. 이는 같은 기간 갈륨(약 30%대 상승)을 포함한 여타 희소금속 대비 두드러진 상승폭이다.</p>
         <p>SMM 분석에 따르면 게르마늄 가격 급등의 직접적 원인은 중국의 수출통제 강화다. 중국은 2023년 게르마늄에 대한 수출 허가제를 도입한 이후 허가 물량을 단계적으로 제한해왔으며, 2026년 들어 심사 기간 연장과 허가 조건 강화가 맞물려 공급 병목이 심화됐다.</p>
@@ -416,6 +430,8 @@
         <p>게르마늄 가격 강세는 희소금속 전반의 공급망 취약성을 다시 부각시키는 계기가 되고 있다. 갈륨에 이어 게르마늄까지 연간 두 자릿수 이상의 가격 변동이 반복되면서, 광학·통신·반도체 소재 사용 기업들이 재고 전략과 조달 다변화 계획을 재검토해야 하는 상황이다.</p>
         <p>업계 시사점으로는 게르마늄을 사용하는 국내 광섬유·방산 광학 기업들이 장기 공급 계약 또는 비중국 공급선 확보에 나설 필요성이 높아졌다는 점이다. 중장기적으로는 게르마늄 재활용 기술 개발과 소재 사용량 절감 공정 전환이 원가 리스크를 줄이는 핵심 수단이 될 전망이다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">한국 산업부가 반도체 전담 국장급 조직을 신설하며 공급망 강화에 나선 가운데, 중국 수출통제로 게르마늄 가격이 연초 대비 102% 급등하며 희귀금속 공급망 불안이 심화되고 있다. 국내 기업들은 소부장 협력 확대로 대응책 모색에 나서고 있다.</div>
     </div>
 

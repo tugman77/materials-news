@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">글로벌 핵심광물 시장이 정부 주도 공급망에서 민간 상업 공급망 중심으로 전환하는 새로운 국면에 접어들고 있다. 전문가들은 다변화 투자를 단순한 지정학적 대응이 아닌 전략적 위험 관리 관점에서 접근해야 한다고 강조한다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>글로벌 핵심광물 시장이 정부 보조금에 의존한 공급망 구조에서 민간 투자 중심의 상업적 공급망 생태계로 전환하는 새로운 시대에 진입하고 있다는 분석이 나왔다. 이는 중국의 수출 통제가 9개월 이상 지속되면서 시장의 적응 메커니즘이 작동하기 시작한 결과로 풀이된다.</p>
         <p>중국은 2025년부터 갈륨·게르마늄·흑연·희토류 등 핵심광물에 대한 수출 통제를 단계적으로 강화해왔다. 이에 따라 대체 공급원을 찾는 서방국들의 움직임이 빨라졌고, 이제는 캐나다·호주·아프리카 등지의 민간 광물 개발 기업들이 상업적 공급망의 주요 주체로 부상하고 있다.</p>
@@ -417,6 +431,8 @@
         <p>시장 전망 측면에서는 2026~2028년이 핵심광물 공급망 전환의 결정적 시기가 될 것이라는 관측이 지배적이다. 이 기간에 서방권 광산 프로젝트들이 생산 단계에 진입하면서 중국 의존도가 실질적으로 낮아질지, 아니면 개발 지연으로 공급 부족이 심화될지가 판가름 날 것으로 예상된다.</p>
         <p>국내 소부장 및 소재 기업들은 이 전환기를 기회로 활용하기 위해 비중국 광물 소싱 네트워크 구축, 재활용 기술 개발, 대체 소재 연구 등 다각도의 전략을 병행해야 한다는 지적이 나온다. 단기적 가격 변동에 흔들리지 않는 장기 전략이 어느 때보다 중요한 시점이다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -443,8 +459,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">반도체 소재·부품 공급망이 대만·인도 등 현지화 거점 구축으로 재편되는 가운데, 핵심광물 시장도 정부 주도에서 민간 상업 공급망으로 전환되며 글로벌 투자 전략 변화가 가속화되고 있다.</div>
     </div>
 

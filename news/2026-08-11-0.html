@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">중국이 2023년 갈륨·게르마늄 수출통제를 시행한 이후 갈륨 현물 가격이 3년 만에 약 9배 급등했다. 차세대 전력반도체의 핵심 소재인 갈륨은 대체 공급선 확보가 지연되면서 반도체 업계의 원가 부담이 가중되고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>중국 정부가 2023년 8월 갈륨(Ga)과 게르마늄(Ge)에 대한 수출허가제를 도입한 이후 국제 갈륨 가격은 3년 만에 약 9배 폭등했다. 차세대 전력반도체 소재로 주목받는 갈륨나이트라이드(GaN) 기반 소자에 필수적인 갈륨의 공급 불안이 현실화된 결과다.</p>
         <p>글로벌 시장 조사기관에 따르면 갈륨 현물 가격은 수출통제 시행 직전 kg당 약 220달러에서 2026년 8월 현재 2,000달러를 상회하고 있다. 같은 기간 게르마늄도 4배 이상 상승해 전력·광통신 소재 전반의 공급망 리스크가 확대됐다.</p>
@@ -416,6 +430,8 @@
         <p>갈륨 가격 상승은 전기차 충전 인프라, 군용 전자전 장비, 5G 기지국용 전력증폭기(PA) 등 광범위한 분야의 제조 원가에 영향을 미친다. 특히 SiC(탄화규소)와 함께 차세대 전력반도체 소재 양강 체제를 이루는 GaN의 비용 경쟁력이 흔들릴 경우 SiC로의 쏠림 현상이 가속화될 수 있다는 분석도 나온다.</p>
         <p>시장에서는 갈륨 가격이 연내 추가 상승할 가능성을 배제하지 않는다. 하반기 중국의 수출허가 심사 강화 또는 추가 제한 조치가 이어질 경우 현물 가격이 2,500달러를 돌파할 수 있다는 시나리오도 제기된다. 공급망 리스크 분산을 위한 선제적 재고 확보와 대체 소재 기술 투자가 시급하다는 목소리가 높아지고 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">중국의 핵심광물 수출통제가 갈륨·희토류 가격 급등과 공급망 재편을 촉발하며 글로벌 소재 패권 경쟁이 가속화되고 있다. 한국과 미국은 소부장 펀드 조성·핵심광물 투자로 대응에 나섰으며, 기술 측면에서도 LG디스플레이의 5스택 OLED 등 소재 혁신이 이어지고 있다.</div>
     </div>
 

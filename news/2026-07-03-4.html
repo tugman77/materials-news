@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">한국무역협회가 철강·조선해양플랜트 협회와 함께 미국 워싱턴을 방문해 행정부·의회에 한국 산업계 애로 사항을 연쇄 전달했다. 미국의 보호무역 기조 강화 속에 철강·산업재 분야 관세 리스크 완화가 핵심 의제로 다뤄졌다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>한국무역협회(KITA)가 한국조선해양플랜트협회, 한국철강협회 등 국내 주요 업종별 단체와 공동으로 미국 워싱턴 D.C.를 방문해 미국 행정부 및 의회 인사들과 연쇄 접촉을 갖고 현지 통상 현안을 집중 전달했다. 이번 방문은 미국의 보호무역 기조가 강화되는 가운데 한국 핵심 산업의 수출 환경 악화를 방지하기 위한 선제적 통상 외교 활동이다.</p>
         <p>이번 방문단의 핵심 의제는 철강 관세 문제였다. 미국은 현재 한국산 철강에 대해 &#x27;232조 관세&#x27; 쿼터 체제를 유지하고 있으며, 최근 일부 품목에 대한 추가 관세 부과 검토 움직임이 나타나고 있어 국내 철강업계의 긴장이 고조된 상태다. 한국의 대미 철강 수출액은 연간 약 30억 달러 규모로, 대미 수출 품목 중 상위권을 차지한다.</p>
@@ -416,6 +430,8 @@
         <p>국내 산업재·소재 기업들은 미국 관세 리스크를 선제적으로 분산하기 위해 베트남, 멕시코 등 제3국 생산 거점 확보를 가속화하고 있다. 그러나 원산지 규정 강화 등으로 우회 수출 방식의 실효성도 점차 낮아지고 있어, 결국 미국 현지 투자 확대가 가장 현실적인 해법으로 떠오르고 있다.</p>
         <p>향후 한미 통상 협력의 핵심 변수는 미국 대선 이후 행정부의 정책 방향과 한미 FTA 재협상 가능성이다. 업계에서는 정부가 민관 합동 통상 대응 체계를 상시화하고, 철강·조선·소재 등 주요 업종별 맞춤형 대미 통상 전략을 조속히 수립해야 한다고 촉구하고 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">AI 반도체·로봇 소재 분야에서 한국 기업들의 기술 도약이 가시화되는 한편, 콩고 광산 붕괴로 탄탈럼 공급망에 비상이 걸렸다. 미국 보호무역 기조 속 철강·조선 통상 압박도 지속되며 소재 산업 전반의 리스크가 고조되고 있다.</div>
     </div>
 

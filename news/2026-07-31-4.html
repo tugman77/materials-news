@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">반도체 소재·부품 공급망 국산화 흐름 속에서 관련 스타트업들의 기업가치가 급등하고 있다. 정부 지원과 대기업 협력이 맞물리며 소재 스타트업 생태계가 빠르게 성장하는 가운데, 중기부의 AI·드론 등 신안보 기업 육성 정책도 신규 투자를 촉진하고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>반도체 소재 공급망의 국산화를 내건 스타트업들이 투자 시장에서 주목받고 있다. 핵심 소재의 해외 의존도를 낮추려는 정책 기조와 대기업들의 공급망 다변화 수요가 맞물리면서 관련 스타트업들의 기업가치(밸류에이션)가 빠르게 높아지고 있다. 한국경제에 따르면 반도체 소재 국산화를 목표로 하는 스타트업들의 최근 투자 유치 규모가 전년 동기 대비 2배 이상 늘어난 것으로 집계됐다.</p>
         <p>이 같은 흐름의 배경에는 글로벌 공급망 재편 압력이 자리하고 있다. 미국과 유럽이 중국산 소재·부품 의존도 축소를 위한 규제와 인센티브를 강화하면서, 한국 반도체 생태계 전반에서 소재 국산화 속도를 높여야 한다는 공감대가 형성됐다. 특히 포토레지스트, 특수 세정액, 화학기상증착(CVD)용 전구체 등 고도 기술 소재 분야에서 국산 대체 수요가 급증하고 있다.</p>
@@ -416,6 +430,8 @@
         <p>정책 자금의 효율적 집행도 과제로 부상하고 있다. 정부 보조금에만 의존하는 스타트업이 늘어날 경우 산업 경쟁력 강화로 이어지지 못할 수 있다는 우려가 있다. 전문가들은 정부 지원을 마중물로 삼아 민간 투자를 유치하고 실제 납품으로 이어지는 성공 사례를 조기에 만드는 것이 생태계 지속가능성의 핵심이라고 강조한다.</p>
         <p>중장기적으로 반도체 소재 국산화는 한국 제조업 경쟁력의 핵심 과제로 자리 잡을 전망이다. 소재 스타트업들이 이 과제의 실질적인 해결사로 성장할 수 있도록 민관의 일관된 지원과 생태계 조성이 뒷받침되어야 한다는 것이 업계의 공통된 목소리다. 향후 5년간 이 분야의 투자 규모는 연평균 30% 이상 성장할 것으로 시장 조사기관들은 전망하고 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">반도체 호황을 발판으로 국내 소재 기업들의 실적이 급반등하며 스페셜티·이차전지 소재 중심의 고부가가치 전환이 가속화되고 있다. 트럼프의 핵심광물 수출 규제로 글로벌 공급망 재편이 본격화된 가운데, 광양 등 전통 산업 거점의 첨단 소재 허브 전환과 소재 스타트업 생태계 성장이 국산화 흐름을 뒷받침하고 있다.</div>
     </div>
 

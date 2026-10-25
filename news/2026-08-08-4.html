@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">미국 버클리 국립연구소가 극초박 강유전체 소재에서 기존에 알려지지 않은 전기적 특성을 발견했다. 이 발견은 에너지 효율 반도체 소재의 새로운 방향성을 제시하며 차세대 마이크로칩 개발에 중요한 함의를 갖는다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>미국 에너지부 산하 로렌스 버클리 국립연구소(Berkeley Lab) 연구팀이 일반 소재의 극초박 박막 형태에서 완전히 새로운 강유전성(ferroelectric) 특성을 발견했다고 발표했다. 이 소재는 전압을 가하지 않아도 자발적 전기 분극 상태를 유지하며, 기존 강유전체보다 훨씬 얇은 두께에서도 안정적으로 작동한다는 점이 핵심이다.</p>
         <p>강유전체는 외부 전기장 없이도 자발 분극을 유지하는 소재로, 비휘발성 메모리(FeRAM), 센서, 액추에이터 등에 활용된다. 그러나 기존 강유전체 소재는 두께가 수 나노미터 수준으로 얇아지면 분극 특성이 급격히 사라지는 &#x27;임계 두께 문제&#x27;로 인해 소형화에 한계가 있었다.</p>
@@ -417,6 +431,8 @@
         <p>버클리 연구팀은 향후 해당 소재의 도핑 조건과 계면 제어 기술을 고도화해 소자 적용 가능성을 검증하는 후속 연구를 진행할 계획이다. 산업계와의 기술 이전 협의도 이미 시작된 것으로 알려져, 실용화까지의 타임라인이 예상보다 단축될 수 있다는 기대감이 있다.</p>
         <p>반도체 소재 분야에서 근본 물리 현상의 새로운 발견이 실용화로 이어진 대표적 사례인 HZO 강유전체의 궤적을 이번 연구가 따라갈 수 있을지 업계가 주목하고 있다. 기초과학 투자가 소부장 경쟁력으로 직결되는 사례가 늘면서, 산학 협력 기반의 소재 연구 생태계 조성이 더욱 중요해지고 있다는 목소리도 높다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -443,8 +459,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">트럼프발 추가관세로 반도체·태양광 소재 공급망 충격이 예고된 가운데, 핵심광물 집중도 리스크가 구조적 변수로 부상했다. 한편 TFLN·강유전체 등 첨단소재는 상업화 전환으로 새 기회를 열고 있다.</div>
     </div>
 

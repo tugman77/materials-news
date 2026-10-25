@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">친환경 제철 스타트업 보스턴 메탈이 악재를 딛고 신규 투자 유치에 성공하며 그린스틸 핵심 금속 생산에 속도를 내고 있다. 탄소 중립 제철 기술의 상용화가 가시화되면서 철강·희귀금속 시장의 패러다임 변화가 예고된다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>MIT 스핀오프 기업인 보스턴 메탈(Boston Metal)이 최근 어려운 사업 환경을 극복하고 신규 투자 유치에 성공했다고 MIT 테크놀로지 리뷰가 보도했다. 이 회사는 전기분해(전해제련) 방식으로 철강을 생산하는 MOE(Molten Oxide Electrolysis) 기술을 보유하고 있으며, 탄소 배출 없는 친환경 철강 생산의 게임체인저로 주목받고 있다.</p>
         <p>보스턴 메탈이 개발한 MOE 기술은 기존 고로(高爐) 방식 대신 전기를 이용해 용융 산화물을 전기분해하여 순수한 금속을 추출하는 방식이다. 이 공정은 코크스(Coke)나 천연가스 없이도 철강을 생산할 수 있어, 철강 산업의 탄소 배출량을 최대 90%까지 줄일 수 있다는 것이 회사 측의 주장이다.</p>
@@ -417,6 +431,8 @@
         <p>투자자 관점에서 그린스틸 관련 희귀금속 공급망 기업들에 대한 관심이 높아지고 있다. 이리듐, 루테늄 등을 공급하는 광산·정련 기업들과, 고성능 전극 소재를 제조하는 소재 기업들이 수혜주로 부각되고 있다. 국내에서는 희귀금속 재활용 전문 기업들도 MOE 기술 확산에 따른 수혜를 받을 수 있다는 분석이다.</p>
         <p>보스턴 메탈은 2026년 말까지 브라질 파일럿 플랜트의 생산 규모를 현재의 세 배로 확대하고, 2030년 상업용 플랜트 가동을 목표로 기술 개발에 집중한다는 방침이다. 기술 상용화의 성공 여부는 전극 수명 연장과 희귀금속 사용량 감소 기술 확보에 달려 있다는 것이 전문가들의 공통된 분석이다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -443,8 +459,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">중국의 핵심광물 장악과 美 관세 여파로 글로벌 공급망 긴장이 고조되는 가운데, 한·중 반도체 소재 협력과 그린스틸 투자 재개 등 대응 움직임도 가속화되고 있다. IT 가격 도미노와 대체투자 확대까지, 산업 전반의 구조적 재편이 동시다발로 전개 중이다.</div>
     </div>
 

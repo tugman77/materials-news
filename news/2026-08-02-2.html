@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">AI 반도체 수요 급증을 배경으로 희귀금속 분야에서 광산부터 완제품까지 아우르는 수직 계열화 M&amp;A가 글로벌 시장을 재편하고 있다. 미·중 공급망 갈등과 AI 전력 인프라 확충이 교차하며 핵심광물 확보 경쟁이 사상 최고조에 달하고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>인공지능(AI) 데이터센터 확충과 AI 반도체 수요 급증이 희귀금속 산업의 구조적 변화를 가속화하고 있다. 특히 광산 채굴부터 정련, 소재 가공, 최종 자석 제조까지 전 밸류체인을 한 기업이 통합 관리하는 수직 계열화 인수합병(M&amp;A)이 글로벌 자본 시장의 최우선 과제로 부상했다.</p>
         <p>AI 데이터센터 한 곳을 구축하는 데 필요한 핵심광물의 양은 기존 서버팜 대비 수배 이상 많다. 고성능 냉각 시스템, 전력 변환 장치, AI 칩 패키징에 들어가는 희귀금속 수요가 폭발적으로 늘면서, 글로벌 기업들이 안정적 공급원 확보를 위해 M&amp;A에 대규모 자금을 쏟아붓고 있다.</p>
@@ -416,6 +430,8 @@
         <p>희귀금속 수직 계열화 M&amp;A 트렌드는 국내 소재 기업들에게도 파트너십 또는 투자 유치의 기회를 제공하고 있다. 정련·분리·가공 기술을 보유한 국내 중소·중견 기업들이 글로벌 M&amp;A 대상으로 부상할 수 있으며, 이는 밸류에이션 재평가로 이어질 가능성이 높다.</p>
         <p>향후 시장 전망과 관련해, AI 데이터센터 투자가 계속되는 한 희귀금속 수요는 구조적 강세를 유지할 것으로 예측된다. 수직 계열화 M&amp;A는 단기 이슈가 아니라 향후 10년을 좌우할 산업 재편의 핵심 동력으로 작동할 전망이다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">미·중 공급망 갈등이 탄탈럼 수입금지·반도체 규제 강화로 전선을 넓히며 글로벌 소재 산업 재편이 가속되고 있다. 중국의 전략광물 수출통제 강화 속에 한국 소부장 기업의 반사이익이 현실화되고, 수직계열화 M&amp;A와 특화단지 경쟁도 본격화되는 중이다.</div>
     </div>
 

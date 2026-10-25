@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">삼성디스플레이가 내년 출시 예정인 갤럭시S27 프로·울트라 시리즈에 최신 M16 OLED 패널을 공급한다고 확인됐다. M16은 전작 대비 발광 효율과 색재현율이 대폭 향상된 것으로 알려져 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>삼성디스플레이가 삼성전자의 차기 플래그십 스마트폰 갤럭시S27 프로·울트라 시리즈에 최신 세대 OLED 패널인 M16을 공급하는 것으로 확인됐다. M16은 삼성디스플레이가 자체 개발한 발광 재료 및 구동 방식을 대폭 개선한 차세대 OLED 패널로, 전작 M14 대비 발광 효율과 색재현율에서 현격한 진보를 이뤘다.</p>
         <p>M16 OLED 패널은 최대 휘도 3,000니트(nit)를 돌파한 것으로 알려졌다. 이는 야외 강한 햇빛 아래서도 선명한 화면을 유지할 수 있는 수준이다. 소비전력 효율도 M14 대비 약 20% 향상된 것으로 전해지며, 배터리 사용 시간 연장에도 기여할 것으로 기대된다.</p>
@@ -416,6 +430,8 @@
         <p>투자 시사점으로, OLED 소재·장비주는 M16 패널 양산 일정과 8.6세대 투자 집행 속도에 따라 주가 변동성이 높아질 수 있다. 증권가에서는 OLED 발광 소재, 봉지 소재, 편광판 등 핵심 소재를 공급하는 국내 중소형 소재 기업들을 주목하는 보고서를 잇달아 내놓고 있다.</p>
         <p>장기적으로 M16 패널의 성공 여부는 삼성전자의 갤럭시S27 시리즈 판매 성적에 달려 있다. 글로벌 스마트폰 시장이 AI 기능 고도화를 중심으로 재편되면서, 디스플레이 품질이 구매 결정에서 차지하는 비중이 더욱 커지고 있다는 점에서 M16에 대한 시장 기대감은 높다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">중국의 헬륨·희토류 수출 통제 연속 시행으로 국내 반도체·소재 공급망에 비상이 걸린 가운데, 브로드컴 AI 반도체 221% 급성장과 유리기판 등 차세대 소재 진출이 맞물리며 산업 재편이 가속화되고 있다.</div>
     </div>
 

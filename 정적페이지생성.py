@@ -81,8 +81,17 @@ def paras(article: dict) -> list:
     return [s.strip() for s in re.split(r"(?<=[.!?])\s+", summary) if s.strip()]
 
 
+def build_briefing_html(briefing: str, briefing_v2: dict = None) -> str:
+    """편집국 브리핑 HTML — 구조화(v2) 우선, 없으면 텍스트"""
+    if briefing_v2 and briefing_v2.get("headline") and briefing_v2.get("points"):
+        points = "".join(f"<li>{esc(p.get('text',''))}</li>" for p in briefing_v2["points"])
+        return (f'<div class="briefing-headline">{esc(briefing_v2["headline"])}</div>\n'
+                f'      <ul class="briefing-points">{points}</ul>')
+    return esc(briefing)
+
+
 def build_page(article: dict, idx: int, all_articles: list, date_key: str,
-               briefing: str, style: str) -> str:
+               briefing: str, style: str, briefing_v2: dict = None) -> str:
     cls, bg, color = get_cat(article)
     title = article.get("title", "")
     summary = article.get("summary", "")
@@ -119,6 +128,24 @@ def build_page(article: dict, idx: int, all_articles: list, date_key: str,
         f'        <div class="art-summary-label">핵심 요약</div>\n'
         f'        <div class="art-summary-text">{esc(summary)}</div>\n'
         f'      </div>' if summary else "")
+
+    why_imp = article.get("why_important", "")
+    importance_box = (
+        f'      <div class="art-importance-box">\n'
+        f'        <div class="art-importance-label">왜 중요한가</div>\n'
+        f'        <div class="art-importance-text">{esc(why_imp)}</div>\n'
+        f'      </div>' if why_imp else "")
+
+    sources = article.get("sources") or []
+    ref_date = article.get("reference_date", "")
+    source_parts = []
+    if sources:
+        source_parts.append("출처: " + ", ".join(esc(s) for s in sources))
+    if ref_date:
+        source_parts.append("기준일: " + esc(ref_date.replace("-", ".")))
+    sources_html = (
+        f'      <div class="art-sources">{" | ".join(source_parts)}</div>'
+        if source_parts else "")
 
     nav_html = "\n".join(
         f'        <a href="{BASE}{esc(href)}">{esc(label)}</a>' for href, label in NAV)
@@ -245,9 +272,13 @@ def build_page(article: dict, idx: int, all_articles: list, date_key: str,
 
 {summary_box}
 
+{importance_box}
+
       <div class="art-body">
 {body_html}
       </div>
+
+{sources_html}
 
       <div class="newsletter-cta">
         <div>
@@ -274,9 +305,9 @@ def build_page(article: dict, idx: int, all_articles: list, date_key: str,
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
-      <div style="font-size:13px;color:#444;line-height:1.75;">{esc(briefing)}</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
+      <div style="font-size:13px;color:#444;line-height:1.75;">{build_briefing_html(briefing, briefing_v2)}</div>
     </div>
 
     <div class="sb-box">
@@ -331,9 +362,10 @@ def build_page(article: dict, idx: int, all_articles: list, date_key: str,
 def generate_for_date(date_key: str, data: dict, style: str) -> int:
     articles = data.get("articles", [])
     briefing = data.get("editorial_briefing", "") or ""
+    briefing_v2 = data.get("editorial_briefing_v2") or None
     os.makedirs(OUT_DIR, exist_ok=True)
     for idx, article in enumerate(articles):
-        page = build_page(article, idx, articles, date_key, briefing, style)
+        page = build_page(article, idx, articles, date_key, briefing, style, briefing_v2)
         with open(article_path(date_key, idx), "w", encoding="utf-8") as f:
             f.write(page)
     return len(articles)

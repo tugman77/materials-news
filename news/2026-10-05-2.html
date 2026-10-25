@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">반도체 소재·부품·장비(소부장) 종목이 강세를 보이며 코스닥 지수의 900선 재돌파 기대감을 높이고 있다. AI 반도체 수요 증가와 국내 소부장 클러스터 투자 확대가 맞물려 업종 전반에 투자 모멘텀이 형성되고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>반도체 소재·부품·장비 업종이 코스닥 시장의 상승세를 이끌며 900선 재탈환 가능성이 높아지고 있다. 파이낸셜뉴스·한국경제 등 주요 매체들이 소부장 강세와 코스닥 상승세의 연동 흐름을 일제히 조명했다.</p>
         <p>소부장 업종 강세의 핵심 동력은 AI 반도체 수요 증가다. 고대역폭메모리(HBM)와 첨단 패키징 기술 수요가 급증하면서 관련 소재·공정 장비 업체들의 수주가 빠르게 늘고 있다. HBM 생산에 필수적인 TSV(실리콘 관통전극) 공정 소재 및 FCB(플립칩 본딩) 장비 수요가 특히 두드러진다.</p>
@@ -418,6 +432,8 @@
         <p>리스크 요인으로는 미국의 대중 반도체 장비 수출 규제 강화에 따른 중국 수출 감소 가능성이 있다. 국내 일부 소부장 기업들은 중국 반도체 팹을 주요 고객으로 두고 있어 규제 범위 확대 시 타격이 불가피하다. 투자 시 개별 기업의 고객 다변화 여부를 점검하는 것이 필수적이다.</p>
         <p>종합하면, AI 반도체 수요 구조화·국내 클러스터 투자 확대·글로벌 공급망 재편이 맞물리며 소부장 업종의 중장기 성장 스토리는 유효하다는 시각이 지배적이다. 코스닥 900선 재탈환 여부는 소부장 업종의 실적 가시화 속도에 달려 있다는 분석이다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -444,8 +460,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">미국의 핵심광물 공급망 투자와 한국 디스플레이 업계의 세제 지원 건의가 맞물리며 탈중국 공급망 재편이 가속화되고 있다. AI 반도체 수요 확대에 힘입어 국내 소부장 종목이 강세를 보이며 코스닥 900선 탈환 기대감도 고조되고 있다.</div>
     </div>
 

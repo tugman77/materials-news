@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">경상북도가 구미를 중심으로 대경권 반도체 소재·부품·장비 혁신거점 구축에 본격 나섰다. 반도체 공급망 국산화와 국가 안보 강화를 동시에 겨냥한 이번 프로젝트는 지역 소재 기업들의 경쟁력 도약 발판이 될 전망이다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>경상북도가 구미시를 핵심 거점으로 한 대경권 반도체 소재·부품·장비(소부장) 혁신거점 구축을 본격화한다고 밝혔다. 이는 국내 반도체 공급망 자립도를 높이고, 특정 국가 의존도를 줄이기 위한 정부·지자체 차원의 전략적 투자의 일환이다.</p>
         <p>경북도는 구미를 중심으로 대구·경북 광역 소부장 클러스터를 조성하고, 소재·공정·패키징 전 분야에 걸친 기업 집적화를 추진할 계획이다. 초기 단계에서는 반도체용 화학소재, 세정제, 에천트(식각액) 등 공정소재 기업들의 입주를 집중 유치한다는 방침이다.</p>
@@ -416,6 +430,8 @@
         <p>전문가들은 대경권 소부장 혁신거점이 단순한 공장 이전이 아닌 &#x27;기술 혁신 허브&#x27;로 기능해야 한다고 강조한다. 소재 기업이 장비 기업, 팹과 긴밀히 협력하는 수직적 밸류체인을 구축할 수 있어야 글로벌 경쟁력 확보가 가능하다는 것이다.</p>
         <p>향후 경북 구미 소부장 혁신거점이 완성되면, 대경권은 반도체 소재 국산화율 제고와 함께 지역 경제 활성화라는 두 마리 토끼를 잡을 수 있을 것으로 기대된다. 투자자들도 지역 소부장 기업들의 중장기 성장 스토리에 주목할 필요가 있다는 시장 의견이 나온다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">반도체 수요 폭증 예고 속 소부장 공급망 강화가 핵심 과제로 부상했다. 희토류·태양광 등 전략 소재 전반에서 공급망 재편이 가속화되며 국내 기업의 수혜 기회가 확대되고 있다. 기초 연구(UNIST)부터 산업 거점(구미) 구축까지 소재 혁신 생태계 전방위 진전 중.</div>
     </div>
 

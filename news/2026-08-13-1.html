@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">구리 가격이 런던과 뉴욕 시장에서 동시에 사상 최고치를 경신했다. 같은 날 부건빌 파나구나·필리핀 탐파칸·스웨덴 라베르 등 장기 중단됐던 3대 구리 광산 개발 프로젝트가 일제히 재개 신호를 보내며 공급망 재편에 촉각이 쏠리고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>국제 구리 가격이 런던금속거래소(LME)와 뉴욕상품거래소(Comex)에서 동시에 사상 최고 기록을 갈아치웠다. 런던 시장에서는 올해 들어 가장 강한 &#x27;스퀴즈(공급 부족에 따른 가격 급등)&#x27; 현상이 나타났으며, Comex 구리 선물도 신고점을 찍으며 글로벌 금속 시장의 관심을 집중시켰다.</p>
         <p>이 같은 가격 급등의 직접적 배경은 구리 현물 공급 부족이다. 전기차·AI 데이터센터·재생에너지 인프라 확대로 구리 수요가 구조적으로 늘어나는 가운데, 기존 광산의 생산 차질과 투자 지연이 겹치면서 수급 불균형이 심화되고 있다. 시장 조사업체들은 2026~2028년 구리 공급 부족이 연간 수십만 톤에 달할 수 있다고 경고한다.</p>
@@ -417,6 +431,8 @@
         <p>시장 전문가들은 구리 가격이 단기간에 조정을 받더라도 구조적 공급 부족이 해소되기 전까지는 높은 수준을 유지할 것으로 전망한다. 특히 탐파칸·파나구나 등 정치적·환경적 갈등 광산이 실제 생산에 돌입하려면 각국 정부의 규제 해결과 지역사회 합의라는 높은 장벽을 넘어야 한다.</p>
         <p>국내 소부장 업계 입장에서는 구리 가격 고점이 지속될 경우 반도체·디스플레이 장비용 부품, 산업용 배선재 등의 조달 비용 상승으로 이어질 수 있다. 업계는 원재료 분산 조달과 대체 소재 개발을 통해 리스크 관리를 강화해야 한다는 목소리가 높아지고 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -443,8 +459,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">구리·희토류 등 핵심 소재 가격이 요동치는 가운데, OLED 설비투자 급증과 반도체 소재 수요 확대로 소부장 밸류체인 전반이 활기를 띠고 있다. 정부의 10조 원 규모 슈퍼 을 육성 계획까지 맞물리며 국내 소재·부품·장비 산업의 구조적 성장 기대감이 높아지는 국면이다.</div>
     </div>
 

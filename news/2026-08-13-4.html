@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">정부가 핵심 소부장(소재·부품·장비) 기업 육성에 5년간 10조원을 투자하고 2030년까지 &#x27;슈퍼 을&#x27; 기업 15곳을 키우는 계획을 공식 발표했다. AI·반도체·방산 공급망 내재화를 위한 전방위 지원책이 담겼으며, 소부장 업계의 구조적 체질 개선 기대감이 높아지고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>정부가 반도체·디스플레이·이차전지·첨단소재 등 핵심 소부장 분야에 향후 5년간 총 10조원을 집중 투자하는 계획을 발표했다. 이 계획의 핵심은 글로벌 공급망에서 협상력이 높은 이른바 &#x27;슈퍼 을&#x27; 기업 15곳을 2030년까지 육성한다는 것이다. &#x27;슈퍼 을&#x27;은 특정 기술이나 부품을 세계 시장에서 독점적으로 공급할 수 있어 대형 고객사도 의존할 수밖에 없는 기업을 지칭한다.</p>
         <p>이 계획은 소부장 분야의 기술 자립과 공급망 내재화가 국가 산업 경쟁력의 핵심 변수로 부상한 배경에서 나왔다. 미중 기술 패권 경쟁이 격화되고 수출통제·관세 조치가 잇따르면서, 특정 국가에 편중된 소재·부품 공급망의 취약성이 반복적으로 드러나고 있다. 특히 중희토류의 중국 의존도가 99%에 달하고, 핵심 반도체 소재 일부는 일본·미국에 대한 의존도가 높다는 점이 지속적으로 지적돼 왔다.</p>
@@ -417,6 +431,8 @@
         <p>업계는 이번 10조원 투자 계획이 단기 성과보다 중장기 기술 생태계 구축에 집중되길 기대하고 있다. 소부장 분야의 기술 개발 사이클은 통상 5~10년 이상이 필요하기 때문에, 정권 교체와 무관하게 지속 가능한 지원 체계를 법제화하는 것이 관건이라는 지적도 나온다.</p>
         <p>향후 시장 전망과 투자 시사점으로는, 슈퍼 을 육성 정책의 수혜 기업으로 선정된 소부장 기업들에 대한 시장의 관심이 집중될 것으로 예상된다. 특히 반도체 특수 소재, AI 서버용 부품, 방산 연계 소재 분야에서 정부 지원과 민간 투자가 맞물리는 구조가 만들어지면 관련 기업들의 밸류에이션 재평가로 이어질 수 있다는 분석이 나온다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -443,8 +459,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">구리·희토류 등 핵심 소재 가격이 요동치는 가운데, OLED 설비투자 급증과 반도체 소재 수요 확대로 소부장 밸류체인 전반이 활기를 띠고 있다. 정부의 10조 원 규모 슈퍼 을 육성 계획까지 맞물리며 국내 소재·부품·장비 산업의 구조적 성장 기대감이 높아지는 국면이다.</div>
     </div>
 

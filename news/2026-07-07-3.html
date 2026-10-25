@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">국내 외환시장이 24시간 거래 체제로 전환되며 첫날 원/달러 환율이 1,530원대를 유지했다. 환율 변동성 확대가 희귀금속·반도체 소재 등 수입 의존 품목의 조달 비용에 직접적인 영향을 미칠 것으로 분석된다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>국내 외환시장이 24시간 거래 체제로 공식 전환되는 첫날, 원/달러 환율은 큰 변동 없이 1,530원대에서 거래됐다. 기존의 제한된 거래 시간 체제에서 벗어나 야간 시간대에도 환율이 실시간으로 움직이게 됨에 따라, 기업들의 환리스크 관리 방식에 변화가 불가피해졌다.</p>
         <p>외환시장 24시간 거래 개시는 국내 금융시장의 선진화와 원화 국제화를 위한 정책적 조치의 일환이다. 뉴욕, 런던 등 글로벌 주요 시장과 거래 시간이 겹치면서 외국인 투자자들의 접근성이 높아지고, 환율의 실시간 반영이 가능해진다는 게 정부의 설명이다.</p>
@@ -416,6 +430,8 @@
         <p>시장 전문가들은 당분간 원/달러 환율이 1,500~1,550원 범위에서 등락할 것으로 전망하고 있다. 미국의 통화 정책 방향과 한국의 경상수지 흐름이 환율의 핵심 변수로 꼽히며, 글로벌 무역 긴장 완화 여부도 중요한 영향을 미칠 것으로 분석된다.</p>
         <p>투자 시사점으로는 환율 수혜를 받는 수출 중심 소재·산업재 기업과 환율 부담을 받는 수입 의존 기업 간의 차별화된 접근이 필요하다는 점이 지적된다. 24시간 환율 모니터링 체계 구축과 탄력적인 환리스크 관리 전략이 기업 경쟁력의 핵심 요소로 부각될 전망이다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">콩고 광산 붕괴로 탄탈럼 공급망에 비상이 걸린 가운데, 외환시장 24시간 체제 전환으로 소재 수입 비용 변동성이 확대되고 있다. 반면 국내 소재·석화 업계는 AI 반도체 패키징과 전력 인프라 소재로 사업 다각화를 가속하며 新성장동력 확보에 나서고 있다.</div>
     </div>
 

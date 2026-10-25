@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">반도체 초임계 세정 공정에 필수적인 고순도 이산화탄소(CO2) 조달에 차질이 빚어지며 업계에 긴장감이 고조되고 있다. 공급망 불안이 장기화될 경우 첨단 반도체 생산 일정에도 영향을 미칠 수 있다는 우려가 제기된다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>반도체 제조 공정 중 초임계 세정(Supercritical Cleaning)에 사용되는 고순도 이산화탄소(CO2) 공급에 이상 징후가 나타나고 있다. 초임계 CO2 세정은 반도체 회로 선폭이 10나노미터 이하 수준으로 미세화되면서 기존 습식 세정의 한계를 극복하기 위해 도입된 최첨단 세정 기술이다.</p>
         <p>초임계 상태란 물질이 기체와 액체의 중간 상태로 존재하는 것을 말하며, CO2는 약 31.1℃, 73.8기압 조건에서 초임계 상태에 진입한다. 이 상태의 CO2는 세정력이 뛰어나면서도 표면 장력이 거의 없어, 나노미터 단위의 미세 패턴을 손상시키지 않고 오염물질을 제거할 수 있어 첨단 반도체 세정 공정에 필수적이다.</p>
@@ -416,6 +430,8 @@
         <p>시장조사 전문기관인 가트너는 초임계 세정 장비 및 소재 시장이 2025년까지 연평균 12% 이상 성장할 것으로 예측했다. 반도체 미세화 추세가 계속되는 한 고순도 CO2 수요도 지속적으로 증가할 전망이며, 이에 따른 안정적인 공급망 구축이 업계의 핵심 과제로 부상하고 있다.</p>
         <p>업계는 단기적으로는 공급사 다변화와 비축 물량 확대로 리스크를 관리하고, 중장기적으로는 국내 고순도 가스 생산 인프라를 확충하는 방향으로 대응 전략을 수립하고 있다. 이번 사태를 계기로 반도체 소재 공급망 전반의 취약점을 점검하고 체계적인 대응 시스템을 갖춰야 한다는 공감대가 형성되고 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">국내 석유화학 업계가 범용 화학의 한계를 돌파하기 위해 반도체 소재로 전략 피벗을 가속화하는 가운데, 고순도 CO2 공급 차질과 탄탈럼 수입 금지 등 공급망 리스크가 동시에 불거졌다. 반면 국제유가는 호르무즈 정상화로 급락하며 에너지 비용 부담이 일부 완화됐다.</div>
     </div>
 

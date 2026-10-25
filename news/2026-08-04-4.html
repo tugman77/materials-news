@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">OCI가 일본 기업과 손잡고 반도체 패키징용 캐리어 웨이퍼 재생·재사용 사업에 진출한다. 첨단 패키징 수요 급증에 따른 웨이퍼 수급 긴장과 자원 순환 트렌드가 맞물려 새로운 시장 기회로 주목받고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>국내 화학 소재 기업 OCI가 일본 파트너사와 협력해 반도체 패키징용 캐리어 웨이퍼 재생(재사용) 사업에 진출한다고 디일렉이 보도했다. 첨단 후공정에서 발생하는 사용 후 실리콘 웨이퍼를 세정·연마·재가공해 재판매하는 방식으로, 소재 원가 절감과 자원 순환이라는 두 수요를 동시에 겨냥한 신사업이다.</p>
         <p>캐리어 웨이퍼란 반도체 칩을 기판에 실장하는 첨단 후공정에서 임시 지지체로 쓰이는 실리콘 웨이퍼다. 공정이 끝나면 분리·제거되는데, 표면 연마와 세정 처리를 거치면 재사용이 가능하다. 기존에는 사용 후 폐기됐으나 팬아웃 웨이퍼 레벨 패키징(FOWLP)·칩렛 등 첨단 패키징 수요 폭발로 재생 웨이퍼의 가치가 크게 높아졌다.</p>
@@ -415,6 +429,8 @@
         <p>재생 웨이퍼 시장은 표면 결함 기준이 극도로 엄격해 고도의 연마·세정 기술이 요구된다. 불량률이 조금이라도 높으면 후공정 수율 저하로 직결되기 때문에, 고객사 품질 인증 취득이 사업화의 핵심 관문이다. OCI가 일본 파트너 기술력을 기반으로 인증을 얼마나 빠르게 확보하느냐가 시장 진입 속도를 결정하는 변수다.</p>
         <p>업계는 OCI의 웨이퍼 재생사업 진출이 국내 패키징 소재 공급망 다양성을 높이는 긍정적 신호라고 평가한다. 시장이 성숙하면 SiC(탄화규소)·사파이어 등 특수 웨이퍼 재생으로도 확장될 가능성이 있다. 반도체 소재 자립도 강화와 순환경제 전환이라는 두 목표를 동시에 추구하는 행보로, 이후 사업 진행 속도에 업계 관심이 집중되고 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -441,8 +457,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">LB세미콘의 퀄컴 AI·차량용 후공정 진입, OCI의 웨이퍼 재생사업 등 국내 업계가 고부가 틈새 공략에 나섰지만, 소부장 자금난과 희토류 비용 상승이 하반기 경쟁력을 압박하고 있다.</div>
     </div>
 

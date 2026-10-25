@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">전북도와 익산시가 반도체 소재 산업 경쟁력 강화를 위해 기업 간담회를 잇따라 개최하고 구체적인 육성 전략 마련에 나섰다. 수도권 집중 현상 완화와 지역 소재 생태계 구축을 목표로 정책 지원이 본격화될 전망이다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>전북특별자치도와 익산시가 반도체 소재 산업의 지역 거점화를 위한 행보를 본격화하고 있다. 전북도는 최근 도내 반도체 소재 관련 기업과 연구기관 관계자 40여 명이 참석한 가운데 &#x27;반도체 소재산업 경쟁력 강화 간담회&#x27;를 개최하고, 지역 내 공급망 생태계 구축 방안을 논의했다.</p>
         <p>익산시도 별도로 반도체 소재 기업 대상 간담회를 열고 시 차원의 지원책 확대 방침을 밝혔다. 익산은 이미 화학·소재 기업들이 집적된 국가산업단지를 보유하고 있어, 반도체 소재 전환 기업들의 입지 조건이 비교적 양호한 편이다. 시 관계자는 &#x27;기존 화학 산업 인프라를 반도체 소재 분야로 업그레이드하는 것이 핵심 전략&#x27;이라고 설명했다.</p>
@@ -416,6 +430,8 @@
         <p>장기적으로는 전북-충청 반도체 소재 회랑(Corridor) 구축 구상도 논의되고 있다. 전북에서 생산한 소재 원료를 충청권 소재 기업이 가공해 삼성·SK 등 대형 팹에 공급하는 밸류체인을 완성함으로써, 수도권 의존도를 낮추고 지역 균형 발전과 공급망 안정화를 동시에 달성하겠다는 구상이다.</p>
         <p>업계 관계자는 &#x27;전북이 반도체 소재 분야에서 의미 있는 플레이어로 부상하려면 최소 5~10년의 투자와 인내가 필요하다&#x27;면서도 &#x27;지금 씨앗을 뿌리지 않으면 기회 자체가 사라질 수 있다&#x27;고 역설했다. 이번 전북·익산의 움직임이 지역 반도체 소재 생태계 구축의 출발점이 될 수 있을지 귀추가 주목된다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">중국의 헬륨·희귀가스 수출 금지로 반도체 공급망에 비상이 걸렸다. 자원 무기화가 가속되며 글로벌 소재 공급망이 신냉전 구도로 재편되는 가운데, 국내는 지역 클러스터 조성과 전문인력 양성으로 정면 돌파에 나서고 있다.</div>
     </div>
 

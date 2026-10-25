@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">LG디스플레이가 인공지능을 활용해 OLED 발광 소재를 개발하는 체계를 구축하고 연간 수백억 원의 개발 비용을 절감하는 효과를 거두고 있다. AI 기반 소재 설계는 OLED 산업 전반의 경쟁 구도를 바꿀 핵심 방법론으로 부상하고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>LG디스플레이가 인공지능(AI) 기술을 OLED 발광 소재 개발 과정에 전면 도입해 연간 수백억 원 규모의 비용 절감 효과를 거두고 있는 것으로 알려졌다. 통상 신규 OLED 소재 하나를 개발하는 데 수년의 기간과 막대한 합성·평가 비용이 투입되는 점을 감안하면, AI 활용 소재 개발은 업계 패러다임을 바꾸는 혁신으로 평가된다.</p>
         <p>기존 OLED 소재 개발 프로세스는 화학 구조 후보군을 수동으로 설계한 뒤 합성·증착·특성 평가를 반복하는 방식으로 진행됐다. 발광 효율, 색순도, 수명을 동시에 충족하는 소재를 찾기까지 수천 개의 후보 물질을 검토해야 해 시간과 비용 소모가 극심했다. LG디스플레이는 이 과정에 머신러닝 기반 분자 설계 모델을 적용해 유망 후보군을 사전에 대폭 걸러내는 방식으로 효율을 획기적으로 높였다.</p>
@@ -416,6 +430,8 @@
         <p>시장 조사기관 DSCC에 따르면 글로벌 OLED 패널 시장은 2026년 약 480억 달러 규모로 성장하며, 2030년까지 연평균 8%대 성장세가 예상된다. AI 소재 개발은 이 성장 사이클에서 한국 디스플레이 기업들이 원가·기술 경쟁력을 동시에 유지하기 위한 필수 도구로 자리매김할 것으로 보인다.</p>
         <p>한 디스플레이 소재 전문가는 &#x27;소재 개발 AI가 단순한 비용 절감 도구를 넘어, 경쟁사가 아직 상상하지 못한 분자 구조의 신소재를 먼저 발굴하는 탐색 엔진으로 진화하고 있다&#x27;며 &#x27;향후 3~5년 내에 AI가 OLED 소재 혁신의 주도권을 결정하는 핵심 요소가 될 것&#x27;이라고 전망했다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">EU·중국 무역 양해로 희토류 공급 불안이 일부 완화됐으나, 반도체 기판·동박판 가격 급등으로 소부장 공급망 압박이 지속되고 있다. LG디스플레이의 AI 소재 개발은 제조업 혁신의 긍정적 신호다.</div>
     </div>
 

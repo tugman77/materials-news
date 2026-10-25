@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">반도체 호황에도 국내 소재·부품·장비 업체들의 2026년 상반기 실적이 극명하게 갈렸다. AI·HBM 공정용 고부가 소재 업체는 영업이익이 40~60% 급증한 반면, 범용 부품 위주 업체들은 중국 경쟁 심화와 재고 조정 여파로 고전하는 구조적 양극화 국면이 심화되고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>반도체 호황이 이어지는 가운데 국내 소재·부품·장비(소부장) 업체들의 2026년 상반기 실적이 극명하게 갈리고 있다. HBM·AI 서버 공정용 특화 소재 업체들은 큰 폭의 이익 개선을 기록했지만, 범용 부품·장비 업체들은 중국 경쟁 심화와 고객사 재고 조정의 이중고로 고전하는 &#x27;호황 속 양극화&#x27; 양상이 뚜렷하다.</p>
         <p>증권업계 분석에 따르면 국내 주요 소부장 상장사 30여 곳 중 실적이 전년 동기 대비 개선된 업체는 절반 수준인 15~16곳에 그쳤다. 나머지는 정체 또는 역성장을 기록했으며, 영업이익률도 업체별로 3~18%로 큰 편차를 보여 기술력과 포트폴리오에 따른 격차가 갈수록 심화되고 있음을 보여준다.</p>
@@ -416,6 +430,8 @@
         <p>한국반도체산업협회 관계자는 &#x27;소부장 업계가 살아남으려면 AI·차세대 반도체 공정 관련 틈새 시장에서 독보적 기술력을 확보해야 한다&#x27;며 &#x27;글로벌 팹리스와의 공동 개발 과제 발굴도 중요한 생존 전략&#x27;이라고 강조했다. 업계는 연말까지 실적 양극화가 더욱 선명해질 것으로 전망한다.</p>
         <p>전문가들은 현재의 양극화가 일시적 현상이 아닌 구조적 변화라고 진단한다. 고부가 니치 마켓을 선점한 업체와 범용 시장에 머문 업체 간의 실적 및 기업가치 격차는 앞으로 더욱 벌어질 것으로 예상된다. 소부장 업계 전반의 기술 고도화가 이제 선택이 아닌 생존의 조건이 된 시대다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">중국의 헬륨 수출 금지로 반도체 공정 소재 위기가 고조되는 가운데, IEA는 핵심광물 공급망의 3중 위기를 경보했다. AI·HBM 고부가 소재 업체만 실적 호조를 보이며 소부장 업계 양극화가 심화되고 있다.</div>
     </div>
 

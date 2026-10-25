@@ -568,8 +568,23 @@ new PartnersCoupang.G({id:XXXXX, trackingCode:"AF9787280", subId:null, template:
 | `search.html` | fetchWithTimeout |
 | `정적페이지생성.py` | 요약 박스 HTML, paras() int 방어 |
 
-### 제외 (3차 이후)
-색상 토큰 교체, 편집국 브리핑 구조화, "왜 중요한가?" 섹션, 출처/기준일 관리, 기사자동생성.py 수정
+### 3차: 색상 토큰·브리핑 구조화·기사 메타 강화 (2026-10-25)
+- **색상 토큰 교체**: `:root`에 `--briefing-bg/--briefing-border/--briefing-text` 추가, 4개 HTML 변수값 통일(`--bg: #f2f2ee` 등), 사이드바 편집국 브리핑 인라인 style을 `.sb-briefing` 클래스로 교체, article.html `.kw-tag` 하드코딩 색상을 var() 참조로 교체
+- **편집국 브리핑 구조화**: `generate_editorial()`이 headline + points 구조를 생성, `editorial_briefing_v2: {headline, points}` 필드 추가. 프런트에서 v2 우선 렌더링(기존 텍스트 fallback). CSS `.briefing-headline`, `.briefing-points`
+- **"왜 중요한가?" 섹션**: 기사 JSON에 `why_important` 필드 추가(120자 이내, 산업·조달 관점). article.html·정적페이지에 `.art-importance-box` (배경 #eef4fb, 좌측 보더 accent2) 표시. 요약 박스 아래·본문 위 배치
+- **출처/기준일 관리**: 기사 JSON에 `sources` 배열(원천 매체 2~5개) + `reference_date`(YYYY-MM-DD) 추가. 본문 하단 키워드 위에 `.art-sources` 블록("출처: A, B | 기준일: YYYY.MM.DD") 표시
+- 새 필드 전부 optional — 기존 아카이브·클라우드 백업 하위호환 유지
+- 정적 페이지 390건 전량 재생성
+
+### 수정 파일 (3차)
+| 파일 | 변경 내용 |
+|------|----------|
+| `index.html` | `:root` 토큰 추가, `.sb-briefing` 클래스, `renderEditorial()` v2 지원 |
+| `article.html` | `:root` 통일·토큰 추가, `.sb-briefing`·`.kw-tag` var() 교체, `renderEditorial()` v2, `.art-importance-box`·`.art-sources` 렌더링 |
+| `category.html` | `:root` 토큰 추가 |
+| `search.html` | `:root` 토큰 추가 |
+| `기사자동생성.py` | 프롬프트에 `why_important`·`sources`·`reference_date` 추가, tool schema 확장, `generate_editorial()` headline+points 구조, `save_data()` briefing_v2 |
+| `정적페이지생성.py` | `build_briefing_html()` 추가, `.art-importance-box`·`.art-sources` 템플릿, briefing_v2 전달 |
 
 ---
 

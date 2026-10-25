@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">전북특별자치도가 산업통상자원부의 제3기 소재·부품·장비 특화단지 공모에서 &#x27;반도체 소재·케미컬 소부장 특화단지&#x27;로 최종 선정됐다. 새만금·익산·완주 일대가 K-반도체 공급망의 핵심 거점으로 부상하게 됐다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>전북특별자치도는 17일 산업통상자원부가 공고·지정하는 제3기 소재·부품·장비(소부장) 산업 특화단지 공모에서 &#x27;반도체 소재·케미컬 소부장 특화단지&#x27;로 최종 선정됐다고 밝혔다. 이번 지정으로 전북은 국내 반도체 소재 공급망의 새로운 심장부로 떠오르게 됐다.</p>
         <p>소부장 특화단지는 &#x27;소재·부품·장비산업 경쟁력 강화 및 공급망 안정화를 위한 특별조치법&#x27; 제45조에 근거해 산업통상자원부 장관이 지정하는 제도다. 앵커기업과 협력사, 연구소, 지원기관이 한 곳에 집적된 산업 입지를 대상으로 산업기반시설 및 공동 연구개발 인프라 구축비를 지원한다.</p>
@@ -418,6 +432,8 @@
         <p>시장조사업체들은 글로벌 반도체 소재 시장이 2030년까지 연평균 6~8% 성장할 것으로 전망하고 있다. 전북 특화단지가 본궤도에 오르면 연간 수조 원 규모의 생산 유발 효과와 함께 수천 개의 고부가가치 일자리 창출이 기대된다.</p>
         <p>투자자 관점에서는 특화단지 내 입주 기업 또는 앵커기업과 협력 관계를 맺은 중소·중견 소재 기업에 주목할 필요가 있다. 정책 지원에 힘입어 매출 성장과 수익성 개선이 가시화되면 밸류에이션 재평가 기회가 열릴 수 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -444,8 +460,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">전북 소부장 특화단지 선정, 아일랜드 반도체 풀스택 전략 등 각국이 반도체·소재 공급망 내재화에 속도를 내고 있다. 화웨이 UnifiedBus·중국 초내열 합금 등 중국의 기술 자립 행보가 글로벌 공급망 재편을 가속화하는 형국이다.</div>
     </div>
 

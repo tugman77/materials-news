@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">일본 패키징 기판 전문업체 이비덴의 주가가 하루 만에 12.53% 급락했다. AI 반도체 투자 과열 우려에 따른 매도 폭풍이 글로벌 반도체 소재·부품주 전반으로 확산되며 시장 변동성이 높아지고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>일본 반도체 패키징 기판 분야의 대표 기업 이비덴(Ibiden)의 주가가 최근 거래일에 12.53% 폭락했다. AI 반도체 수요에 대한 투자자들의 장밋빛 전망이 &#x27;과도한 낙관론&#x27;이라는 경계감으로 급속히 전환되면서, 이비덴을 포함한 AI 반도체 관련 소재·부품주 전반에 대규모 매도세가 몰아쳤다. 이비덴은 엔비디아 등 AI 칩용 ABF(아지노모토 빌드업 필름) 기판의 핵심 공급업체로 시장의 주목을 받아온 기업이다.</p>
         <p>이비덴 주가 급락의 직접적 트리거는 복수의 글로벌 투자은행이 AI 관련 반도체 기업들의 밸류에이션이 지나치게 높다는 리포트를 동시에 발표한 것으로 분석된다. 미국의 일부 대형 기술주 펀드가 반도체 섹터 비중을 줄이는 리밸런싱에 나서면서, 직접적 반도체 기업뿐 아니라 소재·부품 공급망 전반이 동반 충격을 받았다. 이비덴의 시가총액은 이날 하루 약 1조 엔 이상 증발했다.</p>
@@ -416,6 +430,8 @@
         <p>전문가들은 이번 이비덴 사태를 계기로 AI 반도체 관련 소재·부품 투자에서 &#x27;선별적 접근&#x27;이 더욱 중요해졌다고 조언한다. 단순히 AI 공급망에 속해 있다는 이유만으로 고평가를 유지하기 어려우며, 실제 기술 경쟁력·수주 잔고·원가 구조를 면밀히 분석해야 한다는 것이다. 국내 소재 기업들도 이 기준을 충족하는지 재점검이 필요하다.</p>
         <p>중장기적으로는 AI 반도체 수요의 구조적 성장이 소재·기판 업계를 뒷받침할 것이라는 전망이 지배적이다. 이비덴이 12% 폭락했음에도 불구하고 연초 대비로는 여전히 상당한 수익률을 유지하고 있다는 점이 이를 방증한다. 시장의 관심은 이제 단기 주가 등락보다, 어떤 소재 기업이 다음 세대 AI 반도체 패키징 기술 변화에 가장 잘 적응할 것인지로 이동하고 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">미·이란 충돌로 유가 급등과 소재 공급망 불안이 가중되는 가운데, AI·반도체 소재 투자 과열 우려까지 겹치며 글로벌 소재 시장이 복합 리스크에 직면했다. 반면 티타늄 합금·도시광산 등 첨단 소재 혁신은 착실히 진전 중이다.</div>
     </div>
 

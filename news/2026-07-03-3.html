@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">대동금속이 첨단소재 전문기업으로 변신을 선언하며 글로벌 로봇 기업 보스턴다이나믹스와 로봇용 핵심 소재·부품 기술 협력에 나섰다. 경량 고강도 합금 소재를 앞세워 휴머노이드 로봇 시장을 공략하겠다는 전략이다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>전통 금속 가공 기업 대동금속이 첨단소재 기업으로의 전면 탈바꿈을 선언하고, 세계 최고 수준의 로봇 기업으로 평가받는 미국 보스턴다이나믹스와 로봇용 핵심 소재·부품 분야에서 기술 협력을 추진하고 있다고 밝혔다. 이번 협력은 대동금속이 단순 금속 가공을 넘어 첨단 로봇 소재 전문기업으로 도약하는 결정적 전환점이 될 것으로 업계는 주목하고 있다.</p>
         <p>대동금속이 집중하는 핵심 소재는 티타늄 합금 및 고강도 알루미늄 합금 계열의 경량 구조재다. 로봇, 특히 두 발로 걷는 휴머노이드 로봇은 자체 중량 대비 높은 출력과 내구성이 요구되기 때문에, 강철보다 가볍고 탄소섬유보다 가공성이 우수한 금속 합금 소재가 핵심 경쟁력으로 부상하고 있다.</p>
@@ -416,6 +430,8 @@
         <p>대동금속의 사례는 전통 제조업 기반의 소재·금속 기업들이 신성장 동력을 로봇·방산·우주항공 분야에서 찾는 &#x27;업종 전환형 성장 전략&#x27;의 대표적 모델로 주목받고 있다. 이러한 흐름이 업계 전반으로 확산될 경우 국내 산업재 시장의 질적 고도화에도 기여할 것으로 기대된다.</p>
         <p>증권가에서는 대동금속의 로봇 소재 사업 성과가 가시화될 경우 기업 밸류에이션 재평가로 이어질 수 있다고 분석하며, 2027년 이후 관련 매출 본격화 여부를 핵심 모니터링 포인트로 제시하고 있다. 단기 실적보다는 파트너십의 구체적 계약 현황과 수주 공시를 지켜볼 필요가 있다는 조언도 잇따른다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">AI 반도체·로봇 소재 분야에서 한국 기업들의 기술 도약이 가시화되는 한편, 콩고 광산 붕괴로 탄탈럼 공급망에 비상이 걸렸다. 미국 보호무역 기조 속 철강·조선 통상 압박도 지속되며 소재 산업 전반의 리스크가 고조되고 있다.</div>
     </div>
 

@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">극한 우주 환경에서 방사선에 노출된 차세대 반도체 소재의 내구성을 실시간으로 분석한 연구 결과가 공개됐다. 특정 소재가 방사선에도 구조적 안정성을 유지한다는 사실이 확인되며 우주·방산 반도체 소재 개발에 새 이정표를 세웠다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>극한 우주 환경은 반도체 소재에 가장 가혹한 시험대다. 태양풍과 우주 방사선은 반도체 내부 원자 구조를 뒤흔들어 오작동이나 완전한 기능 상실을 유발한다. 최근 연구진이 방사선 조사 환경에서 차세대 반도체 소재의 거동을 실시간으로 관찰하는 데 성공하며 업계의 주목을 받고 있다.</p>
         <p>이번 연구의 핵심은 &#x27;실시간 투과전자현미경(in-situ TEM)&#x27; 분석 기술을 활용해 방사선 피폭 순간부터 소재 내부 결함 생성 과정을 나노미터 수준에서 추적했다는 점이다. 기존에는 피폭 전후 비교 분석에 그쳤지만, 이제는 손상 메커니즘 자체를 실시간으로 포착할 수 있게 됐다.</p>
@@ -418,6 +432,8 @@
         <p>업계에서는 이번 연구를 계기로 국내 소재·부품·장비(소부장) 기업들의 방사선 내성 소재 투자가 가속화될 것으로 기대하고 있다. 특히 소재 국산화주를 중심으로 기대 매수세가 확대되는 분위기다.</p>
         <p>장기적으로 방사선 내성 반도체 소재는 우주, 방산을 넘어 원자력 발전소 내 센서·제어 시스템, 의료용 방사선 장비 등 다양한 산업으로 응용 영역이 확장될 전망이다. 국내 소부장 업계가 이 분야 선점을 위한 기술 투자를 서둘러야 한다는 목소리가 커지고 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -444,8 +460,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">우주·반도체·배터리 등 첨단 소재 경쟁이 전방위로 격화되는 가운데, 한-브라질 핵심광물 협력으로 공급망 다변화에 속도가 붙었다. 중국발 태양광 과잉공급 충격은 글로벌 소재 밸류체인 재편을 더욱 압박하고 있다.</div>
     </div>
 

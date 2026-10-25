@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">캐나다 탐사 기업 메릴리온 리소스가 자사 광구에서 희토류 879ppm 함량을 확인하고 101만 달러 규모 자금 조달에 성공했다. 중국 의존 탈피를 모색하는 글로벌 희토류 공급망 다변화 흐름 속에서 주목받고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>캐나다 탐사 기업 메릴리온 리소스(Myriad Resources, 티커: MYRLF)가 최근 자사 탐사 광구에서 희토류 총함량(TREO) 879ppm을 공식 확인했다고 발표했다. 이와 함께 101만 달러 규모의 자금 조달을 완료하며 탐사 활동 가속화 의지를 분명히 했다. 글로벌 희토류 공급망 재편 흐름과 맞물려 시장의 관심이 집중되고 있다.</p>
         <p>메릴리온 리소스는 최근 불 마운틴 리소스(Bull Mountain Resources)에 대한 리스 옵션 계약을 체결하고 14만 1,000캐나다달러(CAD)를 선지급했다. 이 광구는 캐나다 서부에 위치하며, 추가 시추를 통해 함량과 매장량 확대 가능성을 검토 중이다. 회사는 미디어 파트너십도 확대해 투자자 인지도 높이기에 나서고 있다.</p>
@@ -417,6 +431,8 @@
         <p>다만 탐사 기업 투자에는 여전히 상당한 리스크가 수반된다. 시추 결과가 기대에 못 미치거나 경제성 평가에서 탈락할 경우 투자 손실이 발생할 수 있으며, 광산 개발 허가 취득과 인프라 구축에만 수년이 소요되는 경우도 많다. 투자 판단 시 탐사 단계별 리스크를 충분히 고려해야 한다.</p>
         <p>메릴리온 리소스는 향후 추가 시추 캠페인을 통해 광구 잠재력을 검증하고, 선도 기업들과의 파트너십 확대를 추진할 계획이다. 희토류 공급망 다변화에 목마른 글로벌 제조 기업들의 투자 참여 가능성도 열려 있어, 이번 탐사 결과가 어떤 후속 행보로 이어지는지 주목된다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -443,8 +459,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">AI 슈퍼사이클을 등에 업은 반도체 소재 수요가 폭발적으로 확대되며 글로벌 공급망 재편이 가속화되고 있다. 유리기판·희토류 등 핵심 소재 동맹 경쟁이 격화되는 한편, 국내 대기업들은 포트폴리오 선택과 집중에 돌입했다.</div>
     </div>
 

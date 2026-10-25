@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">인공지능(AI) 가전과 서비스 로봇 보급 확대로 전력 인프라 관련 산업재 수요가 빠른 속도로 늘고 있다. 변압기, 배전반, 전력 케이블 등 핵심 전력 설비 품목이 공급 부족 조짐을 보이면서 관련 기업들의 수주 잔고가 역대 최고 수준을 기록 중이다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>AI 기반 가전제품과 산업·서비스 로봇의 급속한 보급이 전력 인프라 산업재 시장의 구조적 수요 확대를 이끌고 있다. 데이터센터, 스마트팩토리, AI 가전 등 고전력 소비 기기의 증가로 전력망 용량 확충 필요성이 폭발적으로 커지면서, 변압기·배전반·전력 케이블 등 전통 전력 산업재 품목이 &#x27;신(新)성장 테마&#x27;로 재조명받고 있다.</p>
         <p>국제에너지기구(IEA)에 따르면, 글로벌 데이터센터 전력 소비는 2025년 약 415TWh에서 2030년에는 1,000TWh를 넘어설 것으로 전망된다. 이는 현재 독일 전체 전력 소비량에 맞먹는 규모로, AI 연산 수요 확대가 전력 인프라 투자 사이클을 강하게 자극하고 있다.</p>
@@ -417,6 +431,8 @@
         <p>전문가들은 현재의 전력 인프라 투자 사이클이 최소 10년 이상 지속될 것으로 내다보고 있다. 에너지경제연구원 연구위원은 &#x27;AI, 전기차, 재생에너지의 동시 확산이 전력망에 가하는 수요 압박은 단기에 해소될 성질이 아니다&#x27;며 &#x27;전력 인프라 산업재 기업들이 20년 만에 맞이하는 최대 호황 국면에 들어서고 있다&#x27;고 분석했다.</p>
         <p>투자 시사점으로, 전력 인프라 산업재 섹터는 AI 반도체·데이터센터 테마의 간접 수혜주로 주목받고 있다. 국내 증권가에서는 LS일렉트릭, 효성중공업, 대한전선, HD현대일렉트릭 등을 핵심 수혜주로 꼽으며, 2026~2027년 실적 성장 가시성이 높은 업종으로 분류하고 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -443,8 +459,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">칩플레이션이 서비스 시장까지 번지고 망간 등 핵심광물 공급망 경쟁이 심화되며 소재·부품 전반의 불안정성이 고조되고 있다. AI·로봇 확산이 전력 인프라 수요를 끌어올리는 한편, 핵심광물 ETF 급성장으로 투자 패러다임도 빠르게 재편 중이다.</div>
     </div>
 

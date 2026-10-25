@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">중국·미국·일본이 국가 주도로 반도체 소부장 증설 투자를 경쟁적으로 늘리는 가운데, 국내 소부장 업체들은 금리 부담과 민간 투자 위축으로 자금 조달에 어려움을 겪으며 격차가 벌어지고 있다는 경고가 잇따른다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>중국·미국·일본이 반도체 소재·부품·장비(소부장) 분야에 국가 차원 대규모 투자를 경쟁적으로 늘리는 가운데, 국내 소부장 업체들은 자금 조달에 난항을 겪으며 증설 속도가 뒤처지고 있다는 경고가 업계에서 높아지고 있다. 소부장 증설 전쟁에서 밀릴 경우 국내 반도체 생태계 공급망 취약성이 심화된다는 우려도 구체화되고 있다.</p>
         <p>중국은 첨단 노광장비 수출 규제를 우회하기 위해 자국산 장비 개발에 수조 원 규모의 국가 예산을 투입 중이다. SMEE(상하이마이크로전자장비) 등이 28나노미터급 이하 공정 진입을 목표로 기술 개발을 가속화하고 있다. 최첨단 공정까지는 격차가 있으나 중간 공정 시장 점유율 확대는 한국 소부장 기업에도 실질적 위협이 된다.</p>
@@ -415,6 +429,8 @@
         <p>소부장 자금 경쟁력 확보를 위해서는 정책금융 확대와 대형 수요 기업·소부장 업체 간 &#x27;앵커 계약&#x27; 문화 정착이 병행돼야 한다. 안정적 수주 확약이 있어야 민간 금융이 움직이기 때문이다. 반도체 강국 도약을 위해서는 화려한 팹 건설 발표보다 소부장 공급 기반을 탄탄히 다지는 정책 집중이 선행돼야 한다는 게 업계의 공통된 요구다.</p>
         <p>전문가들은 소부장 증설 투자 격차가 확대될 경우 한국 반도체 경쟁력의 핵심 리스크가 될 수 있다고 경고한다. 반도체 공장 가동률이 소부장 공급 능력에 묶이는 상황을 막으려면 소부장 증설을 반도체 클러스터 계획의 필수 구성 요소로 포함시키는 정책 전환이 시급하다. 뿌리가 단단해야 진짜 반도체 강국이 된다는 교훈을 정책 설계에 녹여야 할 때다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -441,8 +457,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">LB세미콘의 퀄컴 AI·차량용 후공정 진입, OCI의 웨이퍼 재생사업 등 국내 업계가 고부가 틈새 공략에 나섰지만, 소부장 자금난과 희토류 비용 상승이 하반기 경쟁력을 압박하고 있다.</div>
     </div>
 

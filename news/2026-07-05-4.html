@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">2026년 상반기 코스피 변동성 완화장치(VI) 발동 횟수가 역대 최대를 기록했다. 소재·산업재 종목을 중심으로 극단적 변동성이 반복되면서 투자자들의 리스크 관리가 더욱 중요해졌다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>2026년 상반기 국내 증시에서 코스피 변동성 완화장치(VI) 발동 횟수가 역대 최대치를 경신했다. VI는 주가가 단시간 내 일정 비율 이상 급변할 때 매매를 2분간 중단시키는 장치로, 올해 상반기에는 미국 관세 정책 불확실성, 지정학적 리스크, AI 반도체 수출 통제 등 복합적 요인이 겹치면서 증시 변동폭이 극대화됐다.</p>
         <p>한국거래소에 따르면 올해 상반기 코스피 VI 발동 건수는 전년 동기 대비 40% 이상 급증했으며, 변동성 지수(VKOSPI)도 역대 두 번째로 높은 수준을 기록했다. 특히 반도체, 소재, 산업재 섹터에서 VI 발동이 집중됐다는 분석이 나온다.</p>
@@ -417,6 +431,8 @@
         <p>한편 높은 변동성은 옵션·선물 시장에도 영향을 주고 있다. 코스피200 옵션 거래량은 상반기 기준 전년 대비 30% 이상 증가했으며, 변동성 장세를 활용한 헤지 전략 수요가 높아지고 있다. 이는 기관과 외국인이 리스크 관리를 강화하고 있다는 신호로 해석된다.</p>
         <p>결국 소재·산업재 투자자들에게 2026년 상반기의 고변동성 장세는 위기이자 기회였다. 개별 기업의 실적 모멘텀과 산업 사이클을 정확히 파악하고, 거시 리스크를 감안한 포트폴리오 배분을 유지하는 투자자들이 이 난관을 넘어설 수 있을 것이라고 전문가들은 조언한다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -443,8 +459,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">반도체 패키징·차세대 메모리 등 첨단 소재 밸류체인 재편이 가속화되는 가운데, 중국발 다이아몬드 소재 도전과 홈플러스 파산 위기로 공급망 긴장이 고조되고 있다. 코스피 VI 역대 최다 발동은 소재·산업재 전반의 불안한 투자 심리를 단적으로 보여준다.</div>
     </div>
 

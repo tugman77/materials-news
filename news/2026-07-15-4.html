@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">폐전자제품에서 희귀금속을 회수하는 도시광산 기술이 주요국 정책 지원을 받으며 2차 공급망의 핵심 축으로 급부상하고 있다. 국내외 기업들은 선별·정제 기술 고도화를 통해 자원 순환 생태계 구축에 속도를 내고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>폐스마트폰·서버·전기차 부품 등에서 희귀금속을 추출하는 도시광산(Urban Mining) 기술이 글로벌 희귀금속 공급망 재편의 주요 대안으로 주목받고 있다. 지정학적 불확실성으로 원산지 조달이 어려워지면서, 이미 사용된 제품에서 자원을 재순환시키는 도시광산의 전략적 가치가 빠르게 높아지는 추세다.</p>
         <p>국제에너지기구(IEA)에 따르면 2030년까지 글로벌 희귀금속 수요는 현재 대비 최대 6배 증가할 것으로 전망된다. 반면 신규 광산 개발 사이클은 평균 15~20년이 소요돼 공급 확대 속도가 수요를 따라가지 못하는 구조적 불균형이 심화될 것으로 우려된다.</p>
@@ -418,6 +432,8 @@
         <p>투자 측면에서 도시광산 기업들은 ESG 경영 트렌드와도 결을 같이하며 기관투자자들의 관심을 받고 있다. 희귀금속 재활용을 통한 탄소 저감 효과와 순환경제 기여도가 높은 평가를 받으면서, 관련 기업 주가가 최근 1년간 평균 30% 이상 상승한 것으로 집계된다.</p>
         <p>업계 전문가는 &#x27;도시광산 기술의 경제성이 확보되고 정책 지원이 강화되면서, 향후 10년 내 주요 희귀금속의 재활용 비중이 신규 채굴 비중을 넘어설 수 있다&#x27;며 &#x27;자원 순환 생태계 구축이 희귀금속 공급망 안보의 가장 현실적 해법&#x27;이라고 강조했다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -444,8 +460,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">호르무즈 긴장·최저임금 인상으로 공급망·원가 압박이 가중되는 가운데, 한국은행 금리 인상 가능성이 금융시장 변수로 부상했다. 반면 원자력 NTD 기술 수출·도시광산 성장은 소재 산업의 새 돌파구로 주목된다.</div>
     </div>
 

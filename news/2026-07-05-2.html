@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">인조 다이아몬드 생산 세계 1위인 중국이 첨단 반도체 소재 시장 진출을 본격화하고 있다. 다이아몬드 반도체는 실리콘 한계를 뛰어넘는 극한 소재로 주목받고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>인조 다이아몬드 세계 최대 생산국인 중국이 기존 보석·연마재 용도를 넘어 첨단 반도체 소재로서의 다이아몬드 활용에 본격적인 투자를 시작했다. 중국 기업들은 저렴한 생산 원가를 바탕으로 대량 생산 체계를 구축한 뒤, 이를 고부가가치 반도체 소재 시장으로 연결하려는 전략을 추진 중이다.</p>
         <p>인조 다이아몬드는 고온고압(HPHT) 또는 화학기상증착(CVD) 방식으로 제조된다. 중국은 전 세계 공업용 인조 다이아몬드 생산량의 약 90%를 차지하고 있으며, 최근에는 CVD 방식의 고품질 단결정 다이아몬드 생산 기술에서도 급격히 기술 수준을 끌어올리고 있다.</p>
@@ -417,6 +431,8 @@
         <p>미국과 유럽은 다이아몬드 반도체를 전략 핵심 소재로 분류하고 수출 통제를 강화하는 방향을 검토 중이다. 중국의 기술 굴기가 가속화될수록 서방의 기술 차단 조치도 강해질 가능성이 있어, 이 분야의 지정학적 리스크도 주목해야 한다.</p>
         <p>투자자들은 다이아몬드 반도체 소재 관련 국내외 기업들의 R&amp;D 동향을 면밀히 살필 필요가 있다. 단기 상용화보다는 중장기 기술 선점 경쟁이 핵심이며, 관련 특허와 기판 생산 기술 확보 여부가 향후 기업 가치를 결정하는 핵심 변수가 될 것이다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -443,8 +459,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">반도체 패키징·차세대 메모리 등 첨단 소재 밸류체인 재편이 가속화되는 가운데, 중국발 다이아몬드 소재 도전과 홈플러스 파산 위기로 공급망 긴장이 고조되고 있다. 코스피 VI 역대 최다 발동은 소재·산업재 전반의 불안한 투자 심리를 단적으로 보여준다.</div>
     </div>
 

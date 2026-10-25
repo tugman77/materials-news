@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">버려진 전자제품에서 희소금속을 회수하는 &#x27;도시광산&#x27; 산업이 글로벌 자원 안보 차원에서 재조명받고 있다. 국내외 기업들이 재활용 기술 고도화에 집중하며 희소금속 공급 다변화의 핵심 축으로 부상하고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>폐 스마트폰, 노트북, 전기차 배터리 등 사용이 끝난 전자제품 속에는 금, 은, 팔라듐, 코발트, 인듐 등 수십 종의 희소금속이 담겨 있다. 이를 체계적으로 회수하는 &#x27;도시광산(Urban Mining)&#x27; 산업이 자원 안보와 탄소중립이라는 두 가지 과제를 동시에 해결할 수 있는 방안으로 주목받고 있다.</p>
         <p>도시광산의 경제적 가치는 상상 이상이다. 스마트폰 1톤에서는 금 약 300g, 은 약 3kg, 팔라듐 약 130g이 추출 가능한 것으로 알려져 있다. 이는 금광 원석 1톤에서 채굴 가능한 금의 양(평균 5~10g)과 비교해 수십 배 높은 수준이다. 전 세계적으로 연간 발생하는 전자폐기물은 약 5,000만 톤으로, 그 잠재 가치는 약 620억 달러(약 85조 원)에 달한다.</p>
@@ -416,6 +430,8 @@
         <p>국내 투자자들에게도 도시광산 관련 기업들이 주목받고 있다. 성일하이텍, 새빗켐, 에코프로 계열의 재활용 자회사 등이 관심 대상으로 꼽힌다. 다만 원자재인 폐배터리 수거 경쟁이 심화되면서 원료 확보 비용이 상승할 수 있다는 점은 리스크 요인으로 지적된다.</p>
         <p>전문가들은 도시광산이 &#x27;제2의 광산&#x27;을 넘어 &#x27;순환경제의 핵심 인프라&#x27;로 자리매김할 것이라고 전망한다. 자원 빈국인 한국이 수입 의존도를 줄이면서 희소금속 가공·재활용 기술 강국으로 도약할 수 있는 가장 현실적인 경로가 도시광산 산업의 육성이라는 점에서, 정책적 지원의 필요성이 더욱 높아지고 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">반도체 소재 공급망 전반에 걸쳐 지각변동이 감지된다. 중국의 일본 독점 시장 침투, CCL 가격 급등 등 원가 압박이 가중되는 가운데, 구미 생태계 이탈 우려까지 겹치며 국내 산업 기반이 흔들리고 있다. 도시광산·톱티어 비자 등 자원·인재 확보 대안이 돌파구로 부상 중이다.</div>
     </div>
 

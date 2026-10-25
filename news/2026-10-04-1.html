@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">오픈소스 칩 설계 표준 RISC-V를 둘러싸고 미국과 중국 기업 간 협력이 기술 패권 경쟁 속에서도 지속되고 있다. 미국 IP 업체 MIPS가 중국 기업들과의 공동 개발을 전례 없는 수준으로 확대하고 있다고 공개 발언해 주목된다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>오픈소스 칩 설계 아키텍처(설계 표준)인 RISC-V를 둘러싼 미중 협력이 반도체 수출 규제 강화 기조에도 불구하고 오히려 심화되고 있다는 분석이 나왔다. 미국의 반도체 지식재산권(IP) 공급 업체 MIPS의 고위 임원은 사우스차이나모닝포스트(SCMP) 인터뷰에서 &quot;RISC-V 생태계에서 중국 기업과의 협력이 전례 없는 수준으로 깊어지고 있다&quot;고 밝혔다.</p>
         <p>RISC-V는 특정 기업이 소유하지 않는 개방형 명령어 집합 아키텍처(ISA)로, 누구나 무상으로 사용·수정·배포할 수 있다. 인텔의 x86, ARM의 아키텍처와 달리 라이선스 비용이 없어 중국 반도체 기업들이 미국의 ARM 라이선스 제재 우회 수단으로 적극 채택하고 있다.</p>
@@ -416,6 +430,8 @@
         <p>RISC-V 인터내셔널(비영리 표준화 기구)은 현재 70개국 4,000여 개 회원사를 보유하고 있으며 본부는 스위스에 위치해 있다. 미국 정부의 영향력이 직접 미치기 어려운 구조로 설계돼 있어, 향후 지정학적 긴장이 고조되더라도 표준 자체가 분열될 가능성은 낮다는 게 전문가들의 중론이다.</p>
         <p>시장조사기관 카운터포인트리서치는 2030년까지 RISC-V 기반 칩 시장 규모가 연간 170억 달러(약 23조 원)를 넘어설 것으로 전망한다. AI 엣지 디바이스, 자동차 전장, 산업용 IoT가 3대 성장 동력으로 꼽힌다. 국내 소부장 기업들도 RISC-V 기반 칩 제조용 소재·장비 수요 증가에 선제적으로 대비할 필요가 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">반도체 소재 공급망 재편이 가속화되는 가운데, 국내 기업의 사업 전환과 글로벌 기술 패권 경쟁이 맞물리며 핵심 원자재 무기화 리스크가 전 산업으로 확산되고 있다.</div>
     </div>
 

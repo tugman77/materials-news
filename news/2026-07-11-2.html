@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">중국의 헬륨 수출 금지 조치가 희귀가스 공급망 전반의 판도를 바꾸고 있다. 헬륨 외에도 네온·크립톤·제논 등 반도체 공정 필수 희귀가스의 공급망 취약성이 함께 부각되며 전략 비축 및 다변화 논의가 급물살을 타고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>중국이 헬륨 수출을 전격 금지하면서, 반도체 공정에 사용되는 희귀가스(Noble Gas) 전반의 공급망 리스크가 수면 위로 떠올랐다. 헬륨 외에도 네온(Ne)·크립톤(Kr)·제논(Xe)·아르곤(Ar) 등 이른바 &#x27;비활성 기체&#x27; 계열 희귀가스들이 반도체 제조 공정 곳곳에 깊숙이 자리잡고 있어, 이번 사태가 촉발한 공급망 불안은 헬륨에 국한되지 않는다는 지적이 나온다.</p>
         <p>희귀가스 중 네온은 반도체 노광(리소그래피) 공정에 사용되는 엑시머 레이저의 핵심 원료로, 2022년 러시아-우크라이나 전쟁 당시 우크라이나산 네온 공급이 막히면서 가격이 반년 만에 수백 퍼센트 폭등한 전례가 있다. 크립톤과 제논은 고급 광학 코팅 및 이온 주입 공정에 활용되며, 대기 중 농도가 극히 낮아 생산 단가가 높다.</p>
@@ -416,6 +430,8 @@
         <p>희귀가스 공급망 다변화와 재활용 기술 투자는 단기적으로 비용이 수반되지만, 중장기적으로는 공급 리스크 완화와 원가 절감을 동시에 달성할 수 있는 전략으로 평가받는다. 특히 사용 후 희귀가스를 회수·재정제해 재판매하는 비즈니스 모델은 국내 소재 기업들에게 새로운 수익원이 될 수 있다는 점에서 주목받고 있다.</p>
         <p>향후 헬륨 수출 금지가 장기화되거나 중국이 네온·크립톤 등 다른 희귀가스로 통제 범위를 확대할 경우, 글로벌 반도체 생산 비용 상승은 불가피하다. 시장조사기관들은 이 경우 첨단 반도체 원가가 5~10% 추가 상승할 수 있다고 추정하며, 이는 최종 전자제품 가격에도 순차적으로 반영될 가능성이 있다고 경고한다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">중국의 헬륨·희귀가스 수출 금지로 반도체 공급망에 비상이 걸렸다. 자원 무기화가 가속되며 글로벌 소재 공급망이 신냉전 구도로 재편되는 가운데, 국내는 지역 클러스터 조성과 전문인력 양성으로 정면 돌파에 나서고 있다.</div>
     </div>
 

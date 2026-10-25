@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">삼성디스플레이가 12인치 RGB OLEDoS(실리콘 기판 위 OLED) 양산 설비에 3,000억 원 규모의 투자를 결정하며 마이크로디스플레이 시장 선점에 나선다. XR·AR 기기 수요 폭증에 대비한 포석으로, 관련 소재·장비 공급망에 파급 효과가 클 전망이다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>삼성디스플레이가 12인치 웨이퍼 기반 RGB OLEDoS(OLED on Silicon) 양산 라인 구축에 약 3,000억 원을 투자하기로 결정했다. OLEDoS는 실리콘 웨이퍼 위에 마이크로미터(㎛) 단위 크기의 OLED 픽셀을 직접 증착하는 기술로, 초고해상도·초고휘도가 요구되는 XR(확장현실) 헤드셋·AR 안경 등의 핵심 디스플레이 소자다.</p>
         <p>12인치(300mm) 웨이퍼 적용은 현재 주류인 8인치 대비 생산 면적을 약 41% 확대할 수 있어 원가 경쟁력과 생산성이 동시에 향상된다. 삼성디스플레이는 이를 통해 연간 OLEDoS 생산 능력을 기존 대비 두 배 이상 끌어올릴 계획이다. 양산 목표 시점은 2027년 하반기로 알려졌다.</p>
@@ -415,6 +429,8 @@
         <p>FCC(미국 연방통신위원회)가 광통신 장비 수입 규제를 검토 중인 것도 XR·AI 인프라 투자와 맞물려 OLEDoS 수요를 자극하는 요인이 될 수 있다. AI 데이터센터와 엣지 컴퓨팅 확산이 고해상도 디스플레이 수요를 견인하는 구조 속에서, 삼성디스플레이의 이번 투자는 장기적 성장 동력 확보 차원으로 해석된다.</p>
         <p>업계 애널리스트는 &#x27;12인치 OLEDoS 양산은 마이크로디스플레이 시장 게임체인저가 될 것&#x27;이라며 &#x27;삼성이 먼저 12인치 양산 체계를 갖추면 원가·공급 능력에서 압도적 우위를 점하게 되고 애플·메타·구글 등 주요 XR 플랫폼 기업의 전략적 파트너로 자리잡을 수 있다&#x27;고 분석했다. 소재·장비 밸류체인 전반의 수혜가 기대된다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -441,8 +457,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">중국의 희토류 수출통제와 일본 소재기업 생산중단이 겹치며 반도체·첨단산업 공급망에 복합 위기가 고조되고 있다. 한편 국내외 기업들은 신규 투자와 자원외교로 공급망 다변화에 속도를 내고 있다.</div>
     </div>
 

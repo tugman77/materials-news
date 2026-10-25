@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">스마트폰 핵심 부품인 메모리 가격이 급등하면서 애플 공급업체들의 상반기 실적이 엇갈렸다. 렌즈테크놀로지 등 주요 부품 업체들이 메모리 원가 부담으로 수익성이 눌리면서, 하반기 아이폰 출시에 실적 반등을 기대하는 구도가 형성되고 있다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>2026년 상반기 스마트폰 부품 시장에서 메모리 가격의 급등세가 애플 공급업체들의 손익 구조를 직접적으로 흔들었다. 대형 공급업체들 사이에서도 실적이 엇갈리는 양극화 현상이 뚜렷하게 나타나고 있다.</p>
         <p>중국 선전에 본사를 둔 렌즈테크놀로지(Lens Technology)는 상반기 영업이익이 전년 대비 크게 줄었다. 스마트폰용 커버글라스와 금속 케이스를 주력으로 하는 이 회사는 메모리 부품 조달 비용 상승이 완제품 수익성을 직격했다고 밝혔다.</p>
@@ -416,6 +430,8 @@
         <p>이러한 시장 구조 변화는 스마트폰 공급망 내 소재·부품 업체들에게 원가 관리 전략의 재정립을 요구하고 있다. 장기 메모리 조달 계약 비중 확대, 대체 소재 개발, 공정 효율화를 통한 원가 절감이 향후 2~3년 내 업체 경쟁력을 좌우할 핵심 과제로 떠오르고 있다.</p>
         <p>전문가들은 메모리 가격 사이클이 AI 수요와 스마트폰 수요의 교차점에서 이전과는 다른 양상으로 전개되고 있다고 지적한다. 한 반도체 애널리스트는 &#x27;과거처럼 메모리 가격이 급락하는 주기적 사이클을 기대하기 어렵고, 스마트폰 부품 업체들은 높은 메모리 원가를 구조적 변수로 받아들여야 한다&#x27;고 조언했다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">EUV 펠리클 생산 확대·PFAS 규제 대응·3D프린팅 원자로 부품 혁신 등 첨단소재 공급망 전반에 구조적 변화가 가속화되고 있다. 메모리 가격 급등으로 애플 공급망 내 실적 양극화가 심화되는 가운데, 반도체·디스플레이 업계의 소재 기술 경쟁이 본격화되고 있다.</div>
     </div>
 

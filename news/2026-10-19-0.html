@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">중국 정부가 고효율 태양광 셀·모듈 제조 핵심 기술 12종에 대한 수출 규제 도입을 공식 검토한다고 밝혔다. 반도체 소재에 이어 청정에너지 공급망까지 통제 범위를 확대하는 움직임으로, 글로벌 태양광 소재·장비 업계에 파장이 예상된다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>야후파이낸스가 2026년 10월 18일 보도한 바에 따르면, 중국 당국이 고효율 태양광 제조 관련 기술 12개 항목을 수출 통제 목록에 추가하는 방안을 제안했다. 대상 기술에는 초박형 실리콘 웨이퍼 슬라이싱, 고효율 이종접합(HJT) 셀 제조, 페로브스카이트 탠덤 셀 공정 등이 포함된 것으로 전해진다.</p>
         <p>이번 조치는 중국이 올해 초 반도체 핵심 소재인 헬륨 수출을 전면 금지한 데 이어, 청정에너지 제조 분야로 통제 범위를 확장하는 연장선상에 있다. 중국은 전 세계 태양광 모듈 생산의 약 80%, 폴리실리콘 공급의 90% 이상을 점유하고 있어 이번 규제안의 파급력은 상당할 것으로 분석된다.</p>
@@ -416,6 +430,8 @@
         <p>소재타임스 분석으로는, 태양광 제조 기술 수출 통제가 현실화할 경우 웨이퍼 가공용 다이아몬드 와이어, HJT용 인듐 산화물(ITO) 타겟재, 페로브스카이트 전구체 소재 등 관련 소재 공급망 전반에 간접 영향이 미칠 것으로 보인다. 국내외 소재 기업들의 기술 자립화 투자 속도가 빨라질 것으로 전망된다.</p>
         <p>중국의 연이은 전략 기술·소재 수출 통제는 글로벌 공급망 재편 압력을 가속화하는 요인이 되고 있다. 한국 정부와 업계는 반도체에서 시작된 소재 자립화 전략을 태양광·에너지 소재 분야로 확장하는 중장기 로드맵 마련이 필요한 시점이다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">중국의 태양광 기술 수출통제 추진으로 글로벌 청정에너지 공급망 불확실성이 고조되는 가운데, 한국은 국방용 화합물반도체 자립화와 배터리 원가 혁신으로 첨단소재 경쟁력 강화에 나섰다.</div>
     </div>
 

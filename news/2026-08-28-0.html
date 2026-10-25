@@ -25,16 +25,17 @@
     --primary: #1a2b4a;
     --accent: #c8102e;
     --accent2: #0057a8;
-    --bg: #f5f5f0;
+    --bg: #f2f2ee;
     --card-bg: #ffffff;
-    --border: #d0cfc8;
-    --text: #1a1a1a;
+    --border: #d8d8d2;
+    --text: #111;
     --text-muted: #4a4a4a;
     --text-light: #888;
     --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
     --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
     --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
     --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
@@ -118,6 +119,10 @@
   .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; max-width: 700px; }
   .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
   .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; max-width: 700px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; max-width: 700px; line-height: 1.6; }
   .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; max-width: 700px; }
   .art-body p { margin-bottom: 18px; word-break: keep-all; }
   .art-body p:last-child { margin-bottom: 0; }
@@ -197,11 +202,18 @@
   .link-arrow { font-size: 10px; color: var(--border); }
 
   .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: #e8f0fb; color: #0057a8; border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
   .kw-tag:hover { background: var(--primary); color: #fff; }
-  .kw-tag.rare { background: #fdf0f0; color: #c8102e; }
-  .kw-tag.industry { background: #f0f7ee; color: #2e7d32; }
-  .kw-tag.global { background: #fdf6e3; color: #a05000; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
 
   .sb-coupang { padding: 0; overflow: hidden; }
   .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
@@ -401,6 +413,8 @@
         <div class="art-summary-text">화웨이가 첨단 미세공정 없이도 칩 성능을 끌어올리는 &#x27;LogicFolding&#x27; 아키텍처를 공개했다. 트랜지스터 축소 대신 회로 구조 자체를 3차원으로 접어 집적도를 높이는 방식으로, 수출규제 속 독자 돌파구를 마련했다는 평가다.</div>
       </div>
 
+
+
       <div class="art-body">
         <p>화웨이 반도체 부문장 허팅보(He Tingbo)가 지난 5월 국제 학술대회 IEEE ISCAS에서 &#x27;LogicFolding&#x27; 아키텍처를 공개했다. 이 기술은 트랜지스터 미세화에 의존하지 않고 칩 성능을 높이는 새로운 설계 방식으로, 미국의 반도체 수출규제로 7나노 이하 공정 접근이 막힌 화웨이가 설계 혁신으로 활로를 뚫겠다는 의지를 담고 있다.</p>
         <p>LogicFolding의 핵심 원리는 논리 회로를 기존 2D 평면 배치에서 3차원 구조로 &#x27;접어(Fold)&#x27; 재구성하는 것이다. 동일한 칩 면적에서 더 많은 연산을 처리할 수 있어, 7나노 수준 공정에서도 5나노 이하 경쟁사 칩에 근접하는 성능을 목표로 한다. 화웨이는 이를 &#x27;TAU 스케일링&#x27;이라는 새로운 개념과 함께 제시했다.</p>
@@ -416,6 +430,8 @@
         <p>향후 관전 포인트는 LogicFolding의 양산 전환 시점과 성능 검증 결과다. 화웨이가 올해 하반기 자사 AI 가속기 칩에 이 기술을 적용한 결과물을 공개할 가능성이 거론되며, 글로벌 반도체 업계는 설계 혁신이 공정 미세화를 대체할 수 있는지 여부를 주시하고 있다.</p>
         <p>전문가들은 LogicFolding이 단기 성과보다 중장기 기술 방향성에서 의미가 크다고 본다. 설계 구조 혁신이 소재·패키징 혁신과 맞물릴 경우, 국내 첨단 패키징 소재 기업들에게는 새로운 수요 창출 기회가 될 수 있다는 분석도 나온다. 소부장 업계 입장에서 화웨이의 행보를 단순한 경쟁사 이슈로 치부하기 어렵다는 시각이 확산되고 있다.</p>
       </div>
+
+
 
       <div class="newsletter-cta">
         <div>
@@ -442,8 +458,8 @@
 
   <aside class="art-sidebar">
 
-    <div class="sb-box" style="background:#f8f4ef;border-color:#d4c5b0;">
-      <div class="sb-title" style="color:#7a5c3a;border-bottom-color:#7a5c3a;">편집국 브리핑</div>
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
       <div style="font-size:13px;color:#444;line-height:1.75;">화웨이의 칩 폴딩 기술·중국 소재 자립 등 미중 기술 디커플링이 가속되는 가운데, 페로브스카이트·AI 로봇 라이다 등 차세대 소재·부품 혁신이 동시에 진행 중이다. 국내외 공급망 재편 압력이 높아지며 한국 우주·반도체 부품 국산화도 속도를 내고 있다.</div>
     </div>
 
