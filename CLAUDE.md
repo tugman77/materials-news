@@ -80,7 +80,8 @@
 4. `기사검수.py` (이미지·중복·사실성 검수 + Telegram 보고)
 5. `articles.json` + `archive/YYYY-MM-DD.json` 저장
 
-- **body**: `array[string]` (10~13 단락, 각 200~300자)
+- **body**: `array[string]` (5~13 단락, 각 150~300자 — 2026-10-26부터 분량은 원본 근거 범위 안에서. 조각 단락은 `_mend_body`가 앞 단락에 붙임. 수집 0건이면 생성 중단)
+- **review**: 검수 결과. 2026-10-26부터 `archive/{날짜}.json`에도 저장
 - **max_tokens**: 32,000 / **effort**: `"low"` (생성), `medium` (검수)
 - **카테고리**: `반도체소재` / `희귀금속` / `산업재` / `글로벌`
 - **기사 필드**: `why_important`(120자, 산업 관점), `sources`(원천 매체 2~5개), `reference_date`(YYYY-MM-DD) — 전부 optional

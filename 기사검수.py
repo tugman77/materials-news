@@ -620,6 +620,17 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     print("검수 결과 articles.json 저장 완료")
+    # 아카이브에도 남긴다 (2026-10-26). 예전에는 보류가 생겨 save_data를 다시 부른 날만
+    # 아카이브에 review가 들어가 434건 중 2건뿐이었다 — 날짜별 품질 추적이 안 됐다.
+    if data.get("date_key"):
+        arch = f"archive/{data['date_key']}.json"
+        try:
+            if os.path.exists(arch):
+                with open(arch, "w", encoding="utf-8") as f:
+                    json.dump(data, f, ensure_ascii=False, indent=2)
+                print(f"검수 결과 아카이브 반영 → {arch}")
+        except Exception as e:
+            print(f"   → 아카이브 반영 오류: {e}")
 
     _save_image_history()  # 검수 중 재다운로드로 갱신된 이미지 이력 영구 저장
 

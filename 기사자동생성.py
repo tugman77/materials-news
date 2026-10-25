@@ -596,6 +596,26 @@ def _generate_via_batch(client, request_params):
         return None
 
 
+def _mend_body(body):
+    """조각난 단락을 앞 단락에 붙인다 (2026-10-26).
+    본문 인용의 곧은 큰따옴표가 JSON을 깨면 복구 과정에서 '윈팩 관계자는 ', '며', 2024처럼
+    문장이 쪼개지고 숫자가 따로 떨어져 나왔다(기존 기사 10여 건). 숫자도 문자열로 맞춘다."""
+    mended = []
+    for p in body:
+        p = str(p).strip()
+        if not p:
+            continue
+        if mended and len(p) < 40:
+            mended[-1] = f"{mended[-1]} {p}"
+        elif mended and len(mended[-1]) < 40:
+            mended[-1] = f"{mended[-1]} {p}"
+        else:
+            mended.append(p)
+    if len(mended) != len(body):
+        print(f"   ⚠️  조각난 단락 정리: {len(body)} → {len(mended)}개")
+    return mended
+
+
 def generate_articles_with_claude(raw_news_list, recent_topics=None, event_memory=None, sojaetimes_briefing=None):
     """수집된 뉴스를 바탕으로 Claude가 독창적 기사 작성.
     recent_topics:       최근 N일치 기사 목록 — 이 주제들과 겹치지 않게 작성 지시.
@@ -610,10 +630,14 @@ def generate_articles_with_claude(raw_news_list, recent_topics=None, event_memor
         # 매일 비슷한 기사가 나온다(2026-08-02). 피드 24개 체제에 맞춰 확대.
         news_text += f"{i}. [{item['source']}] {item['title']}\n   {item['summary']}\n\n"
 
+    # 수집 자료가 없으면 쓰지 않는다 (2026-10-26). 예전에는 "실제 있을 법한 기사"를 쓰게 해
+    # 근거 없는 기사가 나갈 수 있었다. 여기서 실패하면 로컬은 중단되고 클라우드 백업이 다시 수집한다.
     if news_text:
         news_section = f"[수집된 원본 뉴스]\n{news_text}\n\n원문을 참고해서 핵심 내용을 바탕으로 새로운 문장으로 작성하세요."
+    elif sojaetimes_briefing and any((sojaetimes_briefing.get("topics") or {}).values()):
+        news_section = "[원본 뉴스 없음]\nRSS 수집에 실패했습니다. 위 전문 이슈에 실린 내용만 근거로 작성하세요. 거기 없는 사실·수치는 쓰지 않는다."
     else:
-        news_section = "[원본 뉴스 없음]\nRSS 수집에 실패했습니다. 최근 반도체·소재·희귀금속·산업재 업계 동향을 바탕으로 실제 있을 법한 기사를 작성하세요."
+        raise RuntimeError("수집된 원본 뉴스·전문 이슈가 모두 0건 — 근거 없이 기사를 쓰지 않는다")
 
     # 최근 다룬 주제 → 중복 금지 섹션
     if recent_topics:
@@ -696,8 +720,8 @@ def generate_articles_with_claude(raw_news_list, recent_topics=None, event_memor
 - **카테고리 균형**: {ARTICLE_COUNT}건은 **서로 다른 카테고리**여야 한다.
   (반도체소재로 쏠리는 경향이 있다)
 - **하루 {ARTICLE_COUNT}건뿐이다. 오늘 가장 중요한 사건만 고른다.** 건수를 채우려고
-  비슷한 사건을 여러 각도로 늘려 쓰지 말 것 — 쓸 만한 새 사건이 {ARTICLE_COUNT}건에
-  못 미치면 억지로 채우기보다 각 기사를 더 깊게 쓴다.
+  비슷한 사건을 여러 각도로 늘려 쓰지 말 것. 분량도 원본 뉴스에 실린 사실의 양에 맞춘다 —
+  근거가 적은 사건은 짧게 쓰고, 일반론·추정으로 단락을 채우지 않는다.
 - **각도 분산**: {ARTICLE_COUNT}건이 전부 "무슨 일이 있었다" 식 스트레이트면 지면이
   단조로워진다. 아래에서 서로 다른 각도를 최소 2종 섞을 것.
     ① 사건·발표 (스트레이트)   ② 실적·수치 분석   ③ 정책·규제 해설
@@ -718,7 +742,8 @@ def generate_articles_with_claude(raw_news_list, recent_topics=None, event_memor
 - tag_type: "tag-semi" / "tag-rare" / "tag-industry" / "tag-global" 중 하나 (카테고리에 맞게)
 - 제목: 15~25자, 핵심 팩트 중심. "패러다임 전환", "격차 뚜렷", "주목" 같은 평가·수식어 금지 (톤1 뉴스형)
 - summary: 2~3문장 핵심 요약 (150자 이내)
-- body: 10~13개 단락 각각을 문자열로 담은 배열. 각 단락 200~300자. 반드시 포함할 내용: ①사건 배경 및 원인 분석 ②구체적 수치·통계(수출액·생산량·가격 변동 포함) ③주요 관련 기업명과 최신 동향 ④전문가·업계 관계자 의견 — **원본 뉴스에 실제로 실린 발언만** 출처와 함께 인용, 원본에 없는 인용·익명 관계자 발언을 지어내지 말 것 ⑤국내 산업별 파급 효과 ⑥글로벌·해외 동향 ⑦관련 정책·규제 현황 ⑧향후 시장 전망과 조달·산업 시사점. 전문 용어는 쉽게 풀어서 작성
+- body: 5~13개 단락 각각을 문자열로 담은 배열. 각 단락 150~300자. 단락 수는 원본 뉴스의 정보량이 정한다 — 원본에 근거가 있는 내용만 쓰고, 채울 근거가 없으면 단락을 줄인다. 아래 요소는 **원본에 근거가 있는 것만** 다룬다(근거 없는 요소는 생략): ①사건 배경 및 원인 분석 ②구체적 수치·통계(수출액·생산량·가격 변동 포함) ③주요 관련 기업명과 최신 동향 ④전문가·업계 관계자 의견 — **원본 뉴스에 실제로 실린 발언만** 출처와 함께 인용, 원본에 없는 인용·익명 관계자 발언을 지어내지 말 것 ⑤국내 산업별 파급 효과 ⑥글로벌·해외 동향 ⑦관련 정책·규제 현황 ⑧향후 시장 전망과 조달·산업 시사점 — 원본에 근거가 없는 전망은 쓰지 않는다. 전문 용어는 쉽게 풀어서 작성
+- **인용 부호**: 본문의 인용은 둥근 따옴표(“ ”)나 작은따옴표(‘ ’)만 쓴다. 곧은 큰따옴표(")는 JSON을 깨뜨려 단락이 조각난다
 - **출처 명시**: 수치가 나오는 문장은 문장 앞부분에 출처를 붙인다 — "OO(기관·매체)에 따르면 (발표 시점)". 출처를 댈 수 없는 수치는 쓰지 않는다
 - **투자 권유 금지**: 특정 상장사를 수혜주로 지목하거나 주가·"투자 논리"를 다루지 않는다. 영향은 산업·공급망 관점으로만 쓴다
 - why_important: 이 뉴스가 소재·부품 업계에 왜 중요한지 2~3문장 (120자 이내). 투자 권유가 아닌 산업·조달 관점으로 작성. 예: "국내 양극재 업체의 원료 조달 비용에 직접 영향을 미친다."
@@ -729,7 +754,7 @@ def generate_articles_with_claude(raw_news_list, recent_topics=None, event_memor
 
 save_articles 도구를 사용해 기사 {ARTICLE_COUNT}개를 저장하세요.
 - 첫 번째 기사만 is_featured: true, 나머지 {ARTICLE_COUNT - 1}개는 false
-- body는 각 단락을 별도 문자열로 된 배열 (10~13개 항목, 각 항목 200~300자)
+- body는 각 단락을 별도 문자열로 된 배열 (5~13개 항목, 각 항목 150~300자)
 - body 배열 예시: ["첫째 단락 본문...", "둘째 단락 본문...", ...]
 """
 
@@ -753,7 +778,7 @@ save_articles 도구를 사용해 기사 {ARTICLE_COUNT}개를 저장하세요.
                                 "tag_type":      {"type": "string"},
                                 "title":         {"type": "string"},
                                 "summary":       {"type": "string"},
-                                "body":          {"type": "array", "items": {"type": "string"}, "minItems": 10, "maxItems": 13},
+                                "body":          {"type": "array", "items": {"type": "string"}, "minItems": 5, "maxItems": 13},
                                 "why_important":  {"type": "string", "description": "업계 중요성 2~3문장 (120자 이내)"},
                                 "sources":       {"type": "array", "items": {"type": "string"}, "description": "원천 매체·기관명 2~5개"},
                                 "reference_date":{"type": "string", "description": "원본 기준일 YYYY-MM-DD"},
@@ -802,6 +827,7 @@ save_articles 도구를 사용해 기사 {ARTICLE_COUNT}개를 저장하세요.
     for a in articles:
         if isinstance(a.get("body"), str):
             a["body"] = [p.strip() for p in a["body"].split("\n") if p.strip()]
+        a["body"] = _mend_body(a.get("body") or [])
 
     # 배치 내 제목 중복 경고 (기사검수.py가 잡기 전 조기 알림)
     seen_titles: dict = {}
