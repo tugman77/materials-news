@@ -9,7 +9,7 @@
 - **DB:** 없음 (JSON 파일 기반)
 
 ### 발행 하이브리드 — 구독코인 우선 + API코인 백업
-1. **로컬 구독코인:** launchd `com.aios.sojaetimes` **KST 05:00** → `소재타임스_로컬발행.command` (수집→생성→검수→기사기획브리핑→push). `LLM_BACKEND=claude_code` 헤드리스.
+1. **로컬 구독코인:** launchd `com.aios.sojaetimes` **KST 03:00** → `소재타임스_로컬발행.command` (수집→생성→검수→기사기획브리핑→push). `LLM_BACKEND=claude_code` 헤드리스.
 2. **클라우드 API코인:** Actions `자동기사생성.yml` **KST 06:00**. `articles.json`에 오늘 날짜 있으면 skip → 로컬 성공 시 API코인 미사용.
 
 **백엔드 스위치** (`llm_backend.py`): `LLM_BACKEND=claude_code`(구독) / 미설정=`api`(SDK).
