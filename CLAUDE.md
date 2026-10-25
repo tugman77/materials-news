@@ -59,7 +59,7 @@
 ├── category.html         ← 카테고리 목록
 ├── search.html           ← 검색 결과
 ├── about/advertising/privacy/terms.html
-├── archive/              ← 날짜별 JSON (최대 90일)
+├── archive/              ← 날짜별 JSON. index.json은 매 발행 때 파일 목록에서 다시 만든다(상한 없음, 2026-10-26)
 ├── news/                 ← 정적 HTML (크롤러용)
 ├── images/               ← 기사 이미지 + 브랜드 자산
 ├── images/pool/          ← 자체 호스팅 풀 이미지
