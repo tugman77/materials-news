@@ -9,6 +9,9 @@ sojaetimes/briefing_YYYYMMDD.json 으로 저장한다.
 """
 
 import feedparser
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+import 최신필터  # 7일 넘은 기사 제외 (2026-10-26)
 import json
 import os
 import requests
@@ -93,6 +96,8 @@ def collect_naver(max_per_query=5) -> dict:
                 continue
             items = resp.json().get("items", [])
             for item in items:
+                if not 최신필터.is_fresh(최신필터.parse_date(item.get("pubDate", ""))):
+                    continue
                 key = item.get("link", item.get("title", ""))
                 if key in seen:
                     continue
@@ -104,7 +109,7 @@ def collect_naver(max_per_query=5) -> dict:
                     "title":     item.get("title", "").replace("<b>", "").replace("</b>", ""),
                     "summary":   item.get("description", "").replace("<b>", "").replace("</b>", "")[:300],
                     "link":      item.get("link", ""),
-                    "published": item.get("pubDate", ""),
+                    "published": 최신필터.date_label(최신필터.parse_date(item.get("pubDate", ""))),
                 })
         except Exception as e:
             print(f"   네이버 수집 오류 [{keyword}]: {e}")
@@ -119,12 +124,19 @@ def collect_google_rss(max_per_feed=4) -> dict:
 
     for topic, url in GOOGLE_RSS_TOPICS:
         try:
-            feed = feedparser.parse(url)
-            for entry in feed.entries[:max_per_feed]:
+            feed = feedparser.parse(최신필터.recent_url(url))
+            got = 0
+            for entry in feed.entries:
+                if got >= max_per_feed:
+                    break
+                pub = 최신필터.entry_date(entry)
+                if not 최신필터.is_fresh(pub):
+                    continue
                 key = entry.get("link", entry.get("title", ""))
                 if key in seen:
                     continue
                 seen.add(key)
+                got += 1
                 lang = "en" if "ceid=US:en" in url else "ko"
                 result[topic].append({
                     "source":    "GoogleNews",
@@ -133,7 +145,7 @@ def collect_google_rss(max_per_feed=4) -> dict:
                     "title":     entry.get("title", ""),
                     "summary":   entry.get("summary", "")[:300],
                     "link":      entry.get("link", ""),
-                    "published": entry.get("published", ""),
+                    "published": 최신필터.date_label(pub),
                 })
         except Exception as e:
             print(f"   Google RSS 오류 [{url[:60]}]: {e}")

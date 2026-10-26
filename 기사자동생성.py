@@ -12,6 +12,7 @@ import 피드목록    # RSS 피드 레지스트리 (활성/후보/사망 관리
 import 이미지필터    # 이미지 키워드 오매칭(예: wafer → 과자) 방지 필터
 import 이미지소스    # 외부 이미지 소스 API (Unsplash/Pexels/Pixabay) — 기사검수.py와 공용
 import 이미지풀      # 카테고리별 큐레이션 풀 (로컬 self-host + Unsplash hotlink) — 공용
+import 최신필터    # 7일 넘은 수집 기사 제외 (2026-10-26)
 import feedparser
 import hashlib
 import json
@@ -272,9 +273,15 @@ def collect_news_from_rss(max_per_feed=8):
     DEAD_FEEDS.clear()
     for name, url in 피드목록.active_feeds():
         try:
-            feed = feedparser.parse(url, agent=피드목록.USER_AGENT)
-            got = 0
-            for entry in feed.entries[:max_per_feed]:
+            feed = feedparser.parse(최신필터.recent_url(url), agent=피드목록.USER_AGENT)
+            got = stale = 0
+            for entry in feed.entries:
+                if got >= max_per_feed:
+                    break
+                pub = 최신필터.entry_date(entry)
+                if not 최신필터.is_fresh(pub):
+                    stale += 1
+                    continue
                 title = entry.get("title", "")
                 summary = entry.get("summary", entry.get("description", ""))[:300]
                 link = entry.get("link", "")
@@ -282,12 +289,15 @@ def collect_news_from_rss(max_per_feed=8):
                     "source": name,
                     "title": title,
                     "summary": summary,
-                    "link": link
+                    "link": link,
+                    "published": 최신필터.date_label(pub),
                 })
                 got += 1
-            if got == 0:
-                DEAD_FEEDS.append(name)   # 활성으로 등록됐는데 0건 → 주소가 죽었을 가능성
-            print(f"   [{name}] {got}건")
+            # 활성으로 등록됐는데 0건 → 주소가 죽었을 가능성. Google 검색 피드는 when:7d 때문에
+            # 최근 기사가 없으면 0건이 정상이라 제외한다 (2026-10-26).
+            if not feed.entries and "news.google.com/rss/search" not in url:
+                DEAD_FEEDS.append(name)
+            print(f"   [{name}] {got}건" + (f" (7일 초과 {stale}건 제외)" if stale else ""))
         except Exception as e:
             DEAD_FEEDS.append(f"{name}({type(e).__name__})")
             print(f"RSS 오류 [{name}]: {e}")
@@ -628,7 +638,8 @@ def generate_articles_with_claude(raw_news_list, recent_topics=None, event_memor
     news_text = ""
     for i, item in enumerate(raw_news_list[:35], 1):  # 소재 풀. 15건이면 선택지가 좁아
         # 매일 비슷한 기사가 나온다(2026-08-02). 피드 24개 체제에 맞춰 확대.
-        news_text += f"{i}. [{item['source']}] {item['title']}\n   {item['summary']}\n\n"
+        when = f", {item['published']}" if item.get("published") else ""
+        news_text += f"{i}. [{item['source']}{when}] {item['title']}\n   {item['summary']}\n\n"
 
     # 수집 자료가 없으면 쓰지 않는다 (2026-10-26). 예전에는 "실제 있을 법한 기사"를 쓰게 해
     # 근거 없는 기사가 나갈 수 있었다. 여기서 실패하면 로컬은 중단되고 클라우드 백업이 다시 수집한다.
@@ -744,6 +755,7 @@ def generate_articles_with_claude(raw_news_list, recent_topics=None, event_memor
 - summary: 2~3문장 핵심 요약 (150자 이내)
 - body: 5~13개 단락 각각을 문자열로 담은 배열. 각 단락 150~300자. 단락 수는 원본 뉴스의 정보량이 정한다 — 원본에 근거가 있는 내용만 쓰고, 채울 근거가 없으면 단락을 줄인다. 아래 요소는 **원본에 근거가 있는 것만** 다룬다(근거 없는 요소는 생략): ①사건 배경 및 원인 분석 ②구체적 수치·통계(수출액·생산량·가격 변동 포함) ③주요 관련 기업명과 최신 동향 ④전문가·업계 관계자 의견 — **원본 뉴스에 실제로 실린 발언만** 출처와 함께 인용, 원본에 없는 인용·익명 관계자 발언을 지어내지 말 것 ⑤국내 산업별 파급 효과 ⑥글로벌·해외 동향 ⑦관련 정책·규제 현황 ⑧향후 시장 전망과 조달·산업 시사점 — 원본에 근거가 없는 전망은 쓰지 않는다. 전문 용어는 쉽게 풀어서 작성
 - **인용 부호**: 본문의 인용은 둥근 따옴표(“ ”)나 작은따옴표(‘ ’)만 쓴다. 곧은 큰따옴표(")는 JSON을 깨뜨려 단락이 조각난다
+- **시점 명시**: 원본 뉴스 옆 날짜는 원문 발행일이다. 오늘 일어난 일처럼 쓰지 말고 시점을 문장에 밝힌다(예: "지난 21일 발표된"). 날짜가 없는 원문은 시점을 단정하지 않는다
 - **출처 명시**: 수치가 나오는 문장은 문장 앞부분에 출처를 붙인다 — "OO(기관·매체)에 따르면 (발표 시점)". 출처를 댈 수 없는 수치는 쓰지 않는다
 - **투자 권유 금지**: 특정 상장사를 수혜주로 지목하거나 주가·"투자 논리"를 다루지 않는다. 영향은 산업·공급망 관점으로만 쓴다
 - why_important: 이 뉴스가 소재·부품 업계에 왜 중요한지 2~3문장 (120자 이내). 투자 권유가 아닌 산업·조달 관점으로 작성. 예: "국내 양극재 업체의 원료 조달 비용에 직접 영향을 미친다."
