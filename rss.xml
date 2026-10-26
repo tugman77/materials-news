@@ -6,7 +6,31 @@
     <atom:link href="https://www.materialtimes.co.kr/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Mon, 26 Oct 2026 06:28:07 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 03:01:34 +0900</lastBuildDate>
+    <item>
+      <title>중국 반도체 공급망 자립 전방위 가속</title>
+      <link>https://www.materialtimes.co.kr/news/2026-10-27-0.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-10-27-0.html</guid>
+      <category>글로벌</category>
+      <description>중국이 칩 설계부터 장비·소재·AI 역량까지 반도체 공급망 전면 자립을 선언했다. 서방의 수출통제가 장기화되는 가운데 중국의 내재화 속도가 글로벌 소재·장비 공급 구조를 흔들고 있다.</description>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>LS에코에너지, 베트남에 울트라캐패시터 생산기지 구축</title>
+      <link>https://www.materialtimes.co.kr/news/2026-10-27-1.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-10-27-1.html</guid>
+      <category>산업재</category>
+      <description>LS에코에너지 베트남 법인이 약 650억원을 투자해 AI 데이터센터용 울트라캐패시터 생산설비를 현지에 구축한다. 2027년 4월 양산을 목표로 하며, 계열사 LS머트리얼즈의 수주 확대에 대응하는 OEM 체제를 가동할 예정이다.</description>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>에코샤인, 나노실리카 반도체 소재 국산화 추진</title>
+      <link>https://www.materialtimes.co.kr/news/2026-10-27-2.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-10-27-2.html</guid>
+      <category>반도체소재</category>
+      <description>국내 스타트업 에코샤인이 반도체 공정 품질을 좌우하는 나노실리카 소재의 국산화에 도전하고 있다. 현재 일본 등 해외 의존도가 높은 고순도 나노실리카를 국내에서 생산하겠다는 목표다.</description>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>중국, 헬륨 수출 금지 즉시 시행</title>
       <link>https://www.materialtimes.co.kr/news/2026-10-26-0.html</link>
@@ -222,30 +246,6 @@
       <category>글로벌</category>
       <description>사우스차이나모닝포스트(SCMP) 보도에 따르면 네덜란드 반도체 장비 기업 ASML이 차세대 고밀도 칩 패키징 기술인 하이브리드 본딩 분야로 사업을 확장하고 있다. 중국의 주요 반도체 기업들도 이 기술을 잇따라 도입하며 선진 리소그래피 없이 칩 성능을 높이려는 전략을 추진 중이다.</description>
       <pubDate>Sat, 17 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>온세미 SiC 모듈, 선그로우 BESS 플랫폼 탑재</title>
-      <link>https://www.materialtimes.co.kr/news/2026-10-17-1.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-10-17-1.html</guid>
-      <category>산업재</category>
-      <description>온세미의 탄화규소(SiC) 기반 '엘리트SiC' 하이브리드 전력 모듈이 선그로우의 에너지저장 플랫폼 파워타이탄 3.0에 채택됐다. 전력망용 배터리 에너지저장시스템(BESS)의 전력 변환 손실을 줄이고 고출력 운전을 지원하는 데 초점을 맞췄다.</description>
-      <pubDate>Sat, 17 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>SK 반도체 소재사, 세종 명학산단 투자 확정</title>
-      <link>https://www.materialtimes.co.kr/news/2026-10-17-2.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-10-17-2.html</guid>
-      <category>반도체소재</category>
-      <description>SK그룹 계열 반도체 소재 기업이 세종시 명학산업단지에 투자하기로 확정했다. 수도권 이남 소부장 거점 확대 흐름과 맞물려 국내 반도체 소재 생산 클러스터 재편에 영향을 줄 전망이다.</description>
-      <pubDate>Sat, 17 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>IBS, 0.7nm급 2D 반도체 모듈형 트랜지스터 개발</title>
-      <link>https://www.materialtimes.co.kr/news/2026-10-16-0.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-10-16-0.html</guid>
-      <category>반도체소재</category>
-      <description>기초과학연구원(IBS) 연구팀이 하나의 박막에 반도체·절연체·준금속 영역을 원자층 단위로 구현하는 0.7nm급 모듈형 트랜지스터 제작 기술을 개발했다. 이번 성과는 IBM에 이어 세계 두 번째로, 결과물은 국제학술지 '사이언스'에 게재됐다.</description>
-      <pubDate>Fri, 16 Oct 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
