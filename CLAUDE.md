@@ -22,7 +22,7 @@
 |------|------|
 | **제호** | 소재타임스 / MATERIALS TIMES |
 | **도메인** | materialtimes.co.kr (비아웹, 만료 2027-07-07) |
-| **현재 URL** | tugman77.github.io/materials-news |
+| **현재 URL** | www.materialtimes.co.kr |
 | **텔레그램** | @materialtimes (공개 채널) |
 | **브랜드 색상** | 블루 `#0057a8` + 레드 `#c8102e` |
 
@@ -176,7 +176,7 @@
 
 ## 미완료 배포 항목
 
-- [ ] **materialtimes.co.kr 커스텀 도메인 연결** — 연결 시 `SITE_URL`(`정적페이지생성.py`·`기사자동생성.py`·`뉴스레터생성.py`)과 `robots.txt`도 함께 변경
+- [x] **materialtimes.co.kr 커스텀 도메인 연결** — 2026-10-26 완료. 비아웹 DNS: A 185.199.108~111.153, CNAME www → tugman77.github.io. 저장소 `CNAME` = www.materialtimes.co.kr
 - [ ] UNSPLASH_ACCESS_KEY Secret 등록 (선택)
 
 ---

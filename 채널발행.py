@@ -32,7 +32,7 @@ from datetime import datetime, timedelta, timezone
 import requests
 
 KST = timezone(timedelta(hours=9))
-SITE_URL = "https://tugman77.github.io/materials-news"  # 커스텀 도메인 연결 시 변경
+SITE_URL = "https://www.materialtimes.co.kr"  # 2026-10-26 커스텀 도메인 연결 (CNAME 파일과 짝)
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHANNEL_ID = os.environ.get("TELEGRAM_CHANNEL_ID", "")
 

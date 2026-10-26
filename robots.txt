@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tugman77.github.io/materials-news/sitemap.xml
+Sitemap: https://www.materialtimes.co.kr/sitemap.xml

@@ -22,9 +22,9 @@ import os
 import re
 import sys
 
-# 커스텀 도메인(materialtimes.co.kr) 연결 후에는 이 값을 바꿔야 한다 —
+# 2026-10-26 커스텀 도메인(www.materialtimes.co.kr) 연결. GitHub Pages의 CNAME 파일과 함께 바꾼다 —
 # sitemap·canonical·OG가 모두 이 절대주소를 쓴다.
-SITE_URL = "https://tugman77.github.io/materials-news"
+SITE_URL = "https://www.materialtimes.co.kr"
 OUT_DIR = "news"
 ARCHIVE_DIR = "archive"
 BASE = "../"  # news/ 기준 저장소 루트 상대경로

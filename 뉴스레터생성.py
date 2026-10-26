@@ -19,7 +19,7 @@ TELEGRAM_BOT_TOKEN  = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID    = os.environ.get("TELEGRAM_CHAT_ID", "")     # 관리자 알림(대표님 개인 채팅)
 TELEGRAM_CHANNEL_ID = os.environ.get("TELEGRAM_CHANNEL_ID", "")  # 공개 채널 발행용(@materialtimes)
 OUTPUT_DIR = "newsletter"
-SITE_URL = "https://tugman77.github.io/materials-news"  # 커스텀 도메인 연결 시 변경
+SITE_URL = "https://www.materialtimes.co.kr"  # 2026-10-26 커스텀 도메인 연결 (CNAME 파일과 짝)
 KST = timezone(timedelta(hours=9))
 
 

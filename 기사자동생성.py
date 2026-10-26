@@ -1217,7 +1217,7 @@ def download_article_images(articles):
 
 
 # ── SEO 파일 생성 ──────────────────────────────────
-SITE_URL = "https://tugman77.github.io/materials-news"  # 커스텀 도메인 연결 시 변경
+SITE_URL = "https://www.materialtimes.co.kr"  # 2026-10-26 커스텀 도메인 연결 (CNAME 파일과 짝)
 
 
 def _xml_escape(s) -> str:
