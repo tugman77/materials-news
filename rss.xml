@@ -6,7 +6,31 @@
     <atom:link href="https://www.materialtimes.co.kr/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Tue, 27 Oct 2026 03:01:34 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 03:01:27 +0900</lastBuildDate>
+    <item>
+      <title>중국발 공급망 위험, 사전 감지 체계 미비</title>
+      <link>https://www.materialtimes.co.kr/news/2026-10-28-0.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-10-28-0.html</guid>
+      <category>글로벌</category>
+      <description>중국의 수출통제 확대로 소재·부품 공급망 위험이 커지고 있지만 국내 사전 감지 체계 구축은 여전히 지연되고 있다. 쿠키뉴스가 지난 21일 보도한 공급망 안보 리포트에 따르면, 중국산 소부장 품목 의존도 모니터링 시스템이 체계화되지 않은 상태다.</description>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>웨이퍼팹 장비 시장 2031년 2200억 달러 전망</title>
+      <link>https://www.materialtimes.co.kr/news/2026-10-28-1.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-10-28-1.html</guid>
+      <category>반도체소재</category>
+      <description>웨이퍼팹 장비(WFE) 시장이 2025년 1290억 달러를 기록한 데 이어 2031년까지 약 2200억 달러 규모로 성장할 것으로 전망된다. Yole Group이 발간한 2026년 보고서는 연평균 성장률 9%를 제시하면서도 공급망 분절화가 새로운 변수로 부상하고 있다고 분석했다.</description>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>ISC, 애플 테스트 소켓 점유율 20%→40% 확대</title>
+      <link>https://www.materialtimes.co.kr/news/2026-10-28-2.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-10-28-2.html</guid>
+      <category>산업재</category>
+      <description>반도체 테스트 소켓 전문기업 ISC가 북미 최대 스마트폰 고객사(애플 추정) 내 소켓 점유율을 기존 20%에서 40%로 두 배 끌어올렸다. 기존 주요 공급사의 납기 지연으로 물량이 분산된 결과다.</description>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>중국 반도체 공급망 자립 전방위 가속</title>
       <link>https://www.materialtimes.co.kr/news/2026-10-27-0.html</link>
@@ -222,30 +246,6 @@
       <category>글로벌</category>
       <description>EU가 중국 의존 공급망 리스크를 줄이기 위한 공급망 다각화법을 오는 12월 전격 도입하기로 확정했다. 원산지 추적 의무와 우회 수출 방지 요건이 강화되면서 유럽에 납품하는 한국 소부장 기업의 공급망 투명성 부담이 커질 전망이다.</description>
       <pubDate>Sun, 18 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>개발은행, 핵심광물 공급망 자금 지원 확대</title>
-      <link>https://www.materialtimes.co.kr/news/2026-10-18-1.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-10-18-1.html</guid>
-      <category>희귀금속</category>
-      <description>로이터에 따르면 세계 주요 개발은행들이 핵심광물 공급망 전 단계에 걸친 금융 지원을 확대하고 있다. 중국 외 지역 희토류 가격은 이번 주 보합세를 유지했으며, 자원 측에서는 광산 개발 승인과 기업 간 합병이 동시에 진행되는 공급 구조 재편이 본격화하고 있다.</description>
-      <pubDate>Sun, 18 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>Saras, AI 가속기 전력용 기판 내장 커패시터 출시</title>
-      <link>https://www.materialtimes.co.kr/news/2026-10-18-2.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-10-18-2.html</guid>
-      <category>반도체소재</category>
-      <description>미국 사라스 마이크로디바이시스(Saras Micro Devices)가 AI 가속기 전력 공급용 기판 내장형 커패시터를 공개하고 2mm 크기 샘플 출하를 시작했다. PCB나 패키지 코어 내부에 직접 내장해 수직형 전력 전달 경로를 단축하는 방식으로 AI 칩의 전력 효율 한계를 돌파하려는 시도다.</description>
-      <pubDate>Sun, 18 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>ASML, 하이브리드 본딩 시장 진출…중국도 채택</title>
-      <link>https://www.materialtimes.co.kr/news/2026-10-17-0.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-10-17-0.html</guid>
-      <category>글로벌</category>
-      <description>사우스차이나모닝포스트(SCMP) 보도에 따르면 네덜란드 반도체 장비 기업 ASML이 차세대 고밀도 칩 패키징 기술인 하이브리드 본딩 분야로 사업을 확장하고 있다. 중국의 주요 반도체 기업들도 이 기술을 잇따라 도입하며 선진 리소그래피 없이 칩 성능을 높이려는 전략을 추진 중이다.</description>
-      <pubDate>Sat, 17 Oct 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
