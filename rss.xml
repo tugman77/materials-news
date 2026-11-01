@@ -6,7 +6,31 @@
     <atom:link href="https://www.materialtimes.co.kr/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Sun, 01 Nov 2026 03:01:28 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 03:01:36 +0900</lastBuildDate>
+    <item>
+      <title>비아트론, 소부장 으뜸기업 선정…RTP 장비 개발</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-02-0.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-02-0.html</guid>
+      <category>반도체소재</category>
+      <description>디스플레이 열처리 장비 전문기업 비아트론이 산업통상자원부 주관 '소재부품장비 으뜸기업'에 선정됐다. 국내 종합반도체 기업과 함께 120억원 규모의 급속열처리(RTP) 장비를 개발하며 반도체 소재·공정 국산화에 속도를 낸다.</description>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>쿼드 4개국, 핵심광물 공급망 교란 공동 대응 선언</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-02-1.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-02-1.html</guid>
+      <category>글로벌</category>
+      <description>미국·일본·호주·인도 쿼드 4개국 외교장관이 중국의 핵심광물 공급망 교란에 심각한 우려를 표명하고 공동 대응을 선언했다. 공급망 다변화 협력을 가속화하기로 합의했다.</description>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>삼성전자, 일본 APL서 첨단 패키징 소재·공정 점검</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-02-2.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-02-2.html</guid>
+      <category>산업재</category>
+      <description>이재용 삼성전자 회장이 2026년 11월 1일 일본 요코하마 첨단 패키지랩(APL)을 방문해 패키징 소재·공정 기술 개발 현황과 현지 소부장 협력 방안을 점검했다. APL은 지난 9월 개소한 삼성전자의 일본 내 패키징 연구거점이다.</description>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>포스코퓨처엠, LG엔솔에 7년간 배터리 소재 72만톤 공급 추진</title>
       <link>https://www.materialtimes.co.kr/news/2026-11-01-0.html</link>
@@ -222,30 +246,6 @@
       <category>글로벌</category>
       <description>TSMC가 중국의 희토류 수출통제에 대응해 반도체 제조 장비 내 중국산 희토류 자석을 사용하지 않는 대체 모터 공급망 확보에 착수했다. 중국 의존도를 줄이기 위한 팹 운영 차원의 공급망 재편이다.</description>
       <pubDate>Fri, 23 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>인피니언, 엔비디아 AI 데이터센터용 GaN 전력칩 공급 확대</title>
-      <link>https://www.materialtimes.co.kr/news/2026-10-23-2.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-10-23-2.html</guid>
-      <category>산업재</category>
-      <description>인피니언이 엔비디아와 AI 데이터센터용 800V 전력변환 장치에 GaN 반도체 및 제어 솔루션을 공급하는 협력을 확대한다. 서버 랙 고전압화 추세에 맞춰 화합물 반도체 소재 수요가 급증하고 있다.</description>
-      <pubDate>Fri, 23 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>중국 희토류 수출통제, 일본 '비군사화' 명분 적용</title>
-      <link>https://www.materialtimes.co.kr/news/2026-10-22-0.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-10-22-0.html</guid>
-      <category>글로벌</category>
-      <description>중국 외교부가 대일본 희토류 수출통제 조치의 명분으로 일본의 재군사화 방지를 공식 언급했다. 11월 10일 유예 종료를 앞두고 서방 공급망 재편 압박이 가속화되고 있다.</description>
-      <pubDate>Thu, 22 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>바스프, 대만서 2nm 미만 소재 생산 확대</title>
-      <link>https://www.materialtimes.co.kr/news/2026-10-22-1.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-10-22-1.html</guid>
-      <category>반도체소재</category>
-      <description>글로벌 화학기업 바스프(BASF)가 대만 현지에서 2나노미터(nm) 미만 공정용 반도체 소재 생산능력을 확대한다. 첨단 노드 소재의 공급망 현지화 흐름이 가속화되고 있다.</description>
-      <pubDate>Thu, 22 Oct 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
