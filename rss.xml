@@ -6,7 +6,31 @@
     <atom:link href="https://www.materialtimes.co.kr/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Mon, 02 Nov 2026 03:01:36 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 03:01:26 +0900</lastBuildDate>
+    <item>
+      <title>대만, 대중국 반도체 수출통제 강화 추진</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-03-0.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-03-0.html</guid>
+      <category>글로벌</category>
+      <description>대만이 첨단 반도체 칩·소재·장비의 대중국 수출통제를 강화하는 방안을 추진 중이다. 우회 수출에 대한 처벌 규정도 포함될 예정으로, 글로벌 반도체 공급망에 추가 변수가 될 전망이다.</description>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>기계연, 반도체 공정용 극저온 칠러 개발</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-03-1.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-03-1.html</guid>
+      <category>반도체소재</category>
+      <description>한국기계연구원이 영하 120도 이하에서 15kW 냉각 성능을 구현하는 터보-브레이튼 방식의 산업용 칠러를 개발했다. 반도체 식각 공정의 친환경 냉각 수요를 겨냥한 국산화 성과다.</description>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>시티, 리튬 가격 전망치 40% 하향 조정</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-03-2.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-03-2.html</guid>
+      <category>희귀금속</category>
+      <description>씨티은행이 2028년 말까지의 리튬 가격 전망치를 40% 낮췄다. 수요 증가세 둔화와 공급 확대가 맞물리며 시장 잉여가 예상된다는 분석이다.</description>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>비아트론, 소부장 으뜸기업 선정…RTP 장비 개발</title>
       <link>https://www.materialtimes.co.kr/news/2026-11-02-0.html</link>
@@ -222,30 +246,6 @@
       <category>희귀금속</category>
       <description>중국산 희토류 의존도를 낮추기 위한 각국의 희토류 프리(free) 기술 R&amp;D가 가속화되고 있다. 동시에 중국 역외 시장에서는 가격 하락 압력이 커지는 이중 구도가 전개되고 있다.</description>
       <pubDate>Sat, 24 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>스페이라, 반도체용 고순도 알루미늄 브랜드 출시</title>
-      <link>https://www.materialtimes.co.kr/news/2026-10-24-2.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-10-24-2.html</guid>
-      <category>반도체소재</category>
-      <description>유럽 알루미늄 압연 기업 스페이라(Speira)가 반도체·항공우주용 고순도 알루미늄 브랜드 '코리스(Coris)'를 출시했다. 순도·합금 설계·가공을 통합한 맞춤형 제품으로, 반도체 스퍼터링 타겟 소재 시장을 직접 겨냥한다.</description>
-      <pubDate>Sat, 24 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>머크, 충북 음성에 몰리브덴 반도체 소재 생산설비 구축</title>
-      <link>https://www.materialtimes.co.kr/news/2026-10-23-0.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-10-23-0.html</guid>
-      <category>반도체소재</category>
-      <description>독일 머크가 차세대 반도체 소재인 몰리브덴 관련 생산설비를 충북 음성에 구축한다. 삼성전자·SK하이닉스 등 국내 주요 팹 고객과의 근접 공급을 위한 전략적 투자다.</description>
-      <pubDate>Fri, 23 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>TSMC, 중국산 희토류 대체 장비 공급망 구축 나서</title>
-      <link>https://www.materialtimes.co.kr/news/2026-10-23-1.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-10-23-1.html</guid>
-      <category>글로벌</category>
-      <description>TSMC가 중국의 희토류 수출통제에 대응해 반도체 제조 장비 내 중국산 희토류 자석을 사용하지 않는 대체 모터 공급망 확보에 착수했다. 중국 의존도를 줄이기 위한 팹 운영 차원의 공급망 재편이다.</description>
-      <pubDate>Fri, 23 Oct 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
