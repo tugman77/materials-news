@@ -6,7 +6,31 @@
     <atom:link href="https://www.materialtimes.co.kr/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Sat, 07 Nov 2026 03:03:26 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 03:01:25 +0900</lastBuildDate>
+    <item>
+      <title>미 국방물류청, 핵심소재 2조원 비축 발주</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-08-0.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-08-0.html</guid>
+      <category>글로벌</category>
+      <description>미국 국방물류청(DLA)이 국가방위비축을 위해 20억 달러(약 2조7천억원) 규모의 핵심소재 조달 계획을 공표했다. 미국의 전략산업 리쇼어링과 국내 생산 확대 기조 아래 공급망 안보 강화가 목적이다.</description>
+      <pubDate>Sun, 08 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>지린OLED, LG화학 OLED 소재 특허 무효심판 청구</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-08-1.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-08-1.html</guid>
+      <category>산업재</category>
+      <description>중국 OLED 재료업체 지린OLED의 자회사가 LG화학의 헤테로환 화합물 OLED 발광재료 특허에 대해 한국 특허심판원에 무효심판을 청구했다. 중국 업체가 LG화학 OLED 소재 특허를 직접 겨냥한 것은 이번이 처음이다.</description>
+      <pubDate>Sun, 08 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>DLA 비축 발표 뒤 구리 가격 추가 하락 전망</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-08-2.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-08-2.html</guid>
+      <category>희귀금속</category>
+      <description>미국 중간선거에서 민주당이 선전하면서 수입관세 기대감이 약화되고, TD증권은 구리 가격이 추가로 하락할 가능성이 있다고 전망했다. 관세 완화 기대 후퇴가 금속 수급 심리에 영향을 미치고 있다.</description>
+      <pubDate>Sun, 08 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>중국 희토류 수출 유예, 11월 10일 만료…미국 업계 촉각</title>
       <link>https://www.materialtimes.co.kr/news/2026-11-07-0.html</link>
@@ -222,30 +246,6 @@
       <category>반도체소재</category>
       <description>SK머티리얼즈가 일본 후루카와전공과 반도체 소재 분야 협력을 위한 MOU를 체결했다. 양사는 AI 반도체 공급망 확대에 대응한 소재 기술 협력을 본격화할 계획이다.</description>
       <pubDate>Thu, 29 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>SK하이닉스 3분기 AI 메모리 역대 최대 실적</title>
-      <link>https://www.materialtimes.co.kr/news/2026-10-29-2.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-10-29-2.html</guid>
-      <category>산업재</category>
-      <description>SK하이닉스가 AI 메모리 수요 급증에 힘입어 2026년 3분기 역대 최대 실적을 기록했다. 장기 공급 계약 확대와 HBM 가격 상승이 실적을 견인한 것으로 분석된다.</description>
-      <pubDate>Thu, 29 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>중국발 공급망 위험, 사전 감지 체계 미비</title>
-      <link>https://www.materialtimes.co.kr/news/2026-10-28-0.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-10-28-0.html</guid>
-      <category>글로벌</category>
-      <description>중국의 수출통제 확대로 소재·부품 공급망 위험이 커지고 있지만 국내 사전 감지 체계 구축은 여전히 지연되고 있다. 쿠키뉴스가 지난 21일 보도한 공급망 안보 리포트에 따르면, 중국산 소부장 품목 의존도 모니터링 시스템이 체계화되지 않은 상태다.</description>
-      <pubDate>Wed, 28 Oct 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>웨이퍼팹 장비 시장 2031년 2200억 달러 전망</title>
-      <link>https://www.materialtimes.co.kr/news/2026-10-28-1.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-10-28-1.html</guid>
-      <category>반도체소재</category>
-      <description>웨이퍼팹 장비(WFE) 시장이 2025년 1290억 달러를 기록한 데 이어 2031년까지 약 2200억 달러 규모로 성장할 것으로 전망된다. Yole Group이 발간한 2026년 보고서는 연평균 성장률 9%를 제시하면서도 공급망 분절화가 새로운 변수로 부상하고 있다고 분석했다.</description>
-      <pubDate>Wed, 28 Oct 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
