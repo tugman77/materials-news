@@ -1,0 +1,174 @@
+{
+  "generated_at": "2026년 11월 11일 03:03",
+  "date_str": "2026년 11월 11일",
+  "date_key": "2026-11-11",
+  "articles": [
+    {
+      "id": 0,
+      "category": "산업재",
+      "tag_type": "tag-industry",
+      "title": "인피니언, 300mm SiC 웨이퍼 양산 공정 구현",
+      "summary": "인피니언 테크놀로지스가 오스트리아 빌라흐 팹에서 300mm 탄화규소(SiC) 웨이퍼로 기능성 전력 반도체 소자 제작에 성공했다. 기존 200mm 대비 웨이퍼당 칩 수가 2.3배 늘어 원가 경쟁력이 크게 향상될 전망이다.",
+      "body": [
+        "인피니언 테크놀로지스(Infineon Technologies AG)가 11월 10일 오스트리아 빌라흐(Villach) 팹에서 300mm SiC 웨이퍼를 활용해 기능성 전력 소자를 양산 환경에서 구현하는 데 성공했다고 밝혔다. 반도체 전문 매체 세미컨덕터 다이제스트(Semiconductor Digest)에 따르면, 이 성과는 본격적인 양산 팹에서 달성된 업계 최초 사례다.",
+        "인피니언은 이번 공정에 기존 실리콘(Si) 제조 장비를 그대로 활용했다. 300mm 웨이퍼는 200mm 웨이퍼 대비 웨이퍼 한 장에서 얻을 수 있는 칩 수가 2.3배 많아, 단위 원가 절감 효과가 상당하다는 게 회사 측 설명이다.",
+        "이번 성과는 현재 진행 중인 200mm SiC 양산 로드맵과 병행해 추진된다.",
+        "인피니언은 독일 드레스덴(Dresden) 사업장에서도 300mm SiC에 콜드 스플릿(Cold Split) 기술 적용 가능성을 확인했다. 콜드 스플릿은 SiC 잉곳에서 웨이퍼를 절단할 때 기존 와이어 쏘(wire sawing)보다 재료 손실을 줄이고 가공 시간을 단축해, 동일한 결정에서 더 많은 웨이퍼를 얻을 수 있는 기술이다.",
+        "적용 분야는 전기차 트랙션 인버터·탑재형 충전기, 대규모 에너지 저장장치, 산업용 드라이브, 그리고 AI 데이터센터의 고체 변압기·전원공급장치 등으로 확대되고 있다."
+      ],
+      "why_important": "SiC 300mm 전환은 전력 반도체 소재·기판 공급망에 직접 영향을 미친다. 국내 SiC 웨이퍼·에피 소재 업체들은 300mm 전환에 맞춰 소재 사양 및 공급 체계를 재검토해야 하는 시점이다.",
+      "sources": [
+        "Semiconductor Digest"
+      ],
+      "reference_date": "2026-11-10",
+      "image_keyword": "silicon carbide semiconductor wafer manufacturing",
+      "is_featured": true,
+      "timestamp": "오전 09:15",
+      "source_links": [
+        {
+          "title": "Infineon Processes Functional Power Devices on 300mm SiC Wafers",
+          "url": "https://www.semiconductor-digest.com/infineon-processes-functional-power-devices-on-300mm-sic-wafers/?utm_source=rss&utm_medium=rss&utm_campaign=infineon-processes-functional-power-devices-on-300mm-sic-wafers"
+        }
+      ],
+      "image_url": "images/2026-11-11_article_0.jpg",
+      "review": {
+        "trust_score": 4,
+        "status": "pass",
+        "suspicious_claims": [
+          "'본격 양산 팹 업계 최초' 주장 — 세미컨덕터 다이제스트 인용이나 독립 교차검증 불가",
+          "드레스덴 콜드 스플릿 적용 가능성 확인 — 양산 적용 여부와 혼동 소지"
+        ],
+        "notes": "기업·기술·수치 전반 검증 가능. 출처 명시 양호.",
+        "verified_at": "2026-11-11 03:03"
+      }
+    },
+    {
+      "id": 1,
+      "category": "글로벌",
+      "tag_type": "tag-global",
+      "title": "헝가리 신정부, 배터리 공장 환경 제재 본격화",
+      "summary": "헝가리 신정부 출범 이후 솔루스첨단소재, 에코프로비엠, 동화일렉트로라이트 등 국내 배터리 소재 기업들이 현지 환경·안전 당국의 제재를 연이어 받고 있다. 솔루스 1공장은 오염수 유출로 가동이 중단돼 전체 헝가리 생산능력의 약 40%가 멈춘 상태다.",
+      "body": [
+        "ZD넷 코리아 보도에 따르면, 동박 제조사 솔루스첨단소재의 헝가리 1공장이 오염수 유출 적발로 최근 가동이 중단됐다. 1공장 연간 생산능력(CAPA)은 1만5000톤으로, 2공장(2만3000톤)과 합산한 헝가리 전체 CAPA의 약 40%에 해당한다.",
+        "당국이 설정한 행정 처리 기간은 60일이며, 구체적인 가동 중단 기간은 아직 미확정이다.",
+        "양극재 기업 에코프로비엠도 지난 9월 가동을 시작한 헝가리 데브레첸(Debrecen) 2호 라인이 안전 당국 점검 과정에서 벌금과 생산 중단 처분을 받았다가 시정 조치를 완료하고 라인을 재가동했다. 전해액 기업 동화일렉트로라이트는 환경당국 인허가가 무효화돼 재인허가를 추진 중이며, 기존 허가에서 문제가 된 NMP 제조 설비를 제외하고 전해액 생산 설비만 별도 가동을 준비하고 있다.",
+        "삼성SDI, SK온 등 배터리셀 기업들도 가동 중단까지는 아니지만 환경·노동 문제로 벌금을 부과받은 바 있다.",
+        "지난 4월 출범한 헝가리 신정부는 선거 과정에서 배터리 공장의 환경오염 및 노동권 문제 해결을 주요 공약으로 내세웠다. 오르반 빅토르(Viktor Orbán) 전 총리가 적극 유치한 배터리·전기차 산업 대신 바이오 등 다른 산업을 거점으로 육성하려는 여론도 형성되고 있다고 업계는 전한다.",
+        "이에 박정성 산업통상자원부 통상교섭본부장은 11월 9일 헝가리를 방문해 어니터 오르반(Annita Orbán) 부총리 겸 외교부 장관 등과 만나 산업 협력의 중요성을 강조했다."
+      ],
+      "why_important": "헝가리는 국내 배터리 소재 기업의 핵심 유럽 생산거점이다. 이번 연쇄 제재는 동박·양극재·전해액 등 소재 공급 일정에 직접 차질을 줄 수 있어 고객사와의 납기 협의가 시급하다.",
+      "sources": [
+        "ZDNet Korea"
+      ],
+      "reference_date": "2026-11-10",
+      "image_keyword": "industrial battery factory environmental regulation",
+      "is_featured": false,
+      "timestamp": "오전 09:30",
+      "source_links": [
+        {
+          "title": "솔루스도 가동 중단…헝가리 배터리 공장 안갯속",
+          "url": "https://zdnet.co.kr/view/?no=20261110162120"
+        }
+      ],
+      "image_url": "images/2026-11-11_article_1.jpg",
+      "review": {
+        "trust_score": 3,
+        "status": "warning",
+        "suspicious_claims": [
+          "'어니터 오르반(Annita Orbán) 부총리 겸 외교부 장관' — 실존 인물·직함 교차검증 필요",
+          "솔루스 1공장 CAPA 1만5000톤·전체 40% 수치 — ZD넷 단일 출처, 원문 미첨부",
+          "'오르반 빅토르 전 총리' 표현 — 실각 시점·신정부 출범 맥락 근거 불명확"
+        ],
+        "notes": "헝가리 정치인 직함·수치 출처 보완 필요. 나머지 사실 개연성 있음.",
+        "verified_at": "2026-11-11 03:03"
+      }
+    },
+    {
+      "id": 2,
+      "category": "산업재",
+      "tag_type": "tag-industry",
+      "title": "BMW, 6세대 배터리 셀 공급망 삼성SDI·LG엔솔로 확대",
+      "summary": "BMW그룹이 차세대 전기차 뉴 클라세(Neue Klasse) 플랫폼용 6세대 배터리 셀 공급사로 삼성SDI와 LG에너지솔루션을 추가 선정했다. 각각 유럽과 북미 거점을 통해 2020년대 후반부터 공급이 시작된다.",
+      "body": [
+        "삼성SDI와 LG에너지솔루션이 BMW그룹의 6세대(Gen6) 고전압 배터리 셀 공급망에 새롭게 합류했다. BMW그룹이 11월 9일 공식 발표한 내용에 따르면, 두 한국 배터리 제조사는 2020년대 후반부터 각자의 현지 생산거점을 통해 원통형 셀을 납품하게 된다.",
+        "지역별 공급 구조는 다음과 같다. 이는 차량 생산지와 가까운 곳에서 부품을 조달하는 '현지 생산·현지 공급(Local for Local)' 원칙에 따른 것으로, 운송 거리를 줄여 공급망의 안정성과 유연성을 확보하기 위한 전략이다.",
+        "Gen6 셀을 조립해 고전압 배터리 팩으로 만드는 작업은 차량 공장 인근에 마련된 5개 거점에서 진행된다. 독일 이르바흐-슈트라스키르헨(Irlbach-Straßkirchen), 헝가리 데브레첸(Debrecen), 중국 선양(Shenyang), 미국 우드러프(Woodruff), 멕시코 산루이스포토시(San Luis Potosí)가 그 대상이다.",
+        "Gen6에 현재 적용된 셀은 직경 46mm NMC 원통형이다. 다만 BMW그룹은 3분기 실적 발표를 통해 뉴 클라세(Neue Klasse) 일부 모델에 LFP 배터리도 도입할 계획임을 밝혔으며, 중국 전용 모델 iX3 30L에는 이미 LFP가 탑재돼 있다. 이번에 새롭게 선정된 삼성SDI와 LG에너지솔루션의 셀 케미스트리는 아직 공개되지 않았다.",
+        "자체 기술 역량 측면에서 BMW그룹은 뮌헨 배터리셀 역량센터(BCCC)와 파르스도르프(Parsdorf) 셀 제조 역량센터(CMCC)를 통해 차세대 셀 기술 연구 및 공정 검증을 이어가고 있다. 잘칭(Salching)에 조성된 셀 재활용 역량센터(CRCC)에서는 독자 개발한 직접 재활용 공법으로 폐배터리에서 원료를 회수해 생산에 재투입하는 순환 체계를 구축 중이다."
+      ],
+      "why_important": "BMW의 Gen6 공급망 확정은 삼성SDI·LG에너지솔루션의 유럽·북미 셀 소재 수요를 가시화하며, 양극재·음극재·분리막 등 국내 소재 업체의 중장기 공급 계획에 직접 영향을 미친다.",
+      "sources": [
+        "Battery-News",
+        "투데이에너지"
+      ],
+      "reference_date": "2026-11-11",
+      "image_keyword": "electric vehicle battery cell manufacturing plant",
+      "is_featured": false,
+      "timestamp": "오전 09:45",
+      "source_links": [
+        {
+          "title": "BMW, 삼성SDI·LG엔솔과 배터리 공급망 현지화",
+          "url": "https://www.todayenergy.kr/news/articleView.html?idxno=305360"
+        },
+        {
+          "title": "BMW Adds Samsung SDI and LG Energy Solution as Gen6 Battery Cell Suppliers",
+          "url": "https://battery-news.de/en/2026/11/10/bmw-adds-samsung-sdi-and-lg-energy-solution-as-gen6-battery-cell-suppliers/"
+        }
+      ],
+      "image_url": "images/2026-11-11_article_2.jpg",
+      "review": {
+        "trust_score": 4,
+        "status": "warning",
+        "suspicious_claims": [
+          "'지역별 공급 구조는 다음과 같다' 이후 내용 누락 — 본문 불완전",
+          "삼성SDI·LG엔솔 셀 케미스트리 미공개 상태임에도 '원통형 셀 납품' 단정 표현"
+        ],
+        "notes": "BMW Gen6·뉴 클라세 사실 검증 양호. 본문 내용 누락 편집 확인 필요.",
+        "verified_at": "2026-11-11 03:03"
+      }
+    }
+  ],
+  "editorial_briefing": "인피니언이 300mm SiC 웨이퍼 양산에 성공하며 전력반도체 경쟁이 격화됐다. BMW는 차세대 전기차용 배터리 공급사로 삼성SDI·LG에너지솔루션을 선정했으나, 헝가리에서는 한국 배터리 소재기업들이 환경제재를 받고 있다.",
+  "global_issues": [
+    {
+      "icon": "🟢",
+      "label": "SiC 300mm 양산",
+      "status": "기술 도약 확인"
+    },
+    {
+      "icon": "🔴",
+      "label": "헝가리 환경제재",
+      "status": "국내기업 위기"
+    },
+    {
+      "icon": "🟢",
+      "label": "BMW 배터리 공급망",
+      "status": "K-배터리 수주"
+    },
+    {
+      "icon": "🟡",
+      "label": "전기차 전환 속도",
+      "status": "공급망 재편 중"
+    },
+    {
+      "icon": "🟡",
+      "label": "유럽 배터리 규제",
+      "status": "강화 추세 지속"
+    }
+  ],
+  "editorial_briefing_v2": {
+    "headline": "SiC 300mm·배터리 공급망 재편 가속",
+    "points": [
+      {
+        "text": "인피니언, 300mm SiC 웨이퍼 양산 성공으로 전력반도체 혁신"
+      },
+      {
+        "text": "헝가리, 한국 배터리 소재기업 환경제재 연이어 단행"
+      },
+      {
+        "text": "BMW 6세대 배터리 삼성SDI·LG엔솔로 공급망 확대"
+      }
+    ]
+  },
+  "last_reviewed_at": "2026-11-11 03:03"
+}

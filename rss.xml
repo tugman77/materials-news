@@ -6,7 +6,31 @@
     <atom:link href="https://www.materialtimes.co.kr/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Tue, 10 Nov 2026 03:01:29 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 03:03:50 +0900</lastBuildDate>
+    <item>
+      <title>인피니언, 300mm SiC 웨이퍼 양산 공정 구현</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-11-0.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-11-0.html</guid>
+      <category>산업재</category>
+      <description>인피니언 테크놀로지스가 오스트리아 빌라흐 팹에서 300mm 탄화규소(SiC) 웨이퍼로 기능성 전력 반도체 소자 제작에 성공했다. 기존 200mm 대비 웨이퍼당 칩 수가 2.3배 늘어 원가 경쟁력이 크게 향상될 전망이다.</description>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>헝가리 신정부, 배터리 공장 환경 제재 본격화</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-11-1.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-11-1.html</guid>
+      <category>글로벌</category>
+      <description>헝가리 신정부 출범 이후 솔루스첨단소재, 에코프로비엠, 동화일렉트로라이트 등 국내 배터리 소재 기업들이 현지 환경·안전 당국의 제재를 연이어 받고 있다. 솔루스 1공장은 오염수 유출로 가동이 중단돼 전체 헝가리 생산능력의 약 40%가 멈춘 상태다.</description>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>BMW, 6세대 배터리 셀 공급망 삼성SDI·LG엔솔로 확대</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-11-2.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-11-2.html</guid>
+      <category>산업재</category>
+      <description>BMW그룹이 차세대 전기차 뉴 클라세(Neue Klasse) 플랫폼용 6세대 배터리 셀 공급사로 삼성SDI와 LG에너지솔루션을 추가 선정했다. 각각 유럽과 북미 거점을 통해 2020년대 후반부터 공급이 시작된다.</description>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>브라질, 핵심광물 27종 공식 지정…자국 공급망 강화</title>
       <link>https://www.materialtimes.co.kr/news/2026-11-10-0.html</link>
@@ -222,30 +246,6 @@
       <category>산업재</category>
       <description>포스코퓨처엠이 LG에너지솔루션과 LFP 양극재·인조흑연 등 배터리 소재 72만톤 공급을 추진하는 협력 확대 계획을 밝혔다. 이번 계약은 7년간 장기공급 협약(LTA) 형태로, 포스코퓨처엠이 국내 배터리 3사 모두에 LFP 양극재를 공급하는 첫 사례가 될 전망이다.</description>
       <pubDate>Sun, 01 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>TANAKA·MEP, 말레이시아에 귀금속 정제 합작법인 설립</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-01-1.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-01-1.html</guid>
-      <category>반도체소재</category>
-      <description>일본 귀금속 전문기업 TANAKA와 말레이시아 MEP가 페낭 바투 카완 산업단지에 귀금속 정제 합작법인을 설립한다고 발표했다. TANAKA가 66.7%, MEP가 33.3% 지분을 보유하며, 반도체 공정에 쓰이는 귀금속 소재의 동남아 정제 거점을 구축하는 것이 목적이다.</description>
-      <pubDate>Sun, 01 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>대EU 철강 수출, 감소폭 줄었으나 규제 리스크 지속</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-01-2.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-01-2.html</guid>
-      <category>글로벌</category>
-      <description>EU의 신(新)철강조치 도입 이후 급감했던 한국의 대EU 철강 수출이 최근 감소폭이 줄어드는 개선 흐름을 보이고 있다. 그러나 EU의 잇단 규제 강화로 업계의 긴장감은 여전하다.</description>
-      <pubDate>Sun, 01 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>키옥시아 2분기 영업이익률 80% 돌파</title>
-      <link>https://www.materialtimes.co.kr/news/2026-10-31-0.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-10-31-0.html</guid>
-      <category>산업재</category>
-      <description>일본 키옥시아가 2026회계연도 2분기(7~9월) 영업이익률 80%를 넘기며 역대 최대 분기 실적을 기록했다. AI 데이터센터향 낸드플래시 수요 급증이 실적을 끌어올렸다.</description>
-      <pubDate>Sat, 31 Oct 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
