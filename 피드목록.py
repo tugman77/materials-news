@@ -46,6 +46,18 @@ FEEDS = [
      "group": "국내전문", "lang": "ko", "status": "active",
      "note": "전자부품 전문"},
 
+    # ── 원문 확보용 추가 (2026-11-05 시험: 원문을 직접 읽을 수 있음을 실측) ──
+    {"name": "철강금속신문", "url": "https://www.snmnews.com/rss/allArticle.xml",
+     "group": "국내전문", "lang": "ko", "status": "active"},
+    {"name": "테크월드", "url": "https://www.epnc.co.kr/rss/allArticle.xml",
+     "group": "국내종합", "lang": "ko", "status": "active", "note": "주제가 넓어 관련성 필터 대상"},
+    {"name": "투데이에너지", "url": "https://www.todayenergy.kr/rss/allArticle.xml",
+     "group": "국내종합", "lang": "ko", "status": "active", "note": "주제가 넓어 관련성 필터 대상"},
+    {"name": "Semiconductor Engineering", "url": "https://semiengineering.com/feed/",
+     "group": "영문반도체", "lang": "en", "status": "active"},
+    {"name": "Battery-News", "url": "https://battery-news.de/en/feed/",
+     "group": "영문소재", "lang": "en", "status": "active"},
+
     # ── 영문 원자재·광물 (신규) — 1차 정보. 국내지는 이걸 받아쓴다 ──
     {"name": "Mining.com", "url": "https://www.mining.com/feed/",
      "group": "영문원자재", "lang": "en", "status": "active",
