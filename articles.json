@@ -1,174 +1,173 @@
 {
-  "generated_at": "2026년 11월 11일 03:03",
-  "date_str": "2026년 11월 11일",
-  "date_key": "2026-11-11",
+  "generated_at": "2026년 11월 12일 03:06",
+  "date_str": "2026년 11월 12일",
+  "date_key": "2026-11-12",
   "articles": [
     {
       "id": 0,
-      "category": "산업재",
-      "tag_type": "tag-industry",
-      "title": "인피니언, 300mm SiC 웨이퍼 양산 공정 구현",
-      "summary": "인피니언 테크놀로지스가 오스트리아 빌라흐 팹에서 300mm 탄화규소(SiC) 웨이퍼로 기능성 전력 반도체 소자 제작에 성공했다. 기존 200mm 대비 웨이퍼당 칩 수가 2.3배 늘어 원가 경쟁력이 크게 향상될 전망이다.",
+      "category": "희귀금속",
+      "tag_type": "tag-rare",
+      "title": "USA 희토류, 브라질산 중희토 카보네이트 미 국방부 공급 개시",
+      "summary": "USA 희토류(USA Rare Earth)가 브라질 세라 베르데(Serra Verde) 광산에서 생산한 혼합희토류 카보네이트(MREC)의 미 국방부 산하 특수목적법인 US SIIE LLC向 상업 출하를 2026년 10월 개시했다. 15년 전량 인수 계약에 따라 첫 판매가 11월 중 예정돼 있으며, 중국 외 지역 중희토 공급망 구축의 분수령으로 평가된다.",
       "body": [
-        "인피니언 테크놀로지스(Infineon Technologies AG)가 11월 10일 오스트리아 빌라흐(Villach) 팹에서 300mm SiC 웨이퍼를 활용해 기능성 전력 소자를 양산 환경에서 구현하는 데 성공했다고 밝혔다. 반도체 전문 매체 세미컨덕터 다이제스트(Semiconductor Digest)에 따르면, 이 성과는 본격적인 양산 팹에서 달성된 업계 최초 사례다.",
-        "인피니언은 이번 공정에 기존 실리콘(Si) 제조 장비를 그대로 활용했다. 300mm 웨이퍼는 200mm 웨이퍼 대비 웨이퍼 한 장에서 얻을 수 있는 칩 수가 2.3배 많아, 단위 원가 절감 효과가 상당하다는 게 회사 측 설명이다.",
-        "이번 성과는 현재 진행 중인 200mm SiC 양산 로드맵과 병행해 추진된다.",
-        "인피니언은 독일 드레스덴(Dresden) 사업장에서도 300mm SiC에 콜드 스플릿(Cold Split) 기술 적용 가능성을 확인했다. 콜드 스플릿은 SiC 잉곳에서 웨이퍼를 절단할 때 기존 와이어 쏘(wire sawing)보다 재료 손실을 줄이고 가공 시간을 단축해, 동일한 결정에서 더 많은 웨이퍼를 얻을 수 있는 기술이다.",
-        "적용 분야는 전기차 트랙션 인버터·탑재형 충전기, 대규모 에너지 저장장치, 산업용 드라이브, 그리고 AI 데이터센터의 고체 변압기·전원공급장치 등으로 확대되고 있다."
+        "미국 나스닥 상장사 USA 희토류(USAR)는 브라질 고이아스 주 펠라 에마(Pela Ema) 광구에서 생산한 MREC의 상업 규모 출하를 10월부터 시작했다고 11일(현지시간) 밝혔다. 11월 중 첫 매출 인식이 예정돼 있으며, 미 국방부가 출자한 US SIIE LLC와의 15년 전량 인수(take-or-pay) 계약에 따른 것이다.",
+        "계약에는 차세대 영구자석 소재인 NdFeB 제조에 필수적인 중희토류에 대한 하한가 조항이 포함돼 있다. 네오디뮴(Nd)·프라세오디뮴(Pr) 가격은 kg당 110달러가 기준이며, 디스프로슘(Dy)·테르븀(Tb) 등 중희토의 역외 프리미엄을 반영한 조건이다.",
+        "세라 베르데는 1단계 최적화 및 증설 공사를 예산 내·기한 내에 완료했으며, 현재 2027년 2분기까지 연산 4,000톤(TREO 기준) 체제를 향해 생산량을 늘리고 있다. USA 희토류는 2027년 말까지 연산 6,400톤 달성을 목표로 하고 있으며, 그 이후 2배 규모의 2단계 확장도 검토 중이다.",
+        "세라 베르데는 아시아 외 지역에서 중희토 함유 이온점토(ionic clay)를 처음으로 상업 규모로 처리하는 사업장으로, 처리 기술 전체가 자체 개발한 것이다.",
+        "브라질 연방 정부는 11월 초 희토류를 고우선 핵심광물로 공식 지정했으며, 이에 따라 자국 공급망 보호 움직임이 강화되고 있다. 출하 소식이 전해진 11일 뉴욕 증시에서 USAR 주가는 10.8% 상승한 8.78달러를 기록했다."
       ],
-      "why_important": "SiC 300mm 전환은 전력 반도체 소재·기판 공급망에 직접 영향을 미친다. 국내 SiC 웨이퍼·에피 소재 업체들은 300mm 전환에 맞춰 소재 사양 및 공급 체계를 재검토해야 하는 시점이다.",
+      "why_important": "NdFeB 영구자석 핵심 소재인 디스프로슘·테르븀의 비중국 공급원이 본격 가동됨에 따라 국내 자석·모터 소재 업계의 조달 다변화 여건이 개선될 수 있다. 미국 국방부 장기 계약 구조는 가격 안정성에도 영향을 준다.",
       "sources": [
-        "Semiconductor Digest"
+        "Mining.com"
       ],
-      "reference_date": "2026-11-10",
-      "image_keyword": "silicon carbide semiconductor wafer manufacturing",
+      "reference_date": "2026-11-12",
+      "image_keyword": "rare earth carbonate industrial processing",
       "is_featured": true,
-      "timestamp": "오전 09:15",
+      "timestamp": "오전 09:10",
       "source_links": [
         {
-          "title": "Infineon Processes Functional Power Devices on 300mm SiC Wafers",
-          "url": "https://www.semiconductor-digest.com/infineon-processes-functional-power-devices-on-300mm-sic-wafers/?utm_source=rss&utm_medium=rss&utm_campaign=infineon-processes-functional-power-devices-on-300mm-sic-wafers"
+          "title": "USA Rare Earth begins Brazil shipments to Pentagon",
+          "url": "https://www.mining.com/usa-rare-earth-begins-brazil-shipments-to-pentagon/"
         }
       ],
-      "image_url": "images/2026-11-11_article_0.jpg",
+      "image_url": "images/2026-11-12_article_0.jpg",
       "review": {
         "trust_score": 4,
         "status": "pass",
         "suspicious_claims": [
-          "'본격 양산 팹 업계 최초' 주장 — 세미컨덕터 다이제스트 인용이나 독립 교차검증 불가",
-          "드레스덴 콜드 스플릿 적용 가능성 확인 — 양산 적용 여부와 혼동 소지"
+          "USAR 주가 8.78달러·10.8% 상승 수치: 근거자료 없어 독립 검증 불가",
+          "Nd/Pr 하한가 kg당 110달러: 시장가 대비 적정성 확인 필요",
+          "US SIIE LLC가 미 국방부 출자 SPV라는 구조 설명: 공식 출처 미제시"
         ],
-        "notes": "기업·기술·수치 전반 검증 가능. 출처 명시 양호.",
-        "verified_at": "2026-11-11 03:03"
+        "notes": "근거자료 없음. 핵심 사실은 개연성 있으나 주가·계약가 수치 검증 권장.",
+        "verified_at": "2026-11-12 03:06"
       }
     },
     {
       "id": 1,
-      "category": "글로벌",
-      "tag_type": "tag-global",
-      "title": "헝가리 신정부, 배터리 공장 환경 제재 본격화",
-      "summary": "헝가리 신정부 출범 이후 솔루스첨단소재, 에코프로비엠, 동화일렉트로라이트 등 국내 배터리 소재 기업들이 현지 환경·안전 당국의 제재를 연이어 받고 있다. 솔루스 1공장은 오염수 유출로 가동이 중단돼 전체 헝가리 생산능력의 약 40%가 멈춘 상태다.",
+      "category": "산업재",
+      "tag_type": "tag-industry",
+      "title": "EverMetal, 영국 초합금 재활용사 어드밴스드 얼로이스 인수",
+      "summary": "초합금 재활용 전문 기업 에버메탈(EverMetal Holdings)이 영국 셰필드 소재 크리티컬 메탈 재활용사 어드밴스드 얼로이스(Advanced Alloys)를 인수해 미국-유럽 대서양 양안(兩岸) 특수금속 플랫폼을 구축했다. 니켈·코발트·텅스텐·탄탈럼·니오브 등 고부가 소재 재활용 역량이 결합된다.",
       "body": [
-        "ZD넷 코리아 보도에 따르면, 동박 제조사 솔루스첨단소재의 헝가리 1공장이 오염수 유출 적발로 최근 가동이 중단됐다. 1공장 연간 생산능력(CAPA)은 1만5000톤으로, 2공장(2만3000톤)과 합산한 헝가리 전체 CAPA의 약 40%에 해당한다.",
-        "당국이 설정한 행정 처리 기간은 60일이며, 구체적인 가동 중단 기간은 아직 미확정이다.",
-        "양극재 기업 에코프로비엠도 지난 9월 가동을 시작한 헝가리 데브레첸(Debrecen) 2호 라인이 안전 당국 점검 과정에서 벌금과 생산 중단 처분을 받았다가 시정 조치를 완료하고 라인을 재가동했다. 전해액 기업 동화일렉트로라이트는 환경당국 인허가가 무효화돼 재인허가를 추진 중이며, 기존 허가에서 문제가 된 NMP 제조 설비를 제외하고 전해액 생산 설비만 별도 가동을 준비하고 있다.",
-        "삼성SDI, SK온 등 배터리셀 기업들도 가동 중단까지는 아니지만 환경·노동 문제로 벌금을 부과받은 바 있다.",
-        "지난 4월 출범한 헝가리 신정부는 선거 과정에서 배터리 공장의 환경오염 및 노동권 문제 해결을 주요 공약으로 내세웠다. 오르반 빅토르(Viktor Orbán) 전 총리가 적극 유치한 배터리·전기차 산업 대신 바이오 등 다른 산업을 거점으로 육성하려는 여론도 형성되고 있다고 업계는 전한다.",
-        "이에 박정성 산업통상자원부 통상교섭본부장은 11월 9일 헝가리를 방문해 어니터 오르반(Annita Orbán) 부총리 겸 외교부 장관 등과 만나 산업 협력의 중요성을 강조했다."
+        "에버메탈 홀딩스는 11일(현지시간) 영국 셰필드 기반 초합금 재활용 업체 어드밴스드 얼로이스 인수를 완료했다고 발표했다. 인수 금액은 공개되지 않았으며, 에버메탈이 지난해 8월 인수한 미국 초합금 재활용사 CAI 커스텀 얼로이스(CAI Custom Alloys)에 이은 두 번째 인수다.",
+        "어드밴스드 얼로이스는 니켈·코발트 기반 초합금 터닝(turnings) 등 복합 소재를 처리하고, 텅스텐·탄탈럼·니오브 등 고순도 크리티컬 메탈을 국제 고객망을 통해 거래한다. 영국은 세계 최대 초합금 스크랩·리버트 처리 허브 중 하나로 꼽히며, 미국은 초합금 최대 소비 시장이다.",
+        "에버메탈 창업자 겸 CEO 휴고 슈만(Hugo Schumann)은 어드밴스드 얼로이스와 CAI를 결합하면 단독 사업체로는 불가능한 규모와 역량을 갖춘 대서양 양안 특수금속 플랫폼이 탄생한다고 밝혔다.",
+        "에버메탈은 사모펀드 GEF 캐피털 파트너스(GEF Capital Partners)의 지원을 받아 북미·영국·유럽에서 추가 인수를 추진 중이다. 초합금 리버트 처리, 터닝 준비, 위탁 가공, 소량·내화금속 거래 및 유통을 전문으로 하는 창업자 혹은 가족 경영 기업을 타깃으로 삼고 있다.",
+        "에버메탈은 항공우주·발전·의료기기·우주탐사 등 고성능 소재 의존 산업을 주요 고객군으로 삼고 있다."
       ],
-      "why_important": "헝가리는 국내 배터리 소재 기업의 핵심 유럽 생산거점이다. 이번 연쇄 제재는 동박·양극재·전해액 등 소재 공급 일정에 직접 차질을 줄 수 있어 고객사와의 납기 협의가 시급하다.",
+      "why_important": "탄탈럼·텅스텐·니오브 등 반도체·방산 핵심 소재의 재활용 공급망이 대서양 양안으로 통합되면서, 버진 광물에 의존하던 조달 구조에 대안 경로가 추가된다. 국내 소재·부품 업계의 2차 공급원 다양화 측면에서 주목할 만한 구조 변화다.",
       "sources": [
-        "ZDNet Korea"
+        "Mining.com"
       ],
-      "reference_date": "2026-11-10",
-      "image_keyword": "industrial battery factory environmental regulation",
+      "reference_date": "2026-11-11",
+      "image_keyword": "superalloy metal recycling industrial",
       "is_featured": false,
-      "timestamp": "오전 09:30",
+      "timestamp": "오전 09:10",
       "source_links": [
         {
-          "title": "솔루스도 가동 중단…헝가리 배터리 공장 안갯속",
-          "url": "https://zdnet.co.kr/view/?no=20261110162120"
+          "title": "EverMetal acquires UK critical metals recycler Advanced Alloys",
+          "url": "https://www.mining.com/evermetal-acquires-uk-critical-metals-recycler-advanced-alloys/"
         }
       ],
-      "image_url": "images/2026-11-11_article_1.jpg",
+      "image_url": "images/2026-11-12_article_1.jpg",
       "review": {
-        "trust_score": 3,
-        "status": "warning",
+        "trust_score": 4,
+        "status": "pass",
         "suspicious_claims": [
-          "'어니터 오르반(Annita Orbán) 부총리 겸 외교부 장관' — 실존 인물·직함 교차검증 필요",
-          "솔루스 1공장 CAPA 1만5000톤·전체 40% 수치 — ZD넷 단일 출처, 원문 미첨부",
-          "'오르반 빅토르 전 총리' 표현 — 실각 시점·신정부 출범 맥락 근거 불명확"
+          "EverMetal Holdings 및 CEO Hugo Schumann: 공개 출처 확인 필요",
+          "CAI Custom Alloys 인수 시점 '지난해 8월(2025.08)' 검증 불가",
+          "영국이 '세계 최대 초합금 스크랩 허브 중 하나'라는 순위 주장: 출처 미제시"
         ],
-        "notes": "헝가리 정치인 직함·수치 출처 보완 필요. 나머지 사실 개연성 있음.",
-        "verified_at": "2026-11-11 03:03"
+        "notes": "근거자료 없음. 기업명·인물명 독립 검증 필요하나 전반 개연성 양호.",
+        "verified_at": "2026-11-12 03:06"
       }
     },
     {
       "id": 2,
-      "category": "산업재",
-      "tag_type": "tag-industry",
-      "title": "BMW, 6세대 배터리 셀 공급망 삼성SDI·LG엔솔로 확대",
-      "summary": "BMW그룹이 차세대 전기차 뉴 클라세(Neue Klasse) 플랫폼용 6세대 배터리 셀 공급사로 삼성SDI와 LG에너지솔루션을 추가 선정했다. 각각 유럽과 북미 거점을 통해 2020년대 후반부터 공급이 시작된다.",
+      "category": "글로벌",
+      "tag_type": "tag-global",
+      "title": "Victory Metals·커틴대, 호주산 중희토 MREC 파일럿 가공 착수",
+      "summary": "호주 빅토리 메탈스(Victory Metals)가 커틴대학교(Curtin University)와 소재 이전 계약을 체결하고, 노스 스탠모어(North Stanmore) 프로젝트 중희토 농축물을 파일럿 규모에서 혼합희토류 카보네이트(MREC)로 가공하는 시험에 착수했다. 호주 국내 중희토 처리 경로 확보가 목표다.",
       "body": [
-        "삼성SDI와 LG에너지솔루션이 BMW그룹의 6세대(Gen6) 고전압 배터리 셀 공급망에 새롭게 합류했다. BMW그룹이 11월 9일 공식 발표한 내용에 따르면, 두 한국 배터리 제조사는 2020년대 후반부터 각자의 현지 생산거점을 통해 원통형 셀을 납품하게 된다.",
-        "지역별 공급 구조는 다음과 같다. 이는 차량 생산지와 가까운 곳에서 부품을 조달하는 '현지 생산·현지 공급(Local for Local)' 원칙에 따른 것으로, 운송 거리를 줄여 공급망의 안정성과 유연성을 확보하기 위한 전략이다.",
-        "Gen6 셀을 조립해 고전압 배터리 팩으로 만드는 작업은 차량 공장 인근에 마련된 5개 거점에서 진행된다. 독일 이르바흐-슈트라스키르헨(Irlbach-Straßkirchen), 헝가리 데브레첸(Debrecen), 중국 선양(Shenyang), 미국 우드러프(Woodruff), 멕시코 산루이스포토시(San Luis Potosí)가 그 대상이다.",
-        "Gen6에 현재 적용된 셀은 직경 46mm NMC 원통형이다. 다만 BMW그룹은 3분기 실적 발표를 통해 뉴 클라세(Neue Klasse) 일부 모델에 LFP 배터리도 도입할 계획임을 밝혔으며, 중국 전용 모델 iX3 30L에는 이미 LFP가 탑재돼 있다. 이번에 새롭게 선정된 삼성SDI와 LG에너지솔루션의 셀 케미스트리는 아직 공개되지 않았다.",
-        "자체 기술 역량 측면에서 BMW그룹은 뮌헨 배터리셀 역량센터(BCCC)와 파르스도르프(Parsdorf) 셀 제조 역량센터(CMCC)를 통해 차세대 셀 기술 연구 및 공정 검증을 이어가고 있다. 잘칭(Salching)에 조성된 셀 재활용 역량센터(CRCC)에서는 독자 개발한 직접 재활용 공법으로 폐배터리에서 원료를 회수해 생산에 재투입하는 순환 체계를 구축 중이다."
+        "빅토리 메탈스(ASX: VTM)는 11일(현지시간) 호주 퍼스 커틴대학교와 소재 이전 계약(MTA)을 맺고, 자사 버스우드(Burswood) 플랜트에서 생산한 중희토 농축물을 대학교 내 음극재 전구체 생산 파일럿 플랜트(C4P)에서 MREC로 처리하는 파일럿 프로그램에 착수한다고 발표했다.",
+        "C4P 시설은 호주 배터리·핵심광물 산업 지원을 목적으로 구축된 연구 인프라로 1,840만 호주달러(약 1,260만 달러) 이상이 투자됐다. 이 협약은 2027년까지 유효하며, 프로그램에서 생산된 MREC 샘플은 빅토리로 반환돼 국제 판로·정제 파트너와의 기술 평가에 활용된다.",
+        "이번 파일럿은 호주 통합 중희토 공급망 구축 전략의 핵심 단계로 위치한다.",
+        "이번 협업은 중국이 중·중희토 관련 수출통제 조치의 일부를 2027년 1월 10일까지 추가 유예한다고 11월 9일 발표한 직후 나왔다. 중국은 전 세계 희토류 채굴량의 약 60%, 희토류 처리 능력의 거의 전부를 보유하고 있어 각국 정부가 독자 처리 경로 마련에 나서고 있다.",
+        "빅토리는 미국·유럽·일본·인도·한국·베트남 고객을 겨냥해 호주산 MREC 처리 경로를 구축하는 것이 목표라고 밝혔다. 호주 정부는 올해 5월 국가 안보를 이유로 중국 투자자에게 노던 미네랄스(Northern Minerals) 희토류 지분 매각을 명령하는 등 핵심광물 공급망 보호 조치를 강화하고 있다."
       ],
-      "why_important": "BMW의 Gen6 공급망 확정은 삼성SDI·LG에너지솔루션의 유럽·북미 셀 소재 수요를 가시화하며, 양극재·음극재·분리막 등 국내 소재 업체의 중장기 공급 계획에 직접 영향을 미친다.",
+      "why_important": "중국 수출통제 유예가 2027년 1월 만료를 앞두고, 호주가 독자 중희토 처리 역량을 확충하는 것은 한국을 포함한 비(非)중국 조달처 다변화 공급망에 직접 영향을 미친다.",
       "sources": [
-        "Battery-News",
-        "투데이에너지"
+        "Mining.com"
       ],
       "reference_date": "2026-11-11",
-      "image_keyword": "electric vehicle battery cell manufacturing plant",
+      "image_keyword": "rare earth carbonate pilot plant processing",
       "is_featured": false,
-      "timestamp": "오전 09:45",
+      "timestamp": "오전 09:10",
       "source_links": [
         {
-          "title": "BMW, 삼성SDI·LG엔솔과 배터리 공급망 현지화",
-          "url": "https://www.todayenergy.kr/news/articleView.html?idxno=305360"
-        },
-        {
-          "title": "BMW Adds Samsung SDI and LG Energy Solution as Gen6 Battery Cell Suppliers",
-          "url": "https://battery-news.de/en/2026/11/10/bmw-adds-samsung-sdi-and-lg-energy-solution-as-gen6-battery-cell-suppliers/"
+          "title": "Victory, Curtin University team up on rare earth processing",
+          "url": "https://www.mining.com/victory-curtin-university-team-up-on-rare-earth-processing/"
         }
       ],
-      "image_url": "images/2026-11-11_article_2.jpg",
+      "image_url": "images/2026-11-12_article_2.jpg",
       "review": {
         "trust_score": 4,
-        "status": "warning",
+        "status": "pass",
         "suspicious_claims": [
-          "'지역별 공급 구조는 다음과 같다' 이후 내용 누락 — 본문 불완전",
-          "삼성SDI·LG엔솔 셀 케미스트리 미공개 상태임에도 '원통형 셀 납품' 단정 표현"
+          "C4P 시설 투자액 1,840만 호주달러·환산 약 1,260만 달러: 환율 근거 미제시",
+          "중국 수출통제 유예 종료일 '2027년 1월 10일': 공식 발표 출처 미확인",
+          "중국 희토류 처리 능력 '거의 전부' 보유 표현: 구체 수치 없이 과장 가능성"
         ],
-        "notes": "BMW Gen6·뉴 클라세 사실 검증 양호. 본문 내용 누락 편집 확인 필요.",
-        "verified_at": "2026-11-11 03:03"
+        "notes": "근거자료 없음. 호주 희토류 공급망 맥락 개연성 높으나 세부 수치 확인 권장.",
+        "verified_at": "2026-11-12 03:06"
       }
     }
   ],
-  "editorial_briefing": "인피니언이 300mm SiC 웨이퍼 양산에 성공하며 전력반도체 경쟁이 격화됐다. BMW는 차세대 전기차용 배터리 공급사로 삼성SDI·LG에너지솔루션을 선정했으나, 헝가리에서는 한국 배터리 소재기업들이 환경제재를 받고 있다.",
+  "editorial_briefing": "미국이 브라질산 중희토를 국방부에 공급하고 호주가 파일럿 가공에 착수하는 등 서방 진영의 희토류 공급망 다변화가 동시다발적으로 진행 중이다. 초합금 재활용 분야에서도 인수합병이 이어지며 핵심광물 순환경제가 확대되고 있다.",
   "global_issues": [
     {
-      "icon": "🟢",
-      "label": "SiC 300mm 양산",
-      "status": "기술 도약 확인"
-    },
-    {
       "icon": "🔴",
-      "label": "헝가리 환경제재",
-      "status": "국내기업 위기"
+      "label": "희토류 공급망 재편",
+      "status": "미·호주 동시 착수"
+    },
+    {
+      "icon": "🟡",
+      "label": "중국 희토류 의존도",
+      "status": "탈피 시도 중"
     },
     {
       "icon": "🟢",
-      "label": "BMW 배터리 공급망",
-      "status": "K-배터리 수주"
+      "label": "브라질 희토류 부상",
+      "status": "미 국방부 공급 개시"
+    },
+    {
+      "icon": "🟢",
+      "label": "초합금 재활용 확대",
+      "status": "영국 인수합병 완료"
     },
     {
       "icon": "🟡",
-      "label": "전기차 전환 속도",
-      "status": "공급망 재편 중"
-    },
-    {
-      "icon": "🟡",
-      "label": "유럽 배터리 규제",
-      "status": "강화 추세 지속"
+      "label": "핵심광물 공급 안보",
+      "status": "다자 협력 진행 중"
     }
   ],
   "editorial_briefing_v2": {
-    "headline": "SiC 300mm·배터리 공급망 재편 가속",
+    "headline": "희토류 공급망 다변화 가속, 미·호주 동시 착수",
     "points": [
       {
-        "text": "인피니언, 300mm SiC 웨이퍼 양산 성공으로 전력반도체 혁신"
+        "text": "USA 희토류, 브라질산 중희토 미 국방부 공급 개시"
       },
       {
-        "text": "헝가리, 한국 배터리 소재기업 환경제재 연이어 단행"
+        "text": "EverMetal, 영국 초합금 재활용사 인수로 순환경제 확장"
       },
       {
-        "text": "BMW 6세대 배터리 삼성SDI·LG엔솔로 공급망 확대"
+        "text": "Victory Metals·커틴대, 호주산 중희토 파일럿 가공 착수"
+      },
+      {
+        "text": "서방 진영, 중국 의존 탈피 위한 희토류 공급망 재편 가속"
       }
     ]
   },
-  "last_reviewed_at": "2026-11-11 03:03"
+  "last_reviewed_at": "2026-11-12 03:06"
 }
