@@ -6,7 +6,31 @@
     <atom:link href="https://www.materialtimes.co.kr/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 12 Nov 2026 03:06:31 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 03:05:58 +0900</lastBuildDate>
+    <item>
+      <title>Factorial, 고체전지 항공우주용 셀 450Wh/kg 달성</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-13-0.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-13-0.html</guid>
+      <category>산업재</category>
+      <description>미국 고체전지 개발사 Factorial이 2026년 말 목표로 설정했던 에너지밀도 450Wh/kg을 항공우주 프로그램 셀에서 조기 달성했다. 일본 미쓰이긴조쿠(Mitsui Kinzoku)와 고체전해질 소재 양산 협력도 진행 중이다.</description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>젠슨 황 Nvidia 전격 사임, AI 데이터센터 금속 수요 불확실</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-13-1.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-13-1.html</guid>
+      <category>글로벌</category>
+      <description>젠슨 황(Jensen Huang) 엔비디아(Nvidia) CEO가 11월 13일 사임하며 AI 인프라 투자 흐름에 불확실성이 더해졌다. Mining.com은 데이터센터·전력 프로젝트 지연 시 구리 등 금속 수요가 타격을 받을 수 있다고 보도했다.</description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>LG엔솔, 사용 배터리 10분 진단 소프트웨어 개발</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-13-2.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-13-2.html</guid>
+      <category>산업재</category>
+      <description>LG에너지솔루션이 중고 배터리 상태를 10분 이내에 평가하는 소프트웨어 'Re.Pulse'를 개발했다. CES 2027 혁신상 수상작으로 선정됐으며, 배터리 재사용·재제조·재활용 경로 결정에 활용된다.</description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>USA 희토류, 브라질산 중희토 카보네이트 미 국방부 공급 개시</title>
       <link>https://www.materialtimes.co.kr/news/2026-11-12-0.html</link>
@@ -222,30 +246,6 @@
       <category>글로벌</category>
       <description>대만이 첨단 반도체 칩·소재·장비의 대중국 수출통제를 강화하는 방안을 추진 중이다. 우회 수출에 대한 처벌 규정도 포함될 예정으로, 글로벌 반도체 공급망에 추가 변수가 될 전망이다.</description>
       <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>기계연, 반도체 공정용 극저온 칠러 개발</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-03-1.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-03-1.html</guid>
-      <category>반도체소재</category>
-      <description>한국기계연구원이 영하 120도 이하에서 15kW 냉각 성능을 구현하는 터보-브레이튼 방식의 산업용 칠러를 개발했다. 반도체 식각 공정의 친환경 냉각 수요를 겨냥한 국산화 성과다.</description>
-      <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>시티, 리튬 가격 전망치 40% 하향 조정</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-03-2.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-03-2.html</guid>
-      <category>희귀금속</category>
-      <description>씨티은행이 2028년 말까지의 리튬 가격 전망치를 40% 낮췄다. 수요 증가세 둔화와 공급 확대가 맞물리며 시장 잉여가 예상된다는 분석이다.</description>
-      <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>비아트론, 소부장 으뜸기업 선정…RTP 장비 개발</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-02-0.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-02-0.html</guid>
-      <category>반도체소재</category>
-      <description>디스플레이 열처리 장비 전문기업 비아트론이 산업통상자원부 주관 '소재부품장비 으뜸기업'에 선정됐다. 국내 종합반도체 기업과 함께 120억원 규모의 급속열처리(RTP) 장비를 개발하며 반도체 소재·공정 국산화에 속도를 낸다.</description>
-      <pubDate>Mon, 02 Nov 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>

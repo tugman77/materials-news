@@ -1,0 +1,122 @@
+{
+  "generated_at": "2026년 11월 13일 03:05",
+  "date_str": "2026년 11월 13일",
+  "date_key": "2026-11-13",
+  "articles": [
+    {
+      "id": 0,
+      "category": "산업재",
+      "tag_type": "tag-industry",
+      "title": "Factorial, 고체전지 항공우주용 셀 450Wh/kg 달성",
+      "summary": "미국 고체전지 개발사 Factorial이 2026년 말 목표로 설정했던 에너지밀도 450Wh/kg을 항공우주 프로그램 셀에서 조기 달성했다. 일본 미쓰이긴조쿠(Mitsui Kinzoku)와 고체전해질 소재 양산 협력도 진행 중이다.",
+      "body": [
+        "Factorial은 11월 10일 발표한 3분기 실적에서 항공우주 프로그램용 셀의 에너지밀도 450Wh/kg 달성을 공개했다. 이는 연말 목표를 앞당겨 충족한 것이며, 같은 발표에서 2027년 목표보다 이른 첫 상업 매출도 기록했다고 밝혔다. 다만 셀 용량, 화학 조성, 시험 조건 및 고객사는 공개하지 않았다.",
+        "드론 분야에서는 Factorial 기술이 적용된 그룹I 드론이 2026년 521분 비행 기록을 세웠으며, 비행 거리는 약 483km에 달했다. 자동차 분야에서는 Mercedes-Benz 시험 차량이 1회 충전으로 1200km 이상을 주행하는 성과를 거뒀다.",
+        "Stellantis는 Factorial 기술을 Dodge Charger Daytona 시연 차량에 탑재했다. Mercedes-Benz, Stellantis, 현대자동차, 기아 등이 Factorial에 투자한 상태다.",
+        "양산 단계에서는 파트너사를 통한 협력 체제를 택하고 있다. 2026년 9월 일본 미쓰이긴조쿠와 올솔리드스테이트 셀인 Solstice 양산 협력에 나섰으며, 미쓰이긴조쿠는 고체전해질 소재 생산 역량을 제공한다. 양사는 아직 생산 규모와 일정을 공개하지 않았다.",
+        "고체전해질은 기존 액체 전해질을 대체하는 차세대 배터리 핵심 소재로, 황화물계·산화물계 등 여러 화학 조성이 개발 경쟁 중이다. Factorial이 미쓰이긴조쿠와의 협력으로 소재 공급망 체계를 구축하는 방향을 택한 점이 주목된다."
+      ],
+      "why_important": "고체전해질 등 고체전지 핵심 소재의 양산 협력 구조가 본격화되고 있어, 소재 조달 경로와 공급 조건에 대한 업계의 관심이 높아지고 있다. 항공·자동차 양쪽에서 상업 적용이 가시화되면서 소재 수요 창출 시점이 앞당겨질 가능성이 생겼다.",
+      "sources": [
+        "Battery-News",
+        "GlobeNewswire"
+      ],
+      "reference_date": "2026-11-10",
+      "image_keyword": "solid state battery electrolyte material",
+      "is_featured": true,
+      "timestamp": "오후 02:10",
+      "source_links": [
+        {
+          "title": "Factorial Reaches 450 Wh/kg With Solid-State Cells for Aerospace",
+          "url": "https://battery-news.de/en/2026/11/12/factorial-reaches-450-wh-kg-with-solid-state-cells-for-aerospace/"
+        }
+      ],
+      "image_url": "images/2026-11-13_article_0.jpg"
+    },
+    {
+      "id": 1,
+      "category": "글로벌",
+      "tag_type": "tag-global",
+      "title": "젠슨 황 Nvidia 전격 사임, AI 데이터센터 금속 수요 불확실",
+      "summary": "젠슨 황(Jensen Huang) 엔비디아(Nvidia) CEO가 11월 13일 사임하며 AI 인프라 투자 흐름에 불확실성이 더해졌다. Mining.com은 데이터센터·전력 프로젝트 지연 시 구리 등 금속 수요가 타격을 받을 수 있다고 보도했다.",
+      "body": [
+        "Mining.com 보도에 따르면 젠슨 황은 엔비디아 CEO·사장·이사직에서 사임했으며, 최고재무책임자(CFO) 콜레트 크레스(Colette Kress)가 임시 CEO를 맡았다. 사임 배경에는 기업 지배구조 및 미국 국가안보와 관련한 개인 문제가 거론됐다.",
+        "사임 발표 당일 엔비디아 주가는 한때 전주 대비 30% 낮은 148달러까지 하락했다가 7.7% 약세로 거래를 마쳤다. BMO 캐피털마켓은 목표주가를 340달러에서 240달러로 29% 하향하고 최선호주 지위를 철회했으나 아웃퍼폼 의견은 유지했다.",
+        "BMO의 반도체 애널리스트 하르쉬 쿠마르(Harsh Kumar)는 AI에 대한 강세 견해는 유지하지만 이번 사건이 부담으로 작용한다고 밝히면서, 후임 CEO가 확정되기 전까지 평가를 재검토하겠다는 입장을 나타냈다고 Mining.com은 전했다.",
+        "광업계가 주목하는 것은 AI 붐을 뒷받침하는 데이터센터·전력망 건설 프로젝트다. 경영 불확실성이 장기화될 경우 관련 건설 일정이 지연되며 구리 등 금속 구매가 뒤로 밀릴 수 있다는 우려가 나왔다.",
+        "그러나 단기적 수요 급감 가능성은 제한적이라는 시각도 있다. 마이크로소프트(Microsoft)는 2026년 캘린더 연간 약 1700억 달러(약 234조원) 규모의 설비 투자를 유지하고 있으며, 알파벳(Alphabet)도 2026년 1950억~2050억 달러(약 268~282조원) 범위의 계획을 고수했다. 두 전망 모두 황 사임 발표 이전에 제시된 것으로 향후 조정 가능성은 열려 있다.",
+        "BMO는 엔비디아의 2027 회계연도(2027년 1월 종료) 매출을 4109억 달러(약 565조원), 그 이듬해 6989억 달러(약 962조원)로 예상하고 있다. 이는 주가 목표치를 낮추면서도 사업 성장 기대치는 유지한 것이다."
+      ],
+      "why_important": "AI 데이터센터 건설 속도는 구리·알루미늄 등 산업용 금속과 반도체 소재 수요에 직결된다. 경영 불확실성이 프로젝트 타임라인에 미치는 영향을 소부장 조달 부서가 단기 모니터링할 필요가 있다.",
+      "sources": [
+        "Mining.com",
+        "BMO Capital Markets"
+      ],
+      "reference_date": "2026-11-13",
+      "image_keyword": "data center construction industrial metal",
+      "is_featured": false,
+      "timestamp": "오후 02:10",
+      "source_links": [
+        {
+          "title": "Nvidia turmoil tests metals demand boom",
+          "url": "https://www.mining.com/nvidia-turmoil-tests-metals-demand-boom/"
+        }
+      ],
+      "image_url": "images/2026-11-13_article_1.jpg"
+    },
+    {
+      "id": 2,
+      "category": "산업재",
+      "tag_type": "tag-industry",
+      "title": "LG엔솔, 사용 배터리 10분 진단 소프트웨어 개발",
+      "summary": "LG에너지솔루션이 중고 배터리 상태를 10분 이내에 평가하는 소프트웨어 'Re.Pulse'를 개발했다. CES 2027 혁신상 수상작으로 선정됐으며, 배터리 재사용·재제조·재활용 경로 결정에 활용된다.",
+      "body": [
+        "LG에너지솔루션은 11월 9일 사용 배터리의 상태를 10분 이내에 진단하는 소프트웨어 'Re.Pulse'가 CES 이노베이션 어워즈 2027 'Vehicle Tech & Advanced Mobility' 부문 수상작으로 선정됐다고 밝혔다.",
+        "Re.Pulse는 배터리에 전류 펄스를 가한 뒤 전압 응답을 분석하는 방식을 쓴다. AI 모델이 이 데이터를 평가한다. 기존 건강 상태 검사는 완전 방전과 충전, 재방전 과정을 거쳐 7시간 이상 소요되는 데 비해 소요 시간을 대폭 줄였다.",
+        "이 소프트웨어는 배터리 팩 전체가 아닌 셀 단위로 평가를 수행한다. 이를 통해 열화된 셀을 특정해 수리·교체 가능 여부를 가릴 수 있다. 진단 결과에 따라 배터리를 재사용·재제조·재활용 세 경로 중 하나로 분류하는 구조다.",
+        "Re.Pulse는 전용 하드웨어 없이 범용 배터리 테스터와 EV 충전기에서 작동하며, 차량에 장착된 상태에서도 사용할 수 있다. LG에너지솔루션은 진단 정확도, 지원 셀 화학종, 출시 일정은 공개하지 않았다. CES 수상작 선정은 제출 자료 기반으로 이뤄지며 독립 검증은 포함되지 않는다.",
+        "LG에너지솔루션은 Re.Pulse를 배터리 애즈 어 서비스(Battery-as-a-Service) 사업에 통합할 계획이다. 주요 고객군으로는 EV 서비스 센터, 플리트 운영사, 중고차 플랫폼, 이차 활용 에너지저장 사업자를 제시했다. 회사는 작년에도 배터리 수명 연장 기술 'B.artery'로 CES 혁신상을 수상한 바 있다."
+      ],
+      "why_important": "사용 배터리의 셀 단위 신속 진단 기술은 이차전지 재활용·재제조 공급망 전반에 영향을 미친다. 진단 정확도와 지원 화학종 범위가 확정되면 양극재·전해질 등 소재 재활용 업체의 조달 흐름에도 변화가 생길 수 있다.",
+      "sources": [
+        "Battery-News",
+        "The Elec",
+        "LG에너지솔루션"
+      ],
+      "reference_date": "2026-11-11",
+      "image_keyword": "battery diagnostic industrial equipment",
+      "is_featured": false,
+      "timestamp": "오전 09:15",
+      "source_links": [
+        {
+          "title": "LG Energy Solution Presents 10-Minute Diagnostics for Used Batteries",
+          "url": "https://battery-news.de/en/2026/11/11/lg-energy-solution-presents-10-minute-diagnostics-for-used-batteries/"
+        }
+      ],
+      "image_url": "images/2026-11-13_article_2.jpg"
+    }
+  ],
+  "editorial_briefing": "오늘 소재경제신문은 반도체·희귀금속·산업재 분야 주요 동향을 집중 보도합니다.",
+  "global_issues": [
+    {
+      "icon": "🔴",
+      "label": "미·중 공급망 갈등",
+      "status": "진행 중"
+    },
+    {
+      "icon": "🟡",
+      "label": "희귀금속 가격 불안",
+      "status": "모니터링"
+    },
+    {
+      "icon": "🟡",
+      "label": "반도체 소재 국산화",
+      "status": "진행 중"
+    },
+    {
+      "icon": "🟢",
+      "label": "국내 AI 반도체 투자",
+      "status": "확대"
+    }
+  ]
+}
