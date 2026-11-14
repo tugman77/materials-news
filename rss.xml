@@ -6,7 +6,23 @@
     <atom:link href="https://www.materialtimes.co.kr/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Fri, 13 Nov 2026 03:05:58 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 10:14:22 +0900</lastBuildDate>
+    <item>
+      <title>DICP, 철-망간 인산염 나트륨이온 양극재 1000회 사이클 달성</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-14-0.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-14-0.html</guid>
+      <category>산업재</category>
+      <description>중국 과학원 다롄화학물리연구소(DICP)가 철-망간 인산염 계열 나트륨이온 배터리 양극재를 개선해 초기 쿨롱 효율 97%, 1000회 사이클 후 용량 유지율 93.6%를 달성했다고 발표했다. 100톤 규모 파일럿 라인이 가동 중이며 산업화 협력도 시작됐다.</description>
+      <pubDate>Sat, 14 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>한국 산업부, 온디바이스 AI 반도체 10종 2030년 개발 로드맵 발표</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-14-1.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-14-1.html</guid>
+      <category>글로벌</category>
+      <description>산업통상자원부가 2030년까지 온디바이스 AI 반도체 8종과 반도체 설계자산 2종을 개발하는 로드맵을 발표했다. 총 8002억원 규모 사업으로 자율주행·협동로봇·드론 등 응용 분야별 칩을 국내 팹리스·수요기업과 함께 개발·실증한다.</description>
+      <pubDate>Sat, 14 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>Factorial, 고체전지 항공우주용 셀 450Wh/kg 달성</title>
       <link>https://www.materialtimes.co.kr/news/2026-11-13-0.html</link>
@@ -230,22 +246,6 @@
       <category>반도체소재</category>
       <description>국전이 AI 반도체 핵심소재 국산화에 나서며 일본 제품과 성능 경쟁을 벌이고 있다. 여수국가산업단지도 반도체 소재 공급망 진입을 통한 산업 다각화를 모색 중이다.</description>
       <pubDate>Wed, 04 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>포스코퓨처엠, LFP 양극재로 배터리 3사 공략</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-04-2.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-04-2.html</guid>
-      <category>산업재</category>
-      <description>포스코퓨처엠이 LFP(리튬인산철) 양극재를 앞세워 국내 배터리 3사 모두와 공급 협력 관계를 구축했다. LG에너지솔루션과는 7년간 72만 톤 규모의 배터리 소재 공급도 추진 중이다.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>대만, 대중국 반도체 수출통제 강화 추진</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-03-0.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-03-0.html</guid>
-      <category>글로벌</category>
-      <description>대만이 첨단 반도체 칩·소재·장비의 대중국 수출통제를 강화하는 방안을 추진 중이다. 우회 수출에 대한 처벌 규정도 포함될 예정으로, 글로벌 반도체 공급망에 추가 변수가 될 전망이다.</description>
-      <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
