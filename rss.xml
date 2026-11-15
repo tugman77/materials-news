@@ -6,7 +6,31 @@
     <atom:link href="https://www.materialtimes.co.kr/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Sat, 14 Nov 2026 10:14:22 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 15 Nov 2026 09:40:06 +0900</lastBuildDate>
+    <item>
+      <title>Marposs, 배터리 전극 절단 공정에 10μm 결함 실시간 감지 시스템 양산 적용</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-15-0.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-15-0.html</guid>
+      <category>산업재</category>
+      <description>독일 마르포스(Marposs GmbH)가 배터리 전극 슬리팅·노칭 공정에서 절단날 결함을 실시간으로 감지하는 광학 센서 시스템을 개발해 독일 소재 셀 제조사의 양산 라인에 투입했다. 10마이크로미터 수준의 미세 칩핑까지 검출하며, 기존 정기 교체 방식 대비 공구 수명을 최적화할 수 있다고 밝혔다.</description>
+      <pubDate>Sun, 15 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>APEC 계기 미중 무역협상, 한국 반도체·공급망 불확실성 최대 변수</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-15-1.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-15-1.html</guid>
+      <category>글로벌</category>
+      <description>오는 18~19일 중국 선전에서 열리는 APEC 정상회의에서 미국과 중국의 무역휴전 연장 협상이 진행될 예정이다. 반도체 수출통제 강화 여부와 중국의 핵심광물 수출통제 유예 연장이 맞물리며 한국 소재·부품 업계의 대중 공급망에 직접 영향을 줄 수 있다.</description>
+      <pubDate>Sun, 15 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>α-갈륨산화물, 전력 반도체 소재 물성 규명</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-15-2.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-15-2.html</guid>
+      <category>반도체소재</category>
+      <description>일본 홋카이도대·교토대 연구팀이 알파 갈륨산화물(α-Ga2O3) 박막의 전자 유효질량과 열전도도를 실측해 차세대 전력 반도체 소재 설계 기반을 마련했다. 게르마늄 도핑으로 전자 이동성을 높이면서도 열전도도는 거의 변화가 없음을 확인했다.</description>
+      <pubDate>Sun, 15 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>DICP, 철-망간 인산염 나트륨이온 양극재 1000회 사이클 달성</title>
       <link>https://www.materialtimes.co.kr/news/2026-11-14-0.html</link>
@@ -222,30 +246,6 @@
       <category>반도체소재</category>
       <description>일본 반도체 소재 기업 JSR의 최대주주인 일본 국부펀드 JIC가 보유 지분 매각 절차를 시작했다. JSR은 포토레지스트 등 핵심 반도체 소재를 공급하는 세계 최대 업체 중 하나로, 매각 결과에 따라 글로벌 소재 공급망 구도가 바뀔 수 있다.</description>
       <pubDate>Thu, 05 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>LG화학·SFC, 청색 OLED 특허소송 쌍방 항소</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-05-2.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-05-2.html</guid>
-      <category>산업재</category>
-      <description>LG화학과 SFC가 청색 OLED 특허 침해 소송 1심 판결에 모두 불복해 항소했다. 1심은 SFC가 LG화학에 80억원을 배상하라고 판결했으나, 양측 모두 소가를 높여 항소심에서 다툰다.</description>
-      <pubDate>Thu, 05 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>한·튀르키예, 희토류 공급망 MOU 4건 체결</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-04-0.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-04-0.html</guid>
-      <category>글로벌</category>
-      <description>한국과 튀르키예가 정상회담에서 희토류 공급망 협력을 포함한 양해각서 4건을 체결했다. 핵심광물 확보 다변화를 위한 양국 협력이 공식화됐다.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>국전, AI 반도체 소재 국산화…일본과 경쟁</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-04-1.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-04-1.html</guid>
-      <category>반도체소재</category>
-      <description>국전이 AI 반도체 핵심소재 국산화에 나서며 일본 제품과 성능 경쟁을 벌이고 있다. 여수국가산업단지도 반도체 소재 공급망 진입을 통한 산업 다각화를 모색 중이다.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
