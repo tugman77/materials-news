@@ -6,7 +6,23 @@
     <atom:link href="https://www.materialtimes.co.kr/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Sun, 15 Nov 2026 09:40:06 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 03:06:22 +0900</lastBuildDate>
+    <item>
+      <title>고려아연 미 테네시 제련소, TVA 230MW 전력 승인</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-16-0.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-16-0.html</guid>
+      <category>글로벌</category>
+      <description>고려아연의 미국 핵심광물 통합제련소 '프로젝트 크루서블'이 테네시강유역개발공사(TVA)로부터 230MW 규모 전력 공급 승인을 받았다. FAST-41 인허가 편입·최종 환경영향평가 통과에 이어 전력 기반까지 확보하며 2027년 착공 준비가 본격화됐다.</description>
+      <pubDate>Mon, 16 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>Applied Materials, 4분기 매출 104억 달러로 연간 최대치</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-16-1.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-16-1.html</guid>
+      <category>반도체소재</category>
+      <description>어플라이드 머티어리얼즈(Applied Materials)가 2026 회계연도 4분기에 매출 104억1천만 달러를 기록하며 분기 및 연간 모두 사상 최대 실적을 달성했다. 연간 매출은 344억5천만 달러로, 반도체 시스템 사업부가 전년 대비 40% 이상 성장했다고 회사는 밝혔다.</description>
+      <pubDate>Mon, 16 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>Marposs, 배터리 전극 절단 공정에 10μm 결함 실시간 감지 시스템 양산 적용</title>
       <link>https://www.materialtimes.co.kr/news/2026-11-15-0.html</link>
@@ -230,22 +246,6 @@
       <category>산업재</category>
       <description>이녹스첨단소재가 모바일 OLED 디스플레이에 쓰이는 광학용 투명 점착제(OCA)를 국산화하고 초도 양산에 들어갔다. 기존 수입 의존 품목의 국내 공급망 내재화 사례로 주목된다.</description>
       <pubDate>Fri, 06 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>미 중간선거 후 관세정책 유지…대중국 견제 지속 전망</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-05-0.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-05-0.html</guid>
-      <category>글로벌</category>
-      <description>코트라는 미국 중간선거에서 민주당이 완승했음에도 트럼프 행정부의 관세 정책과 대중국 견제 기조는 유지될 것으로 분석했다. 소재·부품 공급망에 영향을 미치는 통상 환경이 당분간 변하지 않을 것으로 보인다.</description>
-      <pubDate>Thu, 05 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>일본 JSR, 국부펀드 매각 절차 본격화…1조3천억엔 규모</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-05-1.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-05-1.html</guid>
-      <category>반도체소재</category>
-      <description>일본 반도체 소재 기업 JSR의 최대주주인 일본 국부펀드 JIC가 보유 지분 매각 절차를 시작했다. JSR은 포토레지스트 등 핵심 반도체 소재를 공급하는 세계 최대 업체 중 하나로, 매각 결과에 따라 글로벌 소재 공급망 구도가 바뀔 수 있다.</description>
-      <pubDate>Thu, 05 Nov 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>

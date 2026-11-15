@@ -1,0 +1,133 @@
+{
+  "generated_at": "2026년 11월 16일 03:06",
+  "date_str": "2026년 11월 16일",
+  "date_key": "2026-11-16",
+  "articles": [
+    {
+      "id": 0,
+      "category": "글로벌",
+      "tag_type": "tag-global",
+      "title": "고려아연 미 테네시 제련소, TVA 230MW 전력 승인",
+      "summary": "고려아연의 미국 핵심광물 통합제련소 '프로젝트 크루서블'이 테네시강유역개발공사(TVA)로부터 230MW 규모 전력 공급 승인을 받았다. FAST-41 인허가 편입·최종 환경영향평가 통과에 이어 전력 기반까지 확보하며 2027년 착공 준비가 본격화됐다.",
+      "body": [
+        "테네시강유역개발공사(TVA) 이사회가 10일(현지시간) 고려아연의 미국 핵심광물 통합제련소 사업 '프로젝트 크루서블'에 대한 대규모 전력 공급을 의결했다. 230MW 규모의 전력 계약이 성사되면서 사업의 핵심 인프라 조건이 충족됐다.",
+        "TVA가 승인한 이번 계약은 100MW 초과 대형 사용 건으로 분류된다. 전력 공급 개시 시점은 2029년이다. TVA는 원자력·수력·천연가스 등을 발전원으로 삼아 미국 남동부 7개 주, 1,000만 명 이상에게 전기를 공급하는 연방 공기업이다.",
+        "전력 공급 승인에 앞서 프로젝트 크루서블은 올해 인허가 절차에서 연달아 성과를 냈다. 4월에는 연방허가개선운영위원회(FPISC)로부터 신속 인허가 제도 'FAST-41' 적용 대상으로 선정됐는데, 테네시주와 FPISC가 업무협약을 맺은 뒤 첫 편입 사례였다. 9월에는 국가환경정책법(NEPA)에 따른 최종 환경영향평가에서 '중대한 환경영향 없음(FONSI)' 결정을 받았다.",
+        "이번 TVA 의결은 연이은 인허가 성과에 더해 운영 기반까지 갖췄다는 점에서 의미가 크다. 고려아연 관계자는 '전력 사용 승인을 계기로 착공 준비에 박차를 가하는 한편, 미국 정부 및 현지 관계기관과 긴밀히 협력해 프로젝트 크루서블을 성공적으로 완수해 나가겠다'고 말했다.",
+        "사업 규모는 총 74억 달러(약 10조원)에 달한다. 고려아연의 울산 온산제련소에서 50년 넘게 축적한 제련 기술을 토대로, 미국 정부 지정 핵심광물 11종을 포함한 비철금속 12종과 반도체용 황산 등을 생산할 방침이다.",
+        "착공은 2027년으로 계획돼 있으며, 일부 품목의 상업 생산은 2029년 개시를 목표로 한다. 제련소가 완공되면 테네시주에서 400개 이상의 일자리가 새로 생길 것으로 고려아연은 전망하고 있다."
+      ],
+      "why_important": "미국 내 핵심광물 11종의 안정적 공급망 구축이라는 측면에서 국내 소재·제련 업계의 대미 공급망 거점 확보 여부를 가늠할 수 있는 사례다. 2029년 상업 생산이 현실화되면 반도체용 황산 등 소재의 북미 조달 경로가 다변화된다.",
+      "sources": [
+        "철강금속신문"
+      ],
+      "reference_date": "2026-11-10",
+      "image_keyword": "industrial smelter facility construction",
+      "is_featured": true,
+      "timestamp": "오전 09:30",
+      "source_links": [
+        {
+          "title": "고려아연 ‘프로젝트 크루서블’, FAST-41 편입 이어 TVA 전력 승인…통합제련소 건설 탄력",
+          "url": "http://www.snmnews.com/news/articleView.html?idxno=577401"
+        }
+      ],
+      "image_url": "images/2026-11-16_article_0.jpg",
+      "review": {
+        "trust_score": 4,
+        "status": "pass",
+        "suspicious_claims": [
+          "TVA 이사회 의결일 '10일(현지시간)' — 근거자료 없어 원문 대조 불가",
+          "'테네시주와 FPISC가 업무협약 맺은 뒤 첫 편입 사례' — 출처 미표기로 검증 불가"
+        ],
+        "notes": "근거자료 없음. TVA·FAST-41·NEPA·FONSI 등 제도명 실존 확인. 수치 내부 일관성 양호.",
+        "verified_at": "2026-11-16 03:06"
+      }
+    },
+    {
+      "id": 1,
+      "category": "반도체소재",
+      "tag_type": "tag-semi",
+      "title": "Applied Materials, 4분기 매출 104억 달러로 연간 최대치",
+      "summary": "어플라이드 머티어리얼즈(Applied Materials)가 2026 회계연도 4분기에 매출 104억1천만 달러를 기록하며 분기 및 연간 모두 사상 최대 실적을 달성했다. 연간 매출은 344억5천만 달러로, 반도체 시스템 사업부가 전년 대비 40% 이상 성장했다고 회사는 밝혔다.",
+      "body": [
+        "어플라이드 머티어리얼즈(Applied Materials, NASDAQ: AMAT)가 2026년 10월 25일 마감된 4분기 및 회계연도 전체 실적을 발표했다. Semiconductor Digest에 따르면, 4분기 매출은 104억1천만 달러로 사상 최대치를 기록했다. 비GAAP 기준 영업이익률은 35.3%였으며, 주당순이익(EPS)도 4.16달러로 역대 최고였다.",
+        "연간 기준으로는 매출 344억5천만 달러, 비GAAP 영업이익 114억2천만 달러를 달성했다. 개리 디커슨(Gary Dickerson) 사장 겸 CEO는 'AI가 반도체 수요를 강하게 견인하고 있으며, 반도체 시스템 사업부는 2026년 역년 기준으로 40% 이상 성장 궤도에 있다'고 밝혔다.",
+        "4분기 현금흐름도 역대 최대였다. 영업활동 현금흐름은 33억 달러로 최대치를 기록했으며, 자사주 매입 20억 달러와 배당 4억2천1백만 달러를 포함해 주주에게 총 24억2천만 달러를 환원했다. 연간 기준 주주환원 규모는 47억5천만 달러였다.",
+        "어플라이드 머티어리얼즈는 이번 실적 발표와 함께 실리콘밸리에 'EPIC 센터(EPIC Center)'를 개소했다고 밝혔다. 반도체 소재·장비·공정 기술을 협업 개발하는 R&D 거점으로, 칩 제조사·장비 협력사·대학 연구진이 함께 입주해 순차적 개발 대신 병렬적 개발을 추구한다는 것이 회사의 설명이다.",
+        "EPIC 센터 파트너십은 현재까지 15개사가 참여를 선언했다. 인텔(Intel)이 창립 파트너로 합류해 차세대 트랜지스터, 인터커넥트, 첨단 패키징 기술 개발을 공동 추진하기로 했다. 브라이스 힐(Brice Hill) CFO는 '4분기 매출이 전년 동기 대비 53% 증가했으며, 비GAAP EPS는 92% 뛰었다'고 덧붙였다."
+      ],
+      "why_important": "웨이퍼 증착·식각 등 핵심 공정 장비 1위 사업자의 역대 최대 실적은 AI 반도체 수요에 따른 소부장 투자 사이클이 지속되고 있음을 보여준다. EPIC 센터를 통한 소재-장비 공동 개발 체계는 국내 소재 기업의 대형 고객사 진입 경로에 직접적인 영향을 미칠 수 있다.",
+      "sources": [
+        "Semiconductor Digest"
+      ],
+      "reference_date": "2026-11-14",
+      "image_keyword": "semiconductor wafer fabrication equipment",
+      "is_featured": false,
+      "timestamp": "오전 10:30",
+      "source_links": [
+        {
+          "title": "Applies Materials Introduces VeritySEM 20; Adds Intel to EPIC Center Partnerships",
+          "url": "https://www.semiconductor-digest.com/applies-materials-introduces-veritysem-20-adds-intel-to-epic-center-partnerships/?utm_source=rss&utm_medium=rss&utm_campaign=applies-materials-introduces-veritysem-20-adds-intel-to-epic-center-partnerships"
+        }
+      ],
+      "image_url": "images/2026-11-16_article_1.jpg",
+      "review": {
+        "trust_score": 4,
+        "status": "warning",
+        "suspicious_claims": [
+          "자사주 매입 20억+배당 4억2천1백만=24억2천1백만인데 본문은 '24억2천만'으로 1백만 달러 차이",
+          "'반도체 시스템 사업부 40% 이상 성장'은 역년(calendar year) 기준이나 요약은 회계연도 4분기 실적과 혼용",
+          "4분기 매출 전년 동기 대비 53% 증가 — 근거자료 없어 원문 수치 직접 대조 불가"
+        ],
+        "notes": "근거자료 없음. 주주환원 합산 수치 미세 불일치. CEO·CFO 실명·직함 실존 인물과 일치.",
+        "verified_at": "2026-11-16 03:06"
+      }
+    }
+  ],
+  "editorial_briefing": "고려아연 미국 핵심광물 제련소가 TVA로부터 230MW 전력을 승인받아 가동 기반을 확보했다. Applied Materials는 4분기 매출 104억 달러로 연간 최대치를 경신하며 반도체 장비 호황을 증명했다.",
+  "global_issues": [
+    {
+      "icon": "🟢",
+      "label": "미국 핵심광물 공급망",
+      "status": "인프라 승인 진전"
+    },
+    {
+      "icon": "🟢",
+      "label": "반도체 장비 시장",
+      "status": "연간 최대 매출 경신"
+    },
+    {
+      "icon": "🟡",
+      "label": "미중 기술패권 경쟁",
+      "status": "규제 불확실성 지속"
+    },
+    {
+      "icon": "🟡",
+      "label": "글로벌 에너지 수급",
+      "status": "전력 인프라 확보 경쟁"
+    },
+    {
+      "icon": "🔴",
+      "label": "공급망 지정학 리스크",
+      "status": "핵심광물 쟁탈 가열"
+    }
+  ],
+  "editorial_briefing_v2": {
+    "headline": "고려아연·Applied Materials 핵심산업 쌍끌이 호재",
+    "points": [
+      {
+        "text": "고려아연 미 테네시 제련소 TVA 230MW 전력 승인 획득"
+      },
+      {
+        "text": "Applied Materials 4분기 매출 104억 달러 연간 최대치"
+      },
+      {
+        "text": "미국 핵심광물 공급망 강화 본격화"
+      },
+      {
+        "text": "반도체 장비 수요 고성장 지속 확인"
+      }
+    ]
+  },
+  "last_reviewed_at": "2026-11-16 03:06"
+}
