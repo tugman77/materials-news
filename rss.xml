@@ -6,7 +6,23 @@
     <atom:link href="https://www.materialtimes.co.kr/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Mon, 16 Nov 2026 03:06:22 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 03:07:17 +0900</lastBuildDate>
+    <item>
+      <title>포드, 한국 장비사 투입 ESS 각형 배터리 파일럿 라인 구축</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-17-0.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-17-0.html</guid>
+      <category>산업재</category>
+      <description>포드가 미시간 아이온파크 연구시설에 에너지저장장치(ESS)용 각형 배터리 파일럿 생산라인을 구축하고 국내 배터리 장비업체 디에이치·하나기술을 주요 공급사로 선정했다. 중국 의존도 축소 압박이 커지는 가운데 자체 배터리 제조 역량 확보에 나선 것이다.</description>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>RIST, 제철 슬래그로 CO₂ 고체화해 폐갱도에 저장 실증</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-17-1.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-17-1.html</guid>
+      <category>산업재</category>
+      <description>포항산업과학연구원(RIST)이 제철 슬래그에 이산화탄소를 반응시켜 고체 탄산염으로 변환한 뒤 폐광산 갱도의 채움재로 활용하는 육상저장 실증 플랜트를 강원도 삼척에 준공했다. 하루 최대 3톤 처리 규모로 운영을 시작한다.</description>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>고려아연 미 테네시 제련소, TVA 230MW 전력 승인</title>
       <link>https://www.materialtimes.co.kr/news/2026-11-16-0.html</link>
@@ -229,22 +245,6 @@
       <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-06-0.html</guid>
       <category>글로벌</category>
       <description>중국이 반도체 장비 핵심 소재인 희토류 이트륨의 일본 수출을 사실상 차단했다. 수출 감소율이 98%에 달해 일본 반도체 소재 공급망에 비상이 걸렸다.</description>
-      <pubDate>Fri, 06 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>HBM 증산에 소부장 국산화 기대 커져</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-06-1.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-06-1.html</guid>
-      <category>반도체소재</category>
-      <description>HBM(고대역폭 메모리) 생산이 늘면서 국내 반도체 소재·부품·장비 업체들의 공급망 진입 기대가 높아지고 있다. 그러나 삼성·SK의 실적 호조에도 소부장 업체로의 실질적 낙수 효과는 제한적이라는 지적도 나온다.</description>
-      <pubDate>Fri, 06 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>이녹스첨단소재, OLED용 OCA 양산 돌입</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-06-2.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-06-2.html</guid>
-      <category>산업재</category>
-      <description>이녹스첨단소재가 모바일 OLED 디스플레이에 쓰이는 광학용 투명 점착제(OCA)를 국산화하고 초도 양산에 들어갔다. 기존 수입 의존 품목의 국내 공급망 내재화 사례로 주목된다.</description>
       <pubDate>Fri, 06 Nov 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
