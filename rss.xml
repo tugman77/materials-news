@@ -6,7 +6,31 @@
     <atom:link href="https://www.materialtimes.co.kr/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Tue, 17 Nov 2026 03:07:17 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 03:05:45 +0900</lastBuildDate>
+    <item>
+      <title>파나마, 코브레파나마 광산 재개 협상 공식 착수</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-18-0.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-18-0.html</guid>
+      <category>글로벌</category>
+      <description>파나마 정부가 2023년 폐쇄된 코브레파나마 구리 광산의 운영 재개를 위해 퍼스트퀀텀미네랄즈(First Quantum Minerals)와 공식 협상을 시작했다. 협상 타결 시 세계 구리 공급량의 약 1.5%가 복구될 수 있어 글로벌 구리 수급에 직접 영향을 미친다.</description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>지멘스, 반도체 디버그·검증 솔루션사 라우터바흐 인수</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-18-1.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-18-1.html</guid>
+      <category>반도체소재</category>
+      <description>지멘스(Siemens)가 임베디드 소프트웨어 및 시스템온칩(SoC) 디버그·트레이스 솔루션 전문기업 라우터바흐(Lauterbach) 인수 계약을 체결했다. 두 회사의 기술을 결합해 칩 설계 개발 단계에서 하드웨어·소프트웨어 복합 오류를 더 빠르게 발견하는 통합 플랫폼 구축을 목표로 한다.</description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>칠레 구리 생산, 23년 만에 최저치 전망</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-18-2.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-18-2.html</guid>
+      <category>글로벌</category>
+      <description>칠레의 2026년 구리 생산량이 전년 대비 6.6% 감소한 503만 톤에 그칠 것으로 추정되며, 이는 2003년 이후 최저 수준이다. 광석 품위 저하와 황산 수입 의존도 심화가 겹치며 세계 최대 구리 생산국의 경쟁력에 경고등이 켜졌다.</description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>포드, 한국 장비사 투입 ESS 각형 배터리 파일럿 라인 구축</title>
       <link>https://www.materialtimes.co.kr/news/2026-11-17-0.html</link>
@@ -222,30 +246,6 @@
       <category>희귀금속</category>
       <description>미국 중간선거에서 민주당이 선전하면서 수입관세 기대감이 약화되고, TD증권은 구리 가격이 추가로 하락할 가능성이 있다고 전망했다. 관세 완화 기대 후퇴가 금속 수급 심리에 영향을 미치고 있다.</description>
       <pubDate>Sun, 08 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>중국 희토류 수출 유예, 11월 10일 만료…미국 업계 촉각</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-07-0.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-07-0.html</guid>
-      <category>글로벌</category>
-      <description>중국이 취했던 희토류 수출 일시 중단 조치의 유예 기간이 오는 11월 10일 만료된다. 미국 희토류 기업들은 이후 공급 재개 여부에 촉각을 곤두세우고 있다.</description>
-      <pubDate>Sat, 07 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>동진쎄미켐, 중국 디스플레이 소재 사업 철수</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-07-1.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-07-1.html</guid>
-      <category>산업재</category>
-      <description>국내 반도체·디스플레이 소재 기업 동진쎄미켐이 중국 디스플레이 소재 사업에서 철수한다. 중국 현지 경쟁 심화와 수익성 악화가 배경으로 꼽힌다.</description>
-      <pubDate>Sat, 07 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>중국, 이트륨 對日 수출 98% 급감</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-06-0.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-06-0.html</guid>
-      <category>글로벌</category>
-      <description>중국이 반도체 장비 핵심 소재인 희토류 이트륨의 일본 수출을 사실상 차단했다. 수출 감소율이 98%에 달해 일본 반도체 소재 공급망에 비상이 걸렸다.</description>
-      <pubDate>Fri, 06 Nov 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>

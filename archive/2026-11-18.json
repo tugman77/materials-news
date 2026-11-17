@@ -1,0 +1,187 @@
+{
+  "generated_at": "2026년 11월 18일 03:05",
+  "date_str": "2026년 11월 18일",
+  "date_key": "2026-11-18",
+  "articles": [
+    {
+      "id": 0,
+      "category": "글로벌",
+      "tag_type": "tag-global",
+      "title": "파나마, 코브레파나마 광산 재개 협상 공식 착수",
+      "summary": "파나마 정부가 2023년 폐쇄된 코브레파나마 구리 광산의 운영 재개를 위해 퍼스트퀀텀미네랄즈(First Quantum Minerals)와 공식 협상을 시작했다. 협상 타결 시 세계 구리 공급량의 약 1.5%가 복구될 수 있어 글로벌 구리 수급에 직접 영향을 미친다.",
+      "body": [
+        "파나마의 호세 라울 물리노(José Raúl Mulino) 대통령은 11월 17일(현지시간) 캐나다 광산기업 퍼스트퀀텀미네랄즈의 현지 법인 미네라파나마(Minera Panama)와 코브레파나마 구리 광산 재가동을 위한 공식 협상을 시작한다고 발표했다.",
+        "정부는 상무부 장관 훌리오 몰토(Julio Moltó)가 이끄는 부처 간 협상팀을 구성했다. 협상 의제는 고용 창출, 국가 경제적 수익, 환경 감시, 그리고 파나마 정부를 상대로 제기된 중재 절차 해소 등이다.",
+        "물리노 대통령은 협상 원칙으로 광물 자원에 대한 파나마 소유권, 최대 경제적 이익 확보, 국가 주권, 엄격한 환경 보호, 헌법과 국내법 준수 등 다섯 가지를 제시했다. 그는 협상 결과물이 광산 채굴권의 형태를 취하지 않을 것이라고 밝혔다.",
+        "코브레파나마 광산은 2023년 11월 파나마 대법원이 운영 계약의 위헌 판결을 내리고 환경 우려를 둘러싼 대규모 시위가 이어지며 가동을 멈췄다. 당시 이 광산은 전 세계 채굴 구리의 약 1.5%를 공급하고 있었다.",
+        "퍼스트퀀텀은 성명을 통해 발표를 환영하며 파나마의 주권과 민주주의 제도를 존중하면서 건설적으로 협상에 임하겠다고 밝혔다. 회사 측은 광산 재가동 시 직접 고용 6천 명, 간접 고용 3만 명 창출과 약 2천 개 협력업체 사업 기회가 생긴다고 추산했다.",
+        "재가동의 전제 조건도 명확히 제시됐다. 협상과 별도로 공공 참여 절차가 진행되며, 그 결과가 나와야만 최종 합의가 가능하다."
+      ],
+      "why_important": "글로벌 구리 수급 균형에 영향을 미치며, 국내 구리 소재·부품 조달 비용과도 연관된다.",
+      "sources": [
+        "Mining.com",
+        "퍼스트퀀텀미네랄즈 공식 발표"
+      ],
+      "reference_date": "2026-11-17",
+      "image_keyword": "copper mine industrial operations",
+      "is_featured": true,
+      "timestamp": "오전 09:30",
+      "source_links": [
+        {
+          "title": "Panama, First Quantum launch formal Cobre Panama talks",
+          "url": "https://www.mining.com/panama-first-quantum-launch-formal-cobre-panama-talks/"
+        }
+      ],
+      "image_url": "images/2026-11-18_article_0.jpg",
+      "review": {
+        "trust_score": 4,
+        "status": "pass",
+        "suspicious_claims": [
+          "상무부 장관 '훌리오 몰토(Julio Moltó)' 이름·직함 출처 불명확",
+          "직접 고용 6천·간접 고용 3만 명 수치는 FQM 자체 추산으로 독립 검증 없음"
+        ],
+        "notes": "코브레파나마 폐쇄 경위·점유율 등 주요 사실 부합, 전반적으로 신뢰도 높음",
+        "verified_at": "2026-11-18 03:05"
+      }
+    },
+    {
+      "id": 1,
+      "category": "반도체소재",
+      "tag_type": "tag-semi",
+      "title": "지멘스, 반도체 디버그·검증 솔루션사 라우터바흐 인수",
+      "summary": "지멘스(Siemens)가 임베디드 소프트웨어 및 시스템온칩(SoC) 디버그·트레이스 솔루션 전문기업 라우터바흐(Lauterbach) 인수 계약을 체결했다. 두 회사의 기술을 결합해 칩 설계 개발 단계에서 하드웨어·소프트웨어 복합 오류를 더 빠르게 발견하는 통합 플랫폼 구축을 목표로 한다.",
+      "body": [
+        "지멘스는 11월 17일(현지시간) 임베디드 소프트웨어와 복합 SoC 아키텍처용 디버그·실시간 트레이스 솔루션을 개발하는 라우터바흐 인수 계약 체결을 발표했다. 라우터바흐는 하드웨어 지원 디버거와 실시간 트레이스 도구 분야의 전문 기업이다.",
+        "라우터바흐의 솔루션은 마이크로프로세서와 임베디드 CPU 코어를 위한 개발·검증 도구를 모듈 방식으로 제공한다. 칩 개발 과정에서 하드웨어와 소프트웨어 간 복잡한 상호작용으로 발생하는 오류를 조기에 발견하는 데 활용된다.",
+        "지멘스는 자사 기술과 라우터바흐 솔루션을 결합하면 칩 동작과 소프트웨어 거동을 단일 시각에서 파악할 수 있게 되어, 개발 주기를 단축하고 제품 품질을 높일 수 있다고 설명했다. 구체적인 인수 금액이나 일정은 공개되지 않았다.",
+        "반도체 설계 복잡성이 증가하면서 칩렛(Chiplet) 기반 이기종 집적 패키징이 확산되고 있으며, 이에 따라 하드웨어·소프트웨어 통합 검증 수요도 커지고 있다. 아리조나주립대(ASU)와 앰페어컴퓨팅(Ampere Computing)이 발표한 최신 연구에서도 칩렛 조립 단계의 결함 대응이 수율 최적화의 핵심 과제로 지목됐다.",
+        "지멘스는 EDA(전자설계자동화) 및 반도체 제조 소프트웨어 사업을 지속 확장해왔다. 이번 라우터바흐 인수는 설계 검증 포트폴리오를 하드웨어 디버그 영역까지 확대하는 행보로 볼 수 있다."
+      ],
+      "why_important": "칩렛 및 고급 패키징 채택 확대로 반도체 설계·검증 소프트웨어와 연동되는 소부장 수요가 증가하고 있다. 국내 반도체 소재·장비 기업들도 이기종 집적 공정의 복잡성 증가에 대응한 검증 역량 강화가 요구된다.",
+      "sources": [
+        "Semiconductor Digest",
+        "Semiconductor Engineering"
+      ],
+      "reference_date": "2026-11-17",
+      "image_keyword": "embedded hardware debugger chip",
+      "is_featured": false,
+      "timestamp": "오전 11:00",
+      "source_links": [
+        {
+          "title": "Siemens to Acquire Lauterbach to Expand Semiconductor Design and Verification",
+          "url": "https://www.semiconductor-digest.com/siemens-to-acquire-lauterbach-to-expand-semiconductor-design-and-verification/?utm_source=rss&utm_medium=rss&utm_campaign=siemens-to-acquire-lauterbach-to-expand-semiconductor-design-and-verification"
+        },
+        {
+          "title": "Defect-Aware Chiplet Matching For Heterogeneous Integration Yield (ASU, Ampere)",
+          "url": "https://semiengineering.com/defect-aware-chiplet-matching-for-heterogeneous-integration-yield-asu-ampere/"
+        }
+      ],
+      "image_url": "images/2026-11-18_article_1.jpg",
+      "review": {
+        "trust_score": 4,
+        "status": "pass",
+        "suspicious_claims": [
+          "ASU·앰페어컴퓨팅 공동 연구 인용은 출처 링크·논문명 없이 서술되어 검증 불가",
+          "인수 금액·완료 일정 미공개 → 기사 내 '구체적 금액 미공개' 명시로 처리됐으나 독자 오해 여지"
+        ],
+        "notes": "라우터바흐·지멘스 EDA 사실관계는 적절, 연구 인용 출처 보강 필요",
+        "verified_at": "2026-11-18 03:05"
+      }
+    },
+    {
+      "id": 2,
+      "category": "글로벌",
+      "tag_type": "tag-global",
+      "title": "칠레 구리 생산, 23년 만에 최저치 전망",
+      "summary": "칠레의 2026년 구리 생산량이 전년 대비 6.6% 감소한 503만 톤에 그칠 것으로 추정되며, 이는 2003년 이후 최저 수준이다. 광석 품위 저하와 황산 수입 의존도 심화가 겹치며 세계 최대 구리 생산국의 경쟁력에 경고등이 켜졌다.",
+      "body": [
+        "광산 분석 기관 플러스마이닝(Plusmining)의 후안 호세 파르도(Juan José Pardo) 애널리스트는 2026년 칠레 구리 생산량이 503만4천 톤으로 전년 대비 35만4천 톤 줄어들 것으로 추정했다. 2003년(490만4천 톤) 이후 최저치이자, 2018년 정점 대비 약 80만 톤 적은 수치다.",
+        "생산 급감의 직접적 원인으로는 광석 품위 저하와 운영 차질이 꼽힌다. 플러스마이닝에 따르면 2026년 8월 칠레 월간 생산량은 전년 동월 대비 12.7% 떨어진 36만6천 톤에 머물렀다. 에스콘디다(Escondida)와 스펜스(Spence) 광산의 감소폭이 컸고, 엘 테니엔테(El Teniente)는 2025년 발생한 암반 붕락 여파에서 벗어나지 못하고 있다.",
+        "황산 수급 문제도 위기를 가중시킨다. 칠레 구리위원회(Cochilco)에 따르면 2025년 황산 수입량은 역대 최고인 397만 톤에 달해 국내 소비량의 절반가량을 수입으로 충당했다. GEM 마이닝 컨설팅의 파울리나 카세레스(Paulina Cáceres) 프로젝트 매니저는 중국이 2026년 5월 황산 수출을 제한하기 전까지 칠레 황산 수입의 37%를 공급했다고 밝혔다. 황산은 침출(leaching) 방식의 구리 생산에 필수적인 공정 소재다.",
+        "Cochilco에 따르면 국영 광산기업 코델코(Codelco)의 9월 몰리브덴 함유량 생산은 1천114.5톤으로 전년 동월 대비 36.3% 늘었다. 반면 카세로네스(Caserones)는 83.9%, 시에라 고르다(Sierra Gorda)는 66.9%, 로스 펠람브레스(Los Pelambres)는 37.3% 각각 급감했다.",
+        "플러스마이닝은 2027년에 약 25만 톤 회복이 가능하고, 계획된 투자와 운영 목표가 충족될 경우 2032년까지 연간 600만 톤을 넘어설 가능성이 있다고 내다봤다. 단, 이 전망은 대형 개발 프로젝트의 차질 없는 진행을 전제로 한다.",
+        "한편 11월 17일 코델코는 가브리엘라 미스트랄(Gabriela Mistral) 광산 운영을 2055년까지 연장하는 8억6천800만 달러 규모 프로젝트에 대해 칠레 북부 안토파가스타 환경평가위원회(Coeva)의 만장일치 환경 승인을 얻었다. 2008년 개장 당시 15년 수명으로 설계된 이 노천 광산의 운영을 28년 추가 연장하는 것이 골자다.",
+        "가브리엘라 미스트랄 프로젝트는 프로젝트 9년째부터 기존 지하수 추출 대신 대체 수원으로 전환하고, 2035년부터는 침출 광물 처리 공정에 염화나트륨을 도입하는 방식도 포함하고 있다. Coeva의 승인 결정에도 불구하고 반대 측의 행정·법적 이의 제기가 가능해 실제 착공 일정은 유동적이다."
+      ],
+      "why_important": "칠레 생산 감소는 전 세계 구리 공급망에 직접적 영향을 준다. 황산 수입 의존도 심화는 구리 제련·침출 비용 상승 요인으로 작용해 국내 비철금속 소재 수급 비용에도 연쇄 파급 효과가 예상된다.",
+      "sources": [
+        "Mining.com",
+        "Plusmining",
+        "Cochilco",
+        "GEM Mining Consulting"
+      ],
+      "reference_date": "2026-11-17",
+      "image_keyword": "copper mining industrial Chile",
+      "is_featured": false,
+      "timestamp": "오전 09:30",
+      "source_links": [
+        {
+          "title": "Chile copper output nears 23-year low as mines struggle",
+          "url": "https://www.mining.com/chile-copper-output-nears-23-year-low-as-mines-struggle/"
+        },
+        {
+          "title": "Codelco’s $866 million Gabriela Mistral extension clears key hurdle",
+          "url": "https://www.mining.com/codelcos-866m-gabriela-mistral-extension-clears-key-hurdle/"
+        }
+      ],
+      "image_url": "images/2026-11-18_article_2.jpg",
+      "review": {
+        "trust_score": 3,
+        "status": "warning",
+        "suspicious_claims": [
+          "'28년 추가 연장' 오류 가능 — 2008년 개장·15년 설계수명 기준 종료는 2023년이며, 2055년까지는 약 32년에 해당",
+          "'2026년 8월 생산량' 수치를 연간 전망 기사에서 확정치처럼 서술(전망치와 실적치 혼재 가능)",
+          "중국 황산 수출 제한 '2026년 5월' 시점 출처 불명확, 독립 검증 필요"
+        ],
+        "notes": "핵심 수치 방향성은 타당하나 가브리엘라 미스트랄 연장 연수 계산 오류 의심",
+        "verified_at": "2026-11-18 03:05"
+      }
+    }
+  ],
+  "editorial_briefing": "파나마가 코브레파나마 광산 재개 협상에 나선 가운데, 칠레 구리 생산은 23년 만에 최저치를 기록할 전망이다. 글로벌 구리 공급 불안이 심화되는 한편, 지멘스는 반도체 디버그 기업 라우터바흐를 인수해 기술 경쟁력을 강화했다.",
+  "global_issues": [
+    {
+      "icon": "🔴",
+      "label": "글로벌 구리 공급 위기",
+      "status": "공급 감소 심화"
+    },
+    {
+      "icon": "🟡",
+      "label": "코브레파나마 협상",
+      "status": "재개 협상 착수"
+    },
+    {
+      "icon": "🔴",
+      "label": "칠레 광산 생산 급감",
+      "status": "23년래 최저 전망"
+    },
+    {
+      "icon": "🟢",
+      "label": "지멘스 반도체 확장",
+      "status": "라우터바흐 인수"
+    },
+    {
+      "icon": "🟡",
+      "label": "원자재 시장 변동성",
+      "status": "구리 가격 주시"
+    }
+  ],
+  "editorial_briefing_v2": {
+    "headline": "구리 공급망 위기·재편 본격화",
+    "points": [
+      {
+        "text": "파나마, 코브레파나마 광산 재개 협상 공식 착수"
+      },
+      {
+        "text": "칠레 구리 생산 23년 만에 최저치 전망"
+      },
+      {
+        "text": "지멘스, 반도체 디버그 전문기업 라우터바흐 인수"
+      },
+      {
+        "text": "글로벌 구리 공급 차질로 원자재 시장 긴장 고조"
+      }
+    ]
+  },
+  "last_reviewed_at": "2026-11-18 03:05"
+}
