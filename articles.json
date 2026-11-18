@@ -1,187 +1,182 @@
 {
-  "generated_at": "2026년 11월 18일 03:05",
-  "date_str": "2026년 11월 18일",
-  "date_key": "2026-11-18",
+  "generated_at": "2026년 11월 19일 03:09",
+  "date_str": "2026년 11월 19일",
+  "date_key": "2026-11-19",
   "articles": [
     {
       "id": 0,
-      "category": "글로벌",
-      "tag_type": "tag-global",
-      "title": "파나마, 코브레파나마 광산 재개 협상 공식 착수",
-      "summary": "파나마 정부가 2023년 폐쇄된 코브레파나마 구리 광산의 운영 재개를 위해 퍼스트퀀텀미네랄즈(First Quantum Minerals)와 공식 협상을 시작했다. 협상 타결 시 세계 구리 공급량의 약 1.5%가 복구될 수 있어 글로벌 구리 수급에 직접 영향을 미친다.",
+      "category": "반도체소재",
+      "tag_type": "tag-semi",
+      "title": "지멘스, SoC 검증사 브레커 버리피케이션 추가 인수",
+      "summary": "지멘스(Siemens)가 SoC(시스템온칩) 수준 검증 전문사 브레커 버리피케이션 시스템즈(Breker Verification Systems)를 인수하기로 합의했다. 라우터바흐(Lauterbach) 인수 발표에 이은 두 번째 EDA 포트폴리오 확장으로, AI·HPC 반도체 복잡도 증가에 대응하는 행보다.",
       "body": [
-        "파나마의 호세 라울 물리노(José Raúl Mulino) 대통령은 11월 17일(현지시간) 캐나다 광산기업 퍼스트퀀텀미네랄즈의 현지 법인 미네라파나마(Minera Panama)와 코브레파나마 구리 광산 재가동을 위한 공식 협상을 시작한다고 발표했다.",
-        "정부는 상무부 장관 훌리오 몰토(Julio Moltó)가 이끄는 부처 간 협상팀을 구성했다. 협상 의제는 고용 창출, 국가 경제적 수익, 환경 감시, 그리고 파나마 정부를 상대로 제기된 중재 절차 해소 등이다.",
-        "물리노 대통령은 협상 원칙으로 광물 자원에 대한 파나마 소유권, 최대 경제적 이익 확보, 국가 주권, 엄격한 환경 보호, 헌법과 국내법 준수 등 다섯 가지를 제시했다. 그는 협상 결과물이 광산 채굴권의 형태를 취하지 않을 것이라고 밝혔다.",
-        "코브레파나마 광산은 2023년 11월 파나마 대법원이 운영 계약의 위헌 판결을 내리고 환경 우려를 둘러싼 대규모 시위가 이어지며 가동을 멈췄다. 당시 이 광산은 전 세계 채굴 구리의 약 1.5%를 공급하고 있었다.",
-        "퍼스트퀀텀은 성명을 통해 발표를 환영하며 파나마의 주권과 민주주의 제도를 존중하면서 건설적으로 협상에 임하겠다고 밝혔다. 회사 측은 광산 재가동 시 직접 고용 6천 명, 간접 고용 3만 명 창출과 약 2천 개 협력업체 사업 기회가 생긴다고 추산했다.",
-        "재가동의 전제 조건도 명확히 제시됐다. 협상과 별도로 공공 참여 절차가 진행되며, 그 결과가 나와야만 최종 합의가 가능하다."
+        "반도체 EDA(전자설계자동화) 소프트웨어 업체 지멘스(Siemens)가 11월 18일 SoC 수준 검증 솔루션 전문사 브레커 버리피케이션 시스템즈(Breker Verification Systems, Inc.) 인수 계약을 체결했다고 발표했다. 거래 금액은 공개되지 않았다.",
+        "Semiconductor Digest에 따르면 이번 인수는 지멘스가 최근 발표한 임베디드 소프트웨어 디버그·추적 솔루션 업체 라우터바흐(Lauterbach) 인수와 연계된 전략이다. 두 건 모두 반도체 설계·검증과 임베디드 소프트웨어 개발을 하나의 흐름으로 연결하겠다는 목표 아래 추진됐다.",
+        "브레커가 보유한 핵심 기술은 시스템 VIP(검증 IP)와 테스트 스위트 합성(Test Suite Synthesis)이다. 이 기술은 하드웨어 컴포넌트 간 상호작용, 전력 관리, 보안, 소프트웨어 계층을 IP 단위부터 전체 SoC 수준까지 아우르는 기능 검증을 가능하게 한다. 지멘스는 기존 퀘스타 원(Questa One) 소프트웨어 포트폴리오와 결합해 더 완결된 검증 솔루션을 구성할 계획이다.",
+        "브레커 CEO 데이비드 켈프(David Kelf)는 지멘스 합류로 시스템 VIP와 테스트 스위트 합성 기술을 여러 산업 세그먼트에 걸쳐 글로벌 규모로 확장할 수 있게 됐다고 밝혔다.",
+        "적용 대상은 AI, 고성능컴퓨팅(HPC), 차량용 반도체 등 복잡도가 높은 설계 분야다."
       ],
-      "why_important": "글로벌 구리 수급 균형에 영향을 미치며, 국내 구리 소재·부품 조달 비용과도 연관된다.",
+      "why_important": "SoC 검증 자동화는 반도체 설계 사이클 단축과 직결된다. 지멘스의 EDA 포트폴리오 강화는 차량용·AI 반도체 소부장 업체의 설계 협력 환경 변화에 영향을 미칠 수 있다.",
       "sources": [
-        "Mining.com",
-        "퍼스트퀀텀미네랄즈 공식 발표"
+        "Semiconductor Digest",
+        "Siemens"
       ],
-      "reference_date": "2026-11-17",
-      "image_keyword": "copper mine industrial operations",
+      "reference_date": "2026-11-18",
+      "image_keyword": "semiconductor SoC verification chip design",
       "is_featured": true,
       "timestamp": "오전 09:30",
       "source_links": [
         {
-          "title": "Panama, First Quantum launch formal Cobre Panama talks",
-          "url": "https://www.mining.com/panama-first-quantum-launch-formal-cobre-panama-talks/"
+          "title": "Siemens to Acquire Breker Verification Systems to Expand System-on-Chip Verification Portfolio",
+          "url": "https://www.semiconductor-digest.com/siemens-to-acquire-breker-verification-systems-to-expand-system-on-chip-verification-portfolio/?utm_source=rss&utm_medium=rss&utm_campaign=siemens-to-acquire-breker-verification-systems-to-expand-system-on-chip-verification-portfolio"
+        },
+        {
+          "title": "Siemens to Acquire Lauterbach to Expand Semiconductor Design and Verification",
+          "url": "https://www.semiconductor-digest.com/siemens-to-acquire-lauterbach-to-expand-semiconductor-design-and-verification/?utm_source=rss&utm_medium=rss&utm_campaign=siemens-to-acquire-lauterbach-to-expand-semiconductor-design-and-verification"
         }
       ],
-      "image_url": "images/2026-11-18_article_0.jpg",
+      "image_url": "images/2026-11-19_article_0.jpg",
       "review": {
         "trust_score": 4,
         "status": "pass",
         "suspicious_claims": [
-          "상무부 장관 '훌리오 몰토(Julio Moltó)' 이름·직함 출처 불명확",
-          "직접 고용 6천·간접 고용 3만 명 수치는 FQM 자체 추산으로 독립 검증 없음"
+          "브레커 CEO 데이비드 켈프 발언이 직접 인용 형태이나 원문 출처 미제시",
+          "라우터바흐 인수와 '연계된 전략'이라는 표현이 원문에 동일하게 있는지 확인 필요"
         ],
-        "notes": "코브레파나마 폐쇄 경위·점유율 등 주요 사실 부합, 전반적으로 신뢰도 높음",
-        "verified_at": "2026-11-18 03:05"
+        "notes": "주요 사실 검증 가능, 거래 금액 미공개 처리 적절, 인용 출처 보강 권장",
+        "verified_at": "2026-11-19 03:09"
       }
     },
     {
       "id": 1,
-      "category": "반도체소재",
-      "tag_type": "tag-semi",
-      "title": "지멘스, 반도체 디버그·검증 솔루션사 라우터바흐 인수",
-      "summary": "지멘스(Siemens)가 임베디드 소프트웨어 및 시스템온칩(SoC) 디버그·트레이스 솔루션 전문기업 라우터바흐(Lauterbach) 인수 계약을 체결했다. 두 회사의 기술을 결합해 칩 설계 개발 단계에서 하드웨어·소프트웨어 복합 오류를 더 빠르게 발견하는 통합 플랫폼 구축을 목표로 한다.",
+      "category": "산업재",
+      "tag_type": "tag-industry",
+      "title": "폐EV 배터리 재활용 ESS 상용화 가속",
+      "summary": "캐나다 모멘트 에너지(Moment Energy)가 UL 9540 인증을 획득한 폐EV 배터리 기반 ESS 시스템 '노바(Nova)'를 11월 17일 공개했다. 호주 뉴사우스웨일스대(UNSW)는 기존 10시간 대비 95.5% 빠른 3분 배터리 건강도 진단 기술을 개발해 상용화 기반을 마련하고 있다.",
       "body": [
-        "지멘스는 11월 17일(현지시간) 임베디드 소프트웨어와 복합 SoC 아키텍처용 디버그·실시간 트레이스 솔루션을 개발하는 라우터바흐 인수 계약 체결을 발표했다. 라우터바흐는 하드웨어 지원 디버거와 실시간 트레이스 도구 분야의 전문 기업이다.",
-        "라우터바흐의 솔루션은 마이크로프로세서와 임베디드 CPU 코어를 위한 개발·검증 도구를 모듈 방식으로 제공한다. 칩 개발 과정에서 하드웨어와 소프트웨어 간 복잡한 상호작용으로 발생하는 오류를 조기에 발견하는 데 활용된다.",
-        "지멘스는 자사 기술과 라우터바흐 솔루션을 결합하면 칩 동작과 소프트웨어 거동을 단일 시각에서 파악할 수 있게 되어, 개발 주기를 단축하고 제품 품질을 높일 수 있다고 설명했다. 구체적인 인수 금액이나 일정은 공개되지 않았다.",
-        "반도체 설계 복잡성이 증가하면서 칩렛(Chiplet) 기반 이기종 집적 패키징이 확산되고 있으며, 이에 따라 하드웨어·소프트웨어 통합 검증 수요도 커지고 있다. 아리조나주립대(ASU)와 앰페어컴퓨팅(Ampere Computing)이 발표한 최신 연구에서도 칩렛 조립 단계의 결함 대응이 수율 최적화의 핵심 과제로 지목됐다.",
-        "지멘스는 EDA(전자설계자동화) 및 반도체 제조 소프트웨어 사업을 지속 확장해왔다. 이번 라우터바흐 인수는 설계 검증 포트폴리오를 하드웨어 디버그 영역까지 확대하는 행보로 볼 수 있다."
+        "모멘트 에너지는 2026년 11월 17일 미국 라스베이거스 RE+ 전시회에서 중고 EV 배터리로 구성한 에너지저장시스템 노바를 선보였다. 배터리디자인(Battery Design)에 따르면 UL 9540는 미국 내 고정형 저장장치의 시스템 단위 안전 표준으로, 화재 코드(NFPA 855) 적용의 기준이 된다. 노바는 이와 함께 UL 1973 인증도 취득해 같은 종류 중 처음으로 두 인증을 동시에 보유한 시스템이 됐다.",
+        "노바 1블록은 200kW 출력과 500kWh 용량을 제공하며 설치 면적은 2.94×1.80m다. 블록을 조합하면 수십 MWh 규모로 확장할 수 있다. 모멘트 에너지는 AI 기반 배터리 관리 시스템이 서로 다른 건강 상태(SoH)를 가진 팩들을 균형 있게 운용하고, 팩 교체 방식으로 20년 이상 서비스 수명을 연장한다고 밝혔다. 아울러 열폭주 전파 시험(UL 9540A)도 통과했다.",
+        "생산은 미국 메가팩토리 1(Megafactory 1)에서 이미 진행 중이며, 첫 납품은 2027년 1분기로 예정돼 있다. 모멘트 에너지는 외국관심단체(FEOC) 규정 준수를 제3자 검증을 통해 확인했다고 덧붙였다. 이를 통해 미국 연방 투자세액공제(ITC) 혜택 적용 대상 자격을 유지하고 있다.",
+        "한편 호주 뉴사우스웨일스대(UNSW) 연구팀은 리튬이온 셀의 건강 상태를 3분 이내에 추정하는 시제품 진단 기술을 개발했다고 ESS 뉴스가 11월 보도했다. 말레이시아 배터리 재활용사 DY 뉴에너지(DY New Energy)가 개발 파트너로 참여했다. 연구팀에 따르면 기존 완충·방전 사이클은 약 10시간이 소요되는 데 비해 이번 기술은 95.5% 더 빠르다.",
+        "진단 방식은 짧은 전기 펄스를 셀에 보내 응답값을 측정한 뒤 통계 모델로 상태를 도출하는 방식이다. LFP·NCA·NMC 세 가지 화학계에 적용 가능하며, 실험실 조건에서 90% 이상의 정확도를 달성했다고 연구팀은 밝혔다. 비용 측면에서는 EV 배터리 팩 1개당 진단비가 호주달러 기준 약 120달러(한화 약 11만 원)에서 25달러(약 2만 3000원) 미만으로 낮아질 것으로 연구팀은 추산했다.",
+        "향후 계획으로는 130만 호주달러(약 92만 달러) 예산을 투입해 500개 이상 배터리를 실사용 환경에서 검증하는 필드 트라이얼이 준비 중이다. 연구팀은 재사용·재활용 여부를 권고하는 머신러닝 도구와 실시간 모니터링용 iBMS 모듈도 함께 개발할 계획이다. EU 배터리 규정은 EV 및 고정형 배터리의 건강 상태 데이터 접근성을 의무화하고 있어 이 기술의 상업적 적용 여건도 마련되고 있다."
       ],
-      "why_important": "칩렛 및 고급 패키징 채택 확대로 반도체 설계·검증 소프트웨어와 연동되는 소부장 수요가 증가하고 있다. 국내 반도체 소재·장비 기업들도 이기종 집적 공정의 복잡성 증가에 대응한 검증 역량 강화가 요구된다.",
+      "why_important": "폐배터리 재활용 ESS가 UL 인증을 획득하고 양산 단계에 진입함에 따라, 중고 배터리 셀 소재의 선별·등급 분류 수요가 커진다. 고속 건강도 진단 기술은 재활용 공정 비용 절감과 소재 회수율 향상에 직접 영향을 미친다.",
       "sources": [
-        "Semiconductor Digest",
-        "Semiconductor Engineering"
+        "Battery-News",
+        "ESS News",
+        "Battery Design"
       ],
       "reference_date": "2026-11-17",
-      "image_keyword": "embedded hardware debugger chip",
+      "image_keyword": "industrial battery energy storage system",
       "is_featured": false,
-      "timestamp": "오전 11:00",
+      "timestamp": "오전 09:30",
       "source_links": [
         {
-          "title": "Siemens to Acquire Lauterbach to Expand Semiconductor Design and Verification",
-          "url": "https://www.semiconductor-digest.com/siemens-to-acquire-lauterbach-to-expand-semiconductor-design-and-verification/?utm_source=rss&utm_medium=rss&utm_campaign=siemens-to-acquire-lauterbach-to-expand-semiconductor-design-and-verification"
+          "title": "Moment Energy Unveils UL 9540-Certified Storage Made From Used EV Batteries",
+          "url": "https://battery-news.de/en/2026/11/18/moment-energy-unveils-ul-9540-certified-storage-made-from-used-ev-batteries/"
         },
         {
-          "title": "Defect-Aware Chiplet Matching For Heterogeneous Integration Yield (ASU, Ampere)",
-          "url": "https://semiengineering.com/defect-aware-chiplet-matching-for-heterogeneous-integration-yield-asu-ampere/"
+          "title": "UNSW Develops Three-Minute Health Test for Used Battery Cells",
+          "url": "https://battery-news.de/en/2026/11/16/unsw-develops-three-minute-health-test-for-used-battery-cells/"
         }
       ],
-      "image_url": "images/2026-11-18_article_1.jpg",
+      "image_url": "images/2026-11-19_article_1.jpg",
       "review": {
         "trust_score": 4,
-        "status": "pass",
+        "status": "warning",
         "suspicious_claims": [
-          "ASU·앰페어컴퓨팅 공동 연구 인용은 출처 링크·논문명 없이 서술되어 검증 불가",
-          "인수 금액·완료 일정 미공개 → 기사 내 '구체적 금액 미공개' 명시로 처리됐으나 독자 오해 여지"
+          "'같은 종류 중 처음으로 두 인증 동시 보유' — 원문 확인 필요, 과도한 최초 주장 가능성",
+          "호주달러 120달러→25달러 환율 한화 환산(약 11만→2만3000원) 계산 정확성 확인 필요",
+          "130만 호주달러 ≈ 92만 달러 환산 비율 검토 필요 (약 0.71 AUD/USD 적용)"
         ],
-        "notes": "라우터바흐·지멘스 EDA 사실관계는 적절, 연구 인용 출처 보강 필요",
-        "verified_at": "2026-11-18 03:05"
+        "notes": "수치 환산 일부 검토 필요, '최초 이중 인증' 주장은 원문 근거 확인 권장",
+        "verified_at": "2026-11-19 03:09"
       }
     },
     {
       "id": 2,
       "category": "글로벌",
       "tag_type": "tag-global",
-      "title": "칠레 구리 생산, 23년 만에 최저치 전망",
-      "summary": "칠레의 2026년 구리 생산량이 전년 대비 6.6% 감소한 503만 톤에 그칠 것으로 추정되며, 이는 2003년 이후 최저 수준이다. 광석 품위 저하와 황산 수입 의존도 심화가 겹치며 세계 최대 구리 생산국의 경쟁력에 경고등이 켜졌다.",
+      "title": "AI 데이터센터, 2035년 핵심광물 수요 공급 최대 22% 초과 전망",
+      "summary": "글로벌엑스(Global X)가 발표한 '차팅 디스럽션 2027' 보고서에 따르면 AI 데이터센터 확장으로 구리·리튬·희토류 채굴 수요가 2035년 공급량을 최대 22% 웃돌 것으로 추정된다. 1GW급 AI 데이터센터 1기에만 약 18만 톤의 핵심 광물이 필요하며, 세 광종에 걸쳐 2040년까지 약 5500억 달러(약 760조 원) 규모의 투자가 필요한 것으로 분석됐다.",
       "body": [
-        "광산 분석 기관 플러스마이닝(Plusmining)의 후안 호세 파르도(Juan José Pardo) 애널리스트는 2026년 칠레 구리 생산량이 503만4천 톤으로 전년 대비 35만4천 톤 줄어들 것으로 추정했다. 2003년(490만4천 톤) 이후 최저치이자, 2018년 정점 대비 약 80만 톤 적은 수치다.",
-        "생산 급감의 직접적 원인으로는 광석 품위 저하와 운영 차질이 꼽힌다. 플러스마이닝에 따르면 2026년 8월 칠레 월간 생산량은 전년 동월 대비 12.7% 떨어진 36만6천 톤에 머물렀다. 에스콘디다(Escondida)와 스펜스(Spence) 광산의 감소폭이 컸고, 엘 테니엔테(El Teniente)는 2025년 발생한 암반 붕락 여파에서 벗어나지 못하고 있다.",
-        "황산 수급 문제도 위기를 가중시킨다. 칠레 구리위원회(Cochilco)에 따르면 2025년 황산 수입량은 역대 최고인 397만 톤에 달해 국내 소비량의 절반가량을 수입으로 충당했다. GEM 마이닝 컨설팅의 파울리나 카세레스(Paulina Cáceres) 프로젝트 매니저는 중국이 2026년 5월 황산 수출을 제한하기 전까지 칠레 황산 수입의 37%를 공급했다고 밝혔다. 황산은 침출(leaching) 방식의 구리 생산에 필수적인 공정 소재다.",
-        "Cochilco에 따르면 국영 광산기업 코델코(Codelco)의 9월 몰리브덴 함유량 생산은 1천114.5톤으로 전년 동월 대비 36.3% 늘었다. 반면 카세로네스(Caserones)는 83.9%, 시에라 고르다(Sierra Gorda)는 66.9%, 로스 펠람브레스(Los Pelambres)는 37.3% 각각 급감했다.",
-        "플러스마이닝은 2027년에 약 25만 톤 회복이 가능하고, 계획된 투자와 운영 목표가 충족될 경우 2032년까지 연간 600만 톤을 넘어설 가능성이 있다고 내다봤다. 단, 이 전망은 대형 개발 프로젝트의 차질 없는 진행을 전제로 한다.",
-        "한편 11월 17일 코델코는 가브리엘라 미스트랄(Gabriela Mistral) 광산 운영을 2055년까지 연장하는 8억6천800만 달러 규모 프로젝트에 대해 칠레 북부 안토파가스타 환경평가위원회(Coeva)의 만장일치 환경 승인을 얻었다. 2008년 개장 당시 15년 수명으로 설계된 이 노천 광산의 운영을 28년 추가 연장하는 것이 골자다.",
-        "가브리엘라 미스트랄 프로젝트는 프로젝트 9년째부터 기존 지하수 추출 대신 대체 수원으로 전환하고, 2035년부터는 침출 광물 처리 공정에 염화나트륨을 도입하는 방식도 포함하고 있다. Coeva의 승인 결정에도 불구하고 반대 측의 행정·법적 이의 제기가 가능해 실제 착공 일정은 유동적이다."
+        "자산운용사 글로벌엑스(Global X)는 2026년 11월 발표한 연례 보고서 '차팅 디스럽션(Charting Disruption) 2027'에서 AI 인프라 확대에 따른 핵심 광물 수급 불균형 위험을 경고했다. 채굴 수요가 2035년까지 공급량보다 17~22% 많아질 수 있다고 보고서는 밝혔다. 대상 광종은 구리, 리튬, 희토류 세 가지다.",
+        "보고서에 따르면 출력 1기가와트(GW) 규모의 AI 데이터센터 1기에 필요한 핵심 광물 총량은 약 18만 톤에 달한다. 이 중 구리는 약 2만 7200톤으로, 전기 배선·변압기·냉각 설비 등에 광범위하게 쓰인다. 보고서는 AI 연산 인프라 확충이 데이터센터 건설에 그치지 않고 전력 공급망 전체 업그레이드를 수반한다는 점을 강조했다.",
+        "글로벌엑스는 구리·리튬·희토류 산업이 2040년까지 수요 대응과 공급망 취약성 해소를 위해 약 5500억 달러(약 760조 원)의 투자가 필요하다고 추산했다. 핵심 광물과 수자원 인프라를 포함한 더 넓은 범위의 투자 소요액은 같은 기간 2조 달러(약 2760조 원)를 넘을 것으로 추정됐다.",
+        "공급 리스크는 광물 매장량에만 국한되지 않는다. 생산과 가공이 소수 국가에 집중돼 있어 무역 규제·지정학적 긴장·공급 중단 발생 시 가공 소재 조달이 어려워질 수 있다고 보고서는 지적했다. 희토류는 산업 기기·전기 모터에 사용되는 영구자석에, 리튬은 전력망 균형을 위한 배터리 저장 시스템에 각각 핵심 소재로 쓰인다.",
+        "다만 글로벌엑스는 수요 증가가 반드시 부족 사태나 지속적인 가격 상승을 의미하지는 않는다고 단서를 달았다. 신규 광상 발견, 재활용 확대, 대체 소재 개발, 가공 효율 개선이 일부 광종의 수급 압박을 완화할 수 있다는 설명이다. 광산 업체들은 허가 지연, 자금 조달 제약, 수자원 부족이라는 복합적인 사업 장벽에도 직면해 있다고 보고서는 덧붙였다."
       ],
-      "why_important": "칠레 생산 감소는 전 세계 구리 공급망에 직접적 영향을 준다. 황산 수입 의존도 심화는 구리 제련·침출 비용 상승 요인으로 작용해 국내 비철금속 소재 수급 비용에도 연쇄 파급 효과가 예상된다.",
+      "why_important": "AI 인프라 투자 확대로 구리·희토류 등 핵심 광물 수급 불균형이 심화될 경우, 국내 소재·부품 업체의 원료 조달 비용과 공급 안정성에 직접 영향을 미친다. 광물 가공·정제 단계에서의 지정학적 집중도가 공급망 위험의 핵심 변수로 부상하고 있다.",
       "sources": [
         "Mining.com",
-        "Plusmining",
-        "Cochilco",
-        "GEM Mining Consulting"
+        "Global X"
       ],
-      "reference_date": "2026-11-17",
-      "image_keyword": "copper mining industrial Chile",
+      "reference_date": "2026-11-18",
+      "image_keyword": "copper mining critical minerals data center",
       "is_featured": false,
-      "timestamp": "오전 09:30",
+      "timestamp": "오전 09:45",
       "source_links": [
         {
-          "title": "Chile copper output nears 23-year low as mines struggle",
-          "url": "https://www.mining.com/chile-copper-output-nears-23-year-low-as-mines-struggle/"
-        },
-        {
-          "title": "Codelco’s $866 million Gabriela Mistral extension clears key hurdle",
-          "url": "https://www.mining.com/codelcos-866m-gabriela-mistral-extension-clears-key-hurdle/"
+          "title": "Critical mineral shortages threaten AI’s next growth wave: report",
+          "url": "https://www.mining.com/critical-mineral-shortages-threaten-ais-next-growth-wave-report/"
         }
       ],
-      "image_url": "images/2026-11-18_article_2.jpg",
+      "image_url": "images/2026-11-19_article_2.jpg",
       "review": {
-        "trust_score": 3,
+        "trust_score": 4,
         "status": "warning",
         "suspicious_claims": [
-          "'28년 추가 연장' 오류 가능 — 2008년 개장·15년 설계수명 기준 종료는 2023년이며, 2055년까지는 약 32년에 해당",
-          "'2026년 8월 생산량' 수치를 연간 전망 기사에서 확정치처럼 서술(전망치와 실적치 혼재 가능)",
-          "중국 황산 수출 제한 '2026년 5월' 시점 출처 불명확, 독립 검증 필요"
+          "보고서명 '차팅 디스럽션 2027' — 2026년 발간 보고서 부제가 2027인지 확인 필요",
+          "1GW 데이터센터 핵심광물 18만 톤 수치 — 원문 근거 확인 필요(매우 큰 수치)",
+          "5500억 달러 760조 원 환산: 1달러≈1382원 적용 시 약 760조로 계산은 적절"
         ],
-        "notes": "핵심 수치 방향성은 타당하나 가브리엘라 미스트랄 연장 연수 계산 오류 의심",
-        "verified_at": "2026-11-18 03:05"
+        "notes": "수치 자체는 원문 기반으로 보이나 보고서명·발간 연도 표기 일관성 확인 권장",
+        "verified_at": "2026-11-19 03:09"
       }
     }
   ],
-  "editorial_briefing": "파나마가 코브레파나마 광산 재개 협상에 나선 가운데, 칠레 구리 생산은 23년 만에 최저치를 기록할 전망이다. 글로벌 구리 공급 불안이 심화되는 한편, 지멘스는 반도체 디버그 기업 라우터바흐를 인수해 기술 경쟁력을 강화했다.",
+  "editorial_briefing": "지멘스가 SoC 검증 전문사를 추가 인수하며 반도체 검증 역량을 강화했다. 폐EV 배터리 재활용 ESS 상용화가 가속되는 가운데, AI 데이터센터 확장으로 핵심광물 수급 불균형 위기가 2035년에 임박했다.",
   "global_issues": [
     {
       "icon": "🔴",
-      "label": "글로벌 구리 공급 위기",
-      "status": "공급 감소 심화"
+      "label": "핵심광물 공급 부족",
+      "status": "2035년 22% 초과"
     },
     {
       "icon": "🟡",
-      "label": "코브레파나마 협상",
-      "status": "재개 협상 착수"
-    },
-    {
-      "icon": "🔴",
-      "label": "칠레 광산 생산 급감",
-      "status": "23년래 최저 전망"
+      "label": "AI 데이터센터 확장",
+      "status": "자원 수요 급증"
     },
     {
       "icon": "🟢",
-      "label": "지멘스 반도체 확장",
-      "status": "라우터바흐 인수"
+      "label": "폐EV 배터리 재활용",
+      "status": "ESS 상용화 진전"
     },
     {
       "icon": "🟡",
-      "label": "원자재 시장 변동성",
-      "status": "구리 가격 주시"
+      "label": "반도체 검증 M&A",
+      "status": "지멘스 인수 확대"
+    },
+    {
+      "icon": "🔴",
+      "label": "희토류 수급 리스크",
+      "status": "공급망 긴장 지속"
     }
   ],
   "editorial_briefing_v2": {
-    "headline": "구리 공급망 위기·재편 본격화",
+    "headline": "AI·배터리·핵심광물, 공급망 긴장 고조",
     "points": [
       {
-        "text": "파나마, 코브레파나마 광산 재개 협상 공식 착수"
+        "text": "지멘스, SoC 검증사 브레커 버리피케이션 인수"
       },
       {
-        "text": "칠레 구리 생산 23년 만에 최저치 전망"
+        "text": "폐EV 배터리 ESS 상용화, UL 인증 획득"
       },
       {
-        "text": "지멘스, 반도체 디버그 전문기업 라우터바흐 인수"
-      },
-      {
-        "text": "글로벌 구리 공급 차질로 원자재 시장 긴장 고조"
+        "text": "AI 데이터센터 핵심광물 수요, 2035년 공급 22% 초과 전망"
       }
     ]
   },
-  "last_reviewed_at": "2026-11-18 03:05"
+  "last_reviewed_at": "2026-11-19 03:09"
 }

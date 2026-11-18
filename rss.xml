@@ -6,7 +6,31 @@
     <atom:link href="https://www.materialtimes.co.kr/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Wed, 18 Nov 2026 03:05:45 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 03:09:57 +0900</lastBuildDate>
+    <item>
+      <title>지멘스, SoC 검증사 브레커 버리피케이션 추가 인수</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-19-0.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-19-0.html</guid>
+      <category>반도체소재</category>
+      <description>지멘스(Siemens)가 SoC(시스템온칩) 수준 검증 전문사 브레커 버리피케이션 시스템즈(Breker Verification Systems)를 인수하기로 합의했다. 라우터바흐(Lauterbach) 인수 발표에 이은 두 번째 EDA 포트폴리오 확장으로, AI·HPC 반도체 복잡도 증가에 대응하는 행보다.</description>
+      <pubDate>Thu, 19 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>폐EV 배터리 재활용 ESS 상용화 가속</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-19-1.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-19-1.html</guid>
+      <category>산업재</category>
+      <description>캐나다 모멘트 에너지(Moment Energy)가 UL 9540 인증을 획득한 폐EV 배터리 기반 ESS 시스템 '노바(Nova)'를 11월 17일 공개했다. 호주 뉴사우스웨일스대(UNSW)는 기존 10시간 대비 95.5% 빠른 3분 배터리 건강도 진단 기술을 개발해 상용화 기반을 마련하고 있다.</description>
+      <pubDate>Thu, 19 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>AI 데이터센터, 2035년 핵심광물 수요 공급 최대 22% 초과 전망</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-19-2.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-19-2.html</guid>
+      <category>글로벌</category>
+      <description>글로벌엑스(Global X)가 발표한 '차팅 디스럽션 2027' 보고서에 따르면 AI 데이터센터 확장으로 구리·리튬·희토류 채굴 수요가 2035년 공급량을 최대 22% 웃돌 것으로 추정된다. 1GW급 AI 데이터센터 1기에만 약 18만 톤의 핵심 광물이 필요하며, 세 광종에 걸쳐 2040년까지 약 5500억 달러(약 760조 원) 규모의 투자가 필요한 것으로 분석됐다.</description>
+      <pubDate>Thu, 19 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>파나마, 코브레파나마 광산 재개 협상 공식 착수</title>
       <link>https://www.materialtimes.co.kr/news/2026-11-18-0.html</link>
@@ -222,30 +246,6 @@
       <category>산업재</category>
       <description>한화엔진이 2026년 3분기 누적 기준으로 영업이익 1302억원을 기록하며 지난해 연간 영업이익을 이미 초과 달성했다. 선박용 저속엔진의 평균판매단가 상승이 실적을 이끌었다.</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>미 국방물류청, 핵심소재 2조원 비축 발주</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-08-0.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-08-0.html</guid>
-      <category>글로벌</category>
-      <description>미국 국방물류청(DLA)이 국가방위비축을 위해 20억 달러(약 2조7천억원) 규모의 핵심소재 조달 계획을 공표했다. 미국의 전략산업 리쇼어링과 국내 생산 확대 기조 아래 공급망 안보 강화가 목적이다.</description>
-      <pubDate>Sun, 08 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>지린OLED, LG화학 OLED 소재 특허 무효심판 청구</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-08-1.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-08-1.html</guid>
-      <category>산업재</category>
-      <description>중국 OLED 재료업체 지린OLED의 자회사가 LG화학의 헤테로환 화합물 OLED 발광재료 특허에 대해 한국 특허심판원에 무효심판을 청구했다. 중국 업체가 LG화학 OLED 소재 특허를 직접 겨냥한 것은 이번이 처음이다.</description>
-      <pubDate>Sun, 08 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>DLA 비축 발표 뒤 구리 가격 추가 하락 전망</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-08-2.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-08-2.html</guid>
-      <category>희귀금속</category>
-      <description>미국 중간선거에서 민주당이 선전하면서 수입관세 기대감이 약화되고, TD증권은 구리 가격이 추가로 하락할 가능성이 있다고 전망했다. 관세 완화 기대 후퇴가 금속 수급 심리에 영향을 미치고 있다.</description>
-      <pubDate>Sun, 08 Nov 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
