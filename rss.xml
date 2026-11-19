@@ -6,7 +6,31 @@
     <atom:link href="https://www.materialtimes.co.kr/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 19 Nov 2026 03:09:57 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 03:03:31 +0900</lastBuildDate>
+    <item>
+      <title>삼성SDI, 미국 LFP 셀로 주피터파워에 16GWh 공급 계약</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-20-0.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-20-0.html</guid>
+      <category>산업재</category>
+      <description>삼성SDI가 블랙록 산하 에너지저장 개발사 주피터파워(Jupiter Power)와 16GWh 규모의 LFP 배터리 공급 계약을 체결했다. 인디애나주 공장에서 생산되는 각형 LFP 셀로, 2029년부터 3년에 걸쳐 납품된다.</description>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>NVIDIA, 기판·패키징 공급망 다년 계약 대규모 확대</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-20-1.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-20-1.html</guid>
+      <category>반도체소재</category>
+      <description>엔비디아(NVIDIA)가 AI 가속기 수요에 대응해 기판·첨단 패키징 분야에서 복수의 공급사와 다년 계약을 확대했다. 킨서스인터커넥트(Kinsus)는 전용 ABF 기판 생산 능력을 현재의 3.5배 이상으로 늘리고, 삼성전기는 기존 협약을 개정해 생산 운영 역량을 강화한다.</description>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>글로벌파운드리, 미·일 공동 210억 달러 뉴욕 300mm 팹 착공</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-20-2.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-20-2.html</guid>
+      <category>글로벌</category>
+      <description>글로벌파운드리(GlobalFoundries)가 2026년 11월 19일 미국 뉴욕 몰타 부지에서 미·일 공동 이니셔티브 첫 번째 300mm 반도체 팹 착공식을 개최했다. 일본이 최대 210억 달러를 투자하고 뉴욕주가 5억 7,000만 달러의 인센티브를 지원한다.</description>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>지멘스, SoC 검증사 브레커 버리피케이션 추가 인수</title>
       <link>https://www.materialtimes.co.kr/news/2026-11-19-0.html</link>
@@ -222,30 +246,6 @@
       <category>반도체소재</category>
       <description>한국재료연구원이 350도 저온에서 2차원 반도체 소재를 웨이퍼 10장에 동시 증착하는 공정 기술을 개발했다. 기존 고온 공정 대비 에너지 절감과 대면적 균일도 향상이 특징이다.</description>
       <pubDate>Tue, 10 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>중국 텅스텐 수출통제, 반도체 공구 가격 급등</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-09-0.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-09-0.html</guid>
-      <category>글로벌</category>
-      <description>중국의 텅스텐 수출통제 조치 이후 반도체 기판 가공에 쓰이는 절삭공구 가격이 급등하고 있다. 텅스텐은 초경합금 공구의 핵심 원료로, 중국이 전 세계 공급의 80% 이상을 차지한다.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>KAIST, BTO 소재 광특성 전대역 규명</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-09-1.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-09-1.html</guid>
-      <category>반도체소재</category>
-      <description>KAIST 연구팀이 국제 공동연구를 통해 차세대 광통신 소재인 바륨 타이타네이트(BTO)의 굴절률과 빛 흡수 특성을 자외선부터 원적외선까지 전 파장 대역에 걸쳐 규명했다. 이번 성과는 고속 광통신 부품 설계에 필요한 기초 데이터를 체계적으로 제공한다는 점에서 주목된다.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>한화엔진, 3분기 누적 영업익 1302억…연간 목표 초과</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-09-2.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-09-2.html</guid>
-      <category>산업재</category>
-      <description>한화엔진이 2026년 3분기 누적 기준으로 영업이익 1302억원을 기록하며 지난해 연간 영업이익을 이미 초과 달성했다. 선박용 저속엔진의 평균판매단가 상승이 실적을 이끌었다.</description>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>

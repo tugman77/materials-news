@@ -1,182 +1,171 @@
 {
-  "generated_at": "2026년 11월 19일 03:09",
-  "date_str": "2026년 11월 19일",
-  "date_key": "2026-11-19",
+  "generated_at": "2026년 11월 20일 03:03",
+  "date_str": "2026년 11월 20일",
+  "date_key": "2026-11-20",
   "articles": [
     {
       "id": 0,
-      "category": "반도체소재",
-      "tag_type": "tag-semi",
-      "title": "지멘스, SoC 검증사 브레커 버리피케이션 추가 인수",
-      "summary": "지멘스(Siemens)가 SoC(시스템온칩) 수준 검증 전문사 브레커 버리피케이션 시스템즈(Breker Verification Systems)를 인수하기로 합의했다. 라우터바흐(Lauterbach) 인수 발표에 이은 두 번째 EDA 포트폴리오 확장으로, AI·HPC 반도체 복잡도 증가에 대응하는 행보다.",
-      "body": [
-        "반도체 EDA(전자설계자동화) 소프트웨어 업체 지멘스(Siemens)가 11월 18일 SoC 수준 검증 솔루션 전문사 브레커 버리피케이션 시스템즈(Breker Verification Systems, Inc.) 인수 계약을 체결했다고 발표했다. 거래 금액은 공개되지 않았다.",
-        "Semiconductor Digest에 따르면 이번 인수는 지멘스가 최근 발표한 임베디드 소프트웨어 디버그·추적 솔루션 업체 라우터바흐(Lauterbach) 인수와 연계된 전략이다. 두 건 모두 반도체 설계·검증과 임베디드 소프트웨어 개발을 하나의 흐름으로 연결하겠다는 목표 아래 추진됐다.",
-        "브레커가 보유한 핵심 기술은 시스템 VIP(검증 IP)와 테스트 스위트 합성(Test Suite Synthesis)이다. 이 기술은 하드웨어 컴포넌트 간 상호작용, 전력 관리, 보안, 소프트웨어 계층을 IP 단위부터 전체 SoC 수준까지 아우르는 기능 검증을 가능하게 한다. 지멘스는 기존 퀘스타 원(Questa One) 소프트웨어 포트폴리오와 결합해 더 완결된 검증 솔루션을 구성할 계획이다.",
-        "브레커 CEO 데이비드 켈프(David Kelf)는 지멘스 합류로 시스템 VIP와 테스트 스위트 합성 기술을 여러 산업 세그먼트에 걸쳐 글로벌 규모로 확장할 수 있게 됐다고 밝혔다.",
-        "적용 대상은 AI, 고성능컴퓨팅(HPC), 차량용 반도체 등 복잡도가 높은 설계 분야다."
-      ],
-      "why_important": "SoC 검증 자동화는 반도체 설계 사이클 단축과 직결된다. 지멘스의 EDA 포트폴리오 강화는 차량용·AI 반도체 소부장 업체의 설계 협력 환경 변화에 영향을 미칠 수 있다.",
-      "sources": [
-        "Semiconductor Digest",
-        "Siemens"
-      ],
-      "reference_date": "2026-11-18",
-      "image_keyword": "semiconductor SoC verification chip design",
-      "is_featured": true,
-      "timestamp": "오전 09:30",
-      "source_links": [
-        {
-          "title": "Siemens to Acquire Breker Verification Systems to Expand System-on-Chip Verification Portfolio",
-          "url": "https://www.semiconductor-digest.com/siemens-to-acquire-breker-verification-systems-to-expand-system-on-chip-verification-portfolio/?utm_source=rss&utm_medium=rss&utm_campaign=siemens-to-acquire-breker-verification-systems-to-expand-system-on-chip-verification-portfolio"
-        },
-        {
-          "title": "Siemens to Acquire Lauterbach to Expand Semiconductor Design and Verification",
-          "url": "https://www.semiconductor-digest.com/siemens-to-acquire-lauterbach-to-expand-semiconductor-design-and-verification/?utm_source=rss&utm_medium=rss&utm_campaign=siemens-to-acquire-lauterbach-to-expand-semiconductor-design-and-verification"
-        }
-      ],
-      "image_url": "images/2026-11-19_article_0.jpg",
-      "review": {
-        "trust_score": 4,
-        "status": "pass",
-        "suspicious_claims": [
-          "브레커 CEO 데이비드 켈프 발언이 직접 인용 형태이나 원문 출처 미제시",
-          "라우터바흐 인수와 '연계된 전략'이라는 표현이 원문에 동일하게 있는지 확인 필요"
-        ],
-        "notes": "주요 사실 검증 가능, 거래 금액 미공개 처리 적절, 인용 출처 보강 권장",
-        "verified_at": "2026-11-19 03:09"
-      }
-    },
-    {
-      "id": 1,
       "category": "산업재",
       "tag_type": "tag-industry",
-      "title": "폐EV 배터리 재활용 ESS 상용화 가속",
-      "summary": "캐나다 모멘트 에너지(Moment Energy)가 UL 9540 인증을 획득한 폐EV 배터리 기반 ESS 시스템 '노바(Nova)'를 11월 17일 공개했다. 호주 뉴사우스웨일스대(UNSW)는 기존 10시간 대비 95.5% 빠른 3분 배터리 건강도 진단 기술을 개발해 상용화 기반을 마련하고 있다.",
+      "title": "삼성SDI, 미국 LFP 셀로 주피터파워에 16GWh 공급 계약",
+      "summary": "삼성SDI가 블랙록 산하 에너지저장 개발사 주피터파워(Jupiter Power)와 16GWh 규모의 LFP 배터리 공급 계약을 체결했다. 인디애나주 공장에서 생산되는 각형 LFP 셀로, 2029년부터 3년에 걸쳐 납품된다.",
       "body": [
-        "모멘트 에너지는 2026년 11월 17일 미국 라스베이거스 RE+ 전시회에서 중고 EV 배터리로 구성한 에너지저장시스템 노바를 선보였다. 배터리디자인(Battery Design)에 따르면 UL 9540는 미국 내 고정형 저장장치의 시스템 단위 안전 표준으로, 화재 코드(NFPA 855) 적용의 기준이 된다. 노바는 이와 함께 UL 1973 인증도 취득해 같은 종류 중 처음으로 두 인증을 동시에 보유한 시스템이 됐다.",
-        "노바 1블록은 200kW 출력과 500kWh 용량을 제공하며 설치 면적은 2.94×1.80m다. 블록을 조합하면 수십 MWh 규모로 확장할 수 있다. 모멘트 에너지는 AI 기반 배터리 관리 시스템이 서로 다른 건강 상태(SoH)를 가진 팩들을 균형 있게 운용하고, 팩 교체 방식으로 20년 이상 서비스 수명을 연장한다고 밝혔다. 아울러 열폭주 전파 시험(UL 9540A)도 통과했다.",
-        "생산은 미국 메가팩토리 1(Megafactory 1)에서 이미 진행 중이며, 첫 납품은 2027년 1분기로 예정돼 있다. 모멘트 에너지는 외국관심단체(FEOC) 규정 준수를 제3자 검증을 통해 확인했다고 덧붙였다. 이를 통해 미국 연방 투자세액공제(ITC) 혜택 적용 대상 자격을 유지하고 있다.",
-        "한편 호주 뉴사우스웨일스대(UNSW) 연구팀은 리튬이온 셀의 건강 상태를 3분 이내에 추정하는 시제품 진단 기술을 개발했다고 ESS 뉴스가 11월 보도했다. 말레이시아 배터리 재활용사 DY 뉴에너지(DY New Energy)가 개발 파트너로 참여했다. 연구팀에 따르면 기존 완충·방전 사이클은 약 10시간이 소요되는 데 비해 이번 기술은 95.5% 더 빠르다.",
-        "진단 방식은 짧은 전기 펄스를 셀에 보내 응답값을 측정한 뒤 통계 모델로 상태를 도출하는 방식이다. LFP·NCA·NMC 세 가지 화학계에 적용 가능하며, 실험실 조건에서 90% 이상의 정확도를 달성했다고 연구팀은 밝혔다. 비용 측면에서는 EV 배터리 팩 1개당 진단비가 호주달러 기준 약 120달러(한화 약 11만 원)에서 25달러(약 2만 3000원) 미만으로 낮아질 것으로 연구팀은 추산했다.",
-        "향후 계획으로는 130만 호주달러(약 92만 달러) 예산을 투입해 500개 이상 배터리를 실사용 환경에서 검증하는 필드 트라이얼이 준비 중이다. 연구팀은 재사용·재활용 여부를 권고하는 머신러닝 도구와 실시간 모니터링용 iBMS 모듈도 함께 개발할 계획이다. EU 배터리 규정은 EV 및 고정형 배터리의 건강 상태 데이터 접근성을 의무화하고 있어 이 기술의 상업적 적용 여건도 마련되고 있다."
+        "삼성SDI는 11월 16일 미국 에너지저장 개발사 주피터파워(Jupiter Power)에 총 16GWh 용량의 리튬인산철(LFP) 배터리를 공급하는 계약을 체결했다고 발표했다. 계약은 삼성SDI의 미국 법인 삼성SDI아메리카가 체결했으며, 납품은 2029년부터 3년간 이뤄진다.",
+        "Battery-News 보도에 따르면, 해당 셀은 인디애나주 스타플러스에너지(StarPlus Energy, SPE) 공장에서 생산된다. 이 공장의 각형 LFP 배터리 양산은 2026년 10월 개시됐으며, 삼성SDI는 양산 직후 대규모 수주를 확보한 것이라고 밝혔다.",
+        "블랙록이 소유한 주피터파워는 이 배터리를 미국 내 대규모 에너지저장 프로젝트에 활용할 계획이다. 이전 계약을 포함한 양사 간 누적 수주량은 약 27GWh에 달한다고 삼성SDI는 전했다.",
+        "계약 금액은 공개되지 않았으나, 한국 매체들은 업계 추정치로 약 3조 원(22억 달러 상당)을 거론하고 있다. 삼성SDI는 이 수치를 공식 확인하지 않았다.",
+        "삼성SDI는 자사를 북미에서 각형 ESS용 배터리를 생산하는 유일한 비중국계 업체로 소개했다. 앞서 2025년 12월에도 삼성SDI아메리카는 미국 에너지 인프라 기업과 2조 원 이상 규모의 LFP 공급 계약을 체결한 바 있다고 로이터가 보도했다."
       ],
-      "why_important": "폐배터리 재활용 ESS가 UL 인증을 획득하고 양산 단계에 진입함에 따라, 중고 배터리 셀 소재의 선별·등급 분류 수요가 커진다. 고속 건강도 진단 기술은 재활용 공정 비용 절감과 소재 회수율 향상에 직접 영향을 미친다.",
+      "why_important": "북미 현지 생산 LFP 각형 셀 수요가 본격화하면서, 양극재·전해질·집전체 등 관련 소재의 미국 공급망 구축 필요성이 높아진다. 국내 LFP 소재 업체의 미국 진출 기회를 가늠할 수 있는 사례다.",
       "sources": [
         "Battery-News",
-        "ESS News",
-        "Battery Design"
+        "Korea JoongAng Daily",
+        "Seoul Economic Daily"
       ],
-      "reference_date": "2026-11-17",
-      "image_keyword": "industrial battery energy storage system",
-      "is_featured": false,
-      "timestamp": "오전 09:30",
+      "reference_date": "2026-11-16",
+      "image_keyword": "LFP battery prismatic industrial storage",
+      "is_featured": true,
+      "timestamp": "오전 09:15",
       "source_links": [
         {
-          "title": "Moment Energy Unveils UL 9540-Certified Storage Made From Used EV Batteries",
-          "url": "https://battery-news.de/en/2026/11/18/moment-energy-unveils-ul-9540-certified-storage-made-from-used-ev-batteries/"
-        },
-        {
-          "title": "UNSW Develops Three-Minute Health Test for Used Battery Cells",
-          "url": "https://battery-news.de/en/2026/11/16/unsw-develops-three-minute-health-test-for-used-battery-cells/"
+          "title": "Samsung SDI to Supply 16 GWh of LFP Batteries to Jupiter Power",
+          "url": "https://battery-news.de/en/2026/11/17/samsung-sdi-to-supply-16-gwh-of-lfp-batteries-to-jupiter-power/"
         }
       ],
-      "image_url": "images/2026-11-19_article_1.jpg",
+      "image_url": "images/2026-11-20_article_0.jpg",
       "review": {
         "trust_score": 4,
         "status": "warning",
         "suspicious_claims": [
-          "'같은 종류 중 처음으로 두 인증 동시 보유' — 원문 확인 필요, 과도한 최초 주장 가능성",
-          "호주달러 120달러→25달러 환율 한화 환산(약 11만→2만3000원) 계산 정확성 확인 필요",
-          "130만 호주달러 ≈ 92만 달러 환산 비율 검토 필요 (약 0.71 AUD/USD 적용)"
+          "스타플러스에너지(SPE)가 LFP 각형 ESS 셀 생산 — 기존 EV용 NMC 배터리 JV로 알려짐",
+          "삼성SDI가 북미 유일 비중국계 각형 ESS 배터리 생산업체 주장 — 검증 필요",
+          "2025년 12월 로이터 보도 계약 — 근거자료 없어 사실 확인 불가"
         ],
-        "notes": "수치 환산 일부 검토 필요, '최초 이중 인증' 주장은 원문 근거 확인 권장",
-        "verified_at": "2026-11-19 03:09"
+        "notes": "근거자료 없음. StarPlus Energy의 LFP ESS 생산 전환 여부 추가 확인 권고.",
+        "verified_at": "2026-11-20 03:03"
+      }
+    },
+    {
+      "id": 1,
+      "category": "반도체소재",
+      "tag_type": "tag-semi",
+      "title": "NVIDIA, 기판·패키징 공급망 다년 계약 대규모 확대",
+      "summary": "엔비디아(NVIDIA)가 AI 가속기 수요에 대응해 기판·첨단 패키징 분야에서 복수의 공급사와 다년 계약을 확대했다. 킨서스인터커넥트(Kinsus)는 전용 ABF 기판 생산 능력을 현재의 3.5배 이상으로 늘리고, 삼성전기는 기존 협약을 개정해 생산 운영 역량을 강화한다.",
+      "body": [
+        "엔비디아(NVIDIA)는 11월 19일 AI 인프라 확충을 위해 주요 공급망 파트너들과의 계약을 확대한다고 발표했다. 암코테크놀로지(Amkor Technology), 폭스콘(Foxconn), 킨서스인터커넥트(Kinsus Interconnect Technology), 삼성전기, SPIL, TSMC 등이 대상이다.",
+        "Semiconductor Digest 보도에 따르면, 킨서스는 대만 타오위안 유스 캠퍼스에서 엔비디아 전용 ABF 패키지 기판 생산 능력을 현재 대비 3.5배 이상으로 확대하기로 합의했다. 추가 생산은 2027년 하반기 착수, 증설 완료는 2028년 3분기를 목표로 한다.",
+        "삼성전기는 한국 세종·부산 공장에서 엔비디아의 컴퓨트 및 고속 네트워킹용 기판을 공급하는 기존 다년 협약을 개정해, 생산 운영 역량을 높이기로 했다. 삼성전기 장덕현 대표이사는 '초정밀 기판 가공 기술과 고신뢰성 MLCC 기술을 결합해 엔비디아 AI 플랫폼이 최고 성능으로 적기 공급되도록 역할을 다하겠다'고 밝혔다.",
+        "첨단 패키징 분야에서는 SPIL과 새로운 용량 확장 계약을 체결했으며, 암코의 미국·한국 제조 확장도 지원한다. 킨서스의 스콧 천(Scott Chen) 대표는 10여 년간의 파트너십을 바탕으로 AI의 미래를 함께 구축하게 돼 기대된다고 말했다.",
+        "엔비디아 운영 담당 수석 부사장 데보라 쇼퀴스트(Debora Shoquist)는 공급망은 전략적 경쟁력이라며, 이번 협약들이 현세대와 차세대 가속 컴퓨팅 플랫폼의 장기 성장을 위한 제조 기반을 강화하는 것이라고 밝혔다."
+      ],
+      "why_important": "AI 가속기용 ABF 기판과 첨단 패키징 소재의 수요가 중장기적으로 급증할 전망이어서, 국내 기판 소재·MLCC 공급망에 직접적인 수주 확대 기회가 생긴다.",
+      "sources": [
+        "Semiconductor Digest"
+      ],
+      "reference_date": "2026-11-19",
+      "image_keyword": "semiconductor substrate advanced packaging industrial",
+      "is_featured": false,
+      "timestamp": "오전 09:15",
+      "source_links": [
+        {
+          "title": "NVIDIA Expands Commitments With Supply Chain Partners to Support AI Infrastructure Buildout",
+          "url": "https://www.semiconductor-digest.com/nvidia-expands-commitments-with-supply-chain-partners-to-support-ai-infrastructure-buildout/?utm_source=rss&utm_medium=rss&utm_campaign=nvidia-expands-commitments-with-supply-chain-partners-to-support-ai-infrastructure-buildout"
+        }
+      ],
+      "image_url": "images/2026-11-20_article_1.jpg",
+      "review": {
+        "trust_score": 4,
+        "status": "pass",
+        "suspicious_claims": [
+          "킨서스 타오위안 '유스 캠퍼스' 명칭 — 공식 사이트명 확인 필요",
+          "근거자료 없어 엔비디아 공식 발표 직접 대조 불가"
+        ],
+        "notes": "근거자료 없음. 실존 인물·기업 기술 정확, 주요 사실 개연성 높음.",
+        "verified_at": "2026-11-20 03:03"
       }
     },
     {
       "id": 2,
       "category": "글로벌",
       "tag_type": "tag-global",
-      "title": "AI 데이터센터, 2035년 핵심광물 수요 공급 최대 22% 초과 전망",
-      "summary": "글로벌엑스(Global X)가 발표한 '차팅 디스럽션 2027' 보고서에 따르면 AI 데이터센터 확장으로 구리·리튬·희토류 채굴 수요가 2035년 공급량을 최대 22% 웃돌 것으로 추정된다. 1GW급 AI 데이터센터 1기에만 약 18만 톤의 핵심 광물이 필요하며, 세 광종에 걸쳐 2040년까지 약 5500억 달러(약 760조 원) 규모의 투자가 필요한 것으로 분석됐다.",
+      "title": "글로벌파운드리, 미·일 공동 210억 달러 뉴욕 300mm 팹 착공",
+      "summary": "글로벌파운드리(GlobalFoundries)가 2026년 11월 19일 미국 뉴욕 몰타 부지에서 미·일 공동 이니셔티브 첫 번째 300mm 반도체 팹 착공식을 개최했다. 일본이 최대 210억 달러를 투자하고 뉴욕주가 5억 7,000만 달러의 인센티브를 지원한다.",
       "body": [
-        "자산운용사 글로벌엑스(Global X)는 2026년 11월 발표한 연례 보고서 '차팅 디스럽션(Charting Disruption) 2027'에서 AI 인프라 확대에 따른 핵심 광물 수급 불균형 위험을 경고했다. 채굴 수요가 2035년까지 공급량보다 17~22% 많아질 수 있다고 보고서는 밝혔다. 대상 광종은 구리, 리튬, 희토류 세 가지다.",
-        "보고서에 따르면 출력 1기가와트(GW) 규모의 AI 데이터센터 1기에 필요한 핵심 광물 총량은 약 18만 톤에 달한다. 이 중 구리는 약 2만 7200톤으로, 전기 배선·변압기·냉각 설비 등에 광범위하게 쓰인다. 보고서는 AI 연산 인프라 확충이 데이터센터 건설에 그치지 않고 전력 공급망 전체 업그레이드를 수반한다는 점을 강조했다.",
-        "글로벌엑스는 구리·리튬·희토류 산업이 2040년까지 수요 대응과 공급망 취약성 해소를 위해 약 5500억 달러(약 760조 원)의 투자가 필요하다고 추산했다. 핵심 광물과 수자원 인프라를 포함한 더 넓은 범위의 투자 소요액은 같은 기간 2조 달러(약 2760조 원)를 넘을 것으로 추정됐다.",
-        "공급 리스크는 광물 매장량에만 국한되지 않는다. 생산과 가공이 소수 국가에 집중돼 있어 무역 규제·지정학적 긴장·공급 중단 발생 시 가공 소재 조달이 어려워질 수 있다고 보고서는 지적했다. 희토류는 산업 기기·전기 모터에 사용되는 영구자석에, 리튬은 전력망 균형을 위한 배터리 저장 시스템에 각각 핵심 소재로 쓰인다.",
-        "다만 글로벌엑스는 수요 증가가 반드시 부족 사태나 지속적인 가격 상승을 의미하지는 않는다고 단서를 달았다. 신규 광상 발견, 재활용 확대, 대체 소재 개발, 가공 효율 개선이 일부 광종의 수급 압박을 완화할 수 있다는 설명이다. 광산 업체들은 허가 지연, 자금 조달 제약, 수자원 부족이라는 복합적인 사업 장벽에도 직면해 있다고 보고서는 덧붙였다."
+        "글로벌파운드리(GlobalFoundries·GF)는 2026년 11월 19일 미국 뉴욕주 몰타(Malta) 부지에서 미·일 정부 관계자, 주·지역 지도자, 고객사 및 파트너사가 참석한 가운데 신규 300mm 반도체 제조 시설 착공식을 열었다고 밝혔다. 이번 착공은 일본 자금과 GF의 기술·운영 역량을 결합한 첫 번째 모델이다.",
+        "GF는 지난 10월 14일 미·일 이니셔티브의 기술 공급자 겸 운영사로 선정됐으며, 해당 이니셔티브는 몰타 부지 내 신규 팹 2개에 최대 210억 달러를 지원한다.",
+        "GF에 따르면 첫 번째 팹은 연간 약 90만 장의 300mm 웨이퍼 생산 능력을 미국 내에 추가한다. 두 번째 팹 역시 약 100억 달러를 투자해 동일한 규모의 웨이퍼 생산 능력을 더할 계획이다.",
+        "이번 프로젝트는 자동차, 산업재, 커넥티드 인프라 시장의 수요를 겨냥한 파운데이셔널(foundational) 반도체를 주력 제품으로 삼는다. GF는 이 두 팹 사업이 약 2만 7,000개의 건설·생태계 일자리와 1,000개 이상의 고숙련 제조 일자리를 뉴욕 캐피털 지역에 창출할 것으로 예상했다.",
+        "GF는 학교·대학·지역사회와 협력해 현지 인력을 양성하겠다고 밝혔다. 몰타 팹 부문 부사장 그랜트 맥이완(Grant McEwan)은 '세계 수준의 인력과 검증된 제조 역량, 성장 인프라를 갖췄다'고 말했다."
       ],
-      "why_important": "AI 인프라 투자 확대로 구리·희토류 등 핵심 광물 수급 불균형이 심화될 경우, 국내 소재·부품 업체의 원료 조달 비용과 공급 안정성에 직접 영향을 미친다. 광물 가공·정제 단계에서의 지정학적 집중도가 공급망 위험의 핵심 변수로 부상하고 있다.",
+      "why_important": "파운데이셔널 반도체용 300mm 웨이퍼 공급망이 미국 내에서 본격 확대되면, 자동차·산업재용 소재·공정 소모품(세정액·특수가스·타겟 등)의 북미 수요가 중장기적으로 늘어난다. 한국·일본 소재 공급사에는 현지 조달 체계 재편 압력으로 작용할 수 있다.",
       "sources": [
-        "Mining.com",
-        "Global X"
+        "Semiconductor Digest",
+        "GlobalFoundries"
       ],
-      "reference_date": "2026-11-18",
-      "image_keyword": "copper mining critical minerals data center",
+      "reference_date": "2026-11-19",
+      "image_keyword": "semiconductor fab industrial construction",
       "is_featured": false,
-      "timestamp": "오전 09:45",
+      "timestamp": "오전 09:15",
       "source_links": [
         {
-          "title": "Critical mineral shortages threaten AI’s next growth wave: report",
-          "url": "https://www.mining.com/critical-mineral-shortages-threaten-ais-next-growth-wave-report/"
+          "title": "GlobalFoundries Breaks Ground on First New Semiconductor Fab Under Landmark U.S.-Japan Initiative",
+          "url": "https://www.semiconductor-digest.com/globalfoundries-breaks-ground-on-first-new-semiconductor-fab-under-landmark-u-s-japan-initiative/?utm_source=rss&utm_medium=rss&utm_campaign=globalfoundries-breaks-ground-on-first-new-semiconductor-fab-under-landmark-u-s-japan-initiative"
         }
       ],
-      "image_url": "images/2026-11-19_article_2.jpg",
+      "image_url": "images/2026-11-20_article_2.jpg",
       "review": {
         "trust_score": 4,
         "status": "warning",
         "suspicious_claims": [
-          "보고서명 '차팅 디스럽션 2027' — 2026년 발간 보고서 부제가 2027인지 확인 필요",
-          "1GW 데이터센터 핵심광물 18만 톤 수치 — 원문 근거 확인 필요(매우 큰 수치)",
-          "5500억 달러 760조 원 환산: 1달러≈1382원 적용 시 약 760조로 계산은 적절"
+          "요약 '일본이 최대 210억 달러 투자' — 본문은 미·일 이니셔티브 공동 자금으로 기술, 귀속 주체 차이",
+          "근거자료 없어 착공식 세부사항·뉴욕주 인센티브 금액 직접 확인 불가"
         ],
-        "notes": "수치 자체는 원문 기반으로 보이나 보고서명·발간 연도 표기 일관성 확인 권장",
-        "verified_at": "2026-11-19 03:09"
+        "notes": "근거자료 없음. 요약의 일본 단독 투자 표현이 본문 미·일 공동 표현과 미묘하게 상이.",
+        "verified_at": "2026-11-20 03:03"
       }
     }
   ],
-  "editorial_briefing": "지멘스가 SoC 검증 전문사를 추가 인수하며 반도체 검증 역량을 강화했다. 폐EV 배터리 재활용 ESS 상용화가 가속되는 가운데, AI 데이터센터 확장으로 핵심광물 수급 불균형 위기가 2035년에 임박했다.",
+  "editorial_briefing": "삼성SDI가 블랙록 계열사에 16GWh LFP 배터리를 공급하고, NVIDIA는 AI 가속기 수요에 맞춰 패키징 공급망을 확대했다. 글로벌파운드리는 미·일 공동으로 210억 달러 규모 뉴욕 팹 착공에 나섰다.",
   "global_issues": [
     {
-      "icon": "🔴",
-      "label": "핵심광물 공급 부족",
-      "status": "2035년 22% 초과"
-    },
-    {
-      "icon": "🟡",
-      "label": "AI 데이터센터 확장",
-      "status": "자원 수요 급증"
+      "icon": "🟢",
+      "label": "LFP 배터리 수출",
+      "status": "계약 확대 중"
     },
     {
       "icon": "🟢",
-      "label": "폐EV 배터리 재활용",
-      "status": "ESS 상용화 진전"
+      "label": "AI 반도체 공급망",
+      "status": "다년 계약 강화"
+    },
+    {
+      "icon": "🟢",
+      "label": "미·일 반도체 협력",
+      "status": "팹 착공 개시"
     },
     {
       "icon": "🟡",
-      "label": "반도체 검증 M&A",
-      "status": "지멘스 인수 확대"
+      "label": "에너지저장 시장",
+      "status": "경쟁 심화 주시"
     },
     {
-      "icon": "🔴",
-      "label": "희토류 수급 리스크",
-      "status": "공급망 긴장 지속"
+      "icon": "🟡",
+      "label": "첨단 패키징 수급",
+      "status": "공급사 다변화"
     }
   ],
   "editorial_briefing_v2": {
-    "headline": "AI·배터리·핵심광물, 공급망 긴장 고조",
+    "headline": "배터리·반도체 공급망 대형 계약 봇물",
     "points": [
       {
-        "text": "지멘스, SoC 검증사 브레커 버리피케이션 인수"
+        "text": "삼성SDI, 미국에 LFP 배터리 16GWh 대규모 공급 계약"
       },
       {
-        "text": "폐EV 배터리 ESS 상용화, UL 인증 획득"
+        "text": "NVIDIA, 기판·패키징 다년 계약으로 AI 공급망 강화"
       },
       {
-        "text": "AI 데이터센터 핵심광물 수요, 2035년 공급 22% 초과 전망"
+        "text": "글로벌파운드리, 미·일 공동 210억 달러 뉴욕 팹 착공"
       }
     ]
   },
-  "last_reviewed_at": "2026-11-19 03:09"
+  "last_reviewed_at": "2026-11-20 03:03"
 }
