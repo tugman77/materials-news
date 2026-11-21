@@ -6,7 +6,15 @@
     <atom:link href="https://www.materialtimes.co.kr/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Sat, 21 Nov 2026 03:05:51 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 03:04:46 +0900</lastBuildDate>
+    <item>
+      <title>미 상무부, AI 반도체 해외 데이터센터 접근 신규 규제</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-22-0.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-22-0.html</guid>
+      <category>글로벌</category>
+      <description>미국 상무부가 해외 데이터센터를 통한 첨단 AI 연산 접근을 제한하는 신규 규정을 발표했다. 싱가포르·말레이시아·태국·인도네시아·브라질 등 5개국을 대상으로 반도체 라이선스 요건도 새로 적용된다. TSMC와 삼성전자는 신규 수출 규제에 따라 중국 고객사 일부에 대한 칩 출하를 일시 중단한 것으로 알려졌다.</description>
+      <pubDate>Sun, 22 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>구리, 9월 사상 최고가 대비 20% 하락 베어마켓 진입</title>
       <link>https://www.materialtimes.co.kr/news/2026-11-21-0.html</link>
@@ -237,14 +245,6 @@
       <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-11-1.html</guid>
       <category>글로벌</category>
       <description>헝가리 신정부 출범 이후 솔루스첨단소재, 에코프로비엠, 동화일렉트로라이트 등 국내 배터리 소재 기업들이 현지 환경·안전 당국의 제재를 연이어 받고 있다. 솔루스 1공장은 오염수 유출로 가동이 중단돼 전체 헝가리 생산능력의 약 40%가 멈춘 상태다.</description>
-      <pubDate>Wed, 11 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>BMW, 6세대 배터리 셀 공급망 삼성SDI·LG엔솔로 확대</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-11-2.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-11-2.html</guid>
-      <category>산업재</category>
-      <description>BMW그룹이 차세대 전기차 뉴 클라세(Neue Klasse) 플랫폼용 6세대 배터리 셀 공급사로 삼성SDI와 LG에너지솔루션을 추가 선정했다. 각각 유럽과 북미 거점을 통해 2020년대 후반부터 공급이 시작된다.</description>
       <pubDate>Wed, 11 Nov 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
