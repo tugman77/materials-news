@@ -18,6 +18,7 @@ import llm_backend  # 구독코인(로컬 Claude Code) / API코인(anthropic SDK
 import 이미지필터    # 이미지 키워드 오매칭(예: wafer → 과자) 방지 필터
 import 이미지소스    # 외부 이미지 소스 API (Unsplash/Pexels/Pixabay) — 기사자동생성.py와 공용
 import 이미지풀      # 카테고리별 큐레이션 풀 (로컬 self-host + Unsplash hotlink) — 공용
+import 이미지생성    # AI 설명 도식 + 스톡 사진 적합성 판정 (ChatGPT/Codex 구독, 로컬 전용) — 기사자동생성.py와 공용
 import 검수게이트    # 심각한 문제 기사는 공개 전에 뺀다 (컨트롤타워 검수관 체계, 2026-10-14)
 import sys
 import hashlib
@@ -135,11 +136,16 @@ def _pick_pool_entry(category: str, seed_str: str):
     return entry
 
 
-def download_image(keyword: str, img_path: str, category: str = "", seed_str: str = "") -> str | None:
+AI_IMAGE_PATHS: set = set()   # 이번 실행에서 AI 도식으로 채운 파일 경로 — 호출부가 캡션을 붙인다
+
+
+def download_image(keyword: str, img_path: str, category: str = "", seed_str: str = "", title: str = "") -> str | None:
     """이미지 다운로드 → img_path에 저장. 기사자동생성.py와 동일한 소스 순서를 쓴다.
     1차: 외부 API — Unsplash → Pexels → Pixabay (키가 등록된 것만, 이미지소스.py가 판단)
-    2차: 카테고리별 Unsplash 큐레이션 풀 (LRU 선택, 과거 사용분 최대한 회피)
-    3차: picsum 최종 폴백 — 내용 무관 랜덤이므로 여기까지 오면 사실상 실패다
+    (스톡 사진이 기사와 안 맞으면 ChatGPT가 판정해 버리고 AI 도식으로 — 이미지생성.py, 로컬 맥 전용)
+    2차: AI 설명 도식 (검색 실패 시 풀보다 먼저)
+    3차: 카테고리별 Unsplash 큐레이션 풀 (LRU 선택, 과거 사용분 최대한 회피)
+    4차: picsum 최종 폴백 — 내용 무관 랜덤이므로 여기까지 오면 사실상 실패다
     저장 직전 MD5 대조: 외부 소스는 과거 날짜까지, 풀은 이번 실행만.
     """
     os.makedirs(IMAGES_DIR, exist_ok=True)
@@ -154,12 +160,17 @@ def download_image(keyword: str, img_path: str, category: str = "", seed_str: st
     # 2026-08-02까지 이 파일에는 Pexels·Pixabay가 없어 풀→picsum밖에 없었고,
     # 풀이 고갈되자 검수 재다운로드가 곧바로 내용 무관 랜덤 이미지로 떨어졌다.
     order = list(이미지소스.available_sources())
+    if 이미지생성.enabled():
+        order.append("ai")
     # 중복 거부 시 다른 항목으로 재시도 — 풀 크기만큼
     order += ["unsplash_pool"] * max(이미지풀.size(category or "반도체소재"), 8)
     order.append("picsum")
 
     pool_try = 0
+    skip_stock = False   # 스톡 사진이 기사와 안 맞는다고 판정되면 나머지 스톡 소스는 건너뛰고 AI로
     for source in order:
+        if skip_stock and source in 이미지소스.FETCHERS:
+            continue
         chosen_pid = None
         try:
             if source in 이미지소스.FETCHERS:
@@ -177,15 +188,31 @@ def download_image(keyword: str, img_path: str, category: str = "", seed_str: st
                 if not content:
                     continue
                 img_url = entry["ref"]
+            elif source == "ai":
+                tmp = img_path + ".ai.tmp"
+                try:
+                    if not 이미지생성.generate(title or keyword, keyword, category, tmp):
+                        continue
+                    with open(tmp, "rb") as f:
+                        content = f.read()
+                finally:
+                    if os.path.exists(tmp):
+                        os.remove(tmp)
+                img_url = "ai"
             else:
                 img_url = f"https://picsum.photos/seed/{seed}/800/450"
 
             is_pool = (source == "unsplash_pool")
-            if not is_pool:
+            if source not in ("unsplash_pool", "ai"):
                 resp = requests.get(img_url, timeout=30, allow_redirects=True)
                 if resp.status_code != 200 or len(resp.content) < 1000:
                     continue
                 content = resp.content
+                if source in 이미지소스.FETCHERS and 이미지생성.vision_enabled() \
+                        and 이미지생성.photo_fits(content, title or keyword, keyword) is False:
+                    print(f"   사진이 기사와 맞지 않음 [{source}] → AI 도식으로 대체")
+                    skip_stock = True
+                    continue
 
             # 외부 소스는 과거 날짜까지, 큐레이션 풀은 이번 실행만 대조 — 위 주석 참조
             img_hash = hashlib.md5(content).hexdigest()
@@ -203,6 +230,10 @@ def download_image(keyword: str, img_path: str, category: str = "", seed_str: st
             with open(img_path, "wb") as f:
                 f.write(content)
             print(f"   이미지 저장: {img_path} [{category or keyword}] ({source})")
+            if source == "ai":
+                AI_IMAGE_PATHS.add(img_path)
+            else:
+                AI_IMAGE_PATHS.discard(img_path)
             return img_path
         except Exception as e:
             print(f"   이미지 오류 ({source}): {e}")
@@ -243,9 +274,10 @@ def check_and_fix_missing_images(articles: list, date_prefix: str) -> int:
             category = article.get("category", "반도체소재")
             seed_str = f"{date_prefix}_{i}_{article.get('title','')}"
             print(f"   이미지 누락 [{i}] '{category}' → 다운로드 시도")
-            path = download_image(keyword, expected, category, seed_str)
+            path = download_image(keyword, expected, category, seed_str, article.get("title", ""))
             if path:
                 article["image_url"] = path
+                이미지생성.mark(article, path in AI_IMAGE_PATHS)
                 fixed += 1
             else:
                 article["image_url"] = None
@@ -259,9 +291,10 @@ def check_and_fix_missing_images(articles: list, date_prefix: str) -> int:
         seed_str = f"{date_prefix}_{i}_retry_{article.get('title','')}"
         img_path = f"{IMAGES_DIR}/{date_prefix}_article_{i}_retry.jpg"
         print(f"   중복 이미지 재다운로드 [{i}] '{category}'")
-        path = download_image(keyword, img_path, category, seed_str)
+        path = download_image(keyword, img_path, category, seed_str, article.get("title", ""))
         if path:
             article["image_url"] = path
+            이미지생성.mark(article, path in AI_IMAGE_PATHS)
             fixed += 1
 
     return fixed
@@ -608,9 +641,10 @@ def main():
 
             img_path = f"{IMAGES_DIR}/{date_prefix}_article_{idx}.jpg"
             seed_str = f"{date_prefix}_{idx}_kw_{new_kw}"
-            path = download_image(new_kw, img_path, article.get("category","반도체소재"), seed_str)
+            path = download_image(new_kw, img_path, article.get("category","반도체소재"), seed_str, article.get("title", ""))
             if path:
                 article["image_url"] = path
+                이미지생성.mark(article, path in AI_IMAGE_PATHS)
 
             image_fixes.append({
                 "id": article["id"],

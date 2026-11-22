@@ -13,6 +13,7 @@ import 원문수집
 import 이미지필터    # 이미지 키워드 오매칭(예: wafer → 과자) 방지 필터
 import 이미지소스    # 외부 이미지 소스 API (Unsplash/Pexels/Pixabay) — 기사검수.py와 공용
 import 이미지풀      # 카테고리별 큐레이션 풀 (로컬 self-host + Unsplash hotlink) — 공용
+import 이미지생성    # AI 설명 도식 + 스톡 사진 적합성 판정 (ChatGPT/Codex 구독, 로컬 전용) — 기사검수.py와 공용
 import 최신필터    # 7일 넘은 수집 기사 제외 (2026-10-26)
 import 원문검증    # 원문 대조 → 부분 수정·재대조·보류 (2026-11-10)
 import feedparser
@@ -1193,15 +1194,20 @@ def _fetch_pixabay(keyword: str) -> str | None:
 
 
 # ── 이미지 다운로드 (중복 방지 포함) ─────────────────
-def _download_single_image(keyword: str, img_path: str, category: str = "", seed_str: str = "") -> bool:
+AI_IMAGE_PATHS: set = set()   # 이번 실행에서 AI 도식으로 채운 파일 경로 — 호출부가 캡션을 붙인다
+
+
+def _download_single_image(keyword: str, img_path: str, category: str = "", seed_str: str = "", title: str = "") -> bool:
     """이미지를 img_path에 저장. 성공 시 True 반환.
 
     소스 우선순위:
       1. Unsplash API  — UNSPLASH_ACCESS_KEY 있을 때, 키워드 매칭 최고 품질
       2. Pexels API    — PEXELS_API_KEY 있을 때, 키워드 매칭 고품질
       3. Pixabay API   — PIXABAY_API_KEY 있을 때, 키워드 매칭 무료
-      4. Unsplash 풀   — API 키 불필요, 카테고리 연관 큐레이션 이미지
-      5. picsum        — 최종 폴백 (무관 이미지지만 서비스 안정성 보장)
+      (스톡 사진이 기사와 안 맞으면 ChatGPT가 판정해 버리고 → AI 도식, 이미지생성.py)
+      4. AI 설명 도식  — 로컬 맥에서만(ChatGPT/Codex 구독). 검색 실패 시 풀보다 먼저
+      5. Unsplash 풀   — API 키 불필요, 카테고리 연관 큐레이션 이미지
+      6. picsum        — 최종 폴백 (무관 이미지지만 서비스 안정성 보장)
 
     중복 방지:
       - _downloaded_hashes: 동일 MD5 파일은 저장하지 않고 다음 소스로 넘어감
@@ -1218,12 +1224,17 @@ def _download_single_image(keyword: str, img_path: str, category: str = "", seed
     # 소스 우선순위(풀은 소진 시 재시도용으로 여러 번 시도)
     # 외부 소스 목록은 이미지소스.py가 키 등록 상태를 보고 결정한다 — 기사검수.py와 동일.
     order: list[str] = list(이미지소스.available_sources())
+    if 이미지생성.enabled():
+        order.append("ai")   # 스톡 검색이 실패했거나 사진이 안 맞을 때 — 풀·picsum(무관 사진)보다 먼저
     # 풀은 중복 거부 시 다음 후보로 넘어갈 수 있도록 풀 크기만큼 재시도
     order += ["unsplash_pool"] * max(이미지풀.size(category or "반도체소재"), 8)
     order.append("picsum")
 
     pool_try = 0
+    skip_stock = False   # 스톡 사진이 기사와 안 맞는다고 판정되면 나머지 스톡 소스는 건너뛰고 AI로 간다
     for source in order:
+        if skip_stock and source in 이미지소스.FETCHERS:
+            continue
         chosen_pid = None
         try:
             # 소스별 URL 확정
@@ -1244,15 +1255,32 @@ def _download_single_image(keyword: str, img_path: str, category: str = "", seed
                 if not content:
                     continue
                 img_url = entry["ref"]
+            elif source == "ai":
+                tmp = img_path + ".ai.tmp"
+                try:
+                    if not 이미지생성.generate(title or keyword, keyword, category, tmp):
+                        continue
+                    with open(tmp, "rb") as f:
+                        content = f.read()
+                finally:
+                    if os.path.exists(tmp):
+                        os.remove(tmp)
+                img_url = "ai"
             else:
                 img_url = f"https://picsum.photos/seed/{seed}/800/450"
 
             is_pool = (source == "unsplash_pool")
-            if not is_pool:
+            if source not in ("unsplash_pool", "ai"):
                 resp = requests.get(img_url, timeout=30, allow_redirects=True)
                 if resp.status_code != 200 or len(resp.content) < 1000:
                     continue
                 content = resp.content
+                # 스톡 사진이 기사와 맞는지 ChatGPT가 본다. 안 맞으면 버리고 AI 도식으로.
+                if source in 이미지소스.FETCHERS and 이미지생성.vision_enabled() \
+                        and 이미지생성.photo_fits(content, title or keyword, keyword) is False:
+                    print(f"   → 사진이 기사와 맞지 않음 [{source}] → AI 도식으로 대체")
+                    skip_stock = True
+                    continue
 
             # MD5 중복 체크. 외부 소스는 과거 날짜까지(_downloaded_hashes),
             # 큐레이션 풀은 이번 실행만(_run_hashes) 대조한다 — 위 주석 참조.
@@ -1270,6 +1298,10 @@ def _download_single_image(keyword: str, img_path: str, category: str = "", seed
             with open(img_path, "wb") as f:
                 f.write(content)
             print(f"   → 이미지 저장: {img_path} [{category}] ({source})")
+            if source == "ai":
+                AI_IMAGE_PATHS.add(img_path)
+            else:
+                AI_IMAGE_PATHS.discard(img_path)
             return True
 
         except Exception as e:
@@ -1358,8 +1390,9 @@ def download_article_images(articles):
         category = article.get("category", "반도체소재")
         seed_str = f"{date_prefix}_{i}_{article.get('title', '')}"
         img_path = f"{IMAGES_DIR}/{date_prefix}_article_{i}.jpg"
-        if _download_single_image(keyword, img_path, category, seed_str):
+        if _download_single_image(keyword, img_path, category, seed_str, article.get("title", "")):
             article["image_url"] = img_path
+            이미지생성.mark(article, img_path in AI_IMAGE_PATHS)   # AI 도식이면 "[AI 생성 일러스트]" 캡션
         else:
             article["image_url"] = None
             print(f"   → 이미지 모두 실패 [{keyword}]")

@@ -51,6 +51,7 @@
 ├── 이미지필터.py          ← 키워드 한정어 + 태그 기반 오매칭 방지 (시그널코리아 동일)
 ├── 이미지소스.py          ← Unsplash·Pexels·Pixabay 통합 (시그널코리아 동일)
 ├── 이미지풀.py            ← 카테고리별 큐레이션 풀 (로컬+원격, LRU)
+├── 이미지생성.py          ← AI 설명 도식 생성 + 스톡 사진 적합성 판정 (ChatGPT/Codex 구독, 로컬 맥 전용)
 ├── 뉴스레터생성.py        ← 주간 뉴스레터 (금 08:00, newsletter/*.html)
 ├── llm_backend.py        ← 구독/API 백엔드 스위치
 ├── articles.json         ← 최신 기사 데이터
@@ -76,7 +77,7 @@
 
 1. RSS 수집 (전자신문, 한국경제, 연합뉴스, Google뉴스 4종) → 최대 30건
 2. Claude API `save_articles` tool_use로 기사 **3건** 생성 (`ARTICLE_COUNT`)
-3. 이미지: Unsplash → Pexels → Pixabay → 큐레이션 풀 → picsum(최종 폴백)
+3. 이미지: Unsplash → Pexels → Pixabay → **AI 도식(로컬만)** → 큐레이션 풀 → picsum(최종 폴백). 스톡 사진은 ChatGPT가 기사와 맞는지 보고, 안 맞으면 AI 도식으로 바꾼다
 4. `기사검수.py` (이미지·중복·사실성 검수 + Telegram 보고)
 5. `articles.json` + `archive/YYYY-MM-DD.json` 저장
 
@@ -98,6 +99,7 @@
 ### 대표 사진 캡션
 `DEFAULT_IMAGE_CAPTION` = "[자료사진] 기사와 무관한 이미지입니다."
 출력 위치: `article.html` + `정적페이지생성.py` — 문구 변경 시 **두 곳 동시** 수정.
+AI 도식을 쓴 기사는 `image_caption` = "[AI 생성 일러스트] 기사 내용을 설명하는 도식이며 실제 사진이 아닙니다."(`이미지생성.CAPTION`), `image_ai: true`. 두 화면 모두 `image_caption`을 우선 쓰므로 HTML은 그대로다. 실제 사진으로 바뀌면 `이미지생성.mark()`가 AI 캡션을 거둔다(수동 기사의 직접 쓴 캡션은 건드리지 않음).
 
 ---
 
@@ -111,6 +113,14 @@
 | 3 | Pixabay | `PIXABAY_API_KEY` |
 | 4 | 큐레이션 풀 | — |
 | 5 | picsum | — (내용 무관, **여기까지 오면 실패**) |
+
+### AI 설명 도식 (2026-11-22, `이미지생성.py`)
+- 실제 사진이 기사와 맞으면 그대로 쓴다. ① 스톡 사진을 ChatGPT(이미지 입력, `FIT/MISMATCH`)가 보고 안 맞다고 하면 ② 검색이 실패해 풀·picsum으로 떨어질 자리에 **AI 도식**(플랫 벡터, 사이트 블루·레드, 가로 1200px JPEG)을 만든다. 기사 1건 약 40~50초, 코인은 ChatGPT 구독.
+- 프롬프트 금지: 글자·숫자·로고·실존 인물·국기·실제 건물·기업 표시·사진처럼 보이는 연출. 시험에서 정부 건물·성조기가 멋대로 들어간 적이 있어 넣은 규칙이다 — 규칙을 풀지 말 것.
+- **로컬 맥 전용.** `GITHUB_ACTIONS` 환경이나 codex가 없으면 아무것도 안 하고 기존 경로(스톡→풀)를 쓴다. 로그인 만료·한도 오류를 만나면 그 실행은 AI를 건너뛴다.
+- 끄기: `AI_IMAGE=0`(전부) · `AI_IMAGE_VISION=0`(사진 적합성 판정만 끔 → 검색 실패 때만 AI).
+- 호출부 두 곳(`기사자동생성.py _download_single_image`·`기사검수.py download_image`)의 소스 순서가 같아야 한다. 캡션은 호출부가 `이미지생성.mark(article, path in AI_IMAGE_PATHS)`로 붙인다.
+- 시그널코리아 적용은 2주 시범 뒤 판단(`이미지생성.py`는 같은 파일을 복사한다).
 
 ### 핵심 규칙
 - **오매칭 방지** (`이미지필터.py`): 검색 전 `refine_keyword()`로 한정어 부착, 검색 후 `is_offtopic()`으로 태그 거부. 차단어에 `wafer`/`plate`/`sheet`/`crystal` 넣지 말 것.
