@@ -6,7 +6,31 @@
     <atom:link href="https://www.materialtimes.co.kr/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Sun, 22 Nov 2026 03:04:46 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 03:09:43 +0900</lastBuildDate>
+    <item>
+      <title>TSMC·삼성, 대중 반도체 출하 일시 중단</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-23-0.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-23-0.html</guid>
+      <category>글로벌</category>
+      <description>미국의 신규 수출규제 조치 발동 후 TSMC와 삼성전자가 중국 고객향 첨단 반도체 출하를 일시 중단했다. TSMC는 16nm 이하 공정 제품에 대해 미국 허가 없이는 중국 고객 주문을 받지 않기로 했으며, 첨단 패키징·HBM 탑재 제품은 28nm·40nm급도 제한 대상에 포함된다.</description>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>GMG, 영국 UKBIC과 그래핀 배터리 셀 양산 계약</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-23-1.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-23-1.html</guid>
+      <category>산업재</category>
+      <description>호주 그래핀 소재 기업 GMG(Graphene Manufacturing Group)가 영국 배터리산업화센터 UKBIC(UK Battery Industrialisation Centre)과 그래핀 알루미늄이온 배터리 셀 제조 서비스 계약을 체결했다. 소재는 호주 브리즈번에서 공급하고 셀 생산은 영국 코번트리에서 담당하는 분리 구조다.</description>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>Niron, 앨라배마에 희토류 대체 자석 공장 착공</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-23-2.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-23-2.html</guid>
+      <category>희귀금속</category>
+      <description>미국 Niron 매그네틱스가 앨라배마 주 도선에 18억 달러 규모 아이언 나이트라이드 영구자석 양산 캠퍼스 건설을 발표했다. 이 시설은 희토류를 사용하지 않는 세계 최초 상용 자석 공장으로, 5년 내 700개 고임금 일자리 창출을 목표로 한다.</description>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>미 상무부, AI 반도체 해외 데이터센터 접근 신규 규제</title>
       <link>https://www.materialtimes.co.kr/news/2026-11-22-0.html</link>
@@ -222,30 +246,6 @@
       <category>산업재</category>
       <description>초합금 재활용 전문 기업 에버메탈(EverMetal Holdings)이 영국 셰필드 소재 크리티컬 메탈 재활용사 어드밴스드 얼로이스(Advanced Alloys)를 인수해 미국-유럽 대서양 양안(兩岸) 특수금속 플랫폼을 구축했다. 니켈·코발트·텅스텐·탄탈럼·니오브 등 고부가 소재 재활용 역량이 결합된다.</description>
       <pubDate>Thu, 12 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>Victory Metals·커틴대, 호주산 중희토 MREC 파일럿 가공 착수</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-12-2.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-12-2.html</guid>
-      <category>글로벌</category>
-      <description>호주 빅토리 메탈스(Victory Metals)가 커틴대학교(Curtin University)와 소재 이전 계약을 체결하고, 노스 스탠모어(North Stanmore) 프로젝트 중희토 농축물을 파일럿 규모에서 혼합희토류 카보네이트(MREC)로 가공하는 시험에 착수했다. 호주 국내 중희토 처리 경로 확보가 목표다.</description>
-      <pubDate>Thu, 12 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>인피니언, 300mm SiC 웨이퍼 양산 공정 구현</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-11-0.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-11-0.html</guid>
-      <category>산업재</category>
-      <description>인피니언 테크놀로지스가 오스트리아 빌라흐 팹에서 300mm 탄화규소(SiC) 웨이퍼로 기능성 전력 반도체 소자 제작에 성공했다. 기존 200mm 대비 웨이퍼당 칩 수가 2.3배 늘어 원가 경쟁력이 크게 향상될 전망이다.</description>
-      <pubDate>Wed, 11 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>헝가리 신정부, 배터리 공장 환경 제재 본격화</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-11-1.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-11-1.html</guid>
-      <category>글로벌</category>
-      <description>헝가리 신정부 출범 이후 솔루스첨단소재, 에코프로비엠, 동화일렉트로라이트 등 국내 배터리 소재 기업들이 현지 환경·안전 당국의 제재를 연이어 받고 있다. 솔루스 1공장은 오염수 유출로 가동이 중단돼 전체 헝가리 생산능력의 약 40%가 멈춘 상태다.</description>
-      <pubDate>Wed, 11 Nov 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
