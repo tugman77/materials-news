@@ -377,6 +377,28 @@ def detect_duplicate_titles(articles: list, days: int = 14) -> dict:
 # ── Claude 검수 ─────────────────────────────────────────────
 
 def review_articles_with_claude(articles: list) -> list:
+    """기사 1건씩 나눠 검수한다 (2026-11-22). 본문 전체를 한 번에 넣었더니 응답이 길어
+    헤드리스 출력 상한에 걸려 'reviews 키 없음'으로 검수 전체가 실패했다(11-20).
+    1건 실패는 1회 재시도, 그래도 실패하면 그 기사만 warning(검수 실패)으로 남긴다 — 발행은 막지 않는다."""
+    from concurrent.futures import ThreadPoolExecutor
+
+    def one(a):
+        for attempt in (1, 2):
+            try:
+                r = _review_batch([a])
+                if r:
+                    r[0]["article_id"] = a["id"]
+                    return r[0]
+            except Exception as e:
+                print(f"   ⚠️ 검수 실패(시도 {attempt}) [{a['id']}] {a.get('title', '')[:20]}: {type(e).__name__}: {str(e)[:120]}")
+        return {"article_id": a["id"], "trust_score": 3, "status": "warning",
+                "suspicious_claims": [], "image_keyword_ok": True, "notes": "검수 호출 실패 — 수동 확인"}
+
+    with ThreadPoolExecutor(max_workers=3) as ex:
+        return list(ex.map(one, articles))
+
+
+def _review_batch(articles: list) -> list:
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
     # 검수용 본문 — 기사 전체를 본다. 앞 3단락만 보면 뒷부분 수치·인용이 검수 없이 나간다.

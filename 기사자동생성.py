@@ -16,6 +16,7 @@ import 이미지풀      # 카테고리별 큐레이션 풀 (로컬 self-host + 
 import 이미지생성    # AI 설명 도식 + 스톡 사진 적합성 판정 (ChatGPT/Codex 구독, 로컬 전용) — 기사검수.py와 공용
 import 최신필터    # 7일 넘은 수집 기사 제외 (2026-10-26)
 import 원문검증    # 원문 대조 → 부분 수정·재대조·보류 (2026-11-10)
+import 원문대조    # 영문 수치 환산표 (2026-11-22)
 import feedparser
 import hashlib
 import json
@@ -751,6 +752,11 @@ def generate_articles_with_claude(raw_news_list, recent_topics=None, event_memor
             news_text += f"   [원문]\n{item['fulltext'][:원문수집.PROMPT_CHARS]}\n"
         news_text += "\n"
 
+    # 영문 수치 환산표 — 생성 단계에서 단위를 틀려 보류되는 일이 많았다(11-11~22 보류 14건 중 9건이 수치).
+    units = 원문대조.unit_table("\n".join(it["fulltext"][:원문수집.PROMPT_CHARS] for it in with_text))
+    if units != "(없음)":
+        news_text += ("\n[영문 수치 환산표 — 코드로 계산한 정답. 이 표의 값만 쓴다]\n" + units + "\n")
+
     bg_lines = load_background(with_text)
     print(f"   배경 자료(지난 기사): {len(bg_lines)}건")
     if bg_lines:
@@ -851,6 +857,9 @@ def generate_articles_with_claude(raw_news_list, recent_topics=None, event_memor
   원문과 연속 30자 이상 같은 문구는 금지.
 - **분량을 채우는 법**: 고른 사건의 수치·일정·후속 계획·부수 사업을 빠뜨리지 말 것. 단, 원문을 베껴 분량을 채우지 않는다.
 - **외국 고유명사**: 첫 등장 때 한글 표기 뒤 괄호에 원어를 쓴다 (예: 시바니 스틸워터(Sibanye-Stillwater)). 표기가 확실하지 않으면 원어만 쓴다.
+- **환산은 하지 않는 것이 기본**: 원문 단위 그대로 쓴다(달러는 달러, 평방피트는 평방피트, 톤은 톤). 원화·㎡ 등 다른 단위로
+  바꾼 값은 원문에 그 값이 있을 때만 괄호로 덧붙인다. 직접 계산한 환산은 쓰지 않는다 — 수치 오류 보류의 대부분이 이것이었다.
+  영문 billion·million의 한글 표기는 [영문 수치 환산표]의 값만 쓴다.
 - **단위 환산**: 영문 수치는 환산을 확인한다. billion=10억, million=100만이다 (USD 517.7 billion = 5177억 달러, USD 28.6 billion = 286억 달러). 제목·요약·본문의 수치가 서로 같아야 한다.
 - **원문에 없는 말 금지**: 회사·기관이 말하지 않은 전망을 그들의 말로 쓰지 않는다("~라고 전망했다"는 원문에 그 전망이 있을 때만).
   원문에 없는 비교 기준(전분기 대비·전년 대비 등)을 덧붙이지 않는다. 원문이 밝힌 단서(예: 가격 상승 효과)는 빼지 않는다.
@@ -1626,18 +1635,23 @@ def main():
         by_title = 원문검증.source_lookup(raw_news, sojaetimes_briefing)
         articles, _recs = 원문검증.verify_all(articles, by_title)
         want = ARTICLE_COUNT
-        if len(articles) < want:
+        held_titles = [r["title"] for r in _recs if r["hold"]] + list(LAST_HELD)
+        for refill in (1, 2):  # 보충 최대 2회 (2026-11-22: 1회로는 하루 1건인 날이 있었다)
+            if len(articles) >= want:
+                break
             avoid = [{"date": datetime.now(KST).strftime("%Y-%m-%d"), "category": "", "title": t, "summary": ""}
-                     for t in [a["title"] for a in articles] + [r["title"] for r in _recs if r["hold"]] + LAST_HELD]
+                     for t in [a["title"] for a in articles] + held_titles]
             ARTICLE_COUNT = want - len(articles)
-            print(f"   🔁 {ARTICLE_COUNT}건 보충 생성...")
+            print(f"   🔁 보충 {refill}차: {ARTICLE_COUNT}건 생성...")
             try:
+                LAST_HELD[:] = []
                 more = generate_articles_with_claude(raw_news, recent_topics + avoid, event_memory, sojaetimes_briefing)
                 more = [m for m in more if not check_duplicate_articles([m], recent_topics, event_memory)]
-                more, _ = 원문검증.verify_all(more, 원문검증.source_lookup(raw_news, sojaetimes_briefing))
+                more, recs2 = 원문검증.verify_all(more, 원문검증.source_lookup(raw_news, sojaetimes_briefing))
+                held_titles += [r["title"] for r in recs2 if r["hold"]] + list(LAST_HELD)
                 articles = deduplicate_articles(articles + more)
             except Exception as e:
-                print(f"   ⚠️ 보충 실패({type(e).__name__}: {e}) — {len(articles)}건으로 진행")
+                print(f"   ⚠️ 보충 {refill}차 실패({type(e).__name__}: {e}) — {len(articles)}건으로 진행")
             finally:
                 ARTICLE_COUNT = want
         if not articles:
