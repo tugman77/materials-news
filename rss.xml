@@ -6,7 +6,31 @@
     <atom:link href="https://www.materialtimes.co.kr/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Mon, 23 Nov 2026 03:09:43 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 03:06:01 +0900</lastBuildDate>
+    <item>
+      <title>에이콘, SiGe 매립층으로 SOI 성능 개선</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-24-0.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-24-0.html</guid>
+      <category>반도체소재</category>
+      <description>에이콘이 초박막 SiGe 매립층을 활용한 SOI 기판 연구 결과를 공개했다. 무선주파수 신호 손실을 줄이는 기능과 트랜지스터 성능 개선을 함께 구현할 가능성을 제시했다.</description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>바스프, 양극재 집중 위해 재활용 매각</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-24-1.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-24-1.html</guid>
+      <category>산업재</category>
+      <description>바스프가 배터리 재활용 사업을 실리브에 넘기고 양극활물질에 집중한다. 거래에는 독일 전처리·시험 시설과 지식재산권, 고객 계약이 포함되며 종결은 규제 승인 등을 조건으로 한다.</description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>AI 칩 수직 전력공급, 수동부품 통합</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-24-2.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-24-2.html</guid>
+      <category>반도체소재</category>
+      <description>AI 가속기의 전력 손실을 줄이기 위해 전압 조절 부품을 칩 가까이 배치하는 설계가 확산하고 있다. 인덕터·커패시터의 소형화와 패키지 내부 통합이 함께 추진된다.</description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>TSMC·삼성, 대중 반도체 출하 일시 중단</title>
       <link>https://www.materialtimes.co.kr/news/2026-11-23-0.html</link>
@@ -222,30 +246,6 @@
       <category>글로벌</category>
       <description>젠슨 황(Jensen Huang) 엔비디아(Nvidia) CEO가 11월 13일 사임하며 AI 인프라 투자 흐름에 불확실성이 더해졌다. Mining.com은 데이터센터·전력 프로젝트 지연 시 구리 등 금속 수요가 타격을 받을 수 있다고 보도했다.</description>
       <pubDate>Fri, 13 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>LG엔솔, 사용 배터리 10분 진단 소프트웨어 개발</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-13-2.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-13-2.html</guid>
-      <category>산업재</category>
-      <description>LG에너지솔루션이 중고 배터리 상태를 10분 이내에 평가하는 소프트웨어 'Re.Pulse'를 개발했다. CES 2027 혁신상 수상작으로 선정됐으며, 배터리 재사용·재제조·재활용 경로 결정에 활용된다.</description>
-      <pubDate>Fri, 13 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>USA 희토류, 브라질산 중희토 카보네이트 미 국방부 공급 개시</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-12-0.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-12-0.html</guid>
-      <category>희귀금속</category>
-      <description>USA 희토류(USA Rare Earth)가 브라질 세라 베르데(Serra Verde) 광산에서 생산한 혼합희토류 카보네이트(MREC)의 미 국방부 산하 특수목적법인 US SIIE LLC向 상업 출하를 2026년 10월 개시했다. 15년 전량 인수 계약에 따라 첫 판매가 11월 중 예정돼 있으며, 중국 외 지역 중희토 공급망 구축의 분수령으로 평가된다.</description>
-      <pubDate>Thu, 12 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>EverMetal, 영국 초합금 재활용사 어드밴스드 얼로이스 인수</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-12-1.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-12-1.html</guid>
-      <category>산업재</category>
-      <description>초합금 재활용 전문 기업 에버메탈(EverMetal Holdings)이 영국 셰필드 소재 크리티컬 메탈 재활용사 어드밴스드 얼로이스(Advanced Alloys)를 인수해 미국-유럽 대서양 양안(兩岸) 특수금속 플랫폼을 구축했다. 니켈·코발트·텅스텐·탄탈럼·니오브 등 고부가 소재 재활용 역량이 결합된다.</description>
-      <pubDate>Thu, 12 Nov 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
