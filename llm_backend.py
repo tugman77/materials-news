@@ -24,6 +24,19 @@ CLAUDE_CODE_MODEL  = os.environ.get("CLAUDE_CODE_MODEL", "claude-sonnet-4-6")
 CLAUDE_CODE_TIMEOUT = int(os.environ.get("CLAUDE_CODE_TIMEOUT", "1200"))  # 초 — 시도 1회당 예산(총 예산 아님)
 CLAUDE_CODE_RETRIES = int(os.environ.get("CLAUDE_CODE_RETRIES", "2"))    # 타임아웃(무응답) 시 재시도 횟수
 
+# ── 집필 엔진 (2026-11-23 대표님 결정: "Codex가 쓰고 Claude가 검수") ──
+# 구독 경로(LLM_BACKEND=claude_code)에서 **글을 쓰는 호출**만 Codex(ChatGPT 구독)로 보낸다.
+# 검수(review_articles)·원문 대조(report_issues)·원문 대조 수정(save_fix)·기획 브리핑(save_briefing)은
+# 그대로 Claude — 쓴 모델과 검수하는 모델을 다르게 둔다. Codex가 실패하면 같은 호출을 Claude가 대신 한다.
+# 클라우드 백업(LLM_BACKEND=api)은 영향 없음 → 로컬=Codex, 클라우드=Claude로 장애가 갈린다.
+#   LLM_WRITER=codex(기본) | claude(되돌리기)
+LLM_WRITER    = os.environ.get("LLM_WRITER", "codex").strip().lower()
+CODEX_TOOLS   = {t.strip() for t in os.environ.get(
+    "CODEX_TOOLS", "save_articles,save_body,save_editorial,save_newsletter").split(",") if t.strip()}
+CODEX_CLI     = os.environ.get("CODEX_CLI") or next(
+    (p for p in (os.path.expanduser("~/.local/bin/codex"), "/opt/homebrew/bin/codex") if os.path.exists(p)), "codex")
+CODEX_TIMEOUT = int(os.environ.get("CODEX_TIMEOUT", "1500"))  # 초 — 1회 예산
+
 # 헤드리스 프로세스를 돌릴 작업 디렉터리 — TCC 보호 밖의 중립 위치여야 한다. (2026-08-06)
 #
 # ⚠️ **claude 헤드리스를 ~/Desktop 아래에서 실행하지 말 것.** launchd 자동발행이
@@ -124,6 +137,12 @@ def call_tool(request_params: dict, tool_name: str, effort: str = "") -> dict:
     # TCC 블록을 피하려면 cwd가 ~/Desktop 밖이어야 한다 (위 CLAUDE_CODE_CWD 주석 참조)
     os.makedirs(CLAUDE_CODE_CWD, exist_ok=True)
 
+    if LLM_WRITER == "codex" and tool_name in CODEX_TOOLS:
+        try:
+            return _call_codex(full_prompt, tool)
+        except Exception as e:  # noqa: BLE001 — 어떤 실패든 Claude가 이어받는다
+            print(f"⚠️ Codex 집필 실패({tool_name}) → Claude로 대신 씀: {str(e)[:300]}")
+
     for attempt in range(1, CLAUDE_CODE_RETRIES + 1):
         try:
             proc = subprocess.run(
@@ -183,3 +202,36 @@ def call_tool(request_params: dict, tool_name: str, effort: str = "") -> dict:
                 f"배치 크기를 줄이거나 CLAUDE_CODE_EFFORT를 낮춰 출력을 줄일 것."
             )
         return data
+
+
+# ── Codex 집필 호출 ───────────────────────────────────
+def _call_codex(full_prompt: str, tool: dict) -> dict:
+    """같은 프롬프트(스키마 포함)를 Codex CLI(ChatGPT 구독)로 실행해 dict를 돌려준다.
+    --output-schema는 쓰지 않는다 — OpenAI 구조화 출력은 additionalProperties:false·전 필드 required를
+    요구해 기존 스키마가 거부될 수 있다. Claude 경로와 같은 '스키마를 프롬프트에 싣고 JSON만 받기' 방식."""
+    import time
+    os.makedirs(CLAUDE_CODE_CWD, exist_ok=True)  # Desktop 밖 (절대 규칙 10)
+    out_path = os.path.join(CLAUDE_CODE_CWD, f"codex-{os.getpid()}-{int(time.time()*1000)}.txt")
+    env = {**os.environ, "OPENAI_API_KEY": "",  # 구독 로그인만 쓴다
+           "PATH": f"{os.path.expanduser('~/.local/bin')}:/opt/homebrew/bin:{os.environ.get('PATH', '/usr/bin:/bin')}"}
+    t0 = time.time()
+    try:
+        proc = subprocess.run(
+            [CODEX_CLI, "exec", "--skip-git-repo-check", "--ephemeral", "-s", "read-only",
+             "-C", CLAUDE_CODE_CWD, "-c", 'model_reasoning_effort="low"', "-o", out_path, "-"],
+            input=full_prompt, capture_output=True, text=True, timeout=CODEX_TIMEOUT, env=env,
+        )
+    except subprocess.TimeoutExpired:
+        raise RuntimeError(f"codex {CODEX_TIMEOUT}s 타임아웃")
+    if not os.path.exists(out_path):
+        tail = " | ".join([l for l in (proc.stderr or "").splitlines() if l.strip()][-3:])[:300]
+        raise RuntimeError(f"codex 출력 없음(rc={proc.returncode}): {tail}")
+    with open(out_path, encoding="utf8") as f:
+        text = f.read()
+    os.remove(out_path)
+    data = _parse_json(text)
+    missing = [k for k in tool["input_schema"].get("required", []) if k not in data]
+    if missing:
+        raise RuntimeError(f"codex 응답에 필수 키 {missing} 없음")
+    print(f"✍️ 집필: Codex ({tool['name']}, {int(time.time() - t0)}초)")
+    return data
