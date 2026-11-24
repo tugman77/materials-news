@@ -16,7 +16,6 @@ import 원문대조 as v
 import 원문수집 as w
 
 MIN_BODY = 600
-MAX_BODY = 1100  # 넘으면 기록만 (보류하지 않음)
 DROP_KINDS = {"원문없음", "귀속", "인용변형", "비교기준"}
 HOLD_KINDS = {"제목", "수치"}
 
@@ -160,8 +159,7 @@ def verify_all(articles, by_title):
         recs.append(rec)
         tag = "⛔ 보류" if rec["hold"] else "✅ 통과"
         extra = f" — {rec['hold']}" if rec["hold"] else (f" ({rec['how']})" if rec["how"] else "")
-        over = f" ⚠️ 상한 초과" if rec["after"] > MAX_BODY else ""
-        print(f"   {tag} {rec['before']}→{rec['after']}자{over}: {rec['title'][:40]}{extra}")
+        print(f"   {tag} {rec['before']}→{rec['after']}자: {rec['title'][:40]}{extra}")
         if not rec["hold"]:
             kept.append(a)
     return kept, recs
