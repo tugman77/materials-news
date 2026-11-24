@@ -1522,6 +1522,12 @@ def rebuild_archive_index():
 def save_data(articles, briefing, issues, briefing_v2=None):
     """index.html이 읽을 수 있는 JSON 파일로 저장 + 날짜별 아카이브 저장"""
     now = datetime.now(KST)
+    # 기사 시각은 실제 저장 시각으로 덮어쓴다 — 모델이 지어 쓰면 "현재 시각 확인 불가"(Codex, 11-24)나
+    # 엉뚱한 "오전 12:00"이 그대로 나간다. (2026-11-24)
+    _ts = f"{'오전' if now.hour < 12 else '오후'} {(now.hour % 12) or 12:02d}:{now.minute:02d}"
+    for _a in articles or []:
+        if isinstance(_a, dict):
+            _a["timestamp"] = _ts
     date_key = now.strftime("%Y-%m-%d")
     data = {
         "generated_at": now.strftime("%Y년 %m월 %d일 %H:%M"),
