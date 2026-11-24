@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>알릭스랩스, DRAM 비아 개구 축소 실증 - 소재타임스</title>
+<meta name="description" content="알릭스랩스가 EUV로 형성한 비아에 원자층 식각을 적용해 평균 개구 지름을 약 32% 줄였다. 초기 개념검증 결과로, 메모리 소재 적층 구조와의 호환성 및 공정 확장성을 추가 평가한다.">
+<link rel="canonical" href="https://www.materialtimes.co.kr/news/2026-11-25-0.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="소재타임스">
+<meta property="og:title" content="알릭스랩스, DRAM 비아 개구 축소 실증">
+<meta property="og:description" content="알릭스랩스가 EUV로 형성한 비아에 원자층 식각을 적용해 평균 개구 지름을 약 32% 줄였다. 초기 개념검증 결과로, 메모리 소재 적층 구조와의 호환성 및 공정 확장성을 추가 평가한다.">
+<meta property="og:url" content="https://www.materialtimes.co.kr/news/2026-11-25-0.html">
+<meta property="og:image" content="https://www.materialtimes.co.kr/images/2026-11-25_article_0.jpg">
+<meta property="og:locale" content="ko_KR">
+<meta property="article:section" content="반도체소재">
+<meta property="article:published_time" content="2026-11-25T06:00:00+09:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="알릭스랩스, DRAM 비아 개구 축소 실증">
+<meta name="twitter:description" content="알릭스랩스가 EUV로 형성한 비아에 원자층 식각을 적용해 평균 개구 지름을 약 32% 줄였다. 초기 개념검증 결과로, 메모리 소재 적층 구조와의 호환성 및 공정 확장성을 추가 평가한다.">
+<meta name="twitter:image" content="https://www.materialtimes.co.kr/images/2026-11-25_article_0.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "알릭스랩스, DRAM 비아 개구 축소 실증", "description": "알릭스랩스가 EUV로 형성한 비아에 원자층 식각을 적용해 평균 개구 지름을 약 32% 줄였다. 초기 개념검증 결과로, 메모리 소재 적층 구조와의 호환성 및 공정 확장성을 추가 평가한다.", "image": ["https://www.materialtimes.co.kr/images/2026-11-25_article_0.jpg"], "datePublished": "2026-11-25T06:00:00+09:00", "dateModified": "2026-11-25T06:00:00+09:00", "url": "https://www.materialtimes.co.kr/news/2026-11-25-0.html", "mainEntityOfPage": "https://www.materialtimes.co.kr/news/2026-11-25-0.html", "inLanguage": "ko-KR", "author": {"@type": "Organization", "name": "소재타임스 소재산업부"}, "publisher": {"@type": "NewsMediaOrganization", "name": "소재타임스", "logo": {"@type": "ImageObject", "url": "https://www.materialtimes.co.kr/images/og-default.jpg"}}, "articleSection": "반도체소재"}</script>
+<style>
+  :root {
+    --primary: #1a2b4a;
+    --accent: #c8102e;
+    --accent2: #0057a8;
+    --bg: #f2f2ee;
+    --card-bg: #ffffff;
+    --border: #d8d8d2;
+    --text: #111;
+    --text-muted: #4a4a4a;
+    --text-light: #888;
+    --tag-semi: #e8f0fb;     --tag-semi-text: #0057a8;
+    --tag-rare: #fdf0f0;     --tag-rare-text: #c8102e;
+    --tag-industry: #f0f7ee; --tag-industry-text: #2e7d32;
+    --tag-global: #fdf6e3;   --tag-global-text: #a05000;
+    --briefing-bg: #f8f4ef;  --briefing-border: #d4c5b0;  --briefing-text: #7a5c3a;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+
+  /* ── 속보 바 ── */
+  .breaking-bar { background: var(--accent); color: #fff; font-size: 13px; padding: 6px 0; overflow: hidden; }
+  .breaking-bar .inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; gap: 12px; }
+  .breaking-label { background: #fff; color: var(--accent); font-weight: 700; font-size: 11px; padding: 2px 8px; border-radius: 2px; white-space: nowrap; letter-spacing: 1px; }
+  .breaking-text { white-space: nowrap; overflow: hidden; animation: scroll-left 30s linear infinite; }
+  @keyframes scroll-left { 0%{transform:translateX(100vw)} 100%{transform:translateX(-100%)} }
+
+  /* ── 헤더 ── */
+  header { background: var(--primary); color: #fff; border-bottom: 3px solid var(--accent); }
+  .header-top { max-width: 1200px; margin: 0 auto; padding: 18px 16px 14px; display: flex; align-items: flex-end; justify-content: space-between; }
+  .logo-kr { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; color: #fff; cursor: pointer; }
+  .logo-en { font-size: 12px; color: rgba(255,255,255,0.55); letter-spacing: 2px; margin-top: 2px; }
+  .header-meta { text-align: right; font-size: 12px; color: rgba(255,255,255,0.5); }
+  .header-meta .date { font-size: 13px; color: rgba(255,255,255,0.7); margin-bottom: 3px; }
+
+  /* ── 네비게이션 ── */
+  nav { background: var(--primary); border-top: 1px solid rgba(255,255,255,0.1); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; }
+  .nav-inner a { color: rgba(255,255,255,0.72); font-size: 13.5px; padding: 10px 14px; display: block; border-bottom: 2px solid transparent; transition: color .15s, border-color .15s; white-space: nowrap; }
+  .nav-inner a:hover, .nav-inner a.active { color: #fff; border-bottom-color: var(--accent); }
+  .nav-search { margin-left: auto; display: flex; align-items: center; gap: 0; }
+  .nav-search input { border: none; background: rgba(255,255,255,0.1); color: #fff; padding: 5px 10px; font-size: 12px; outline: none; width: 140px; }
+  .nav-search input::placeholder { color: rgba(255,255,255,0.45); }
+  .nav-search button { background: var(--accent); border: none; color: #fff; padding: 5px 10px; cursor: pointer; font-size: 13px; }
+
+  /* ── 브레드크럼 ── */
+  .breadcrumb { background: #eeeee9; border-bottom: 1px solid var(--border); }
+  .bc-inner { max-width: 1200px; margin: 0 auto; padding: 8px 16px; font-size: 12px; color: var(--text-light); display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .bc-inner a { color: var(--text-light); }
+  .bc-inner a:hover { color: var(--accent2); }
+  .bc-sep { color: #bbb; }
+  .bc-current { color: var(--text-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 400px; }
+
+  /* ── 페이지 레이아웃 ── */
+  .page-wrap { max-width: 1200px; margin: 0 auto; padding: 32px 16px 48px; display: grid; grid-template-columns: 1fr 300px; gap: 32px; }
+
+  /* ── 기사 본문 영역 ── */
+  .article-area { background: var(--card-bg); border: 1px solid var(--border); padding: 40px 44px 44px; }
+
+  .art-top-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+  .art-timestamp { font-size: 12px; color: var(--text-light); }
+
+  .art-title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.45;
+    color: var(--text);
+    margin-bottom: 16px;
+    word-break: keep-all;
+  }
+
+  .art-info {
+    font-size: 13px;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--text);
+    margin-bottom: 28px;
+  }
+
+  .art-hero-img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 28px;
+  }
+  .art-hero-fig { margin: 0 0 28px; }
+  .art-hero-fig .art-hero-img { margin-bottom: 0; }
+  .img-caption { font-size: 12px; color: #888; text-align: center; margin: 6px 0 0; }
+  .art-info .info-sep { color: var(--border); }
+  .art-info .art-author { font-weight: 600; color: var(--text-muted); }
+
+  .art-summary-box { background: #f8f4ef; border-left: 4px solid var(--accent2); padding: 16px 20px; margin-bottom: 28px; }
+  .art-summary-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; }
+  .art-summary-text { font-size: 14.5px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-importance-box { background: #eef4fb; border-left: 4px solid var(--accent2); padding: 14px 18px; margin-bottom: 28px; }
+  .art-importance-label { font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 1px; margin-bottom: 6px; }
+  .art-importance-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); word-break: keep-all; }
+  .art-sources { font-size: 12px; color: var(--text-light); margin-bottom: 16px; line-height: 1.6; }
+  .art-body { font-size: 17px; line-height: 1.75; color: var(--text-muted); margin-bottom: 32px; }
+  .art-body p { margin-bottom: 18px; word-break: normal; overflow-wrap: anywhere; } /* 글자 단위 줄바꿈 — 오른쪽 끝을 고르게 (2026-11-24 대표님) */
+  .art-body p:last-child { margin-bottom: 0; }
+
+  .art-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+
+  .art-keyword-label { font-size: 12px; font-weight: 700; color: var(--text-light); margin-bottom: 10px; letter-spacing: 0.5px; }
+  .art-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+  .art-tag {
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  .art-actions { display: flex; gap: 8px; margin-bottom: 32px; }
+  .act-btn {
+    font-size: 13px;
+    padding: 7px 18px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    cursor: pointer;
+    color: var(--text-muted);
+    letter-spacing: 0.3px;
+  }
+  .act-btn:hover { border-color: var(--accent2); color: var(--accent2); }
+
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--accent2);
+    border: 1px solid var(--accent2);
+    padding: 8px 18px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .back-btn:hover { background: var(--accent2); color: #fff; }
+
+  /* ── 기사 없음 상태 ── */
+  .empty-state { padding: 80px 0; text-align: center; color: var(--text-light); }
+  .empty-state a { color: var(--accent2); }
+
+  /* ── 사이드바 ── */
+  .art-sidebar { display: flex; flex-direction: column; gap: 20px; }
+  .sb-box { background: var(--card-bg); border: 1px solid var(--border); padding: 16px; }
+  .sb-title { font-size: 13px; font-weight: 700; color: var(--primary); border-bottom: 2px solid var(--primary); padding-bottom: 6px; margin-bottom: 14px; letter-spacing: 0.5px; }
+
+  .rel-item { padding: 10px 0; border-bottom: 1px solid var(--border); cursor: pointer; }
+  .rel-item:last-child { border-bottom: none; }
+  .rel-item:hover .rel-title { color: var(--accent2); }
+  .rel-tag { font-size: 10px; font-weight: 700; padding: 1px 6px; border-radius: 2px; margin-bottom: 5px; display: inline-block; }
+  .tag-semi { background: var(--tag-semi); color: var(--tag-semi-text); }
+  .tag-rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .tag-industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .tag-global { background: var(--tag-global); color: var(--tag-global-text); }
+  .rel-title { font-size: 13px; color: var(--text); line-height: 1.45; word-break: keep-all; }
+
+  .issue-item { display: flex; align-items: flex-start; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 12.5px; }
+  .issue-item:last-of-type { border-bottom: none; }
+  .issue-icon { font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+  .issue-label { font-weight: 600; color: var(--text); margin-bottom: 2px; font-size: 12px; }
+  .issue-status { color: var(--text-muted); font-size: 11.5px; line-height: 1.4; }
+
+  .rank-item { display: flex; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); align-items: flex-start; cursor: pointer; }
+  .rank-item:last-child { border-bottom: none; }
+  .rank-item:hover .rank-title { color: var(--accent2); }
+  .rank-num { font-size: 14px; font-weight: 700; color: var(--accent); min-width: 18px; flex-shrink: 0; }
+  .rank-title { font-size: 13px; color: var(--text); line-height: 1.4; }
+
+  .link-item { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--text-muted); text-decoration: none; transition: color .15s; }
+  .link-item:last-child { border-bottom: none; }
+  .link-item:hover { color: var(--accent2); }
+  .link-icon { font-size: 14px; flex-shrink: 0; }
+  .link-name { flex: 1; line-height: 1.4; }
+  .link-arrow { font-size: 10px; color: var(--border); }
+
+  .keyword-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
+  .kw-tag { font-size: 11.5px; padding: 3px 9px; background: var(--tag-semi); color: var(--tag-semi-text); border-radius: 2px; cursor: pointer; transition: background .15s, color .15s; }
+  .kw-tag:hover { background: var(--primary); color: #fff; }
+  .kw-tag.rare { background: var(--tag-rare); color: var(--tag-rare-text); }
+  .kw-tag.industry { background: var(--tag-industry); color: var(--tag-industry-text); }
+  .kw-tag.global { background: var(--tag-global); color: var(--tag-global-text); }
+
+  .sb-briefing { background: var(--briefing-bg); border-color: var(--briefing-border); }
+  .sb-briefing .sb-title { color: var(--briefing-text); border-bottom-color: var(--briefing-text); }
+  .briefing-headline { font-size: 13.5px; font-weight: 700; color: var(--briefing-text); margin-bottom: 8px; line-height: 1.5; }
+  .briefing-points { list-style: none; padding: 0; margin: 0; }
+  .briefing-points li { font-size: 12.5px; color: #555; line-height: 1.6; padding: 3px 0 3px 14px; position: relative; }
+  .briefing-points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; background: var(--briefing-text); border-radius: 50%; }
+
+  .sb-coupang { padding: 0; overflow: hidden; }
+  .sb-coupang-top { background: linear-gradient(135deg,#e4003a,#ff4d6d); padding: 10px 14px; }
+  .sb-coupang-top span { color: #fff; font-weight: 600; font-size: 13px; }
+  .sb-coupang-notice { padding: 5px 12px; background: #fff5f7; border-top: 1px solid #ffd0d8; font-size: 10.5px; color: #999; }
+
+  /* ── 푸터 ── */
+  footer { background: var(--primary); color: rgba(255,255,255,0.5); font-size: 12px; padding: 24px 16px; margin-top: 32px; border-top: 3px solid var(--accent); }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .footer-logo { font-size: 16px; font-weight: 700; color: #fff; }
+  .footer-info { line-height: 1.8; }
+  .footer-links { display: flex; gap: 16px; }
+  .footer-links a { color: rgba(255,255,255,0.5); }
+  .footer-links a:hover { color: #fff; }
+
+  /* ── 관련 뉴스 (본문 하단) ── */
+  .related-news-section { margin-top: 40px; padding-top: 22px; border-top: 2px solid var(--primary); }
+  .related-news-header { font-size: 12px; font-weight: 700; color: var(--primary); letter-spacing: 1px; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .related-news-header::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+  .related-news-item { padding: 14px 0; border-bottom: 1px solid var(--border); cursor: pointer; display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: start; }
+  .related-news-item:last-child { border-bottom: none; }
+  .related-news-item:hover .related-news-title { color: var(--accent2); }
+  .related-news-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+  .related-news-date { font-size: 12px; color: var(--text-light); }
+  .related-news-title { font-size: 15px; font-weight: 600; line-height: 1.45; color: var(--text); margin-bottom: 5px; word-break: keep-all; transition: color 0.15s; }
+  .related-news-summary { font-size: 13px; color: var(--text-muted); line-height: 1.55; word-break: keep-all; }
+  .related-news-thumb { width: 80px; height: 60px; object-fit: cover; flex-shrink: 0; display: block; }
+
+  /* ── 본문 중간 광고 (680×140 배너) ── */
+  .coupang-mid-ad {
+    margin: 28px 0 4px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    height: 160px;
+  }
+  /* ── 본문 하단 광고 (728×90 리더보드) ── */
+  .coupang-leader-ad {
+    margin: 28px auto 4px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    max-width: 728px;
+    height: 110px;
+  }
+  .coupang-mid-notice {
+    font-size: 10px;
+    color: #bbb;
+    text-align: right;
+    padding: 0 10px 4px;
+  }
+
+  /* ── 쿠팡 파트너스 배너 ── */
+  .coupang-ad { margin: 28px 0; }
+  .coupang-ad-top {
+    padding: 12px 18px;
+    background: linear-gradient(135deg, #e4003a 0%, #ff4d6d 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .coupang-ad-top span { color: #fff; font-weight: 600; font-size: 14px; }
+  .coupang-ad-btn {
+    display: inline-block;
+    padding: 6px 16px;
+    background: #fff;
+    color: #e4003a;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 4px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .coupang-ad-notice {
+    padding: 6px 12px;
+    background: #fff5f7;
+    border: 1px solid #ffd0d8;
+    border-top: none;
+    font-size: 11px;
+    color: #999;
+    line-height: 1.5;
+  }
+  .sb-coupang { padding: 0; overflow: hidden; }
+  .sb-coupang .coupang-ad-top { border-radius: 0; }
+
+  /* ── 뉴스레터 구독 CTA (미사용 — 필요 시 display:none 제거) ── */
+  .newsletter-cta {
+    display: none;
+    margin: 32px 0 4px;
+    border: 1px solid var(--primary);
+    border-left: 4px solid var(--accent);
+    background: #f8f9fc;
+    padding: 22px 24px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .nl-cta-title { font-size: 16px; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+  .nl-cta-desc { font-size: 13.5px; color: var(--text-muted); line-height: 1.6; word-break: keep-all; }
+  .nl-cta-btn {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 26px;
+    cursor: pointer;
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+    transition: background .15s;
+  }
+  .nl-cta-btn:hover { background: var(--accent); }
+
+  @media (max-width: 768px) {
+    .page-wrap { grid-template-columns: 1fr; }
+    .article-area { padding: 24px 20px 32px; }
+    .art-title { font-size: 22px; }
+    .art-body { font-size: 16px; max-width: 100%; }
+    .header-meta { display: none; }
+    .nav-inner { overflow-x: auto; }
+    .nav-inner a { padding: 10px 12px; }
+    .nav-search { display: none; }
+    .bc-current { max-width: 200px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="breaking-bar">
+  <div class="inner">
+    <span class="breaking-label">속보</span>
+    <span class="breaking-text">알릭스랩스, DRAM 비아 개구 축소 실증  ·  슈미트, 유리기판 관통비아 도금장비 출시  ·  B2골드, 연간 금 100만 온스 회복 추진</span>
+  </div>
+</div>
+
+<header>
+  <div class="header-top">
+    <a class="logo-block" href="../index.html">
+      <div class="logo-kr">소재타임스</div>
+      <div class="logo-en">MATERIALS TIMES</div>
+    </a>
+    <div class="header-meta">
+      <div class="date">2026.11.25</div>
+      <div>반도체 · 첨단소재 · 희귀금속 · 산업재</div>
+    </div>
+  </div>
+  <nav>
+    <div class="nav-inner">
+        <a href="../index.html">전체</a>
+        <a href="../category.html?cat=반도체소재">반도체·소재</a>
+        <a href="../category.html?cat=희귀금속">희귀금속·광물</a>
+        <a href="../category.html?cat=산업재">산업재·화학</a>
+        <a href="../category.html?cat=글로벌">글로벌공급망</a>
+    </div>
+  </nav>
+</header>
+
+<div class="breadcrumb">
+  <div class="bc-inner">
+    <a href="../index.html">홈</a>
+    <span class="bc-sep">›</span>
+    <a href="../category.html?cat=반도체소재">반도체소재</a>
+    <span class="bc-sep">›</span>
+    <span class="bc-current">알릭스랩스, DRAM 비아 개구 축소 실증</span>
+  </div>
+</div>
+
+<div class="page-wrap">
+
+  <div class="article-area">
+    <article>
+
+      <div class="art-top-meta">
+        <span class="rel-tag tag-semi">반도체소재</span>
+        <span class="art-timestamp">오전 03:07</span>
+      </div>
+
+      <h1 class="art-title">알릭스랩스, DRAM 비아 개구 축소 실증</h1>
+
+      <div class="art-info">
+        <span class="art-author">소재산업부 기자</span>
+        <span class="info-sep">|</span>
+        <span>2026.11.25 오전 03:07</span>
+      </div>
+
+      <figure class="art-hero-fig"><img src="../images/2026-11-25_article_0.jpg" alt="알릭스랩스, DRAM 비아 개구 축소 실증" class="art-hero-img"><figcaption class="img-caption">[자료사진] 기사와 무관한 이미지입니다.</figcaption></figure>
+
+      <div class="art-summary-box">
+        <div class="art-summary-label">핵심 요약</div>
+        <div class="art-summary-text">알릭스랩스가 EUV로 형성한 비아에 원자층 식각을 적용해 평균 개구 지름을 약 32% 줄였다. 초기 개념검증 결과로, 메모리 소재 적층 구조와의 호환성 및 공정 확장성을 추가 평가한다.</div>
+      </div>
+
+      <div class="art-importance-box">
+        <div class="art-importance-label">왜 중요한가</div>
+        <div class="art-importance-text">미세 패턴을 노광 후 식각으로 조정하는 접근은 메모리 소재 스택과 공정 통합에 관련된다. 실제 적용에는 소재 호환성과 균일도 검증이 남아 있다.</div>
+      </div>
+
+      <div class="art-body">
+        <p>스웨덴 알릭스랩스(AlixLabs)가 극자외선(EUV) 노광으로 만든 비아의 개구를 원자층 식각(ALE) 기반 후처리로 줄이는 초기 실험 결과를 공개했다. 반도체 다이제스트(Semiconductor Digest)의 11월 25일 보도에 따르면, 회사는 이 공정을 차세대 메모리의 고밀도 수직 구조 형성에 활용할 수 있는지 검토하고 있다. 이번 발표는 완성된 메모리 소자의 성능 검증이 아닌 패터닝 개념검증에 해당한다.</p>
+        <p>알릭스랩스가 공개한 주사전자현미경(SEM) 이미지 통계에 따르면, 처리 전 약 25.3나노미터였던 평균 개구 지름은 처리 후 17.1나노미터로 약 32% 감소했다. 회사에 따르면 분석 대상 88개 구조에서 내부 개구 지름의 표준편차는 1.48나노미터였다. 처리된 구조는 규칙적인 배열을 유지했으며, 회사는 노광으로 처음 정의한 형태보다 작은 개구와 높은 종횡비를 구현할 가능성을 확인했다고 설명했다.</p>
+        <p>이번 접근은 노광 단계에서 만들어진 비아를 후속 식각 공정으로 추가 가공하는 방식이다. 처음부터 모든 치수를 노광만으로 구현하는 대신, 노광 결과와 ALE 기반 처리를 결합해 최종 구조를 형성하는 데 초점을 맞췄다. 다만 발표에는 식각에 사용한 구체적인 소재 조합이나 반응 조건, 식각 속도가 제시되지 않았다. 따라서 공개된 치수 변화만으로 실제 메모리 생산에 필요한 처리 능력까지 판단하기는 어렵다.</p>
+        <p>회사가 제시한 적용 후보는 로직 회로 옆에 메모리를 집적하는 임베디드 DRAM(eDRAM)의 수직 커패시터 구조다. 조밀한 수직 구조를 형성하는 공정은 메모리 집적도를 높이려는 개발 방향과 연결된다. 알릭스랩스는 대용량 온칩 캐시와 버퍼를 사용하는 고성능 프로세서, AI 가속기, 네트워크용 주문형 반도체를 관련 응용 분야로 제시했다. 해당 용도에서의 실제 소자 구현 결과는 이번 자료에 포함되지 않았다.</p>
+        <iframe class="coupang-mid-ad" src="../coupang-ad.html" frameborder="0" scrolling="no" title="쿠팡 파트너스 광고" loading="lazy"></iframe>
+        <div class="coupang-mid-notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로 수수료를 제공받습니다.</div>
+        <p>개발 배경에는 메모리 구조가 조밀해질수록 패터닝 공정도 복잡해지는 문제가 있다. 알릭스랩스는 기존 고밀도 메모리 배열 형성에 여러 차례의 노광이나 복잡한 식각·증착 순서가 필요할 수 있다고 설명했다. 회사는 자사의 ALE 기반 패터닝 원리를 확장하면 특정 메모리 응용에서 공정 단계를 줄일 수 있는지 조사하고 있다. 단계 축소는 연구 목표이며, 이번 실험으로 비용 절감이나 공정 수 감소가 입증됐다는 의미는 아니다.</p>
+        <p>실험은 뉴욕주 올버니의 NY 크리에이츠(NY Creates) 올버니 나노테크 콤플렉스에서 수행한 연구를 바탕으로 했다. 이 기관은 반도체 연구 설비와 공정 전문성, 공동 연구 환경에 대한 접근을 제공했다. 알릭스랩스의 로빈 아틀레(Robin Athle) 수석연구원은 이번 결과가 고밀도 수직 커패시터 제조 가능성을 조사하기 위한 출발점이라고 설명했다. 연구기관의 공정 인프라를 활용해 초기 구조를 평가한 단계라는 점이 발표의 범위를 규정한다.</p>
+        <p>소재 관점에서 남은 과제는 개구 축소 결과를 실제 메모리에 사용하는 적층 구조로 옮기는 일이다. 회사는 향후 메모리 관련 소재 스택에 공정을 통합하는 작업과 함께 치수 제어, 공정 균일도, 반복성을 평가할 계획이라고 밝혔다. 발표된 이미지 통계와 별개로, 더 작은 피치의 구조에서도 같은 결과를 얻을 수 있는지 확인하는 절차가 예정돼 있다. 이번 자료에는 웨이퍼 전체의 균일도나 양산 수율 수치가 제시되지 않았다.</p>
+        <p>알릭스랩스는 차세대 eDRAM과 3D DRAM을 개발하는 반도체 제조사 및 연구기관과의 협력을 추진하고, 다른 미세 메모리 구조로의 적용 가능성도 살펴볼 예정이다. 후속 개발은 공정을 확장할 수 있는지, 실제 제조 흐름에 통합할 수 있는지, 첨단 메모리 생산 요건과 호환되는지를 입증하는 데 초점을 맞춘다. 회사는 이번 발표에서 구체적인 양산 도입 시점이나 고객사, 상용 공급 일정을 공개하지 않았다.</p>
+      </div>
+
+      <div class="art-sources">출처: Semiconductor Digest, AlixLabs | 기준일: 2026.11.25</div>
+
+      <!-- 뉴스레터 구독 CTA (미사용 — 필요 시 display:none 제거) -->
+      <div class="newsletter-cta" style="display:none">
+        <div>
+          <div class="nl-cta-title">📬 소재인사이트 뉴스레터</div>
+          <div class="nl-cta-desc">반도체·희소금속·소재 공급망의 핵심 신호만 골라 이메일로 보내드립니다.<br>30년 현장 전문가가 직접 고릅니다. 무료입니다.</div>
+        </div>
+        <button class="nl-cta-btn" onclick="openContactModal('뉴스레터 구독 신청')">구독 신청</button>
+      </div>
+
+      <iframe class="coupang-leader-ad" src="../coupang-ad-leaderboard.html" frameborder="0" scrolling="no" title="쿠팡 파트너스 광고" loading="lazy"></iframe>
+      <div class="coupang-mid-notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로 수수료를 제공받습니다.</div>
+
+      <hr class="art-divider">
+
+      <div class="art-keyword-label">키워드</div>
+      <div class="art-tags">
+        <span class="art-tag" style="background:#e8f0fb;color:#0057a8;">#반도체소재</span>
+      </div>
+
+      <a class="back-btn" href="../index.html">← 목록으로 돌아가기</a>
+
+    </article>
+  </div>
+
+  <aside class="art-sidebar">
+
+    <div class="sb-box sb-briefing">
+      <div class="sb-title">편집국 브리핑</div>
+      <div style="font-size:13px;color:#444;line-height:1.75;"><div class="briefing-headline">반도체 미세화·유리기판 진전, 금 증산은 과제</div>
+      <ul class="briefing-points"><li>알릭스랩스, 원자층 식각으로 비아 개구 32% 축소</li><li>슈미트, 유리 관통비아 구리 충전 도금장비 출시</li><li>B2골드, 2028년부터 연산 금 100만 온스 초과 추진</li><li>초기 실증의 양산 검증과 광산 인허가가 관건</li></ul></div>
+    </div>
+
+    <div class="sb-box">
+      <div class="sb-title">다른 기사</div>
+        <a class="rel-item" href="2026-11-25-1.html">
+          <span class="rel-tag tag-industry">산업재</span>
+          <div class="rel-title">슈미트, 유리기판 관통비아 도금장비 출시</div>
+        </a>
+        <a class="rel-item" href="2026-11-25-2.html">
+          <span class="rel-tag tag-rare">희귀금속</span>
+          <div class="rel-title">B2골드, 연간 금 100만 온스 회복 추진</div>
+        </a>
+    </div>
+
+    <div class="sb-box">
+      <div class="sb-title">관련 기관</div>
+      <a class="link-item" href="https://www.motie.go.kr" target="_blank" rel="noopener noreferrer">
+        <span class="link-icon">🏛</span><span class="link-name">산업통상자원부</span><span class="link-arrow">↗</span>
+      </a>
+      <a class="link-item" href="https://www.kims.re.kr" target="_blank" rel="noopener noreferrer">
+        <span class="link-icon">🔬</span><span class="link-name">한국재료연구원 KIMS</span><span class="link-arrow">↗</span>
+      </a>
+      <a class="link-item" href="https://www.komir.or.kr" target="_blank" rel="noopener noreferrer">
+        <span class="link-icon">⛏</span><span class="link-name">한국광해광업공단 KOMIR</span><span class="link-arrow">↗</span>
+      </a>
+    </div>
+
+  </aside>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">소재타임스</div>
+      <div class="footer-info" style="margin-top:6px;">
+        반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어<br>
+        발행인: 대표 | 편집국 | 광고문의: <a href="#" onclick="openContactModal('광고 문의');return false;" style="color:rgba(255,255,255,.6);text-decoration:underline;">문의하기</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-links">
+        <a href="../about.html">회사소개</a>
+        <a href="../advertising.html">광고안내</a>
+        <a href="../privacy.html">개인정보처리방침</a>
+        <a href="../terms.html">이용약관</a>
+      </div>
+      <div style="margin-top:8px; text-align:right;">© 2026 소재타임스. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../contact-modal.js"></script>
+</body>
+</html>

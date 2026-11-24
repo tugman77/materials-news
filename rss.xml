@@ -6,7 +6,31 @@
     <atom:link href="https://www.materialtimes.co.kr/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Tue, 24 Nov 2026 03:06:01 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 03:07:25 +0900</lastBuildDate>
+    <item>
+      <title>알릭스랩스, DRAM 비아 개구 축소 실증</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-25-0.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-25-0.html</guid>
+      <category>반도체소재</category>
+      <description>알릭스랩스가 EUV로 형성한 비아에 원자층 식각을 적용해 평균 개구 지름을 약 32% 줄였다. 초기 개념검증 결과로, 메모리 소재 적층 구조와의 호환성 및 공정 확장성을 추가 평가한다.</description>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>슈미트, 유리기판 관통비아 도금장비 출시</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-25-1.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-25-1.html</guid>
+      <category>산업재</category>
+      <description>슈미트가 유리 코어 기판의 관통비아를 아래에서부터 구리로 채우는 패널 도금 플랫폼을 출시했다. 회사는 최대 50:1 종횡비에서 빈 공간 없는 충전이 가능하다고 밝혔다.</description>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>B2골드, 연간 금 100만 온스 회복 추진</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-25-2.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-25-2.html</guid>
+      <category>희귀금속</category>
+      <description>B2골드가 말리 페콜라 확장과 캐나다 구스 증산을 통해 2028년부터 연간 금 생산 100만 온스 초과를 추진한다. 인허가 지연과 조업 차질을 겪은 사업의 실행이 생산 회복의 전제다.</description>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>에이콘, SiGe 매립층으로 SOI 성능 개선</title>
       <link>https://www.materialtimes.co.kr/news/2026-11-24-0.html</link>
@@ -222,30 +246,6 @@
       <category>산업재</category>
       <description>중국 과학원 다롄화학물리연구소(DICP)가 철-망간 인산염 계열 나트륨이온 배터리 양극재를 개선해 초기 쿨롱 효율 97%, 1000회 사이클 후 용량 유지율 93.6%를 달성했다고 발표했다. 100톤 규모 파일럿 라인이 가동 중이며 산업화 협력도 시작됐다.</description>
       <pubDate>Sat, 14 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>한국 산업부, 온디바이스 AI 반도체 10종 2030년 개발 로드맵 발표</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-14-1.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-14-1.html</guid>
-      <category>글로벌</category>
-      <description>산업통상자원부가 2030년까지 온디바이스 AI 반도체 8종과 반도체 설계자산 2종을 개발하는 로드맵을 발표했다. 총 8002억원 규모 사업으로 자율주행·협동로봇·드론 등 응용 분야별 칩을 국내 팹리스·수요기업과 함께 개발·실증한다.</description>
-      <pubDate>Sat, 14 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>Factorial, 고체전지 항공우주용 셀 450Wh/kg 달성</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-13-0.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-13-0.html</guid>
-      <category>산업재</category>
-      <description>미국 고체전지 개발사 Factorial이 2026년 말 목표로 설정했던 에너지밀도 450Wh/kg을 항공우주 프로그램 셀에서 조기 달성했다. 일본 미쓰이긴조쿠(Mitsui Kinzoku)와 고체전해질 소재 양산 협력도 진행 중이다.</description>
-      <pubDate>Fri, 13 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>젠슨 황 Nvidia 전격 사임, AI 데이터센터 금속 수요 불확실</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-13-1.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-13-1.html</guid>
-      <category>글로벌</category>
-      <description>젠슨 황(Jensen Huang) 엔비디아(Nvidia) CEO가 11월 13일 사임하며 AI 인프라 투자 흐름에 불확실성이 더해졌다. Mining.com은 데이터센터·전력 프로젝트 지연 시 구리 등 금속 수요가 타격을 받을 수 있다고 보도했다.</description>
-      <pubDate>Fri, 13 Nov 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
