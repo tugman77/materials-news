@@ -6,7 +6,31 @@
     <atom:link href="https://www.materialtimes.co.kr/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Wed, 25 Nov 2026 03:07:25 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 03:09:43 +0900</lastBuildDate>
+    <item>
+      <title>미 과잉생산 관세안, 한국 15% 제시</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-26-0.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-26-0.html</guid>
+      <category>글로벌</category>
+      <description>USTR이 한국에 과잉생산 관세 15%를 제안했지만 협의 불발 시 25%까지 높일 가능성을 열어뒀다. 기존 232조 관세 대상은 제외하며, 의견수렴과 공청회 뒤 최종안을 정한다.</description>
+      <pubDate>Thu, 26 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>OLED 소재사 에스에프씨, 공모 철회</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-26-1.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-26-1.html</guid>
+      <category>산업재</category>
+      <description>OLED 소재 기업 에스에프씨가 기관 수요예측 뒤 공모를 철회했다. 반기 영업이익이 직전 사업연도 전체 실적을 넘어섰지만 상장 절차를 이어가지 못했다.</description>
+      <pubDate>Thu, 26 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>AI 반도체 설계 재사용, 공정 검증 과제</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-26-2.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-26-2.html</guid>
+      <category>반도체소재</category>
+      <description>AI를 활용한 반도체 설계 재사용에서 제조 가능성과 비용 검증이 과제로 나타났다. 파운드리·후공정·공정 장비 업체에 나뉜 데이터와 실제 구현 조건이 자동화 범위를 제한한다.</description>
+      <pubDate>Thu, 26 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>알릭스랩스, DRAM 비아 개구 축소 실증</title>
       <link>https://www.materialtimes.co.kr/news/2026-11-25-0.html</link>
@@ -222,30 +246,6 @@
       <category>산업재</category>
       <description>독일 마르포스(Marposs GmbH)가 배터리 전극 슬리팅·노칭 공정에서 절단날 결함을 실시간으로 감지하는 광학 센서 시스템을 개발해 독일 소재 셀 제조사의 양산 라인에 투입했다. 10마이크로미터 수준의 미세 칩핑까지 검출하며, 기존 정기 교체 방식 대비 공구 수명을 최적화할 수 있다고 밝혔다.</description>
       <pubDate>Sun, 15 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>APEC 계기 미중 무역협상, 한국 반도체·공급망 불확실성 최대 변수</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-15-1.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-15-1.html</guid>
-      <category>글로벌</category>
-      <description>오는 18~19일 중국 선전에서 열리는 APEC 정상회의에서 미국과 중국의 무역휴전 연장 협상이 진행될 예정이다. 반도체 수출통제 강화 여부와 중국의 핵심광물 수출통제 유예 연장이 맞물리며 한국 소재·부품 업계의 대중 공급망에 직접 영향을 줄 수 있다.</description>
-      <pubDate>Sun, 15 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>α-갈륨산화물, 전력 반도체 소재 물성 규명</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-15-2.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-15-2.html</guid>
-      <category>반도체소재</category>
-      <description>일본 홋카이도대·교토대 연구팀이 알파 갈륨산화물(α-Ga2O3) 박막의 전자 유효질량과 열전도도를 실측해 차세대 전력 반도체 소재 설계 기반을 마련했다. 게르마늄 도핑으로 전자 이동성을 높이면서도 열전도도는 거의 변화가 없음을 확인했다.</description>
-      <pubDate>Sun, 15 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>DICP, 철-망간 인산염 나트륨이온 양극재 1000회 사이클 달성</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-14-0.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-14-0.html</guid>
-      <category>산업재</category>
-      <description>중국 과학원 다롄화학물리연구소(DICP)가 철-망간 인산염 계열 나트륨이온 배터리 양극재를 개선해 초기 쿨롱 효율 97%, 1000회 사이클 후 용량 유지율 93.6%를 달성했다고 발표했다. 100톤 규모 파일럿 라인이 가동 중이며 산업화 협력도 시작됐다.</description>
-      <pubDate>Sat, 14 Nov 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
