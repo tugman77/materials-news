@@ -703,6 +703,14 @@ def main():
                 print(f"검수 결과 아카이브 반영 → {arch}")
         except Exception as e:
             print(f"   → 아카이브 반영 오류: {e}")
+        # 정적 기사 페이지도 다시 만든다 (2026-11-26). 검수가 사진을 AI 도식으로 바꿔도 news/*.html은
+        # 생성 단계 것이 남아 "[자료사진] 기사와 무관한 이미지" 캡션이 AI 도식 아래 나갔다.
+        try:
+            import 정적페이지생성
+            n = 정적페이지생성.generate_for_date(data["date_key"], data, 정적페이지생성.extract_style())
+            print(f"검수 결과 정적 페이지 {n}건 다시 생성")
+        except Exception as e:
+            print(f"   → 정적 페이지 재생성 오류(발행에는 영향 없음): {type(e).__name__}: {e}")
 
     _save_image_history()  # 검수 중 재다운로드로 갱신된 이미지 이력 영구 저장
 

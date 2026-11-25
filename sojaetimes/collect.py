@@ -15,6 +15,7 @@ import 최신필터  # 7일 넘은 기사 제외 (2026-10-26)
 import json
 import os
 import requests
+import time
 from datetime import datetime, timezone, timedelta
 
 KST = timezone(timedelta(hours=9))
@@ -84,6 +85,7 @@ def collect_naver(max_per_query=5) -> dict:
     }
 
     for topic, keyword in NAVER_TOPICS:
+        time.sleep(0.3)  # 초당 호출 한도 — 2026-11-26 03:00 연속 호출 중 2회 429
         try:
             resp = requests.get(
                 NAVER_NEWS_URL,
