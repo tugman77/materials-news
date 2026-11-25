@@ -10,6 +10,15 @@
 - 끄기: 환경변수 AI_IMAGE=0 (도식 생성·적합성 판정 모두), AI_IMAGE_VISION=0 (적합성 판정만).
 - 도식에는 반드시 "[AI 생성 일러스트]" 캡션을 붙인다(`CAPTION`) — 호출부가 article["image_caption"]에 넣는다.
 
+AI 실사 이미지 시범 (2026-11-25 ~ 12-09, 대표님 결정, 소재타임스만):
+- 기사의 중심이 소재·장비·공정 같은 '사물'이면 사진처럼 보이는 정물(still-life) 이미지를, 흐름·구조·정책이면 도식을 만든다.
+  Codex가 한 번의 호출에서 고르고 마지막 줄에 PHOTO/DIAGRAM을 적는다.
+- 사건이 아니라 사물만 그린다: 사람·얼굴·손, 글자·숫자·로고, 국기, 실존 건물·시설, 기업 표시, 사건 장면 금지.
+  원문(보도) 사진을 바탕으로 만들지 않는다 — 저작권(2차 저작물)과 가짜 보도사진 위험(대표님과 합의).
+- 실사는 만든 뒤 금지 요소를 이미지로 다시 판정(`_photo_clean`)하고, 걸리거나 판정을 못 하면 도식으로 다시 만든다.
+- 캡션: 실사는 `PHOTO_CAPTION`("[AI 생성 이미지] …실제 사진이 아닙니다"), 도식은 `CAPTION`. 기사에 image_ai_type(photo/diagram).
+- 끄기: AI_IMAGE_PHOTO=0 → 예전처럼 도식만.
+
     python3 이미지생성.py "기사 제목" "image keyword"   # 도식 1장 시험 생성 → /tmp 경로 출력
 """
 
@@ -27,6 +36,9 @@ import uuid
 from typing import Optional
 
 CAPTION = "[AI 생성 일러스트] 기사 내용을 설명하는 도식이며 실제 사진이 아닙니다."
+PHOTO_CAPTION = "[AI 생성 이미지] 기사 내용을 바탕으로 만든 참고 이미지이며 실제 사진이 아닙니다."
+_AI_CAPTIONS = (CAPTION, PHOTO_CAPTION)
+_MODES: dict = {}  # 최종 이미지 경로 → "photo"/"diagram" (호출부가 .ai.tmp에 만든 뒤 제 경로로 옮긴다)
 
 _CODEX = next(
     (p for p in (os.path.expanduser("~/.local/bin/codex"), "/opt/homebrew/bin/codex") if os.path.exists(p)),
@@ -47,6 +59,10 @@ def enabled() -> bool:
 
 def vision_enabled() -> bool:
     return enabled() and os.environ.get("AI_IMAGE_VISION", "1") != "0"
+
+
+def photo_mode_enabled() -> bool:
+    return enabled() and os.environ.get("AI_IMAGE_PHOTO", "1") != "0"
 
 
 def _run(prompt: str, effort: str, timeout: int, image: Optional[str] = None, cwd: Optional[str] = None):
@@ -124,51 +140,129 @@ _RULES = (
 )
 
 
+_PHOTO_STYLE = (
+    "Photorealistic editorial still-life photograph, like a stock photo for a materials-industry newspaper: "
+    "a close-up or studio/industrial shot of the PHYSICAL OBJECT the article is about (a raw material, metal, "
+    "powder, ingot, wafer, battery cell, component, machine part or production process detail). "
+    "Natural lighting, shallow depth of field, neutral background. 16:9 landscape composition."
+)
+_PHOTO_RULES = (
+    "Hard rules: absolutely no text, letters, numbers, labels or logos anywhere; no people, faces or hands; "
+    "no national flags; no recognizable real buildings, factories, landmarks or government facilities; no company "
+    "or brand marks; do not depict a specific news event, meeting, accident or announcement. Show the object only."
+)
+
+
+def _photo_clean(path: str) -> Optional[bool]:
+    """AI 실사가 금지 요소 없이 나왔는지. True=깨끗, False=위반, None=판정 못 함."""
+    rc, last, _ = _run(
+        "You are a strict news photo editor checking an AI-generated illustrative image before publication.\n"
+        "Answer VIOLATION if the image contains ANY of: a person, face or hand; readable text, letters, numbers "
+        "or labels; a logo or brand mark; a national flag; a recognizable real building or landmark; or a scene "
+        "that looks like documentary evidence of a specific news event. Otherwise answer CLEAN.\n"
+        "Answer with exactly one word: CLEAN or VIOLATION.",
+        "low", 240, image=path)
+    word = last.strip().upper()
+    if rc != 0 or not word:
+        return None
+    if word.startswith("VIOLATION"):
+        return False
+    if word.startswith("CLEAN"):
+        return True
+    return None
+
+
+def _final_path(out_path: str) -> str:
+    p = out_path[:-len(".ai.tmp")] if out_path.endswith(".ai.tmp") else out_path
+    return os.path.normpath(p)
+
+
 def generate(title: str, keyword: str, category: str, out_path: str) -> bool:
-    """기사 내용을 설명하는 도식 1장을 out_path(.jpg, 가로 1200px)에 저장. 성공 시 True."""
+    """기사 이미지 1장(AI 실사 또는 도식)을 out_path(.jpg, 가로 1200px)에 저장. 성공 시 True.
+    실사가 금지 요소 판정에 걸리면 같은 자리에 도식을 다시 만든다."""
     if not enabled():
         return False
+    if photo_mode_enabled():
+        mode = _generate_once(title, keyword, category, out_path, allow_photo=True)
+        if mode == "photo":
+            clean = _photo_clean(out_path)
+            if clean is True:
+                _MODES[_final_path(out_path)] = "photo"
+                print("   → AI 실사 이미지 (금지 요소 없음)")
+                return True
+            print(f"   → AI 실사 {'금지 요소 발견' if clean is False else '판정 실패'} — 도식으로 다시 만듦")
+        elif mode == "diagram":
+            _MODES[_final_path(out_path)] = "diagram"
+            return True
+        elif not enabled():
+            return False
+    if _generate_once(title, keyword, category, out_path, allow_photo=False):
+        _MODES[_final_path(out_path)] = "diagram"
+        return True
+    return False
+
+
+def _generate_once(title: str, keyword: str, category: str, out_path: str, allow_photo: bool) -> Optional[str]:
+    """이미지 1장 생성. 성공 시 "photo"/"diagram", 실패 시 None."""
     from PIL import Image
 
     work = os.path.join(_WORK, uuid.uuid4().hex[:8])
     os.makedirs(work, exist_ok=True)
     started = time.time()
     try:
-        prompt = (
-            "Use your image generation tool to create ONE image, then copy the generated file into the current "
-            "directory as image.png. Do nothing else.\n"
-            f"Subject: an explanatory diagram for the news article titled \"{title}\" "
-            f"(category: {category or 'industry'}; keywords: {keyword}).\n"
-            f"{_STYLE}\n{_RULES}"
-        )
-        rc, _, tail = _run(prompt, "low", 420, cwd=work)
+        if allow_photo:
+            prompt = (
+                "Use your image generation tool to create ONE image, then copy the generated file into the current "
+                "directory as image.png.\n"
+                f"News article title: \"{title}\" (category: {category or 'industry'}; keywords: {keyword}).\n"
+                "First decide the format:\n"
+                "- PHOTO if the article is mainly about a physical material, metal, mineral, component, piece of "
+                "equipment or production process that can be shown as an object.\n"
+                "- DIAGRAM if it is mainly about policy, trade flows, prices, markets, companies' strategy or any "
+                "relationship that an object photo cannot explain.\n"
+                f"If PHOTO: {_PHOTO_STYLE}\n{_PHOTO_RULES}\n"
+                f"If DIAGRAM: an explanatory diagram. {_STYLE}\n{_RULES}\n"
+                "Your final message must be exactly one word: PHOTO or DIAGRAM (the format you made)."
+            )
+        else:
+            prompt = (
+                "Use your image generation tool to create ONE image, then copy the generated file into the current "
+                "directory as image.png. Do nothing else.\n"
+                f"Subject: an explanatory diagram for the news article titled \"{title}\" "
+                f"(category: {category or 'industry'}; keywords: {keyword}).\n"
+                f"{_STYLE}\n{_RULES}"
+            )
+        rc, last, tail = _run(prompt, "low", 420, cwd=work)
         src = os.path.join(work, "image.png")
         if not os.path.exists(src):  # 복사를 못 했으면 Codex가 만든 최신 파일을 찾는다
             fresh = [p for p in glob.glob(os.path.join(_GEN_DIR, "*", "*.png")) if os.path.getmtime(p) >= started - 2]
             src = max(fresh, key=os.path.getmtime) if fresh else ""
         if rc != 0 and not src:
             print(f"   → AI 이미지 생성 실패(rc={rc}): {tail[-120:].strip()}")
-            return False
+            return None
         if not src:
             print("   → AI 이미지 생성 실패: 이미지 파일 없음")
-            return False
+            return None
         im = Image.open(src).convert("RGB")
         if im.width < 600:
-            return False
+            return None
         h = round(1200 * im.height / im.width)
         im = im.resize((1200, h), Image.LANCZOS)
         buf = io.BytesIO()
         im.save(buf, "JPEG", quality=82, optimize=True)
         data = buf.getvalue()
         if len(data) < 5000:
-            return False
+            return None
         os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)
         with open(out_path, "wb") as f:
             f.write(data)
-        return True
+        # 실사 모드에서 형식을 못 밝혔으면 실사로 보고 금지 요소 판정을 거치게 한다(안전한 쪽)
+        if allow_photo and not last.strip().upper().startswith("DIAGRAM"):
+            return "photo"
+        return "diagram"
     except Exception as e:  # noqa: BLE001
         print(f"   → AI 이미지 오류: {e}")
-        return False
+        return None
     finally:
         shutil.rmtree(work, ignore_errors=True)
 
@@ -177,11 +271,14 @@ def mark(article: dict, ai: bool) -> None:
     """기사에 AI 도식 캡션을 붙이거나(ai=True), 이전에 붙은 AI 캡션을 거둔다(실제 사진으로 바뀐 경우).
     직접 쓴 image_caption(수동 기사)은 건드리지 않는다."""
     if ai:
+        kind = _MODES.get(os.path.normpath(article.get("image_url") or ""), "diagram")
         article["image_ai"] = True
-        article["image_caption"] = CAPTION
+        article["image_ai_type"] = kind
+        article["image_caption"] = PHOTO_CAPTION if kind == "photo" else CAPTION
     elif article.get("image_ai"):
         article.pop("image_ai", None)
-        if article.get("image_caption") == CAPTION:
+        article.pop("image_ai_type", None)
+        if article.get("image_caption") in _AI_CAPTIONS:
             article.pop("image_caption", None)
 
 
@@ -191,4 +288,4 @@ if __name__ == "__main__":
     out = os.path.join(tempfile.gettempdir(), "aios-headless", "news-image-test.jpg")
     print("enabled:", enabled(), "| codex:", _CODEX)
     ok = generate(t, k, "글로벌", out)
-    print("생성:", ok, out if ok else "")
+    print("생성:", ok, _MODES.get(_final_path(out)), out if ok else "")
