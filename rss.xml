@@ -6,7 +6,31 @@
     <atom:link href="https://www.materialtimes.co.kr/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 26 Nov 2026 03:09:43 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 03:07:32 +0900</lastBuildDate>
+    <item>
+      <title>미 반도체 투자세액공제 5년 연장안 발의</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-27-0.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-27-0.html</guid>
+      <category>글로벌</category>
+      <description>미 상원의원들이 반도체 첨단제조 투자세액공제를 5년 연장하는 법안을 발의했다. 반도체산업협회는 연말 종료를 앞둔 공제의 연장을 촉구했으며, 법안 통과는 아직 확정되지 않았다.</description>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>이엠에스, 정전척용 합금 타깃 검증</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-27-1.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-27-1.html</guid>
+      <category>반도체소재</category>
+      <description>이엠에스가 반도체 정전척 히터에 적용할 고밀도 합금 타깃과 코팅 기술을 검증하고 있다. 소재 제조부터 박막 형성·평가까지 자체 체계를 구축했으며, 양산 적용을 위한 고객 평가가 진행 중이다.</description>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>사이클릭, 독일에 폐자석 회수 거점 추진</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-27-2.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-27-2.html</guid>
+      <category>희귀금속</category>
+      <description>사이클릭 머티리얼스가 독일 슈코파우에 유럽 첫 자석 회수시설을 추진한다. 폐기물에서 자석을 회수한 뒤 별도 화학처리 거점으로 보내 희토류 산화물로 정제·분리하는 공급망을 구축할 계획이다.</description>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>미 과잉생산 관세안, 한국 15% 제시</title>
       <link>https://www.materialtimes.co.kr/news/2026-11-26-0.html</link>
@@ -222,30 +246,6 @@
       <category>산업재</category>
       <description>포항산업과학연구원(RIST)이 제철 슬래그에 이산화탄소를 반응시켜 고체 탄산염으로 변환한 뒤 폐광산 갱도의 채움재로 활용하는 육상저장 실증 플랜트를 강원도 삼척에 준공했다. 하루 최대 3톤 처리 규모로 운영을 시작한다.</description>
       <pubDate>Tue, 17 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>고려아연 미 테네시 제련소, TVA 230MW 전력 승인</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-16-0.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-16-0.html</guid>
-      <category>글로벌</category>
-      <description>고려아연의 미국 핵심광물 통합제련소 '프로젝트 크루서블'이 테네시강유역개발공사(TVA)로부터 230MW 규모 전력 공급 승인을 받았다. FAST-41 인허가 편입·최종 환경영향평가 통과에 이어 전력 기반까지 확보하며 2027년 착공 준비가 본격화됐다.</description>
-      <pubDate>Mon, 16 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>Applied Materials, 4분기 매출 104억 달러로 연간 최대치</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-16-1.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-16-1.html</guid>
-      <category>반도체소재</category>
-      <description>어플라이드 머티어리얼즈(Applied Materials)가 2026 회계연도 4분기에 매출 104억1천만 달러를 기록하며 분기 및 연간 모두 사상 최대 실적을 달성했다. 연간 매출은 344억5천만 달러로, 반도체 시스템 사업부가 전년 대비 40% 이상 성장했다고 회사는 밝혔다.</description>
-      <pubDate>Mon, 16 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>Marposs, 배터리 전극 절단 공정에 10μm 결함 실시간 감지 시스템 양산 적용</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-15-0.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-15-0.html</guid>
-      <category>산업재</category>
-      <description>독일 마르포스(Marposs GmbH)가 배터리 전극 슬리팅·노칭 공정에서 절단날 결함을 실시간으로 감지하는 광학 센서 시스템을 개발해 독일 소재 셀 제조사의 양산 라인에 투입했다. 10마이크로미터 수준의 미세 칩핑까지 검출하며, 기존 정기 교체 방식 대비 공구 수명을 최적화할 수 있다고 밝혔다.</description>
-      <pubDate>Sun, 15 Nov 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
