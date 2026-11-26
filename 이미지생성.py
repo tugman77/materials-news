@@ -27,6 +27,8 @@ from __future__ import annotations
 import glob
 import io
 import os
+import re
+import json
 import shutil
 import subprocess
 import sys
@@ -50,6 +52,27 @@ _GEN_DIR = os.path.expanduser("~/.codex/generated_images")
 
 _down = False  # 로그인 만료·한도 오류를 한 번 만나면 이번 실행에서는 더 시도하지 않는다
 
+
+
+# ── 토큰 A단계(2026-11-26): AI 호출 1번마다 ~/Library/Logs/aios-usage.jsonl에 한 줄 기록 ──
+# 컨트롤타워/사용량.js와 같은 형식. 기록 실패는 무시한다(발행에 영향 없음). 채널 이름은 저장소 폴더 이름.
+_USAGE_FILE = os.path.expanduser("~/Library/Logs/aios-usage.jsonl")
+_USAGE_CH = os.path.basename(os.path.dirname(os.path.abspath(__file__)))
+
+
+def _log_usage(who: str, job: str, sec: float, ok: bool, text: str = "", tokens=None) -> None:
+    try:
+        import datetime as _dt
+        if tokens is None and who == "codex":
+            m = re.search(r"tokens used\s*:?\s*([\d,]+)", text or "", re.I)
+            tokens = int(m.group(1).replace(",", "")) if m else None
+        limit = bool(re.search(r"usage limit|rate limit|quota|hit your limit|limit reached", text or "", re.I)) and not ok
+        with open(_USAGE_FILE, "a", encoding="utf-8") as f:
+            f.write(json.dumps({"t": _dt.datetime.now(_dt.timezone.utc).isoformat(timespec="milliseconds").replace("+00:00", "Z"),
+                                "who": who, "job": f"{_USAGE_CH}:{job}", "sec": round(sec), "ok": ok,
+                                "limit": limit, "tokens": tokens}, ensure_ascii=False) + "\n")
+    except Exception:  # noqa: BLE001
+        pass
 
 def enabled() -> bool:
     if os.environ.get("AI_IMAGE", "1") == "0" or os.environ.get("GITHUB_ACTIONS"):
@@ -77,12 +100,16 @@ def _run(prompt: str, effort: str, timeout: int, image: Optional[str] = None, cw
         cmd += ["-i", image]
     cmd.append("-")
     env = dict(os.environ, OPENAI_API_KEY="")
+    _job = "photo-check" if image else "image"
+    _t0 = time.time()
     try:
         p = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=timeout, env=env)
     except subprocess.TimeoutExpired:
+        _log_usage("codex", _job, time.time() - _t0, False)
         return 124, "", "timeout"
     except Exception as e:  # noqa: BLE001
         return 1, "", str(e)
+    _log_usage("codex", _job, time.time() - _t0, p.returncode == 0, p.stderr or "")
     tail = (p.stderr or "")[-400:]
     low = tail.lower()
     if p.returncode != 0 and any(k in low for k in ("login", "usage limit", "quota", "rate limit", "unauthorized")):

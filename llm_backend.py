@@ -16,6 +16,27 @@ import re
 import subprocess
 import tempfile
 
+
+# ── 토큰 A단계(2026-11-26): AI 호출 1번마다 ~/Library/Logs/aios-usage.jsonl에 한 줄 기록 ──
+# 컨트롤타워/사용량.js와 같은 형식. 기록 실패는 무시한다(발행에 영향 없음). 채널 이름은 저장소 폴더 이름.
+_USAGE_FILE = os.path.expanduser("~/Library/Logs/aios-usage.jsonl")
+_USAGE_CH = os.path.basename(os.path.dirname(os.path.abspath(__file__)))
+
+
+def _log_usage(who: str, job: str, sec: float, ok: bool, text: str = "", tokens=None) -> None:
+    try:
+        import datetime as _dt
+        if tokens is None and who == "codex":
+            m = re.search(r"tokens used\s*:?\s*([\d,]+)", text or "", re.I)
+            tokens = int(m.group(1).replace(",", "")) if m else None
+        limit = bool(re.search(r"usage limit|rate limit|quota|hit your limit|limit reached", text or "", re.I)) and not ok
+        with open(_USAGE_FILE, "a", encoding="utf-8") as f:
+            f.write(json.dumps({"t": _dt.datetime.now(_dt.timezone.utc).isoformat(timespec="milliseconds").replace("+00:00", "Z"),
+                                "who": who, "job": f"{_USAGE_CH}:{job}", "sec": round(sec), "ok": ok,
+                                "limit": limit, "tokens": tokens}, ensure_ascii=False) + "\n")
+    except Exception:  # noqa: BLE001
+        pass
+
 # ── 설정 ──────────────────────────────────────────────
 LLM_BACKEND        = os.environ.get("LLM_BACKEND", "api").strip().lower()
 CLAUDE_CLI         = os.environ.get("CLAUDE_CLI", "claude")
@@ -143,7 +164,9 @@ def call_tool(request_params: dict, tool_name: str, effort: str = "") -> dict:
         except Exception as e:  # noqa: BLE001 — 어떤 실패든 Claude가 이어받는다
             print(f"⚠️ Codex 집필 실패({tool_name}) → Claude로 대신 씀: {str(e)[:300]}")
 
+    import time as _time
     for attempt in range(1, CLAUDE_CODE_RETRIES + 1):
+        _t0 = _time.time()
         try:
             proc = subprocess.run(
                 [CLAUDE_CLI, "-p", full_prompt,
@@ -162,6 +185,7 @@ def call_tool(request_params: dict, tool_name: str, effort: str = "") -> dict:
                 cwd=CLAUDE_CODE_CWD,
             )
         except subprocess.TimeoutExpired:
+            _log_usage("claude", tool_name, _time.time() - _t0, False)
             more = attempt < CLAUDE_CODE_RETRIES
             print(f"⏱️ claude 헤드리스 {CLAUDE_CODE_TIMEOUT}s 무응답 (시도 {attempt}/{CLAUDE_CODE_RETRIES}) — "
                   f"{'재시도' if more else '포기'}")
@@ -170,6 +194,15 @@ def call_tool(request_params: dict, tool_name: str, effort: str = "") -> dict:
             raise RuntimeError(
                 f"claude 헤드리스 {CLAUDE_CODE_RETRIES}회 모두 {CLAUDE_CODE_TIMEOUT}s 타임아웃(무응답)"
             )
+
+        try:
+            _env = json.loads(proc.stdout or "{}")
+            _u = _env.get("usage") or {}
+            _tok = sum(_u.get(k) or 0 for k in ("input_tokens", "output_tokens", "cache_read_input_tokens", "cache_creation_input_tokens")) or None
+        except Exception:  # noqa: BLE001
+            _env, _tok = {}, None
+        _log_usage("claude", tool_name, _time.time() - _t0, proc.returncode == 0 and not _env.get("is_error"),
+                   f"{proc.stderr or ''}\n{_env.get('result') if _env.get('is_error') else ''}", _tok)
 
         if proc.returncode != 0:
             # 오류 상세는 stderr가 비어 있을 때가 많아 stdout(JSON 응답의 result 등)도 함께 노출
@@ -222,7 +255,9 @@ def _call_codex(full_prompt: str, tool: dict) -> dict:
             input=full_prompt, capture_output=True, text=True, timeout=CODEX_TIMEOUT, env=env,
         )
     except subprocess.TimeoutExpired:
+        _log_usage("codex", "write", time.time() - t0, False)
         raise RuntimeError(f"codex {CODEX_TIMEOUT}s 타임아웃")
+    _log_usage("codex", "write", time.time() - t0, proc.returncode == 0, proc.stderr or "")
     if not os.path.exists(out_path):
         tail = " | ".join([l for l in (proc.stderr or "").splitlines() if l.strip()][-3:])[:300]
         raise RuntimeError(f"codex 출력 없음(rc={proc.returncode}): {tail}")
