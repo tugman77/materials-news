@@ -1740,7 +1740,9 @@ def main():
             f"📋 편집장 브리핑: {briefing[:80]}{'...' if len(briefing) > 80 else ''}"
             f"{feed_line}"
         )
-        send_telegram(tg_msg)
+        # 2026-11-27 대표님: 채널별 완료 알림은 보내지 않고 21:00 「📋 오늘의 발행」에서 카테고리별로 총정리. 피드 0건 경고가 있으면 보낸다. 다시 켜기 NEWS_DONE_NOTIFY=1
+        if os.environ.get("NEWS_DONE_NOTIFY") == "1" or feed_line:
+            send_telegram(tg_msg)
 
     except Exception as e:
         error_msg = f"❌ <b>소재타임스 기사 생성 오류</b>\n{now_str}\n\n{type(e).__name__}: {e}"

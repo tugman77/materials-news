@@ -577,6 +577,10 @@ def send_review_report(articles: list, reviews: list, naver_map: dict,
     if not has_issues:
         lines.append("\n✨ 모든 기사 검수 통과")
 
+    # 2026-11-27 대표님: 정상 검수 결과는 21:00 「📋 오늘의 발행」 검수 총정리로 — 문제가 있을 때만 바로 보낸다
+    if not has_issues:
+        print("검수 전부 통과 — 텔레그램 생략(일일 보고에서 총정리)")
+        return
     ok = send_telegram("\n".join(lines))
     print("텔레그램 검수 보고 전송 완료" if ok else "⚠️ 텔레그램 검수 보고 전송 실패")
 
