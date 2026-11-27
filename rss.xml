@@ -6,7 +6,31 @@
     <atom:link href="https://www.materialtimes.co.kr/rss.xml" rel="self" type="application/rss+xml" />
     <description>반도체 · 첨단소재 · 희귀금속 · 산업재 전문 미디어</description>
     <language>ko-KR</language>
-    <lastBuildDate>Fri, 27 Nov 2026 03:07:32 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 03:07:57 +0900</lastBuildDate>
+    <item>
+      <title>EU 배터리 여권, 소재 데이터 연계 과제</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-28-0.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-28-0.html</guid>
+      <category>글로벌</category>
+      <description>EU 배터리 여권 시행을 앞두고 국내 소재업체에 원재료·탄소발자국 정보 요청이 이어지고 있다. 소재업체의 직접 발급 의무와 고객사에 대한 정보 제공을 구분하고, 서로 다른 데이터 양식을 연결하는 작업이 과제로 떠올랐다.</description>
+      <pubDate>Sat, 28 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>EIB·IDC, 아프리카 광물 가공 금융</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-28-1.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-28-1.html</guid>
+      <category>희귀금속</category>
+      <description>유럽투자은행과 남아공 산업개발공사가 아프리카 핵심광물 사업에 최대 3억 유로를 공동 제공한다. 현지 가공·정련과 산업 발전을 지원하되 유럽 가치사슬과의 연결을 사업 조건으로 제시했다.</description>
+      <pubDate>Sat, 28 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>MH머트리얼즈, 중희토류 없는 자석 추진</title>
+      <link>https://www.materialtimes.co.kr/news/2026-11-28-2.html</link>
+      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-28-2.html</guid>
+      <category>희귀금속</category>
+      <description>MH머트리얼즈가 한국재료연구원의 영구자석 제조기술을 이전받아 사업화에 착수했다. 중희토류를 배제하고 네오디뮴 사용량을 줄이는 기술로, 2028년 파일럿 시운전과 고객사 검증을 추진한다.</description>
+      <pubDate>Sat, 28 Nov 2026 00:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>미 반도체 투자세액공제 5년 연장안 발의</title>
       <link>https://www.materialtimes.co.kr/news/2026-11-27-0.html</link>
@@ -222,30 +246,6 @@
       <category>반도체소재</category>
       <description>지멘스(Siemens)가 임베디드 소프트웨어 및 시스템온칩(SoC) 디버그·트레이스 솔루션 전문기업 라우터바흐(Lauterbach) 인수 계약을 체결했다. 두 회사의 기술을 결합해 칩 설계 개발 단계에서 하드웨어·소프트웨어 복합 오류를 더 빠르게 발견하는 통합 플랫폼 구축을 목표로 한다.</description>
       <pubDate>Wed, 18 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>칠레 구리 생산, 23년 만에 최저치 전망</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-18-2.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-18-2.html</guid>
-      <category>글로벌</category>
-      <description>칠레의 2026년 구리 생산량이 전년 대비 6.6% 감소한 503만 톤에 그칠 것으로 추정되며, 이는 2003년 이후 최저 수준이다. 광석 품위 저하와 황산 수입 의존도 심화가 겹치며 세계 최대 구리 생산국의 경쟁력에 경고등이 켜졌다.</description>
-      <pubDate>Wed, 18 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>포드, 한국 장비사 투입 ESS 각형 배터리 파일럿 라인 구축</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-17-0.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-17-0.html</guid>
-      <category>산업재</category>
-      <description>포드가 미시간 아이온파크 연구시설에 에너지저장장치(ESS)용 각형 배터리 파일럿 생산라인을 구축하고 국내 배터리 장비업체 디에이치·하나기술을 주요 공급사로 선정했다. 중국 의존도 축소 압박이 커지는 가운데 자체 배터리 제조 역량 확보에 나선 것이다.</description>
-      <pubDate>Tue, 17 Nov 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>RIST, 제철 슬래그로 CO₂ 고체화해 폐갱도에 저장 실증</title>
-      <link>https://www.materialtimes.co.kr/news/2026-11-17-1.html</link>
-      <guid isPermaLink="true">https://www.materialtimes.co.kr/news/2026-11-17-1.html</guid>
-      <category>산업재</category>
-      <description>포항산업과학연구원(RIST)이 제철 슬래그에 이산화탄소를 반응시켜 고체 탄산염으로 변환한 뒤 폐광산 갱도의 채움재로 활용하는 육상저장 실증 플랜트를 강원도 삼척에 준공했다. 하루 최대 3톤 처리 규모로 운영을 시작한다.</description>
-      <pubDate>Tue, 17 Nov 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>
