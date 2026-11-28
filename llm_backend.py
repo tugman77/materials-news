@@ -29,11 +29,45 @@ def _log_usage(who: str, job: str, sec: float, ok: bool, text: str = "", tokens=
         if tokens is None and who == "codex":
             m = re.search(r"tokens used\s*:?\s*([\d,]+)", text or "", re.I)
             tokens = int(m.group(1).replace(",", "")) if m else None
-        limit = bool(re.search(r"usage limit|rate limit|quota|hit your limit|limit reached", text or "", re.I)) and not ok
+        limit = bool(re.search(r"usage limit|rate limit|quota|hit your limit|limit reached", (text or "")[-1500:], re.I)) and not ok
+        if limit and who == "codex":
+            _mark_codex_limit(job)
         with open(_USAGE_FILE, "a", encoding="utf-8") as f:
             f.write(json.dumps({"t": _dt.datetime.now(_dt.timezone.utc).isoformat(timespec="milliseconds").replace("+00:00", "Z"),
                                 "who": who, "job": f"{_USAGE_CH}:{job}", "sec": round(sec), "ok": ok,
                                 "limit": limit, "tokens": tokens}, ensure_ascii=False) + "\n")
+    except Exception:  # noqa: BLE001
+        pass
+
+
+# 토큰 C단계(2026-11-28): Codex 한도 신호 ~/Library/Logs/aios-limit.json — 어느 채널이든 한도를 만나면 기록하고,
+# 오늘(한국 시각) 자정까지 선택 작업(사진 판정·AI 그림)은 쉬고 집필은 Claude가 바로 쓴다.
+_LIMIT_FILE = os.path.expanduser("~/Library/Logs/aios-limit.json")
+
+
+def _codex_limited() -> bool:
+    import time as _tm
+    try:
+        with open(_LIMIT_FILE, encoding="utf-8") as f:
+            l = json.load(f).get("codex")
+        return bool(l) and _tm.time() * 1000 < l.get("until", 0)
+    except Exception:  # noqa: BLE001
+        return False
+
+
+def _mark_codex_limit(job: str) -> None:
+    try:
+        import datetime as _dt
+        kst = _dt.timezone(_dt.timedelta(hours=9))
+        until = (_dt.datetime.now(kst) + _dt.timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0)
+        try:
+            with open(_LIMIT_FILE, encoding="utf-8") as f:
+                cur = json.load(f)
+        except Exception:  # noqa: BLE001
+            cur = {}
+        cur["codex"] = {"at": _dt.datetime.now(_dt.timezone.utc).isoformat(), "job": f"{_USAGE_CH}:{job}", "until": int(until.timestamp() * 1000)}
+        with open(_LIMIT_FILE, "w", encoding="utf-8") as f:
+            json.dump(cur, f)
     except Exception:  # noqa: BLE001
         pass
 
@@ -158,7 +192,7 @@ def call_tool(request_params: dict, tool_name: str, effort: str = "") -> dict:
     # TCC 블록을 피하려면 cwd가 ~/Desktop 밖이어야 한다 (위 CLAUDE_CODE_CWD 주석 참조)
     os.makedirs(CLAUDE_CODE_CWD, exist_ok=True)
 
-    if LLM_WRITER == "codex" and tool_name in CODEX_TOOLS:
+    if LLM_WRITER == "codex" and tool_name in CODEX_TOOLS and not _codex_limited():
         try:
             return _call_codex(full_prompt, tool)
         except Exception as e:  # noqa: BLE001 — 어떤 실패든 Claude가 이어받는다

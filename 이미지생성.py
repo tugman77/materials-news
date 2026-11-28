@@ -66,7 +66,9 @@ def _log_usage(who: str, job: str, sec: float, ok: bool, text: str = "", tokens=
         if tokens is None and who == "codex":
             m = re.search(r"tokens used\s*:?\s*([\d,]+)", text or "", re.I)
             tokens = int(m.group(1).replace(",", "")) if m else None
-        limit = bool(re.search(r"usage limit|rate limit|quota|hit your limit|limit reached", text or "", re.I)) and not ok
+        limit = bool(re.search(r"usage limit|rate limit|quota|hit your limit|limit reached", (text or "")[-1500:], re.I)) and not ok
+        if limit and who == "codex":
+            _mark_codex_limit(job)
         with open(_USAGE_FILE, "a", encoding="utf-8") as f:
             f.write(json.dumps({"t": _dt.datetime.now(_dt.timezone.utc).isoformat(timespec="milliseconds").replace("+00:00", "Z"),
                                 "who": who, "job": f"{_USAGE_CH}:{job}", "sec": round(sec), "ok": ok,
@@ -74,10 +76,41 @@ def _log_usage(who: str, job: str, sec: float, ok: bool, text: str = "", tokens=
     except Exception:  # noqa: BLE001
         pass
 
+
+# 토큰 C단계(2026-11-28): Codex 한도 신호 ~/Library/Logs/aios-limit.json — 어느 채널이든 한도를 만나면 기록하고,
+# 오늘(한국 시각) 자정까지 선택 작업(사진 판정·AI 그림)은 쉬고 집필은 Claude가 바로 쓴다.
+_LIMIT_FILE = os.path.expanduser("~/Library/Logs/aios-limit.json")
+
+
+def _codex_limited() -> bool:
+    try:
+        with open(_LIMIT_FILE, encoding="utf-8") as f:
+            l = json.load(f).get("codex")
+        return bool(l) and time.time() * 1000 < l.get("until", 0)
+    except Exception:  # noqa: BLE001
+        return False
+
+
+def _mark_codex_limit(job: str) -> None:
+    try:
+        import datetime as _dt
+        kst = _dt.timezone(_dt.timedelta(hours=9))
+        until = (_dt.datetime.now(kst) + _dt.timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0)
+        try:
+            with open(_LIMIT_FILE, encoding="utf-8") as f:
+                cur = json.load(f)
+        except Exception:  # noqa: BLE001
+            cur = {}
+        cur["codex"] = {"at": _dt.datetime.now(_dt.timezone.utc).isoformat(), "job": f"{_USAGE_CH}:{job}", "until": int(until.timestamp() * 1000)}
+        with open(_LIMIT_FILE, "w", encoding="utf-8") as f:
+            json.dump(cur, f)
+    except Exception:  # noqa: BLE001
+        pass
+
 def enabled() -> bool:
     if os.environ.get("AI_IMAGE", "1") == "0" or os.environ.get("GITHUB_ACTIONS"):
         return False
-    return bool(_CODEX) and not _down
+    return bool(_CODEX) and not _down and not _codex_limited()
 
 
 def vision_enabled() -> bool:
